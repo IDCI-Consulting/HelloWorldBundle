@@ -4,6 +4,7 @@ var src          = [],
 ;
 
 src['style']     = "src/Ressources/styles/**/*.scss";
+src['template']  = "templates/**/*";
 web['style']     = "web/css/";
 
 var gulp         = require('gulp'),
@@ -29,7 +30,14 @@ gulp.task('styles', function() {
     ;
 });
 
+gulp.task('reload-templates', function() {
+    gulp.src(src['template'])
+        .pipe(livereload())
+    ;
+});
+
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(src['style'], ['styles']);
+    gulp.watch(src['template'], ['reload-templates']);
 });
