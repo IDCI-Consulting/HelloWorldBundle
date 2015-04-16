@@ -1,6 +1,7 @@
 
 var src          = [],
-    web          = [];
+    web          = []
+;
 
 src['style']     = "src/Ressources/styles/**/*.scss";
 web['style']     = "web/css/";
@@ -12,7 +13,9 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'),
     notify       = require('gulp-notify'),
     minifycss    = require('gulp-minify-css'),
-    del          = require('del');
+    livereload   = require('gulp-livereload'),
+    del          = require('del')
+;
 
 // Task to compile Sass files
 gulp.task('styles', function() {
@@ -22,9 +25,11 @@ gulp.task('styles', function() {
         .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(concat({ path: 'app.min.css', stat: { mode: 0666 }}))
         .pipe(gulp.dest(web['style']))
+        .pipe(livereload())
     ;
 });
 
 gulp.task('watch', function() {
+    livereload.listen();
     gulp.watch(src['style'], ['styles']);
 });
