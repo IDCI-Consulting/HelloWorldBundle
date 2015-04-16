@@ -1,0 +1,10 @@
+silex:
+  image: brah0um/silex:latest
+  volumes:
+   - .:/var/www
+   - $HOME/Workspace/docker_volumes/logs/nginx/idci:/var/log/nginx
+  ports:
+   - 9852:80 # edit if you want
+  environment:
+   - VIRTUAL_HOST=local.idci # edit your /etc/hosts file accordingly. This value is useful if a container jwilder/nginx-proxy is running.
+  restart: always
