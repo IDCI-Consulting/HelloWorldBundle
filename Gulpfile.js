@@ -16,7 +16,6 @@ var gulp         = require('gulp'),
 
 // Task to compile Sass files
 gulp.task('styles', function() {
-    console.log(process.env);
     gulp.src(src['style'])
         .pipe(sass({ errLogToConsole: true }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
@@ -24,15 +23,6 @@ gulp.task('styles', function() {
         .pipe(concat({ path: 'app.min.css', stat: { mode: 0666 }}))
         .pipe(gulp.dest(web['style']))
     ;
-});
-
-gulp.task('clean', function(cb) {
-    del([web['style']], cb); // we use cb callback to ensure the task finished before exiting
-});
-
-// Default task to run tasks below by using "gulp" command line
-gulp.task('default', ['clean'], function() {
-    gulp.start('styles');
 });
 
 gulp.task('watch', function() {
