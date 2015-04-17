@@ -42,6 +42,9 @@
             "PhpGitHooks\\Application\\Composer\\ConfiguratorScript::buildConfig"
         ]
     },
+    "config": {
+      "bin-dir": "bin"
+    },
     "require-dev": {
         "bruli/php-git-hooks": "~1.3"
     }
