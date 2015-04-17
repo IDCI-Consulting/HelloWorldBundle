@@ -1,3 +1,4 @@
+'use strict';
 
 var src          = [],
     web          = []
@@ -5,7 +6,9 @@ var src          = [],
 
 src['style']     = "src/Ressources/styles/**/*.scss";
 src['template']  = "templates/**/*";
+src['script']    = "src/Ressources/js/**/*.js";
 web['style']     = "web/css/";
+web['script']    = "web/js/";
 
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
