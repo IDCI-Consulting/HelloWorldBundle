@@ -78,4 +78,5 @@ gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(src['style'], ['styles']);
     gulp.watch(src['template'], ['reload-templates']);
+    gulp.watch(src['script'], ['scripts']);
 });
