@@ -10,15 +10,18 @@ src['script']    = "src/Ressources/js/**/*.js";
 web['style']     = "web/css/";
 web['script']    = "web/js/";
 
-var gulp         = require('gulp'),
-    sass         = require('gulp-sass'),
+var autoprefixer = require('gulp-autoprefixer'),
+    chmod        = require('gulp-chmod'),
     concat       = require('gulp-concat'),
-    autoprefixer = require('gulp-autoprefixer'),
-    rename       = require('gulp-rename'),
-    notify       = require('gulp-notify'),
-    minifycss    = require('gulp-minify-css'),
+    del          = require('del'),
+    gulp         = require('gulp'),
+    jshint       = require('gulp-jshint'),
     livereload   = require('gulp-livereload'),
-    del          = require('del')
+    minifycss    = require('gulp-minify-css'),
+    notify       = require('gulp-notify'),
+    rename       = require('gulp-rename'),
+    sass         = require('gulp-sass'),
+    uglify       = require('gulp-uglify')
 ;
 
 // Task to compile Sass files
