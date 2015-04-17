@@ -1,5 +1,5 @@
 silex:
-  image: brah0um/silex:latest
+  image: brah0um/silex-dev:1.0
   volumes:
    - .:/var/www
    - $HOME/Workspace/docker_volumes/logs/nginx/idci:/var/log/nginx
