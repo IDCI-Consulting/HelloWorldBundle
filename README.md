@@ -10,13 +10,13 @@ Idci Website
 
 ```sh
 $ git clone http://gitlab.idci-consulting.fr/idci-consulting/idci-website.git idci
-$ cd path/to/idci-website
+$ cd path/to/idci
 $ docker-compose up
 ```
 
 #### Installation of `composer` packages
 
-###### You have to connect in your Docker container
+##### You have to connect in your Docker container
 
 ```sh
 $ docker exec -it NAME_OF_YOUR_CONTAINER bash
@@ -30,7 +30,7 @@ $ exit
 $ cp vendor/bruli/php-git-hooks/hooks/pre-commit .git/hooks/
 ```
 
-###### You have to set the access rights
+##### You have to set the access rights
 
 ```sh
 $ sudo chmod 775 . -R && sudo chown $USER:www-data . -R
