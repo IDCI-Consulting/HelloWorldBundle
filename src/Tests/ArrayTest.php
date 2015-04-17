@@ -1,5 +1,7 @@
 <?php
 
+namespace Test;
+
 use Silex\WebTestCase;
 
 class ComputationTest extends WebTestCase
