@@ -30,10 +30,42 @@ gulp.task('styles', function() {
         .pipe(sass({ errLogToConsole: true }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
         .pipe(minifycss({keepSpecialComments: 0}))
-        .pipe(concat({ path: 'app.min.css', stat: { mode: 0666 }}))
+        .pipe(concat({ path: 'app.min.css'}))
+        .pipe(chmod(755))
         .pipe(gulp.dest(web['style']))
         .pipe(livereload())
     ;
+});
+
+// Task to put the JS files in web folder
+gulp.task('scripts', function() {
+    return gulp.src(src['script'])
+        .pipe(chmod(755))
+        .pipe(gulp.dest(web['script']))
+        .pipe(livereload())
+    ;
+});
+
+// Task to minify Js
+gulp.task('minify-js', function() {
+    return gulp.src(src['script'])
+        .pipe(chmod(755))
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        .pipe(uglify())
+        .pipe(concat({ path: 'app.min.js'}))
+        .pipe(gulp.dest(web['script']))
+    ;
+});
+
+// Task to clean folder content
+gulp.task('clean', function(callback) {
+    del([web['script'], web['style']], callback); //we use callback to ensure the task finishes before exiting
+});
+
+// Task to run before prod deployment
+gulp.task('prod', ['clean'], function() {
+    gulp.start('styles', 'minify-js');
 });
 
 gulp.task('reload-templates', function() {
