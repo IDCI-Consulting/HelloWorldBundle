@@ -20,6 +20,13 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
         return $app['request_stack']->getMasterRequest()->getBasepath().'/'.$asset;
     }));
 
+    $twig->addFunction(new \Twig_SimpleFunction('getRevFilename', function ($filename) use ($app) {
+        $json = file_get_contents(sprintf("%s/Ressources/manifest/rev-manifest.json", __DIR__));
+        $jsonArray = json_decode($json, true);
+
+        return $jsonArray[$filename];
+    }));
+
     return $twig;
 });
 

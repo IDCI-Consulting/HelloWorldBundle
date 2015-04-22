@@ -8,33 +8,38 @@ var src             = [],
 src['style']        = "src/Ressources/styles/**/*.scss";
 src['template']     = "templates/**/*";
 src['script']       = "src/Ressources/js/**/*.js";
+src['manifest']     = "src/Ressources/manifest/";
 web['style']        = "web/css/";
 web['script']       = "web/js/";
 bower['foundation'] = "bower_components/foundation/scss/*.scss";
 
-var autoprefixer    = require('gulp-autoprefixer'),
-    chmod           = require('gulp-chmod'),
+var chmod           = require('gulp-chmod'),
     concat          = require('gulp-concat'),
     del             = require('del'),
     gulp            = require('gulp'),
     jshint          = require('gulp-jshint'),
     livereload      = require('gulp-livereload'),
     minifycss       = require('gulp-minify-css'),
-    notify          = require('gulp-notify'),
     rename          = require('gulp-rename'),
+    rev             = require('gulp-rev'),
     sass            = require('gulp-sass'),
     uglify          = require('gulp-uglify')
 ;
 
 // Task to compile Sass files
 gulp.task('styles', function() {
-    gulp.src([ src['style'], bower['foundation']])
-        .pipe(sass({errLogToConsole: true}))
-        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    // delete all css files
+    del(web['style']+'/*.css');
+    // build css files
+    gulp.src([src['style'], bower['foundation']])
+        .pipe(sass({ errLogToConsole: true }))
         .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(concat({ path: 'app.min.css'}))
+        .pipe(rev())
         .pipe(chmod(755))
         .pipe(gulp.dest(web['style']))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest(src['manifest']))
         .pipe(livereload())
     ;
 });
@@ -76,7 +81,7 @@ gulp.task('reload-templates', function() {
     ;
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['styles'], function() {
     livereload.listen();
     gulp.watch(src['style'], ['styles']);
     gulp.watch(src['template'], ['reload-templates']);

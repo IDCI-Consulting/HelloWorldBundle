@@ -35,3 +35,5 @@ $ cp vendor/bruli/php-git-hooks/hooks/pre-commit .git/hooks/
 ```sh
 $ sudo chmod 775 . -R && sudo chown $USER:www-data . -R
 ```
+
+Edit you /etc/hosts file, then you can now access http://dev.idci.fr/index_dev.php

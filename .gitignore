@@ -4,3 +4,6 @@
 *~
 bower_components
 composer.lock
+/web/css/
+/web/js
+/src/Ressources/manifest/
