@@ -1,0 +1,10 @@
+{
+  "name": "idci",
+  "authors": [
+    "BOUKOUFALLAH Brahim <boukoufallah.brahim@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "foundation": "~5.4.7"
+  }
+}
