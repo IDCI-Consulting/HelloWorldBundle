@@ -6,8 +6,9 @@ var src          = [],
 
 src['style']     = "src/Ressources/styles/**/*.scss";
 src['template']  = "templates/**/*";
+src['manifest']  = "src/Ressources/manifest/";
 src['script']    = "src/Ressources/js/**/*.js";
-web['style']     = "web/css/";
+web['style']     = "web/css";
 web['script']    = "web/js/";
 
 var autoprefixer = require('gulp-autoprefixer'),
@@ -20,19 +21,27 @@ var autoprefixer = require('gulp-autoprefixer'),
     minifycss    = require('gulp-minify-css'),
     notify       = require('gulp-notify'),
     rename       = require('gulp-rename'),
+    replace      = require('gulp-replace'),
+    rev          = require('gulp-rev'),
     sass         = require('gulp-sass'),
     uglify       = require('gulp-uglify')
 ;
 
 // Task to compile Sass files
 gulp.task('styles', function() {
+    // delete all css files
+    del(web['style']+'/*.css');
+    // build css files
     gulp.src(src['style'])
         .pipe(sass({ errLogToConsole: true }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
         .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(concat({ path: 'app.min.css'}))
+        .pipe(rev())
         .pipe(chmod(755))
         .pipe(gulp.dest(web['style']))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest(src['manifest']))
         .pipe(livereload())
     ;
 });
