@@ -43,7 +43,7 @@ gulp.task('watch', ['init'], function() {
 gulp.task('init', ['styles', 'dev-scripts'], function() {
     gulp.src(foundation['script'])
         .pipe(gulp.dest(web['script']))
-        .pipe(chmod(755))
+        .pipe(chmod(775))
         .pipe(livereload())
     ;
 });
@@ -58,7 +58,7 @@ gulp.task('styles', function() {
         .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(concat({ path: 'app.min.css'}))
         .pipe(rev())
-        .pipe(chmod(755))
+        .pipe(chmod(775))
         .pipe(gulp.dest(web['style']))
         .pipe(rev.manifest())
         .pipe(gulp.dest(src['manifest']))
@@ -73,7 +73,7 @@ gulp.task('dev-scripts', function() {
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(gulp.dest(web['script']))
-        .pipe(chmod(755))
+        .pipe(chmod(775))
         .pipe(livereload())
     ;
 });
@@ -85,7 +85,7 @@ gulp.task('prod-scripts', function() {
         .pipe(uglify())
         .pipe(concat({ path: 'app.min.js'}))
         .pipe(rev())
-        .pipe(chmod(755))
+        .pipe(chmod(775))
         .pipe(gulp.dest(web['script']))
         .pipe(rev.manifest())
         .pipe(gulp.dest(src['manifest']))
