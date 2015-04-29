@@ -1,0 +1,33 @@
+{% extends "../layout.html" %}
+
+{% block content %}
+    {%  include 'partials/header.html.twig' %}
+    <div class="container">
+        <section class="logo-presentation">
+            Logo IDCI
+        </section>
+
+        <section class="experiences">
+            <article class="trainings">training article</article>
+            <article class="advices">advices article</article>
+            <article class="web-development">web development article</article>
+        </section>
+
+        <section class="philosophies">
+            <article class="philosophy">philosophy article</article>
+            <article class="methodology">methodology article</article>
+        </section>
+
+        <section class="tools">
+            <article class="backend">backend techno</article>
+            <article class="databases">databases techno</article>
+            <article class="frontend">frontend techno</article>
+            <article class="infrastructure">infrastructure techno</article>
+        </section>
+
+        <section class="contact">
+            Contact form
+        </section>
+    </div>
+    {%  include 'partials/footer.html.twig' %}
+{% endblock %}
