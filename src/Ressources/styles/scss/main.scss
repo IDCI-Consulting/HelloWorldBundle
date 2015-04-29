@@ -1,11 +1,36 @@
 $color-base:  #ABCABc;
+$idci-white: #FFF;
+$idci-blue: #394A59;
+$idci-light-blue: #0DB0D1;
 $width:  100px;
-
 
 body {
   color: $color-base;
 }
 
+header {
+  background: #bebebe;
+}
+
+footer {
+  color: white;
+  background: #005580;
+}
+
+.container {
+  section {
+    margin-bottom: 0;
+  }
+  .experiences, .tools {
+    background: $idci-white;
+  }
+  .philosophies, .contact {
+    background: $idci-blue;
+  }
+  .button {
+    background: $idci-light-blue;
+  }
+}
 // Mixins
 
 @mixin border-radius($radius) {

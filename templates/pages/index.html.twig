@@ -1,4 +1,4 @@
-{% extends "../layout.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
     {%  include 'partials/header.html.twig' %}
@@ -8,25 +8,109 @@
         </section>
 
         <section class="experiences">
-            <article class="trainings">training article</article>
-            <article class="advices">advices article</article>
-            <article class="web-development">web development article</article>
+            {%
+                include 'partials/experience.html.twig'
+                with {
+                    'class': 'trainings',
+                    'title': 'Tranings',
+                    'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }
+            %}
+            {%
+                include 'partials/experience.html.twig'
+                with {
+                    'class': 'advices',
+                    'title': 'Advices',
+                    'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }
+            %}
+            {%
+                include 'partials/experience.html.twig'
+                with {
+                    'class': 'web-development',
+                    'title': 'Web development',
+                    'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }
+            %}
         </section>
 
         <section class="philosophies">
-            <article class="philosophy">philosophy article</article>
-            <article class="methodology">methodology article</article>
+            {%
+                include 'partials/philosophy.html.twig'
+                with {
+                    'class': 'philosophy',
+                    'title': 'Our philosophy',
+                    'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }
+            %}
+            {%
+                include 'partials/philosophy.html.twig'
+                with {
+                    'class': 'methodology',
+                    'title': 'Our approach',
+                    'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }
+            %}
         </section>
 
         <section class="tools">
-            <article class="backend">backend techno</article>
-            <article class="databases">databases techno</article>
-            <article class="frontend">frontend techno</article>
-            <article class="infrastructure">infrastructure techno</article>
+            <h2>Our tools</h2>
+            {%
+                include 'partials/tools.html.twig'
+                with {
+                    'class': 'backend',
+                    'title': 'Backend',
+                    'images': [
+                        'symfony',
+                        'node',
+                        'meteor'
+                    ]
+                }
+            %}
+            {%
+                include 'partials/tools.html.twig'
+                with {
+                    'class': 'databases',
+                    'title': 'Databases',
+                    'images': [
+                        'mysql',
+                        'mongodb',
+                        'postgresql',
+                        'redis',
+                        'rabbitmq'
+                    ]
+                }
+            %}
+            {%
+                include 'partials/tools.html.twig'
+                with {
+                    'class': 'frontend',
+                    'title': 'Frontend',
+                    'images': [
+                        'html5',
+                        'css3',
+                        'foundation',
+                        'jquery'
+                    ]
+                }
+            %}
+            {%
+                include 'partials/tools.html.twig'
+                with {
+                    'class': 'backend',
+                    'title': 'Backend',
+                    'images': [
+                        'elk',
+                        'varnish',
+                        'docker',
+                        'proxmox'
+                    ]
+                }
+            %}
         </section>
 
         <section class="contact">
-            Contact form
+            {% include 'partials/contactForm.html.twig' %}
         </section>
     </div>
     {%  include 'partials/footer.html.twig' %}
