@@ -10,16 +10,20 @@ body {
 
 header {
   background: #bebebe;
+  ul {
+    margin-bottom: 0;
+  }
 }
 
 footer {
-  color: white;
-  background: #005580;
+  background: #bebebe;
 }
 
 .container {
-  section {
-    margin-bottom: 0;
+  .logo-presentation {
+    background: #323232;
+    color: white;
+    height: 25rem;
   }
   .experiences, .tools {
     background: $idci-white;
