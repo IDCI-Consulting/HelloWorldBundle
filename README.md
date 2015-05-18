@@ -11,7 +11,8 @@ Idci Website
 ```sh
 $ git clone http://gitlab.idci-consulting.fr/idci-consulting/idci-website.git idci
 $ cd path/to/idci
-$ docker-compose up
+$ chmod +x run.sh
+$ ./run.sh
 ```
 
 #### Installation of `composer` packages
