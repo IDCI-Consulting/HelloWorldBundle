@@ -2,7 +2,14 @@
 
 var src              = [],
     web              = [],
-    foundation       = []
+    foundation       = {
+        styles: "bower_components/foundation/scss/*.scss",
+        script: {
+            modernizr: "bower_components/foundation/js/vendor/modernizr.js",
+            jquery: "bower_components/foundation/js/vendor/jquery.js",
+            foundation: "bower_components/foundation/js/foundation.min.js"
+        }
+    }
 ;
 
 src['style']         = "src/Ressources/styles/**/*.scss";
@@ -11,12 +18,6 @@ src['script']        = "src/Ressources/js/**/*.js";
 src['manifest']      = "src/Ressources/manifest/";
 web['style']         = "web/css/";
 web['script']        = "web/js/";
-foundation['styles'] = "bower_components/foundation/scss/*.scss";
-foundation['script'] = [
-    "bower_components/foundation/js/vendor/modernizr.js",
-    "bower_components/foundation/js/vendor/jquery.js",
-    "bower_components/foundation/js/foundation.min.js"
-];
 
 var chmod            = require('gulp-chmod'),
     concat           = require('gulp-concat'),
@@ -41,7 +42,7 @@ gulp.task('watch', ['init'], function() {
 
 // Task to launch before watch
 gulp.task('init', ['styles', 'dev-scripts'], function() {
-    gulp.src(foundation['script'])
+    gulp.src([foundation.script.foundation, foundation.script.modernizr, foundation.script.jquery])
         .pipe(gulp.dest(web['script']))
         .pipe(chmod(775))
         .pipe(livereload())
@@ -53,7 +54,7 @@ gulp.task('styles', function() {
     // delete all css files
     del(web['style']+'/*.css');
     // build css files
-    gulp.src([src['style'], foundation['styles']])
+    gulp.src([src['style'], foundation.styles])
         .pipe(sass({ errLogToConsole: true }))
         .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(concat({ path: 'app.min.css'}))
@@ -81,7 +82,7 @@ gulp.task('dev-scripts', function() {
 // TODO TO_BE_REMOVED (PROD BRANCH)
 // Task to install scripts in a prod environment
 gulp.task('prod-scripts', function() {
-    gulp.src(src['script'])
+    gulp.src([foundation.script.jquery, foundation.script.foundation, foundation.script.modernizr, src['script']])
         .pipe(uglify())
         .pipe(concat({ path: 'app.min.js'}))
         .pipe(rev())
