@@ -16,8 +16,10 @@ src['style']         = "src/Ressources/styles/**/*.scss";
 src['template']      = "templates/**/*";
 src['script']        = "src/Ressources/js/**/*.js";
 src['manifest']      = "src/Ressources/manifest/";
+src['images']        = "web/images/brahim/*.jpg";
 web['style']         = "web/css/";
 web['script']        = "web/js/";
+web['images']        = "web/images/brahim/";
 
 var chmod            = require('gulp-chmod'),
     concat           = require('gulp-concat'),
@@ -29,7 +31,8 @@ var chmod            = require('gulp-chmod'),
     rename           = require('gulp-rename'),
     rev              = require('gulp-rev'),
     sass             = require('gulp-sass'),
-    uglify           = require('gulp-uglify')
+    uglify           = require('gulp-uglify'),
+    spritesmith      = require('gulp.spritesmith')
 ;
 
 // Task to watch files
@@ -40,9 +43,20 @@ gulp.task('watch', ['init'], function() {
     gulp.watch(src['script'], ['dev-scripts']);
 });
 
+// Task to create a sprite
+gulp.task('sprite', function () {
+    gulp.src(src['images'])
+        .pipe(spritesmith({
+            imgName: 'sprite.jpg',
+            cssName: 'sprite.css'
+         }))
+        .pipe(gulp.dest(web['images']))
+    ;
+});
+
 // Task to launch before watch
 gulp.task('init', ['styles', 'dev-scripts'], function() {
-    gulp.src([foundation.script.foundation, foundation.script.modernizr, foundation.script.jquery])
+    gulp.src([foundation.script.jquery, foundation.script.foundation, foundation.script.modernizr])
         .pipe(gulp.dest(web['script']))
         .pipe(chmod(775))
         .pipe(livereload())
