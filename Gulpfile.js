@@ -6,7 +6,7 @@ var src              = [],
         styles: "bower_components/foundation/scss/*.scss",
         script: {
             modernizr: "bower_components/foundation/js/vendor/modernizr.js",
-            jquery: "bower_components/foundation/js/vendor/jquery.js",
+            jquery: "bower_components/jquery/dist/jquery.min.js",
             foundation: "bower_components/foundation/js/foundation.min.js"
         }
     }
@@ -61,7 +61,7 @@ gulp.task('styles', function() {
         .pipe(rev())
         .pipe(chmod(775))
         .pipe(gulp.dest(web['style']))
-        .pipe(rev.manifest())
+        .pipe(rev.manifest(src['manifest']+'rev-manifest.json', {base: src['manifest'], merge: true}))
         .pipe(gulp.dest(src['manifest']))
         .pipe(livereload())
     ;
@@ -79,16 +79,17 @@ gulp.task('dev-scripts', function() {
     ;
 });
 
-// TODO TO_BE_REMOVED (PROD BRANCH)
 // Task to install scripts in a prod environment
 gulp.task('prod-scripts', function() {
+    // delete all css files
+    del(web['script']+'/*.js');
     gulp.src([foundation.script.jquery, foundation.script.foundation, foundation.script.modernizr, src['script']])
         .pipe(uglify())
         .pipe(concat({ path: 'app.min.js'}))
         .pipe(rev())
         .pipe(chmod(775))
         .pipe(gulp.dest(web['script']))
-        .pipe(rev.manifest())
+        .pipe(rev.manifest(src['manifest']+'rev-manifest.json', {base: src['manifest'], merge: true}))
         .pipe(gulp.dest(src['manifest']))
     ;
 });
@@ -99,7 +100,6 @@ gulp.task('clean', function(callback) {
 });
 
 // Task to run before prod deployment
-// TODO / TO_CHECK
 gulp.task('prod', ['clean'], function() {
     gulp.start('styles', 'prod-scripts');
 });

@@ -47,7 +47,7 @@ main() {
     docker-compose up -d
     echo "---------------------------------------------------"
     printf "Your root directory is at ${cyan}$scriptpath${nocolor}\n"
-    printf "You can access your project at ${cyan}http://dev.idci.fr${nocolor}\n"
+    printf "You can access your project at ${cyan}http://dev.idci.fr/index_dev.php${nocolor}\n"
     printf "You can see your logs at ${cyan}http://dev.logs.idci.fr${nocolor}\n"
 }
 
