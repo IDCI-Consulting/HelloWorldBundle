@@ -15,7 +15,7 @@ $ chmod +x run.sh
 $ ./run.sh
 ```
 
-#### Installation of `composer` packages
+#### Installation of `composer` packages & `bower` components
 
 ##### You have to connect in your Docker container
 
