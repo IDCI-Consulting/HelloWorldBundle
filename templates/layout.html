@@ -6,9 +6,9 @@
         {% if app.debug %}
             <script src="http://127.0.0.1:35729/livereload.js?ext=Chrome&amp;extver=2.1.0"></script>
             <script src="{{ asset('js/modernizr.js') }}"></script>
-            <script src="{{ asset('js/jquery.js') }}"></script>
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
             <script src="{{ asset('js/foundation.min.js') }}"></script>
-            <script src="{{ asset('js/script.js') }}"></script>
+            {% block devJavascripts %}{% endblock %}
         {% else %}
             <script src="{{ asset('js/' ~ getRevFilename('app.min.js') ~ '') }}"></script>
         {% endif %}
