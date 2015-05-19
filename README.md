@@ -23,6 +23,7 @@ $ ./run.sh
 $ docker exec -it NAME_OF_YOUR_CONTAINER bash
 # In your Docker container run these commands
 $ composer update
+$ bower update --allow-root
 $ exit
 ```
 ##### To enable the pre-commit hook, run this command
