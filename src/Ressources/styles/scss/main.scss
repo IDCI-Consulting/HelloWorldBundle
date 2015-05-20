@@ -4,6 +4,128 @@ $idci-blue: #394A59;
 $idci-light-blue: #0DB0D1;
 $width:  100px;
 
+/*
+Filename: rotating-heads.css
+Project: rotating heads
+Type: CSS
+Author: Jan Dellsperger
+Initial Version: 14. October 2013
+
+This is the style sheet for the rotating heads project. All UI styles are
+defined in this file.
+
+Changelog:
+12.11.2013 - Modifikationen zur leistungsverbesserung
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+h3,p{
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 300;
+}
+
+p{
+  font-size: 16px;
+}
+
+.certificates{
+  font-size: 14px;
+}
+
+.content-wrapper{
+  width: 100%;
+
+  .image-holder{
+    position: relative;
+    margin: 0 auto;
+    width: 260px;
+    height: 260px;
+
+    .icon-home,.circle{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 260px;
+    }
+
+    .circle{
+      z-index: 2;
+    }
+  }
+
+  .brahim {
+
+    .profile-picture {
+      background-image: url(/images/brahim/sprite.jpg);
+    }
+
+    .upleft {
+      background-position: 0 0;
+      width: 260px;
+      height: 260px;
+    }
+
+    .up {
+      background-position: -260px 0;
+      width: 260px;
+      height: 260px;
+    }
+
+    .left {
+      background-position: 0px -260px;
+      width: 260px;
+      height: 260px;
+    }
+
+    .front {
+      background-position: -260px -260px;
+      width: 260px;
+      height: 260px;
+    }
+
+    .upright {
+      background-position: -520px 0;
+      width: 260px;
+      height: 260px;
+    }
+
+    .right {
+      background-position: -520px -260px;
+      width: 260px;
+      height: 260px;
+    }
+
+    .downleft {
+      background-position: 0px -520px;
+      width: 260px;
+      height: 260px;
+    }
+
+    .down {
+      background-position: -260px -520px;
+      width: 260px;
+      height: 260px;
+    }
+
+    .downright {
+
+      background-position: -520px -520px;
+      width: 260px;
+      height: 260px;
+    }
+  }
+}
+
 body {
   color: $color-base;
 }
