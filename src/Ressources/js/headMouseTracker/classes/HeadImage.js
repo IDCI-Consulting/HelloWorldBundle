@@ -2,10 +2,9 @@
  * Created by brahim on 19/05/15.
  */
 function HeadImage(className) {
-
     this.className         = className;
-    var $image             = jQuery('.'+this.className+'>.profile-picture');
 
+    var $image             = jQuery('.'+this.className+'>.profile-picture');
     /* Calculating the image's borders */
     this.imageBorderTop    = $image.offset().top;
     this.imageBorderLeft   = $image.offset().left;

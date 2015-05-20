@@ -63,11 +63,11 @@ p{
     }
   }
 
-  .brahim {
+  .brahim .profile-picture {
+    background-image: url(/images/brahim/sprite.jpg);
+  }
 
-    .profile-picture {
-      background-image: url(/images/brahim/sprite.jpg);
-    }
+  .image-holder {
 
     .upleft {
       background-position: 0 0;
