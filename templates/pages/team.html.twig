@@ -1,7 +1,21 @@
 {% extends "layout.html" %}
 
+{% block devJavascripts %}
+    <script src="{{ asset('js/HeadImage.js') }}"></script>
+    <script src="{{ asset('js/getMousePosition.js') }}"></script>
+    <script src="{{ asset('js/initImages.js') }}"></script>
+{% endblock %}
+
 {% block content %}
     {%  include 'partials/header.html.twig' %}
     <h1>Team page</h1>
+
+    <div class="content-wrapper">
+        <div class="image-holder brahim">
+            <img class="circle" src="{{ asset('images/circle.png') }}"/>
+            <div class="profile-picture front"></div>
+        </div>
+    </div>
+
     {%  include 'partials/footer.html.twig' %}
 {% endblock %}
