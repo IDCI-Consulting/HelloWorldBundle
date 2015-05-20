@@ -43,17 +43,6 @@ gulp.task('watch', ['init'], function() {
     gulp.watch(src['script'], ['dev-scripts']);
 });
 
-// Task to create a sprite
-gulp.task('sprite', function () {
-    gulp.src(src['images'])
-        .pipe(spritesmith({
-            imgName: 'sprite.jpg',
-            cssName: 'sprite.css'
-         }))
-        .pipe(gulp.dest(web['images']))
-    ;
-});
-
 // Task to launch before watch
 gulp.task('init', ['styles', 'dev-scripts'], function() {
     gulp.src([foundation.script.jquery, foundation.script.foundation, foundation.script.modernizr])
@@ -122,5 +111,20 @@ gulp.task('prod', ['clean'], function() {
 gulp.task('reload-templates', function() {
     gulp.src(src['template'])
         .pipe(livereload())
+    ;
+});
+
+/*****************
+ * Utility tasks *
+ *****************/
+
+// Task to create a sprite
+gulp.task('sprite', function () {
+    gulp.src(src['images'])
+        .pipe(spritesmith({
+            imgName: 'sprite.jpg',
+            cssName: 'sprite.css'
+        }))
+        .pipe(gulp.dest(web['images']))
     ;
 });
