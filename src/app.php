@@ -6,9 +6,16 @@ use Silex\Provider\RoutingServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\HttpFragmentServiceProvider;
+use Silex\Provider\FormServiceProvider;
+use Silex\Provider\TranslationServiceProvider;
 
 $app = new Application();
 $app->register(new RoutingServiceProvider());
+$app->register(new TranslationServiceProvider(), array(
+    'locale'           => 'en',
+    'locale_fallbacks' => array('en'),
+));
+$app->register(new FormServiceProvider());
 $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());

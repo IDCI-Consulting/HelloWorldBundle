@@ -51,8 +51,25 @@ $app->get('/blog', function () use ($app) {
 ;
 
 // Contact page
-$app->get('/contact', function () use ($app) {
-    return $app['twig']->render('pages/contact.html.twig', array());
+$app->match('/contact', function (Request $request) use ($app) {
+    $data = array(
+        'name'  => "Your name",
+        'email' => 'Your email'
+    );
+
+    $form = $app['form.factory']->createBuilder('form', $data)
+        ->add('name')
+        ->add('email')
+        ->getForm()
+    ;
+
+    $form->handleRequest($request);
+
+    if ($form->isValid()) {
+        var_dump('VALID', $form->getData());
+    }
+
+    return $app['twig']->render('pages/contact.html.twig', array('form' => $form->createView()));
 })
 ->bind('contact')
 ;
