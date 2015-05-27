@@ -52,16 +52,7 @@ $app->get('/blog', function () use ($app) {
 
 // Contact page
 $app->match('/contact', function (Request $request) use ($app) {
-    $data = array(
-        'name'  => "Your name",
-        'email' => 'Your email'
-    );
-
-    $form = $app['form.factory']->createBuilder('form', $data)
-        ->add('name')
-        ->add('email')
-        ->getForm()
-    ;
+    $form = $app['form.factory']->createBuilder(new \Form\Type\ContactType())->getForm();
 
     $form->handleRequest($request);
 
