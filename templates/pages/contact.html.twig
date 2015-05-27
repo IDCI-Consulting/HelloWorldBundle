@@ -1,12 +1,8 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    {%  include 'partials/header.html.twig' %}
+    {% include 'partials/header.html.twig' %}
     <h1>Contact page</h1>
-    <form action="#" method="post">
-        {{ form_widget(form) }}
-
-        <input type="submit" class="button radius" name="submit" />
-    </form>
-    {%  include 'partials/footer.html.twig' %}
+    {% include 'partials/contactForm.html.twig' with {'form': form} %}
+    {% include 'partials/footer.html.twig' %}
 {% endblock %}

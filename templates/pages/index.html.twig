@@ -110,7 +110,7 @@
         </section>
 
         <section class="contact">
-            {% include 'partials/contactForm.html.twig' %}
+            {% include 'partials/contactForm.html.twig'  with {'form': form} %}
         </section>
     </div>
     {%  include 'partials/footer.html.twig' %}
