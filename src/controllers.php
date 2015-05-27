@@ -5,12 +5,21 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Form\Type\ContactType;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 // Home page
-$app->get('/', function () use ($app) {
-    return $app['twig']->render('pages/index.html.twig', array());
+$app->get('/', function (Request $request) use ($app) {
+    $form = $app['form.factory']->createBuilder(new ContactType)->getForm();
+
+    $form->handleRequest($request);
+
+    if ($form->isValid()) {
+        var_dump('VALID', $form->getData());
+    }
+
+    return $app['twig']->render('pages/index.html.twig', array('form' => $form->createView()));
 })
 ->bind('homepage')
 ;
@@ -52,7 +61,7 @@ $app->get('/blog', function () use ($app) {
 
 // Contact page
 $app->match('/contact', function (Request $request) use ($app) {
-    $form = $app['form.factory']->createBuilder(new \Form\Type\ContactType())->getForm();
+    $form = $app['form.factory']->createBuilder(new ContactType)->getForm();
 
     $form->handleRequest($request);
 
