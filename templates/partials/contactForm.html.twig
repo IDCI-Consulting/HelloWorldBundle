@@ -1,5 +1,8 @@
-<form action="#" method="post">
-    {{ form_widget(form) }}
+{% form_theme form 'idci_form_fields.html.twig' %}
+<section class="content">
+    <form action="#" method="post">
+        {{ form_widget(form) }}
 
-    <input type="submit" class="button radius" name="submit" />
-</form>
+        <input type="submit" class="button radius" name="submit" />
+    </form>
+</section>
