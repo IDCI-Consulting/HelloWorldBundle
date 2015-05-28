@@ -1,22 +1,46 @@
+/**********************
+ ** Global variables **
+ **********************/
 $color-base:  #ABCABc;
 $idci-white: #FFF;
 $idci-blue: #394A59;
 $idci-light-blue: #0DB0D1;
 $width:  100px;
 
-/*
-Filename: rotating-heads.css
-Project: rotating heads
-Type: CSS
-Author: Jan Dellsperger
-Initial Version: 14. October 2013
 
-This is the style sheet for the rotating heads project. All UI styles are
-defined in this file.
+/*******************
+ ** Global Mixins **
+ *******************/
 
-Changelog:
-12.11.2013 - Modifikationen zur leistungsverbesserung
-*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/*****************************
+ *** Foundation components ***
+ *****************************/
+@import '../../../../bower_components/foundation/scss/normalize';
+@import "../../../../bower_components/foundation/scss/foundation/components/grid";
+@import "../../../../bower_components/foundation/scss/foundation/components/accordion";
+@import "../../../../bower_components/foundation/scss/foundation/components/alert-boxes";
+@import "../../../../bower_components/foundation/scss/foundation/components/block-grid";
+@import "../../../../bower_components/foundation/scss/foundation/components/breadcrumbs";
+@import "../../../../bower_components/foundation/scss/foundation/components/button-groups";
+@import "../../../../bower_components/foundation/scss/foundation/components/buttons";
+@import "../../../../bower_components/foundation/scss/foundation/components/clearing";
+@import "../../../../bower_components/foundation/scss/foundation/components/dropdown";
+@import "../../../../bower_components/foundation/scss/foundation/components/dropdown-buttons";
+@import "../../../../bower_components/foundation/scss/foundation/components/flex-video";
+
+/***********************
+ *** Idci components ***
+ ***********************/
+@import 'partials/normalize';
+@import 'partials/inputEffect';
+@import 'partials/mouseTracker';
 
 *{
   margin: 0;
@@ -41,95 +65,6 @@ p{
   font-size: 14px;
 }
 
-.content-wrapper{
-  width: 100%;
-
-  .image-holder{
-    position: relative;
-    margin: 0 auto;
-    width: 260px;
-    height: 260px;
-
-    .icon-home,.circle{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 260px;
-      height: 260px;
-    }
-
-    .circle{
-      z-index: 2;
-    }
-  }
-
-  .brahim .profile-picture {
-    background-image: url(/images/brahim/sprite.jpg);
-  }
-
-  .image-holder {
-
-    .upleft {
-      background-position: 0 0;
-      width: 260px;
-      height: 260px;
-    }
-
-    .up {
-      background-position: -260px 0;
-      width: 260px;
-      height: 260px;
-    }
-
-    .left {
-      background-position: 0px -260px;
-      width: 260px;
-      height: 260px;
-    }
-
-    .front {
-      background-position: -260px -260px;
-      width: 260px;
-      height: 260px;
-    }
-
-    .upright {
-      background-position: -520px 0;
-      width: 260px;
-      height: 260px;
-    }
-
-    .right {
-      background-position: -520px -260px;
-      width: 260px;
-      height: 260px;
-    }
-
-    .downleft {
-      background-position: 0px -520px;
-      width: 260px;
-      height: 260px;
-    }
-
-    .down {
-      background-position: -260px -520px;
-      width: 260px;
-      height: 260px;
-    }
-
-    .downright {
-
-      background-position: -520px -520px;
-      width: 260px;
-      height: 260px;
-    }
-  }
-}
-
-body {
-  color: $color-base;
-}
-
 header {
   background: #bebebe;
   ul {
@@ -138,12 +73,19 @@ header {
 }
 
 footer {
-  background: #bebebe;
+  background: #bebeb1;
+}
+
+.content{
+  font-size: 150%;
+  margin: 0 auto;
+  padding: 3em 0;
+  width: 85%;
 }
 
 .container {
   .logo-presentation {
-    background: #323232;
+    background: #323233;
     color: white;
     height: 25rem;
   }
@@ -156,14 +98,6 @@ footer {
   .button {
     background: $idci-light-blue;
   }
-}
-// Mixins
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
 }
 
 .box { @include border-radius(10px 3px); }
