@@ -18,32 +18,41 @@ class ContactType extends AbstractType
         $builder
             ->add('company', 'text', array(
                 'attr'     => array(
-                    'placeholder' => 'company',
+                    'class'       => 'input__field input__field--hoshi',
+                ),
+                'required' => false
+            ))
+            ->add('website', 'url', array(
+                'attr'     => array(
+                    'class'       => 'input__field input__field--hoshi',
                 ),
                 'required' => false
             ))
             ->add('name', 'text', array(
                 'attr' => array(
-                    'placeholder' => 'name'
+                    'class'       => 'input__field input__field--hoshi',
+                )
+            ))
+            ->add('firstname', 'text', array(
+                'attr' => array(
+                    'class'       => 'input__field input__field--hoshi',
                 )
             ))
             ->add('email', 'email', array(
                 'attr' => array(
-                    'placeholder' => 'email'
+                    'class'       => 'input__field input__field--hoshi',
                 )
             ))
-            ->add('website', 'url', array(
-                'attr'     => array(
-                    'placeholder' => 'website',
-                ),
-                'required' => false
-            ))
-            ->add('phonenumber', 'text', array(
+            ->add('phonenumber', 'number', array(
                 'attr' => array(
-                    'placeholder' => 'phonenumber'
+                    'class' => 'input__field input__field--hoshi',
                 )
             ))
-            ->add('project', 'textarea', array())
+            ->add('project', 'textarea', array(
+                'attr' => array(
+                    'class'       => 'input__field input__field--hoshi',
+                )
+            ))
         ;
     }
 
