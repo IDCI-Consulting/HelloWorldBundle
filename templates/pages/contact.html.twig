@@ -2,7 +2,9 @@
 
 {% block content %}
     {% include 'partials/header.html.twig' %}
-    <h1>Contact page</h1>
-    {% include 'partials/contactForm.html.twig' with {'form': form} %}
+    <section class="contact">
+        <h2>Contact page</h2>
+        {% include 'partials/contactForm.html.twig' with {'form': form} %}
+    </section>
     {% include 'partials/footer.html.twig' %}
 {% endblock %}
