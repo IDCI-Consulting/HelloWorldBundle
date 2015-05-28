@@ -3,7 +3,6 @@
 var src              = [],
     web              = [],
     foundation       = {
-        styles: "bower_components/foundation/scss/*.scss",
         script: {
             modernizr: "bower_components/foundation/js/vendor/modernizr.js",
             jquery: "bower_components/jquery/dist/jquery.min.js",
@@ -57,7 +56,7 @@ gulp.task('styles', function() {
     // delete all css files
     del(web['style']+'/*.css');
     // build css files
-    gulp.src([src['style'], foundation.styles])
+    gulp.src([src['style']])
         .pipe(sass({ errLogToConsole: true }))
         .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(concat({ path: 'app.min.css'}))
