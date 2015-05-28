@@ -1,0 +1,37 @@
+{# Widget #}
+{%- block form_widget_simple -%}
+    {%- set type = type|default('text') -%}
+        {% if type == 'hidden' %}
+            <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+        {% else %}
+            <span class="input input--hoshi">
+                <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+                <label class="input__label input__label--hoshi input__label--hoshi-color" for="{{ id }}">
+                    <span class="input__label-content input__label-content--hoshi">{{ name }}</span>
+                </label>
+            </span>
+        {% endif %}
+{%- endblock form_widget_simple -%}
+
+{%- block form_widget_compound -%}
+    {%- if form.parent is empty -%}
+        {{ form_errors(form) }}
+    {%- endif -%}
+    {{- block('form_rows') -}}
+    {{- form_rest(form) -}}
+{%- endblock form_widget_compound -%}
+
+{%- block textarea_widget -%}
+    <div class="input input__textarea input--hoshi">
+        <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+        <label class="input__label input__label--hoshi input__label--hoshi-color" for="{{ id }}">
+            <span class="input__label-content input__label-content--hoshi">{{ name }}</span>
+        </label>
+    </div>
+{%- endblock textarea_widget -%}
+
+{# Rows #}
+{%- block form_row -%}
+    {{- form_errors(form) -}}
+    {{- form_widget(form) -}}
+{%- endblock form_row -%}
