@@ -38,9 +38,9 @@ $width:  100px;
 /***********************
  *** Idci components ***
  ***********************/
-@import 'partials/normalize';
 @import 'partials/inputEffect';
 @import 'partials/mouseTracker';
+@import 'partials/button';
 
 *{
   margin: 0;
@@ -74,6 +74,11 @@ header {
 
 footer {
   background: #bebeb1;
+}
+
+.contact{
+  background: $idci-blue;
+  color: $idci-white;
 }
 
 .content{
