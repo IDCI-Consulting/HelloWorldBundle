@@ -33,6 +33,7 @@ $width:  100px;
 @import "../../../../bower_components/foundation/scss/foundation/components/clearing";
 @import "../../../../bower_components/foundation/scss/foundation/components/dropdown";
 @import "../../../../bower_components/foundation/scss/foundation/components/dropdown-buttons";
+@import "../../../../bower_components/foundation/scss/foundation/components/visibility";
 @import "../../../../bower_components/foundation/scss/foundation/components/flex-video";
 
 /***********************
@@ -76,7 +77,7 @@ footer {
   background: #bebeb1;
 }
 
-.contact{
+.contact, .contact-form{
   background: $idci-blue;
   color: $idci-white;
 }
@@ -106,3 +107,96 @@ footer {
 }
 
 .box { @include border-radius(10px 3px); }
+
+/*******************
+ ** Media Queries **
+ *******************/
+@media #{$small-only}{
+  header{
+    background-color: $idci-blue;
+  }
+
+  .accordion-container {
+    width: 100%;
+    margin: 0 0 20px;
+    clear: both;
+  }
+
+  .accordion-toggle.open {
+    background: #999;
+  }
+  .accordion-toggle {
+    position: relative;
+    display: block;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: 300;
+    background: hsl(50, 9%, 86%);
+    margin: 1px 0;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    i.picture {
+      color: #fff;
+      font-size: 2rem;
+      margin-right: 8px;
+    }
+    div.toggle-icon {
+      border-left: 1px solid #fff;
+      position: absolute;
+      height:100%;
+      top: 0;
+      right: 20px;
+      font-size: 1.5em;
+      margin-left: 1px;
+      i {
+        position: relative;
+        top: 10px;
+        font-size: 3rem;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .accordion-link {
+    padding:0;
+    padding-left: 1px;
+  }
+  .accordion-link .arrow{
+
+  }
+  .accordion-toggle:hover {
+    background: #999;
+  }
+
+  .accordion-content{
+    display: none;
+    padding: 10px 0;
+    overflow: inherit;
+    .title{
+      display: none;
+    }
+    p{
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+  .experiences .button{
+    background-color: hsl(140, 67%, 36%);
+    border: 2px solid #007A01;
+    @include border-radius(0);
+    font-size: 1rem;
+    left: 10%;
+    margin-top: 1em;
+    width: 80%;
+  }
+
+  .container .button:hover{
+    background-color: hsl(140, 67%, 30%);
+  }
+
+  .contact{
+    background-color: $idci-blue;
+  }
+}
