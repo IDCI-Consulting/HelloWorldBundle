@@ -5,7 +5,7 @@ var src              = [],
     foundation       = {
         script: {
             modernizr: "bower_components/foundation/js/vendor/modernizr.js",
-            jquery: "bower_components/jquery/dist/jquery.min.js",
+            jquery: "bower_components/foundation/js/vendor/jquery.js",
             foundation: "bower_components/foundation/js/foundation.min.js"
         }
     }
