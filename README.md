@@ -20,7 +20,8 @@ $ ./run.sh
 ##### You have to connect in your Docker container
 
 ```sh
-$ docker exec -it NAME_OF_YOUR_CONTAINER bash
+# usually the name of container is idciwebsite_silex_1
+$ docker exec -it idciwebsite_silex_1 bash
 # In your Docker container run these commands
 $ composer update
 $ bower update --allow-root
@@ -38,4 +39,4 @@ $ cp vendor/bruli/php-git-hooks/hooks/pre-commit .git/hooks/
 $ sudo chmod 775 . -R && sudo chown $USER:www-data . -R
 ```
 
-Edit you /etc/hosts file, then you can now access http://dev.idci.fr/index_dev.php
+Edit your /etc/hosts file, then you can now access http://dev.idci.fr/index_dev.php
