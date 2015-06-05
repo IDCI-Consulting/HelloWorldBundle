@@ -16,8 +16,10 @@ function init() {
     mouseY = 0;
 
     var holders = jQuery('.image-holder');
-    jQuery.each(holders, function(index, holder){
-        var holderName = jQuery(holder).attr('class').substring(13); //
-        images[index] = new HeadImage(holderName);
-    });
+    jQuery.each(
+        holders, function(index, holder){
+            var holderName = jQuery(holder).attr('class').substring(13); //
+            images[index] = new HeadImage(holderName);
+        }
+    );
 }
