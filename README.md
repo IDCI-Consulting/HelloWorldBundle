@@ -9,8 +9,8 @@ Idci Website
 #### Installation
 
 ```sh
-$ git clone http://gitlab.idci-consulting.fr/idci-consulting/idci-website.git idci
-$ cd path/to/idci
+$ git clone http://gitlab.idci-consulting.fr/idci-consulting/idci-website.git
+$ cd idci-website
 $ chmod +x run.sh
 $ ./run.sh
 ```
