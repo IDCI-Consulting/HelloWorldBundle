@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Application
+ */
+
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
@@ -41,7 +45,7 @@ $app['twig'] = $app->extend(
             new \Twig_SimpleFunction(
                 'getRevFilename',
                 function ($filename) use ($app) {
-                    $json = file_get_contents(sprintf('%s/Ressources/manifest/rev-manifest.json', __DIR__));
+                    $json = file_get_contents(sprintf('%s/Resources/manifest/rev-manifest.json', __DIR__));
                     $jsonArray = json_decode($json, true);
 
                     return $jsonArray[$filename];

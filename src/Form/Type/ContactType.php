@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Created by PhpStorm.
+ * Contact Form Type
  * User: brahim
  * Date: 27/05/15
  * Time: 13:52.
