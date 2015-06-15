@@ -11,10 +11,10 @@ var src              = [],
     }
 ;
 
-src['style']         = "src/Ressources/styles/**/*.scss";
+src['style']         = "src/Resources/styles/**/*.scss";
 src['template']      = "templates/**/*";
-src['script']        = "src/Ressources/js/**/*.js";
-src['manifest']      = "src/Ressources/manifest/";
+src['script']        = "src/Resources/js/**/*.js";
+src['manifest']      = "src/Resources/manifest/";
 src['images']        = "web/images/brahim/*.jpg";
 web['style']         = "web/css/";
 web['script']        = "web/js/";

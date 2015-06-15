@@ -4,11 +4,11 @@ namespace Test;
 
 use Silex\WebTestCase;
 
-class ComputationTest extends WebTestCase
+class ArrayTest extends WebTestCase
 {
     public function createApplication()
     {
-        return require __DIR__ . '/../app.php';
+        return include __DIR__.'/../app.php';
     }
 
     public function testArrayCount()

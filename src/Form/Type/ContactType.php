@@ -1,11 +1,11 @@
 <?php
+
 /**
- * Created by PhpStorm.
+ * Contact Form Type
  * User: brahim
  * Date: 27/05/15
- * Time: 13:52
+ * Time: 13:52.
  */
-
 namespace Form\Type;
 
 use Symfony\Component\Form\AbstractType;
@@ -16,44 +16,71 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('company', 'text', array(
-                'attr'     => array(
-                    'class'       => 'input__field input__field--hoshi',
-                ),
-                'required' => false
-            ))
-            ->add('website', 'url', array(
-                'attr'     => array(
-                    'class'       => 'input__field input__field--hoshi',
-                ),
-                'required' => false
-            ))
-            ->add('name', 'text', array(
-                'attr' => array(
-                    'class'       => 'input__field input__field--hoshi',
+            ->add(
+                'company',
+                'text',
+                array(
+                    'attr' => array(
+                        'class' => 'input__field input__field--hoshi',
+                    ),
+                    'required' => false,
                 )
-            ))
-            ->add('firstname', 'text', array(
-                'attr' => array(
-                    'class'       => 'input__field input__field--hoshi',
+            )
+            ->add(
+                'website',
+                'url',
+                array(
+                    'attr' => array(
+                        'class' => 'input__field input__field--hoshi',
+                    ),
+                    'required' => false,
                 )
-            ))
-            ->add('email', 'email', array(
-                'attr' => array(
-                    'class'       => 'input__field input__field--hoshi',
+            )
+            ->add(
+                'name',
+                'text',
+                array(
+                    'attr' => array(
+                        'class' => 'input__field input__field--hoshi',
+                    )
                 )
-            ))
-            ->add('phonenumber', 'number', array(
-                'attr' => array(
-                    'class' => 'input__field input__field--hoshi',
+            )
+            ->add(
+                'firstname',
+                'text',
+                array(
+                    'attr' => array(
+                        'class' => 'input__field input__field--hoshi',
+                    )
                 )
-            ))
-            ->add('project', 'textarea', array(
-                'attr' => array(
-                    'class'       => 'input__field input__field--hoshi',
+            )
+            ->add(
+                'email',
+                'email',
+                array(
+                    'attr' => array(
+                        'class' => 'input__field input__field--hoshi',
+                    )
                 )
-            ))
-        ;
+            )
+            ->add(
+                'phonenumber',
+                'number',
+                array(
+                    'attr' => array(
+                        'class' => 'input__field input__field--hoshi',
+                    )
+                )
+            )
+            ->add(
+                'project',
+                'textarea',
+                array(
+                    'attr' => array(
+                        'class' => 'input__field input__field--hoshi',
+                    )
+                )
+            );
     }
 
     /**
@@ -65,5 +92,4 @@ class ContactType extends AbstractType
     {
         return 'contact';
     }
-
 }
