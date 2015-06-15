@@ -35,6 +35,7 @@ $width:  100px;
 @import "../../../../bower_components/foundation/scss/foundation/components/dropdown-buttons";
 @import "../../../../bower_components/foundation/scss/foundation/components/visibility";
 @import "../../../../bower_components/foundation/scss/foundation/components/flex-video";
+@import "../../../../bower_components/foundation/scss/foundation/components/offcanvas";
 
 /***********************
  *** Idci components ***
@@ -47,6 +48,14 @@ $width:  100px;
 *{
   margin: 0;
   padding: 0;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  margin-top: 2.8em;
 }
 
 h3,p{
@@ -115,12 +124,22 @@ footer {
   text-transform: uppercase;
 }
 
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
 .box { @include border-radius(10px 3px); }
 
 /*******************
  ** Media Queries **
  *******************/
 @media #{$small-only}{
+
+  @import 'partials/header';
+
   header {
     background-color: $idci-blue;
   }
@@ -129,8 +148,19 @@ footer {
     background-color: $idci-white;
   }
 
+  .tab-bar
+  {
+    background: #394a59;
+    border-bottom: solid 1px $idci-white;
+  }
+
+  .left-small, .right-small{
+    border: none;
+  }
+
   .socials{
     height: 1em;
+    margin: 0;
     width: 100%;
     display: table;
     li {
@@ -260,6 +290,7 @@ footer {
       transform: rotate(-90deg);
       top: 2.8em;
       h3{
+        color: $idci-white;
         text-transform: uppercase;
         font-size: 0.7em;
       }
