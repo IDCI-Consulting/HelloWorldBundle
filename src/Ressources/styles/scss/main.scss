@@ -42,6 +42,7 @@ $width:  100px;
 @import 'partials/inputEffect';
 @import 'partials/mouseTracker';
 @import 'partials/button';
+@import 'partials/socials';
 
 *{
   margin: 0;
@@ -106,14 +107,64 @@ footer {
   }
 }
 
+.idci-light-blue{
+  color: $idci-light-blue;
+}
+
+.capitalize{
+  text-transform: uppercase;
+}
+
 .box { @include border-radius(10px 3px); }
 
 /*******************
  ** Media Queries **
  *******************/
 @media #{$small-only}{
-  header{
+  header {
     background-color: $idci-blue;
+  }
+
+  footer {
+    background-color: $idci-white;
+  }
+
+  .socials{
+    height: 1em;
+    width: 100%;
+    display: table;
+    li {
+      border: 1px solid $idci-white;
+      display: table-cell;
+      width: 33%;
+      text-align: center;
+      a{
+        background-image: $social-sprite-url;
+        background-repeat: no-repeat;
+        display: block;
+        height: 100%;
+        text-indent: -999em;
+        width: 100%;
+      }
+    }
+    li.twitter {
+      background-color: rgb(64, 153, 255);
+      a {
+        @include social-background-position('twitter');
+      }
+    }
+    li.rss {
+      background-color: rgb(255, 148, 66);
+      a {
+        @include social-background-position('rss');
+      }
+    }
+    li.github {
+      background-color: rgb(0, 0, 0);
+      a {
+        @include social-background-position('github');
+      }
+    }
   }
 
   .accordion-container {
@@ -142,7 +193,7 @@ footer {
       margin-right: 8px;
     }
     div.toggle-icon {
-      border-left: 1px solid #fff;
+      border-left: 1px solid $idci-white;
       position: absolute;
       height:100%;
       top: 0;
@@ -198,5 +249,45 @@ footer {
 
   .contact{
     background-color: $idci-blue;
+    font-size: 0.9em;
+    padding: 2em 0;
+    text-align: left;
+    .contact-title{
+      font-size: 3em;
+      left: 0.4em;
+      -ms-transform: rotate(-90deg); /* IE 9 */
+      -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+      transform: rotate(-90deg);
+      top: 2.8em;
+      h3{
+        text-transform: uppercase;
+        font-size: 0.7em;
+      }
+    }
+    .person{
+      line-height: 1em;
+      p{
+        font-size: 1em;
+        margin-top: 1em;
+      }
+      a{
+        color: $idci-white;
+        display: block;
+        margin-bottom: 0.8em;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+    .address{
+      margin-top: 3em;
+      p:first-child{
+        font-size: 1em;
+        margin-top: 1em;
+      }
+      p{
+        font-size: inherit;
+        line-height: 0.8em;
+      }
+    }
   }
 }
