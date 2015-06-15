@@ -13,16 +13,18 @@
         })();
     }
 
-    [].slice.call(document.querySelectorAll('.input__field')).forEach(function(inputElement) {
-        // in case the input is already filled..
-        if (inputElement.value.trim() !== '') {
-            classie.add(inputElement.parentNode, 'input--filled');
-        }
+    [].slice.call(document.querySelectorAll('.input__field')).forEach(
+        function(inputElement) {
+            // in case the input is already filled..
+            if (inputElement.value.trim() !== '') {
+                classie.add(inputElement.parentNode, 'input--filled');
+            }
 
-        // events:
-        inputElement.addEventListener('focus', onInputFocus);
-        inputElement.addEventListener('blur', onInputBlur);
-    } );
+            // events:
+            inputElement.addEventListener('focus', onInputFocus);
+            inputElement.addEventListener('blur', onInputBlur);
+        } 
+    );
 
     function onInputFocus(e) {
         classie.add(e.target.parentNode, 'input--filled');
