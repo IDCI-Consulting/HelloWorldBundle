@@ -2,12 +2,49 @@
 <html>
     <head>
         <title>{% block title '' %} - My Silex Application</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi"/>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="{{ asset('css/' ~ getRevFilename('app.min.css') ~ '') }}" rel="stylesheet" type="text/css" />
 
     </head>
     <body>
-        {% block content %}{% endblock %}
+    {%  include 'partials/header.html.twig' %}
+        <div class="menu">
+            <div class="off-canvas-wrap" data-offcanvas>
+                <div class="inner-wrap">
+                    <aside class="left-off-canvas-menu">
+                        <ul class="off-canvas-list">
+                            <li>
+                                <a href={{ path('homepage') }}>home</a>
+                            </li>
+                            <li>
+                                <a href={{ path('company') }}>company</a>
+                            </li>
+                            <li>
+                                <a href={{ path('team') }}>team</a>
+                            </li>
+                            <li>
+                                <a href={{ path('activities') }}>activities</a>
+                            </li>
+                            <li>
+                                <a href={{ path('partners') }}>partners</a>
+                            </li>
+                            <li>
+                                <a href={{ path('blog') }}>blog</a>
+                            </li>
+                            <li>
+                                <a href={{ path('contact') }}>contact</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    {% block content %}{% endblock %}
+
+
+                    <a class="exit-off-canvas"></a>
+                </div>
+            </div>
+        </div>
+
         {% block javascripts%}
             {% if app.debug %}
                 <script src="http://127.0.0.1:35729/livereload.js?ext=Chrome&amp;extver=2.1.0"></script>
@@ -19,12 +56,14 @@
                 <script src="{{asset('js/accordionHandler/accordion.js') }}"></script>
                 <script>
                     $(document).foundation();
+                    $(document).live('click', 'a', function() {
+                        alert('tu as cliqué');
+                    });
                 </script>
                 {% block devJavascripts %}{% endblock %}
             {% else %}
                 <script src="{{ asset('js/' ~ getRevFilename('app.min.js') ~ '') }}"></script>
             {% endif %}
-
-            {% endblock %}
+        {% endblock %}
     </body>
 </html>
