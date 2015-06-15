@@ -1,0 +1,324 @@
+/**********************
+ ** Global variables **
+ **********************/
+$color-base:  #ABCABc;
+$idci-white: #FFF;
+$idci-blue: #394A59;
+$idci-light-blue: #0DB0D1;
+$width:  10px;
+
+
+/*******************
+ ** Global Mixins **
+ *******************/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/*****************************
+ *** Foundation components ***
+ *****************************/
+@import '../../../../bower_components/foundation/scss/normalize';
+@import "../../../../bower_components/foundation/scss/foundation/components/grid";
+@import "../../../../bower_components/foundation/scss/foundation/components/accordion";
+@import "../../../../bower_components/foundation/scss/foundation/components/alert-boxes";
+@import "../../../../bower_components/foundation/scss/foundation/components/block-grid";
+@import "../../../../bower_components/foundation/scss/foundation/components/breadcrumbs";
+@import "../../../../bower_components/foundation/scss/foundation/components/button-groups";
+@import "../../../../bower_components/foundation/scss/foundation/components/buttons";
+@import "../../../../bower_components/foundation/scss/foundation/components/clearing";
+@import "../../../../bower_components/foundation/scss/foundation/components/dropdown";
+@import "../../../../bower_components/foundation/scss/foundation/components/dropdown-buttons";
+@import "../../../../bower_components/foundation/scss/foundation/components/visibility";
+@import "../../../../bower_components/foundation/scss/foundation/components/flex-video";
+@import "../../../../bower_components/foundation/scss/foundation/components/offcanvas";
+
+/***********************
+ *** Idci components ***
+ ***********************/
+@import 'partials/inputEffect';
+@import 'partials/mouseTracker';
+@import 'partials/button';
+@import 'partials/socials';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  margin-top: 2.8em;
+}
+
+h3,p{
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 300;
+}
+
+p{
+  font-size: 16px;
+}
+
+.certificates{
+  font-size: 14px;
+}
+
+header {
+  background: #bebebe;
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+footer {
+  background: #bebeb1;
+}
+
+.contact, .contact-form{
+  background: $idci-blue;
+  color: $idci-white;
+}
+
+.content{
+  font-size: 150%;
+  margin: 0 auto;
+  padding: 3em 0;
+  width: 85%;
+}
+
+.container {
+  .logo-presentation {
+    background: #323233;
+    color: white;
+    height: 25rem;
+  }
+  .experiences, .tools {
+    background: $idci-white;
+  }
+  .philosophies, .contact {
+    background: $idci-blue;
+  }
+  .button {
+    background: $idci-light-blue;
+  }
+}
+
+.idci-light-blue{
+  color: $idci-light-blue;
+}
+
+.capitalize{
+  text-transform: uppercase;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.box { @include border-radius(10px 3px); }
+
+/*******************
+ ** Media Queries **
+ *******************/
+@media #{$small-only}{
+
+  @import 'partials/header';
+
+  header {
+    background-color: $idci-blue;
+  }
+
+  footer {
+    background-color: $idci-white;
+  }
+
+  .tab-bar
+  {
+    background: #394a59;
+    border-bottom: solid 1px $idci-white;
+  }
+
+  .left-small, .right-small{
+    border: none;
+  }
+
+  .socials{
+    height: 1em;
+    margin: 0;
+    width: 100%;
+    display: table;
+    li {
+      border: 1px solid $idci-white;
+      display: table-cell;
+      width: 33%;
+      text-align: center;
+      a{
+        background-image: $social-sprite-url;
+        background-repeat: no-repeat;
+        display: block;
+        height: 100%;
+        text-indent: -999em;
+        width: 100%;
+      }
+    }
+    li.twitter {
+      background-color: rgb(64, 153, 255);
+      a {
+        @include social-background-position('twitter');
+      }
+    }
+    li.rss {
+      background-color: rgb(255, 148, 66);
+      a {
+        @include social-background-position('rss');
+      }
+    }
+    li.github {
+      background-color: rgb(0, 0, 0);
+      a {
+        @include social-background-position('github');
+      }
+    }
+  }
+
+  .accordion-container {
+    width: 100%;
+    margin: 0 0 20px;
+    clear: both;
+  }
+
+  .accordion-toggle.open {
+    background: #999;
+  }
+  .accordion-toggle {
+    position: relative;
+    display: block;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: 300;
+    background: hsl(50, 9%, 86%);
+    margin: 1px 0;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    i.picture {
+      color: #fff;
+      font-size: 2rem;
+      margin-right: 8px;
+    }
+    div.toggle-icon {
+      border-left: 1px solid $idci-white;
+      position: absolute;
+      height:100%;
+      top: 0;
+      right: 20px;
+      font-size: 1.5em;
+      margin-left: 1px;
+      i {
+        position: relative;
+        top: 10px;
+        font-size: 3rem;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .accordion-link {
+    padding:0;
+    padding-left: 1px;
+  }
+  .accordion-link .arrow{
+
+  }
+  .accordion-toggle:hover {
+    background: #999;
+  }
+
+  .accordion-content{
+    display: none;
+    padding: 10px 0;
+    overflow: inherit;
+    .title{
+      display: none;
+    }
+    p{
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+  .experiences .button{
+    background-color: hsl(140, 67%, 36%);
+    border: 2px solid #007A01;
+    @include border-radius(0);
+    font-size: 1rem;
+    left: 10%;
+    margin-top: 1em;
+    width: 80%;
+  }
+
+  .container .button:hover{
+    background-color: hsl(140, 67%, 30%);
+  }
+
+  .contact{
+    background-color: $idci-blue;
+    font-size: 0.9em;
+    padding: 2em 0;
+    text-align: left;
+    .contact-title{
+      font-size: 3em;
+      left: 0.4em;
+      -ms-transform: rotate(-90deg); /* IE 9 */
+      -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+      transform: rotate(-90deg);
+      top: 2.8em;
+      h3{
+        color: $idci-white;
+        text-transform: uppercase;
+        font-size: 0.7em;
+      }
+    }
+    .person{
+      line-height: 1em;
+      p{
+        font-size: 1em;
+        margin-top: 1em;
+      }
+      a{
+        color: $idci-white;
+        display: block;
+        margin-bottom: 0.8em;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+    .address{
+      margin-top: 3em;
+      p:first-child{
+        font-size: 1em;
+        margin-top: 1em;
+      }
+      p{
+        font-size: inherit;
+        line-height: 0.8em;
+      }
+    }
+  }
+}
