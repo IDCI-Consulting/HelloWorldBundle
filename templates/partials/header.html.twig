@@ -1,31 +1,17 @@
 <header>
-    <div class="menu">
-        <p>Menu (hamburger logo)</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href={{ path('homepage') }}>home</a>
-                </li>
-                <li>
-                    <a href={{ path('company') }}>company</a>
-                </li>
-                <li>
-                    <a href={{ path('team') }}>team</a>
-                </li>
-                <li>
-                    <a href={{ path('activities') }}>activities</a>
-                </li>
-                <li>
-                    <a href={{ path('partners') }}>partners</a>
-                </li>
-                <li>
-                    <a href={{ path('blog') }}>blog</a>
-                </li>
-                <li>
-                    <a href={{ path('contact') }}>contact</a>
-                </li>
-            </ul>
-        </nav
+    <div class="inner-wrap fixed">
+        <nav class="tab-bar" role="navigation">
+            <section class="left-small">
+                <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+            </section>
+
+            <section class="middle tab-bar-section">
+                <h1 class="title idci-logo">Idci-Consulting</h1>
+            </section>
+
+            <section class="right-small">
+                <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+            </section>
+        </nav>
     </div>
-    <div class="search"></div>
 </header>

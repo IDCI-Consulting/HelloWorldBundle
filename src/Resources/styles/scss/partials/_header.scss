@@ -1,0 +1,52 @@
+$mobile-off-canvas-width: 100%;
+
+h1.idci-logo{
+  background-image: url(/images/idci_logo.png);
+  background-size: contain;
+  text-indent: -9999px;
+}
+
+.off-canvas-list{
+  li{
+    background-color: #394a59;
+    border-bottom: 1px solid $idci-white;
+    height: 5em;
+    a {
+      background-color: #394a59;
+      border-bottom: 1px solid $idci-white;
+      height: 5em;
+    }
+    a:hover, a:focus{
+      background-color: $idci-light-blue;
+    }
+  }
+
+  li:hover, li:focus{
+    background-color: $idci-light-blue;
+  }
+}
+
+.left-off-canvas-menu,
+.left-submenu,
+.right-off-canvas-menu {
+  background-color: #394a59;
+  width: $mobile-off-canvas-width;
+}
+.move-left > .inner-wrap {
+  transform: translate3d(-$mobile-off-canvas-width, 0, 0);
+}
+.move-right > .inner-wrap {
+  transform: translate3d($mobile-off-canvas-width, 0, 0);
+}
+.no-csstransforms .left-off-canvas-menu {
+  left: -$mobile-off-canvas-width;
+}
+.no-csstransforms .move-left > .inner-wrap {
+  right: $mobile-off-canvas-width;
+}
+.no-csstransforms .right-off-canvas-menu {
+  right: -$mobile-off-canvas-width;
+}
+.no-csstransforms .move-right > .inner-wrap {
+  left: $mobile-off-canvas-width;
+}
