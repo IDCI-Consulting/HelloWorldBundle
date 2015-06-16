@@ -1,5 +1,19 @@
 $mobile-off-canvas-width: 100%;
 
+a.idci-search {
+  color: $idci-white;
+  i.fa-search {
+    float: right;
+    font-size: 1.8rem;
+    height: 100%;
+    margin: 5px 5px 0 0;
+  }
+}
+
+a.idci-search:hover {
+  color: $idci-light-blue;
+}
+
 @media #{$small-only} {
   h1.title{
     width: 100%;
