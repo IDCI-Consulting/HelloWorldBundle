@@ -10,7 +10,7 @@
     <body>
     {%  include 'partials/header.html.twig' %}
         <div class="menu">
-            <div class="off-canvas-wrap" data-offcanvas>
+            <div id="toto" class="off-canvas-wrap" data-offcanvas>
                 <div class="inner-wrap">
                     <aside class="left-off-canvas-menu">
                         <ul class="off-canvas-list">
@@ -54,9 +54,8 @@
                 <script src="{{asset('js/formFieldsEffects/classie.js') }}"></script>
                 <script src="{{asset('js/formFieldsEffects/focusFieldEffect.js') }}"></script>
                 <script src="{{asset('js/accordionHandler/accordion.js') }}"></script>
-                <script type="text/javascript">
-                    $(document).foundation();
-                </script>
+                <script src="{{asset('js/init.js') }}"></script>
+                <script src="{{asset('js/menuHandler/animateHamburgerMenu.js') }}"></script>
                 {% block devJavascripts %}{% endblock %}
             {% else %}
                 <script src="{{ asset('js/' ~ getRevFilename('app.min.js') ~ '') }}"></script>
