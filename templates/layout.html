@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>{% block title '' %} - My Silex Application</title>
-        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi"/>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;"/>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="{{ asset('css/' ~ getRevFilename('app.min.css') ~ '') }}" rel="stylesheet" type="text/css" />
 
@@ -54,11 +54,8 @@
                 <script src="{{asset('js/formFieldsEffects/classie.js') }}"></script>
                 <script src="{{asset('js/formFieldsEffects/focusFieldEffect.js') }}"></script>
                 <script src="{{asset('js/accordionHandler/accordion.js') }}"></script>
-                <script>
+                <script type="text/javascript">
                     $(document).foundation();
-                    $(document).live('click', 'a', function() {
-                        alert('tu as cliqué');
-                    });
                 </script>
                 {% block devJavascripts %}{% endblock %}
             {% else %}
