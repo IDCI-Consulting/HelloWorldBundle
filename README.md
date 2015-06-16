@@ -24,6 +24,7 @@ $ ./run.sh
 $ docker exec -it idciwebsite_silex_1 bash
 # In your Docker container run these commands
 $ composer update
+$ npm install
 $ bower update --allow-root
 $ exit
 ```
