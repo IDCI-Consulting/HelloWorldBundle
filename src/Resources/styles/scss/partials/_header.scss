@@ -10,7 +10,15 @@ a.idci-search {
   }
 }
 
-a.idci-search:hover {
+a.idci-menu {
+  color: $idci-white;
+  i.fa-bars {
+    font-size: 1.8rem;
+    margin: 7px 0 0 5px;
+  }
+}
+
+a.idci-search:hover, a.idci-menu:hover {
   color: $idci-light-blue;
 }
 
