@@ -1,0 +1,12 @@
+<h3 class="idci-light-blue capitalize">{{ firstName }} {{ lastName }}</h3>
+<p>{{ profession }}</p>
+<div class="content-wrapper">
+    <div class="image-holder brahim">
+        <div class="profile-picture front"></div>
+    </div>
+</div>
+<ul class="skills">
+    {% for skill in skills %}
+        <li class="skill">{{ skill }}</li>
+    {% endfor %}
+</ul>
