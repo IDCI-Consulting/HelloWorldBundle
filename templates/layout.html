@@ -15,30 +15,29 @@
                     <aside class="left-off-canvas-menu">
                         <ul class="off-canvas-list">
                             <li>
-                                <a href={{ path('homepage') }}>home</a>
+                                <a href={{ path('homepage') }}>{% trans %}home{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href={{ path('company') }}>company</a>
+                                <a href={{ path('company') }}>{% trans %}company{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href={{ path('team') }}>team</a>
+                                <a href={{ path('team') }}>{% trans %}team{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href={{ path('activities') }}>activities</a>
+                                <a href={{ path('activities') }}>{% trans %}our activities{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href={{ path('partners') }}>partners</a>
+                                <a href={{ path('partners') }}>{% trans %}partners{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href={{ path('blog') }}>blog</a>
+                                <a href={{ path('blog') }}>{% trans %}blog{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href={{ path('contact') }}>contact</a>
+                                <a href={{ path('contact') }}>{% trans %}contact{% endtrans %}</a>
                             </li>
                         </ul>
                     </aside>
                     {% block content %}{% endblock %}
-
 
                     <a class="exit-off-canvas"></a>
                 </div>
