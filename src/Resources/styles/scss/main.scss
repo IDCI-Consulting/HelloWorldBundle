@@ -57,6 +57,7 @@ html{
 }
 
 body{
+  height: 100%;
   margin-top: 2.8em;
 }
 
@@ -353,6 +354,7 @@ footer {
     width: 90%;
     p.member-description {
       font-size: 0.7em;
+      margin-bottom: 2em;
     }
     .skills {
       margin-top: 1em;
@@ -373,7 +375,7 @@ footer {
     }
   }
 
-  h1.team{
+  h1.team, h1.activities{
     background: $idci-dark-grey;
     font-size: 1.5em;
     height: 3em;
@@ -386,4 +388,25 @@ footer {
     }
   }
 
+  /***********************
+   *** Activities Page ***
+   ***********************/
+  h1.activities {
+    background-color: $idci-dark-grey;
+  }
+
+  .activity-content {
+    margin: 0 auto;
+    text-align: center;
+    .logo {
+      background-color: $idci-blue;
+      display: inline-block;
+      height: 8em;
+      margin: .4em .4em;
+      width: 8em;
+      img {
+        height: 100%;
+      }
+    }
+  }
 }

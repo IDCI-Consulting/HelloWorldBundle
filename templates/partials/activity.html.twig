@@ -1,0 +1,28 @@
+<article class={{ class }}>
+    <a href="#" class="accordion-toggle hide-for-medium-up">
+        <div class="row">
+            <div class="small-8 columns">
+                {{ title|trans }}
+            </div>
+            <div class="small-2 columns toggle-icon">
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </div>
+    </a>
+    <div class="accordion-content activity-content">
+        {% for image in
+            [
+                {'imageUrl': 'images/home_body_scult.png', 'websiteUrl' : 'http://www.bodysculpt.fr'},
+                {'imageUrl': 'images/home_body_scult.png', 'websiteUrl' : 'http://www.bodysculpt.fr'},
+                {'imageUrl': 'images/home_body_scult.png', 'websiteUrl' : 'http://www.bodysculpt.fr'},
+                {'imageUrl': 'images/home_body_scult.png', 'websiteUrl' : 'http://www.bodysculpt.fr'},
+            ]
+        %}
+            <div class="logo">
+                <a href="{{ image.websiteUrl }}" target="_blank">
+                    <img src="{{ asset(image.imageUrl) }}" />
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</article>
