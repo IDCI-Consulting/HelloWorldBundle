@@ -1,0 +1,20 @@
+<h3 class="show-for-small idci-light-blue capitalize">{{ firstName }} {{ lastName }}</h3>
+
+<p class="show-for-small "><em>{{ profession }}</em></p>
+
+<div class="content-wrapper">
+    <div class="image-holder brahim">
+        <img class="circle  hide-for-small" src="{{ asset('images/circle.png') }}"/>
+        <div class="profile-picture front"></div>
+    </div>
+</div>
+
+<ul class="show-for-small  skills">
+    {% for skill in skills %}
+        <li class="skill">{{ skill }}</li>
+    {% endfor %}
+</ul>
+
+<p class="member-description">
+    {{ description }}
+</p>

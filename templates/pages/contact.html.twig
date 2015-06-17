@@ -1,10 +1,8 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    {% include 'partials/header.html.twig' %}
     <section class="contact-form">
         <h2>Contact page</h2>
         {% include 'partials/contactForm.html.twig' with {'form': form} %}
     </section>
-    {% include 'partials/footer.html.twig' %}
 {% endblock %}

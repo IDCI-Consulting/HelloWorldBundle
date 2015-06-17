@@ -7,40 +7,41 @@
         <link href="{{ asset('css/' ~ getRevFilename('app.min.css') ~ '') }}" rel="stylesheet" type="text/css" />
     </head>
     <body>
-    {%  include 'partials/header.html.twig' %}
-        <div class="menu">
-            <div id="toto" class="off-canvas-wrap" data-offcanvas>
-                <div class="inner-wrap">
-                    <aside class="left-off-canvas-menu">
-                        <ul class="off-canvas-list">
-                            <li>
-                                <a href={{ path('homepage') }}>home</a>
-                            </li>
-                            <li>
-                                <a href={{ path('company') }}>company</a>
-                            </li>
-                            <li>
-                                <a href={{ path('team') }}>team</a>
-                            </li>
-                            <li>
-                                <a href={{ path('activities') }}>activities</a>
-                            </li>
-                            <li>
-                                <a href={{ path('partners') }}>partners</a>
-                            </li>
-                            <li>
-                                <a href={{ path('blog') }}>blog</a>
-                            </li>
-                            <li>
-                                <a href={{ path('contact') }}>contact</a>
-                            </li>
-                        </ul>
-                    </aside>
+        {%  include 'partials/header.html.twig' %}
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li>
+                            <a href={{ path('homepage') }}>{% trans %}home{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('company') }}>{% trans %}company{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('team') }}>{% trans %}team{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('activities') }}>{% trans %}our activities{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('partners') }}>{% trans %}partners{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('blog') }}>{% trans %}blog{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href={{ path('contact') }}>{% trans %}contact{% endtrans %}</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="container main-section">
                     {% block content %}{% endblock %}
-
-
-                    <a class="exit-off-canvas"></a>
+                    {%  include 'partials/footer.html.twig' %}
                 </div>
+
+                <a class="exit-off-canvas"></a>
             </div>
         </div>
 

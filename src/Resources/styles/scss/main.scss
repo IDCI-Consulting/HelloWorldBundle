@@ -1,11 +1,12 @@
 /**********************
  ** Global variables **
  **********************/
-$color-base:  #ABCABc;
 $idci-white: #FFF;
 $idci-blue: #394A59;
 $idci-light-blue: #0DB0D1;
-$width:  10px;
+$idci-dark-grey: #DEDDD8;
+$idci-light-grey: #f7f7f7;
+$idci-green: #1E9847;
 
 
 /*******************
@@ -56,7 +57,7 @@ html{
 }
 
 body{
-  margin-top: 2.8em;
+  height: 100%;
 }
 
 h3,p{
@@ -78,7 +79,6 @@ p{
 }
 
 header {
-  background: #bebebe;
   ul {
     margin-bottom: 0;
   }
@@ -102,15 +102,38 @@ footer {
 
 .container {
   .logo-presentation {
-    background: #323233;
+    background: #b3b3b3;
     color: white;
-    height: 25rem;
+    height: 40rem;
+    position: relative;
+    .overlay {
+      background: url(/images/pattern.png) rgba(0, 0, 0, 0.68);
+      background-size: 3px 3px;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      opacity: 0.8;
+      right: 0;
+      top: 0;
+    }
+  }
+  .experiences,
+  .tools,
+  .philosophies,
+  .contact {
+    padding-top: 4.5em;
   }
   .experiences, .tools {
     background: $idci-white;
   }
-  .philosophies, .contact {
+  .philosophies{
     background: $idci-blue;
+  }
+  .contact {
+    background: $idci-dark-grey;
+    .row {
+      max-width: 100%;
+    }
   }
   .button {
     background: $idci-light-blue;
@@ -125,6 +148,10 @@ footer {
   text-transform: uppercase;
 }
 
+.idci-light-grey {
+  color: $idci-light-grey;
+}
+
 .fixed{
   position: fixed;
   top: 0;
@@ -134,11 +161,158 @@ footer {
 
 .box { @include border-radius(10px 3px); }
 
+/**************
+ *** Footer ***
+ **************/
+section.contact {
+  .person {
+    p {
+      display: inline;
+    }
+    p:first-child {
+      display: block;
+    }
+  }
+}
+.socials{
+  height: 1em;
+  margin: 0;
+  width: 100%;
+  display: table;
+  li {
+    display: table-cell;
+    height: 6em;
+    text-align: center;
+    width: 33%;
+    a{
+      display: block;
+      height: 100%;
+      text-indent: -999em;
+      vertical-align: middle;
+      width: 100%;
+      span {
+        background-image: $social-sprite-url;
+        background-repeat: no-repeat;
+        display: block;
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+
+  li.twitter {
+    background-color: rgb(64, 153, 255);
+    a {
+      span {
+        @include social-background-position('twitter');
+      }
+    }
+  }
+  li.rss {
+    background-color: rgb(255, 148, 66);
+    a {
+      span {
+        @include social-background-position('rss');
+      }
+    }
+  }
+  li.github {
+    background-color: rgb(0, 0, 0);
+    a {
+      span {
+        @include social-background-position('github');
+      }
+    }
+  }
+}
+
+
 /*******************
  ** Media Queries **
  *******************/
+@media #{$medium-up} {
+
+  /****************
+   ** Index Page **
+   ****************/
+  h1.title{
+    width: 100%;
+    .idci-logo{
+      background-image: url(/images/idci_logo.png);
+      text-indent: -9999px;
+      background-position: 0 0px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 73px;
+      margin-top: 5px;
+      text-align: center;
+      width: 260px;
+    }
+  }
+
+  .slogan {
+    font-size: 2em;
+    margin-top: 2em;
+  }
+
+
+
+  /************
+   ** Footer **
+   ************/
+  section.contact {
+    color: #242424;
+    padding-left: 10em;
+    padding-bottom: 4em;
+    p {
+      text-transform: uppercase;
+    }
+    p:first-child {
+      margin-bottom: 3em;
+    }
+    .person, .address {
+      display: inline-block;
+      height: 181px;
+      width: 33%;
+      p {
+        display:block;
+        margin: 0;
+        span:first-child {
+          display: inline!important;
+        }
+      }
+      p:first-child {
+        margin-bottom: 2em;
+      }
+      a {
+        color: #242424;
+        display: block;
+      }
+      a.phonenumber {
+        display: inline;
+      }
+    }
+
+    .address {
+      p {
+        margin: 0;
+      }
+      p:first-child {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}
+
 @media #{$small-only}{
 
+  body {
+    margin-top: 2.8em;
+  }
+
+  /**************
+   *** Header ***
+   **************/
   header {
     background-color: $idci-blue;
   }
@@ -157,42 +331,57 @@ footer {
     border: none;
   }
 
-  .socials{
+  /**************
+   *** Footer ***
+   **************/
+  section.contact {
+    div.person {
+      margin-top: 2em;
+      p {
+        color: $idci-light-blue;
+        display: inline;
+        span {
+          display: inline;
+        }
+      }
+      p:first-child {
+        display: inline;
+      }
+      p.job::after {
+        content: "-";
+      }
+    }
+
+    .address {
+      p.company-name{
+        color: $idci-light-blue;
+      }
+    }
+  }
+  .socials {
     height: 1em;
     margin: 0;
     width: 100%;
     display: table;
     li {
-      border: 1px solid $idci-white;
-      display: table-cell;
-      width: 33%;
-      text-align: center;
-      a{
-        background-image: $social-sprite-url;
-        background-repeat: no-repeat;
-        display: block;
-        height: 100%;
-        text-indent: -999em;
-        width: 100%;
-      }
+      height: 3em;
     }
-    li.twitter {
-      background-color: rgb(64, 153, 255);
-      a {
-        @include social-background-position('twitter');
-      }
+  }
+
+  /******************
+   *** Index Page ***
+   ******************/
+
+  .container {
+    .experiences,
+    .tools,
+    .philosophies,
+    .contact {
+      padding-top: 0;
     }
-    li.rss {
-      background-color: rgb(255, 148, 66);
-      a {
-        @include social-background-position('rss');
-      }
-    }
-    li.github {
-      background-color: rgb(0, 0, 0);
-      a {
-        @include social-background-position('github');
-      }
+
+    .contact {
+      background: $idci-blue;
     }
   }
 
@@ -329,6 +518,71 @@ footer {
       p{
         font-size: inherit;
         line-height: 0.8em;
+      }
+    }
+  }
+
+  /*****************
+   *** Team Page ***
+   *****************/
+  div.team-content {
+    line-height: 2px;
+    margin: 0 auto;
+    width: 90%;
+    p.member-description {
+      font-size: 0.7em;
+      margin-bottom: 2em;
+    }
+    .skills {
+      margin-top: 1em;
+      .skill {
+        margin-top: 0.4em;
+      }
+    }
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .content-wrapper {
+    width: 100%;
+    div.image-holder {
+      margin: 0 !important;
+    }
+  }
+
+  h1.team, h1.activities{
+    background: $idci-dark-grey;
+    font-size: 1.5em;
+    height: 3em;
+    line-height: 3em;
+    margin: 0.05em 0;
+    padding-left: 20px;
+    i {
+      color: $idci-white;
+      display: inline-block!important;
+    }
+  }
+
+  /***********************
+   *** Activities Page ***
+   ***********************/
+  h1.activities {
+    background-color: $idci-dark-grey;
+  }
+
+  .activity-content {
+    margin: 0 auto;
+    text-align: center;
+    .logo {
+      background-color: $idci-blue;
+      display: inline-block;
+      height: 8em;
+      margin: .4em .4em;
+      width: 8em;
+      img {
+        height: 100%;
       }
     }
   }
