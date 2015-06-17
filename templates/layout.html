@@ -39,12 +39,12 @@
 
                 <div class="container main-section">
                     {% block content %}{% endblock %}
+                    {%  include 'partials/footer.html.twig' %}
                 </div>
 
                 <a class="exit-off-canvas"></a>
             </div>
         </div>
-        {%  include 'partials/footer.html.twig' %}
 
         {% block javascripts%}
             {% if app.debug %}
