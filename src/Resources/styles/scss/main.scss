@@ -22,7 +22,7 @@ $width:  10px;
 /*****************************
  *** Foundation components ***
  *****************************/
-@import '../../../../bower_components/foundation/scss/normalize';
+@import "../../../../bower_components/foundation/scss/normalize";
 @import "../../../../bower_components/foundation/scss/foundation/components/grid";
 @import "../../../../bower_components/foundation/scss/foundation/components/accordion";
 @import "../../../../bower_components/foundation/scss/foundation/components/alert-boxes";
@@ -44,6 +44,7 @@ $width:  10px;
 @import 'partials/mouseTracker';
 @import 'partials/button';
 @import 'partials/socials';
+@import 'partials/header';
 
 *{
   margin: 0;
@@ -137,8 +138,6 @@ footer {
  ** Media Queries **
  *******************/
 @media #{$small-only}{
-
-  @import 'partials/header';
 
   header {
     background-color: $idci-blue;
@@ -281,18 +280,30 @@ footer {
     background-color: $idci-blue;
     font-size: 0.9em;
     padding: 2em 0;
-    text-align: left;
+    position: relative;
     .contact-title{
       font-size: 3em;
-      left: 0.4em;
-      -ms-transform: rotate(-90deg); /* IE 9 */
-      -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-      transform: rotate(-90deg);
-      top: 2.8em;
+      font-weight: bold;
       h3{
         color: $idci-white;
-        text-transform: uppercase;
         font-size: 0.7em;
+        left: -2rem;
+        position: absolute;
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        text-transform: uppercase;
+        top: 5rem;
+        i.fa-map-marker {
+          font-size: 1.5em;
+          left: -5.5rem;
+          position: absolute;
+          top: 0;
+          -ms-transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          vertical-align: middle;
+        }
       }
     }
     .person{
