@@ -1,5 +1,3 @@
-'use strict';
-
 $(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function (e) {
     e.preventDefault();
     var hamburgerMenu = $('i.fa-bars');
@@ -25,5 +23,5 @@ $(document).on('close.fndtn.offcanvas', '[data-offcanvas]', function (e) {
             $(this).css('transform','rotate(0deg)');
         },
         duration: 50
-    })
+    });
 });
