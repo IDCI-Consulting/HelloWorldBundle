@@ -2,7 +2,20 @@
 
 {% block content %}
     <section class="logo-presentation hide-for-small-only">
-        Logo IDCI
+        <div class="overlay"></div>
+        <section class="middle tab-bar-section">
+            <h1 class="title">
+                <a class="idci-logo" href="{{ path('homepage') }}">
+                    Idci-Consulting
+                </a>
+            </h1>
+            <h2 class="slogan idci-light-grey capitalize">
+                < {% trans %}engineering{% endtrans %} >
+                < {% trans %}development{% endtrans %} >
+                < {% trans %}advices{% endtrans %} >
+                < {% trans %}integration{% endtrans %} >
+            </h2>
+        </section>
     </section>
 
     <section class="experiences">
