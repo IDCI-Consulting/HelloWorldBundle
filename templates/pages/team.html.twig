@@ -9,18 +9,11 @@
 {% block content %}
     <h1 class="team capitalize">
         <i class="show-for-small fa fa-user"></i>
-        Team
+        {% trans %}Team{% endtrans %}
     </h1>
 
-    <div class="content-wrapper hide-for-small">
-        <div class="image-holder brahim">
-            <img class="circle" src="{{ asset('images/circle.png') }}"/>
-            <div class="profile-picture front"></div>
-        </div>
-    </div>
 
-
-    <div class="show-for-small text-left team-content">
+    <div class="text-left team-content">
         {%
             include 'partials/teamMember.html.twig'
             with {
@@ -28,8 +21,11 @@
                 'lastName': 'boukoufallah',
                 'profession': 'analyste developpeur',
                 'skills': [
-                    'test'
-                ]
+                    'test',
+                    'test2',
+                    'test3'
+                ],
+                'description': 'je suis analyste developpeur. Le meilleur de tous!!'
             }
         %}
     </div>
