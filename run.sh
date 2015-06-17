@@ -34,8 +34,8 @@ scriptpath="`dirname \"$0\"`"
 scriptpath="`( cd \"$scriptpath\" && pwd )`"
 
 # elk
-elkvolume="/var/docker/recettes/idci/elk"
-elkcontainer="idci_elk_1"
+elkvolume="/var/docker/pre-prod/idci-website/elk"
+elkcontainer="idciwebsite_elk_1"
 kibanajson="$scriptpath/kibana.json"
 
 # The main function

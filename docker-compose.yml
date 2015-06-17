@@ -2,7 +2,7 @@ silex:
   image: ovski/silex-prod
   volumes:
    - .:/var/www
-   - /var/log/docker/nginx/idci/:/var/log/nginx
+   - /var/log/docker/nginx/idci-website/:/var/log/nginx
   links:
    - elk:syslog_server
   ports:
@@ -15,6 +15,6 @@ elk:
   environment:
    - VIRTUAL_HOST=pre-prod.logs.idci-consulting.fr
   volumes:
-   - /var/docker/recettes/idci/elk:/data
+   - /var/docker/pre-prod/idci-website/elk:/data
   ports:
    - 8094:80 
