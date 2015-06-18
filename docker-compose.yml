@@ -1,21 +1,20 @@
 silex:
-  image: brah0um/silex-dev:1.0
+  image: ovski/silex-prod
   volumes:
    - .:/var/www
-   - /var/log/docker/nginx/idci/:/var/log/nginx
+   - /var/log/docker/nginx/idci-website/:/var/log/nginx
   links:
    - elk:syslog_server
   ports:
-   - 8078:80 # edit if you want
-   - 35729:35729
+   - 8078:80
   environment:
-   - VIRTUAL_HOST=dev.idci.fr # edit your /etc/hosts file accordingly. This value is useful if a container jwilder/nginx-proxy is running.
+   - VIRTUAL_HOST=pre-prod.idci-consulting.fr
   restart: always
 elk:
   image: ovski/elk:elasticdump
   environment:
-   - VIRTUAL_HOST=dev.logs.idci.fr
+   - VIRTUAL_HOST=pre-prod.logs.idci-consulting.fr
   volumes:
-   - /var/docker/elk/idci/:/data
+   - /var/docker/pre-prod/idci-website/elk:/data
   ports:
    - 8094:80 
