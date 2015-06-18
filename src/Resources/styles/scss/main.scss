@@ -46,6 +46,7 @@ $idci-green: #1E9847;
 @import 'partials/button';
 @import 'partials/socials';
 @import 'partials/header';
+@import 'partials/tools';
 
 *{
   margin: 0;
@@ -86,6 +87,12 @@ header {
 
 footer {
   background: #bebeb1;
+}
+
+h2.title {
+  color: $idci-blue;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 .contact, .contact-form{
@@ -274,12 +281,8 @@ section.philosophies {
         height: 25em;
         vertical-align: middle;
         h2 {
-          color: $idci-blue;
           display: inline-block;
-          font-size: 3em;
           margin: -.3em 0 0 0;
-          text-transform: uppercase;
-          vertical-align: 0;
         }
         p {
           font-size: .8em;
@@ -311,7 +314,7 @@ section.philosophies {
   /****************
    ** Index Page **
    ****************/
-  h1.title{
+  h1{
     width: 100%;
     .idci-logo{
       background-image: url(/images/idci_logo.png);

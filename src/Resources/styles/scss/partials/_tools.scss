@@ -1,0 +1,193 @@
+.tools {
+  h2 {
+    font-weight: bold;
+    margin-bottom: .5em;
+  }
+  h3 {
+    border: 2px solid $idci-blue;
+    color: $idci-blue;
+    font-weight: 700;
+    height: 2em;
+    line-height: 2em;
+    margin-bottom: 2em;
+    text-indent: 1em;
+  }
+}
+
+.tools-list {
+  display: table;
+  margin-left: 0;
+  width: 100%;
+  li {
+    float:left;
+    list-style-type: none;
+    margin-right: 9em;
+  }
+  li:last-child {
+    margin-right: 0;
+  }
+}
+
+
+/**************************
+ *** Sprite declaration ***
+ **************************/
+.tools-sprite {
+  background: url(/images/technos.png) no-repeat;
+  text-indent: -9999px;
+}
+
+.symfony1 {
+  background-position: 0 -189px;
+  height: 40px;
+  width: 140px;
+  &:hover {
+    background-position: 0 -49px;
+  }
+}
+
+.symfony2 {
+  background-position: -140px -185px;
+  height: 50px;
+  width: 140px;
+  &:hover {
+    background-position: -140px -45px;
+  }
+}
+
+.node {
+  background-position: -280px -190px;
+  height: 40px;
+  width: 140px;
+  &:hover {
+    background-position: -280px -50px;
+  }
+}
+
+.meteor {
+  background-position: -420px -160px;
+  height: 100px;
+  width: 140px;
+  &:hover {
+    background-position: -420px -20px;
+  }
+}
+
+.mysql {
+  background-position: -560px -160px;
+  height: 75px;
+  width: 140px;
+  &:hover {
+    background-position: -560px -20px;
+  }
+}
+
+.mongodb {
+  background-position: -700px -180px;
+  height: 45px;
+  width: 140px;
+  &:hover {
+    background-position: -700px -40px;
+  }
+}
+
+.postgresql {
+  background-position: -840px -180px;
+  height: 55px;
+  width: 140px;
+  &:hover {
+    background-position: -840px -40px;
+  }
+}
+
+.redis {
+  background-position: -980px -185px;
+  height: 50px;
+  width: 140px;
+  &:hover {
+    background-position: -980px -45px;
+  }
+}
+
+.rabbitmq {
+  background-position: -1120px -185px;
+  height: 45px;
+  width: 140px;
+  &:hover {
+    background-position: -1120px -45px;
+  }
+}
+
+.html5-css3 {
+  background-position: -1260px -165px;
+  height: 94px;
+  width: 140px;
+  &:hover {
+    background-position: -1260px -25px;
+  }
+}
+
+.bootstrap {
+  background-position: -1400px -170px;
+  height: 75px;
+  width: 140px;
+  &:hover {
+    background-position: -1400px -30px;
+  }
+}
+
+.foundation {
+  background-position: -1540px -180px;
+  height: 60px;
+  width: 140px;
+  &:hover {
+    background-position: -1540px -40px;
+  }
+}
+
+.jquery {
+  background-position: -1680px -190px;
+  height: 40px;
+  width: 140px;
+  &:hover {
+    background-position: -1680px -50px;
+  }
+}
+
+.elk {
+  background-position: -1820px -140px;
+  height: 145px;
+  width: 140px;
+  &:hover {
+    background-position: -1820px 0;
+    height: 140px;
+    margin-bottom: 5px;
+  }
+}
+
+.varnish {
+  background-position: -1960px -180px;
+  height: 60px;
+  width: 140px;
+  &:hover {
+    background-position: -1960px -40px;
+  }
+}
+
+.docker {
+  background-position: -2100px -190px;
+  height: 40px;
+  width: 140px;
+  &:hover {
+    background-position: -2100px -50px;
+  }
+}
+
+.proxmox {
+  background-position: -2240px -200px;
+  height: 25px;
+  width: 140px;
+  &:hover {
+    background-position: -2240px -60px;
+  }
+}
