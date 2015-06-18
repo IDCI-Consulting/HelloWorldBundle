@@ -230,6 +230,59 @@ section.contact {
 /*******************
  ** Media Queries **
  *******************/
+@media #{$large} {
+
+  /****************
+   ** Index Page **
+   ****************/
+  section.experiences {
+    article {
+      margin-bottom: 5em;
+      div {
+        display: inline-block;
+        img.hide-for-small-only {
+          display: inline-block!important;
+          height: 25em;
+          width: 25em;
+        }
+      }
+
+      .experience-content {
+        height: 25em;
+        vertical-align: middle;
+        h2 {
+          color: $idci-blue;
+          display: inline-block;
+          font-size: 3em;
+          margin: -.3em 0 0 0;
+          text-transform: uppercase;
+          vertical-align: 0;
+        }
+        p {
+          font-size: .8em;
+          padding: 7em 3em;
+          margin: 0;
+        }
+        a {
+          border: 2px solid $idci-blue;
+          float: right;
+          font-size: 1em;
+          font-weight: bold;
+          height: 2.5em;
+          line-height: .6em;
+          margin: 0;
+          text-transform: uppercase;
+          width: 12em;
+        }
+
+        a:hover {
+          background: $idci-blue;
+        }
+      }
+    }
+  }
+}
+
 @media #{$medium-up} {
 
   /****************
@@ -255,11 +308,10 @@ section.contact {
     margin-top: 2em;
   }
 
-
-
   /************
    ** Footer **
    ************/
+
   section.contact {
     color: #242424;
     padding-left: 10em;
