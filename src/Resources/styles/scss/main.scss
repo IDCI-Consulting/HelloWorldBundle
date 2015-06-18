@@ -86,7 +86,7 @@ header {
 }
 
 footer {
-  background: #bebeb1;
+  background: $idci-dark-grey;
 }
 
 h2.title {
@@ -262,6 +262,9 @@ section.philosophies {
  *******************/
 @media #{$large} {
 
+  .row .row {
+    margin: 0 0 2em 0;
+  }
   /****************
    ** Index Page **
    ****************/
@@ -408,6 +411,10 @@ section.philosophies {
   /**************
    *** Footer ***
    **************/
+  footer {
+    background: $idci-blue;
+  }
+
   section.contact {
     div.person {
       margin-top: 2em;
