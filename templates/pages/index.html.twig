@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <section class="logo-presentation hide-for-small-only">
+    <section class="logo-presentation hide-for-small-only row">
         <div class="overlay"></div>
         <section class="middle tab-bar-section">
             <h1 class="title">
@@ -18,13 +18,14 @@
         </section>
     </section>
 
-    <section class="experiences">
+    <section class="experiences row">
         {%
             include 'partials/experience.html.twig'
             with {
                 'class': 'trainings accordion-container',
                 'title': 'Trainings',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                'imageUrl': 'images/conseils.jpg'
             }
         %}
         {%
@@ -32,7 +33,8 @@
             with {
                 'class': 'advices',
                 'title': 'Advices',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                'imageUrl': 'images/conseils.jpg'
             }
         %}
         {%
@@ -40,12 +42,14 @@
             with {
                 'class': 'web-development',
                 'title': 'Web development',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                'imageUrl': 'images/code_source.png'
+
             }
         %}
     </section>
 
-    <section class="philosophies hide-for-small-only">
+    <section class="philosophies hide-for-small-only row">
         {%
             include 'partials/philosophy.html.twig'
             with {
@@ -64,7 +68,7 @@
         %}
     </section>
 
-    <section class="tools hide-for-small-only">
+    <section class="tools hide-for-small-only row">
         <h2>Our tools</h2>
         {%
             include 'partials/tools.html.twig'
@@ -120,7 +124,7 @@
         %}
     </section>
 
-    <section class="contact-form hide-for-small-only">
+    <section class="contact-form hide-for-small-only row">
         {% include 'partials/contactForm.html.twig'  with {'form': form} %}
     </section>
 {% endblock %}
