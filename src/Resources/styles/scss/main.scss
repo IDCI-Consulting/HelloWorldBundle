@@ -166,10 +166,6 @@ h2.title {
   z-index: 999;
 }
 
-div.inner-wrap.fixed {
-  @include transition(background, 0.2s);
-}
-
 .box { @include border-radius(10px 3px); }
 
 /**************
