@@ -1,5 +1,26 @@
 $mobile-off-canvas-width: 100%;
 
+
+
+header {
+  &.logo-presentation {
+    background: #b3b3b3;
+    color: white;
+    height: 40rem;
+    position: relative;
+    .overlay {
+      background: url(/images/pattern.png) rgba(0, 0, 0, 0.68);
+      background-size: 3px 3px;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      opacity: 0.8;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
 .fixed {
   height: 4em;
 }
