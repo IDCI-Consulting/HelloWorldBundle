@@ -1,7 +1,5 @@
 $mobile-off-canvas-width: 100%;
 
-
-
 header {
   &.logo-presentation {
     background: #b3b3b3;
@@ -17,6 +15,25 @@ header {
       opacity: 0.8;
       right: 0;
       top: 0;
+    }
+    section.middle {
+      margin-top: 5em;
+      h2 {
+        font-size: 1.8em;
+      }
+      p {
+        margin-top: 6em;
+        a.animate {
+          background: 0 5px url(/images/arrow_down.svg) no-repeat;
+          background-size: 100%;
+          border: 2px solid $idci-white;
+          border-radius: 100%;
+          display: inline-block;
+          height: 7em;
+          text-indent: -9999px;
+          width: 7em;
+        }
+      }
     }
   }
 }

@@ -1,3 +1,8 @@
+$('a.animate').on('click', function() {
+
+    $('html, body').animate({scrollTop: 636}, 'slow');
+});
+
 if (window.matchMedia('(min-width: 40.063em)').matches) {
     $( window ).scroll(function() {
         var $body = $('body');
@@ -43,4 +48,3 @@ if (window.matchMedia('(min-width: 40.063em)').matches) {
         ;
     };
 }
-
