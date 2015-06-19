@@ -4,8 +4,8 @@ header {
   &.logo-presentation {
     background: #b3b3b3;
     color: white;
-    height: 63rem;
-    position: relative;
+    position:relative;
+    height: 100%;
     .overlay {
       background: url(/images/pattern.png) rgba(0, 0, 0, 0.68);
       background-size: 3px 3px;
@@ -17,7 +17,9 @@ header {
       top: 0;
     }
     section.middle {
-      margin-top: 20em;
+      position: absolute;
+      top:25%;
+      height: 90%;
       h2 {
         font-size: 1.8em;
       }
