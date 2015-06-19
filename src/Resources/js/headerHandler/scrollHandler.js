@@ -1,13 +1,14 @@
 $('a.animate').on('click', function() {
 
-    $('html, body').animate({scrollTop: 1007}, 'slow');
+    console.log(Modernizr.mq('(min-width: 40.063em)'));
+    //$('html, body').animate({scrollTop: 1007}, 'slow');
 });
 
-if (window.matchMedia('(min-width: 40.063em)').matches) {
-    $( window ).scroll(function() {
+if (Modernizr.mq('(min-width: 40.063em)')) {
+    var $window = $(window);
+    $window.scroll(function() {
 
-        var $body = $('body');
-        if ($body.scrollTop() >= 1007) {
+        if ($window.scrollTop() >= 1007) {
 
             $('div.inner-wrap.fixed')
                 .css('box-shadow', '0 4px 5px #888888')
