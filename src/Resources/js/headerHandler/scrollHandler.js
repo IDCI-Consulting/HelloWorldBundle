@@ -1,13 +1,13 @@
 $('a.animate').on('click', function() {
 
-    $('html, body').animate({scrollTop: 636}, 'slow');
+    $('html, body').animate({scrollTop: 1007}, 'slow');
 });
 
 if (window.matchMedia('(min-width: 40.063em)').matches) {
     $( window ).scroll(function() {
-        var $body = $('body');
 
-        if ($body.scrollTop() >= 636) {
+        var $body = $('body');
+        if ($body.scrollTop() >= 1007) {
 
             $('div.inner-wrap.fixed')
                 .css('box-shadow', '0 4px 5px #888888')
