@@ -93,6 +93,11 @@ h2.title {
   color: $idci-blue;
   font-size: 3em;
   text-transform: uppercase;
+  &.title-contact {
+    color: $idci-white;
+    margin: .3em;
+    margin-top: 2em;
+  }
 }
 
 .contact, .contact-form{
@@ -101,10 +106,13 @@ h2.title {
 }
 
 .content{
-  font-size: 150%;
-  margin: 0 auto;
+  font-size: 120%;
+  margin: 1em;
   padding: 3em 0;
-  width: 85%;
+  width: 100%;
+  &.contact-form {
+    padding: 0;
+  }
 }
 
 .container {
@@ -251,6 +259,10 @@ section.philosophies {
       display: inline-block !important;
       height: 10em;
       width: 100%;
+    }
+
+    p {
+      text-align: justify;
     }
   }
   article:last-child {
@@ -650,6 +662,14 @@ section.philosophies {
       color: $idci-white;
       display: inline-block!important;
     }
+  }
+
+  /********************
+   *** Contact Page ***
+   ********************/
+  h2.title.title-contact {
+    margin: .3em;
+    margin-top: 0;
   }
 
   /***********************
