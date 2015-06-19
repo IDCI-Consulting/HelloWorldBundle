@@ -1,43 +1,47 @@
-$('a.animate').on('click', function() {
+var $headerHeight = $('header').height();
 
-    console.log(Modernizr.mq('(min-width: 40.063em)'));
-    //$('html, body').animate({scrollTop: 1007}, 'slow');
-});
 
 if (Modernizr.mq('(min-width: 40.063em)')) {
     var $window = $(window);
-    $window.scroll(function() {
 
-        if ($window.scrollTop() >= 1007) {
-
-            $('div.inner-wrap.fixed')
-                .css('box-shadow', '0 4px 5px #888888')
-                .css('background', '#FFF')
-            ;
-
-            $('section.left-small').css('border', '.2em solid #394A59');
-            $('section.idci-logo').removeClass('show-for-small');
-            resizeLogo($('section.idci-logo > h1 .idci-logo'));
-
-            $('section.right-small').css('border', '.2em solid #394A59');
-
-            $('a.idci-menu').css('color', '#394A59');
-            $('a.idci-search').css('color', '#394A59');
-        } else {
-
-            $('div.inner-wrap.fixed')
-                .css('box-shadow', 'none')
-                .css('background', '0 0')
-            ;
-
-            $('section.left-small').css('border', '.2em solid #FFF');
-            $('section.middle.idci-logo').addClass('show-for-small');
-            $('section.right-small').css('border', '.2em solid #FFF');
-
-            $('a.idci-menu').css('color', '#FFF');
-            $('a.idci-search').css('color', '#FFF');
-        }
+    $('a.animate').on('click', function() {
+        $('html, body').animate({scrollTop: $headerHeight}, 'slow');
     });
+
+    $window.scroll(function() {
+        $window.scrollTop() >= $headerHeight ? displayHeader() : hideHeader();
+    });
+
+    var displayHeader = function() {
+        $('div.inner-wrap.fixed')
+            .css('box-shadow', '0 4px 5px #888888')
+            .css('background', '#FFF')
+        ;
+
+        $('section.left-small').css('border', '.2em solid #394A59');
+        $('section.idci-logo').removeClass('show-for-small');
+
+        resizeLogo($('section.idci-logo > h1 .idci-logo'));
+
+        $('section.right-small').css('border', '.2em solid #394A59');
+
+        $('a.idci-menu').css('color', '#394A59');
+        $('a.idci-search').css('color', '#394A59');
+    };
+
+    var hideHeader = function() {
+        $('div.inner-wrap.fixed')
+            .css('box-shadow', 'none')
+            .css('background', '0 0')
+        ;
+
+        $('section.left-small').css('border', '.2em solid #FFF');
+        $('section.middle.idci-logo').addClass('show-for-small');
+        $('section.right-small').css('border', '.2em solid #FFF');
+
+        $('a.idci-menu').css('color', '#FFF');
+        $('a.idci-search').css('color', '#FFF');
+    };
 
     var resizeLogo = function(element) {
         element
