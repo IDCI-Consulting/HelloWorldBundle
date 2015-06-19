@@ -20,6 +20,14 @@ $idci-green: #1E9847;
   border-radius: $radius;
 }
 
+@mixin transition($property, $duration, $mode:ease) {
+  -webkit-transition: $property $duration $mode;
+  -moz-transition: $property $duration $mode;
+  -ms-transition: $property $duration $mode;
+  -o-transition: $property $duration $mode;
+  transition: $property $duration $mode;
+}
+
 /*****************************
  *** Foundation components ***
  *****************************/
@@ -75,14 +83,14 @@ p{
   font-size: 16px;
 }
 
-.certificates{
-  font-size: 14px;
+a {
+  &.mail:hover, &.phonenumber:hover {
+    color: #bebebe;
+  }
 }
 
-header {
-  ul {
-    margin-bottom: 0;
-  }
+.certificates{
+  font-size: 14px;
 }
 
 footer {
@@ -116,22 +124,6 @@ h2.title {
 }
 
 .container {
-  .logo-presentation {
-    background: #b3b3b3;
-    color: white;
-    height: 40rem;
-    position: relative;
-    .overlay {
-      background: url(/images/pattern.png) rgba(0, 0, 0, 0.68);
-      background-size: 3px 3px;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      opacity: 0.8;
-      right: 0;
-      top: 0;
-    }
-  }
   .experiences,
   .tools,
   .philosophies,
@@ -172,6 +164,10 @@ h2.title {
   top: 0;
   left: 0;
   z-index: 999;
+}
+
+div.inner-wrap.fixed {
+  @include transition(background, 0.2s);
 }
 
 .box { @include border-radius(10px 3px); }
@@ -356,10 +352,6 @@ section.philosophies {
     display: none;
   }
 
-  /************
-   ** Footer **
-   ************/
-
   section.contact {
     color: #242424;
     p {
@@ -383,9 +375,15 @@ section.philosophies {
       a {
         color: #242424;
         display: block;
-      }
-      a.phonenumber {
-        display: inline;
+        &.mail:hover {
+          color: $idci-light-blue;
+        }
+        &.phonenumber {
+          display: inline;
+          &:hover {
+            color: $idci-light-blue;
+          }
+        }
       }
     }
 
@@ -435,6 +433,11 @@ section.philosophies {
   }
 
   section.contact {
+    a {
+      &:hover {
+        color: $idci-light-blue;
+      }
+    }
     div.person {
       margin-top: 2em;
       p {
