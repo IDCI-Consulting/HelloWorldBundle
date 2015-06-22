@@ -1,22 +1,5 @@
-$mobile-off-canvas-width: 70%;
-
-div.fixed {
-  left: 0;
-  margin: 0 auto;
-  right: 0;
-  background: #999;
-}
-
-div.header {
-  height: 2em;
-}
-
-
 header {
   h1 {
-      margin: 0;
-      padding-top: .2em;
-      width: 4em;
     a {
       background-image: url(/images/idci_logo.png);
       background-position: 0 0;
@@ -26,7 +9,7 @@ header {
       height: 1.13em;
       text-align: center;
       text-indent: -9999px;
-      width: 4em;
+      width: 100%;
     }
   }
 }
@@ -53,8 +36,6 @@ nav.show-for-medium-up {
   header {
     h1.title {
       margin: 0;
-      padding: .1em 0 .2em 2em;
-      width: 3em;
       a {
         background-image: url(/images/idci_logo.png);
         background-position: 0 0;
@@ -67,111 +48,55 @@ nav.show-for-medium-up {
         width: 3em;
       }
     }
-  }
-
-  nav.show-for-medium-up {
-    ul {
-      font-size: .8em;
-      list-style: none;
-      margin: 1.3em 0 0 0;
-      li {
-        display: inline-block;
-        margin-left: .5em;
+    nav {
+      ul {
+        font-size: .8em;
+        list-style: none;
+        li {
+          display: inline-block;
+          margin-left: .5em;
+        }
       }
     }
-  }
-}
-
-@media #{$medium-only} {
-  div.fixed {
-    left: 0;
   }
 }
 
 @media #{$small-only} {
-  div.fixed {
-    left: 0;
-  }
-
   header {
-    border-bottom: 1px solid $idci-white;
-    display: block;
-    width: 100%;
-    a {
+    .hamburger-menu {
       display: inline-block!important;
-      height: 100%;
+      width: 30px;
     }
-  }
 
-  h1.title{
-    a.idci-logo{
-      background-image: url(/images/idci_logo.png);
-      text-indent: -9999px;
-      background-position: 0 -59px;
-      background-repeat: no-repeat;
-      background-size: 6em;
-      display: inline-block;
-      height: 100%;
-      line-height: 100%;
-      margin-top: 5px;
-      text-align: center;
-      width: 100%;
-    }
-  }
-
-  a.idci-menu {
-    color: $idci-white;
-    height: 100%;
-    i.fa-bars {
-      font-size: 1.8rem;
-      margin: .3em .2em;
-    }
-  }
-
-  a.idci-search {
-    color: $idci-white;
-    i.fa-search {
-      float: right;
-      font-size: 1.8rem;
-      height: 100%;
-      margin: .2em;
-    }
-  }
-
-  .off-canvas-wrap.move-right {
-    min-height: 504px;
-  }
-  .move-right {
-    .inner-wrap {
-      -webkit-transform: translate3d($mobile-off-canvas-width, 0, 0);
-      -moz-transform: translate3d($mobile-off-canvas-width, 0, 0);
-      -ms-transform: translate3d($mobile-off-canvas-width, 0, 0);
-      -o-transform: translate3d($mobile-off-canvas-width, 0, 0);
-      transform: translate3d($mobile-off-canvas-width, 0, 0);
-    }
-  }
-
-  .left-off-canvas-menu {
-    background: #394a59;
-    min-height: 504px;
-    text-align: left;
-    text-transform: uppercase;
-    width: $mobile-off-canvas-width;
-  }
-
-  ul.off-canvas-list{
-    li{
+    h1.title {
+      margin: 0;
+      padding: 0;
       a {
-        background-color: #394a59;
-        border-bottom: 1px solid #FFF;
-        color: $idci-white;
-        font-size: 1.2rem;
-      }
-      a:hover, a:focus{
-        background-color: $idci-light-blue;
+        background-image: url(/images/idci_logo.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 2em;
+        display: block;
+        height: .55em;
+        text-align: center;
+        text-indent: -9999px;
+        width: 100%;
       }
     }
+    nav {
+      display: none;
+      ul {
+        font-size: .8em;
+        list-style: none;
+        li {
+          display: inline-block;
+          margin-left: .5em;
+        }
+      }
+    }
+
+    .langs {
+      margin: 0 0 0 1em;
+    }
   }
-
 }
-
