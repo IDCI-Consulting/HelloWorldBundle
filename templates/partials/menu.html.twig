@@ -1,0 +1,23 @@
+<ul class="{{ class }}">
+    <li>
+        <a href="{{ path('homepage', {'_locale': app.locale}) }}">{% trans %}home{% endtrans %}</a>
+    </li>
+    <li>
+        <a href="{{ path('company') }}">{% trans %}company{% endtrans %}</a>
+    </li>
+    <li>
+        <a href="{{ path('team') }}">{% trans %}team{% endtrans %}</a>
+    </li>
+    <li>
+        <a href="{{ path('activities') }}">{% trans %}our activities{% endtrans %}</a>
+    </li>
+    <li>
+        <a href="{{ path('partners') }}">{% trans %}partners{% endtrans %}</a>
+    </li>
+    <li>
+        <a href="{{ path('blog') }}">{% trans %}blog{% endtrans %}</a>
+    </li>
+    <li>
+        <a href="{{ path('contact') }}">{% trans %}contact{% endtrans %}</a>
+    </li>
+</ul>

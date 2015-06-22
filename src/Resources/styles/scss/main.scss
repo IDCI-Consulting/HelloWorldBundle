@@ -171,6 +171,11 @@ h2.title {
 /**************
  *** Footer ***
  **************/
+
+footer {
+  bottom: 0;
+}
+
 section.contact {
   .person {
     p {
@@ -182,18 +187,17 @@ section.contact {
   }
 }
 .socials{
+  display: table;
   height: 1em;
   margin: 0;
   width: 100%;
-  display: table;
   li {
-    display: table-cell;
+    display: inline-block;
     height: 6em;
     text-align: center;
     width: 33%;
     a{
       display: block;
-      height: 100%;
       text-indent: -999em;
       vertical-align: middle;
       width: 100%;
@@ -202,6 +206,7 @@ section.contact {
         background-repeat: no-repeat;
         display: block;
         height: 100px;
+        margin: 0;
         width: 100px;
       }
     }
@@ -321,20 +326,6 @@ section.philosophies {
   /****************
    ** Index Page **
    ****************/
-  h1{
-    width: 100%;
-    .idci-logo{
-      background-image: url(/images/idci_logo.png);
-      text-indent: -9999px;
-      background-position: 0 0px;
-      background-repeat: no-repeat;
-      display: inline-block;
-      height: 73px;
-      margin-top: 5px;
-      text-align: center;
-      width: 260px;
-    }
-  }
 
   .slogan {
     font-size: 2em;
@@ -396,10 +387,6 @@ section.philosophies {
 
 @media #{$small-only}{
 
-  body {
-    margin-top: 2.8em;
-  }
-
   /**************
    *** Header ***
    **************/
@@ -419,6 +406,11 @@ section.philosophies {
 
   .left-small, .right-small{
     border: none;
+  }
+
+
+  .main-section {
+    margin-top: 2.8em;
   }
 
   /**************
@@ -486,7 +478,6 @@ section.philosophies {
 
   .accordion-container {
     width: 100%;
-    margin: 0 0 20px;
     clear: both;
   }
 

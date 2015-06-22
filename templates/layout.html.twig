@@ -6,16 +6,12 @@
 {% endblock %}
 
 {%  block content %}
-    <div class="off-canvas-wrap" data-offcanvas>
-        <div class="inner-wrap">
-            <div class="container main-section">
-                {% block mainContent %}{% endblock %}
+    <div class="container main-section">
+        {% block mainContent %}{% endblock %}
 
-            </div>
-
-            <a class="exit-off-canvas"></a>
-        </div>
     </div>
+
+    <a class="exit-off-canvas"></a>
 {% endblock %}
 
 {% block javascripts %}

@@ -1,121 +1,130 @@
-$mobile-off-canvas-width: 100%;
+$mobile-off-canvas-width: 70%;
+
+div.fixed {
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  background: #999;
+}
+
+div.header {
+  height: 2em;
+}
+
 
 header {
-  &.logo-presentation {
-    background: #b3b3b3;
-    color: white;
-    position:relative;
+  h1 {
+      margin: 0;
+      padding-top: .2em;
+      width: 4em;
+    a {
+      background-image: url(/images/idci_logo.png);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 4em;
+      display: inline-block;
+      height: 1.13em;
+      text-align: center;
+      text-indent: -9999px;
+      width: 4em;
+    }
+  }
+}
+
+nav.show-for-medium-up {
+  ul {
+    list-style: none;
     height: 100%;
-    .overlay {
-      background: url(/images/pattern.png) rgba(0, 0, 0, 0.68);
-      background-size: 3px 3px;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      opacity: 0.8;
-      right: 0;
-      top: 0;
-    }
-    section.middle {
-      position: absolute;
-      top:25%;
-      height: 90%;
-      h2 {
-        font-size: 1.8em;
+    margin: 1.5em 0 0 0;
+    li {
+      display: inline-block;
+      margin-left: 1em;
+      a {
+        color: $idci-light-grey;
       }
-      p {
-        margin-top: 6em;
-        a.animate {
-          background: 0 5px url(/images/arrow_down.svg) no-repeat;
-          background-size: 100%;
-          border: 2px solid $idci-white;
-          border-radius: 100%;
-          display: inline-block;
-          height: 7em;
-          text-indent: -9999px;
-          width: 7em;
-
-          &:hover {
-            border: 2px solid $idci-light-blue;
-          }
-        }
+      a:hover {
+        color: $idci-blue;
       }
     }
   }
 }
 
-.fixed {
-  height: 4em;
-}
+@media #{$medium-only} {
+  header {
+    h1.title {
+      margin: 0;
+      padding: .1em 0 .2em 2em;
+      width: 3em;
+      a {
+        background-image: url(/images/idci_logo.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 3em;
+        display: block;
+        height: .85em;
+        text-align: center;
+        text-indent: -9999px;
+        width: 3em;
+      }
+    }
+  }
 
-.tab-bar {
-  background-color: transparent;
-}
-
-.left-small, .right-small {
-  border: 0.2em solid $idci-white;
-  height: 3em;
-  margin-top: 0.5em;
-  padding: 0.2em;
-  position: absolute;
-  text-align: center;
-  width: 3em;
-}
-
-.left-small {
-  margin-left: 1em;
-}
-
-.right-small {
-  margin-right: 1em;
-}
-
-a.idci-search {
-  color: $idci-white;
-  display: block;
-  height: 100%;
-  width: 100%;
-  i.fa-search {
-    font-size: 1.8rem;
+  nav.show-for-medium-up {
+    ul {
+      font-size: .8em;
+      list-style: none;
+      margin: 1.3em 0 0 0;
+      li {
+        display: inline-block;
+        margin-left: .5em;
+      }
+    }
   }
 }
 
-a.idci-menu {
-  color: $idci-white;
-  i.fa-bars {
-    font-size: 1.8rem;
+@media #{$medium-only} {
+  div.fixed {
+    left: 0;
   }
-}
-
-a.idci-search:hover, a.idci-menu:hover {
-  color: $idci-light-blue;
 }
 
 @media #{$small-only} {
-  h1.title{
+  div.fixed {
+    left: 0;
+  }
+
+  header {
+    border-bottom: 1px solid $idci-white;
+    display: block;
     width: 100%;
-    .idci-logo{
-      background-image: url(/images/idci_logo.png);
-      text-indent: -9999px;
-      background-position: 0 -75px;
-      background-repeat: no-repeat;
-      display: inline-block;
-      height: 40px;
-      margin-top: 5px;
-      text-align: center;
-      width: 100px;
+    a {
+      display: inline-block!important;
+      height: 100%;
     }
   }
 
-  .left-small, .right-small {
-    margin: 0;
+  h1.title{
+    a.idci-logo{
+      background-image: url(/images/idci_logo.png);
+      text-indent: -9999px;
+      background-position: 0 -59px;
+      background-repeat: no-repeat;
+      background-size: 6em;
+      display: inline-block;
+      height: 100%;
+      line-height: 100%;
+      margin-top: 5px;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   a.idci-menu {
     color: $idci-white;
+    height: 100%;
     i.fa-bars {
       font-size: 1.8rem;
-      margin: 0;
+      margin: .3em .2em;
     }
   }
 
@@ -125,7 +134,7 @@ a.idci-search:hover, a.idci-menu:hover {
       float: right;
       font-size: 1.8rem;
       height: 100%;
-      margin: .05em .2em;
+      margin: .2em;
     }
   }
 
