@@ -3,64 +3,72 @@
     <head>
         <title>{% block title%}IDCI-Consulting{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
         {% block stylesheets %}{% endblock %}
     </head>
 
     <body>
         {% block header %}
-            <header class="row">
-                <a class="hide-for-medium-up small-2 hamburger-menu">
-                    <img src="{{ asset('images/menu.svg') }}" />
-                </a>
+            <div class="header-container">
+                <div class="overlay"></div>
+                <header class="row">
+                    <a class="hide-for-medium-up small-3 menu-icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
 
-                <h1 class="title small-3 medium-3 columns">
-                    <a href="{{ path('homepage', {'_locale': app.locale}) }}">IDCI-Consulting</a>
-                </h1>
+                    <h1 class="title small-3 medium-3 columns">
+                        <a href="{{ path('homepage', {'_locale': app.locale}) }}">IDCI-Consulting</a>
+                    </h1>
 
-                <nav class="nav-menu small-5 medium-7 columns">
-                    <ul class="nav-menu inline-list">
+                    <nav class="nav-menu medium-7 columns">
+                        <ul class="nav-menu">
+                            <li>
+                                <a href="{{ path('homepage', {'_locale': app.locale}) }}">{% trans %}home{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('company') }}">{% trans %}company{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('team') }}">{% trans %}team{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('activities') }}">{% trans %}our activities{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('partners') }}">{% trans %}partners{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('blog') }}">{% trans %}blog{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('contact') }}">{% trans %}contact{% endtrans %}</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <ul class="langs small-3 medium-1 columns">
                         <li>
-                            <a href="{{ path('homepage', {'_locale': app.locale}) }}">{% trans %}home{% endtrans %}</a>
+                            <a href="{{ path('homepage', {'_locale': 'fr'}) }}">
+                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-fr" alt="{% trans %}France{% endtrans %}" />
+                            </a>
                         </li>
                         <li>
-                            <a href="{{ path('company') }}">{% trans %}company{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('team') }}">{% trans %}team{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('activities') }}">{% trans %}our activities{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('partners') }}">{% trans %}partners{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('blog') }}">{% trans %}blog{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('contact') }}">{% trans %}contact{% endtrans %}</a>
+                            <a href="{{ path('homepage', {'_locale': 'en'}) }}">
+                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-england" alt="{% trans %}England{% endtrans %}" />
+                            </a>
                         </li>
                     </ul>
-                </nav>
 
-                <ul class="langs small-1 medium-1 columns">
-                    <li>
-                        <a href="{{ path('homepage', {'_locale': 'fr'}) }}">fr</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('homepage', {'_locale': 'en'}) }}">en</a>
-                    </li>
-                </ul>
+                    <a class="small-3 medium-1 search-icon">
+                        <i class="fa fa-search"></i>
+                    </a>
 
-                <a class="small-1 medium-1">
-                    <i class="fa fa-search"></i>
-                </a>
-
-                <form method="post"  class="form-search hide-for-small-up">
-                    <input type="search" placeholder="Recherche"/>
-                    <input type="submit" value="Valider" />
-                </form>
-            </header>
+                    <form method="post"  class="form-search hide-for-small-up">
+                        <input type="search" placeholder="Recherche"/>
+                        <input type="submit" value="Valider" />
+                    </form>
+                </header>
+            </div>
         {% endblock %}
 
         {% block content %}{% endblock %}
