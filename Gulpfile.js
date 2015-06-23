@@ -4,7 +4,6 @@ var src              = [],
     web              = [],
     foundation       = {
         script: {
-            modernizr: "bower_components/foundation/js/vendor/modernizr.js",
             jquery: "bower_components/foundation/js/vendor/jquery.js",
             foundation: "bower_components/foundation/js/foundation.min.js"
         }
@@ -44,7 +43,7 @@ gulp.task('watch', ['init'], function() {
 
 // Task to launch before watch
 gulp.task('init', ['styles', 'dev-scripts'], function() {
-    gulp.src([foundation.script.jquery, foundation.script.foundation, foundation.script.modernizr])
+    gulp.src([foundation.script.jquery, foundation.script.foundation])
         .pipe(gulp.dest(web['script']))
         .pipe(chmod(775))
         .pipe(livereload())
@@ -85,7 +84,7 @@ gulp.task('dev-scripts', function() {
 gulp.task('prod-scripts', function() {
     // delete all css files
     del(web['script']+'/*.js');
-    gulp.src([foundation.script.jquery, foundation.script.foundation, foundation.script.modernizr, src['script']])
+    gulp.src([foundation.script.jquery, foundation.script.foundation, src['script']])
         .pipe(uglify())
         .pipe(concat({ path: 'app.min.js'}))
         .pipe(rev())
