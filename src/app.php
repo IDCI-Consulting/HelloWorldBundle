@@ -35,7 +35,7 @@ $app['translator.messages'] = array(
     'fr' => 'Resources/messages.fr.yml',
 );
 
-$app['translator'] = $app->extend('translator', function($translator, $app) {
+$app['translator'] = $app->extend('translator', function ($translator, $app) {
     $translator->addLoader('yaml', new YamlFileLoader());
 
     $translator->addResource('yaml', __DIR__.'/Resources/translations/messages.fr.yml', 'fr');
