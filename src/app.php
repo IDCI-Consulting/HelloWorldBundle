@@ -12,6 +12,8 @@ use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\HttpFragmentServiceProvider;
 use Silex\Provider\FormServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
+use Silex\Provider\SessionServiceProvider;
+use Symfony\Component\Translation\Loader\YamlFileLoader;
 
 $app = new Application();
 $app->register(new RoutingServiceProvider());
@@ -27,6 +29,20 @@ $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
+$app->register(new SessionServiceProvider());
+
+$app['translator.messages'] = array(
+    'fr' => 'Resources/messages.fr.yml',
+);
+
+$app['translator'] = $app->extend('translator', function($translator, $app) {
+    $translator->addLoader('yaml', new YamlFileLoader());
+
+    $translator->addResource('yaml', __DIR__.'/Resources/translations/messages.fr.yml', 'fr');
+
+    return $translator;
+});
+
 $app['twig'] = $app->extend(
     'twig',
     function ($twig, $app) {

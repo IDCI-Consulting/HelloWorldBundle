@@ -8,8 +8,9 @@ use Form\Type\ContactType;
 
 // Home page
 $app->get(
-    '/',
+    '/{_locale}/',
     function (Request $request) use ($app) {
+
         $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
         $form->handleRequest($request);
