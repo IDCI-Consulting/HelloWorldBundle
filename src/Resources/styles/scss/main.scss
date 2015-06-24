@@ -64,13 +64,13 @@ $idci-green: #1E9847;
 }
 
 html{
-  font-size: 100%;
   height: 100%;
 }
 
 body{
+  font-size: 100%;
   height: 100%;
-  margin-top: 3rem;
+  margin-top: 7rem;
 }
 
 h3,p{
@@ -103,12 +103,11 @@ footer {
 
 h2.title {
   color: $idci-blue;
-  font-size: 3em;
+  font-size: 3rem;
   text-transform: uppercase;
   &.title-contact {
     color: $idci-white;
-    margin: .3em;
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 }
 
@@ -119,8 +118,8 @@ h2.title {
 
 .content{
   font-size: 120%;
-  margin: 1em;
-  padding: 3em 0;
+  margin: 1rem;
+  padding: 3rem 0;
   width: 100%;
   &.contact-form {
     padding: 0;
@@ -128,22 +127,22 @@ h2.title {
 }
 
 .container {
-  .experiences,
-  .tools,
-  .philosophies,
-  .contact {
-    padding-top: 4.5em;
-  }
-  .experiences, .tools {
-    background: $idci-white;
-  }
-  .philosophies{
-    background: $idci-blue;
-  }
-  .contact {
-    background: $idci-dark-grey;
-    .row {
-      max-width: 100%;
+  section {
+    padding: 4.5rem;
+    &:first-child {
+      padding-top: 0;
+    }
+    &.experiences, &.tools {
+      background: $idci-white;
+    }
+    &.philosophies {
+      background: $idci-blue;
+    }
+    &.contact {
+      background: $idci-dark-grey;
+      .row {
+        max-width: 100%;
+      }
     }
   }
   .button {
@@ -192,17 +191,17 @@ section.contact {
 }
 .socials{
   display: table;
-  height: 1em;
+  height: 1rem;
   margin: 0;
   width: 100%;
   li {
     display: inline-block;
-    height: 6em;
+    height: 6rem;
     text-align: center;
     width: 33%;
     a{
       display: block;
-      text-indent: -999em;
+      text-indent: -999rem;
       vertical-align: middle;
       width: 100%;
       span {
@@ -244,21 +243,25 @@ section.contact {
 
 section.philosophies {
   color: $idci-white;
-  padding: 5em;
+  padding: 5rem;
   article {
-    margin-bottom: 4em;
-    h3 {
+    margin-bottom: 4rem;
+    header {
       border: 2px solid $idci-white;
-      color: $idci-white;
-      font-weight: bold;
-      height: 2em;
-      line-height: 2em;
-      margin-bottom: 2em;
-      text-indent: 1em;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      h3 {
+        color: $idci-white;
+        font-weight: bold;
+        height: 1rem;
+        line-height: 1rem;
+        margin: 0;
+        text-indent: .5rem;
+      }
     }
     img {
       display: inline-block !important;
-      height: 10em;
+      height: 10rem;
       width: 100%;
     }
 
@@ -274,52 +277,34 @@ section.philosophies {
  ** Media Queries **
  *******************/
 @media #{$large} {
-
-  .row .row {
-    margin: 0 0 2em 0;
-  }
   /****************
    ** Index Page **
    ****************/
   section.experiences {
     article {
-      margin-bottom: 5em;
       div {
         display: inline-block;
         img.hide-for-small-only {
-          display: inline-block!important;
-          height: 25em;
-          width: 25em;
+          height: 22rem;
+          width: 20rem;
         }
       }
 
       .experience-content {
-        height: 25em;
+        height: 25rem;
         vertical-align: middle;
         h2 {
           display: inline-block;
-          margin: -.3em 0 0 0;
         }
         p {
-          font-size: .8em;
-          padding: 7em 3em;
+          font-size: .8rem;
+          padding: 3rem;
           margin: 0;
         }
-        a {
-          border: 2px solid $idci-blue;
-          float: right;
-          font-size: 1em;
-          font-weight: bold;
-          height: 2.5em;
-          line-height: .6em;
-          margin: 0;
-          text-transform: uppercase;
-          width: 12em;
-        }
+      }
 
-        a:hover {
-          background: $idci-blue;
-        }
+      a {
+        margin-top: 1rem;
       }
     }
   }
@@ -330,11 +315,41 @@ section.philosophies {
   /****************
    ** Index Page **
    ****************/
+  .container {
+    section {
+      &.experiences {
+        .experience-content {
+          a {
+            border: 2px solid $idci-blue;
+            float: right;
+            font-size: 1rem;
+            font-weight: bold;
+            height: 2.5rem;
+            line-height: .6rem;
+            margin: 0;
+            text-transform: uppercase;
+            width: 12rem;
+          }
+
+          a:hover {
+            background: $idci-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .row {
+    .row {
+      margin: 0 0 2rem 0;
+    }
+  }
 
   .slogan {
-    font-size: 2em;
-    margin-top: 2em;
+    font-size: 2rem;
+    margin-top: 2rem;
   }
+
 
   /************
    ** Footer **
@@ -349,7 +364,7 @@ section.philosophies {
       text-transform: uppercase;
     }
     p:first-child {
-      margin-bottom: 3em;
+      margin-bottom: 3rem;
     }
     .person, .address {
       display: inline-block;
@@ -361,7 +376,7 @@ section.philosophies {
         }
       }
       p:first-child {
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
       }
       a {
         color: #242424;
@@ -383,14 +398,23 @@ section.philosophies {
         margin: 0;
       }
       p:first-child {
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
       }
     }
   }
 }
 
+@media #{$medium-only} {
+  html {
+    font-size: 67.5%;
+  }
+}
+
 @media #{$small-only}{
 
+  body {
+    margin-top: 4rem;
+  }
   /**************
    *** Header ***
    **************/
@@ -414,7 +438,7 @@ section.philosophies {
 
 
   .main-section {
-    margin-top: 2.8em;
+    margin-top: 2.8rem;
   }
 
   /**************
@@ -431,7 +455,7 @@ section.philosophies {
       }
     }
     div.person {
-      margin-top: 2em;
+      margin-top: 2rem;
       p {
         color: $idci-light-blue;
         display: inline;
@@ -454,12 +478,12 @@ section.philosophies {
     }
   }
   .socials {
-    height: 1em;
+    height: 1rem;
     margin: 0;
     width: 100%;
     display: table;
     li {
-      height: 3em;
+      height: 3rem;
     }
   }
 
@@ -492,7 +516,7 @@ section.philosophies {
     position: relative;
     display: block;
     padding: 20px;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 300;
     background: hsl(50, 9%, 86%);
     margin: 1px 0;
@@ -510,7 +534,7 @@ section.philosophies {
       height:100%;
       top: 0;
       right: 20px;
-      font-size: 1.5em;
+      font-size: 1.5rem;
       margin-left: 1px;
       i {
         position: relative;
@@ -551,7 +575,7 @@ section.philosophies {
     @include border-radius(0);
     font-size: 1rem;
     left: 10%;
-    margin-top: 1em;
+    margin-top: 1rem;
     width: 80%;
   }
 
@@ -561,15 +585,15 @@ section.philosophies {
 
   .contact{
     background-color: $idci-blue;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     position: relative;
     .contact-title{
-      font-size: 3em;
+      font-size: 3rem;
       font-weight: bold;
       h3{
         color: $idci-white;
-        font-size: .7em;
-        left: -1.3em;
+        font-size: .7rem;
+        left: -1.3rem;
         position: absolute;
         -ms-transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg);
@@ -577,7 +601,7 @@ section.philosophies {
         text-transform: uppercase;
         top: 6rem;
         i.fa-map-marker {
-          font-size: 1.5em;
+          font-size: 1.5rem;
           left: -5rem;
           position: absolute;
           top: 0;
@@ -589,28 +613,28 @@ section.philosophies {
       }
     }
     .person{
-      line-height: 1em;
+      line-height: 1rem;
       p{
-        font-size: 1em;
-        margin-top: 1em;
+        font-size: 1rem;
+        margin-top: 1rem;
       }
       a{
         color: $idci-white;
         display: block;
-        margin-bottom: 0.8em;
+        margin-bottom: 0.8rem;
         text-decoration: none;
         width: 100%;
       }
     }
     .address{
-      margin-top: 3em;
+      margin-top: 3rem;
       p:first-child{
-        font-size: 1em;
-        margin-top: 1em;
+        font-size: 1rem;
+        margin-top: 1rem;
       }
       p{
         font-size: inherit;
-        line-height: 0.8em;
+        line-height: 0.8rem;
       }
     }
   }
@@ -622,14 +646,14 @@ section.philosophies {
     line-height: 2px;
     margin: 0 auto;
     width: 90%;
-    p.member-description {
-      font-size: 0.7em;
-      margin-bottom: 2em;
+    p.mrember-description {
+      font-size: 0.7rem;
+      margin-bottom: 2rem;
     }
     .skills {
-      margin-top: 1em;
+      margin-top: 1rem;
       .skill {
-        margin-top: 0.4em;
+        margin-top: 0.4rem;
       }
     }
   }
@@ -647,10 +671,10 @@ section.philosophies {
 
   h1.team, h1.activities{
     background: $idci-dark-grey;
-    font-size: 1.5em;
-    height: 3em;
-    line-height: 3em;
-    margin: 0.05em 0;
+    font-size: 1.5rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0.05rem 0;
     padding-left: 20px;
     i {
       color: $idci-white;
@@ -662,7 +686,7 @@ section.philosophies {
    *** Contact Page ***
    ********************/
   h2.title.title-contact {
-    margin: .3em;
+    margin: .3rem;
     margin-top: 0;
   }
 
@@ -679,9 +703,9 @@ section.philosophies {
     .logo {
       background-color: $idci-blue;
       display: inline-block;
-      height: 8em;
-      margin: .4em .4em;
-      width: 8em;
+      height: 8rem;
+      margin: .4rem .4rem;
+      width: 8rem;
       img {
         height: 100%;
       }

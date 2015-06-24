@@ -11,11 +11,11 @@
         </div>
     </a>
     <div class="accordion-content row">
-        <div class=" medium-5 columns">
-            <img class="hide-for-small-only" src="{{ asset(imageUrl) }}" />
-        </div>
-        <div class="experience-content medium-7 columns">
-            <h2 class="title">{{ title|trans }}</h2>
+        <img class="hide-for-small-only medium-4 columns" src="{{ asset(imageUrl) }}" />
+        <div class="experience-content medium-8 columns">
+            <header>
+                <h2 class="title">{{ title|trans }}</h2>
+            </header>
             <p class="text-justify">
                 {{ content }}
             </p>
