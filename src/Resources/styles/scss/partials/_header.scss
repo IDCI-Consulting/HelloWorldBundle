@@ -41,7 +41,6 @@
 
     nav {
       ul {
-        font-size: 1.2rem;
         line-height: 6rem;
         margin: 0;
         li {
@@ -98,13 +97,13 @@
         margin: 0;
         a {
           padding-top: .1rem;
+          width: 100%;
           span {
-            background-image: url(/images/idci_logo.png);
             background-position: 0 0;
             background-repeat: no-repeat;
-            background-size: 10rem;
-            height: 2.8rem;
-            line-height: 2.8rem;
+            background-size: 8rem;
+            height: 2.3rem;
+            line-height: 2.3rem;
             text-indent: -9999px;
             width: 100%;
           }
@@ -113,7 +112,6 @@
 
       nav {
         ul {
-          font-size: .8rem !important;
           line-height: 4.9rem !important;
           li {
             display: inline-block;
@@ -189,7 +187,7 @@
         margin: 0;
         padding: 0;
         position: absolute;
-        top: 3.9rem;
+        top: 4rem;
         width: 15rem;
         z-index: 2;
         ul {
