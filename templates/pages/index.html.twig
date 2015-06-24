@@ -101,8 +101,8 @@
             {%
                 include 'partials/tools.html.twig'
                 with {
-                    'class': 'backend',
-                    'title': 'Backend',
+                    'class': 'infrastructure',
+                    'title': 'Infrastructure',
                     'images': [
                         'elk',
                         'varnish',
@@ -112,9 +112,5 @@
                 }
             %}
         </div>
-    </section>
-
-    <section class="contact-form hide-for-small-only">
-        {% include 'partials/contactForm.html.twig'  with {'form': form} %}
     </section>
 {% endblock %}
