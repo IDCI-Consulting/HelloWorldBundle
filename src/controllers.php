@@ -9,7 +9,9 @@ use Form\Type\ContactType;
 // Home page
 $app->get(
     '/{_locale}/',
-    function (Request $request) use ($app) {
+    function (Request $request, $_locale) use ($app) {
+
+        $app['translator']->setLocale($_locale);
 
         $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
