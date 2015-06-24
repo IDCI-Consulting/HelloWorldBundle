@@ -18,3 +18,4 @@ elk:
    - /var/docker/pre-prod/idci-website/elk:/data
   ports:
    - 8094:80 
+  restart: always
