@@ -1,60 +1,138 @@
-header {
-  h1 {
-    a {
-      background-image: url(/images/idci_logo.png);
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: 4em;
-      display: inline-block;
-      height: 1.13em;
-      text-align: center;
-      text-indent: -9999px;
-      width: 100%;
-    }
+.header-container {
+  background: #999;
+  height: 6.5rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  .overlay {
+    background: url(/images/pattern.png) rgba(0, 0, 0, 0.68);
+    background-size: 3px 3px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.8;
+    right: 0;
+    top: 0;
   }
-}
-
-nav.show-for-medium-up {
-  ul {
-    list-style: none;
+  header {
     height: 100%;
-    margin: 1.5em 0 0 0;
-    li {
-      display: inline-block;
-      margin-left: 1em;
-      a {
-        color: $idci-light-grey;
+    h1 {
+      height: 100%;
+      margin: 0;
+      a {
+        display: inline-block;
+        padding-top: 1rem;
+        height: 100%;
+        span {
+          background-image: url(/images/idci_logo.png);
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          background-size: 13rem;
+          display: inline-block;
+          height: 3.7rem;
+          text-align: center;
+          text-indent: -9999px;
+          width: 100%;
+        }
       }
-      a:hover {
-        color: $idci-blue;
+    }
+
+    nav {
+      ul {
+        font-size: 1.2rem;
+        line-height: 6rem;
+        margin: 0;
+        li {
+          display: inline-block;
+          a {
+            color: $idci-white;
+            display: block;
+            padding: .3rem .3rem 0 .3rem;
+            &:hover {
+              color: $idci-light-blue;
+              border-bottom: .2rem solid $idci-light-blue;
+            }
+            @include transition(all, 0.3s);
+          }
+        }
+      }
+    }
+
+    .langs {
+      display: block;
+      list-style: none;
+      height: 100%;
+      line-height: 1.8rem;
+      margin: 0 0 0 .3rem;
+      text-align: center;
+      li {
+        margin-top: 1rem;
+      }
+    }
+
+    .search-icon {
+      float: right;
+      padding: 1.5rem 0;
+      text-align: center;
+      width: 3rem;
+      i {
+        color: $idci-white;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        &:hover {
+          color: $idci-light-blue;
+        }
       }
     }
   }
 }
 
 @media #{$medium-only} {
-  header {
-    h1.title {
-      margin: 0;
-      a {
-        background-image: url(/images/idci_logo.png);
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: 3em;
-        display: block;
-        height: .85em;
-        text-align: center;
-        text-indent: -9999px;
-        width: 3em;
+  .header-container {
+    height: 5rem;
+    header {
+      h1.title {
+        height: 100%;
+        margin: 0;
+        a {
+          padding-top: .1rem;
+          span {
+            background-image: url(/images/idci_logo.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 10rem;
+            height: 2.8rem;
+            line-height: 2.8rem;
+            text-indent: -9999px;
+            width: 100%;
+          }
+        }
       }
-    }
-    nav {
-      ul {
-        font-size: .8em;
-        list-style: none;
-        li {
-          display: inline-block;
-          margin-left: .5em;
+
+      nav {
+        ul {
+          font-size: .8rem !important;
+          line-height: 4.9rem !important;
+          li {
+            display: inline-block;
+            a {
+              padding: 0 .6rem;
+            }
+          }
+        }
+      }
+
+      .langs {
+        line-height: 1rem;
+      }
+
+      .search-icon {
+        padding: 1rem 1rem 0 0;
+        i {
+          font-size: 2rem;
+          line-height: 3.6rem;
         }
       }
     }
@@ -62,41 +140,110 @@ nav.show-for-medium-up {
 }
 
 @media #{$small-only} {
-  header {
-    .hamburger-menu {
-      display: inline-block!important;
-      width: 30px;
-    }
-
-    h1.title {
-      margin: 0;
-      padding: 0;
-      a {
-        background-image: url(/images/idci_logo.png);
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: 2em;
-        display: block;
-        height: .55em;
+  .header-container {
+      height: 4rem;
+    header {
+      border-bottom: 1px solid $idci-white;
+      height: 4rem;
+      position: fixed;
+      top: 0;
+      z-index: 2;
+      .menu-icon {
+        float: left !important;
         text-align: center;
-        text-indent: -9999px;
-        width: 100%;
-      }
-    }
-    nav {
-      display: none;
-      ul {
-        font-size: .8em;
-        list-style: none;
-        li {
-          display: inline-block;
-          margin-left: .5em;
+        width: 3rem;
+        i {
+          color: $idci-white;
+          font-size: 2rem;
+          line-height: 4rem;
+          width: 100%;
+          &:hover {
+            color: $idci-light-blue;
+          }
         }
       }
-    }
 
-    .langs {
-      margin: 0 0 0 1em;
+      h1.title {
+        a {
+          padding-top: .1rem;
+          span {
+            background-image: url(/images/idci_logo.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 6rem;
+            display: inline-block;
+            height: 1.7rem;
+            line-height: 1.5rem;
+            text-align: center;
+            text-indent: -9999px;
+            width: 100%;
+          }
+        }
+      }
+      nav.nav-menu {
+        background: $idci-blue;
+        border-right: 1px solid $idci-white;
+        border-top: 1px solid $idci-blue;
+        display: none;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 3.9rem;
+        width: 15rem;
+        z-index: 2;
+        ul {
+          font-size: .9rem;
+          line-height: normal;
+          list-style: none;
+          margin: 0;
+          max-height: 22rem;
+          overflow-y: auto;
+          width: inherit;
+          li {
+            border-bottom: 1px solid $idci-white;
+            display: block;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            a {
+              color: $idci-white;
+              display: block;
+              padding: .8rem;
+              &:hover {
+                background: $idci-light-blue;
+                border: none;
+                color: $idci-white;
+              }
+            }
+          }
+        }
+      }
+
+      .langs {
+        height: 100%;
+        line-height: .5rem !important;
+        margin: 0 0 0 6rem !important;
+        text-align: center;
+        li {
+          margin-top: .9rem;
+        }
+      }
+
+      .search-icon {
+        float: right;
+        padding: .1rem 0;
+        text-align: center;
+        width: 3rem;
+        i {
+          color: $idci-white;
+          font-size: 2rem;
+          line-height: 3.5rem;
+          &:hover {
+            color: $idci-light-blue;
+          }
+        }
+      }
     }
   }
 }

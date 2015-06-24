@@ -56,6 +56,7 @@ $idci-green: #1E9847;
 @import 'partials/socials';
 @import 'partials/header';
 @import 'partials/tools';
+@import 'partials/flags';
 
 *{
   margin: 0;
@@ -63,11 +64,13 @@ $idci-green: #1E9847;
 }
 
 html{
+  font-size: 100%;
   height: 100%;
 }
 
 body{
   height: 100%;
+  margin-top: 3rem;
 }
 
 h3,p{
