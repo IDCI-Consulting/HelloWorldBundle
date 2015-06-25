@@ -6,12 +6,13 @@ use Form\Type\ContactType;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
-// Home page
-$app->get(
-    '/{_locale}/',
-    function (Request $request, $_locale) use ($app) {
+$intlApp = $app['controllers_factory'];
+$app->mount('/{_locale}', $intlApp);
 
-        $app['translator']->setLocale($_locale);
+// Home page
+$intlApp->get(
+    '/',
+    function (Request $request, $_locale) use ($app) {
 
         $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
@@ -24,57 +25,58 @@ $app->get(
         return $app['twig']->render('pages/index.html.twig', array('form' => $form->createView()));
     }
 )
-->bind('homepage');
+->bind('homepage')
+->before($before);
 
 // Company page
-$app->get(
+$intlApp->get(
     '/company',
-    function () use ($app) {
+    function (Request $request, $_locale) use ($app) {
         return $app['twig']->render('pages/company.html.twig', array());
     }
 )
 ->bind('company');
 
 // Team page
-$app->get(
+$intlApp->get(
     '/team',
-    function () use ($app) {
+    function (Request $request, $_locale) use ($app) {
         return $app['twig']->render('pages/team.html.twig', array());
     }
 )
 ->bind('team');
 
 // Activities page
-$app->get(
+$intlApp->get(
     '/activity',
-    function () use ($app) {
+    function (Request $request, $_locale) use ($app) {
         return $app['twig']->render('pages/activities.html.twig', array());
     }
 )
 ->bind('activities');
 
 // Partners page
-$app->get(
+$intlApp->get(
     '/partners',
-    function () use ($app) {
+    function (Request $request, $_locale) use ($app) {
         return $app['twig']->render('pages/partners.html.twig', array());
     }
 )
 ->bind('partners');
 
 // Blog page
-$app->get(
+$intlApp->get(
     '/blog',
-    function () use ($app) {
+    function (Request $request, $_locale) use ($app) {
         return $app['twig']->render('pages/blog.html.twig', array());
     }
 )
 ->bind('blog');
 
 // Contact page
-$app->match(
+$intlApp->match(
     '/contact',
-    function (Request $request) use ($app) {
+    function (Request $request, $_locale) use ($app) {
         $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
         $form->handleRequest($request);
