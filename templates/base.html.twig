@@ -51,16 +51,13 @@
                     </nav>
 
                     <ul class="langs small-3 medium-1 columns">
-                        <li>
-                            <a href="{{ path('homepage', {'_locale': 'fr'}) }}">
-                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-fr" alt="{% trans %}french{% endtrans %}" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ path('homepage', {'_locale': 'en'}) }}">
-                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-england" alt="{% trans %}english{% endtrans %}" />
-                            </a>
-                        </li>
+                        {% for locale, route in i18n_routes %}
+                            <li>
+                                <a href="{{ route }}">
+                                    <img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ locale }}" />
+                                </a>
+                            </li>
+                        {% endfor %}
                     </ul>
 
                     <a class="small-3 medium-1 search-icon">
