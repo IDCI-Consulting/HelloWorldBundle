@@ -308,13 +308,13 @@ section.philosophies {
         a {
           border: 2px solid $idci-blue;
           float: right;
-          font-size: 1em;
+          font-size: 1rem!important;
           font-weight: bold;
-          height: 2.5em;
-          line-height: .6em;
-          margin: 0;
+          height: 2.5rem!important;
+          line-height: 2.1rem!important;
+          margin-top: 2rem!important;
           text-transform: uppercase;
-          width: 12em;
+          width: 12rem!important;
         }
 
         a:hover {
@@ -330,6 +330,54 @@ section.philosophies {
   /****************
    ** Index Page **
    ****************/
+  .row .row {
+    margin: 0 0 2em 0;
+  }
+
+  section.experiences {
+    article {
+      margin-bottom: 5em;
+      div {
+        display: inline-block;
+        img.hide-for-small-only {
+          display: inline-block!important;
+          height: 20rem;
+          width: 20em;
+        }
+      }
+
+      .experience-content {
+        height: 20em;
+        vertical-align: middle;
+        h2 {
+          display: inline-block;
+          margin: -.3em 0 0 0;
+        }
+        p {
+          font-size: .8em;
+          margin: 0;
+          padding: 2rem;
+        }
+        a {
+          border: 2px solid $idci-blue;
+          float: right;
+          font-size: .5rem;
+          font-weight: bold;
+          height: 2rem;
+          line-height: 1.8rem;
+          margin: 0 2rem 0 0;
+          padding: 0;
+          text-transform: uppercase;
+          width: 8rem;
+        }
+
+        a:hover {
+          background: $idci-blue;
+        }
+      }
+    }
+  }
+
 
   .slogan {
     font-size: 2em;
@@ -391,6 +439,9 @@ section.philosophies {
 
 @media #{$small-only}{
 
+  body {
+    margin-top: 4rem;
+  }
   /**************
    *** Header ***
    **************/
