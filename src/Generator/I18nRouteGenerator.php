@@ -60,7 +60,7 @@ class I18nRouteGenerator
         $route   = $matcher->match($pathChunks[0]);
 
         if (!in_array('_locale', array_keys($route))) {
-            // TODO: Reflechir sur quoi faire s'il n'y a pas de locale
+            throw new \LogicException('You\'re route does not have a locale');
         }
 
         $routeName = $route['_route'];
