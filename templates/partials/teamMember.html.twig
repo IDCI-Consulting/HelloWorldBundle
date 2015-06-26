@@ -1,6 +1,6 @@
 <h3 class="show-for-small idci-light-blue capitalize">{{ firstName }} {{ lastName }}</h3>
 
-<p class="show-for-small "><em>{{ profession }}</em></p>
+<p class="show-for-small "><em>{{ profession|trans }}</em></p>
 
 <div class="content-wrapper">
     <div class="image-holder brahim">
@@ -11,7 +11,7 @@
 
 <ul class="show-for-small  skills">
     {% for skill in skills %}
-        <li class="skill">{{ skill }}</li>
+        <li class="skill">{{ skill|trans }}</li>
     {% endfor %}
 </ul>
 
