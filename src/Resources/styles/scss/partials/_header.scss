@@ -89,6 +89,22 @@
   }
 }
 
+
+@media #{$medium-up} {
+  nav {
+    height: 100%;
+    ul {
+      height: 100%;
+      li {
+        height: 100%;
+        a {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media #{$medium-only} {
   .header-container {
     height: 5rem;
