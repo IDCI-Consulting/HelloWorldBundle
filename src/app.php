@@ -14,6 +14,7 @@ use Silex\Provider\FormServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
+use Symfony\Component\HttpFoundation\Request;
 
 $app = new Application();
 $app->register(new RoutingServiceProvider());
@@ -30,6 +31,9 @@ $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
 $app->register(new SessionServiceProvider());
+$app->register(new \Providers\I18nRouteGeneratorServiceProvider());
+
+$app['i18n_route_generator.languages'] = array('fr', 'en');
 
 $app['translator.messages'] = array(
     'fr' => 'Resources/messages.fr.yml',
@@ -71,5 +75,8 @@ $app['twig'] = $app->extend(
         return $twig;
     }
 );
+
+$buildLocaleLinks = function (Request $request, Application $app) {
+};
 
 return $app;
