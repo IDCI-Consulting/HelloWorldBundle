@@ -40,18 +40,14 @@
     }
 
     nav {
-      height: 100%;
       ul {
-        height: 100%;
         line-height: 6rem;
         margin: 0;
         li {
           display: inline-block;
-          height: 100%;
           a {
             color: $idci-white;
             display: block;
-            height: 100%;
             padding: .3rem .3rem 0 .3rem;
             &:hover {
               color: $idci-light-blue;
@@ -87,6 +83,22 @@
         line-height: 3.6rem;
         &:hover {
           color: $idci-light-blue;
+        }
+      }
+    }
+  }
+}
+
+
+@media #{$medium-up} {
+  nav {
+    height: 100%;
+    ul {
+      height: 100%;
+      li {
+        height: 100%;
+        a {
+          height: 100%;
         }
       }
     }
