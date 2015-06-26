@@ -68,6 +68,7 @@
       text-align: center;
       li {
         margin-top: 1rem;
+        margin-left: .5rem;
       }
     }
 
@@ -96,13 +97,13 @@
         height: 100%;
         margin: 0;
         a {
-          padding-top: .1rem;
+          padding-top: .5rem;
           width: 100%;
           span {
             background-position: 0 0;
             background-repeat: no-repeat;
-            background-size: 8rem;
-            height: 2.3rem;
+            background-size: 6rem;
+            height: 1.7rem;
             line-height: 2.3rem;
             text-indent: -9999px;
             width: 100%;
@@ -112,12 +113,10 @@
 
       nav {
         ul {
-          line-height: 4.9rem !important;
+          font-size: .9rem;
+          line-height: 4rem !important;
           li {
             display: inline-block;
-            a {
-              padding: 0 .6rem;
-            }
           }
         }
       }
