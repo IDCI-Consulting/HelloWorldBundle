@@ -179,6 +179,7 @@
       h1.title {
         a {
           padding-top: .1rem;
+          width: 100%;
           span {
             background-image: url(/images/idci_logo.png);
             background-position: 0 0;
@@ -236,7 +237,6 @@
       .langs {
         height: 100%;
         line-height: 1.5rem !important;
-        margin: 0 0 0 20% !important;
         text-align: center;
         li {
           margin-top: .9rem;
