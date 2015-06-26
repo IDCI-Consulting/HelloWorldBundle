@@ -98,22 +98,4 @@ class I18nRouteGenerator
 
         return $routes;
     }
-
-
-   /* // TODO: Code to use to implement teh service
-    public function CodeToImplements()
-    {
-        $path = str_replace($request->getBaseUrl(), '', $request->getRequestUri());
-        $pathPart = explode('?', $path);
-        $requestContext = new \Symfony\Component\Routing\RequestContext($request->getRequestUri());
-        $matcher = new \Symfony\Component\Routing\Matcher\UrlMatcher($app['routes'], $requestContext);
-        $route = $matcher->match($pathPart[0]);
-        if (in_array("_locale", array_keys($route))) {
-            $routeName = $route["_route"];
-        } else {
-            die('pas de local');
-        }
-
-        var_dump($app['url_generator']->generate($routeName, array('_locale' => 'fr')));die;
-    }*/
 }
