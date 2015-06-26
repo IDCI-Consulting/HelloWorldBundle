@@ -6,10 +6,17 @@ use Form\Type\ContactType;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
+$intlApp = $app['controllers_factory'];
+$app->mount('/{_locale}', $intlApp);
+
 // Home page
-$app->get(
+$intlApp->get(
     '/',
-    function (Request $request) use ($app) {
+    function (Request $request, $_locale) use ($app) {
+
+        $app['translator']->setLocale($_locale);
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
         $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
         $form->handleRequest($request);
@@ -18,60 +25,86 @@ $app->get(
             var_dump('VALID', $form->getData());
         }
 
-        return $app['twig']->render('pages/index.html.twig', array('form' => $form->createView()));
+        return $app['twig']->render(
+            'pages/index.html.twig',
+            array(
+                'form' => $form->createView(),
+                'i18n_routes' => $i18nRoutes)
+        );
     }
 )
-->bind('homepage');
+->bind('homepage')
+;
 
 // Company page
-$app->get(
+$intlApp->get(
     '/company',
-    function () use ($app) {
-        return $app['twig']->render('pages/company.html.twig', array());
+    function (Request $request, $_locale) use ($app) {
+        $app['translator']->setLocale($_locale);
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
+        return $app['twig']->render('pages/company.html.twig', array('i18n_routes' => $i18nRoutes));
     }
 )
-->bind('company');
+->bind('company')
+;
 
 // Team page
-$app->get(
+$intlApp->get(
     '/team',
-    function () use ($app) {
-        return $app['twig']->render('pages/team.html.twig', array());
+    function (Request $request, $_locale) use ($app) {
+        $app['translator']->setLocale($_locale);
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
+        return $app['twig']->render('pages/team.html.twig', array('i18n_routes' => $i18nRoutes));
     }
 )
-->bind('team');
+->bind('team')
+;
 
 // Activities page
-$app->get(
+$intlApp->get(
     '/activity',
-    function () use ($app) {
-        return $app['twig']->render('pages/activities.html.twig', array());
+    function (Request $request, $_locale) use ($app) {
+        $app['translator']->setLocale($_locale);
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
+        return $app['twig']->render('pages/activities.html.twig', array('i18n_routes' => $i18nRoutes));
     }
 )
 ->bind('activities');
 
 // Partners page
-$app->get(
+$intlApp->get(
     '/partners',
-    function () use ($app) {
-        return $app['twig']->render('pages/partners.html.twig', array());
+    function (Request $request, $_locale) use ($app) {
+        $app['translator']->setLocale($_locale);
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
+        return $app['twig']->render('pages/partners.html.twig', array('i18n_routes' => $i18nRoutes));
     }
 )
 ->bind('partners');
 
 // Blog page
-$app->get(
+$intlApp->get(
     '/blog',
-    function () use ($app) {
-        return $app['twig']->render('pages/blog.html.twig', array());
+    function (Request $request, $_locale) use ($app) {
+        $app['translator']->setLocale($_locale);
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
+        return $app['twig']->render('pages/blog.html.twig', array('i18n_routes' => $i18nRoutes));
     }
 )
 ->bind('blog');
 
 // Contact page
-$app->match(
+$intlApp->match(
     '/contact',
-    function (Request $request) use ($app) {
+    function (Request $request, $_locale) use ($app) {
+        $app['translator']->setLocale($_locale);
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
         $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
         $form->handleRequest($request);
@@ -80,7 +113,12 @@ $app->match(
             var_dump('VALID', $form->getData());
         }
 
-        return $app['twig']->render('pages/contact.html.twig', array('form' => $form->createView()));
+        return $app['twig']->render(
+            'pages/contact.html.twig',
+            array(
+                'form' => $form->createView(),
+                'i18n_routes' => $i18nRoutes)
+        );
     }
 )
 ->bind('contact');

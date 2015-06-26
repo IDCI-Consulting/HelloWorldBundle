@@ -72,8 +72,8 @@ gulp.task('styles', function() {
 gulp.task('dev-scripts', function() {
     // move js files
     gulp.src(src['script'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
+        /*.pipe(jshint())
+        .pipe(jshint.reporter('default'))*/
         .pipe(gulp.dest(web['script']))
         .pipe(chmod(775))
         .pipe(livereload())

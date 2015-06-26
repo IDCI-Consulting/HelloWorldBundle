@@ -242,7 +242,10 @@ section.contact {
 
 section.philosophies {
   color: $idci-white;
+<<<<<<< HEAD
   padding: 5rem;
+=======
+>>>>>>> development
   article {
     margin-bottom: 4rem;
     header {
@@ -296,9 +299,20 @@ section.philosophies {
           display: inline-block;
         }
         p {
-          font-size: .8rem;
-          padding: 3rem;
+          font-size: .8em;
+          padding: 7em 3em;
           margin: 0;
+        }
+        a {
+          border: 2px solid $idci-blue;
+          float: right;
+          font-size: 1rem!important;
+          font-weight: bold;
+          height: 2.5rem!important;
+          line-height: 2.1rem!important;
+          margin-top: 2rem!important;
+          text-transform: uppercase;
+          width: 12rem!important;
         }
       }
 
@@ -314,34 +328,51 @@ section.philosophies {
   /****************
    ** Index Page **
    ****************/
-  .container {
-    section {
-      padding: 4.5rem;
-      &.experiences {
-        .experience-content {
-          a {
-            border: 2px solid $idci-blue;
-            float: right;
-            font-size: 1rem;
-            font-weight: bold;
-            height: 2.5rem;
-            line-height: .6rem;
-            margin: 0;
-            text-transform: uppercase;
-            width: 12rem;
-          }
-
-          a:hover {
-            background: $idci-blue;
-          }
-        }
-      }
-    }
+  .row .row {
+    margin: 0 0 2em 0;
   }
 
-  .row {
-    .row {
-      margin: 0 0 2rem 0;
+  section.experiences {
+    article {
+      margin-bottom: 5em;
+      div {
+        display: inline-block;
+        img.hide-for-small-only {
+          display: inline-block!important;
+          height: 20rem;
+          width: 20em;
+        }
+      }
+
+      .experience-content {
+        height: 20em;
+        vertical-align: middle;
+        h2 {
+          display: inline-block;
+          margin: -.3em 0 0 0;
+        }
+        p {
+          font-size: .8em;
+          margin: 0;
+          padding: 2rem;
+        }
+        a {
+          border: 2px solid $idci-blue;
+          float: right;
+          font-size: .5rem;
+          font-weight: bold;
+          height: 2rem;
+          line-height: 1.8rem;
+          margin: 0 2rem 0 0;
+          padding: 0;
+          text-transform: uppercase;
+          width: 8rem;
+        }
+
+        a:hover {
+          background: $idci-blue;
+        }
+      }
     }
   }
 
@@ -405,309 +436,311 @@ section.philosophies {
 }
 
 @media #{$medium-only} {
-  html {
-    font-size: 67.5%;
-  }
+< < < < < < < HEAD html {
+  font-size: 67.5%;
+== == == = h2 . title {
+  font-size: 2em;
+> > > > > > > development
+}
 }
 
-@media #{$small-only}{
+  @media #{$small-only}{
 
-  body {
-    margin-top: 4rem;
-  }
-  /**************
-   *** Header ***
-   **************/
-  header {
-    background-color: $idci-blue;
-  }
-
-  footer {
-    background-color: $idci-white;
-  }
-
-  .tab-bar
-  {
-    background: #394a59;
-    border-bottom: solid 1px $idci-white;
-  }
-
-  .left-small, .right-small{
-    border: none;
-  }
-
-
-  .main-section {
-    margin-top: 2.8rem;
-  }
-
-  /**************
-   *** Footer ***
-   **************/
-  footer {
-    background: $idci-blue;
-  }
-
-  section.contact {
-    a {
-      &:hover {
-        color: $idci-light-blue;
-      }
+    body {
+      margin-top: 4rem;
     }
-    div.person {
-      margin-top: 2rem;
-      p {
-        color: $idci-light-blue;
-        display: inline;
-        span {
-          display: inline;
-        }
-      }
-      p:first-child {
-        display: inline;
-      }
-      p.job::after {
-        content: "-";
-      }
+    /**************
+     *** Header ***
+     **************/
+    header {
+      background-color: $idci-blue;
     }
 
-    .address {
-      p.company-name{
-        color: $idci-light-blue;
-      }
-    }
-  }
-  .socials {
-    height: 1rem;
-    margin: 0;
-    width: 100%;
-    display: table;
-    li {
-      height: 3rem;
-    }
-  }
-
-  /******************
-   *** Index Page ***
-   ******************/
-
-  .container {
-    .experiences,
-    .tools,
-    .philosophies,
-    .contact {
-      padding-top: 0;
+    footer {
+      background-color: $idci-white;
     }
 
-    .contact {
+    .tab-bar {
+      background: #394a59;
+      border-bottom: solid 1px $idci-white;
+    }
+
+    .left-small, .right-small {
+      border: none;
+    }
+
+    .main-section {
+      margin-top: 2.8rem;
+    }
+
+    /**************
+     *** Footer ***
+     **************/
+    footer {
       background: $idci-blue;
     }
-  }
 
-  .accordion-container {
-    width: 100%;
-    clear: both;
-  }
-
-  .accordion-toggle.open {
-    background: #999;
-  }
-  .accordion-toggle {
-    position: relative;
-    display: block;
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: 300;
-    background: hsl(50, 9%, 86%);
-    margin: 1px 0;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    i.picture {
-      color: #fff;
-      font-size: 2rem;
-      margin-right: 8px;
-    }
-    div.toggle-icon {
-      border-left: 1px solid $idci-white;
-      position: absolute;
-      height:100%;
-      top: 0;
-      right: 20px;
-      font-size: 1.5rem;
-      margin-left: 1px;
-      i {
-        position: relative;
-        top: 10px;
-        font-size: 3rem;
-        margin-left: 10px;
+    section.contact {
+      a {
+        &:hover {
+          color: $idci-light-blue;
+        }
       }
-    }
-  }
+      div.person {
+        margin-top: 2rem;
+        p {
+          color: $idci-light-blue;
+          display: inline;
+          span {
+            display: inline;
+          }
+        }
+        p:first-child {
+          display: inline;
+        }
+        p.job::after {
+          content: "-";
+        }
+      }
 
-  .accordion-link {
-    padding:0;
-    padding-left: 1px;
-  }
-  .accordion-link .arrow{
-
-  }
-  .accordion-toggle:hover {
-    background: #999;
-  }
-
-  .accordion-content{
-    display: none;
-    padding: 10px 0;
-    overflow: inherit;
-    .title{
-      display: none;
-    }
-    p{
-      margin: 0 auto;
-      width: 80%;
-    }
-  }
-
-  .experiences .button{
-    background-color: $idci-green;
-    border: 2px solid #007A01;
-    @include border-radius(0);
-    font-size: 1rem;
-    left: 10%;
-    margin-top: 1rem;
-    width: 80%;
-  }
-
-  .container .button:hover{
-    background-color: hsl(140, 67%, 30%);
-  }
-
-  .contact{
-    background-color: $idci-blue;
-    font-size: 0.9rem;
-    position: relative;
-    .contact-title{
-      font-size: 3rem;
-      font-weight: bold;
-      h3{
-        color: $idci-white;
-        font-size: .7rem;
-        left: -1.3rem;
-        position: absolute;
-        -ms-transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
-        transform: rotate(-90deg);
-        text-transform: uppercase;
-        top: 6rem;
-        i.fa-map-marker {
-          font-size: 1.5rem;
-          left: -5rem;
-          position: absolute;
-          top: 0;
-          -ms-transform: rotate(90deg);
-          -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-          vertical-align: middle;
+      .address {
+        p.company-name {
+          color: $idci-light-blue;
         }
       }
     }
-    .person{
-      line-height: 1rem;
-      p{
-        font-size: 1rem;
-        margin-top: 1rem;
-      }
-      a{
-        color: $idci-white;
-        display: block;
-        margin-bottom: 0.8rem;
-        text-decoration: none;
-        width: 100%;
+    .socials {
+      height: 1rem;
+      margin: 0;
+      width: 100%;
+      display: table;
+      li {
+        height: 3rem;
       }
     }
-    .address{
-      margin-top: 3rem;
-      p:first-child{
-        font-size: 1rem;
-        margin-top: 1rem;
-      }
-      p{
-        font-size: inherit;
-        line-height: 0.8rem;
-      }
-    }
-  }
 
-  /*****************
-   *** Team Page ***
-   *****************/
-  div.team-content {
-    line-height: 2px;
-    margin: 0 auto;
-    width: 90%;
-    p.mrember-description {
-      font-size: 0.7rem;
-      margin-bottom: 2rem;
-    }
-    .skills {
-      margin-top: 1rem;
-      .skill {
-        margin-top: 0.4rem;
+    /******************
+     *** Index Page ***
+     ******************/
+
+    .container {
+      .experiences,
+      .tools,
+      .philosophies,
+      .contact {
+        padding-top: 0;
+      }
+
+      .contact {
+        background: $idci-blue;
       }
     }
-  }
 
-  h3 {
-    margin-bottom: 0;
-  }
-
-  .content-wrapper {
-    width: 100%;
-    div.image-holder {
-      margin: 0 !important;
+    .accordion-container {
+      width: 100%;
+      clear: both;
     }
-  }
 
-  h1.team, h1.activities{
-    background: $idci-dark-grey;
-    font-size: 1.5rem;
-    height: 3rem;
-    line-height: 3rem;
-    margin: 0.05rem 0;
-    padding-left: 20px;
-    i {
-      color: $idci-white;
-      display: inline-block!important;
+    .accordion-toggle.open {
+      background: #999;
     }
-  }
-
-  /********************
-   *** Contact Page ***
-   ********************/
-  h2.title.title-contact {
-    margin: .3rem;
-    margin-top: 0;
-  }
-
-  /***********************
-   *** Activities Page ***
-   ***********************/
-  h1.activities {
-    background-color: $idci-dark-grey;
-  }
-
-  .activity-content {
-    margin: 0 auto;
-    text-align: center;
-    .logo {
-      background-color: $idci-blue;
-      display: inline-block;
-      height: 8rem;
-      margin: .4rem .4rem;
-      width: 8rem;
-      img {
+    .accordion-toggle {
+      position: relative;
+      display: block;
+      padding: 20px;
+      font-size: 1rem;
+      font-weight: 300;
+      background: hsl(50, 9%, 86%);
+      margin: 1px 0;
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      i.picture {
+        color: #fff;
+        font-size: 2rem;
+        margin-right: 8px;
+      }
+      div.toggle-icon {
+        border-left: 1px solid $idci-white;
+        position: absolute;
         height: 100%;
+        top: 0;
+        right: 20px;
+        font-size: 1.5rem;
+        margin-left: 1px;
+        i {
+          position: relative;
+          top: 10px;
+          font-size: 3rem;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .accordion-link {
+      padding: 0;
+      padding-left: 1px;
+    }
+    .accordion-link .arrow {
+
+    }
+    .accordion-toggle:hover {
+      background: #999;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px 0;
+      overflow: inherit;
+      .title {
+        display: none;
+      }
+      p {
+        margin: 0 auto;
+        width: 80%;
+      }
+    }
+
+    .experiences .button {
+      background-color: $idci-green;
+      border: 2px solid #007A01;
+      @include border-radius(0);
+      font-size: 1rem;
+      left: 10%;
+      margin-top: 1rem;
+      width: 80%;
+    }
+
+    .container .button:hover {
+      background-color: hsl(140, 67%, 30%);
+    }
+
+    .contact {
+      background-color: $idci-blue;
+      font-size: 0.9rem;
+      position: relative;
+      .contact-title {
+        font-size: 3rem;
+        font-weight: bold;
+        h3 {
+          color: $idci-white;
+          font-size: .7rem;
+          left: -1.3rem;
+          position: absolute;
+          -ms-transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          text-transform: uppercase;
+          top: 6rem;
+          i.fa-map-marker {
+            font-size: 1.5rem;
+            left: -5rem;
+            position: absolute;
+            top: 0;
+            -ms-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            vertical-align: middle;
+          }
+        }
+      }
+      .person {
+        line-height: 1rem;
+        p {
+          font-size: 1rem;
+          margin-top: 1rem;
+        }
+        a {
+          color: $idci-white;
+          display: block;
+          margin-bottom: 0.8rem;
+          text-decoration: none;
+          width: 100%;
+        }
+      }
+      .address {
+        margin-top: 3rem;
+        p:first-child {
+          font-size: 1rem;
+          margin-top: 1rem;
+        }
+        p {
+          font-size: inherit;
+          line-height: 0.8rem;
+        }
+      }
+    }
+
+    /*****************
+     *** Team Page ***
+     *****************/
+    div.team-content  {
+      line-height: 2px;
+      margin: 0 auto;
+      width: 90%;
+      p.mrember-description {
+        font-size: 0.7rem;
+        margin-bottom: 2rem;
+      }
+      .skills {
+        margin-top: 1rem;
+        .skill {
+          margin-top: 0.4rem;
+        }
+      }
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .content-wrapper {
+      width: 100%;
+      div.image-holder {
+        margin: 0 !important;
+      }
+    }
+
+    h1.team, h1.activities {
+      background: $idci-dark-grey;
+      font-size: 1.5rem;
+      height: 3rem;
+      line-height: 3rem;
+      margin: 0.05rem 0;
+      padding-left: 20px;
+      i {
+        color: $idci-white;
+        display: inline-block !important;
+      }
+    }
+
+    /********************
+     *** Contact Page ***
+     ********************/
+    h2.title.title-contact {
+      margin: .3rem;
+      margin-top: 0;
+    }
+
+    /***********************
+     *** Activities Page ***
+     ***********************/
+    h1.activities {
+      background-color: $idci-dark-grey;
+    }
+
+    .activity-content {
+      margin: 0 auto;
+      text-align: center;
+      .logo {
+        background-color: $idci-blue;
+        display: inline-block;
+        height: 8rem;
+        margin: .4rem .4rem;
+        width: 8rem;
+        img {
+          height: 100%;
+        }
       }
     }
   }

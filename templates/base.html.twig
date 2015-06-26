@@ -17,7 +17,7 @@
                     </a>
 
                     <h1 class="title small-3 medium-2 large-3 columns">
-                        <a href="{{ path('homepage', {'_locale': app.locale}) }}">
+                        <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">
                             <span>
                                 IDCI-Consulting
                             </span>
@@ -27,40 +27,37 @@
                     <nav class="nav-menu medium-8 large-7 columns">
                         <ul class="nav-menu">
                             <li>
-                                <a href="{{ path('homepage', {'_locale': app.locale}) }}">{% trans %}home{% endtrans %}</a>
+                                <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">{% trans %}home{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('company') }}">{% trans %}company{% endtrans %}</a>
+                                <a href="{{ path('company', {'_locale': app.translator.locale}) }}">{% trans %}the company{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('team') }}">{% trans %}team{% endtrans %}</a>
+                                <a href="{{ path('team', {'_locale': app.translator.locale}) }}">{% trans %}the team{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('activities') }}">{% trans %}our activities{% endtrans %}</a>
+                                <a href="{{ path('activities', {'_locale': app.translator.locale}) }}">{% trans %}our activities{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('partners') }}">{% trans %}partners{% endtrans %}</a>
+                                <a href="{{ path('partners', {'_locale': app.translator.locale}) }}">{% trans %}our partners{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('blog') }}">{% trans %}blog{% endtrans %}</a>
+                                <a href="{{ path('blog', {'_locale': app.translator.locale}) }}">{% trans %}blog{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('contact') }}">{% trans %}contact{% endtrans %}</a>
+                                <a href="{{ path('contact', {'_locale': app.translator.locale}) }}">{% trans %}contact{% endtrans %}</a>
                             </li>
                         </ul>
                     </nav>
 
-                    <ul class="langs small-3 medium-1 columns">
-                        <li>
-                            <a href="{{ path('homepage', {'_locale': 'fr'}) }}">
-                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-fr" alt="{% trans %}France{% endtrans %}" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ path('homepage', {'_locale': 'en'}) }}">
-                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-england" alt="{% trans %}England{% endtrans %}" />
-                            </a>
-                        </li>
+                    <ul class="langs small-3 medium-1 columns inline-list">
+                        {% for locale, route in i18n_routes %}
+                            <li>
+                                <a href="{{ route }}">
+                                    <img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ locale }}" />
+                                </a>
+                            </li>
+                        {% endfor %}
                     </ul>
 
                     <a class="small-3 medium-1 search-icon">

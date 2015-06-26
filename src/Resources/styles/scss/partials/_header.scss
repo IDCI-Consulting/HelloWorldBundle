@@ -41,7 +41,6 @@
 
     nav {
       ul {
-        font-size: 1.2rem;
         line-height: 6rem;
         margin: 0;
         li {
@@ -69,6 +68,7 @@
       text-align: center;
       li {
         margin-top: 1rem;
+        margin-left: .5rem;
       }
     }
 
@@ -89,6 +89,22 @@
   }
 }
 
+
+@media #{$medium-up} {
+  nav {
+    height: 100%;
+    ul {
+      height: 100%;
+      li {
+        height: 100%;
+        a {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
 @media #{$medium-only} {
   .header-container {
     height: 5rem;
@@ -97,14 +113,14 @@
         height: 100%;
         margin: 0;
         a {
-          padding-top: .1rem;
+          padding-top: .5rem;
+          width: 100%;
           span {
-            background-image: url(/images/idci_logo.png);
             background-position: 0 0;
             background-repeat: no-repeat;
-            background-size: 10rem;
-            height: 2.8rem;
-            line-height: 2.8rem;
+            background-size: 6rem;
+            height: 1.7rem;
+            line-height: 2.3rem;
             text-indent: -9999px;
             width: 100%;
           }
@@ -113,13 +129,10 @@
 
       nav {
         ul {
-          font-size: .8rem !important;
-          line-height: 4.9rem !important;
+          font-size: .9rem;
+          line-height: 4rem !important;
           li {
             display: inline-block;
-            a {
-              padding: 0 .6rem;
-            }
           }
         }
       }
@@ -189,7 +202,7 @@
         margin: 0;
         padding: 0;
         position: absolute;
-        top: 3.9rem;
+        top: 4rem;
         width: 15rem;
         z-index: 2;
         ul {
@@ -222,8 +235,8 @@
 
       .langs {
         height: 100%;
-        line-height: .5rem !important;
-        margin: 0 0 0 6rem !important;
+        line-height: 1.5rem !important;
+        margin: 0 0 0 20% !important;
         text-align: center;
         li {
           margin-top: .9rem;
