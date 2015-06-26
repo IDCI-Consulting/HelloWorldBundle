@@ -1,10 +1,10 @@
 <?php
 
 namespace Providers;
+
 use Generator\I18nRouteGenerator;
 use Pimple\ServiceProviderInterface;
 use Pimple\Container;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**
  * Symfony Translation component Provider.
@@ -23,7 +23,7 @@ class I18nRouteGeneratorServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $app)
     {
-        $app['i18n_route_generator'] = function($app) {
+        $app['i18n_route_generator'] = function ($app) {
             $i18nRouteGenerator = new I18nRouteGenerator($app['routes'], $app['url_generator']);
             $i18nRouteGenerator->setLanguages($app['i18n_route_generator.languages']);
 
