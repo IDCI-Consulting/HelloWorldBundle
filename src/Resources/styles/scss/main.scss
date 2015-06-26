@@ -525,6 +525,12 @@ section.philosophies {
     .contact {
       background: $idci-blue;
     }
+
+    .experiences {
+      .button {
+        text-transform: uppercase;
+      }
+    }
   }
 
   .accordion-container {
