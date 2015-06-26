@@ -17,7 +17,7 @@
                     </a>
 
                     <h1 class="title small-3 medium-2 large-3 columns">
-                        <a href="{{ path('homepage', {'_locale': app.locale}) }}">
+                        <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">
                             <span>
                                 IDCI-Consulting
                             </span>
@@ -27,25 +27,25 @@
                     <nav class="nav-menu medium-8 large-7 columns">
                         <ul class="nav-menu">
                             <li>
-                                <a href="{{ path('homepage', {'_locale': app.locale}) }}">{% trans %}home{% endtrans %}</a>
+                                <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">{% trans %}home{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('company', {'_locale': app.locale}) }}">{% trans %}the company{% endtrans %}</a>
+                                <a href="{{ path('company', {'_locale': app.translator.locale}) }}">{% trans %}the company{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('team', {'_locale': app.locale}) }}">{% trans %}the team{% endtrans %}</a>
+                                <a href="{{ path('team', {'_locale': app.translator.locale}) }}">{% trans %}the team{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('activities', {'_locale': app.locale}) }}">{% trans %}our activities{% endtrans %}</a>
+                                <a href="{{ path('activities', {'_locale': app.translator.locale}) }}">{% trans %}our activities{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('partners', {'_locale': app.locale}) }}">{% trans %}our partners{% endtrans %}</a>
+                                <a href="{{ path('partners', {'_locale': app.translator.locale}) }}">{% trans %}our partners{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('blog', {'_locale': app.locale}) }}">{% trans %}blog{% endtrans %}</a>
+                                <a href="{{ path('blog', {'_locale': app.translator.locale}) }}">{% trans %}blog{% endtrans %}</a>
                             </li>
                             <li>
-                                <a href="{{ path('contact', {'_locale': app.locale}) }}">{% trans %}contact{% endtrans %}</a>
+                                <a href="{{ path('contact', {'_locale': app.translator.locale}) }}">{% trans %}contact{% endtrans %}</a>
                             </li>
                         </ul>
                     </nav>
