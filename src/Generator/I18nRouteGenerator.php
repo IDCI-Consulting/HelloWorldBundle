@@ -56,6 +56,7 @@ class I18nRouteGenerator
         $pathChunks = explode('?', $path);
 
         $requestContext = new RequestContext($request->getRequestUri());
+
         $matcher = new UrlMatcher($this->routes, $requestContext);
         $route   = $matcher->match($pathChunks[0]);
 
@@ -68,16 +69,6 @@ class I18nRouteGenerator
         $generatedRoutes = $this->doGeneration($routeName);
 
         return $generatedRoutes;
-    }
-
-    /**
-     * Set languages
-     *
-     * @param $languages
-     */
-    public function setLanguages($languages)
-    {
-        $this->languages = $languages;
     }
 
     /**
@@ -97,5 +88,15 @@ class I18nRouteGenerator
         }
 
         return $routes;
+    }
+
+    /**
+     * Set languages
+     *
+     * @param $languages
+     */
+    public function setLanguages($languages)
+    {
+        $this->languages = $languages;
     }
 }

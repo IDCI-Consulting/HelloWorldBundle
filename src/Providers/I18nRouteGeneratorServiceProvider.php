@@ -7,7 +7,7 @@ use Pimple\ServiceProviderInterface;
 use Pimple\Container;
 
 /**
- * Symfony Translation component Provider.
+ * Internationalization route generator component Provider.
  *
  * @author Brahim Boukoufallah <brahim.boukoufallah@idci-consulting.fr>
  */
