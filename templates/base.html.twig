@@ -9,148 +9,148 @@
 
     <body>
         {% block header %}
-            <div class="header-container">
-                <div class="overlay show-for-medium-up"></div>
-                <header class="row">
-                    <a class="hide-for-medium-up small-3 menu-icon">
-                        <i class="fa fa-bars"></i>
+        <div class="header-container">
+            <div class="overlay show-for-medium-up"></div>
+            <header class="row">
+                <a class="hide-for-medium-up small-3 menu-icon">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <h1 class="title small-5 medium-2 large-3 columns">
+                    <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">
+                        <span>
+                            IDCI-Consulting
+                        </span>
                     </a>
+                </h1>
 
-                    <h1 class="title small-5 medium-2 large-3 columns">
-                        <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">
-                            <span>
-                                IDCI-Consulting
-                            </span>
-                        </a>
-                    </h1>
-
-                    <nav class="nav-menu medium-8 large-7 columns">
-                        <ul class="nav-menu">
-                            <li>
-                                <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">{% trans %}home{% endtrans %}</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('company', {'_locale': app.translator.locale}) }}">{% trans %}the company{% endtrans %}</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('team', {'_locale': app.translator.locale}) }}">{% trans %}the team{% endtrans %}</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('activities', {'_locale': app.translator.locale}) }}">{% trans %}our activities{% endtrans %}</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('partners', {'_locale': app.translator.locale}) }}">{% trans %}our partners{% endtrans %}</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('blog', {'_locale': app.translator.locale}) }}">{% trans %}blog{% endtrans %}</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('contact', {'_locale': app.translator.locale}) }}">{% trans %}contact{% endtrans %}</a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <ul class="langs small-3 medium-1 columns inline-list">
-                        {% for locale, route in i18n_routes %}
-                            <li>
-                                <a href="{{ route }}">
-                                    <img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ locale }}" />
-                                </a>
-                            </li>
-                        {% endfor %}
+                <nav class="nav-menu medium-8 large-7 columns">
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">{% trans %}home{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('company', {'_locale': app.translator.locale}) }}">{% trans %}the company{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('team', {'_locale': app.translator.locale}) }}">{% trans %}the team{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('activities', {'_locale': app.translator.locale}) }}">{% trans %}our activities{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('partners', {'_locale': app.translator.locale}) }}">{% trans %}our partners{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('blog', {'_locale': app.translator.locale}) }}">{% trans %}blog{% endtrans %}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('contact', {'_locale': app.translator.locale}) }}">{% trans %}contact{% endtrans %}</a>
+                        </li>
                     </ul>
+                </nav>
 
-                    <a class="small-3 medium-1 search-icon">
-                        <i class="fa fa-search"></i>
-                    </a>
+                <ul class="langs small-3 medium-1 columns inline-list">
+                    {% for locale, route in i18n_routes %}
+                        <li>
+                            <a href="{{ route }}">
+                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ locale }}" />
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
 
-                    <form method="post"  class="form-search hide-for-small-up">
-                        <input type="search" placeholder="Recherche"/>
-                        <input type="submit" value="Valider" />
-                    </form>
-                </header>
-            </div>
+                <a class="small-3 medium-1 search-icon">
+                    <i class="fa fa-search"></i>
+                </a>
+
+                <form method="post"  class="form-search hide-for-small-up">
+                    <input type="search" placeholder="Recherche"/>
+                    <input type="submit" value="Valider" />
+                </form>
+            </header>
+        </div>
         {% endblock %}
 
         {% block content %}{% endblock %}
 
         {% block footer %}
-            <footer>
-                <div class="row">
-                    <section class="contact">
-                        <div class="large-12 columns">
-                            <div class="row">
-                                <div class="small-2 columns contact-title show-for-small">
-                                    <h3>
-                                        <i class="fa fa-map-marker"></i>
-                                        Contact
-                                    </h3>
-                                </div>
-                                <div class="small-10 large-12 columns">
-                                    <div class="row">
+        <footer>
+            <div class="row">
+                <section class="contact">
+                    <div class="large-12 columns">
+                        <div class="row">
+                            <div class="small-2 columns contact-title show-for-small">
+                                <h3>
+                                    <i class="fa fa-map-marker"></i>
+                                    Contact
+                                </h3>
+                            </div>
+                            <div class="small-10 large-12 columns">
+                                <div class="row">
 
-                                        <div class="large-4 columns">
-                                            <div class="person">
-                                                <p class="idci-light-blue capitalize job">
-                                                    <span class="hide-for-small-only">{% trans %}Contact{% endtrans %}</span>
-                                                    <span>{% trans %}Salesman{% endtrans %}</span>
-                                                </p>
-                                                <p class="capitalize">
-                                                    Frédéric Bondaz
-                                                </p>
-                                                <a href="mailto:frederic.bondaz@idci-consulting.fr" class="mail">frederic.bondaz@idci-consulting.fr</a>
-                                                <span class="hide-for-small-only">{% trans %}Phone :{% endtrans %}</span>
-                                                <a href="tel:0617631247" class="phonenumber">+33.617631247</a>
-                                            </div>
+                                    <div class="large-4 columns">
+                                        <div class="person">
+                                            <p class="idci-light-blue capitalize job">
+                                                <span class="hide-for-small-only">{% trans %}Contact{% endtrans %}</span>
+                                                <span>{% trans %}Salesman{% endtrans %}</span>
+                                            </p>
+                                            <p class="capitalize">
+                                                Frédéric Bondaz
+                                            </p>
+                                            <a href="mailto:frederic.bondaz@idci-consulting.fr" class="mail">frederic.bondaz@idci-consulting.fr</a>
+                                            <span class="hide-for-small-only">{% trans %}Phone :{% endtrans %}</span>
+                                            <a href="tel:0617631247" class="phonenumber">+33.617631247</a>
                                         </div>
-
-                                        <div class="large-4 columns">
-                                            <div class="person">
-                                                <p class="idci-light-blue capitalize job">
-                                                    <span class="hide-for-small-only">{% trans %}Contact{% endtrans %}</span>
-                                                    <span>{% trans %}Technique{% endtrans %}</span>
-                                                </p>
-                                                <p class="capitalize">
-                                                    Gabriel Bondaz
-                                                </p>
-                                                <a href="mailto:gabriel.bondaz@idci-consulting.fr" class="mail">gabriel.bondaz@idci-consulting.fr</a>
-                                                <span class="hide-for-small-only">{% trans %}Phone :{% endtrans %}</span>
-                                                <a href="tel:0663231207" class="phonenumber">+33.663231207</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="small-12 large-4 columns">
-                                            <div class="address">
-                                                <p class="hide-for-small-only capitalize idci-light-blue">
-                                                    {% trans %}Address{% endtrans %}
-                                                </p>
-                                                <p class="capitalize company-name">Idci Consulting</p>
-                                                <p>256 rue Francis de Pressensé</p>
-                                                <p>69100 Villeurbanne - FRANCE</p>
-                                            </div>
-                                        </div>
-
                                     </div>
+
+                                    <div class="large-4 columns">
+                                        <div class="person">
+                                            <p class="idci-light-blue capitalize job">
+                                                <span class="hide-for-small-only">{% trans %}Contact{% endtrans %}</span>
+                                                <span>{% trans %}Technique{% endtrans %}</span>
+                                            </p>
+                                            <p class="capitalize">
+                                                Gabriel Bondaz
+                                            </p>
+                                            <a href="mailto:gabriel.bondaz@idci-consulting.fr" class="mail">gabriel.bondaz@idci-consulting.fr</a>
+                                            <span class="hide-for-small-only">{% trans %}Phone :{% endtrans %}</span>
+                                            <a href="tel:0663231207" class="phonenumber">+33.663231207</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="small-12 large-4 columns">
+                                        <div class="address">
+                                            <p class="hide-for-small-only capitalize idci-light-blue">
+                                                {% trans %}Address{% endtrans %}
+                                            </p>
+                                            <p class="capitalize company-name">Idci Consulting</p>
+                                            <p>256 rue Francis de Pressensé</p>
+                                            <p>69100 Villeurbanne - FRANCE</p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                </div>
-                <div class="footer-socials">
-                    <ul class="socials">
-                        <li class="twitter">
-                            <a href="https://twitter.com/idciconsulting" target="_blank"><span>Twitter</span></a>
-                        </li>
-                        <li class="rss">
-                            <a href="#" target="_blank"><span>RSS</span></a>
-                        </li>
-                        <li class="github">
-                            <a href="https://github.com/IDCI-Consulting" target="_blank"><span>Github</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+            </div>
+            <div class="footer-socials">
+                <ul class="socials">
+                    <li class="twitter">
+                        <a href="https://twitter.com/idciconsulting" target="_blank"><span>Twitter</span></a>
+                    </li>
+                    <li class="rss">
+                        <a href="#" target="_blank"><span>RSS</span></a>
+                    </li>
+                    <li class="github">
+                        <a href="https://github.com/IDCI-Consulting" target="_blank"><span>Github</span></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
         {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
