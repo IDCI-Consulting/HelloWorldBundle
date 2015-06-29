@@ -437,7 +437,12 @@ section.philosophies {
 }
 
 @media #{$medium-only} {
-  font-size: 2em;
+
+  .experience-content {
+    h2.title {
+      font-size: 2rem;
+    }
+  }
 }
 
 @media #{$small-only}{
