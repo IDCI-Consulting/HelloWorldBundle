@@ -328,45 +328,50 @@ section.philosophies {
     margin: 0 0 2em 0;
   }
 
-  section.experiences {
-    article {
-      margin-bottom: 5em;
-      div {
-        display: inline-block;
-        img.hide-for-small-only {
-          display: inline-block!important;
-          height: 20rem;
-          width: 20em;
-        }
-      }
-
-      .experience-content {
-        height: 20em;
-        vertical-align: middle;
-        h2 {
+  .container {
+    section {
+      padding: 2rem 0;
+    }
+    section.experiences {
+      article {
+        margin-bottom: 5em;
+        div {
           display: inline-block;
-          margin: -.3em 0 0 0;
-        }
-        p {
-          font-size: .8em;
-          margin: 0;
-          padding: 2rem;
-        }
-        a {
-          border: 2px solid $idci-blue;
-          float: right;
-          font-size: .5rem;
-          font-weight: bold;
-          height: 2rem;
-          line-height: 1.8rem;
-          margin: 0 2rem 0 0;
-          padding: 0;
-          text-transform: uppercase;
-          width: 8rem;
+          img.hide-for-small-only {
+            display: inline-block !important;
+            height: 20rem;
+            width: 20em;
+          }
         }
 
-        a:hover {
-          background: $idci-blue;
+        .experience-content {
+          height: 20em;
+          vertical-align: middle;
+          h2 {
+            display: inline-block;
+            margin: -.3em 0 0 0;
+          }
+          p {
+            font-size: .8em;
+            margin: 0;
+            padding: 2rem;
+          }
+          a {
+            border: 2px solid $idci-blue;
+            float: right;
+            font-size: .5rem;
+            font-weight: bold;
+            height: 2rem;
+            line-height: 1.8rem;
+            margin: 0 2rem 0 0;
+            padding: 0;
+            text-transform: uppercase;
+            width: 8rem;
+          }
+
+          a:hover {
+            background: $idci-blue;
+          }
         }
       }
     }
