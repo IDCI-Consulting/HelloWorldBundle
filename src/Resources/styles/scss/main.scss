@@ -79,7 +79,6 @@ h3,p{
 }
 
 h3{
-  font-size: 24px;
   font-weight: 300;
 }
 
@@ -439,9 +438,26 @@ section.philosophies {
 
 @media #{$medium-only} {
 
-  .experience-content {
-    h2.title {
-      font-size: 2rem;
+  section.philosophies {
+    article {
+      header {
+        padding: .3rem;
+        h3 {
+          font-size: 1rem;
+        }
+      }
+      p {
+        font-size: .8rem;
+      }
+    }
+  }
+  h2.title {
+    font-size: 2rem;
+  }
+
+  .tools {
+    h3 {
+      font-size: 1rem;
     }
   }
 }
