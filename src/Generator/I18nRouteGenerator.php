@@ -75,6 +75,7 @@ class I18nRouteGenerator
      * Do internationalization generation
      *
      * @param $routeName
+     *
      * @return array
      */
     private function doGeneration($routeName)
