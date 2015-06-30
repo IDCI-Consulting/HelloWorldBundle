@@ -43,7 +43,20 @@ $intlApp->get(
         $app['translator']->setLocale($_locale);
         $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
-        return $app['twig']->render('pages/company.html.twig', array('i18n_routes' => $i18nRoutes));
+        $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            var_dump('VALID', $form->getData());
+        }
+
+        return $app['twig']->render(
+            'pages/company.html.twig',
+            array(
+                'form' => $form->createView(),
+                'i18n_routes' => $i18nRoutes)
+        );
     }
 )
 ->bind('company')
@@ -56,7 +69,20 @@ $intlApp->get(
         $app['translator']->setLocale($_locale);
         $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
-        return $app['twig']->render('pages/team.html.twig', array('i18n_routes' => $i18nRoutes));
+        $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            var_dump('VALID', $form->getData());
+        }
+
+        return $app['twig']->render(
+            'pages/team.html.twig',
+            array(
+                'form' => $form->createView(),
+                'i18n_routes' => $i18nRoutes)
+        );
     }
 )
 ->bind('team')
@@ -69,7 +95,20 @@ $intlApp->get(
         $app['translator']->setLocale($_locale);
         $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
-        return $app['twig']->render('pages/activities.html.twig', array('i18n_routes' => $i18nRoutes));
+        $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            var_dump('VALID', $form->getData());
+        }
+
+        return $app['twig']->render(
+            'pages/activities.html.twig',
+            array(
+                'form' => $form->createView(),
+                'i18n_routes' => $i18nRoutes)
+        );
     }
 )
 ->bind('activities');
@@ -81,7 +120,20 @@ $intlApp->get(
         $app['translator']->setLocale($_locale);
         $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
-        return $app['twig']->render('pages/partners.html.twig', array('i18n_routes' => $i18nRoutes));
+        $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            var_dump('VALID', $form->getData());
+        }
+
+        return $app['twig']->render(
+            'pages/partners.html.twig',
+            array(
+                'form' => $form->createView(),
+                'i18n_routes' => $i18nRoutes)
+        );
     }
 )
 ->bind('partners');
@@ -93,7 +145,20 @@ $intlApp->get(
         $app['translator']->setLocale($_locale);
         $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
-        return $app['twig']->render('pages/blog.html.twig', array('i18n_routes' => $i18nRoutes));
+        $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            var_dump('VALID', $form->getData());
+        }
+
+        return $app['twig']->render(
+            'pages/blog.html.twig',
+            array(
+                'form' => $form->createView(),
+                'i18n_routes' => $i18nRoutes)
+        );
     }
 )
 ->bind('blog');
