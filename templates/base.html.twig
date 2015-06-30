@@ -77,80 +77,60 @@
         {% block footer %}
         <footer>
             <div class="row">
-                <section class="contact">
-                    <div class="large-12 columns">
-                        <div class="row">
-                            <div class="small-2 columns contact-title show-for-small">
-                                <h3>
-                                    <i class="fa fa-map-marker"></i>
-                                    Contact
-                                </h3>
-                            </div>
-                            <div class="small-10 large-12 columns">
-                                <div class="row">
 
-                                    <div class="large-4 columns">
-                                        <div class="person">
-                                            <p class="idci-light-blue capitalize job">
-                                                <span class="hide-for-small-only">{% trans %}Contact{% endtrans %}</span>
-                                                <span>{% trans %}Salesman{% endtrans %}</span>
-                                            </p>
-                                            <p class="capitalize">
-                                                Frédéric Bondaz
-                                            </p>
-                                            <a href="mailto:frederic.bondaz@idci-consulting.fr" class="mail">frederic.bondaz@idci-consulting.fr</a>
-                                            <span class="hide-for-small-only">{% trans %}Phone :{% endtrans %}</span>
-                                            <a href="tel:0617631247" class="phonenumber">+33.617631247</a>
-                                        </div>
-                                    </div>
+                <div class="contact-us medium-4 columns">
+                    <p class="hide-for-small-only">
+                        Pour tout autre demande
+                    </p>
+                    <p class="hide-for-small-only">n'hésiter pas à</p>
+                    <p class="contact-us-link">
+                        <a data-reveal-id="firstModal">{% trans %}Contact us{% endtrans %}</a>
+                    </p>
+                </div>
 
-                                    <div class="large-4 columns">
-                                        <div class="person">
-                                            <p class="idci-light-blue capitalize job">
-                                                <span class="hide-for-small-only">{% trans %}Contact{% endtrans %}</span>
-                                                <span>{% trans %}Technique{% endtrans %}</span>
-                                            </p>
-                                            <p class="capitalize">
-                                                Gabriel Bondaz
-                                            </p>
-                                            <a href="mailto:gabriel.bondaz@idci-consulting.fr" class="mail">gabriel.bondaz@idci-consulting.fr</a>
-                                            <span class="hide-for-small-only">{% trans %}Phone :{% endtrans %}</span>
-                                            <a href="tel:0663231207" class="phonenumber">+33.663231207</a>
-                                        </div>
-                                    </div>
+                <div class="address medium-4 columns">
+                    <h3 class="idci-light-blue">
+                        {% trans %}Our contact details{% endtrans %}
+                    </h3>
+                    <p>256 rue Francis de Pressensé</p>
+                    <p>69100 Villeurbanne - FRANCE</p>
+                    <p>
+                        <i class="fa fa-phone"></i>
+                        <a href="tel:0663231207" class="phonenumber">06 63 23 12 07</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope-o"></i>
+                        <a href="mailto:contact@idci-consulting.fr" class="mail">contact@idci-consulting.fr</a>
+                    </p>
+                </div>
 
-                                    <div class="small-12 large-4 columns">
-                                        <div class="address">
-                                            <p class="hide-for-small-only capitalize idci-light-blue">
-                                                {% trans %}Address{% endtrans %}
-                                            </p>
-                                            <p class="capitalize company-name">Idci Consulting</p>
-                                            <p>256 rue Francis de Pressensé</p>
-                                            <p>69100 Villeurbanne - FRANCE</p>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
-            <div class="footer-socials">
-                <ul class="socials">
-                    <li class="twitter">
-                        <a href="https://twitter.com/idciconsulting" target="_blank"><span>Twitter</span></a>
-                    </li>
-                    <li class="rss">
-                        <a href="#" target="_blank"><span>RSS</span></a>
-                    </li>
-                    <li class="github">
-                        <a href="https://github.com/IDCI-Consulting" target="_blank"><span>Github</span></a>
-                    </li>
-                </ul>
+                <div class="footer-socials medium-4 columns">
+                    <h3 class="hide-for-small-only idci-light-blue">
+                        {% trans %}Follow us{% endtrans %}
+                    </h3>
+                    <ul class="socials">
+                        <li class="twitter">
+                            <a href="https://twitter.com/idciconsulting" target="_blank"><span>Twitter</span></a>
+                        </li>
+                        <li class="rss">
+                            <a href="#" target="_blank"><span>RSS</span></a>
+                        </li>
+                        <li class="github">
+                            <a href="https://github.com/IDCI-Consulting" target="_blank"><span>Github</span></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </footer>
+
+        {% block modal %}
+            <!-- Reveal Modals begin -->
+            <div id="firstModal" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+                {% include 'partials/contactForm.html.twig' %}
+                <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+            </div>
+        {% endblock %}
         {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
