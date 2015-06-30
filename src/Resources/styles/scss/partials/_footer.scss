@@ -17,14 +17,6 @@ footer {
       &:first-child {
         margin-top: .7rem;
       }
-      a {
-        color: $idci-light-blue;
-        font-size: 2rem;
-        &:hover {
-          background-color: $idci-blue;
-          color: $idci-white;
-        }
-        @include transition(all, 0.4s);
       }
     }
   }
@@ -77,7 +69,6 @@ footer {
       }
     }
   }
-}
 
 @media #{$medium-up} {
   footer {
@@ -90,6 +81,18 @@ footer {
       text-align: center;
       p:last-child {
         line-height: 5rem;
+      }
+
+      a {
+        color: $idci-light-blue;
+        font-size: 2rem;
+        padding: .5rem;
+
+        @include transition(all, 0.4s);
+        &:hover {
+          background-color: $idci-blue;
+          color: $idci-white;
+        }
       }
     }
     .address {
