@@ -15,6 +15,8 @@ use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
+use Providers\MarkdownParserServiceProvider;
+use Providers\I18nRouteGeneratorServiceProvider;
 
 $app = new Application();
 $app->register(new RoutingServiceProvider());
@@ -31,7 +33,8 @@ $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
 $app->register(new SessionServiceProvider());
-$app->register(new \Providers\I18nRouteGeneratorServiceProvider());
+$app->register(new I18nRouteGeneratorServiceProvider());
+$app->register(new MarkdownParserServiceProvider());
 
 $app['i18n_route_generator.languages'] = array('fr', 'en');
 
