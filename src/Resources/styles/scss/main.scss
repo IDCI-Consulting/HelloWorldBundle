@@ -7,6 +7,7 @@ $idci-light-blue: #0DB0D1;
 $idci-dark-grey: #DEDDD8;
 $idci-light-grey: #f7f7f7;
 $idci-green: #1E9847;
+$idci-black: #000;
 
 
 /*******************
@@ -23,7 +24,6 @@ $idci-green: #1E9847;
 @mixin transition($property, $duration, $mode:ease) {
   -webkit-transition: $property $duration $mode;
   -moz-transition: $property $duration $mode;
-  -ms-transition: $property $duration $mode;
   -o-transition: $property $duration $mode;
   transition: $property $duration $mode;
 }
@@ -55,6 +55,7 @@ $idci-green: #1E9847;
 @import 'partials/button';
 @import 'partials/socials';
 @import 'partials/header';
+@import 'partials/footer';
 @import 'partials/tools';
 @import 'partials/flags';
 
@@ -94,10 +95,6 @@ a {
 
 .certificates{
   font-size: 14px;
-}
-
-footer {
-  background: $idci-dark-grey;
 }
 
 h2.title {
@@ -168,76 +165,6 @@ h2.title {
 }
 
 .box { @include border-radius(10px 3px); }
-
-/**************
- *** Footer ***
- **************/
-
-footer {
-  bottom: 0;
-}
-
-section.contact {
-  .person {
-    p {
-      display: inline;
-    }
-    p:first-child {
-      display: block;
-    }
-  }
-}
-.socials{
-  display: table;
-  height: 1rem;
-  margin: 0;
-  width: 100%;
-  li {
-    display: inline-block;
-    height: 6rem;
-    text-align: center;
-    width: 33%;
-    a{
-      display: block;
-      text-indent: -999rem;
-      vertical-align: middle;
-      width: 100%;
-      span {
-        background-image: $social-sprite-url;
-        background-repeat: no-repeat;
-        display: block;
-        height: 100px;
-        margin: 0;
-        width: 100px;
-      }
-    }
-  }
-
-  li.twitter {
-    background-color: rgb(64, 153, 255);
-    a {
-      span {
-        @include social-background-position('twitter');
-      }
-    }
-  }
-  li.rss {
-    background-color: rgb(255, 148, 66);
-    a {
-      span {
-        @include social-background-position('rss');
-      }
-    }
-  }
-  li.github {
-    background-color: rgb(0, 0, 0);
-    a {
-      span {
-        @include social-background-position('github');
-      }
-    }
-  }
-}
 
 section.philosophies {
   color: $idci-white;
@@ -383,56 +310,8 @@ section.philosophies {
   }
 
 
-  /************
-   ** Footer **
-   ************/
   .activity-content {
     display: none;
-  }
-
-  section.contact {
-    color: #242424;
-    p {
-      text-transform: uppercase;
-    }
-    p:first-child {
-      margin-bottom: 3rem;
-    }
-    .person, .address {
-      display: inline-block;
-      p {
-        display:block;
-        margin: 0;
-        span:first-child {
-          display: inline!important;
-        }
-      }
-      p:first-child {
-        margin-bottom: 2rem;
-      }
-      a {
-        color: #242424;
-        display: block;
-        &.mail:hover {
-          color: $idci-light-blue;
-        }
-        &.phonenumber {
-          display: inline;
-          &:hover {
-            color: $idci-light-blue;
-          }
-        }
-      }
-    }
-
-    .address {
-      p {
-        margin: 0;
-      }
-      p:first-child {
-        margin-bottom: 2rem;
-      }
-    }
   }
 }
 
@@ -494,46 +373,74 @@ section.philosophies {
   /**************
    *** Footer ***
    **************/
+
   footer {
     background: $idci-blue;
-  }
-
-  section.contact {
-    a {
-      &:hover {
-        color: $idci-light-blue;
-      }
-    }
-    div.person {
-      margin-top: 2rem;
-      p {
-        color: $idci-light-blue;
-        display: inline;
-        span {
-          display: inline;
+    color: $idci-white;
+    text-transform: capitalize;
+    .contact-us {
+      padding-left: 7rem;
+      .contact-us-link {
+        a {
+          color: $idci-white;
+          font-size: 2rem;
+          &:hover {
+            color: $idci-light-blue;
+          }
         }
       }
-      p:first-child {
-        display: inline;
-      }
-      p.job::after {
-        content: "-";
-      }
     }
-
     .address {
-      p.company-name {
-        color: $idci-light-blue;
+      font-size: 1rem;
+      padding-left: 7rem;
+      p {
+        line-height: 1rem;
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+        a {
+          color: $idci-white;
+          &.mail {
+            text-decoration: underline;
+          }
+        }
       }
     }
-  }
-  .socials {
-    height: 1rem;
-    margin: 0;
-    width: 100%;
-    display: table;
-    li {
-      height: 3rem;
+    .footer-socials {
+      padding: 0;
+      .socials {
+        height: 1rem;
+        margin: 0;
+        width: 100%;
+        li {
+          height: 3rem;
+          width: 33.3%
+        }
+      }
+      li.twitter {
+        background-color: rgb(64, 153, 255);
+        a {
+          span {
+            @include social-background-position('twitter');
+          }
+        }
+      }
+      li.rss {
+        background-color: rgb(255, 148, 66);
+        a {
+          span {
+            @include social-background-position('rss');
+          }
+        }
+      }
+      li.github {
+        background-color: rgb(0, 0, 0);
+        a {
+          span {
+            @include social-background-position('github');
+          }
+        }
+      }
     }
   }
 
@@ -602,8 +509,7 @@ section.philosophies {
   }
 
   .accordion-link {
-    padding: 0;
-    padding-left: 1px;
+    padding: 0 0 0 1px;
   }
   .accordion-link .arrow {
 
@@ -746,8 +652,7 @@ section.philosophies {
    *** Contact Page ***
    ********************/
   h2.title.title-contact {
-    margin: .3rem;
-    margin-top: 0;
+    margin: 0 .3rem .3rem .3rem;
   }
 
   /***********************
