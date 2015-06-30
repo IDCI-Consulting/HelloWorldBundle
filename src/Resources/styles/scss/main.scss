@@ -8,6 +8,8 @@ $idci-dark-grey: #DEDDD8;
 $idci-light-grey: #f7f7f7;
 $idci-green: #1E9847;
 
+$font-url: '/fonts';
+
 
 /*******************
  ** Global Mixins **
@@ -26,6 +28,18 @@ $idci-green: #1E9847;
   -ms-transition: $property $duration $mode;
   -o-transition: $property $duration $mode;
   transition: $property $duration $mode;
+}
+
+@mixin font-face($font-family, $font-url, $font-name) {
+  @font-face {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    src: url($font-url + '/' + $font-name + '.eot') format('eot'),
+    url($font-url + '/' + $font-name + '.woff') format('woff'),
+    url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+    url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+  }
 }
 
 /*****************************
@@ -58,6 +72,9 @@ $idci-green: #1E9847;
 @import 'partials/tools';
 @import 'partials/flags';
 
+@include font-face('Molengo', $font-url, 'Molengo');
+@include font-face('Oswald', $font-url, 'Oswald-Light');
+
 *{
   margin: 0;
   padding: 0;
@@ -68,28 +85,23 @@ html{
 }
 
 body{
+  font-family: Molengo, sans-serif;
   font-size: 100%;
   height: 100%;
   margin-top: 7rem;
 }
 
-h3,p{
-  font-family: 'Open Sans', sans-serif;
-  margin-bottom: 10px;
-}
-
-h3{
-  font-weight: 300;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Oswald, sans-serif!important;
 }
 
 p{
   font-size: 16px;
-}
-
-a {
-  &.mail:hover, &.phonenumber:hover {
-    color: #bebebe;
-  }
 }
 
 .certificates{
@@ -702,18 +714,37 @@ section.philosophies {
   /*****************
    *** Team Page ***
    *****************/
-  div.team-content  {
-    line-height: 2px;
-    margin: 0 auto;
-    width: 90%;
-    p.mrember-description {
-      font-size: 0.7rem;
-      margin-bottom: 2rem;
+  .team {
+    header {
+      background: $idci-dark-grey;
+      padding: 1rem;
     }
-    .skills {
-      margin-top: 1rem;
-      .skill {
-        margin-top: 0.4rem;
+    .member  {
+      margin: 0 auto 3rem auto;
+      width: 90%;
+      header {
+        background: 0 0;
+        padding: 0;
+        h2 {
+          margin-bottom: 0;
+        }
+        p {
+          font-style: italic;
+        }
+      }
+      p.member-description {
+        font-size: .8rem;
+      }
+      .skills {
+        list-style-type: none;
+        margin: 1rem 0;
+        .skill {
+          padding-top: .4rem;
+          img {
+            height: 1rem;
+            margin-right: .5rem;
+          }
+        }
       }
     }
   }
