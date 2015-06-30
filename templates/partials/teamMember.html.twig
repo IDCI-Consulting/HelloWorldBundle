@@ -1,20 +1,26 @@
-<h3 class="show-for-small idci-light-blue capitalize">{{ firstName }} {{ lastName }}</h3>
+<section class="member">
+    <header>
+        <h2 class="show-for-small idci-light-blue capitalize">{{ firstName }} {{ lastName }}</h2>
 
-<p class="show-for-small "><em>{{ profession|trans }}</em></p>
+        <p class="show-for-small ">{{ profession|trans }}</p>
+    </header>
 
-<div class="content-wrapper">
-    <div class="image-holder brahim">
-        <img class="circle  hide-for-small" src="{{ asset('images/circle.png') }}"/>
-        <div class="profile-picture front"></div>
+    <div class="content-wrapper">
+        <div class="image-holder {{ firstName }}">
+            <div class="profile-picture front"></div>
+        </div>
     </div>
-</div>
 
-<ul class="show-for-small  skills">
-    {% for skill in skills %}
-        <li class="skill">{{ skill|trans }}</li>
-    {% endfor %}
-</ul>
+    <ul class="show-for-small skills">
+        {% for skill in skills %}
+            <li class="skill">
+                <img src="{{ asset('images/idci_list_style.png') }}" />
+                <span>{{ skill|trans }}</span>
+            </li>
+        {% endfor %}
+    </ul>
 
-<p class="member-description">
-    {{ description }}
-</p>
+    <p class="member-description">
+        {{ description }}
+    </p>
+</section>
