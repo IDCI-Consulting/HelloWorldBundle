@@ -21,7 +21,8 @@
         "symfony/translation": "~2.6",
         "symfony/twig-bridge": "~2.6",
         "symfony/validator": "~2.6",
-        "symfony/yaml": "^2.7"
+        "symfony/yaml": "^2.7",
+        "mheap/silex-markdown": "dev-master"
     },
     "autoload": {
         "psr-0": { "": "src/" }
