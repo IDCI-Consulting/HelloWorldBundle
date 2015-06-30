@@ -718,6 +718,13 @@ section.philosophies {
     header {
       background: $idci-dark-grey;
       padding: 1rem;
+      h1 {
+        font-size: 2rem;
+        i {
+          font-size: 3rem;
+          margin-right: .8rem;
+        }
+      }
     }
     .member  {
       margin: 0 auto 3rem auto;
@@ -734,6 +741,7 @@ section.philosophies {
       }
       p.member-description {
         font-size: .8rem;
+        text-align: justify;
       }
       .skills {
         list-style-type: none;
