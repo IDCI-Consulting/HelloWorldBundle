@@ -6,6 +6,7 @@
   top: 0;
   width: 100%;
   z-index: 2;
+
   .overlay {
     background: url(/images/pattern.png) rgba(0, 0, 0, 0.68);
     background-size: 3px 3px;
@@ -18,13 +19,17 @@
   }
   header {
     height: 100%;
+
     h1 {
       height: 100%;
       margin: 0;
+
       a {
         display: inline-block;
-        padding-top: 1rem;
         height: 100%;
+        padding-top: 1rem;
+        width: 100%;
+
         span {
           background-image: url(/images/idci_logo.png);
           background-position: 0 0;
@@ -40,11 +45,14 @@
     }
 
     nav {
+
       ul {
         line-height: 6rem;
         margin: 0;
+
         li {
           display: inline-block;
+
           a {
             color: $idci-white;
             display: block;
@@ -66,6 +74,7 @@
       line-height: 1.8rem;
       margin: 0 0 0 .3rem;
       text-align: center;
+
       li {
         margin-top: 2.4rem;
         margin-left: .5rem;
@@ -77,6 +86,7 @@
       padding: 1.5rem 0;
       text-align: center;
       width: 3rem;
+
       i {
         color: $idci-white;
         font-size: 3rem;
@@ -91,12 +101,16 @@
 
 
 @media #{$medium-up} {
+
   nav {
     height: 100%;
+
     ul {
       height: 100%;
+
       li {
         height: 100%;
+
         a {
           height: 100%;
         }
@@ -108,13 +122,17 @@
 @media #{$medium-only} {
   .header-container {
     height: 5rem;
+
     header {
+
       h1.title {
         height: 100%;
         margin: 0;
+
         a {
           padding-top: .5rem;
           width: 100%;
+
           span {
             background-position: 0 0;
             background-repeat: no-repeat;
@@ -128,9 +146,11 @@
       }
 
       nav {
+
         ul {
           font-size: .9rem;
           line-height: 4rem !important;
+
           li {
             display: inline-block;
           }
@@ -157,23 +177,28 @@
 }
 
 @media #{$small-only} {
+
   .header-container {
       height: 4rem;
+
     header {
       border-bottom: 1px solid $idci-white;
       height: 4rem;
       position: fixed;
       top: 0;
       z-index: 2;
+
       .menu-icon {
         float: left !important;
         text-align: center;
         width: 3rem;
+
         i {
           color: $idci-white;
           font-size: 2rem;
           line-height: 4rem;
           width: 100%;
+
           &:hover {
             color: $idci-light-blue;
           }
@@ -181,9 +206,11 @@
       }
 
       h1.title {
+
         a {
           padding-top: .1rem;
           width: 100%;
+
           span {
             background-image: url(/images/idci_logo.png);
             background-position: 0 0;
@@ -198,6 +225,7 @@
           }
         }
       }
+
       nav.nav-menu {
         background: $idci-blue;
         border-right: 1px solid $idci-white;
@@ -210,6 +238,7 @@
         top: 4rem;
         width: 15rem;
         z-index: 2;
+
         ul {
           font-size: .9rem;
           line-height: normal;
@@ -218,16 +247,19 @@
           max-height: 22rem;
           overflow-y: auto;
           width: inherit;
+
           li {
             border-bottom: 1px solid $idci-white;
             display: block;
             margin: 0;
             padding: 0;
             text-align: center;
+
             a {
               color: $idci-white;
               display: block;
               padding: .8rem;
+
               &:hover {
                 background: $idci-light-blue;
                 border: none;
@@ -242,6 +274,7 @@
         height: 100%;
         line-height: 1.5rem !important;
         text-align: center;
+
         li {
           margin-top: .9rem;
         }
@@ -252,10 +285,12 @@
         padding: .1rem 0;
         text-align: center;
         width: 3rem;
+
         i {
           color: $idci-white;
           font-size: 2rem;
           line-height: 3.5rem;
+
           &:hover {
             color: $idci-light-blue;
           }

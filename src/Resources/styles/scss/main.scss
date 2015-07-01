@@ -35,10 +35,10 @@ $font-url: '/fonts';
     font-family: $font-family;
     font-style: normal;
     font-weight: normal;
-    src: url($font-url + '/' + $font-name + '.eot') format('eot'),
+    src:  url($font-url + '/' + $font-name + '.ttf')  format('truetype');
+    /*url($font-url + '/' + $font-name + '.eot') format('eot'),
     url($font-url + '/' + $font-name + '.woff') format('woff'),
-    url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
-    url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+    url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');*/
   }
 }
 
