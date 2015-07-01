@@ -127,7 +127,7 @@
         {% block modal %}
             <!-- Reveal Modals begin -->
             <div id="firstModal" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
-                {% include 'partials/contactForm.html.twig' %}
+                {{ render(url('contactForm', {_locale: app.translator.locale})) }}
                 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
             </div>
         {% endblock %}
