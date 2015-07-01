@@ -13,6 +13,7 @@ use Silex\Provider\HttpFragmentServiceProvider;
 use Silex\Provider\FormServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
+use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
 use Providers\MarkdownParserServiceProvider;
@@ -35,6 +36,16 @@ $app->register(new HttpFragmentServiceProvider());
 $app->register(new SessionServiceProvider());
 $app->register(new I18nRouteGeneratorServiceProvider());
 $app->register(new MarkdownParserServiceProvider());
+$app->register(new SwiftmailerServiceProvider());
+
+$app['swiftmailer.options'] = array(
+    'host'       => 'smtp.gmail.com',
+    'port'       => 465,
+    'username'   => 'no-reply@idci-consulting.fr',
+    'password'   => '#no-repl',
+    'encryption' => 'ssl',
+    'auth_mode'  => 'login'
+);
 
 $app['i18n_route_generator.languages'] = array('fr', 'en');
 
