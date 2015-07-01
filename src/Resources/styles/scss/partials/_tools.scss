@@ -1,8 +1,10 @@
 .tools {
+
   h2 {
     font-weight: bold;
     margin-bottom: .5em;
   }
+
   h3 {
     border: 2px solid $idci-blue;
     color: $idci-blue;
@@ -18,11 +20,13 @@
   display: table;
   margin-left: 0;
   width: 100%;
+
   li {
     float:left;
     list-style-type: none;
     margin-right: 9em;
   }
+
   li:last-child {
     margin-right: 0;
   }
@@ -41,6 +45,7 @@
   background-position: 0 -189px;
   height: 40px;
   width: 140px;
+
   &:hover {
     background-position: 0 -49px;
   }
@@ -50,6 +55,7 @@
   background-position: -140px -185px;
   height: 50px;
   width: 140px;
+
   &:hover {
     background-position: -140px -45px;
   }
@@ -59,6 +65,7 @@
   background-position: -280px -190px;
   height: 40px;
   width: 140px;
+
   &:hover {
     background-position: -280px -50px;
   }
@@ -68,6 +75,7 @@
   background-position: -420px -160px;
   height: 100px;
   width: 140px;
+
   &:hover {
     background-position: -420px -20px;
   }
@@ -77,6 +85,7 @@
   background-position: -560px -160px;
   height: 75px;
   width: 140px;
+
   &:hover {
     background-position: -560px -20px;
   }
@@ -86,6 +95,7 @@
   background-position: -700px -180px;
   height: 45px;
   width: 140px;
+
   &:hover {
     background-position: -700px -40px;
   }
@@ -95,6 +105,7 @@
   background-position: -840px -180px;
   height: 55px;
   width: 140px;
+
   &:hover {
     background-position: -840px -40px;
   }
@@ -104,6 +115,7 @@
   background-position: -980px -185px;
   height: 50px;
   width: 140px;
+
   &:hover {
     background-position: -980px -45px;
   }
@@ -113,6 +125,7 @@
   background-position: -1120px -185px;
   height: 45px;
   width: 140px;
+
   &:hover {
     background-position: -1120px -45px;
   }
@@ -122,6 +135,7 @@
   background-position: -1260px -165px;
   height: 94px;
   width: 140px;
+
   &:hover {
     background-position: -1260px -25px;
   }
@@ -131,6 +145,7 @@
   background-position: -1400px -170px;
   height: 75px;
   width: 140px;
+
   &:hover {
     background-position: -1400px -30px;
   }
@@ -140,6 +155,7 @@
   background-position: -1540px -180px;
   height: 60px;
   width: 140px;
+
   &:hover {
     background-position: -1540px -40px;
   }
@@ -149,6 +165,7 @@
   background-position: -1680px -190px;
   height: 40px;
   width: 140px;
+
   &:hover {
     background-position: -1680px -50px;
   }
@@ -158,6 +175,7 @@
   background-position: -1820px -140px;
   height: 145px;
   width: 140px;
+
   &:hover {
     background-position: -1820px 0;
     height: 140px;
@@ -169,6 +187,7 @@
   background-position: -1960px -180px;
   height: 60px;
   width: 140px;
+
   &:hover {
     background-position: -1960px -40px;
   }
@@ -178,6 +197,7 @@
   background-position: -2100px -190px;
   height: 40px;
   width: 140px;
+
   &:hover {
     background-position: -2100px -50px;
   }
@@ -187,6 +207,7 @@
   background-position: -2240px -200px;
   height: 25px;
   width: 140px;
+
   &:hover {
     background-position: -2240px -60px;
   }

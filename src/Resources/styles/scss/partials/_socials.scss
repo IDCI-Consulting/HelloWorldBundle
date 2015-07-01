@@ -12,6 +12,7 @@ $social-sprite-url: url(/images/sprite_rs.png);
 
   background-size: 100px;
   margin: 0.5em auto 0 auto;
+
   @if($social-name == 'twitter') {
     background-position: 0 0;
     height: 35px;
@@ -29,6 +30,7 @@ $social-sprite-url: url(/images/sprite_rs.png);
   @media #{$small-only} {
     background-size: 150px;
     margin: 0 auto;
+
     @if ($social-name == 'twitter') {
       background-position: 0 0;
       height: 48px;

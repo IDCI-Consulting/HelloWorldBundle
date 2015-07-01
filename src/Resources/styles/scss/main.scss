@@ -99,7 +99,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Oswald, sans-serif!important;
+  font-family: Oswald, sans-serif;
 }
 
 p{
@@ -114,6 +114,7 @@ h2.title {
   color: $idci-blue;
   font-size: 3rem;
   text-transform: uppercase;
+
   &.title-contact {
     color: $idci-white;
     margin-top: 2rem;
@@ -130,29 +131,37 @@ h2.title {
   margin: 1rem;
   padding: 3rem 0;
   width: 100%;
+
   &.contact-form {
     padding: 0;
   }
 }
 
 .container {
+
   section {
+
     &:first-child {
       padding-top: 0;
     }
+
     &.experiences, &.tools {
       background: $idci-white;
     }
+
     &.philosophies {
       background: $idci-blue;
     }
+
     &.contact {
       background: $idci-dark-grey;
+
       .row {
         max-width: 100%;
       }
     }
   }
+
   .button {
     background: $idci-light-blue;
   }
@@ -181,12 +190,15 @@ h2.title {
 
 section.philosophies {
   color: $idci-white;
+
   article {
     margin-bottom: 4rem;
+
     header {
       border: 2px solid $idci-white;
       margin-bottom: 2rem;
       padding: 1rem;
+
       h3 {
         color: $idci-white;
         font-weight: bold;
@@ -196,6 +208,7 @@ section.philosophies {
         text-indent: .5rem;
       }
     }
+
     img {
       display: inline-block !important;
       height: 10rem;
@@ -206,21 +219,27 @@ section.philosophies {
       text-align: justify;
     }
   }
+
   article:last-child {
     margin-bottom: 0;
   }
 }
+
 /*******************
  ** Media Queries **
  *******************/
 @media #{$large} {
+
   /****************
    ** Index Page **
    ****************/
   section.experiences {
+
     article {
+
       div {
         display: inline-block;
+
         img.hide-for-small-only {
           height: 22rem;
           width: 22rem;
@@ -230,14 +249,17 @@ section.philosophies {
       .experience-content {
         height: 25rem;
         vertical-align: middle;
+
         h2 {
           display: inline-block;
         }
+
         p {
           font-size: .8em;
           padding: 7em 3em;
           margin: 0;
         }
+
         a {
           border: 2px solid $idci-blue;
           float: right;
@@ -268,14 +290,19 @@ section.philosophies {
   }
 
   .container {
+
     section {
       padding: 2rem 0;
     }
+
     section.experiences {
+
       article {
         margin-bottom: 5em;
+
         div {
           display: inline-block;
+
           img.hide-for-small-only {
             display: inline-block !important;
             height: 20rem;
@@ -286,6 +313,7 @@ section.philosophies {
         .experience-content {
           height: 20em;
           vertical-align: middle;
+
           h2 {
             display: inline-block;
             line-height: 2.4rem;
@@ -322,7 +350,6 @@ section.philosophies {
     margin-top: 2rem;
   }
 
-
   .activity-content {
     display: none;
   }
@@ -331,23 +358,29 @@ section.philosophies {
 @media #{$medium-only} {
 
   section.philosophies {
+
     article {
+
       header {
         padding: .3rem;
+
         h3 {
           font-size: 1rem;
         }
       }
+
       p {
         font-size: .8rem;
       }
     }
   }
+
   h2.title {
     font-size: 2rem;
   }
 
   .tools {
+
     h3 {
       font-size: 1rem;
     }
@@ -359,9 +392,7 @@ section.philosophies {
   body {
     margin-top: 4rem;
   }
-  /**************
-   *** Header ***
-   **************/
+
   header {
     background-color: $idci-blue;
   }
@@ -386,69 +417,89 @@ section.philosophies {
   /**************
    *** Footer ***
    **************/
-
   footer {
     background: $idci-blue;
     color: $idci-white;
     text-transform: capitalize;
+
     .contact-us {
       padding-left: 7rem;
+
       .contact-us-link {
+
         a {
           color: $idci-white;
           font-size: 2rem;
+
           &:hover {
             color: $idci-light-blue;
           }
         }
       }
     }
+
     .address {
       font-size: 1rem;
       padding-left: 7rem;
+
       p {
         line-height: 1rem;
+
         &:first-child {
           margin-bottom: 2rem;
         }
+
         a {
           color: $idci-white;
+
           &.mail {
             text-decoration: underline;
           }
         }
       }
     }
+
     .footer-socials {
       padding: 0;
+
       .socials {
         height: 1rem;
         margin: 0;
         width: 100%;
+
         li {
           height: 3rem;
           width: 33.3%
         }
       }
+
       li.twitter {
         background-color: rgb(64, 153, 255);
+
         a {
+
           span {
             @include social-background-position('twitter');
           }
         }
       }
+
       li.rss {
         background-color: rgb(255, 148, 66);
+
         a {
+
           span {
             @include social-background-position('rss');
           }
         }
       }
+
       li.github {
         background-color: rgb(0, 0, 0);
+
         a {
+
           span {
             @include social-background-position('github');
           }
@@ -460,8 +511,8 @@ section.philosophies {
   /******************
    *** Index Page ***
    ******************/
-
   .container {
+
     .experiences,
     .tools,
     .philosophies,
@@ -474,6 +525,7 @@ section.philosophies {
     }
 
     .experiences {
+
       .button {
         text-transform: uppercase;
       }
@@ -488,6 +540,7 @@ section.philosophies {
   .accordion-toggle.open {
     background: #999;
   }
+
   .accordion-toggle {
     position: relative;
     display: block;
@@ -499,11 +552,13 @@ section.philosophies {
     color: #000;
     text-decoration: none;
     text-transform: uppercase;
+
     i.picture {
       color: #fff;
       font-size: 2rem;
       margin-right: 8px;
     }
+
     div.toggle-icon {
       border-left: 1px solid $idci-white;
       position: absolute;
@@ -512,6 +567,7 @@ section.philosophies {
       right: 20px;
       font-size: 1.5rem;
       margin-left: 1px;
+
       i {
         position: relative;
         top: 10px;
@@ -524,9 +580,11 @@ section.philosophies {
   .accordion-link {
     padding: 0 0 0 1px;
   }
+
   .accordion-link .arrow {
 
   }
+
   .accordion-toggle:hover {
     background: #999;
   }
@@ -535,13 +593,16 @@ section.philosophies {
     display: none;
     padding: 10px 0;
     overflow: inherit;
+
     .title {
       display: none;
     }
+
     div.row {
       margin: 0 auto;
       width: 100%;
     }
+
     p {
       margin: 0 auto;
       width: 80%;
@@ -566,9 +627,11 @@ section.philosophies {
     background-color: $idci-blue;
     font-size: 0.9rem;
     position: relative;
+
     .contact-title {
       font-size: 3rem;
       font-weight: bold;
+
       h3 {
         color: $idci-white;
         font-size: 1.7rem;
@@ -579,6 +642,7 @@ section.philosophies {
         transform: rotate(-90deg);
         text-transform: uppercase;
         top: 6rem;
+
         i.fa-map-marker {
           font-size: 2rem;
           left: -8rem;
@@ -591,12 +655,15 @@ section.philosophies {
         }
       }
     }
+
     .person {
       line-height: 1rem;
+
       p {
         font-size: 1rem;
         margin-top: 1rem;
       }
+
       a {
         color: $idci-white;
         display: block;
@@ -605,15 +672,18 @@ section.philosophies {
         width: 100%;
       }
     }
+
     .address {
       margin-top: 3rem;
-      p:first-child {
-        font-size: 1rem;
-        margin-top: 1rem;
-      }
+
       p {
         font-size: inherit;
         line-height: 0.8rem;
+
+        &:first-child {
+          font-size: 1rem;
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -622,39 +692,50 @@ section.philosophies {
    *** Team Page ***
    *****************/
   .team {
+
     header {
       background: $idci-dark-grey;
       padding: 1rem;
+
       h1 {
         font-size: 2rem;
+
         i {
           font-size: 3rem;
           margin-right: .8rem;
         }
       }
     }
+
     .member  {
       margin: 0 auto 3rem auto;
       width: 90%;
+
       header {
         background: 0 0;
         padding: 0;
+
         h2 {
           margin-bottom: 0;
         }
+
         p {
           font-style: italic;
+
+          &.member-description {
+            font-size: .8rem;
+            text-align: justify;
+          }
         }
       }
-      p.member-description {
-        font-size: .8rem;
-        text-align: justify;
-      }
+
       .skills {
         list-style-type: none;
         margin: 1rem 0;
+
         .skill {
           padding-top: .4rem;
+
           img {
             height: 1rem;
             margin-right: .5rem;
@@ -670,6 +751,7 @@ section.philosophies {
 
   .content-wrapper {
     width: 100%;
+
     div.image-holder {
       margin: 0 !important;
     }
@@ -682,6 +764,7 @@ section.philosophies {
     line-height: 3rem;
     margin: 0.05rem 0;
     padding-left: 20px;
+
     i {
       color: $idci-white;
       display: inline-block !important;
@@ -705,12 +788,14 @@ section.philosophies {
   .activity-content {
     margin: 0 auto;
     text-align: center;
+
     .logo {
       background-color: $idci-blue;
       display: inline-block;
       height: 8rem;
       margin: .4rem .4rem;
       width: 8rem;
+
       img {
         height: 100%;
       }
