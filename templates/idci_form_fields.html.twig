@@ -7,7 +7,7 @@
             <span class="input input--hoshi">
                 <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
                 <label class="input__label input__label--hoshi input__label--hoshi-color" for="{{ id }}">
-                    <span class="input__label-content input__label-content--hoshi">{{ name }}</span>
+                    <span class="input__label-content input__label-content--hoshi">{{ name|trans }}</span>
                 </label>
             </span>
         {% endif %}
@@ -25,7 +25,7 @@
     <div class="input input__textarea input--hoshi">
         <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
         <label class="input__label input__label--hoshi input__label--hoshi-color" for="{{ id }}">
-            <span class="input__label-content input__label-content--hoshi">{{ name }}</span>
+            <span class="input__label-content input__label-content--hoshi">{{ name|trans }}</span>
         </label>
     </div>
 {%- endblock textarea_widget -%}

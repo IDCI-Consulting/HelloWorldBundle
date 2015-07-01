@@ -1,10 +1,3 @@
-home: accueil
-the company: la société
-the team: l'équipe
-our activities: nos activités
-our partners: nos partenaires
-blog: blog
-contact: contact
 Contact: Contact
 Salesman: Commercial
 Technique: Technique
@@ -30,6 +23,29 @@ Our Activities: Nos Activités
 Clients: Clients
 Projects: Projets
 Open Source Contribution: Contribution Open Source
-Our contact details: Nos Coordonnées
 Follow us: Suivez nous
 The team: L'équipe
+
+#Form labels
+company: entreprise
+website: site web
+name: nom
+fistname: prénom
+email: email
+phonenumber: téléphone
+project: projet
+Validate: Valider
+
+#Navigation
+home: accueil
+the company: la société
+the team: l'équipe
+our activities: nos activités
+our partners: nos partenaires
+blog: blog
+contact: contact
+
+#Footer
+For any other request: Pour tout autre demande
+do not hesitate to: n'hésiter pas à
+Our contact details: Nos Coordonnées
