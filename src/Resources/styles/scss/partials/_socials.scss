@@ -10,36 +10,36 @@ $social-sprite-url: url(/images/sprite_rs.png);
 
 @mixin social-background-position($social-name) {
 
-  background-size: 300px;
+  background-size: 100px;
   margin: 0.5em auto 0 auto;
   @if($social-name == 'twitter') {
     background-position: 0 0;
-    height: 100px;
-    width: 100px;
+    height: 35px;
+    width: 35px;
   } @else if($social-name == 'rss') {
-    background-position: -100px 0;
-    height: 100px;
-    width: 100px;
+    background-position: -32px 0;
+    height: 35px;
+    width: 35px;
   } @else {
-    background-position: -200px 0;
-    height: 100px;
-    width: 100px;
+    background-position: -66px 0;
+    height: 35px;
+    width: 35px;
   }
 
   @media #{$small-only} {
     background-size: 150px;
-    margin: 0.5em auto 0 auto;
+    margin: 0 auto;
     @if ($social-name == 'twitter') {
       background-position: 0 0;
-      height: 50px;
+      height: 48px;
       width: 50px;
     } @else if ($social-name == 'rss') {
       background-position: -50px 0;
-      height: 50px;
+      height: 48px;
       width: 50px;
     } @else {
       background-position: -100px 0;
-      height: 50px;
+      height: 48px;
       width: 50px;
     }
   }

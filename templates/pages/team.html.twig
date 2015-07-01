@@ -1,32 +1,48 @@
-{% extends "layout.html" %}
+{% extends "layout.html.twig" %}
 
 {% block devJavascripts %}
-    <script src="{{ asset('js/headMouseTracker/HeadImage.js') }}"></script>
-    <script src="{{ asset('js/headMouseTracker/getMousePosition.js') }}"></script>
-    <script src="{{ asset('js/headMouseTracker/initImages.js') }}"></script>
+<script src="{{ asset('js/headMouseTracker/HeadImage.js') }}"></script>
+<script src="{{ asset('js/headMouseTracker/getMousePosition.js') }}"></script>
+<script src="{{ asset('js/headMouseTracker/initImages.js') }}"></script>
 {% endblock %}
 
 {% block content %}
-    <h1 class="team capitalize">
-        <i class="show-for-small fa fa-user"></i>
-        {% trans %}Team{% endtrans %}
-    </h1>
+<article class="team">
+    <header>
+        <h1 class="team capitalize">
+            <i class="show-for-small fa fa-user"></i>
+            {% trans %}The team{% endtrans %}
+        </h1>
+    </header>
 
+    {%
+        include 'partials/teamMember.html.twig'
+        with {
+            'firstName': 'brahim',
+            'lastName': 'boukoufallah',
+            'profession': 'analyste developpeur',
+            'skills': [
+                'test',
+                'test2',
+                'test3'
+            ],
+            'description': 'je suis analyste developpeur. Le meilleur de tous!!'
+        }
+    %}
 
-    <div class="text-left team-content">
-        {%
-            include 'partials/teamMember.html.twig'
-            with {
-                'firstName': 'brahim',
-                'lastName': 'boukoufallah',
-                'profession': 'analyste developpeur',
-                'skills': [
-                    'test',
-                    'test2',
-                    'test3'
-                ],
-                'description': 'je suis analyste developpeur. Le meilleur de tous!!'
-            }
-        %}
-    </div>
+    {%
+    include 'partials/teamMember.html.twig'
+        with {
+            'firstName': 'gabriel',
+            'lastName': 'bondaz',
+            'profession': 'analyste developpeur',
+            'skills': [
+                'test',
+                'test2',
+                'test3'
+            ],
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        }
+    %}
+</article>
 {% endblock %}

@@ -1,33 +1,33 @@
-{% extends "layout.html" %}
+{% extends "layout.html.twig" %}
 
-{% block content %}
-    <h1 class="activities capitalize">
-        <i class="show-for-small fa fa-database"></i>
-        {% trans %}Our Activities{% endtrans %}
-    </h1>
+{% block mainContent %}
+<h1 class="activities capitalize">
+    <i class="show-for-small fa fa-database"></i>
+    {% trans %}Our Activities{% endtrans %}
+</h1>
 
-    {%
-        include 'partials/activity.html.twig'
-        with {
-            'class': 'clients',
-            'title': 'Clients',
-            'content': 'ils sont gentils nos clients'
-        }
-    %}
-    {%
-        include 'partials/activity.html.twig'
-        with {
-            'class': 'projects',
-            'title': 'Projects',
-            'content': 'ils sont magnifique nos projets!!'
-        }
-    %}
-    {%
-        include 'partials/activity.html.twig'
-        with {
-            'class': 'contributions',
-            'title': 'Open Source Contribution',
-            'content': 'Chez IDCI-Consulting, on aime contribuer et faire avancer le web!'
-        }
-    %}
+{%
+    include 'partials/activity.html.twig'
+    with {
+        'class': 'clients',
+        'title': 'Clients',
+        'content': 'ils sont gentils nos clients'
+    }
+%}
+{%
+    include 'partials/activity.html.twig'
+    with {
+        'class': 'projects',
+        'title': 'Projects',
+        'content': 'ils sont magnifique nos projets!!'
+    }
+%}
+{%
+    include 'partials/activity.html.twig'
+    with {
+        'class': 'contributions',
+        'title': 'Open Source Contribution',
+        'content': 'Chez IDCI-Consulting, on aime contribuer et faire avancer le web!'
+    }
+%}
 {% endblock %}

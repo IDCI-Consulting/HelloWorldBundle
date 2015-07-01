@@ -1,25 +1,27 @@
-<article class={{ class }}>
+<article class="{{ class }}">
     <a href="#" class="accordion-toggle hide-for-medium-up">
         <div class="row">
-            <div class="small-8 columns">
-                <i class="fa fa-area-chart picture"></i>
+            <h3 class="small-8 columns">
+                <i class="{{ fa_class }} picture"></i>
                 {{ title|trans }}
-            </div>
+            </h3>
             <div class="small-2 columns toggle-icon">
                 <i class="fa fa-angle-down"></i>
             </div>
         </div>
     </a>
-    <div class="accordion-content row">
-        <div class=" medium-4 large-5 columns">
-            <img class="hide-for-small-only" src="{{ asset(imageUrl) }}" />
-        </div>
-        <div class="experience-content medium-8 large-7 columns">
-            <h2 class="title">{{ title|trans }}</h2>
-            <p class="text-justify">
-                {{ content }}
-            </p>
-            <a href="#" class="button small">En savoir +</a>
+    <div class="accordion-content">
+        <div class="row">
+            <div class=" medium-5 columns">
+                <img class="hide-for-small-only" src="{{ asset(imageUrl) }}" />
+            </div>
+            <div class="experience-content medium-7 columns">
+                <h2 class="title">{{ title|trans }}</h2>
+                <p class="text-justify">
+                    {{ content }}
+                </p>
+                <a href="#" class="button small">{% trans %}learn more{% endtrans %}</a>
+            </div>
         </div>
     </div>
 </article>
