@@ -11,28 +11,38 @@ footer {
     text-transform: capitalize;
   }
 
+  .footer-part {
+    padding: 0!important;
+    text-align: center;
+  }
+
   .contact-us {
+
     p {
       font-size: 1.3rem;
+
       &:first-child {
         margin-top: .7rem;
       }
-      }
     }
   }
+
   .socials {
     display: table;
     height: 1rem;
-    margin: 0;
+    margin: 0 0 0 1rem;
     width: 100%;
+
     li {
       display: inline-block;
       text-align: center;
+
       a {
         display: block;
         text-indent: -999rem;
         vertical-align: middle;
         width: 100%;
+
         span {
           background-image: $social-sprite-url;
           background-repeat: no-repeat;
@@ -46,39 +56,51 @@ footer {
 
     li.twitter {
       background-color: rgb(64, 153, 255);
+
       a {
+
         span {
           @include social-background-position('twitter');
         }
       }
     }
+
     li.rss {
       background-color: rgb(255, 148, 66);
+
       a {
+
         span {
           @include social-background-position('rss');
         }
       }
     }
+
     li.github {
       background-color: rgb(0, 0, 0);
+
       a {
+
         span {
           @include social-background-position('github');
         }
       }
     }
   }
-
+}
 @media #{$medium-up} {
+
   footer {
     height: 15rem;
+
     p {
       font-size: 1rem;
       line-height: 1rem;
     }
+
     .contact-us {
       text-align: center;
+
       p:last-child {
         line-height: 5rem;
       }
@@ -87,45 +109,56 @@ footer {
         color: $idci-light-blue;
         font-size: 2rem;
         padding: .5rem;
-
         @include transition(all, 0.4s);
+
         &:hover {
           background-color: $idci-blue;
           color: $idci-white;
         }
       }
     }
+
     .address {
+
       p {
         line-height: 1rem;
       }
+
       a {
         color: $idci-black;
+
         &:hover {
           color: $idci-black;
         }
+
         &.mail {
           text-decoration: underline;
         }
       }
     }
+
     .footer-socials {
+
       .socials {
+
         li {
           background-color: #999;
           border-radius: 50%;
           margin-right: 1rem;
           padding: .5rem;
+          @include transition(all, .4s);
+
           &.twitter:hover {
             background-color: rgb(64, 153, 255);
           }
+
           &.rss:hover {
             background-color: rgb(255, 148, 66);
           }
+
           &.github:hover {
             background-color: rgb(0, 0, 0);
           }
-          @include transition(all, .4s);
         }
       }
     }
