@@ -10,8 +10,8 @@ $intlApp = $app['controllers_factory'];
 $app->mount('/{_locale}', $intlApp);
 
 // Home page
-$intlApp->get(
-    '/',
+$intlApp->match(
+    '/contact-form',
     function (Request $request, $_locale) use ($app) {
 
         $app['translator']->setLocale($_locale);
@@ -19,17 +19,67 @@ $intlApp->get(
 
         $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
-        $form->handleRequest($request);
+        if ($request->getMethod() === 'POST') {
+            $form->handleRequest($request);
 
-        if ($form->isValid()) {
-            var_dump('VALID', $form->getData());
+            if ($form->isValid()) {
+                $data = $form->getData();
+
+                $name = $data['name'] . ' ' . $data['firstname'];
+
+                $message = Swift_Message::newInstance()
+                    ->setSubject('Nouvelle demande de projet')
+                    ->setFrom('no-reply@idci-consulting.fr')
+                    ->setTo(array('contact@idci-consulting.fr'))
+                    ->setBody($app['twig']->render(
+                        'pages/email.html.twig',
+                        array(
+                            'company'       => $data['company'],
+                            'name'          => $data['name'],
+                            'firstName'     => $data['firstname'],
+                            'project'       => $data['project'],
+                            'phoneNumber'   => $data['phonenumber'],
+                            'email'         => $data['email'],
+                        )
+                    ), 'text/html');
+
+                $app['mailer']->send($message);
+            }
+
+            return $app->redirect(
+                $app['url_generator']->generate(
+                    'homepage',
+                    array("_locale" => $_locale)
+                )
+            );
         }
+
+        return $app['twig']->render(
+            'partials/contactForm.html.twig',
+            array(
+                'form' => $form->createView(),
+                'i18n_routes' => $i18nRoutes
+            )
+        );
+    },
+    "GET|POST"
+)
+->bind('contactForm')
+;
+
+// Home page
+$intlApp->get(
+    '/',
+    function (Request $request, $_locale) use ($app) {
+
+        $app['translator']->setLocale($_locale);
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
         return $app['twig']->render(
             'pages/index.html.twig',
             array(
-                'form' => $form->createView(),
-                'i18n_routes' => $i18nRoutes)
+                'i18n_routes' => $i18nRoutes
+            )
         );
     }
 )
@@ -37,7 +87,7 @@ $intlApp->get(
 ;
 
 // Company page
-$intlApp->get(
+$intlApp->match(
     '/company',
     function (Request $request, $_locale) use ($app) {
         $app['translator']->setLocale($_locale);
@@ -63,7 +113,7 @@ $intlApp->get(
 ;
 
 // Team page
-$intlApp->get(
+$intlApp->match(
     '/team',
     function (Request $request, $_locale) use ($app) {
         $app['translator']->setLocale($_locale);
@@ -89,7 +139,7 @@ $intlApp->get(
 ;
 
 // Activities page
-$intlApp->get(
+$intlApp->match(
     '/activity',
     function (Request $request, $_locale) use ($app) {
         $app['translator']->setLocale($_locale);
@@ -114,7 +164,7 @@ $intlApp->get(
 ->bind('activities');
 
 // Partners page
-$intlApp->get(
+$intlApp->match(
     '/partners',
     function (Request $request, $_locale) use ($app) {
         $app['translator']->setLocale($_locale);
@@ -139,7 +189,7 @@ $intlApp->get(
 ->bind('partners');
 
 // Blog page
-$intlApp->get(
+$intlApp->match(
     '/blog',
     function (Request $request, $_locale) use ($app) {
         $app['translator']->setLocale($_locale);
