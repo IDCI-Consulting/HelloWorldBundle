@@ -23,4 +23,6 @@
     <p class="member-description">
         {{ description }}
     </p>
+
+    <a href="{{ path('cv', {_locale: app.translator.locale, 'name': firstName}) }}" class="button small see-cv">CV</a>
 </section>
