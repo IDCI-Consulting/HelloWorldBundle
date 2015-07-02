@@ -2,6 +2,6 @@
 
 {% block mainContent %}
 <section class="contact-form">
-    {% include 'partials/contactForm.html.twig' with {'form': form} %}
+    {{ render(url('contactForm', {_locale: app.translator.locale})) }}
 </section>
 {% endblock %}
