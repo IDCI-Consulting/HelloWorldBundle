@@ -7,6 +7,7 @@ $idci-light-blue: #0DB0D1;
 $idci-dark-grey: #DEDDD8;
 $idci-light-grey: #f7f7f7;
 $idci-green: #1E9847;
+$idci-dark-green: #007A01;
 $idci-black: #000;
 
 $font-url: '/fonts';
@@ -614,7 +615,7 @@ section.philosophies {
 
   .experiences .button {
     background-color: $idci-green;
-    border: 2px solid #007A01;
+    border: 2px solid $idci-dark-green;
     @include border-radius(0);
     font-size: 1rem;
     left: 10%;
@@ -743,6 +744,17 @@ section.philosophies {
             height: 1rem;
             margin-right: .5rem;
           }
+        }
+      }
+
+      .see-cv {
+        background-color: $idci-green;
+        border: 2px solid $idci-dark-green;
+        font-size: 1rem;
+        width: 100%;
+
+        &:hover {
+          background-color: $idci-dark-green;
         }
       }
     }
