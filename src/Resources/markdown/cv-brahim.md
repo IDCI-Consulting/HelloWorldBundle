@@ -1,0 +1,60 @@
+**Brahim, 25ans**
+
+**Anglais et Arabe maîtrisé**
+
+# Profil Développeur
+## 3 ans d'expérience
+
+### EXPERIENCES PROFESSIONNELLES
+___
+
+_Depuis Juillet 2014 : Embauché chez IDCI-CONSULTING | Développeur_
+
+* 2014: Map Your Stories: Développement d'un prototype permettant la création de plans de métro personnalisables
+  * Technologie: JavaScript / MeteorJS 1.1, NodeJS
+
+* 2015: IDCI-Consulting: Développement et intégration du nouveau site
+  * Technologie: Php 5 / Silex 1.3
+
+_2013: IDCI-Consulting: **Stage de 6 semaines (du 20/05/2013 au 28/06/2015)**_
+
+* Conception et développement d'une plate-forme de gestion de note de frais
+*  Technologie: Php 5 / Symfony 2
+
+### FORMATION
+___
+
+2015: License Professionnelle Systèmes Informatiques et Logiciels: Concepteur et Gestionnaire de Sites Internet (METINET)
+
+2014: **BTS SIO** (Service Informatique aux Orgnisations)
+
+### OUTILS INFORMATIQUE
+___
+
+**Systèmes d'exploitations:**
+Windows, Linux
+
+**Réseaux:**
+Serveur HTTP (Apache, Nginx)
+
+**Langages**
+C++, Java, Php, Html, xHtml, Scss, JavaScript, Sql, NoSql, Shell Script
+
+**Technologies:**
+
+*  Framework: Symfony, Silex, Java EE
+*  Versioning: Git; Svn
+*  Virtualisation: Docker
+*  Gestion de projet: Redmine
+*  Autres: Ajax
+
+**CMS:**
+Wordpress
+
+**Graphisme:**
+Notions de Photoshop et Gimp
+
+### EXPERIENCES PERSONNELLES
+___
+
+2008 - 2013: Equipier polyvalent à Mcdonalds
