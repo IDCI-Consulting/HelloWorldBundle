@@ -2,6 +2,7 @@
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Form\Type\ContactType;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
@@ -165,11 +166,29 @@ $intlApp
             $app['translator']->setLocale($_locale);
             $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
+            $path     = __DIR__.'/Resources/markdown/';
+            $fileName = 'cv-' . $name . '.md';
+            $filePath = $path . $fileName;
+
+            if (file_exists($filePath)) {
+                $cv = file_get_contents($filePath);
+            } else {
+                throw new NotFoundHttpException(
+                    sprintf(
+                        '%s\'s cv is not found',
+                        $name
+                    )
+                );
+            }
+
+            $cv = $app['markdown']->transform($cv);
+
             return $app['twig']->render(
                 'pages/cv.html.twig',
                 array(
                     'i18n_routes' => $i18nRoutes,
-                    'name'        => $name
+                    'name'        => $name,
+                    'cv'          => $cv
                 )
             );
         }
@@ -180,12 +199,22 @@ $intlApp
 $intlApp
     ->get(
         '/cv/{name}/raw',
-        function (Request $request, $name) use ($app) {
+        function (Request $request, $_locale, $name) use ($app) {
 
-            $filePath = __DIR__.'/Resources/markdown/';
+            $path     = __DIR__.'/Resources/markdown/';
             $fileName = 'cv-' . $name . '.md';
+            $filePath = $path . $fileName;
 
-            $cv = file_get_contents(sprintf('%s%s', $filePath, $fileName));
+            if (file_exists($filePath)) {
+                $cv = file_get_contents($filePath);
+            } else {
+                throw new NotFoundHttpException(
+                    sprintf(
+                        '%s\'s cv is not found',
+                        $name
+                    )
+                );
+            }
 
             $cv = $app['markdown']->transform($cv);
 
@@ -215,8 +244,6 @@ $intlApp
 
                 if ($form->isValid()) {
                     $data = $form->getData();
-
-                    $name = $data['name'] . ' ' . $data['firstname'];
 
                     $message = Swift_Message::newInstance()
                         ->setSubject('Nouvelle demande de projet')
