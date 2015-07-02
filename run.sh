@@ -34,21 +34,44 @@ scriptpath="`dirname \"$0\"`"
 scriptpath="`( cd \"$scriptpath\" && pwd )`"
 
 # elk
-elkvolume="/var/docker/pre-prod/idci-website/elk"
-elkcontainer="idciwebsite_elk_1"
+elkvolume="/var/docker/elk/idci"
+elkcontainer="idci_elk_1"
 kibanajson="$scriptpath/kibana.json"
 
 # The main function
 main() {
     echo "---------------------------------------------------"
+    addHostEntry "dev.idci.fr"
+    addHostEntry "dev.logs.idci.fr"
     initELK
     docker-compose up -d
     echo "---------------------------------------------------"
+    printf "Your root directory is at ${cyan}$scriptpath${nocolor}\n"
+    printf "You can access your project at ${cyan}http://dev.idci.fr/index_dev.php${nocolor}\n"
+    printf "You can see your logs at ${cyan}http://dev.logs.idci.fr${nocolor}\n"
 }
 
 #############
 # Functions #
 #############
+
+# Add an host entry
+# $1 : domain
+addHostEntry () {
+    domain=$1;   
+    success=0
+    filename=/etc/hosts
+    hostline="127.0.0.1        $domain"
+    # Determine if the line already exists in /etc/hosts
+    grep -q "$domain" "$filename"  # -q is for quiet
+
+    # Grep's return error code can then be checked. No error=success
+    if ! [ $? -eq $success ]; then
+      # If the line wasn't found, add it using an printf append >>
+      sudo bash -c "echo '$hostline' >> $filename"
+      printf "The entry $domain was added to $filename\n"
+    fi
+}
 
 # insert visualization and dashboard in elasticsearch cluster
 initELK () {
