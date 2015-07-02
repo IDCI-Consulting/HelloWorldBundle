@@ -1,6 +1,6 @@
 <?php
 
-namespace Providers;
+namespace Provider;
 
 use Silex\Application;
 use Pimple\ServiceProviderInterface;
