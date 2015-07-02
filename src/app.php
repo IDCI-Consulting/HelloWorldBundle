@@ -15,8 +15,8 @@ use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
-use Providers\MarkdownParserServiceProvider;
-use Providers\I18nRouteGeneratorServiceProvider;
+use Provider\MarkdownParserServiceProvider;
+use Provider\I18nRouteGeneratorServiceProvider;
 
 $app = new Application();
 $app->register(new RoutingServiceProvider());
