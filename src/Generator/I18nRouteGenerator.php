@@ -22,6 +22,11 @@ class I18nRouteGenerator
     private $languages;
 
     /**
+     * @var array
+     */
+    private $routeParameters;
+
+    /**
      * @var RouteCollection
      */
     private $routes;
@@ -60,6 +65,8 @@ class I18nRouteGenerator
         $matcher = new UrlMatcher($this->routes, $requestContext);
         $route   = $matcher->match($pathChunks[0]);
 
+        $this->setRouteParameters($route);
+
         if (!in_array('_locale', array_keys($route))) {
             throw new \LogicException('You\'re route does not have a locale');
         }
@@ -74,16 +81,18 @@ class I18nRouteGenerator
     /**
      * Do internationalization generation
      *
-     * @param $routeName
+     * @param $routeName The route name
      *
      * @return array
      */
     private function doGeneration($routeName)
     {
-        $routes = array();
+        $routes     = array();
+        $this->routeParameters;
 
         foreach ($this->languages as $language) {
-            $generatedRoute = $this->urlGenerator->generate($routeName, array('_locale' => $language));
+            $this->routeParameters['_locale'] = $language;
+            $generatedRoute = $this->urlGenerator->generate($routeName, $this->routeParameters);
 
             $routes[$language] = $generatedRoute;
         }
@@ -99,5 +108,17 @@ class I18nRouteGenerator
     public function setLanguages($languages)
     {
         $this->languages = $languages;
+    }
+
+    /**
+     * Set route parameters
+     *
+     * @param array $route
+     */
+    public function setRouteParameters($route)
+    {
+        unset($route['_controller'], $route['_route']);
+
+        $this->routeParameters = $route;
     }
 }
