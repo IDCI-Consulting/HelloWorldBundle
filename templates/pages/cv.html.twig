@@ -1,0 +1,9 @@
+{% extends 'layout.html.twig' %}
+
+{% block mainContent %}
+    <div class="row">
+        <div class="small-12 columns">
+            {{ render(path('cv-raw', {_locale: app.translator.locale, name: name})) }}
+        </div>
+    </div>
+{% endblock %}
