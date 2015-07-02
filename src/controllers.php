@@ -8,71 +8,6 @@ use Form\Type\ContactType;
 
 $intlApp = $app['controllers_factory'];
 
-// Home page
-$intlApp
-    ->match(
-        '/contact-form',
-        function (Request $request, $_locale) use ($app) {
-
-            $app['translator']->setLocale($_locale);
-            $i18nRoutes = $app['i18n_route_generator']->generate($request);
-
-            $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
-
-            if ($request->getMethod() === 'POST') {
-                $form->handleRequest($request);
-
-                if ($form->isValid()) {
-                    $data = $form->getData();
-
-                    $name = $data['name'] . ' ' . $data['firstname'];
-
-                    $message = Swift_Message::newInstance()
-                        ->setSubject('Nouvelle demande de projet')
-                        ->setFrom('no-reply@idci-consulting.fr')
-                        ->setTo(array('contact@idci-consulting.fr'))
-                        ->setBody(
-                            $app['twig']->render(
-                                'pages/email.html.twig',
-                                array(
-                                    'company'       => $data['company'],
-                                    'name'          => $data['name'],
-                                    'firstName'     => $data['firstname'],
-                                    'project'       => $data['project'],
-                                    'phoneNumber'   => $data['phonenumber'],
-                                    'email'         => $data['email'],
-                                )
-                            ),
-                            'text/html'
-                        )
-                    ;
-
-                    $app['mailer']->send($message);
-                }
-
-                return $app->redirect(
-                    $app['url_generator']->generate(
-                        'homepage',
-                        array("_locale" => $_locale)
-                    )
-                );
-            }
-
-            return $app['twig']->render(
-                'partials/contactForm.html.twig',
-                array(
-                    'form' => $form->createView(),
-                    'i18n_routes' => $i18nRoutes
-                )
-            );
-        },
-        "GET|POST"
-    )
-    ->bind('contactForm')
-;
-
-$intlApp = $app['controllers_factory'];
-
 //Routing requirements
 $intlApp->assert('_locale', 'fr|en');
 
@@ -263,6 +198,68 @@ $intlApp
         }
     )
     ->bind('cv-raw')
+;
+
+$intlApp
+    ->match(
+        '/contact-form',
+        function (Request $request, $_locale) use ($app) {
+
+            $app['translator']->setLocale($_locale);
+            $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
+            $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
+
+            if ($request->getMethod() === 'POST') {
+                $form->handleRequest($request);
+
+                if ($form->isValid()) {
+                    $data = $form->getData();
+
+                    $name = $data['name'] . ' ' . $data['firstname'];
+
+                    $message = Swift_Message::newInstance()
+                        ->setSubject('Nouvelle demande de projet')
+                        ->setFrom('no-reply@idci-consulting.fr')
+                        ->setTo(array('contact@idci-consulting.fr'))
+                        ->setBody(
+                            $app['twig']->render(
+                                'pages/email.html.twig',
+                                array(
+                                    'company'       => $data['company'],
+                                    'name'          => $data['name'],
+                                    'firstName'     => $data['firstname'],
+                                    'project'       => $data['project'],
+                                    'phoneNumber'   => $data['phonenumber'],
+                                    'email'         => $data['email'],
+                                )
+                            ),
+                            'text/html'
+                        )
+                    ;
+
+                    $app['mailer']->send($message);
+                }
+
+                return $app->redirect(
+                    $app['url_generator']->generate(
+                        'homepage',
+                        array("_locale" => $_locale)
+                    )
+                );
+            }
+
+            return $app['twig']->render(
+                'partials/contactForm.html.twig',
+                array(
+                    'form' => $form->createView(),
+                    'i18n_routes' => $i18nRoutes
+                )
+            );
+        },
+        "GET|POST"
+    )
+    ->bind('contactForm')
 ;
 
 $app->error(
