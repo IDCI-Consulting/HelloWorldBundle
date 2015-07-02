@@ -233,48 +233,51 @@ section.philosophies {
   /****************
    ** Index Page **
    ****************/
-  section.experiences {
+  .container {
+    section.experiences {
+      padding-top: 3rem;
 
-    article {
+      article {
 
-      div {
-        display: inline-block;
-
-        img.hide-for-small-only {
-          height: 22rem;
-          width: 22rem;
-        }
-      }
-
-      .experience-content {
-        height: 25rem;
-        vertical-align: middle;
-
-        h2 {
+        div {
           display: inline-block;
+
+          img.hide-for-small-only {
+            height: 22rem;
+            width: 22rem;
+          }
         }
 
-        p {
-          font-size: .8em;
-          padding: 7em 3em;
-          margin: 0;
+        .experience-content {
+          height: 25rem;
+          vertical-align: middle;
+
+          h2 {
+            display: inline-block;
+          }
+
+          p {
+            font-size: .8em;
+            padding: 7em 3em;
+            margin: 0;
+          }
+
+          a {
+            border: 2px solid $idci-blue;
+            float: right;
+            font-size: 1rem !important;
+            font-weight: bold;
+            height: 2.5rem !important;
+            line-height: 2.1rem !important;
+            margin-top: 2rem !important;
+            text-transform: uppercase;
+            width: 12rem !important;
+          }
         }
 
         a {
-          border: 2px solid $idci-blue;
-          float: right;
-          font-size: 1rem!important;
-          font-weight: bold;
-          height: 2.5rem!important;
-          line-height: 2.1rem!important;
-          margin-top: 2rem!important;
-          text-transform: uppercase;
-          width: 12rem!important;
+          margin-top: 1rem;
         }
-      }
-
-      a {
-        margin-top: 1rem;
       }
     }
   }
