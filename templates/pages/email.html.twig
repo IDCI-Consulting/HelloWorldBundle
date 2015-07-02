@@ -1,0 +1,15 @@
+<article>
+    {% if company is defined %}
+        <header>La société: {{ company }}</header>
+    {% endif %}
+
+    <p>{{ name }} {{ firstName }} souhaite vous contacter.</p>
+    <p>La description de son projet est ci-dessous:</p>
+    <p>{{ project }}</p>
+
+    <footer>
+        <p>Contact du contact :</p>
+        <p>email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+        <p>téléphone: <a href="tel:{{ phoneNumber }}">{{ phoneNumber }}</a></p>
+    </footer>
+</article>
