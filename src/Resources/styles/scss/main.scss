@@ -786,6 +786,20 @@ section.philosophies {
     }
   }
 
+  /***************
+   *** Cv Page ***
+   ***************/
+  .export-cv {
+    background-color: $idci-green!important;
+    border: 2px solid $idci-dark-green;
+    font-size: 1rem;
+    width: 100%;
+
+    &:hover {
+      background-color: $idci-dark-green;
+    }
+  }
+
   /********************
    *** Contact Page ***
    ********************/

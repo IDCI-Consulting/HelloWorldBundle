@@ -4,6 +4,7 @@
     <div class="row">
         <div class="small-12 columns">
             {% include 'partials/cvRaw.html.twig' with {'cv': cv} %}
+            <a class="button small export-cv" href="{{ path('cv', {'_locale': app.translator.locale, 'name': name, '_format': 'pdf'}) }}">{% trans %}Export{% endtrans %}</a>
         </div>
     </div>
 {% endblock %}
