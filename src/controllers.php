@@ -297,19 +297,32 @@ $intlApp
 
 $app->error(
     function (\Exception $e, Request $request, $code) use ($app) {
-        if ($app['debug']) {
+        /*if ($app['debug']) {
             return;
-        }
+        }*/
+
+        $app['translator']->setLocale($request->get('_locale'));
+        $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
         // 404.html, or 40x.html, or 4xx.html, or error.html
         $templates = array(
-            'errors/'.$code.'.html',
-            'errors/'.substr($code, 0, 2).'x.html',
-            'errors/'.substr($code, 0, 1).'xx.html',
-            'errors/default.html',
+            'errors/'.$code.'.html.twig',
+            'errors/'.substr($code, 0, 2).'x.html.twig',
+            'errors/'.substr($code, 0, 1).'xx.html.twig',
+            'errors/default.html.twig',
         );
 
-        return new Response($app['twig']->resolveTemplate($templates)->render(array('code' => $code)), $code);
+        return new Response(
+            $app['twig']
+                ->resolveTemplate($templates)
+                ->render(
+                    array(
+                        'i18n_routes' => $i18nRoutes,
+                        'code' => $code
+                    )
+                ),
+            $code
+        );
     }
 );
 
