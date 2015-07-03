@@ -8,130 +8,132 @@
     </head>
 
     <body>
-        {% block header %}
-        <div class="header-container">
-            <div class="overlay show-for-medium-up"></div>
-            <header class="row">
-                <a class="hide-for-medium-up small-3 menu-icon">
-                    <i class="fa fa-bars"></i>
-                </a>
-
-                <h1 class="title small-5 medium-2 large-3 columns">
-                    <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">
-                        <span>
-                            IDCI-Consulting
-                        </span>
+        <div class="wrapper">
+            {% block header %}
+            <div class="header-container">
+                <div class="overlay show-for-medium-up"></div>
+                <header class="row">
+                    <a class="hide-for-medium-up small-3 menu-icon">
+                        <i class="fa fa-bars"></i>
                     </a>
-                </h1>
 
-                <nav class="nav-menu medium-8 large-7 columns">
-                    <ul class="nav-menu">
-                        <li>
-                            <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">{% trans %}home{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('company', {'_locale': app.translator.locale}) }}">{% trans %}the company{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('team', {'_locale': app.translator.locale}) }}">{% trans %}the team{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('activities', {'_locale': app.translator.locale}) }}">{% trans %}our activities{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('partners', {'_locale': app.translator.locale}) }}">{% trans %}our partners{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('blog', {'_locale': app.translator.locale}) }}">{% trans %}blog{% endtrans %}</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('contact', {'_locale': app.translator.locale}) }}">{% trans %}contact{% endtrans %}</a>
-                        </li>
+                    <h1 class="title small-5 medium-2 large-3 columns">
+                        <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">
+                            <span>
+                                IDCI-Consulting
+                            </span>
+                        </a>
+                    </h1>
+
+                    <nav class="nav-menu medium-8 large-7 columns">
+                        <ul class="nav-menu">
+                            <li>
+                                <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">{% trans %}home{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('company', {'_locale': app.translator.locale}) }}">{% trans %}the company{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('team', {'_locale': app.translator.locale}) }}">{% trans %}the team{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('activities', {'_locale': app.translator.locale}) }}">{% trans %}our activities{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('partners', {'_locale': app.translator.locale}) }}">{% trans %}our partners{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('blog', {'_locale': app.translator.locale}) }}">{% trans %}blog{% endtrans %}</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('contact', {'_locale': app.translator.locale}) }}">{% trans %}contact{% endtrans %}</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <ul class="langs small-3 medium-1 columns inline-list">
+                        {% for locale, route in i18n_routes %}
+                            <li>
+                                <a href="{{ route }}">
+                                    <img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ locale }}" />
+                                </a>
+                            </li>
+                        {% endfor %}
                     </ul>
-                </nav>
 
-                <ul class="langs small-3 medium-1 columns inline-list">
-                    {% for locale, route in i18n_routes %}
-                        <li>
-                            <a href="{{ route }}">
-                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ locale }}" />
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                    <a class="small-3 medium-1 search-icon">
+                        <i class="fa fa-search"></i>
+                    </a>
 
-                <a class="small-3 medium-1 search-icon">
-                    <i class="fa fa-search"></i>
-                </a>
+                    <form method="post"  class="form-search hide-for-small-up">
+                        <input type="search" placeholder="Recherche"/>
+                        <input type="submit" value="Valider" />
+                    </form>
+                </header>
+            </div>
+            {% endblock %}
 
-                <form method="post"  class="form-search hide-for-small-up">
-                    <input type="search" placeholder="Recherche"/>
-                    <input type="submit" value="Valider" />
-                </form>
-            </header>
+            {% block content %}{% endblock %}
+
+            {% block footer %}
+            <footer>
+                <div class="row">
+
+                    <div class="footer-part contact-us medium-4 columns">
+                        <p class="hide-for-small-only">
+                            {% trans %}For any other request{% endtrans %}
+                        </p>
+                        <p class="hide-for-small-only">{% trans %}do not hesitate to{% endtrans %}</p>
+                        <p class="contact-us-link">
+                            <a data-reveal-id="firstModal">{% trans %}Contact us{% endtrans %}</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-part address medium-4 columns">
+                        <h3 class="idci-light-blue">
+                            {% trans %}Our contact details{% endtrans %}
+                        </h3>
+                        <p>256 rue Francis de Pressensé</p>
+                        <p>69100 Villeurbanne - FRANCE</p>
+                        <p>
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:0663231207" class="phonenumber">06 63 23 12 07</a>
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope-o"></i>
+                            <a href="mailto:contact@idci-consulting.fr" class="mail">contact@idci-consulting.fr</a>
+                        </p>
+                    </div>
+
+
+                    <div class="footer-part footer-socials medium-4 columns">
+                        <h3 class="hide-for-small-only idci-light-blue">
+                            {% trans %}Follow us{% endtrans %}
+                        </h3>
+                        <ul class="socials">
+                            <li class="twitter">
+                                <a href="https://twitter.com/idciconsulting" target="_blank"><span>Twitter</span></a>
+                            </li>
+                            <li class="rss">
+                                <a href="#" target="_blank"><span>RSS</span></a>
+                            </li>
+                            <li class="github">
+                                <a href="https://github.com/IDCI-Consulting" target="_blank"><span>Github</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+            {% block modal %}
+                <!-- Reveal Modals begin -->
+                <div id="firstModal" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+                    {{ render(url('contactForm', {_locale: app.translator.locale})) }}
+                    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                </div>
+            {% endblock %}
+            {% endblock %}
+            {% block javascripts %}{% endblock %}
         </div>
-        {% endblock %}
-
-        {% block content %}{% endblock %}
-
-        {% block footer %}
-        <footer>
-            <div class="row">
-
-                <div class="footer-part contact-us medium-4 columns">
-                    <p class="hide-for-small-only">
-                        {% trans %}For any other request{% endtrans %}
-                    </p>
-                    <p class="hide-for-small-only">{% trans %}do not hesitate to{% endtrans %}</p>
-                    <p class="contact-us-link">
-                        <a data-reveal-id="firstModal">{% trans %}Contact us{% endtrans %}</a>
-                    </p>
-                </div>
-
-                <div class="footer-part address medium-4 columns">
-                    <h3 class="idci-light-blue">
-                        {% trans %}Our contact details{% endtrans %}
-                    </h3>
-                    <p>256 rue Francis de Pressensé</p>
-                    <p>69100 Villeurbanne - FRANCE</p>
-                    <p>
-                        <i class="fa fa-phone"></i>
-                        <a href="tel:0663231207" class="phonenumber">06 63 23 12 07</a>
-                    </p>
-                    <p>
-                        <i class="fa fa-envelope-o"></i>
-                        <a href="mailto:contact@idci-consulting.fr" class="mail">contact@idci-consulting.fr</a>
-                    </p>
-                </div>
-
-
-                <div class="footer-part footer-socials medium-4 columns">
-                    <h3 class="hide-for-small-only idci-light-blue">
-                        {% trans %}Follow us{% endtrans %}
-                    </h3>
-                    <ul class="socials">
-                        <li class="twitter">
-                            <a href="https://twitter.com/idciconsulting" target="_blank"><span>Twitter</span></a>
-                        </li>
-                        <li class="rss">
-                            <a href="#" target="_blank"><span>RSS</span></a>
-                        </li>
-                        <li class="github">
-                            <a href="https://github.com/IDCI-Consulting" target="_blank"><span>Github</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-
-        {% block modal %}
-            <!-- Reveal Modals begin -->
-            <div id="firstModal" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
-                {{ render(url('contactForm', {_locale: app.translator.locale})) }}
-                <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-            </div>
-        {% endblock %}
-        {% endblock %}
-        {% block javascripts %}{% endblock %}
     </body>
 </html>
