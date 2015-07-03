@@ -24,5 +24,6 @@
         {{ description }}
     </p>
 
-    <a href="{{ path('cv', {_locale: app.translator.locale, 'name': firstName}) }}" class="button small see-cv">CV</a>
+    {% set fileName = firstName ~ '_' ~ lastName %}
+    <a href="{{ path('cv', {_locale: app.translator.locale, 'name': fileName}) }}" class="button small see-cv">CV</a>
 </section>
