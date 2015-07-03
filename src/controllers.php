@@ -198,6 +198,53 @@ $intlApp
 
 $intlApp
     ->get(
+        '/cv/{name}/pdf',
+        function (Request $request, $_locale, $name) use ($app) {
+
+            $url = $app['url_generator']->generate(
+                'cv-raw',
+                array(
+                    '_locale' => $_locale,
+                    'name'    => $name
+                ),
+                true
+            );
+
+            $path     = __DIR__.'/Resources/markdown/';
+            $fileName = 'cv-' . $name . '.md';
+            $filePath = $path . $fileName;
+
+            if (file_exists($filePath)) {
+                $cv = file_get_contents($filePath);
+            } else {
+                throw new NotFoundHttpException(
+                    sprintf(
+                        '%s\'s cv is not found',
+                        $name
+                    )
+                );
+            }
+
+            $cv = $app['markdown']->transform($cv);
+
+            $pdf = $app['snappy.pdf']->getOutputFromHtml($app['twig']->render(
+                'partials/cvRaw.html.twig',
+                array(
+                    'cv' => $cv
+                )
+            ));
+
+            $response = new Response($pdf);
+            $response->headers->set('Content-Type', 'application/pdf');
+
+            return $response;
+        }
+    )
+    ->bind('cv-pdf')
+;
+
+$intlApp
+    ->get(
         '/cv/{name}/raw',
         function (Request $request, $_locale, $name) use ($app) {
 
