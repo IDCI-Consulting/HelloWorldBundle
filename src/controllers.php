@@ -160,8 +160,8 @@ $intlApp
 
 $intlApp
     ->get(
-        '/cv/{name}',
-        function (Request $request, $_locale, $name) use ($app) {
+        '/cv/{name}.{_format}',
+        function (Request $request, $_locale, $name, $_format) use ($app) {
 
             $app['translator']->setLocale($_locale);
             $i18nRoutes = $app['i18n_route_generator']->generate($request);
@@ -181,7 +181,44 @@ $intlApp
                 );
             }
 
+            if ($_format === 'md') {
+                // take into account line breaks
+                $cv = nl2br($cv);
+
+                return $app['twig']->render(
+                    'partials/cvRaw.html.twig',
+                    array(
+                        'format' => $_format,
+                        'cv'     => $cv
+                    )
+                );
+            }
+
             $cv = $app['markdown']->transform($cv);
+
+            if ($_format === 'html') {
+                return $app['twig']->render(
+                    'partials/cvRaw.html.twig',
+                    array(
+                        'format' => $_format,
+                        'cv'     => $cv
+                    )
+                );
+            }
+
+            if ($_format === 'pdf') {
+                $pdf = $app['snappy.pdf']->getOutputFromHtml($app['twig']->render(
+                    'partials/cvRaw.html.twig',
+                    array(
+                        'cv' => $cv
+                    )
+                ));
+
+                $response = new Response($pdf);
+                $response->headers->set('Content-Type', 'application/pdf');
+
+                return $response;
+            }
 
             return $app['twig']->render(
                 'pages/cv.html.twig',
@@ -193,87 +230,9 @@ $intlApp
             );
         }
     )
+    ->assert('_format', 'md|html|pdf')
+    ->value('_format', '')
     ->bind('cv')
-;
-
-$intlApp
-    ->get(
-        '/cv/{name}/pdf',
-        function (Request $request, $_locale, $name) use ($app) {
-
-            $url = $app['url_generator']->generate(
-                'cv-raw',
-                array(
-                    '_locale' => $_locale,
-                    'name'    => $name
-                ),
-                true
-            );
-
-            $path     = __DIR__.'/Resources/markdown/';
-            $fileName = 'cv-' . $name . '.md';
-            $filePath = $path . $fileName;
-
-            if (file_exists($filePath)) {
-                $cv = file_get_contents($filePath);
-            } else {
-                throw new NotFoundHttpException(
-                    sprintf(
-                        '%s\'s cv is not found',
-                        $name
-                    )
-                );
-            }
-
-            $cv = $app['markdown']->transform($cv);
-
-            $pdf = $app['snappy.pdf']->getOutputFromHtml($app['twig']->render(
-                'partials/cvRaw.html.twig',
-                array(
-                    'cv' => $cv
-                )
-            ));
-
-            $response = new Response($pdf);
-            $response->headers->set('Content-Type', 'application/pdf');
-
-            return $response;
-        }
-    )
-    ->bind('cv-pdf')
-;
-
-$intlApp
-    ->get(
-        '/cv/{name}/raw',
-        function (Request $request, $_locale, $name) use ($app) {
-
-            $path     = __DIR__.'/Resources/markdown/';
-            $fileName = 'cv-' . $name . '.md';
-            $filePath = $path . $fileName;
-
-            if (file_exists($filePath)) {
-                $cv = file_get_contents($filePath);
-            } else {
-                throw new NotFoundHttpException(
-                    sprintf(
-                        '%s\'s cv is not found',
-                        $name
-                    )
-                );
-            }
-
-            $cv = $app['markdown']->transform($cv);
-
-            return $app['twig']->render(
-                'partials/cvRaw.html.twig',
-                array(
-                    'cv' => $cv
-                )
-            );
-        }
-    )
-    ->bind('cv-raw')
 ;
 
 $intlApp
