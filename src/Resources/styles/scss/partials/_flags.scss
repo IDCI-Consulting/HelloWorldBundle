@@ -5,10 +5,10 @@
 }
 
 .flag {
-  .flag-cn {background-position: -16px 0}
-  .flag-fr {background-position: -32px 0}
-  .flag-en {background-position: 0 -11px}
-  .flag-it {background-position: -16px -11px}
-  .flag-jp {background-position: -32px -11px}
-  .flag-sa {background-position: 0 -22px}
+  &.flag-cn {background-position: -16px 0}
+  &.flag-fr {background-position: -32px 0}
+  &.flag-en {background-position: 0 -11px}
+  &.flag-it {background-position: -16px -11px}
+  &.flag-jp {background-position: -32px -11px}
+  &.flag-sa {background-position: 0 -22px}
 }

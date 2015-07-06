@@ -8,6 +8,7 @@ use Form\Type\ContactType;
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 $intlApp = $app['controllers_factory'];
+$redirectApp = $app['controllers_factory'];
 
 //Routing requirements
 $intlApp->assert('_locale', 'fr|en');
@@ -15,6 +16,27 @@ $intlApp->assert('_locale', 'fr|en');
 /******************
  * App Controller *
  ******************/
+
+// Redirect to home page according to the preferred language of browser
+$redirectApp
+    ->get(
+        '/',
+        function (Request $request) use ($app) {
+
+            $availableLanguages = $app['i18n_route_generator.languages'];
+
+            return $app->redirect(
+                $app['url_generator']->generate(
+                    'homepage',
+                    array(
+                        "_locale" => $request->getPreferredLanguage($availableLanguages)
+                    )
+                )
+            );
+        }
+    )
+    ->bind('redirect-homepage')
+;
 
 // Home page
 $intlApp
@@ -327,3 +349,4 @@ $app->error(
 );
 
 $app->mount('/{_locale}', $intlApp);
+$app->mount('/', $redirectApp);
