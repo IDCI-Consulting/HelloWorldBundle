@@ -37,12 +37,12 @@
     </div>
 </section>
 
-<section class="philosophies hide-for-small-only">
+<section class="philosophies idci-blue hide-for-small-only">
     <div class="row">
         {%
             include 'partials/philosophy.html.twig'
             with {
-                'class': 'philosophy row',
+                'class': 'philosophy',
                 'title': 'Our philosophy',
                 'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             }
@@ -50,7 +50,7 @@
         {%
             include 'partials/philosophy.html.twig'
             with {
-                'class': 'methodology row',
+                'class': 'methodology',
                 'title': 'Our approach',
                 'content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             }
@@ -60,13 +60,13 @@
 
 <section class="tools hide-for-small-only">
     <div class="row">
-        <header>
+        <header class="small-12 columns">
             <h2 class="title">{% trans %}Our tools{% endtrans %}</h2>
         </header>
         {%
             include 'partials/tools.html.twig'
             with {
-                'class': 'backend',
+                'class': 'backend small-12 columns',
                 'title': 'Backend',
                 'images': [
                     'symfony1',
@@ -79,7 +79,7 @@
         {%
             include 'partials/tools.html.twig'
             with {
-                'class': 'databases',
+                'class': 'databases small-12 columns',
                 'title': 'Databases',
                 'images': [
                     'mysql',
@@ -92,7 +92,7 @@
         {%
             include 'partials/tools.html.twig'
             with {
-                'class': 'frontend',
+                'class': 'frontend small-12 columns',
                 'title': 'Frontend',
                 'images': [
                     'html5-css3',
@@ -105,7 +105,7 @@
         {%
             include 'partials/tools.html.twig'
             with {
-                'class': 'infrastructure',
+                'class': 'infrastructure small-12 columns',
                 'title': 'Infrastructure',
                 'images': [
                     'elk',

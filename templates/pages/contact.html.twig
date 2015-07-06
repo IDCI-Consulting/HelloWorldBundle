@@ -1,7 +1,5 @@
 {% extends "layout.html.twig" %}
 
 {% block mainContent %}
-<section class="contact-form">
-    {{ render(url('contactForm', {_locale: app.translator.locale})) }}
-</section>
+    <h1 class="title">{% trans %}Contact us{% endtrans %}</h1>
 {% endblock %}
