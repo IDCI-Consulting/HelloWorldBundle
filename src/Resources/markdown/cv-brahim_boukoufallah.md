@@ -3,7 +3,7 @@
 **Anglais et Arabe maîtrisé**
 
 # Profil Développeur
-## 3 ans d'expérience
+## 1 an d'expérience
 
 ### EXPERIENCES PROFESSIONNELLES
 ___
@@ -42,7 +42,7 @@ C++, Java, Php, Html, xHtml, Scss, JavaScript, Sql, NoSql, Shell Script
 
 **Technologies:**
 
-*  Framework: Symfony, Silex, Java EE
+*  Framework: Symfony, Silex, MeteorJS
 *  Versioning: Git; Svn
 *  Virtualisation: Docker
 *  Gestion de projet: Redmine
