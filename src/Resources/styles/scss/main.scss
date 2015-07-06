@@ -732,14 +732,6 @@ section.philosophies {
           margin-bottom: 0;
         }
 
-        p {
-          font-style: italic;
-
-          &.member-description {
-            font-size: .8rem;
-            text-align: justify;
-          }
-        }
       }
 
       .skills {
@@ -753,6 +745,12 @@ section.philosophies {
             height: 1rem;
             margin-right: .5rem;
           }
+        }
+      }
+
+      p {
+        &.member-description {
+          text-align: justify;
         }
       }
 
