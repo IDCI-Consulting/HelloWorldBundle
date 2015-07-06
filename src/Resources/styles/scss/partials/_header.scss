@@ -8,7 +8,7 @@
   z-index: 2;
 
   .overlay {
-    background: url(/images/pattern.png) rgba(0, 0, 0, 0.68);
+    background: url("/images/pattern.png") rgba(0, 0, 0, 0.68);
     background-size: 3px 3px;
     bottom: 0;
     left: 0;
@@ -31,7 +31,7 @@
         width: 100%;
 
         span {
-          background-image: url(/images/idci_logo.png);
+          background-image: url("/images/idci_logo.png");
           background-position: 0 0;
           background-repeat: no-repeat;
           background-size: 13rem;
@@ -45,6 +45,7 @@
     }
 
     nav {
+      text-transform: capitalize;
 
       ul {
         line-height: 6rem;
@@ -99,8 +100,11 @@
   }
 }
 
-
 @media #{$medium-up} {
+
+  .header-container {
+    @include box-shadow(0 .2rem .5rem 0 rgba(0,0,0,0.3));
+  }
 
   nav {
     height: 100%;
@@ -125,7 +129,7 @@
 
     header {
 
-      h1.title {
+      h1.logo {
         height: 100%;
         margin: 0;
 
@@ -138,7 +142,7 @@
             background-repeat: no-repeat;
             background-size: 6rem;
             height: 1.7rem;
-            line-height: 2.3rem;
+            line-height: 1.3rem;
             text-indent: -9999px;
             width: 100%;
           }
@@ -182,6 +186,7 @@
       height: 4rem;
 
     header {
+      background-color: $idci-blue;
       border-bottom: 1px solid $idci-white;
       height: 4rem;
       position: fixed;
@@ -205,7 +210,8 @@
         }
       }
 
-      h1.title {
+      h1 {
+        background: transparent;
 
         a {
           padding-top: .1rem;
@@ -235,7 +241,7 @@
         margin: 0;
         padding: 0;
         position: absolute;
-        top: 4rem;
+        top: 3.9rem;
         width: 15rem;
         z-index: 2;
 

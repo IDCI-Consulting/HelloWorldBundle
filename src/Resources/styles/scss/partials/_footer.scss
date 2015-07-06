@@ -5,9 +5,18 @@
 footer {
   background: $idci-dark-grey;
   bottom: 0;
+  left:0;
   padding-top: 1.2rem;
+  position:absolute;
+  width:100%;
+
+  p {
+    text-align: center;
+  }
 
   h3 {
+    border: none;
+    color: $idci-light-blue;
     margin-bottom: 2rem;
     text-transform: capitalize;
   }
@@ -165,6 +174,100 @@ footer {
 
           &.github:hover {
             background-color: rgb(0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$small-only} {
+  footer {
+    background: $idci-blue;
+    color: $idci-white;
+    height: 21rem;
+    text-transform: capitalize;
+
+    .contact-us {
+      padding-left: 7rem;
+
+      .contact-us-link {
+
+        a {
+          color: $idci-white;
+          font-size: 2rem;
+
+          &:hover {
+            color: $idci-light-blue;
+          }
+        }
+      }
+    }
+
+    .address {
+      font-size: 1rem;
+      padding-left: 7rem;
+
+      p {
+        line-height: 1rem;
+
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+
+        a {
+          color: $idci-white;
+
+          &.mail {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .footer-socials {
+      padding: 0;
+
+      .socials {
+        height: 1rem;
+        margin: 0;
+        width: 100%;
+
+        li {
+          height: 3rem;
+          width: 33.3%
+        }
+      }
+
+      li.twitter {
+        background-color: rgb(64, 153, 255);
+
+        a {
+
+          span {
+            @include social-background-position('twitter');
+          }
+        }
+      }
+
+      li.rss {
+        background-color: rgb(255, 148, 66);
+
+        a {
+
+          span {
+            @include social-background-position('rss');
+          }
+        }
+      }
+
+      li.github {
+        background-color: rgb(0, 0, 0);
+
+        a {
+
+          span {
+            @include social-background-position('github');
           }
         }
       }
