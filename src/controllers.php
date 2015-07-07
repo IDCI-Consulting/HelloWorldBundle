@@ -52,8 +52,7 @@ $intlApp
             return $app['twig']->render(
                 'pages/index.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes,
-                    'menu' => $app['menu.options']
+                    'i18n_routes' => $i18nRoutes
                 )
             );
         }
@@ -73,8 +72,7 @@ $intlApp
             return $app['twig']->render(
                 'pages/company.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes,
-                    'menu' => $app['menu.options']
+                    'i18n_routes' => $i18nRoutes
                 )
             );
         }
@@ -94,8 +92,7 @@ $intlApp
             return $app['twig']->render(
                 'pages/team.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes,
-                    'menu' => $app['menu.options']
+                    'i18n_routes' => $i18nRoutes
                 )
             );
         }
@@ -115,8 +112,7 @@ $intlApp
             return $app['twig']->render(
                 'pages/activities.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes,
-                    'menu' => $app['menu.options']
+                    'i18n_routes' => $i18nRoutes
                 )
             );
         }
@@ -136,8 +132,7 @@ $intlApp
             return $app['twig']->render(
                 'pages/partners.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes,
-                    'menu' => $app['menu.options']
+                    'i18n_routes' => $i18nRoutes
                 )
             );
         }
@@ -157,8 +152,7 @@ $intlApp
             return $app['twig']->render(
                 'pages/blog.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes,
-                    'menu' => $app['menu.options']
+                    'i18n_routes' => $i18nRoutes
                 )
             );
         }
@@ -178,8 +172,7 @@ $intlApp
             return $app['twig']->render(
                 'pages/contact.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes,
-                    'menu' => $app['menu.options']
+                    'i18n_routes' => $i18nRoutes
                 )
             );
         }
@@ -195,56 +188,35 @@ $intlApp
             $app['translator']->setLocale($_locale);
             $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
-            $path     = __DIR__.'/Resources/markdown/';
-            $fileName = 'cv-' . $name . '.md';
-            $filePath = $path . $fileName;
-
-            if (file_exists($filePath)) {
-                $cv = file_get_contents($filePath);
-            } else {
-                throw new NotFoundHttpException(
-                    sprintf(
-                        '%s\'s cv is not found',
-                        $name
-                    )
-                );
+            try {
+                $cv = $app['twig']->render(sprintf('cv/%s.md.twig', $name), array());
+            } catch (\Exception $e) {
+                throw new NotFoundHttpException(sprintf(
+                    'The %s\'s cv doesn\'t exist',
+                    $name
+                ));
             }
 
-            if ($_format === 'md') {
-                // take into account line breaks
-                $cv = nl2br($cv);
+            $response = new Response();
 
-                return $app['twig']->render(
-                    'partials/cvRaw.html.twig',
-                    array(
-                        'format' => $_format,
-                        'cv'     => $cv
-                    )
-                );
+            if ($_format === 'md') {
+                $response->headers->set('Content-Type', 'text/markdown');
+                $response->setContent($cv);
+
+                return $response;
             }
 
             $cv = $app['markdown']->transform($cv);
 
             if ($_format === 'html') {
-                return $app['twig']->render(
-                    'partials/cvRaw.html.twig',
-                    array(
-                        'format' => $_format,
-                        'cv'     => $cv
-                    )
-                );
+                $response->setContent($cv);
+
+                return $response;
             }
 
             if ($_format === 'pdf') {
-                $pdf = $app['snappy.pdf']->getOutputFromHtml($app['twig']->render(
-                    'partials/cvRaw.html.twig',
-                    array(
-                        'cv' => $cv
-                    )
-                ));
-
-                $response = new Response($pdf);
                 $response->headers->set('Content-Type', 'application/pdf');
+                $response->setContent($app['snappy.pdf']->getOutputFromHtml($cv));
 
                 return $response;
             }
@@ -253,7 +225,6 @@ $intlApp
                 'pages/cv.html.twig',
                 array(
                     'i18n_routes' => $i18nRoutes,
-                    'menu' => $app['menu.options'],
                     'name'        => $name,
                     'cv'          => $cv
                 )
@@ -325,9 +296,9 @@ $intlApp
 
 $app->error(
     function (\Exception $e, Request $request, $code) use ($app) {
-        /*if ($app['debug']) {
+        if ($app['debug']) {
             return;
-        }*/
+        }
 
         $app['translator']->setLocale($request->get('_locale'));
         $i18nRoutes = $app['i18n_route_generator']->generate($request);
@@ -346,7 +317,6 @@ $app->error(
                 ->render(
                     array(
                         'i18n_routes' => $i18nRoutes,
-                        'menu' => $app['menu.options'],
                         'code'        => $code,
                         'message'     => $e->getMessage()
                     )
