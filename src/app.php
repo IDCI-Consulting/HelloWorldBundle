@@ -15,10 +15,10 @@ use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
-use Symfony\Component\HttpFoundation\Request;
 use Provider\MarkdownParserServiceProvider;
 use Provider\I18nRouteGeneratorServiceProvider;
 use Provider\SnappyServiceProvider;
+use Provider\YamlConfigServiceProvider;
 
 $app = new Application();
 $app->register(new RoutingServiceProvider());
@@ -42,19 +42,15 @@ $app->register(new SnappyServiceProvider(), array(
     'snappy.image_binary' => '/usr/local/bin/wkhtmltoimage',
     'snappy.pdf_binary'   => '/usr/local/bin/wkhtmltopdf',
 ));
+$app->register(new YamlConfigServiceProvider(__DIR__ . '/Resources/config/config.yml'));
 
 $app['snappy.pdf_options'] = array('encoding' => 'UTF-8');
 
-$app['swiftmailer.options'] = array(
-    'host'       => 'smtp.gmail.com',
-    'port'       => 465,
-    'username'   => 'no-reply@idci-consulting.fr',
-    'password'   => '#no-repl',
-    'encryption' => 'ssl',
-    'auth_mode'  => 'login'
-);
+$app['swiftmailer.options'] = $app['config']['swiftmailer'];
 
-$app['i18n_route_generator.languages'] = array('fr', 'en');
+$app['menu.options'] = $app['config']['menu'];
+
+$app['i18n_route_generator.languages'] = $app['config']['i18n_route_generator']['languages'];
 
 $app['translator.messages'] = array(
     'fr' => 'Resources/messages.fr.yml',
@@ -96,8 +92,5 @@ $app['twig'] = $app->extend(
         return $twig;
     }
 );
-
-$buildLocaleLinks = function (Request $request, Application $app) {
-};
 
 return $app;
