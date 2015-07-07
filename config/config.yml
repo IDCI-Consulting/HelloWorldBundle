@@ -13,20 +13,24 @@ i18n_route_generator:
         - 'en'
 
 menu:
-    - label: 'home'
-      route: 'homepage'
+    - {label: 'home', route: 'homepage'}
 
-    - label: 'the company'
+    -
+      label: 'the company'
       route: 'company'
 
-    - label: 'the team'
+    -
+      label: 'the team'
       route: 'team'
 
-    - label: 'our activities'
+    -
+      label: 'our activities'
       route: 'activities'
 
-    - label: 'our partners'
+    -
+      label: 'our partners'
       route: 'partners'
 
-    - label: 'contact'
+    -
+      label: 'contact'
       route: 'contact'
