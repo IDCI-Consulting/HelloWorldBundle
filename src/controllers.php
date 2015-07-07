@@ -17,7 +17,7 @@ $intlApp->assert('_locale', 'fr|en');
  * App Controller *
  ******************/
 
-// Redirect to home page according to the preferred language of browser
+// Redirect to home page according to the browser's preferred language
 $redirectApp
     ->get(
         '/',
@@ -52,7 +52,8 @@ $intlApp
             return $app['twig']->render(
                 'pages/index.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes
+                    'i18n_routes' => $i18nRoutes,
+                    'menu' => $app['menu.options']
                 )
             );
         }
@@ -72,7 +73,8 @@ $intlApp
             return $app['twig']->render(
                 'pages/company.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes
+                    'i18n_routes' => $i18nRoutes,
+                    'menu' => $app['menu.options']
                 )
             );
         }
@@ -92,7 +94,8 @@ $intlApp
             return $app['twig']->render(
                 'pages/team.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes
+                    'i18n_routes' => $i18nRoutes,
+                    'menu' => $app['menu.options']
                 )
             );
         }
@@ -112,7 +115,8 @@ $intlApp
             return $app['twig']->render(
                 'pages/activities.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes
+                    'i18n_routes' => $i18nRoutes,
+                    'menu' => $app['menu.options']
                 )
             );
         }
@@ -132,7 +136,8 @@ $intlApp
             return $app['twig']->render(
                 'pages/partners.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes
+                    'i18n_routes' => $i18nRoutes,
+                    'menu' => $app['menu.options']
                 )
             );
         }
@@ -152,7 +157,8 @@ $intlApp
             return $app['twig']->render(
                 'pages/blog.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes
+                    'i18n_routes' => $i18nRoutes,
+                    'menu' => $app['menu.options']
                 )
             );
         }
@@ -172,7 +178,8 @@ $intlApp
             return $app['twig']->render(
                 'pages/contact.html.twig',
                 array(
-                    'i18n_routes' => $i18nRoutes
+                    'i18n_routes' => $i18nRoutes,
+                    'menu' => $app['menu.options']
                 )
             );
         }
@@ -246,6 +253,7 @@ $intlApp
                 'pages/cv.html.twig',
                 array(
                     'i18n_routes' => $i18nRoutes,
+                    'menu' => $app['menu.options'],
                     'name'        => $name,
                     'cv'          => $cv
                 )
@@ -263,7 +271,6 @@ $intlApp
         function (Request $request, $_locale) use ($app) {
 
             $app['translator']->setLocale($_locale);
-            $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
             $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
@@ -307,8 +314,7 @@ $intlApp
             return $app['twig']->render(
                 'partials/contactForm.html.twig',
                 array(
-                    'form' => $form->createView(),
-                    'i18n_routes' => $i18nRoutes
+                    'form' => $form->createView()
                 )
             );
         },

@@ -26,29 +26,7 @@
                         </h1>
 
                         <nav class="nav-menu medium-8 large-7 columns">
-                            <ul class="nav-menu">
-                                <li>
-                                    <a href="{{ path('homepage', {'_locale': app.translator.locale}) }}">{% trans %}home{% endtrans %}</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('company', {'_locale': app.translator.locale}) }}">{% trans %}the company{% endtrans %}</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('team', {'_locale': app.translator.locale}) }}">{% trans %}the team{% endtrans %}</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('activities', {'_locale': app.translator.locale}) }}">{% trans %}our activities{% endtrans %}</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('partners', {'_locale': app.translator.locale}) }}">{% trans %}our partners{% endtrans %}</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('blog', {'_locale': app.translator.locale}) }}">{% trans %}blog{% endtrans %}</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('contact', {'_locale': app.translator.locale}) }}">{% trans %}contact{% endtrans %}</a>
-                                </li>
-                            </ul>
+                            {% include 'partials/menu.html.twig' with menu%}
                         </nav>
 
                         <ul class="langs small-3 medium-1 columns inline-list hide-for-small-only">

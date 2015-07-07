@@ -1,0 +1,7 @@
+<ul>
+    {% for item in menu %}
+        <li>
+            <a href="{{ path(item.route, {'_locale': app.translator.locale}) }}">{{ item.label|trans }}</a>
+        </li>
+    {% endfor %}
+</ul>
