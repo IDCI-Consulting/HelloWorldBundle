@@ -5,6 +5,7 @@
 footer {
   background: $idci-dark-grey;
   bottom: 0;
+  height: 23rem;
   left:0;
   padding-top: 1.2rem;
   position:absolute;
@@ -34,12 +35,6 @@ footer {
 
       &:first-child {
         margin-top: .7rem;
-      }
-    }
-
-    .contact-us-link {
-      a {
-        font-family: Oswald, sans-serif;
       }
     }
   }
@@ -108,7 +103,7 @@ footer {
 @media #{$medium-up} {
 
   footer {
-    height: 15rem;
+    padding: 5rem;
 
     p {
       font-size: 1rem;
@@ -125,18 +120,6 @@ footer {
 
       p:last-child {
         line-height: 5rem;
-      }
-
-      a {
-        color: $idci-light-blue;
-        font-size: 2rem;
-        padding: .5rem;
-        @include transition(all, 0.4s);
-
-        &:hover {
-          background-color: $idci-blue;
-          color: $idci-white;
-        }
       }
     }
 
@@ -199,8 +182,12 @@ footer {
       .contact-us-link {
 
         a {
+          background: 0 0;
+          border: none;
           color: $idci-white;
-          font-size: 2rem;
+          font-size: 1.5rem;
+          margin: 0;
+          text-decoration: underline;
 
           &:hover {
             color: $idci-light-blue;
@@ -212,6 +199,10 @@ footer {
     .address {
       font-size: 1rem;
       padding-left: 7rem;
+
+      h3 {
+        font-size: 2rem;
+      }
 
       p {
         line-height: 1rem;

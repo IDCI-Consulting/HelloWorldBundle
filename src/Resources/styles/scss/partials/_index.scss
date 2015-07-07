@@ -15,7 +15,7 @@ article {
    ** Index Page **
    ****************/
   section {
-    padding: 2rem 0;
+    padding: 3rem 0;
 
     &.experiences {
 
@@ -46,6 +46,14 @@ article {
           a {
             float: right;
           }
+        }
+      }
+    }
+
+    &.philosophies {
+      article:first-child {
+        header {
+          padding-top: 0;
         }
       }
     }

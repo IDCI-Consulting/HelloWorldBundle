@@ -346,6 +346,7 @@ $app->error(
                 ->render(
                     array(
                         'i18n_routes' => $i18nRoutes,
+                        'menu' => $app['menu.options'],
                         'code'        => $code,
                         'message'     => $e->getMessage()
                     )
