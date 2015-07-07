@@ -42,7 +42,8 @@ $app->register(new SnappyServiceProvider(), array(
     'snappy.image_binary' => '/usr/local/bin/wkhtmltoimage',
     'snappy.pdf_binary'   => '/usr/local/bin/wkhtmltopdf',
 ));
-$app->register(new YamlConfigServiceProvider(__DIR__ . '/Resources/config/config.yml'));
+
+$app->register(new YamlConfigServiceProvider(__DIR__ . '/../config/config.yml'));
 
 $app['snappy.pdf_options'] = array('encoding' => 'UTF-8');
 
@@ -67,6 +68,8 @@ $app['twig'] = $app->extend(
     'twig',
     function ($twig, $app) {
         // add custom globals, filters, tags, ...
+
+        $twig->addGlobal('menu', $app['menu.options']);
 
         $twig->addFunction(
             new \Twig_SimpleFunction(
