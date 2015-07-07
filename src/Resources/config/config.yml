@@ -1,0 +1,32 @@
+swiftmailer:
+    host: 'smtp.gmail.com'
+    port: 465
+    username: 'no-reply@idci-consulting.fr'
+    password: '#no-repl'
+    encryption: 'ssl'
+    auth_mode: 'login'
+
+
+i18n_route_generator:
+    languages:
+        - 'fr'
+        - 'en'
+
+menu:
+    - label: 'home'
+      route: 'homepage'
+
+    - label: 'the company'
+      route: 'company'
+
+    - label: 'the team'
+      route: 'team'
+
+    - label: 'our activities'
+      route: 'activities'
+
+    - label: 'our partners'
+      route: 'partners'
+
+    - label: 'contact'
+      route: 'contact'
