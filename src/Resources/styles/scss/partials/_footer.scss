@@ -46,7 +46,7 @@ footer {
   .socials {
     display: table;
     height: 1rem;
-    margin-top: 3rem;
+    text-align: center;
     width: 100%;
 
     li {
@@ -165,7 +165,7 @@ footer {
         li {
           background-color: #999;
           border-radius: 50%;
-          margin-right: 1rem;
+          margin: 0 .5rem;
           padding: .5rem;
           @include transition(all, .4s);
 
@@ -190,7 +190,6 @@ footer {
   footer {
     background: $idci-blue;
     color: $idci-white;
-    height: 21rem;
     text-transform: capitalize;
 
     .contact-us {

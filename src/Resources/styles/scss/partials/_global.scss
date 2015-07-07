@@ -1,17 +1,16 @@
-html {
-  height: 100%;
-  width: 100%;
+body, html {
+  height: auto;
+  min-height: 100%;
 }
 
 body {
   font-family: Molengo, sans-serif;
-  height: 88.5%;
   margin-top: 7rem;
 }
 
 .wrapper {
   min-height: 100%;
-  padding-bottom: 21rem;
+  padding-bottom: 23rem;
   position: relative;
 }
 
@@ -77,6 +76,7 @@ i {
 
 ul {
   list-style: none;
+  margin: 0;
 }
 
 section {
