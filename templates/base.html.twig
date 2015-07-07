@@ -51,7 +51,18 @@
                             </ul>
                         </nav>
 
-                        <ul class="langs small-3 medium-1 columns inline-list">
+                        <ul class="langs small-3 medium-1 columns inline-list hide-for-small-only">
+                            {% for locale, route in i18n_routes %}
+                                <li>
+                                    <a href="{{ route }}">
+                                        <img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ locale }}" />
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+                        <button data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="dropdown dropdown-flag show-for-small-only small-3 columns"><img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ app.translator.locale }}" /></button>
+                        <ul id="drop1" data-dropdown-content class="f-dropdown show-for-small-only" aria-hidden="true">
                             {% for locale, route in i18n_routes %}
                                 <li>
                                     <a href="{{ route }}">
