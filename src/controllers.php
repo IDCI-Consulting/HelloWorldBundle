@@ -340,7 +340,8 @@ $app->error(
                 ->render(
                     array(
                         'i18n_routes' => $i18nRoutes,
-                        'code' => $code
+                        'code'        => $code,
+                        'message'     => $e->getMessage()
                     )
                 ),
             $code
