@@ -104,12 +104,30 @@ section {
     }
   }
 
+  article {
+
+    header {
+      padding: 1rem;
+
+      h1 {
+        font-size: 2rem;
+
+        i.show-for-small {
+          display: inline !important;
+          font-size: 2.5rem;
+          margin-right: .8rem;
+        }
+      }
+    }
+  }
+
   h2 {
     font-size: 2rem;
   }
 
   h3 {
     border: none;
+    font-size: 1rem;
   }
 
   .button {
