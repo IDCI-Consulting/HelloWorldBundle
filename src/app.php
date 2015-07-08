@@ -4,6 +4,10 @@
  * Application
  */
 
+use Provider\MarkdownParserServiceProvider;
+use Provider\I18nRouteGeneratorServiceProvider;
+use Provider\SnappyServiceProvider;
+use Provider\YamlConfigServiceProvider;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
@@ -15,12 +19,10 @@ use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
-use Provider\MarkdownParserServiceProvider;
-use Provider\I18nRouteGeneratorServiceProvider;
-use Provider\SnappyServiceProvider;
-use Provider\YamlConfigServiceProvider;
+use Symfony\Component\HttpFoundation\Request;
 
 $app = new Application();
+
 $app->register(new RoutingServiceProvider());
 $app->register(
     new TranslationServiceProvider(),
@@ -95,5 +97,17 @@ $app['twig'] = $app->extend(
         return $twig;
     }
 );
+
+/***************
+ * Middlewares *
+ ***************/
+
+$buildLocaleLinks = function (Request $request, Application $app) {
+    $app['translator']->setLocale($request->get('_locale'));
+    $i18nRoutes = $app['i18n_route_generator']->generate($request);
+
+    $app['twig']->addGlobal('i18n_routes', $i18nRoutes);
+
+};
 
 return $app;
