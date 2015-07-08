@@ -10,6 +10,7 @@ namespace Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class ContactType extends AbstractType
 {
@@ -20,9 +21,6 @@ class ContactType extends AbstractType
                 'company',
                 'text',
                 array(
-                    'attr' => array(
-                        'class' => 'input__field input__field--hoshi',
-                    ),
                     'required' => false,
                 )
             )
@@ -30,56 +28,37 @@ class ContactType extends AbstractType
                 'website',
                 'url',
                 array(
-                    'attr' => array(
-                        'class' => 'input__field input__field--hoshi',
-                    ),
                     'required' => false,
                 )
             )
             ->add(
                 'name',
                 'text',
-                array(
-                    'attr' => array(
-                        'class' => 'input__field input__field--hoshi',
-                    )
-                )
+                array()
             )
             ->add(
                 'firstname',
                 'text',
-                array(
-                    'attr' => array(
-                        'class' => 'input__field input__field--hoshi',
-                    )
-                )
+                array()
             )
             ->add(
                 'email',
                 'email',
                 array(
-                    'attr' => array(
-                        'class' => 'input__field input__field--hoshi',
+                    'constraints' => array(
+                        new Assert\NotBlank()
                     )
                 )
             )
             ->add(
                 'phonenumber',
                 'number',
-                array(
-                    'attr' => array(
-                        'class' => 'input__field input__field--hoshi',
-                    )
-                )
+                array()
             )
             ->add(
                 'project',
                 'textarea',
-                array(
-                    'attr' => array(
-                        'class' => 'input__field input__field--hoshi',
-                    )
-                )
+                array()
             );
     }
 

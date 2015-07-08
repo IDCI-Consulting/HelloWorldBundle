@@ -1,0 +1,38 @@
+<section class="content contact-form">
+    <div class="form-container">
+        {% include 'partials/contactForm.html.twig' with {'form': form} %}
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $output = $('<div></div>');
+            $('.form-container').after($output);
+
+            $('.form-container > form').on('submit', function(event) {
+                event.preventDefault();
+
+                $output.html('<p>Load</p>');
+                var request = $.ajax({
+                    url: $(this).attr('action'),
+                    method: $(this).attr('method'),
+                    data: $(this).serialize(),
+                    dataType: "html"
+                });
+
+                request.done(function(content, textStatus, xhr) {
+                    $output.empty();
+                    var statusCode = xhr.statusCode().status;
+                    if (201 == parseInt(statusCode)) {
+                        $output.html('<p>Message envoyé</p>');
+                    } else {
+                        $output.html('<p>Erreur</p>');
+                        $('.form-container').html(content);
+                    }
+                });
+
+                request.fail(function(xhr, textStatus) {
+                    console.log("Request failed: " + textStatus);
+                });
+            });
+        });
+    </script>
+</section>

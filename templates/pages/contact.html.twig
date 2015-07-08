@@ -2,4 +2,5 @@
 
 {% block mainContent %}
     <h1 class="title">{% trans %}Contact us{% endtrans %}</h1>
+    {% include 'partials/contactFormContainer.html.twig' with {'form': form} %}
 {% endblock %}
