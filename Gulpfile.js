@@ -98,7 +98,6 @@ gulp.task('prod-scripts', function() {
     gulp.src([foundation.script.jquery])
         .pipe(uglify())
         .pipe(concat({ path: 'jquery.min.js'}))
-        .pipe(rev())
         .pipe(chmod(775))
         .pipe(gulp.dest(web['script']))
     ;
