@@ -142,27 +142,7 @@ $intlApp
                 if ($form->isValid()) {
                     $data = $form->getData();
 
-                    $message = Swift_Message::newInstance()
-                        ->setSubject('Nouvelle demande de projet')
-                        ->setFrom('brahim.boukoufallah@idci-consulting.fr')
-                        ->setTo(array('brahim.boukoufallah@idci-consulting.fr'))
-                        ->setBody(
-                            $app['twig']->render(
-                                'pages/email.html.twig',
-                                array(
-                                    'company'       => $data['company'],
-                                    'name'          => $data['name'],
-                                    'firstName'     => $data['firstname'],
-                                    'project'       => $data['project'],
-                                    'phoneNumber'   => $data['phonenumber'],
-                                    'email'         => $data['email'],
-                                )
-                            ),
-                            'text/html'
-                        )
-                    ;
-
-                    $app['mailer']->send($message);
+                    $app['contact_manager']->sendMail($data);
 
                     if ($request->isXmlHttpRequest()) {
                         $response = new Response();

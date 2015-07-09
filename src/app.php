@@ -20,6 +20,7 @@ use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
+use \Provider\ContactManagerServiceProvider;
 
 $app = new Application();
 
@@ -40,12 +41,12 @@ $app->register(new SessionServiceProvider());
 $app->register(new I18nRouteGeneratorServiceProvider());
 $app->register(new MarkdownParserServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
+$app->register(new ContactManagerServiceProvider());
+$app->register(new YamlConfigServiceProvider(__DIR__ . '/../config/config.yml'));
 $app->register(new SnappyServiceProvider(), array(
     'snappy.image_binary' => '/usr/local/bin/wkhtmltoimage',
     'snappy.pdf_binary'   => '/usr/local/bin/wkhtmltopdf',
 ));
-
-$app->register(new YamlConfigServiceProvider(__DIR__ . '/../config/config.yml'));
 
 $app['snappy.pdf_options'] = array('encoding' => 'UTF-8');
 
