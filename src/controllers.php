@@ -23,7 +23,11 @@ $redirectApp
         '/',
         function (Request $request) use ($app) {
 
-            $availableLanguages = $app['i18n_route_generator.languages'];
+            $availableLanguages = array();
+
+            foreach ($app['i18n_route_generator.languages'] as $locale => $language) {
+                $availableLanguages[] = $locale;
+            }
 
             return $app->redirect(
                 $app['url_generator']->generate(
