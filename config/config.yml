@@ -9,8 +9,8 @@ swiftmailer:
 
 i18n_route_generator:
     languages:
-        - 'fr'
-        - 'en'
+        fr: 'French'
+        en: 'English'
 
 menu:
     - {label: 'home', route: 'homepage'}
