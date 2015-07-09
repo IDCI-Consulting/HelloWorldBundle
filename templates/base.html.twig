@@ -8,7 +8,7 @@
         {% if app.debug %}
             <script src="{{ asset('js/jquery.js') }}"></script>
         {% else %}
-            <script src="{{ asset('js/' ~ getRevFilename('jquery.min.js') ~ '') }}"></script>
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
         {% endif %}
     </head>
 

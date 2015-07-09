@@ -101,8 +101,6 @@ gulp.task('prod-scripts', function() {
         .pipe(rev())
         .pipe(chmod(775))
         .pipe(gulp.dest(web['script']))
-        .pipe(rev.manifest(src['manifest']+'rev-manifest.json', {base: src['manifest'], merge: true}))
-        .pipe(gulp.dest(src['manifest']))
     ;
 });
 
