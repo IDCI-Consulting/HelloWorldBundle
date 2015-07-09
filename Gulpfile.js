@@ -84,9 +84,20 @@ gulp.task('dev-scripts', function() {
 gulp.task('prod-scripts', function() {
     // delete all css files
     del(web['script']+'/*.js');
-    gulp.src([foundation.script.jquery, foundation.script.foundation, src['script']])
+    gulp.src([foundation.script.foundation, src['script']])
         .pipe(uglify())
         .pipe(concat({ path: 'app.min.js'}))
+        .pipe(rev())
+        .pipe(chmod(775))
+        .pipe(gulp.dest(web['script']))
+        .pipe(rev.manifest(src['manifest']+'rev-manifest.json', {base: src['manifest'], merge: true}))
+        .pipe(gulp.dest(src['manifest']))
+    ;
+
+    //Hack: we need to uglify jquery separately because we want to load its in the head tag
+    gulp.src([foundation.script.jquery])
+        .pipe(uglify())
+        .pipe(concat({ path: 'jquery.min.js'}))
         .pipe(rev())
         .pipe(chmod(775))
         .pipe(gulp.dest(web['script']))
