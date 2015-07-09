@@ -1,0 +1,17 @@
+{% extends 'partials/index/presentation.html.twig' %}
+
+{% block presentation_class %}
+    philosophy
+{% endblock %}
+
+{% block presentation_title %}
+    <h3 class="capitalize">{% trans %}Our philosophy{% endtrans %}</h3>
+{% endblock %}
+
+{% block presentation_image %}
+    <img src="{{ asset('images/formations.jpg') }}" />
+{% endblock %}
+
+{% block presentation_content %}
+    {% include 'contents/index/philosophy_' ~ app.translator.locale ~ '.html.twig' %}
+{% endblock %}

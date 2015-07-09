@@ -6,7 +6,7 @@
 <script src="{{ asset('js/headMouseTracker/initImages.js') }}"></script>
 {% endblock %}
 
-{% block mainContent %}
+{% block main_content %}
 <article class="team row">
     <header>
         <h1 class="title team">
@@ -16,33 +16,27 @@
     </header>
 
     {%
-        include 'partials/teamMember.html.twig'
+        include 'partials/team/brahim.html.twig'
         with {
             'firstName': 'brahim',
-            'lastName': 'boukoufallah',
-            'profession': 'Développeur junior',
             'skills': [
                 'Symfony, Silex, MeteorJS, NodeJS',
                 'AngularJS, jQuery, CSS, HTML',
                 'Nginx, Apache, Docker',
                 'Sql, NoSql'
-            ],
-            'description': 'Développeur junior "full-stack", j\'aime le monde du web en particulier tout ce qui touche de près ou de loin à l\'open-source. Le partage de mes connaissances est ma philosophie et "un code propre et cohérent" est ma devise.'
+            ]
         }
     %}
 
     {%
-    include 'partials/teamMember.html.twig'
+    include 'partials/team/gabriel.html.twig'
         with {
             'firstName': 'gabriel',
-            'lastName': 'bondaz',
-            'profession': 'analyste developpeur',
             'skills': [
                 'test',
                 'test2',
                 'test3'
             ],
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         }
     %}
 </article>

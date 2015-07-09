@@ -1,0 +1,25 @@
+{% extends 'partials/index/experience.html.twig' %}
+
+{% block experience_class %}
+    trainings
+{% endblock %}
+
+{% block experience_icon %}
+    <i class="fa fa-laptop picture"></i>
+{% endblock %}
+
+{% block experience_accordion_title %}
+    {% trans %}Trainings{% endtrans %}
+{% endblock %}
+
+{% block experience_title %}
+    {% trans %}Trainings{% endtrans %}
+{% endblock %}
+
+{% block experience_image %}
+    <img class="hide-for-small-only" src="{{ asset("images/formations.jpg") }}" />
+{% endblock %}
+
+{% block experience_content %}
+    {% include 'contents/index/training_' ~ app.translator.locale ~ '.html.twig' %}
+{% endblock %}

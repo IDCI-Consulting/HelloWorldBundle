@@ -1,6 +1,6 @@
 {% extends "layout.html.twig" %}
 
-{% block mainContent %}
+{% block main_content %}
     <article>
         <header>
             <h1 class="title activities">
@@ -10,7 +10,7 @@
         </header>
 
         {%
-            include 'partials/activity.html.twig'
+            include 'partials/activities/activity.html.twig'
             with {
                 'class': 'clients',
                 'title': 'Clients',
@@ -18,7 +18,7 @@
             }
         %}
         {%
-            include 'partials/activity.html.twig'
+            include 'partials/activities/activity.html.twig'
             with {
                 'class': 'projects',
                 'title': 'Projects',
@@ -26,7 +26,7 @@
             }
         %}
         {%
-            include 'partials/activity.html.twig'
+            include 'partials/activities/activity.html.twig'
             with {
                 'class': 'contributions',
                 'title': 'Open Source Contribution',

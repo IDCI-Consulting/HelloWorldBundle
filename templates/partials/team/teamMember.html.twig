@@ -1,8 +1,8 @@
-<section class="member small-12 columns">
+<section class="member small-12 medium-6 columns">
     <header>
-        <h2 class="show-for-small idci-light-blue capitalize">{{ firstName }} {{ lastName }}</h2>
+        <h2 class="idci-light-blue capitalize">{% block team_member_name %}{% endblock %}</h2>
 
-        <p class="show-for-small ">{{ profession|trans }}</p>
+        <p>{% block team_member_profession %}{% endblock %}</p>
     </header>
 
     <div class="content-wrapper">
@@ -20,10 +20,8 @@
         {% endfor %}
     </ul>
 
-    <p class="member-description">
-        {{ description }}
-    </p>
 
-    {% set fileName = firstName ~ '_' ~ lastName %}
-    <a href="{{ path('cv', {_locale: app.translator.locale, 'name': fileName}) }}" class="button small see-cv">CV</a>
+    {% block team_member_description %}{% endblock %}
+
+    {% block team_member_cv_link %}{% endblock %}
 </section>

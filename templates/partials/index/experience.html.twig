@@ -1,8 +1,8 @@
-<article class="{{ class }} small-12 columns">
+<article class="{% block experience_class %}{% endblock %} small-12 columns">
     <div class="row accordion-toggle hide-for-medium-up">
         <h3 class="small-8 columns">
-            <i class="{{ fa_class }} picture"></i>
-            {{ title|trans }}
+            {% block experience_icon %}{% endblock %}
+            {% block experience_accordion_title %}{% endblock %}
         </h3>
         <div class="small-2 columns toggle-icon">
             <i class="fa fa-angle-down"></i>
@@ -10,13 +10,11 @@
     </div>
     <div class="accordion-content row">
         <div class="medium-5 columns">
-            <img class="hide-for-small-only" src="{{ asset(imageUrl) }}" />
+            {% block experience_image %}{% endblock %}
         </div>
         <div class="medium-7 columns">
-            <h2 class="hide-for-small-only">{{ title|trans }}</h2>
-            <p>
-                {{ content }}
-            </p>
+            <h2 class="hide-for-small-only">{% block experience_title %}{% endblock %}</h2>
+            {% block experience_content %}{% endblock %}
             <a class="button small learn-more">{% trans %}learn more{% endtrans %}</a>
         </div>
     </div>

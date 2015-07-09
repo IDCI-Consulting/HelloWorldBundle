@@ -49,9 +49,8 @@ h3 {
   border: 2px solid $idci-blue;
   color: $idci-blue;
   font-weight: bold;
-  line-height: .3rem;
   margin: 0 0 .2rem 0;
-  padding: 1.5rem;
+  padding: 1rem;
   text-indent: .5rem;
 }
 
@@ -81,12 +80,6 @@ ul {
 
 section {
   padding: 2rem 0;
-}
-
-@media #{$medium-up} {
-  h3 {
-    height: 1rem;
-  }
 }
 
 @media #{$small-only} {

@@ -1,0 +1,17 @@
+{% extends 'partials/team/teamMember.html.twig' %}
+
+{% block team_member_name %}
+    Gabriel Bondaz
+{% endblock %}
+
+{% block team_member_profession %}
+    {% trans %}Développeur expert{% endtrans %}
+{% endblock %}
+
+{% block team_member_description %}
+    {% include 'contents/team/gabriel_' ~ app.translator.locale ~ '.html.twig' %}
+{% endblock %}
+
+{% block team_member_cv_link %}
+    <a href="{{ path('cv', {_locale: app.translator.locale, 'name': 'gabriel_bondaz'}) }}" class="button small see-cv">CV</a>
+{% endblock %}
