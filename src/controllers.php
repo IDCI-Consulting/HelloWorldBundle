@@ -203,7 +203,7 @@ $intlApp
         function (Request $request, $_locale, $name, $_format) use ($app) {
 
             try {
-                $cv = $app['twig']->render(sprintf('cv/%s.md.twig', $name), array());
+                $cv = $app['twig']->render(sprintf('contents/cv/%s.md.twig', $name), array());
             } catch (\Exception $e) {
                 throw new NotFoundHttpException(sprintf(
                     'The %s\'s cv doesn\'t exist',
