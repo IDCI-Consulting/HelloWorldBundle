@@ -4,7 +4,7 @@
     </div>
     <script type="text/javascript">
         $(document).ready(function() {
-            var $output = $('<div></div>');
+            var $output = $('<div id="output"></div>');
             var $formContainer = $('.form-container');
             $formContainer.after($output);
 
@@ -23,9 +23,9 @@
                     $output.empty();
                     var statusCode = xhr.statusCode().status;
                     if (201 == parseInt(statusCode)) {
-                        $output.html('<p>Message envoyé</p>');
+                        $.notify('success', "{% trans %}Your message is sent{% endtrans %}");
                     } else {
-                        $output.html('<p>Erreur</p>');
+                        $.notify('alert', "{% trans %}Your message could not be sent{% endtrans %}");
                         $formContainer.html(content);
                     }
                 });
