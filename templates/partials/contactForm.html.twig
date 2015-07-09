@@ -1,4 +1,4 @@
-<form class="row" action="{{ path('contact', {_locale: app.translator.locale}) }}" method="post" novalidate>
+<form action="{{ path('contact', {_locale: app.translator.locale}) }}" method="post" novalidate>
     {{ form_errors(form) }}
     {{ form_widget(form) }}
     <button type="submit" name="submit">

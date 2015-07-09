@@ -1,13 +1,14 @@
 <section class="content contact-form">
-    <div class="form-container">
+    <div class="form-container row">
         {% include 'partials/contactForm.html.twig' with {'form': form} %}
     </div>
     <script type="text/javascript">
         $(document).ready(function() {
             var $output = $('<div></div>');
-            $('.form-container').after($output);
+            var $formContainer = $('.form-container');
+            $formContainer.after($output);
 
-            $('.form-container > form').on('submit', function(event) {
+            $formContainer.on('submit', 'form', function(event) {
                 event.preventDefault();
 
                 $output.html('<p>Load</p>');
@@ -25,7 +26,7 @@
                         $output.html('<p>Message envoyé</p>');
                     } else {
                         $output.html('<p>Erreur</p>');
-                        $('.form-container').html(content);
+                        $formContainer.html(content);
                     }
                 });
 
