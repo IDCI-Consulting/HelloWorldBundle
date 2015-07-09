@@ -61,7 +61,9 @@ $app['translator.messages'] = array(
 
 $app['translator'] = $app->extend('translator', function ($translator, $app) {
     $translator->addLoader('yaml', new YamlFileLoader());
+
     $translator->addResource('yaml', __DIR__.'/Resources/translations/messages.fr.yml', 'fr');
+    $translator->addResource('yaml', __DIR__.'/Resources/translations/validators.fr.yml', 'fr', 'validators');
 
     return $translator;
 });
