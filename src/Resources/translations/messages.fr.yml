@@ -26,15 +26,16 @@ Open Source Contribution: Contribution Open Source
 Follow us: Suivez nous
 The team: L'équipe
 Download: Télécharger
+Databases: Base de données
 
 #Form labels
-company: entreprise
-website: site web
-name: nom
-firstname: prénom
-email: email
-phonenumber: téléphone
-project: projet
+Company: Entreprise
+Website: Site web
+Name: Nom
+Firstname: Prénom
+Email: Email
+Phonenumber: Téléphone
+Project: Projet
 Validate: Valider
 
 #Navigation
