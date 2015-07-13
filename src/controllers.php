@@ -137,7 +137,6 @@ $intlApp
     ->match(
         '/contact',
         function (Request $request, $_locale) use ($app) {
-
             $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
 
             if ($request->getMethod() === 'POST') {
@@ -168,12 +167,18 @@ $intlApp
 
                     $app['mailer']->send($message);
 
+                    $message = $app['translator']->trans('Your message is sent');
+
                     if ($request->isXmlHttpRequest()) {
                         $response = new Response();
+                        $response->headers->set('X-Message', $message);
+                        $response->headers->set('X-LEVEL', 'success');
                         $response->setStatusCode(Response::HTTP_CREATED);
 
                         return $response;
                     }
+
+                    $app['session']->getFlashBag()->add('success', $message);
 
                     return $app->redirect(
                         $app['url_generator']->generate('homepage', array(
@@ -181,16 +186,33 @@ $intlApp
                         ))
                     );
                 }
+
+                $message = $app['translator']->trans('Your message could not be sent');
             }
 
             $view = 'pages/contact.html.twig';
 
             if ($request->isXmlHttpRequest()) {
+                $response = new Response();
+
                 if ($request->getMethod() === 'POST') {
                     $view = 'partials/contactForm.html.twig';
+
+                    if (null !== $message) {
+                        $response->headers->set('X-Message', $message);
+                        $response->headers->set('X-Level', 'alert');
+                    }
                 } else {
                     $view = 'partials/contactFormContainer.html.twig';
                 }
+
+                $response->setContent($app['twig']->render($view, array('form' => $form->createView())));
+
+                return $response;
+            }
+
+            if (isset($message)) {
+                $app['session']->getFlashBag()->add('alert', $message);
             }
 
             return $app['twig']->render($view, array('form' => $form->createView()));
