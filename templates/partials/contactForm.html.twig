@@ -1,7 +1,7 @@
 <form action="{{ path('contact', {_locale: app.translator.locale}) }}" method="post" novalidate>
     {{ form_errors(form) }}
     {{ form_widget(form) }}
-    <button type="submit" name="submit">
+    <button type="submit" class="small button" name="submit">
         <span>{% trans %}Validate{% endtrans %}</span>
     </button>
 </form>

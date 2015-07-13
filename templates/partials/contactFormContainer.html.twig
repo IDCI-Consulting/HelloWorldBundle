@@ -2,7 +2,9 @@
     <div class="form-container row">
         {% include 'partials/contactForm.html.twig' with {'form': form} %}
     </div>
-    <script type="text/javascript">
+
+    <script type="text/javascript" charset="UTF-8">
+
         $(document).ready(function() {
             var $output = $('<div id="output"></div>');
             var $formContainer = $('.form-container');
@@ -22,10 +24,12 @@
                 request.done(function(content, textStatus, xhr) {
                     $output.empty();
                     var statusCode = xhr.statusCode().status;
-                    if (201 == parseInt(statusCode)) {
-                        $.notify('success', "{% trans %}Your message is sent{% endtrans %}");
-                    } else {
-                        $.notify('alert', "{% trans %}Your message could not be sent{% endtrans %}");
+
+                    if (xhr.getResponseHeader('X-Message')) {
+                        $.notify(xhr.getResponseHeader('X-Level'), xhr.getResponseHeader('X-Message').decode());
+                    }
+
+                    if (201 !== parseInt(statusCode)) {
                         $formContainer.html(content);
                     }
                 });
