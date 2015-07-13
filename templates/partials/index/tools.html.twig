@@ -1,8 +1,10 @@
 <div class="{{ class }} small-12 columns">
     <h3 class="capitalize sub-title">{{ title|trans }}</h3>
     <ul class="tools-list">
-        {% for image in images %}
-            <li class="tools-sprite {{ image }}">{{ image }}</li>
+        {% for techno, url in images %}
+            <li>
+                <a href="{{ url }}" target="_blank" class="tools-sprite {{ techno }}">{{ techno }}</a>
+            </li>
         {% endfor %}
     </ul>
 </div>

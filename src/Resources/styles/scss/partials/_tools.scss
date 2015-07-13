@@ -4,14 +4,16 @@
   padding: 2rem 0;
   width: 100%;
 
-  li {
-    float:left;
-    list-style-type: none;
-    margin-right: 8rem;
-  }
+  .tools-sprite {
+      float: left;
+      list-style-type: none;
+      margin-right: 8rem;
+    }
 
   li:last-child {
-    margin-right: 0;
+    a {
+      margin-right: 0;
+    }
   }
 }
 
