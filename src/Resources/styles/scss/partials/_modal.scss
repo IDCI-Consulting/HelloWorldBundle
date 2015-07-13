@@ -1,6 +1,11 @@
 .reveal-modal.open {
-  left:50%;
   position:fixed;
-  top:50%!important; /* override inline style injected from JS */
-  transform:translate(-50%, -50%);
+  top:10%!important; /* override inline style injected from JS */
+}
+
+@media #{$small-only} {
+  .reveal-modal.open {
+    position: absolute;
+    top: 0!important;
+  }
 }
