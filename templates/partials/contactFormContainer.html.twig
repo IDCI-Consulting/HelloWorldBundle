@@ -31,6 +31,8 @@
 
                     if (201 !== parseInt(statusCode)) {
                         $formContainer.html(content);
+                    } else {
+                        $formContainer.find('form').get(0).reset();
                     }
                 });
 
@@ -39,5 +41,7 @@
                 });
             });
         });
+
+
     </script>
 </section>
