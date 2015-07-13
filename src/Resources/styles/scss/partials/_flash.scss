@@ -7,3 +7,11 @@
   width: 50%;
   z-index: 99999;
 }
+
+@media #{$small-only} {
+  #flash-message-container {
+    left: 0;
+    top:0;
+    width: 100%;
+  }
+}
