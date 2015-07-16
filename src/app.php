@@ -75,6 +75,7 @@ $app['twig'] = $app->extend(
         // add custom globals, filters, tags, ...
 
         $twig->addGlobal('menu', $app['menu.options']);
+        $twig->addGlobal('idci_code_writer', json_encode($app['config']['idci_code_writer']));
 
         $twig->addFunction(
             new \Twig_SimpleFunction(
