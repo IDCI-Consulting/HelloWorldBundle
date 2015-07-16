@@ -13,6 +13,7 @@ var src              = [],
 src['style']         = "src/Resources/styles/**/*.scss";
 src['template']      = "templates/**/*";
 src['script']        = "src/Resources/js/**/*.js";
+src['ace-editor']    = "src/Resources/js/plugins/ace-editor/*.js";
 src['manifest']      = "src/Resources/manifest/";
 src['images']        = "web/images/brahim/*.jpg";
 web['style']         = "web/css/";
@@ -71,7 +72,7 @@ gulp.task('styles', function() {
 // Task to install scripts in a dev environment
 gulp.task('dev-scripts', function() {
     // move js files
-    gulp.src(src['script'])
+    gulp.src([src['script'], src['ace-editor']])
         /*.pipe(jshint())
         .pipe(jshint.reporter('default'))*/
         .pipe(gulp.dest(web['script']))
@@ -101,6 +102,11 @@ gulp.task('prod-scripts', function() {
         .pipe(chmod(775))
         .pipe(gulp.dest(web['script']))
     ;
+
+    // move ace editor files
+    gulp.src(src['ace-editor'])
+        .pipe(chmod(775))
+        .pipe(gulp.dest(web['script']))
 });
 
 // Task to clean folder content
