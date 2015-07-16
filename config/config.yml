@@ -24,3 +24,47 @@ menu:
     - {label: 'our partners', route: 'partners'}
 
     - {label: 'contact', route: 'contact'}
+
+idci_code_writer:
+    files:
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/GenealogyBundle/contents/Controller/ImageController.php
+            language: 'php'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/GenealogyBundle/contents/Repository/ElementRepository.php
+            language: 'php'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/ExtraFormBundle/contents/Controller/ApiController.php
+            language: 'php'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/SimpleScheduleBundle/contents/Entity/LocationAwareCalendarEntity.php
+            language: 'php'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/SimpleScheduleBundle/contents/Entity/CalendarEntityRelation.php
+            language: 'php'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/NotificationApiClientBundle/contents/Tests/Service/NotifierTest.php
+            language: 'php'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/NotificationApiClientBundle/contents/Service/Notifier.php
+            language: 'php'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/SimpleMetadataBundle/contents/Resources/views/Form/fields.html.twig
+            language: 'twig'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/BrowserCapabilities/contents/js/codebarReader.js
+            language: 'javascript'
+
+        -
+            url: https://api.github.com/repos/IDCI-Consulting/BrowserCapabilities/contents/js/userMediaManager.js
+            language: 'javascript'
+
+
