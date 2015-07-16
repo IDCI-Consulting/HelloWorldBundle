@@ -76,3 +76,8 @@
     </div>
 </section>
 {% endblock %}
+
+{% block javascripts %}
+    <script src="{{asset('plugins/ace.js') }}" type="text/javascript" charset="utf-8"></script>
+    {{ parent() }}
+{% endblock %}

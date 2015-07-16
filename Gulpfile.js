@@ -13,12 +13,13 @@ var src              = [],
 src['style']         = "src/Resources/styles/**/*.scss";
 src['template']      = "templates/**/*";
 src['script']        = "src/Resources/js/**/*.js";
-src['ace-editor']    = "src/Resources/js/plugins/ace-editor/*.js";
+src['ace-editor']    = "src/Resources/plugins/ace-editor/*.js";
 src['manifest']      = "src/Resources/manifest/";
 src['images']        = "web/images/brahim/*.jpg";
 web['style']         = "web/css/";
 web['script']        = "web/js/";
 web['images']        = "web/images/brahim/";
+web['ace-editor']    = "web/plugins/";
 
 var chmod            = require('gulp-chmod'),
     concat           = require('gulp-concat'),
@@ -79,6 +80,12 @@ gulp.task('dev-scripts', function() {
         .pipe(chmod(775))
         .pipe(livereload())
     ;
+
+    // move ace editor files
+    gulp.src(src['ace-editor'])
+        .pipe(chmod(775))
+        .pipe(gulp.dest(web['ace-editor']))
+    ;
 });
 
 // Task to install scripts in a prod environment
@@ -106,7 +113,8 @@ gulp.task('prod-scripts', function() {
     // move ace editor files
     gulp.src(src['ace-editor'])
         .pipe(chmod(775))
-        .pipe(gulp.dest(web['script']))
+        .pipe(gulp.dest(web['ace-editor']))
+    ;
 });
 
 // Task to clean folder content
