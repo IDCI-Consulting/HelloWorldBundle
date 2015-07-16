@@ -13,13 +13,13 @@ var src              = [],
 src['style']         = "src/Resources/styles/**/*.scss";
 src['template']      = "templates/**/*";
 src['script']        = "src/Resources/js/**/*.js";
-src['plugins']    = "src/Resources/plugins/**/*.js";
+src['plugins']       = "src/Resources/plugins/**/*.js";
 src['manifest']      = "src/Resources/manifest/";
 src['images']        = "web/images/brahim/*.jpg";
 web['style']         = "web/css/";
 web['script']        = "web/js/";
 web['images']        = "web/images/brahim/";
-web['plugins']    = "web/plugins/";
+web['plugins']       = "web/plugins/";
 
 var chmod            = require('gulp-chmod'),
     concat           = require('gulp-concat'),
@@ -73,7 +73,7 @@ gulp.task('styles', function() {
 // Task to install scripts in a dev environment
 gulp.task('dev-scripts', function() {
     // move js files
-    gulp.src([src['script'], src['ace-editor']])
+    gulp.src([src['script']])
         /*.pipe(jshint())
         .pipe(jshint.reporter('default'))*/
         .pipe(gulp.dest(web['script']))
@@ -82,9 +82,9 @@ gulp.task('dev-scripts', function() {
     ;
 
     // move ace editor files
-    gulp.src(src['ace-editor'])
+    gulp.src(src['plugins'])
+        .pipe(gulp.dest(web['plugins']))
         .pipe(chmod(775))
-        .pipe(gulp.dest(web['ace-editor']))
     ;
 });
 
@@ -112,8 +112,8 @@ gulp.task('prod-scripts', function() {
 
     // move ace editor files
     gulp.src(src['plugins'])
-        .pipe(chmod(775))
         .pipe(gulp.dest(web['plugins']))
+        .pipe(chmod(775))
     ;
 });
 
