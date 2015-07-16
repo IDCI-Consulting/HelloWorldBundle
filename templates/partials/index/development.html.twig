@@ -16,10 +16,55 @@
     {% trans %}Web development{% endtrans %}
 {% endblock %}
 
-{% block experience_image %}
-    <img class="hide-for-small-only" src="{{ asset("images/code_source.png") }}" />
-{% endblock %}
-
 {% block experience_content %}
     {% include 'contents/index/development_' ~ app.translator.locale ~ '.html.twig' %}
+{% endblock %}
+
+{% block experience_scripts %}
+    <div class="show-for-medium-up">
+        <pre id="editor"></pre>
+    </div>
+
+    <script type="text/javascript">
+        var getFileRaw = function(editor) {
+            var idciCodeWriter = {{ idci_code_writer|raw }};
+
+            // get a random file object
+            var file = idciCodeWriter.files[Math.floor(Math.random() * idciCodeWriter.files.length)];
+
+            $.ajax({
+                url: file.url,
+                method: "GET",
+                success: function(fileRaw) {
+                    // Github api provides the fileraw's content encoded in base64 format. We need to use atob() function to decode it.
+                    var content = atob(fileRaw.content);
+
+                    editor.getSession().setMode("ace/mode/"+file.language);
+                    editor.getSession().setValue(content);
+                }
+            });
+        };
+
+        $(document).ready(function() {
+            var editor = ace.edit("editor");
+
+            // Disable warn message in console. Advised by Ace developers.
+            editor.$blockScrolling = Infinity;
+
+            var options = {
+                animatedScroll: true,
+                autoScrollEditorIntoView: true,
+                showFoldWidgets: false,
+                fontSize: 16,
+                scrollSpeed: 1,
+                showPrintMargin: false,
+                theme: "ace/theme/dreamweaver"
+            };
+
+            editor.setOptions(options);
+
+            getFileRaw(editor);
+            setInterval(function() { getFileRaw(editor); }, 60000)
+        });
+    </script>
 {% endblock %}
