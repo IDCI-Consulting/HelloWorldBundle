@@ -13,13 +13,13 @@ var src              = [],
 src['style']         = "src/Resources/styles/**/*.scss";
 src['template']      = "templates/**/*";
 src['script']        = "src/Resources/js/**/*.js";
-src['ace-editor']    = "src/Resources/plugins/ace-editor/*.js";
+src['plugins']    = "src/Resources/plugins/**/*.js";
 src['manifest']      = "src/Resources/manifest/";
 src['images']        = "web/images/brahim/*.jpg";
 web['style']         = "web/css/";
 web['script']        = "web/js/";
 web['images']        = "web/images/brahim/";
-web['ace-editor']    = "web/plugins/";
+web['plugins']    = "web/plugins/";
 
 var chmod            = require('gulp-chmod'),
     concat           = require('gulp-concat'),
@@ -111,9 +111,9 @@ gulp.task('prod-scripts', function() {
     ;
 
     // move ace editor files
-    gulp.src(src['ace-editor'])
+    gulp.src(src['plugins'])
         .pipe(chmod(775))
-        .pipe(gulp.dest(web['ace-editor']))
+        .pipe(gulp.dest(web['plugins']))
     ;
 });
 
