@@ -1,71 +1,9 @@
-article {
-  header {
-    padding: 1rem 0;
-
-    h3 {
-      border-color: $idci-white;
-      color: $idci-white;
-    }
-  }
-}
-
-@media #{$medium-up} {
-
-  /****************
-   ** Index Page **
-   ****************/
-  section {
-    padding: 3rem 0;
-
-    &.experiences {
-
-      article {
-        margin-bottom: 5em;
-
-        div {
-          display: inline-block;
-
-          img.hide-for-small-only {
-            height: 20rem;
-            width: 20em;
-          }
-        }
-
-        .experience-content {
-          height: 20em;
-
-          h2 {
-            line-height: 2.4rem;
-          }
-
-          p {
-            margin: 0;
-            padding: 1.3rem;
-          }
-
-          a {
-            float: right;
-          }
-        }
-      }
-    }
-
-    &.philosophies {
-      article:first-child {
-        header {
-          padding-top: 0;
-        }
-      }
-    }
-  }
-}
-
 @media #{$medium-only} {
   section {
 
-    &.experiences {
+    &.trainings {
 
-      article {
+      section {
 
         .experience-content {
 

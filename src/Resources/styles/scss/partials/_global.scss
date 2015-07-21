@@ -79,7 +79,11 @@ ul {
 }
 
 section {
-  padding: 2rem 0;
+  padding: 6rem 0 0 0;
+}
+
+.illustration {
+  height: 10rem;
 }
 
 @media #{$small-only} {

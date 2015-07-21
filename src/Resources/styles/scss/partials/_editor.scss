@@ -1,13 +1,6 @@
 #editor {
+  display: block;
   height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 38%;
-
-  div {
-    display: block;
-  }
 
   .ace_gutter, .ace_marker-layer .ace_active-line, .ace_text-input, .ace_content {
     z-index: 0;
