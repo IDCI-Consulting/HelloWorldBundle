@@ -31,7 +31,7 @@ $redirectApp
 
             return $app->redirect(
                 $app['url_generator']->generate(
-                    'homepage',
+                    'index',
                     array(
                         "_locale" => $request->getPreferredLanguage($availableLanguages)
                     )
@@ -39,7 +39,7 @@ $redirectApp
             );
         }
     )
-    ->bind('redirect-homepage')
+    ->bind('redirect-index')
 ;
 
 // Home page
@@ -54,7 +54,8 @@ $intlApp
         }
     )
     ->before($buildLocaleLinks)
-    ->bind('homepage')
+    ->before($buildAsideMenu)
+    ->bind('index')
 ;
 
 // Company page
@@ -84,6 +85,7 @@ $intlApp
         }
     )
     ->before($buildLocaleLinks)
+    ->before($buildAsideMenu)
     ->bind('team')
 ;
 
@@ -161,7 +163,7 @@ $intlApp
                     $app['session']->getFlashBag()->add('success', $message);
 
                     return $app->redirect(
-                        $app['url_generator']->generate('homepage', array(
+                        $app['url_generator']->generate('index', array(
                             "_locale" => $_locale
                         ))
                     );
