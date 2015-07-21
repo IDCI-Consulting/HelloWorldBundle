@@ -1,22 +1,19 @@
 {% extends "layout.html.twig" %}
 
 {% block main_content %}
-<section class="experiences">
-    <div class="row">
-        {% include 'partials/index/training.html.twig' %}
-        {% include 'partials/index/advice.html.twig' %}
-        {% include 'partials/index/development.html.twig' %}
-    </div>
-</section>
+{% include 'partials/asideMenu.html.twig' %}
+<div class="row experiences">
+    {% include 'partials/index/training.html.twig' %}
+    {% include 'partials/index/advice.html.twig' %}
+    {% include 'partials/index/development.html.twig' %}
+</div>
 
-<section class="philosophies idci-blue hide-for-small-only">
-    <div class="row">
-        {% include 'partials/index/philosophy.html.twig' %}
-        {% include 'partials/index/approach.html.twig' %}
-    </div>
-</section>
+<div class="row hide-for-small-only philosophies">
+    {% include 'partials/index/philosophy.html.twig' %}
+    {% include 'partials/index/approach.html.twig' %}
+</div>
 
-<section class="tools hide-for-small-only">
+<section class="hide-for-small-only tools">
     <div class="row">
         <header class="small-12 columns">
             <h2 class="title">{% trans %}Our tools{% endtrans %}</h2>

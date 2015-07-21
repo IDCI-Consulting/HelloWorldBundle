@@ -1,6 +1,5 @@
 {% form_theme form 'idci_form_fields.html.twig' %}
 
-<div id="toto"></div>
 <form action="{{ path('contact', {_locale: app.translator.locale}) }}" method="post" novalidate>
     {{ form_errors(form) }}
     {{ form_widget(form) }}
@@ -8,14 +7,3 @@
         <span>{% trans %}Validate{% endtrans %}</span>
     </button>
 </form>
-
-<script type="text/javascript">
-    function ShowTime()
-    {
-        var dt = new Date();
-
-        var elem = document.getElementById("#toto");
-        $(elem).text(dt.toTimeString());
-        window.setTimeout("ShowTime();", 500);
-    }
-</script>

@@ -7,13 +7,14 @@
 {% endblock %}
 
 {% block main_content %}
-<article class="team row">
+<article class="row team">
     <header>
         <h1 class="title team">
             <i class="show-for-small fa fa-user"></i>
             {% trans %}The team{% endtrans %}
         </h1>
     </header>
+{% include 'partials/asideMenu.html.twig' %}
 
     {%
         include 'partials/team/brahim.html.twig'

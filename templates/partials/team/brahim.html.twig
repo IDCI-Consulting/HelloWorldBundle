@@ -1,17 +1,26 @@
-{% extends 'partials/team/teamMember.html.twig' %}
+<section class=" small-12 medium-6 columns member">
+    <header>
+        <h2 class="idci-light-blue capitalize">Brahim Boukoufallah</h2>
 
-{% block team_member_name %}
-Brahim Boukoufallah
-{% endblock %}
+        <p>{% trans %}Junior Developer{% endtrans %}</p>
+    </header>
 
-{% block team_member_profession %}
-    {% trans %}Junior Developer{% endtrans %}
-{% endblock %}
+    <div class="content-wrapper">
+        <div class="image-holder {{ firstName }}">
+            <div class="profile-picture front"></div>
+        </div>
+    </div>
 
-{% block team_member_description %}
+    <ul class="show-for-small skills">
+        {% for skill in skills %}
+            <li class="skill">
+                <img src="{{ asset('images/idci_list_style.png') }}" />
+                <span>{{ skill|trans }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+
     {% include 'contents/team/brahim_' ~ app.translator.locale ~ '.html.twig' %}
-{% endblock %}
 
-{% block team_member_cv_link %}
     <a href="{{ path('cv', {_locale: app.translator.locale, 'name': 'brahim_boukoufallah'}) }}" class="button small see-cv">CV</a>
-{% endblock %}
+</section>

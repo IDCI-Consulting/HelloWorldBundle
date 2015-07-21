@@ -1,26 +1,25 @@
-{% extends 'partials/index/experience.html.twig' %}
-
-{% block experience_class %}
-    advices
-{% endblock %}
-
-{% block experience_icon %}
-    <i class="fa fa-comment picture"></i>
-{% endblock %}
-
-{% block experience_accordion_title %}
-    {% trans %}Advices{% endtrans %}
-{% endblock %}
-
-{% block experience_title %}
-    {% trans %}Advices{% endtrans %}
-{% endblock %}
-
-{% block experience_image %}
-    <img class="hide-for-small-only" src="{{ asset("images/conseils.jpg") }}" />
-{% endblock %}
-
-{% block experience_content %}
-    {% set adviceContent = 'contents/index/advice_' ~ app.translator.locale ~ '.html.twig' %}
-    {% include adviceContent %}
-{% endblock %}
+<section id="{% trans %}advice{% endtrans %}" class="small-12 columns advices">
+    <header class="hide-for-small-only">
+        <h2>
+            {% trans %}Advices{% endtrans %}
+        </h2>
+    </header>
+    <div class="row hide-for-medium-up accordion-toggle">
+        <h3 class="small-8 columns">
+            <i class="fa fa-comment picture"></i>
+            {% trans %}Advices{% endtrans %}
+        </h3>
+        <div class="small-2 columns toggle-icon">
+            <i class="fa fa-angle-down"></i>
+        </div>
+    </div>
+    <div class="row accordion-content">
+        <div class="medium-5 columns illustration">
+            <img class="hide-for-small-only" src="{{ asset("images/conseils.jpg") }}" />
+        </div>
+        <div class="medium-7 columns">
+            {% include 'contents/index/advice_' ~ app.translator.locale ~ '.html.twig' %}
+            <a class="button small learn-more">{% trans %}learn more{% endtrans %}</a>
+        </div>
+    </div>
+</section>

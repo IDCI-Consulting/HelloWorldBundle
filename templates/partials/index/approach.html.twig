@@ -1,17 +1,13 @@
-{% extends 'partials/index/presentation.html.twig' %}
-
-{% block presentation_class %}
-    approach
-{% endblock %}
-
-{% block presentation_title %}
-    <h3 class="capitalize">{% trans %}Our approach{% endtrans %}</h3>
-{% endblock %}
-
-{% block presentation_image %}
-    <img src="{{ asset('images/formations.jpg') }}" />
-{% endblock %}
-
-{% block presentation_content %}
-    {% include 'contents/index/approach_' ~ app.translator.locale ~ '.html.twig' %}
-{% endblock %}
+<section id="approach" class="small-12 columns">
+    <header>
+        <h2 class="capitalize">{% trans %}Our approach{% endtrans %}</h2>
+    </header>
+    <div class="row">
+        <div class="medium-4 large-3 columns">
+            <img src="{{ asset('images/formations.jpg') }}" />
+        </div>
+        <div class="medium-8 large-9 columns">
+            {% include 'contents/index/approach_' ~ app.translator.locale ~ '.html.twig' %}
+        </div>
+    </div>
+</section>
