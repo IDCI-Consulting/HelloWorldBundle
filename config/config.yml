@@ -13,7 +13,7 @@ i18n_route_generator:
         en: 'English'
 
 menu:
-    - {label: 'home', route: 'homepage'}
+    - {label: 'home', route: 'index'}
 
     - {label: 'the company', route: 'company'}
 
@@ -28,43 +28,43 @@ menu:
 idci_code_writer:
     files:
         -
-            url: https://api.github.com/repos/IDCI-Consulting/GenealogyBundle/contents/Controller/ImageController.php
+            url: https://raw.githubusercontent.com/IDCI-Consulting/GenealogyBundle/master/Controller/ImageController.php
             language: 'php'
+            theme: github
 
         -
-            url: https://api.github.com/repos/IDCI-Consulting/GenealogyBundle/contents/Repository/ElementRepository.php
+            url: https://raw.githubusercontent.com/IDCI-Consulting/GenealogyBundle/master/Repository/ElementRepository.php
             language: 'php'
+            theme: monokai
 
         -
-            url: https://api.github.com/repos/IDCI-Consulting/ExtraFormBundle/contents/Controller/ApiController.php
+            url: https://raw.githubusercontent.com/IDCI-Consulting/ExtraFormBundle/master/Controller/ApiController.php
             language: 'php'
+            theme: tomorrow
 
         -
-            url: https://api.github.com/repos/IDCI-Consulting/SimpleScheduleBundle/contents/Entity/LocationAwareCalendarEntity.php
+            url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleScheduleBundle/master/Entity/LocationAwareCalendarEntity.php
             language: 'php'
+            theme: sqlserver
 
         -
-            url: https://api.github.com/repos/IDCI-Consulting/SimpleScheduleBundle/contents/Entity/CalendarEntityRelation.php
+            url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleScheduleBundle/master/Entity/CalendarEntityRelation.php
             language: 'php'
+            theme: twilight
 
         -
-            url: https://api.github.com/repos/IDCI-Consulting/NotificationApiClientBundle/contents/Tests/Service/NotifierTest.php
-            language: 'php'
-
-        -
-            url: https://api.github.com/repos/IDCI-Consulting/NotificationApiClientBundle/contents/Service/Notifier.php
-            language: 'php'
-
-        -
-            url: https://api.github.com/repos/IDCI-Consulting/SimpleMetadataBundle/contents/Resources/views/Form/fields.html.twig
+            url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleMetadataBundle/master/Resources/views/Form/fields.html.twig
             language: 'twig'
+            theme: github
 
         -
-            url: https://api.github.com/repos/IDCI-Consulting/BrowserCapabilities/contents/js/codebarReader.js
+            url: https://raw.githubusercontent.com/IDCI-Consulting/BrowserCapabilities/master/js/codebarReader.js
             language: 'javascript'
+            theme: xcode
 
         -
-            url: https://api.github.com/repos/IDCI-Consulting/BrowserCapabilities/contents/js/userMediaManager.js
-            language: 'javascript'
+            url: https://raw.githubusercontent.com/IDCI-Consulting/Run4Fun/master/src/R4F/Bundle/SiteBundle/Resources/public/css/style.css
+            language: 'css'
+            theme: szolarized_light
 
 

@@ -1,104 +1,103 @@
-{% extends 'partials/index/experience.html.twig' %}
-
-{% block experience_class %}
-    trainings
-{% endblock %}
-
-{% block experience_icon %}
-    <i class="fa fa-terminal picture"></i>
-{% endblock %}
-
-{% block experience_accordion_title %}
-    {% trans %}Web development{% endtrans %}
-{% endblock %}
-
-{% block experience_title %}
-    {% trans %}Web development{% endtrans %}
-{% endblock %}
-
-{% block experience_content %}
-    {% include 'contents/index/development_' ~ app.translator.locale ~ '.html.twig' %}
-{% endblock %}
-
-{% block experience_scripts %}
-    <div class="show-for-medium-up">
-        <pre id="editor"></pre>
+<section id="{% trans %}web-development{% endtrans %}" class="small-12 columns trainings ">
+    <header class="hide-for-small-only">
+        <h2>
+            {% trans %}Web development{% endtrans %}
+        </h2>
+    </header>
+    <div class="row hide-for-medium-up accordion-toggle">
+        <h3 class="small-8 columns">
+            <i class="fa fa-terminal picture"></i>
+            {% trans %}Web development{% endtrans %}
+        </h3>
+        <div class="small-2 columns toggle-icon">
+            <i class="fa fa-angle-down"></i>
+        </div>
     </div>
+    <div class="row accordion-content">
+        <div class="medium-5 columns illustration">
+            <pre id="editor"></pre>
+        </div>
+        <div class="medium-7 columns">
+            {% include 'contents/index/development_' ~ app.translator.locale ~ '.html.twig' %}
+            <a class="button small learn-more">{% trans %}learn more{% endtrans %}</a>
+        </div>
+    </div>
+    {% block experience_scripts %}{% endblock %}
+</section>
 
-    <script type="text/javascript">
-        var timer;
+<script type="text/javascript">
+    var timer;
 
-        var showText = function (editor, snippet, index) {
-            if (index < snippet.length) {
-                // insert at cursor
-                editor.getSession().insert(editor.getCursorPosition(), snippet[index++]);
+    var showText = function (editor, snippet, index) {
+        if (index < snippet.length) {
+            // insert at cursor
+            editor.getSession().insert(editor.getCursorPosition(), snippet[index++]);
 
-                // clear selection just in case there was something selected
-                editor.selection.clearSelection();
+            // clear selection just in case there was something selected
+            editor.selection.clearSelection();
 
-                // make sure cursor is visible
-                editor.renderer.scrollCursorIntoView();
+            // make sure cursor is visible
+            editor.renderer.scrollCursorIntoView();
 
-                timer = setTimeout(function () {
-                    showText(editor, snippet, index);
-                }, 50);
+            timer = setTimeout(function () {
+                showText(editor, snippet, index);
+            }, 50);
+        }
+    };
+
+    var getFileRaw = function(editor) {
+        // Clear the timeout callback
+        clearTimeout(timer);
+
+        // Clear the editor
+        editor.setValue("");
+
+        var idciCodeWriter = {{ idci_code_writer|raw }};
+
+        // get a random file object
+        var file = idciCodeWriter.files[Math.floor(Math.random() * idciCodeWriter.files.length)];
+
+        $.ajax({
+            url: file.url,
+            method: "GET",
+            success: function(fileRaw) {
+                // Github api provides the fileraw's content encoded in base64 format. We need to use atob() function to decode it.
+                var content = fileRaw;
+
+                editor.getSession().setMode("ace/mode/"+file.language);
+                editor.setTheme("ace/theme/"+file.theme);
+                showText(editor, content, 0);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                showText(editor, '//{% trans %}Write your code here{% endtrans %}!!!')
             }
-        };
-
-        var getFileRaw = function(editor) {
-            // Clear the timeout callback
-            clearTimeout(timer);
-
-            // Clear the editor
-            editor.setValue("");
-
-            var idciCodeWriter = {{ idci_code_writer|raw }};
-
-            // get a random file object
-            var file = idciCodeWriter.files[Math.floor(Math.random() * idciCodeWriter.files.length)];
-
-           $.ajax({
-                url: file.url,
-                method: "GET",
-                success: function(fileRaw) {
-                    // Github api provides the fileraw's content encoded in base64 format. We need to use atob() function to decode it.
-                    var content = atob(fileRaw.content);
-
-
-                    editor.getSession().setMode("ace/mode/"+file.language);
-                    showText(editor, content, 0);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    showText(editor, '//{% trans %}Write your code here{% endtrans %}!!!')
-                }
-            });
-        };
-
-        $(document).ready(function() {
-            var editor = ace.edit("editor");
-
-            // Disable warn message in console. Advised by Ace developers.
-            editor.$blockScrolling = Infinity;
-
-            var options = {
-                animatedScroll: true,
-                autoScrollEditorIntoView: true,
-                fontSize: 16,
-                mode: "ace/mode/php",
-                scrollSpeed: 1,
-                showFoldWidgets: false,
-                showPrintMargin: false,
-                theme: "ace/theme/dreamweaver"
-            };
-
-            editor.setOptions(options);
-
-            getFileRaw(editor);
-
-            // Call getFIleRaw every 2 minutes
-            setInterval(function() {
-                getFileRaw(editor);
-            }, 120000);
         });
-    </script>
-{% endblock %}
+    };
+
+    $(document).ready(function() {
+        var editor = ace.edit("editor");
+
+        // Disable warn message in console. Advised by Ace developers.
+        editor.$blockScrolling = Infinity;
+
+        var options = {
+            animatedScroll: true,
+            autoScrollEditorIntoView: true,
+            fontSize: 10,
+            mode: "ace/mode/php",
+            scrollSpeed: 1,
+            showFoldWidgets: false,
+            showPrintMargin: false,
+            theme: "ace/theme/dreamweaver"
+        };
+
+        editor.setOptions(options);
+
+        getFileRaw(editor);
+
+        // Call getFIleRaw every 2 minutes
+        setInterval(function() {
+            getFileRaw(editor);
+        }, 120000);
+    });
+</script>
