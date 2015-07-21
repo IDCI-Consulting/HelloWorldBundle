@@ -4,6 +4,7 @@
  * Application
  */
 
+use Provider\ContactManagerServiceProvider;
 use Provider\MarkdownParserServiceProvider;
 use Provider\I18nRouteGeneratorServiceProvider;
 use Provider\SnappyServiceProvider;
@@ -20,7 +21,7 @@ use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
-use \Provider\ContactManagerServiceProvider;
+use Symfony\Component\HttpFoundation\Response;
 
 $app = new Application();
 
@@ -112,6 +113,27 @@ $buildLocaleLinks = function (Request $request, Application $app) {
 
     $app['twig']->addGlobal('i18n_routes', $i18nRoutes);
 
+};
+
+$buildAsideMenu = function (Request $request, Application $app) {
+    $text = $app['twig']->render(sprintf('pages/%s.html.twig', $request->get('_route')));
+
+    $asideMenu = array();
+
+    // Get all sections in the DOM with an id
+    preg_match_all('/(?<section><section[ ]*id.*<\/section>)/siU', $text, $matched_sections);
+
+    /*
+     * Retrieve the ids and the text (inside h2 tag which is child of header)
+     */
+    foreach ($matched_sections['section'] as $i => $section) {
+        preg_match_all('/<section[ ]*id=\\"(?<id>.+)\\".*<h2.*>(?<title>.*)<\/h2>/siU', $section, $matches);
+        foreach ($matches['id'] as $j => $id) {
+            $asideMenu[$id] = $matches['title'][$j];
+        }
+    }
+
+    $app['twig']->addGlobal('aside_menu', $asideMenu);
 };
 
 return $app;
