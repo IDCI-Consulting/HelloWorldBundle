@@ -13,7 +13,7 @@ var src              = [],
 src['style']         = "src/Resources/styles/**/*.scss";
 src['template']      = "templates/**/*";
 src['script']        = "src/Resources/js/**/*.js";
-src['plugins']       = "src/Resources/plugins/**/*.js";
+src['plugins']       = "src/Resources/plugins/**/*";
 src['manifest']      = "src/Resources/manifest/";
 src['images']        = "web/images/brahim/*.jpg";
 web['style']         = "web/css/";
@@ -71,7 +71,7 @@ gulp.task('styles', function() {
 });
 
 // Task to install scripts in a dev environment
-gulp.task('dev-scripts', function() {
+gulp.task('dev-scripts', function(cb) {
     // move js files
     gulp.src([src['script']])
         /*.pipe(jshint())
@@ -82,14 +82,14 @@ gulp.task('dev-scripts', function() {
     ;
 
     // move ace editor files
-    gulp.src(src['plugins'])
+    return gulp.src(src['plugins'])
         .pipe(gulp.dest(web['plugins']))
         .pipe(chmod(775))
     ;
 });
 
 // Task to install scripts in a prod environment
-gulp.task('prod-scripts', function() {
+gulp.task('prod-scripts', function(cb) {
     // delete all css files
     del(web['script']+'/*.js');
     gulp.src([foundation.script.foundation, src['script']])
@@ -111,7 +111,7 @@ gulp.task('prod-scripts', function() {
     ;
 
     // move ace editor files
-    gulp.src(src['plugins'])
+    return gulp.src(src['plugins'])
         .pipe(gulp.dest(web['plugins']))
         .pipe(chmod(775))
     ;
