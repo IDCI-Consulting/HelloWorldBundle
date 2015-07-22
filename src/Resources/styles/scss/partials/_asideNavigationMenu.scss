@@ -1,12 +1,12 @@
-$idci-circle-size: 32px;
-$idci-circle-border: 3px;
+$idci-circle-size: 20px;
+$idci-circle-border: 2px;
 
 .aside-navigation-menu {
   font-size: 1.2rem;
   position: fixed;
   right: 3rem;
   text-align: right;
-  top: 40%;
+  top: 30%;
 }
 
 .aside-navigation-link {
@@ -21,15 +21,14 @@ $idci-circle-border: 3px;
 
     .fix {
       background: $idci-black;
-      border: $idci-circle-border $idci-white solid;
       border-radius: $idci-circle-size / 2;
       box-sizing: content-box;
       display: block;
       height: $idci-circle-size / 2;
-      left: $idci-circle-size / 4 - $idci-circle-border;
+      left: $idci-circle-size / 4;
       position: absolute;
-      top: $idci-circle-size / 4 - $idci-circle-border;
-      transition: all 0.4s ease;
+      top: $idci-circle-size / 4;
+      transition: all 0.3s ease;
       width: $idci-circle-size / 2;
       z-index: 200;
     }
@@ -40,10 +39,10 @@ $idci-circle-border: 3px;
       box-sizing: content-box;
       display: block;
       height: $idci-circle-size / 4;
-      left: $idci-circle-size / 3 + $idci-circle-border / 2;
+      left: $idci-circle-size / 3;
       position: absolute;
-      top: $idci-circle-size / 3 + $idci-circle-border / 2;
-      transition: all 0.4s ease;
+      top: $idci-circle-size / 3;
+      transition: all 0.3s ease;
       width: $idci-circle-size / 4;
       z-index: 100;
     }
@@ -54,15 +53,17 @@ $idci-circle-border: 3px;
 
     .idci-circle {
 
-      .fix, .expandable {
+      .fix {
         background: $idci-light-blue;
       }
 
       .expandable {
-        height: $idci-circle-size;
+        background: 0 0;
+        border: $idci-circle-border solid $idci-light-blue;
+        height: $idci-circle-size - $idci-circle-border * 2;
         left: 0;
         top: 0;
-        width: $idci-circle-size;
+        width: $idci-circle-size - $idci-circle-border * 2;
       }
     }
   }

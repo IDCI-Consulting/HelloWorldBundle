@@ -7,19 +7,16 @@ h1.logo {
 }
 
 @media #{$small-only} {
-  .accordion-container {
-    clear: both;
-    width: 100%;
-  }
-
   .accordion-toggle {
     background: $idci-dark-grey;
     border: .05rem solid $idci-white;
     font-weight: 300;
-    padding: 2rem;
+    height: 5rem;
+    padding: 0 2rem;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
+    width: 100%;
 
     &:hover {
       background: #999;
@@ -30,21 +27,29 @@ h1.logo {
       background: #999;
     }
 
-    h3 {
-      line-height: 2.5rem;
+    h2 {
+      font-size: 1rem;
+      height: 100%;
+      margin: 0;
       padding: 0;
 
       i.picture {
         color: #fff;
         float: left;
         font-size: 2rem;
+        margin-right: 1rem;
+      }
+
+      &, i.picture {
+        line-height: 5rem;
       }
     }
 
-    div.toggle-icon {
+    .toggle-icon {
       border-left: 1px solid $idci-white;
       font-size: 1.5rem;
-      height: 100%;
+      height: 5rem;
+      line-height: 5rem;
       margin-left: 1px;
       position: absolute;
       right: 20px;
@@ -53,9 +58,11 @@ h1.logo {
 
       i {
         color: $idci-black;
-        font-size: 3rem;
-        position: relative;
-        top: 1.5rem;
+        font-size: 2rem;
+
+        &:before {
+          width: 100%;
+        }
       }
     }
   }
@@ -63,10 +70,5 @@ h1.logo {
   .accordion-content {
     display: none;
     padding: 1rem;
-    overflow: inherit;
-
-    p {
-      margin: 0 auto;
-    }
   }
 }

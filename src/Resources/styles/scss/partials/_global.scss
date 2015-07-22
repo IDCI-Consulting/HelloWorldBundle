@@ -82,10 +82,6 @@ section {
   padding: 6rem 0 0 0;
 }
 
-.illustration {
-  height: 10rem;
-}
-
 @media #{$small-only} {
   body {
     margin-top: 4rem;
@@ -96,6 +92,7 @@ section {
   }
 
   section, article {
+
     header {
       background: $idci-dark-grey;
     }
