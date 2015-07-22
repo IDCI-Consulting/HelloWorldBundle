@@ -127,7 +127,7 @@ $buildAsideMenu = function (Request $request, Application $app) {
      * Retrieve the ids and the text (inside h2 tag which is child of header)
      */
     foreach ($matched_sections['section'] as $i => $section) {
-        preg_match_all('/<section[ ]*id=\\"(?<id>.+)\\".*<h2.*>(?<title>.*)<\/h2>/siU', $section, $matches);
+        preg_match_all('/<section[ ]*id=\\"(?<id>.+)\\".*<h2.*>(?<title>.*)</siU', $section, $matches);
         foreach ($matches['id'] as $j => $id) {
             $asideMenu[$id] = $matches['title'][$j];
         }
