@@ -2,13 +2,46 @@
  *** Footer ***
  **************/
 
+.idci-mini-footer a, .close-footer {
+    color: $idci-blue;
+    font-size: 2rem;
+
+    &:hover {
+      color: $idci-light-blue;
+    }
+}
+
+.idci-mini-footer {
+  background: $idci-dark-grey;
+  bottom: 0;
+  border-top-left-radius: 50%;
+  height: 3rem;
+  line-height: 3.5rem;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  width: 3rem;
+  z-index: 9999999;
+}
+
+.close-footer {
+  position: absolute;
+  right: 5rem;
+  top: 0;
+
+  &:hover {
+    color: $idci-light-blue;
+  }
+}
+
 footer {
   background: $idci-dark-grey;
   bottom: 0;
+  display: none;
   height: 23rem;
   left:0;
   padding-top: 1.2rem;
-  position:absolute;
+  position: absolute;
   width:100%;
 
   p {
@@ -104,6 +137,7 @@ footer {
 
   footer {
     padding: 5rem;
+    position: fixed;
 
     p {
       font-size: 1rem;
@@ -174,6 +208,7 @@ footer {
   footer {
     background: $idci-blue;
     color: $idci-white;
+    display: block;
     text-transform: capitalize;
 
     .contact-us {
