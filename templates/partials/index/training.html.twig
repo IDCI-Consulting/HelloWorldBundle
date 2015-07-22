@@ -1,25 +1,20 @@
-<section id="{% trans %}training{% endtrans %}" class="small-12 columns trainings ">
-    <header class="hide-for-small-only">
-        <h2>
+<section id="{% trans %}training{% endtrans %}" class="trainings ">
+    <header class="row accordion-toggle">
+        <h2 class="small-10 columns">
             {% trans %}Trainings{% endtrans %}
+            <i class="hide-for-medium-up fa fa-comment picture"></i>
         </h2>
-    </header>
-    <div class="row hide-for-medium-up accordion-toggle ">
-        <h3 class="small-8 columns">
-            <i class="fa fa-laptop picture"></i>
-            {% trans %}Trainings{% endtrans %}
-        </h3>
-        <div class="small-2 columns toggle-icon">
+        <div class="hide-for-medium-up small-2 columns toggle-icon">
             <i class="fa fa-angle-down"></i>
         </div>
-    </div>
+    </header>
+
     <div class="row accordion-content ">
-        <div class="medium-5 columns illustration">
-            <img class="hide-for-small-only" src="{{ asset("images/formations.jpg") }}" />
+        <div class="hide-for-small-only medium-5 columns illustration">
+            <img src="{{ asset("images/formations.jpg") }}" />
         </div>
         <div class="medium-7 columns">
             {% include 'contents/index/training_' ~ app.translator.locale ~ '.html.twig' %}
-            <a class="button small learn-more">{% trans %}learn more{% endtrans %}</a>
         </div>
     </div>
 </section>

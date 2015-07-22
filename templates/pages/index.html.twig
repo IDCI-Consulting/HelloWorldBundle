@@ -2,74 +2,76 @@
 
 {% block main_content %}
 {% include 'partials/asideMenu.html.twig' %}
-<div class="row experiences">
+<div class="row">
     {% include 'partials/index/training.html.twig' %}
     {% include 'partials/index/advice.html.twig' %}
     {% include 'partials/index/development.html.twig' %}
 </div>
 
-<div class="row hide-for-small-only philosophies">
+<div class="row hide-for-small-only">
     {% include 'partials/index/philosophy.html.twig' %}
     {% include 'partials/index/approach.html.twig' %}
-</div>
 
-<section class="hide-for-small-only tools">
-    <div class="row">
-        <header class="small-12 columns">
-            <h2 class="title">{% trans %}Our tools{% endtrans %}</h2>
-        </header>
-        {%
-            include 'partials/index/tools.html.twig'
-            with {
-                'class': 'backend',
-                'title': 'Backend',
-                'images': {
-                    'symfony1': 'http://symfony.com/legacy',
-                    'symfony2': 'http://symfony.com/',
-                    'node': 'https://nodejs.org/',
-                    'meteor': 'https://www.meteor.com/'
+
+    <section id="{% trans %}tools{% endtrans %}" class="tools">
+            <header>
+                <h2>
+                    {% trans %}Our tools{% endtrans %}
+                </h2>
+            </header>
+
+            {%
+                include 'partials/index/tools.html.twig'
+                with {
+                    'class': 'backend',
+                    'title': 'Backend',
+                    'images': {
+                        'symfony1': 'http://symfony.com/legacy',
+                        'symfony2': 'http://symfony.com/',
+                        'node': 'https://nodejs.org/',
+                        'meteor': 'https://www.meteor.com/'
+                    }
                 }
-            }
-        %}
-        {%
-            include 'partials/index/tools.html.twig'
-            with {
-                'class': 'databases',
-                'title': 'Databases',
-                'images': {
-                    'mysql': 'https://www.mysql.fr/',
-                    'mongodb': 'https://www.mongodb.org/',
-                    'postgresql': 'http://www.postgresql.org/',
-                    'redis': 'http://redis.io/'
+            %}
+            {%
+                include 'partials/index/tools.html.twig'
+                with {
+                    'class': 'databases',
+                    'title': 'Databases',
+                    'images': {
+                        'mysql': 'https://www.mysql.fr/',
+                        'mongodb': 'https://www.mongodb.org/',
+                        'postgresql': 'http://www.postgresql.org/',
+                        'redis': 'http://redis.io/'
+                    }
                 }
-            }
-        %}
-        {%
-            include 'partials/index/tools.html.twig'
-            with {
-                'class': 'frontend',
-                'title': 'Frontend',
-                'images': {
-                    'html5-css3': 'http://www.w3.org/TR/html5/',
-                    'bootstrap': 'http://getbootstrap.com/',
-                    'foundation': 'http://foundation.zurb.com/',
-                    'jquery': 'https://jquery.com/'
+            %}
+            {%
+                include 'partials/index/tools.html.twig'
+                with {
+                    'class': 'frontend',
+                    'title': 'Frontend',
+                    'images': {
+                        'html5-css3': 'http://www.w3.org/TR/html5/',
+                        'bootstrap': 'http://getbootstrap.com/',
+                        'foundation': 'http://foundation.zurb.com/',
+                        'jquery': 'https://jquery.com/'
+                    }
                 }
-            }
-        %}
-        {%
-            include 'partials/index/tools.html.twig'
-            with {
-                'class': 'infrastructure',
-                'title': 'Infrastructure',
-                'images': {
-                    'elk': 'https://www.elastic.co/',
-                    'varnish': 'https://www.varnish-cache.org/',
-                    'docker': 'https://www.docker.com/',
-                    'proxmox': 'https://www.proxmox.com/en/'
+            %}
+            {%
+                include 'partials/index/tools.html.twig'
+                with {
+                    'class': 'infrastructure',
+                    'title': 'Infrastructure',
+                    'images': {
+                        'elk': 'https://www.elastic.co/',
+                        'varnish': 'https://www.varnish-cache.org/',
+                        'docker': 'https://www.docker.com/',
+                        'proxmox': 'https://www.proxmox.com/en/'
+                    }
                 }
-            }
-        %}
-    </div>
-</section>
+            %}
+    </section>
+</div>
 {% endblock %}
