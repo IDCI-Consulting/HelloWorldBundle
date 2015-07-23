@@ -6,10 +6,31 @@ h1.logo {
   float: right;
 }
 
+.idci-content {
+  padding: 3rem;
+
+  p {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
 #training, #philosophy {
   em, h3 {
     color: $idci-green;
   }
+}
+
+#approach, #advice {
+  background: $idci-light-grey;
+}
+
+#web-development {
+  background: $idci-dark-grey;
+}
+
+section.row {
+  width: 100%!important;
 }
 
 @media #{$small-only} {
@@ -77,4 +98,17 @@ h1.logo {
     display: none;
     padding: 1rem;
   }
+
+  section {
+    background: $idci-white;
+  }
+
+  .idci-content {
+    padding: 1rem;
+
+    p {
+      width: 100%;
+    }
+  }
+
 }

@@ -1,5 +1,5 @@
-<section id="{% trans %}philosophy{% endtrans %}" class="hide-for-small-only">
-    <header>
+<section id="{% trans %}philosophy{% endtrans %}" class="row full-width">
+    <header class="small-12 medium-10 medium-offset-1 columns">
         <h3>{% trans %}Our philosophy{% endtrans %}</h3>
         <h2 class="idci-green">Opensource</h2>
     </header>
@@ -8,7 +8,7 @@
         <div class="hide-for-small-only  medium-12 columns illustration">
             <img src="{{ asset('images/formations.jpg') }}" />
         </div>
-        <div class=" medium-12 columns">
+        <div class=" medium-12 columns idci-content">
             {% include 'contents/index/philosophy_' ~ app.translator.locale ~ '.html.twig' %}
         </div>
     </div>

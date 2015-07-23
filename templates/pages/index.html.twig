@@ -2,18 +2,16 @@
 
 {% block main_content %}
 {% include 'partials/asideMenu.html.twig' %}
-<div class="row">
-    {% include 'partials/index/training.html.twig' %}
-    {% include 'partials/index/advice.html.twig' %}
-    {% include 'partials/index/development.html.twig' %}
-</div>
+{% include 'partials/index/training.html.twig' %}
+{% include 'partials/index/advice.html.twig' %}
+{% include 'partials/index/development.html.twig' %}
 
-<div class="row hide-for-small-only">
+<div class="hide-for-small-only">
     {% include 'partials/index/philosophy.html.twig' %}
     {% include 'partials/index/approach.html.twig' %}
 
 
-    <section id="{% trans %}tools{% endtrans %}" class="tools">
+    <section id="{% trans %}tools{% endtrans %}" class="row tools">
             <header>
                 <h2>
                     {% trans %}Our tools{% endtrans %}
