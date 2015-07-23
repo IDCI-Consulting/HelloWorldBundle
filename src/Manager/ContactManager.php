@@ -41,8 +41,8 @@ class ContactManager
     {
         $message = \Swift_Message::newInstance()
             ->setSubject('Nouvelle demande de projet')
-            ->setFrom('no-reply@idci-consulting.frr')
-            ->setTo(array('brahim.boukoufallah@idci-consulting.fr'))
+            ->setFrom('no-reply@idci-consulting.fr')
+            ->setTo(array('contact@idci-consulting.fr'))
             ->setBody(
                 $this->twig->render(
                     'pages/email.html.twig',
