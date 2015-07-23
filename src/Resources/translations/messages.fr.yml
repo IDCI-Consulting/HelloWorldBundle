@@ -38,7 +38,7 @@ Phonenumber: Téléphone
 Project: Projet
 Validate: Valider
 
-#Navigation
+#Header
 home: accueil
 the company: la société
 the team: l'équipe
@@ -46,6 +46,7 @@ our activities: nos activités
 our partners: nos partenaires
 blog: blog
 contact: contact
+Choose the language: Choisissez la langue
 
 #Footer
 For any other request: Pour tout autre demande
