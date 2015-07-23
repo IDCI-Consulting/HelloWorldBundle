@@ -1,4 +1,4 @@
-<ul>
+<ul class="idci-inline-list">
     {% for item in menu %}
         <li>
             <a href="{{ path(item.route, {'_locale': app.translator.locale}) }}">{{ item.label|trans }}</a>

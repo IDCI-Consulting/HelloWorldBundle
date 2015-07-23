@@ -1,34 +1,27 @@
 .header-container {
-  background: #999;
-  height: 6.5rem;
+  background: $idci-white;
+  font-size: 0;
+  height: 5rem;
   left: 0;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
 
-  .overlay {
-    background: url("/images/pattern.png") rgba(0, 0, 0, 0.68);
-    background-size: 3px 3px;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    opacity: 0.8;
-    right: 0;
-    top: 0;
-  }
   header {
     height: 100%;
 
     h1 {
-      height: 100%;
+      display: inline-block;
       margin: 0;
+      vertical-align: top;
+      width: 14.3rem;
 
       a {
         display: inline-block;
-        height: 100%;
-        padding-top: 1rem;
-        width: 100%;
+        height: inherit;
+        width: inherit;
 
         span {
           background-image: url("/images/idci_logo.png");
@@ -40,60 +33,6 @@
           text-align: center;
           text-indent: -9999px;
           width: 100%;
-        }
-      }
-    }
-
-    nav {
-      text-transform: capitalize;
-
-      ul {
-        line-height: 6rem;
-        margin: 0;
-
-        li {
-          display: inline-block;
-
-          a {
-            color: $idci-white;
-            display: block;
-            padding: .3rem .3rem 0 .3rem;
-            &:hover {
-              color: $idci-light-blue;
-              border-bottom: .2rem solid $idci-light-blue;
-            }
-            @include transition(all, 0.3s);
-          }
-        }
-      }
-    }
-
-    .langs {
-      display: block;
-      list-style: none;
-      height: 100%;
-      line-height: 1.8rem;
-      margin: 0 0 0 .3rem;
-      text-align: center;
-
-      li {
-        margin-top: 2.4rem;
-        margin-left: .5rem;
-      }
-    }
-
-    .search-icon {
-      float: right;
-      padding: 1.5rem 0;
-      text-align: center;
-      width: 3rem;
-
-      i {
-        color: $idci-white;
-        font-size: 3rem;
-        line-height: 3.6rem;
-        &:hover {
-          color: $idci-light-blue;
         }
       }
     }
@@ -124,32 +63,77 @@
   }
 }
 
-@media #{$medium-up} {
+.langs {
+  display: block;
+  float: right;
+  height: 100%;
+  margin-right: 3rem;
 
-  .header-container {
-    @include box-shadow(0 .2rem .5rem 0 rgba(0,0,0,0.3));
+  ul, p {
+    display: block;
+    float: left;
+    line-height: 5rem;
+  }
+  p {
+    color: $idci-light-blue;
+    font-style: italic;
+    margin: 0;
+    margin-right: 2rem;
+    vertical-align: top;
   }
 
-  nav {
+  ul {
+    margin: 0;
+    
+    li {
+      float: left;
+      margin-right: .5rem;
+    }
+  }
+}
+
+.search-icon {
+  background: 0 0;
+  display: none;
+  float: right;
+  height: 5rem;
+  padding: 1rem;
+  width: 5rem;
+
+  a {
+    border: 2px solid $idci-black;
+    color: $idci-black;
+    display: block;
     height: 100%;
+    line-height: 3.5rem;
+    text-align: center;
 
-    ul {
-      height: 100%;
+    &:hover {
+      border-color: $idci-light-blue;
+      color: $idci-light-blue;
 
-      li {
-        height: 100%;
-
-        a {
-          height: 100%;
-        }
+      i {
+        color: $idci-light-blue;
       }
     }
+
+    i {
+      color: $idci-black;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media #{$medium-up} {
+  .header-container {
+    border-bottom: 2px $idci-dark-grey solid;
   }
 }
 
 @media #{$medium-only} {
   .header-container {
     height: 5rem;
+    padding: 0;
 
     header {
 
@@ -207,7 +191,7 @@
 @media #{$small-only} {
 
   .header-container {
-      height: 4rem;
+    height: 4rem;
 
     header {
       background-color: $idci-blue;
@@ -329,3 +313,4 @@
     }
   }
 }
+
