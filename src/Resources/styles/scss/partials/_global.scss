@@ -5,7 +5,6 @@ body, html {
 
 body {
   font-family: Molengo, sans-serif;
-  margin-top: 7rem;
 }
 
 .wrapper {
@@ -34,20 +33,14 @@ h1 {
   text-transform: capitalize;
 }
 
-h2 {
+h2, h3 {
   color: $idci-blue;
-  font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 h3 {
-  border: 2px solid $idci-blue;
-  color: $idci-blue;
-  font-weight: bold;
-  margin: 0 0 .2rem 0;
-  padding: 1rem;
-  text-indent: .5rem;
+  font-weight: normal;
 }
 
 .button {
@@ -58,10 +51,6 @@ h3 {
   &:hover {
     background: $idci-blue;
   }
-}
-
-p {
-  text-align: justify;
 }
 
 i {
@@ -76,6 +65,13 @@ ul {
 
 section {
   padding: 6rem 0 0 0;
+  text-align: center;
+
+  em, h3 {
+    color: $idci-light-blue;
+    font-style: normal;
+  }
+
 }
 
 nav {

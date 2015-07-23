@@ -10,7 +10,7 @@ $idci-circle-border: 2px;
 }
 
 .aside-navigation-link {
-  color: $idci-black;
+  color: $idci-blue;
 
   .idci-circle {
     display: inline-block;
@@ -20,7 +20,7 @@ $idci-circle-border: 2px;
     width: $idci-circle-size;
 
     .fix {
-      background: $idci-black;
+      background: $idci-blue;
       border-radius: $idci-circle-size / 2;
       box-sizing: content-box;
       display: block;
@@ -34,7 +34,7 @@ $idci-circle-border: 2px;
     }
 
     .expandable {
-      background: $idci-black;
+      background: $idci-blue;
       border-radius: $idci-circle-size / 2;
       box-sizing: content-box;
       display: block;

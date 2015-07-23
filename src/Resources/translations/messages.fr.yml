@@ -7,8 +7,8 @@ french: français
 english: anglais
 engineering: ingénerie
 development: développement
-Trainings: Formations
-Advices: Conseils
+Training: Formation
+Advice: Conseil
 Web development: Développement web
 Our philosophy: Notre philosophie
 Our approach: Notre approche
@@ -27,6 +27,7 @@ Follow us: Suivez nous
 The team: L'équipe
 Download: Télécharger
 Databases: Base de données
+We do: Nous faisons
 
 #Form labels
 Company: Entreprise

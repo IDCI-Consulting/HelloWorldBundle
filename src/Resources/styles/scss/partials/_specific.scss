@@ -6,6 +6,12 @@ h1.logo {
   float: right;
 }
 
+#training, #philosophy {
+  em, h3 {
+    color: $idci-green;
+  }
+}
+
 @media #{$small-only} {
   .accordion-toggle {
     background: $idci-dark-grey;

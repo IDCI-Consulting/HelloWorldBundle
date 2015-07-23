@@ -1,6 +1,9 @@
 #editor {
   display: block;
   height: 10rem;
+  margin: 0 auto;
+  text-align: left;
+  width: 50%;
 
   .ace_gutter, .ace_marker-layer .ace_active-line, .ace_text-input, .ace_content {
     z-index: 0;
