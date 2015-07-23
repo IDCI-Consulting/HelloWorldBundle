@@ -1,3 +1,4 @@
+
 .flag {
   background: url("/images/flags.png") no-repeat;
   height: 11px;
@@ -5,27 +6,19 @@
 }
 
 .flag {
+  &.flag-cn {background-position: -64px 0}
+  &.flag-fr {background-position: -80px 0}
+  &.flag-en {background-position: -48px -11px}
+  &.flag-it {background-position: -64px -11px}
+  &.flag-jp {background-position: -80px -11px}
+  &.flag-sa {background-position: -48px -22px}
+}
+
+.active .flag {
   &.flag-cn {background-position: -16px 0}
   &.flag-fr {background-position: -32px 0}
   &.flag-en {background-position: 0 -11px}
   &.flag-it {background-position: -16px -11px}
   &.flag-jp {background-position: -32px -11px}
   &.flag-sa {background-position: 0 -22px}
-}
-
-@media #{$small-only} {
-  .flag {
-    background-size: 5rem;
-    height: 18px;
-    width: 27px;
-  }
-
-  .flag {
-    &.flag-cn {background-position: -16px 0}
-    &.flag-fr {background-position: -54px 0;}
-    &.flag-en {background-position: 0 -18px}
-    &.flag-it {background-position: -27px -18px}
-    &.flag-jp {background-position: -32px -11px}
-    &.flag-sa {background-position: 0 -22px}
-  }
 }
