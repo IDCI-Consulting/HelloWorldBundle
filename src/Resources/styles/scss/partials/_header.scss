@@ -11,6 +11,7 @@
 
   header {
     height: 100%;
+    min-width: 100%!important;
 
     h1 {
       display: inline-block;
@@ -36,38 +37,12 @@
         }
       }
     }
-
-    button.dropdown-flag {
-      background: 0 0;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-    .f-dropdown {
-      width: 100%!important;
-      &.open {
-        left: 0!important;
-        top: 3.8rem!important;
-      }
-      &, &.drop-left, &.drop-right, &.drop-top {
-        &:before, &:after {
-          content: none;
-        }
-      }
-    }
-
-    .dropdown.button::after, button.dropdown::after {
-      right: .5rem;
-    }
   }
 }
 
 .langs {
   display: block;
-  float: right;
   height: 100%;
-  margin-right: 3rem;
 
   ul, p {
     display: block;
@@ -78,7 +53,7 @@
     color: $idci-light-blue;
     font-style: italic;
     margin: 0;
-    margin-right: 2rem;
+    margin-right: 1rem;
     vertical-align: top;
   }
 
@@ -140,6 +115,7 @@
       h1.logo {
         height: 100%;
         margin: 0;
+        width: 8rem;
 
         a {
           padding-top: .5rem;
@@ -153,18 +129,6 @@
             line-height: 1.3rem;
             text-indent: -9999px;
             width: 100%;
-          }
-        }
-      }
-
-      nav {
-
-        ul {
-          font-size: .9rem;
-          line-height: 4rem !important;
-
-          li {
-            display: inline-block;
           }
         }
       }
@@ -186,12 +150,40 @@
       }
     }
   }
+
+
+
+  button.dropdown-flag {
+    background: 0 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .f-dropdown {
+    margin-top: 0;
+    width: 100%!important;
+    &.open {
+      left: 80%!important;
+      top: 5rem!important;
+    }
+    &, &.drop-left, &.drop-right, &.drop-top {
+      &:before, &:after {
+        content: none;
+      }
+    }
+  }
+
+  .dropdown.button::after, button.dropdown::after {
+    right: .5rem;
+  }
 }
 
 @media #{$small-only} {
 
   .header-container {
     height: 4rem;
+    padding: 0;
 
     header {
       background-color: $idci-blue;
@@ -220,6 +212,7 @@
 
       h1 {
         background: transparent;
+        width: 8rem;
 
         a {
           padding-top: .1rem;
@@ -260,19 +253,22 @@
           margin: 0;
           max-height: 22rem;
           overflow-y: auto;
-          width: inherit;
+          width: 100%;
 
           li {
             border-bottom: 1px solid $idci-white;
             display: block;
+            height: 3rem;
             margin: 0;
             padding: 0;
             text-align: center;
+            min-width: 100%;
 
             a {
               color: $idci-white;
               display: block;
-              padding: .8rem;
+              height: 100%;
+              line-height: 3rem;
 
               &:hover {
                 background: $idci-light-blue;
@@ -311,6 +307,32 @@
         }
       }
     }
+  }
+
+
+
+  button.dropdown-flag {
+    background: 0 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .f-dropdown {
+    width: 100%!important;
+    &.open {
+      left: 0!important;
+      top: 3.8rem!important;
+    }
+    &, &.drop-left, &.drop-right, &.drop-top {
+      &:before, &:after {
+        content: none;
+      }
+    }
+  }
+
+  .dropdown.button::after, button.dropdown::after {
+    right: .5rem;
   }
 }
 
