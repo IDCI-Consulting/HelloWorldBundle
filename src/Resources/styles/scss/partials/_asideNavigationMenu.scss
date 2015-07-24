@@ -73,5 +73,7 @@ $idci-circle-border: 2px;
 @media #{$medium-only} {
   .aside-navigation-menu {
     font-size: .8rem;
+    right: 1rem;
+    top: 25%;
   }
 }

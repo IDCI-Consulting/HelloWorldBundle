@@ -35,6 +35,17 @@ section.row {
   }
 }
 
+@media #{$medium-only} {
+
+  .accordion-content {
+    padding: 1rem;
+
+    ul, p {
+      font-size: .8rem;
+    }
+  }
+}
+
 @media #{$small-only} {
   .accordion-toggle {
     background: $idci-dark-grey;
