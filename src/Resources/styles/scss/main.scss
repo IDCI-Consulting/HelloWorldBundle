@@ -1,71 +1,7 @@
-/**********************
- ** Global variables **
- **********************/
-$idci-white: #FFF;
-$idci-blue: #394A59;
-$idci-light-blue: #0DB0D1;
-$idci-dark-grey: #DEDDD8;
-$idci-light-grey: #f7f7f7;
-$idci-green: #1E9847;
-$idci-dark-green: #007A01;
-$idci-black: #000;
-
-$font-url: '/fonts';
-
-
-/*******************
- ** Global Mixins **
- *******************/
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin transition($property, $duration, $mode:ease) {
-  -webkit-transition: $property $duration $mode;
-  -moz-transition: $property $duration $mode;
-  -o-transition: $property $duration $mode;
-  transition: $property $duration $mode;
-}
-
-@mixin box-shadow($property) {
-  -webkit-box-shadow: $property;
-  -moz-box-shadow: $property;
-  -o-box-shadow: $property;
-  box-shadow: $property;
-}
-
-@mixin font-face($font-family, $font-url, $font-name) {
-  @font-face {
-    font-family: $font-family;
-    font-style: normal;
-    font-weight: normal;
-    src:  url($font-url + '/' + $font-name + '.ttf')  format('truetype');
-    /*url($font-url + '/' + $font-name + '.eot') format('eot'),
-    url($font-url + '/' + $font-name + '.woff') format('woff'),
-    url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');*/
-  }
-}
-
-@mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-/* Placeholder selector */
-%vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+/****************************
+ *** Settings importation ***
+ ****************************/
+@import 'settings';
 
 @include font-face('Molengo', $font-url, 'Molengo');
 @include font-face('Oswald', $font-url, 'Oswald-Light');
@@ -106,7 +42,6 @@ $font-url: '/fonts';
 @import 'partials/index';
 @import 'partials/modal';
 @import 'partials/mouseTracker';
-@import 'partials/socials';
 @import 'partials/specific';
 @import 'partials/team';
 @import 'partials/tools';
