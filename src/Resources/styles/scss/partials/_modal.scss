@@ -2,10 +2,3 @@
   position:fixed;
   top:10%!important; /* override inline style injected from JS */
 }
-
-@media #{$small-only} {
-  .reveal-modal.open {
-    position: absolute;
-    top: 0!important;
-  }
-}

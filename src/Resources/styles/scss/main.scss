@@ -95,25 +95,31 @@ $font-url: '/fonts';
 /***********************
  *** Idci components ***
  ***********************/
-@import 'partials/global';
-@import 'partials/specific';
-@import 'partials/index';
-@import 'partials/inputEffect';
-@import 'partials/mouseTracker';
-@import 'partials/button';
-@import 'partials/socials';
-@import 'partials/footer';
-@import 'partials/tools';
-@import 'partials/flags';
-@import 'partials/header';
-@import 'partials/team';
-@import 'partials/flash';
-@import 'partials/modal';
-@import 'partials/formErrors';
-@import 'partials/editor';
 @import 'partials/asideNavigationMenu';
+@import 'partials/editor';
+@import 'partials/flags';
+@import 'partials/flash';
+@import 'partials/footer';
+@import 'partials/formErrors';
+@import 'partials/global';
+@import 'partials/header';
+@import 'partials/index';
+@import 'partials/modal';
+@import 'partials/mouseTracker';
+@import 'partials/socials';
+@import 'partials/specific';
+@import 'partials/team';
+@import 'partials/tools';
 
 /*************************************
  *** Idci media queries components ***
  *************************************/
+@import 'partials/media/asideNavigationMenu';
+@import 'partials/media/flash';
+@import 'partials/media/editor';
+@import 'partials/media/footer';
+@import 'partials/media/global';
 @import 'partials/media/header';
+@import 'partials/media/modal';
+@import 'partials/media/specific';
+@import 'partials/media/tools';

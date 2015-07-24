@@ -12,9 +12,3 @@
     display: none !important;
   }
 }
-
-@media #{$medium-only} {
-  #editor {
-    height: 15rem;
-  }
-}

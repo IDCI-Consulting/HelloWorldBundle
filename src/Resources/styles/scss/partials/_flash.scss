@@ -10,10 +10,3 @@
   width: 50%;
   z-index: 99999;
 }
-
-@media #{$small-only} {
-  #flash-message-container {
-    top: 6rem;
-    width: 100%;
-  }
-}

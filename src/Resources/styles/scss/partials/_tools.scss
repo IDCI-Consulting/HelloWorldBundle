@@ -17,18 +17,6 @@
   }
 }
 
-@media #{$medium-only} {
-  .tools-list {
-
-    li {
-      margin-right: 5rem;
-    }
-
-    li:last-child {
-      margin-right: 0;
-    }
-  }
-}
 /**************************
  *** Sprite declaration ***
  **************************/
