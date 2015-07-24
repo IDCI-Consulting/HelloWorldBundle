@@ -1,8 +1,8 @@
 <section id="{% trans %}web-development{% endtrans %}" class="row full-width development">
-    <header class="small-8 medium-10 medium-offset-1 columns accordion-toggle">
+    <header class="small-8 medium-8 medium-push-2 columns accordion-toggle">
         <div class="row">
-            <h3 class="hide-for-small-only medium-12 columns idci-light-blue">{% trans %}We do{% endtrans %}</h3>
-            <h2 class="small-10 medium-12 columns">
+            <h3 class="hide-for-small-only medium-8 medium-push-2 columns">{% trans %}We do{% endtrans %}</h3>
+            <h2 class="small-10 medium-8 medium-push-2 columns">
                 {% trans %}Web development{% endtrans %}
                 <i class="hide-for-medium-up fa fa-comment picture"></i>
             </h2>
@@ -12,12 +12,12 @@
         </div>
     </header>
 
-    <div class="small-12 columns accordion-content">
+    <div class="small-12 medium-8 medium-pull-2 columns accordion-content">
         <div class="row">
-            <div class="hide-for-small-only  medium-12 columns illustration">
+            <div class="hide-for-small-only medium-6 medium-push-3 columns illustration">
                 <pre id="editor"></pre>
             </div>
-            <div class="medium-12 columns idci-content">
+            <div class="medium-8 medium-pull-2 columns idci-content">
                 {% include 'contents/index/development_' ~ app.translator.locale ~ '.html.twig' %}
             </div>
         </div>

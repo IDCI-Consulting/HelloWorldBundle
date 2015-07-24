@@ -6,7 +6,8 @@ $idci-circle-border: 2px;
   position: fixed;
   right: 3rem;
   text-align: right;
-  top: 30%;
+  top: 20%;
+  z-index: 999;
 }
 
 .aside-navigation-link {
@@ -66,5 +67,11 @@ $idci-circle-border: 2px;
         width: $idci-circle-size - $idci-circle-border * 2;
       }
     }
+  }
+}
+
+@media #{$medium-only} {
+  .aside-navigation-menu {
+    font-size: .8rem;
   }
 }

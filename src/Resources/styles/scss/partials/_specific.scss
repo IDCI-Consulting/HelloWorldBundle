@@ -8,11 +8,6 @@ h1.logo {
 
 .idci-content {
   padding: 3rem;
-
-  p {
-    margin: 0 auto;
-    width: 50%;
-  }
 }
 
 #training, #philosophy {
@@ -31,6 +26,13 @@ h1.logo {
 
 section.row {
   width: 100%!important;
+}
+
+@media #{$medium-up} {
+
+  .accordion-content {
+    padding: 3rem;
+  }
 }
 
 @media #{$small-only} {

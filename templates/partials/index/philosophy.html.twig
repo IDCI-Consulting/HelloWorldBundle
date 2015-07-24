@@ -1,15 +1,25 @@
 <section id="{% trans %}philosophy{% endtrans %}" class="row full-width">
-    <header class="small-12 medium-10 medium-offset-1 columns">
-        <h3>{% trans %}Our philosophy{% endtrans %}</h3>
-        <h2 class="idci-green">Opensource</h2>
+    <header class="small-8 medium-8 medium-push-2 columns">
+        <div class="row">
+            <h3 class="hide-for-small-only medium-8 medium-push-2 columns">{% trans %}Our philosophy{% endtrans %}</h3>
+            <h2 class="small-10 medium-8 medium-push-2 columns">
+                Opensource
+                <i class="hide-for-medium-up fa fa-comment picture"></i>
+            </h2>
+            <div class="hide-for-medium-up small-2 columns toggle-icon">
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </div>
     </header>
 
-    <div class="row">
-        <div class="hide-for-small-only  medium-12 columns illustration">
-            <img src="{{ asset('images/formations.jpg') }}" />
-        </div>
-        <div class=" medium-12 columns idci-content">
-            {% include 'contents/index/philosophy_' ~ app.translator.locale ~ '.html.twig' %}
+    <div class="small-12 medium-8 medium-pull-2 columns accordion-content">
+        <div class="row">
+            <div class="hide-for-small-only medium-6 medium-push-3 columns illustration">
+                <img src="{{ asset('images/formations.jpg') }}" />
+            </div>
+            <div class="medium-8 medium-pull-2 columns idci-content">
+                {% include 'contents/index/philosophy_' ~ app.translator.locale ~ '.html.twig' %}
+            </div>
         </div>
     </div>
 </section>
