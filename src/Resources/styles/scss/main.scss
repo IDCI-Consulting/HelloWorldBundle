@@ -90,6 +90,7 @@ $font-url: '/fonts';
 @import "../../../../bower_components/foundation/scss/foundation/components/inline-lists";
 @import "../../../../bower_components/foundation/scss/foundation/components/reveal";
 @import "../../../../bower_components/foundation/scss/foundation/components/forms";
+@import "../../../../bower_components/foundation/scss/foundation/components/type";
 
 /***********************
  *** Idci components ***
@@ -111,3 +112,8 @@ $font-url: '/fonts';
 @import 'partials/formErrors';
 @import 'partials/editor';
 @import 'partials/asideNavigationMenu';
+
+/*************************************
+ *** Idci media queries components ***
+ *************************************/
+@import 'partials/media/header';

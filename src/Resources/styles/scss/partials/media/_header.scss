@@ -1,0 +1,185 @@
+@media #{$small-only} {
+  .header-container {
+    background: $idci-blue;
+    border-bottom: .1rem solid $idci-white;
+    height: 4rem;
+  }
+
+  .logo {
+    background: transparent;
+    height: 4rem;
+    width: 8rem;
+
+    a {
+
+      span {
+        background-image: url(/images/idci_logo.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 6rem;
+        display: inline-block;
+        height: 1.7rem;
+        line-height: 1.5rem;
+        text-align: center;
+        text-indent: -9999px;
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-menu {
+    background: $idci-blue;
+    border-right: 1px solid $idci-white;
+    border-top: 1px solid $idci-blue;
+    display: none;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 3.9rem;
+    width: 15rem;
+
+    ul {
+      font-size: .9rem;
+      line-height: normal;
+      max-height: 22rem;
+      overflow-y: auto;
+
+      li {
+        border-bottom: 1px solid $idci-white;
+        display: block;
+        height: 3rem;
+        text-align: center;
+
+        a {
+          color: $idci-white;
+          display: block;
+          height: 100%;
+          line-height: 3rem;
+
+          &:hover {
+            background: $idci-light-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-flag {
+    height: 4rem;
+  }
+
+  .f-dropdown {
+    position: fixed!important;
+    width: 100%!important;
+    &.open {
+      left: 0!important;
+      top: 3.6rem!important;
+    }
+  }
+
+  .search-icon {
+    height: 4rem;
+    line-height: 4rem;
+    padding: .5rem;
+    width: 3rem;
+
+    a {
+      border-color: $idci-white;
+      color: $idci-white;
+      height: 2rem;
+      margin-top: .5rem;
+      line-height: 1.5rem;
+
+      &:hover {
+        border-color: $idci-light-blue;
+        color: $idci-light-blue;
+
+        i {
+          color: $idci-light-blue;
+        }
+      }
+
+      i {
+        color: $idci-white;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media #{$medium-only} {
+  .logo {
+    height: 100%;
+    margin: 0;
+    width: 8rem;
+
+    a {
+      padding-top: .5rem;
+      width: 100%;
+
+      span {
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 6rem;
+        height: 1.7rem;
+        line-height: 2.5rem;
+        text-indent: -9999px;
+        width: 100%;
+      }
+    }
+  }
+
+  .dropdown.button::after, button.dropdown::after {
+    right: 0;
+  }
+
+  .f-dropdown {
+    position: fixed!important;
+    &.open {
+      left: 82%!important;
+      top: 4.9rem!important;
+      width: 8rem;
+    }
+  }
+}
+
+@media #{$large-only} {
+  .logo {
+    width: 15rem;
+  }
+
+  .nav-menu {
+    a {
+      font-size: .9rem;
+    }
+  }
+
+
+  .langs {
+
+    p {
+      font-size: .6rem;
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        margin-left: 0;
+      }
+    }
+  }
+
+}
+
+@media #{$xlarge-only} {
+  .logo {
+    width: 15rem;
+  }
+
+  .nav-menu {
+    a {
+      font-size: 1rem;
+    }
+  }
+}
