@@ -65,6 +65,6 @@ idci_code_writer:
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/Run4Fun/master/src/R4F/Bundle/SiteBundle/Resources/public/css/style.css
             language: 'css'
-            theme: szolarized_light
+            theme: solarized_light
 
 
