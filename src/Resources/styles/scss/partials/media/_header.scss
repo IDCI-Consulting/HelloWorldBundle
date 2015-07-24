@@ -47,7 +47,9 @@
       li {
         border-bottom: 1px solid $idci-white;
         display: block;
+        float: none;
         height: 3rem;
+        margin: 0;
         text-align: center;
 
         a {
@@ -58,6 +60,7 @@
 
           &:hover {
             background: $idci-light-blue;
+            border: none;
           }
         }
       }
