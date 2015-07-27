@@ -1,0 +1,28 @@
+@media #{$medium-only} {
+  section {
+
+    &.trainings {
+
+      section {
+
+        .experience-content {
+
+          h2 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: .8rem;
+          }
+
+          a {
+            font-size: .7rem;
+            height: 2rem;
+            line-height: .5rem;
+            margin: 0 2rem 0 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -51,7 +51,7 @@ nav {
     a {
       color: $idci-black;
       font-size: .6rem;
-      @include transition(all, 0.2s);
+      @include transition(all, 0.3s);
 
       &:hover {
         color: $idci-green;

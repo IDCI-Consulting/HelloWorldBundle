@@ -25,9 +25,9 @@ h3,
 h4,
 h5,
 h6 {
+  color: $idci-blue;
   font-family: Oswald, sans-serif;
 }
-
 
 h1 {
   height: 100%;
@@ -35,13 +35,16 @@ h1 {
 }
 
 h2, h3 {
-  color: $idci-blue;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 h3 {
   font-weight: normal;
+}
+
+p {
+  color: $idci-blue;
 }
 
 .button {
@@ -68,6 +71,10 @@ section {
   min-height: 100vh;
   padding: 6rem 0 0 0;
   text-align: center;
+
+  img, #editor {
+    height: 15rem;
+  }
 
   em, h3 {
     color: $idci-light-blue;
