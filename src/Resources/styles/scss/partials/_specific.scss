@@ -11,7 +11,7 @@ h1.logo {
 }
 
 #training {
-  margin-top: 5rem;
+  margin: 0;
 }
 
 #training, #philosophy {
@@ -28,11 +28,15 @@ h1.logo {
   background: $idci-dark-grey;
 }
 
+#tools {
+  header {
+    margin-bottom: 4rem;
+  }
+}
+
 section.row {
   width: 100%!important;
 }
-
-
 
 .accordion-content {
   padding: 3rem;

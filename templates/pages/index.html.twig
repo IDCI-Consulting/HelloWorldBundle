@@ -12,18 +12,19 @@
 
 
     <section id="{% trans %}tools{% endtrans %}" class="row tools">
-            <header>
-                <h2>
-                    {% trans %}Our tools{% endtrans %}
-                </h2>
-            </header>
-
+        <header>
+            <h2>
+                {% trans %}Our tools{% endtrans %}
+            </h2>
+        </header>
+        <div class="medium-2 columns">
             {%
                 include 'partials/index/tools.html.twig'
                 with {
                     'class': 'backend',
                     'title': 'Backend',
                     'images': {
+                        'php': 'https://secure.php.net/',
                         'symfony1': 'http://symfony.com/legacy',
                         'symfony2': 'http://symfony.com/',
                         'node': 'https://nodejs.org/',
@@ -31,6 +32,9 @@
                     }
                 }
             %}
+        </div>
+
+        <div class="medium-2 columns">
             {%
                 include 'partials/index/tools.html.twig'
                 with {
@@ -44,6 +48,26 @@
                     }
                 }
             %}
+        </div>
+
+        <div class="medium-3 columns">
+            {%
+            include 'partials/index/tools.html.twig'
+            with {
+            'class': 'infrastructure',
+            'title': 'Infrastructure',
+            'images': {
+            'varnish': 'https://www.varnish-cache.org/',
+            'proxmox': 'https://www.proxmox.com/en/',
+            'ansible': 'http://www.ansible.com/home',
+            'elk': 'http://www.ansible.com/home',
+            'docker': 'http://www.ansible.com/home',
+            }
+            }
+            %}
+        </div>
+
+        <div class="medium-2 columns">
             {%
                 include 'partials/index/tools.html.twig'
                 with {
@@ -53,23 +77,27 @@
                         'html5-css3': 'http://www.w3.org/TR/html5/',
                         'bootstrap': 'http://getbootstrap.com/',
                         'foundation': 'http://foundation.zurb.com/',
-                        'jquery': 'https://jquery.com/'
+                        'angular': 'https://angularjs.org/',
+                        'sass': 'http://sass-lang.com/',
                     }
                 }
             %}
+        </div>
+
+        <div class="medium-2 medium-pull-1 columns">
             {%
-                include 'partials/index/tools.html.twig'
-                with {
-                    'class': 'infrastructure',
-                    'title': 'Infrastructure',
-                    'images': {
-                        'elk': 'https://www.elastic.co/',
-                        'varnish': 'https://www.varnish-cache.org/',
-                        'docker': 'https://www.docker.com/',
-                        'proxmox': 'https://www.proxmox.com/en/'
-                    }
+            include 'partials/index/tools.html.twig'
+            with {
+                'class': 'qualite',
+                'title': 'Quality',
+                'images': {
+                    'php-unit': 'https://phpunit.de/',
+                    'gitlab': 'https://about.gitlab.com/',
+                    'redmine': 'http://www.redmine.org/projects/redmine/wiki',
                 }
+            }
             %}
+        </div>
     </section>
 </div>
 {% endblock %}

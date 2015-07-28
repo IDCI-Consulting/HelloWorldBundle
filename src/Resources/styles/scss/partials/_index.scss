@@ -1,15 +1,16 @@
 .arrow {
   img {
     height: 100%;
+    margin: 0 1rem;
     vertical-align: top;
     width: 2rem;
   }
 }
 
-.trainings {
+h3.trainings {
   color: $idci-blue!important;
   display: inline-block;
-  margin: 0 2rem;
+  margin: 0;
 }
 
 .courses {
