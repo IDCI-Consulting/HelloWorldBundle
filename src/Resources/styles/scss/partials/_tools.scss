@@ -13,13 +13,16 @@
   cursor: pointer;
   height: 2rem;
   position: absolute;
-  width: 100%;
 
-  &.next {
+  &.next.bottom,  &.previous.top {
+    width: 100%;
+  }
+
+  &.next.bottom {
     bottom: 0;
   }
 
-  &.previous {
+  &.previous.top {
     top: 0;
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);

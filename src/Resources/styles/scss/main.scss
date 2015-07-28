@@ -32,7 +32,9 @@
 /***********************
  *** Idci components ***
  ***********************/
+@import 'partials/activities';
 @import 'partials/asideNavigationMenu';
+@import 'partials/browser';
 @import 'partials/editor';
 @import 'partials/flags';
 @import 'partials/flash';
@@ -50,6 +52,7 @@
 /*************************************
  *** Idci media queries components ***
  *************************************/
+@import 'partials/media/activities';
 @import 'partials/media/asideNavigationMenu';
 @import 'partials/media/flash';
 @import 'partials/media/editor';

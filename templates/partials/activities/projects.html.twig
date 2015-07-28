@@ -1,0 +1,38 @@
+<section id="{% trans %}projects{% endtrans %}" class="row full-width">
+    <header class="small-8 medium-12 columns accordion-toggle">
+        <div class="row">
+            <h2 class="small-10 medium-12 columns">
+                {% trans %}Our projects{% endtrans %}
+                <i class="hide-for-medium-up fa fa-comment picture"></i>
+            </h2>
+            <div class="hide-for-medium-up small-2 columns toggle-icon">
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="medium-12 columns accordion-content">
+        <div class="projects">
+            <div class="row project">
+                <div class="medium-6 large-4 columns">
+                    <div class="browser-mockup">
+                        <img src="{{ asset('images/moniteur.png') }}" />
+                    </div>
+                </div>
+                <div class="medium-6 large-8 columns">
+                    {% include 'contents/activities/moniteur_' ~ app.translator.locale ~ '.html.twig' %}
+                </div>
+            </div>
+            <div class="row project">
+                <div class="medium-6 large-4 columns">
+                    <div class="browser-mockup">
+                        <img src="{{ asset('images/body.png') }}" />
+                    </div>
+                </div>
+                <div class="medium-6 large-8 columns">
+                    {% include 'contents/activities/bodysculpt_' ~ app.translator.locale ~ '.html.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

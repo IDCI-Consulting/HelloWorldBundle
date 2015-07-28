@@ -101,6 +101,7 @@ $intlApp
         }
     )
     ->before($buildLocaleLinks)
+    ->before($buildAsideMenu)
     ->bind('activities')
 ;
 

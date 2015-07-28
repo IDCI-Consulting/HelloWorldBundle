@@ -1,0 +1,72 @@
+.contribution {
+  color: $idci-green;
+}
+
+.partner {
+  background-image: url("/images/partners.png");
+  display: block;
+  margin: 1rem auto;
+  text-indent: -9999px;
+
+  &.bodysculpt-logo {
+    background-position: -140px -139px;
+    width: 139px;
+    height: 139px;
+  }
+  &.inta35-logo {
+    background-position: 0 0;
+    width: 141px;
+    height: 138px;
+  }
+  &.l-appart-logo {
+    background-position: -141px 0;
+    width: 140px;
+    height: 138px;
+  }
+  &.lemoniteur-logo {
+    background-position: 0 -139px;
+    width: 140px;
+    height: 139px;
+  }
+}
+
+.slick-arrow {
+
+  &.next.right {
+    right: 0;
+    top: 50%;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  &.previous.left {
+    left: 0;
+    top: 50%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+.project {
+  padding: 1rem 0;
+}
+
+.project-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: left;
+
+  &.moniteur {
+    color: $moniteur-color;
+  }
+
+  &.bodysculpt {
+    color: $bodysculpt-color;
+  }
+}
+
+.project-description {
+  text-align: justify;
+}

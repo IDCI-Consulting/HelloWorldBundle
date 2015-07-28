@@ -1,37 +1,7 @@
 {% extends "layout.html.twig" %}
 
 {% block main_content %}
-    <article>
-        <header>
-            <h1 class="title activities">
-                <i class="show-for-small fa fa-database"></i>
-                {% trans %}Our Activities{% endtrans %}
-            </h1>
-        </header>
-
-        {%
-            include 'partials/activities/activity.html.twig'
-            with {
-                'class': 'clients',
-                'title': 'Clients',
-                'content': 'ils sont gentils nos clients'
-            }
-        %}
-        {%
-            include 'partials/activities/activity.html.twig'
-            with {
-                'class': 'projects',
-                'title': 'Projects',
-                'content': 'ils sont magnifique nos projets!!'
-            }
-        %}
-        {%
-            include 'partials/activities/activity.html.twig'
-            with {
-                'class': 'contributions',
-                'title': 'Open Source Contribution',
-                'content': 'Chez IDCI-Consulting, on aime contribuer et faire avancer le web!'
-            }
-        %}
-    </article>
+    {% include 'partials/asideMenu.html.twig' %}
+    {% include 'partials/activities/clients.html.twig' %}
+    {% include 'partials/activities/projects.html.twig' %}
 {% endblock %}
