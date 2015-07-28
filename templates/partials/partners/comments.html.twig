@@ -1,0 +1,28 @@
+<section id="{% trans %}comments{% endtrans %}" class="row full-width">
+    <header class="small-8 medium-12 columns accordion-toggle">
+        <div class="row">
+            <h2 class="small-10 medium-12 columns">
+                {% trans %}They talk about us{% endtrans %}
+                <i class="hide-for-medium-up fa fa-comment picture"></i>
+            </h2>
+            <div class="hide-for-medium-up small-2 columns toggle-icon">
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="medium-12 columns accordion-content">
+        <div class="comments">
+            <div class="row comment">
+                <div class="medium-6 large-4 columns">
+                    <div class="browser-mockup">
+                        <img src="{{ asset('images/body.png') }}" />
+                    </div>
+                </div>
+                <div class="medium-6 large-8 columns">
+                    {% include 'contents/partners/bodysculpt_comment_' ~ app.translator.locale ~ '.html.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

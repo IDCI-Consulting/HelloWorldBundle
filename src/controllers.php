@@ -92,7 +92,7 @@ $intlApp
 // Activities page
 $intlApp
     ->get(
-        '/activity',
+        '/activities',
         function (Request $request, $_locale) use ($app) {
 
             return $app['twig']->render(
@@ -117,6 +117,7 @@ $intlApp
         }
     )
     ->before($buildLocaleLinks)
+    ->before($buildAsideMenu)
     ->bind('partners')
 ;
 

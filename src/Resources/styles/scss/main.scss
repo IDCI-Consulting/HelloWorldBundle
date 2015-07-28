@@ -25,9 +25,7 @@
 @import "../../../../bower_components/foundation/scss/foundation/components/offcanvas";
 @import "../../../../bower_components/foundation/scss/foundation/components/inline-lists";
 @import "../../../../bower_components/foundation/scss/foundation/components/reveal";
-@import "../../../../bower_components/foundation/scss/foundation/components/forms";
 @import "../../../../bower_components/foundation/scss/foundation/components/type";
-@import "../../../../bower_components/foundation/scss/foundation/components/orbit";
 
 /***********************
  *** Idci components ***
@@ -40,11 +38,13 @@
 @import 'partials/flash';
 @import 'partials/footer';
 @import 'partials/formErrors';
+@import 'partials/formInputs';
 @import 'partials/global';
 @import 'partials/header';
 @import 'partials/index';
 @import 'partials/modal';
 @import 'partials/mouseTracker';
+@import 'partials/partners';
 @import 'partials/specific';
 @import 'partials/team';
 @import 'partials/tools';

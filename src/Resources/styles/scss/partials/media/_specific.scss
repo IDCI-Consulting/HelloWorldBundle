@@ -1,4 +1,21 @@
+@media #{$large-up} {
+  section {
+    header {
+      h2 {
+        letter-spacing: 1rem;
+      }
+    }
+  }
+}
+
 @media #{$medium-only} {
+  section {
+    header {
+      h2 {
+        letter-spacing: .5rem;
+      }
+    }
+  }
 
   .accordion-content {
     padding: 1rem;
@@ -10,7 +27,7 @@
 }
 
 @media #{$small-only} {
-  #training, #clients {
+  #training, #clients, #partner, .team {
     margin-top: 4rem;
   }
 

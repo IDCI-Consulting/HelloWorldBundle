@@ -1,0 +1,55 @@
+.partner {
+  background-image: url("/images/partners.jpg");
+  display: block;
+  margin: 1rem auto;
+  text-indent: -9999px;
+
+  &.mbcreation-logo {
+    background-position: -280px 0;
+    width: 140px;
+    height: 140px;
+
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+
+  &.mahii-logo {
+    background-position: -280px -140px;
+    width: 140px;
+    height: 140px;
+
+    &:hover {
+      background-position: 0 -140px;
+    }
+  }
+
+  &.profilcreatif-logo {
+    background-position: -280px -280px;
+    width: 140px;
+    height: 140px;
+
+    &:hover {
+      background-position: 0 -280px;
+    }
+  }
+
+  &.arcencielophile-logo {
+    background-position: -280px -420px;
+    width: 140px;
+    height: 140px;
+
+    &:hover {
+      background-position: 0 -420px;
+    }
+  }
+}
+
+ul.partners {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 2rem;
+  }
+}

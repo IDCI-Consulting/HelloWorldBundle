@@ -10,6 +10,19 @@
 
 @media #{$small-only} {
 
+  .team {
+
+    header {
+
+      h2 {
+        margin: 0;
+
+        i{
+          display: inline!important;
+        }
+      }
+    }
+  }
   .member  {
 
     header {
