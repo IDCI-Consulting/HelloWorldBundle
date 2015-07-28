@@ -1,0 +1,36 @@
+@media #{$medium-only} {
+  .member-name, .job-position {
+    font-size: 1rem;
+  }
+
+  .member-description {
+    font-size: .8rem;
+  }
+}
+
+@media #{$small-only} {
+
+  .member  {
+
+    header {
+      background: 0 0;
+      padding: 0;
+
+      h2 {
+        color: $idci-light-blue;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+
+    }
+  }
+
+  .member-name, .job-position {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .member-description {
+    font-size: .8rem;
+  }
+}

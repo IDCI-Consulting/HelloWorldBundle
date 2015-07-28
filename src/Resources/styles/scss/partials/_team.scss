@@ -1,33 +1,25 @@
 /*****************
  *** Team Page ***
  *****************/
-.team {
+section.team {
+  height: 100%;
+}
 
-  .member  {
+.member-name {
+  color: $idci-blue;
+}
 
-    header {
-      background: 0 0;
-      padding: 0;
+.job-position {
+  color: $idci-green;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
 
-      h2 {
-        color: $idci-light-blue;
-        font-weight: normal;
-        margin-bottom: 0;
-      }
+.member-description {
+  padding-top: 2rem;
+  text-align: justify;
+}
 
-    }
-
-    .skills {
-      margin: 1rem 0;
-
-      .skill {
-        padding-top: .4rem;
-
-        img {
-          height: 1rem;
-          margin-right: .5rem;
-        }
-      }
-    }
-  }
+.see-cv {
+  font-family: Oswald, sans-serif;
 }

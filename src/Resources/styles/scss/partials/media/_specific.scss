@@ -19,7 +19,6 @@
     border: .05rem solid $idci-white;
     font-weight: 300;
     height: 5rem;
-    padding: 0 2rem;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
@@ -38,7 +37,6 @@
       font-size: 1rem;
       height: 100%;
       margin: 0;
-      padding: 0;
 
       i.picture {
         color: #fff;
@@ -57,9 +55,8 @@
       font-size: 1.5rem;
       height: 5rem;
       line-height: 5rem;
-      margin-left: 1px;
       position: absolute;
-      right: 20px;
+      right: 0;
       text-align: center;
       top: 0;
 

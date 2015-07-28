@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block main_content %}
-<article class="row team">
+<section class="row team">
     <header>
         <h1 class="title team">
             <i class="show-for-small fa fa-user"></i>
@@ -16,29 +16,34 @@
     </header>
 {% include 'partials/asideMenu.html.twig' %}
 
-    {%
-        include 'partials/team/brahim.html.twig'
-        with {
-            'firstName': 'brahim',
-            'skills': [
-                'Symfony, Silex, MeteorJS, NodeJS',
-                'AngularJS, jQuery, CSS, HTML',
-                'Nginx, Apache, Docker',
-                'Sql, NoSql'
-            ]
-        }
-    %}
 
     {%
     include 'partials/team/gabriel.html.twig'
         with {
             'firstName': 'gabriel',
-            'skills': [
-                'test',
-                'test2',
-                'test3'
-            ],
         }
     %}
-</article>
+
+    {%
+
+    include 'partials/team/frederic.html.twig'
+        with {
+            'firstName': 'frederic',
+        }
+    %}
+
+    {%
+    include 'partials/team/baptiste.html.twig'
+        with {
+            'firstName': 'baptiste',
+        }
+    %}
+
+    {%
+        include 'partials/team/brahim.html.twig'
+        with {
+            'firstName': 'brahim',
+        }
+    %}
+</section>
 {% endblock %}

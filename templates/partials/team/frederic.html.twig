@@ -1,0 +1,17 @@
+<article class="small-12 medium-4 columns member">
+    <header>
+        <h3 class="member-name">Frédéric Bondaz</h3>
+
+        <p class="job-position">{% trans %}Manager{% endtrans %}</p>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="image-holder {{ firstName }}">
+            <div class="profile-picture front"></div>
+        </div>
+    </div>
+
+    {% include 'contents/team/frederic_' ~ app.translator.locale ~ '.html.twig' %}
+
+    <a href="{{ path('cv', {_locale: app.translator.locale, 'name': 'frederic_bondaz'}) }}" class="button small small-12 see-cv">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
+</article>
