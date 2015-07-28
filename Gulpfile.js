@@ -16,10 +16,10 @@ src['template']      = "templates/**/*";
 src['script']        = "src/Resources/js/**/*.js";
 src['plugins']       = "src/Resources/plugins/**/*";
 src['manifest']      = "src/Resources/manifest/";
-src['images']        = "web/images/brahim/*.jpg";
+src['images']        = "web/images/spritify/*.png";
 web['style']         = "web/css/";
 web['script']        = "web/js/";
-web['images']        = "web/images/brahim/";
+web['images']        = "web/images/spritify/";
 web['plugins']       = "web/plugins/";
 
 var chmod            = require('gulp-chmod'),
@@ -143,7 +143,7 @@ gulp.task('reload-templates', function() {
 gulp.task('sprite', function () {
     gulp.src(src['images'])
         .pipe(spritesmith({
-            imgName: 'sprite.jpg',
+            imgName: 'sprite.png',
             cssName: 'sprite.css'
         }))
         .pipe(gulp.dest(web['images']))
