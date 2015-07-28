@@ -1,6 +1,6 @@
+<h3 class="capitalize sub-title">{{ title|trans }}</h3>
 <div class="{{ class }}">
-    <h3 class="capitalize sub-title">{{ title|trans }}</h3>
-    <ul class="tools-list">
+    <ul class="tools-list {{ title }}">
         {% for techno, url in images %}
             <li>
                 <a href="{{ url }}" target="_blank" class="tools-sprite {{ techno }}">{{ techno }}</a>
@@ -8,3 +8,18 @@
         {% endfor %}
     </ul>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var liHeight = 0;
+
+        $('.tools-list.{{ title }}').slick({
+            nextArrow: '<img class="slick-arrow next" src="{{ asset('images/slick_arrow.svg') }}"/>',
+            prevArrow: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            speed: 300,
+            vertical: true
+        });
+    });
+</script>

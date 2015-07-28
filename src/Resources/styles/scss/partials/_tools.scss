@@ -1,198 +1,264 @@
 .tools-list {
-  display: table;
-  margin-left: 0;
+  height: 30rem;
   padding: 2rem 0;
+  position: relative;
   width: 100%;
 
-  .tools-sprite {
-      float: left;
-      list-style-type: none;
-      margin-right: 8rem;
-    }
+  li {
+    width: 140px;
+  }
+}
 
-  li:last-child {
-    a {
-      margin-right: 0;
-    }
+.slick-arrow {
+  cursor: pointer;
+  height: 2rem;
+  position: absolute;
+  width: 100%;
+
+  &.next {
+    bottom: 0;
+  }
+
+  &.previous {
+    top: 0;
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
 /**************************
  *** Sprite declaration ***
  **************************/
-.tools-sprite {
-  background: url(/images/technos.png) no-repeat;
+a.tools-sprite {
+  display: block;
+  background: url("/images/technos.jpg") no-repeat;
+  margin: 2rem auto 0 auto;
   text-indent: -9999px;
-}
+  width: 100px;
 
-.symfony1 {
-  background-position: 0 -189px;
-  height: 40px;
-  width: 140px;
+  &.php {
+    background-position: -200px 0;
+    height: 52px;
 
-  &:hover {
-    background-position: 0 -49px;
+    &:hover {
+      background-position: 0 0;
+    }
   }
-}
 
-.symfony2 {
-  background-position: -140px -185px;
-  height: 50px;
-  width: 140px;
+  &.symfony1 {
+    background-position: -200px -852px;
+    height: 27px;
 
-  &:hover {
-    background-position: -140px -45px;
+    &:hover {
+      background-position: 0px -852px;
+    }
   }
-}
 
-.node {
-  background-position: -280px -190px;
-  height: 40px;
-  width: 140px;
+  &.symfony2 {
+    background-position: -200px -818px;
+    height: 33px;
 
-  &:hover {
-    background-position: -280px -50px;
+    &:hover {
+      background-position: 0px -818px;
+    }
   }
-}
 
-.meteor {
-  background-position: -420px -160px;
-  height: 100px;
-  width: 140px;
+  &.node {
+    background-position: -200px -564px;
+    height: 29px;
 
-  &:hover {
-    background-position: -420px -20px;
+    &:hover {
+      background-position: 0 -564px;
+    }
   }
-}
 
-.mysql {
-  background-position: -560px -160px;
-  height: 75px;
-  width: 140px;
+  &.meteor {
+    background-position: -200px -594px;
+    height: 22px;
 
-  &:hover {
-    background-position: -560px -20px;
+    &:hover {
+      background-position: 0 -594px;
+    }
   }
-}
 
-.mongodb {
-  background-position: -700px -180px;
-  height: 45px;
-  width: 140px;
+  &.mysql {
+    background-position: -200px -512px;
+    height: 52px;
 
-  &:hover {
-    background-position: -700px -40px;
+    &:hover {
+      background-position: 0 -512px;
+    }
   }
-}
 
-.postgresql {
-  background-position: -840px -180px;
-  height: 55px;
-  width: 140px;
+  &.mongodb {
+    background-position: -200px -369px;
+    height: 29px;
 
-  &:hover {
-    background-position: -840px -40px;
+    &:hover {
+      background-position: 0 -369px;
+    }
   }
-}
 
-.redis {
-  background-position: -980px -185px;
-  height: 50px;
-  width: 140px;
+  &.postgresql {
+    background-position: -200px -699px;
+    height: 34px;
 
-  &:hover {
-    background-position: -980px -45px;
+    &:hover {
+      background-position: 0 -699px;
+    }
   }
-}
 
-.rabbitmq {
-  background-position: -1120px -185px;
-  height: 45px;
-  width: 140px;
+  &.redis {
+    background-position: -200px -766px;
+    height: 34px;
 
-  &:hover {
-    background-position: -1120px -45px;
+    &:hover {
+      background-position: 0 -766px;
+    }
   }
-}
 
-.html5-css3 {
-  background-position: -1260px -165px;
-  height: 94px;
-  width: 140px;
+  &.rabbitmq {
+    background-position: -200px -746px;
+    height: 20px;
 
-  &:hover {
-    background-position: -1260px -25px;
+    &:hover {
+      background-position: 0 -746px;
+    }
   }
-}
 
-.bootstrap {
-  background-position: -1400px -170px;
-  height: 75px;
-  width: 140px;
+  &.html5-css3 {
+    background-position: -200px -399px;
+    height: 65px;
 
-  &:hover {
-    background-position: -1400px -30px;
+    &:hover {
+      background-position: 0 -399px;
+    }
   }
-}
 
-.foundation {
-  background-position: -1540px -180px;
-  height: 60px;
-  width: 140px;
+  &.bootstrap {
+    background-position: -200px -159px;
+    height: 51px;
 
-  &:hover {
-    background-position: -1540px -40px;
+    &:hover {
+      background-position: 0 -159px;
+    }
   }
-}
 
-.jquery {
-  background-position: -1680px -190px;
-  height: 40px;
-  width: 140px;
+  &.foundation {
+    background-position: -200px -285px;
+    height: 37px;
 
-  &:hover {
-    background-position: -1680px -50px;
+    &:hover {
+      background-position: 0 -285px;
+    }
   }
-}
 
-.elk {
-  background-position: -1820px -140px;
-  height: 145px;
-  width: 140px;
+  &.jquery {
+    background-position: -200px -465px;
+    height: 22px;
 
-  &:hover {
-    background-position: -1820px 0;
-    height: 140px;
-    margin-bottom: 5px;
+    &:hover {
+      background-position: 0 -465px;
+    }
   }
-}
 
-.varnish {
-  background-position: -1960px -180px;
-  height: 60px;
-  width: 140px;
+  &.elk {
+    // For now we use another sprite to get elk logo
+    background: url("/images/technos.png") no-repeat;
+    background-position: -1820px -140px;
+    height: 145px;
+    width: 140px;
 
-  &:hover {
-    background-position: -1960px -40px;
+    &:hover {
+      background-position: -1820px 0;
+      height: 140px;
+      margin-bottom: 5px;
+    }
   }
-}
 
-.docker {
-  background-position: -2100px -190px;
-  height: 40px;
-  width: 140px;
+  &.varnish {
+    background-position: -200px -880px;
+    height: 42px;
 
-  &:hover {
-    background-position: -2100px -50px;
+    &:hover {
+      background-position: 0 -880px;
+    }
   }
-}
 
-.proxmox {
-  background-position: -2240px -200px;
-  height: 25px;
-  width: 140px;
+  &.docker {
+    // For now we use another sprite to get elk logo
+    background: url("/images/technos.png") no-repeat;
+    background-position: -2100px -190px;
+    height: 40px;
+    width: 140px;
 
-  &:hover {
-    background-position: -2240px -60px;
+    &:hover {
+      background-position: -2100px -50px;
+    }
   }
+
+  &.proxmox {
+    background-position: -200px -733px;
+    height: 14px;
+
+    &:hover {
+      background-position: 0 -733px;
+    }
+  }
+
+  &.angular {
+    background-position: -200px -54px;
+    height: 24px;
+
+    &:hover {
+      background-position: 0 -54px;
+    }
+  }
+
+  &.gitlab {
+    background-position: -200px -322px;
+    height: 46px;
+
+    &:hover {
+      background-position: 0 -322px;
+    }
+  }
+
+  &.redmine {
+    background-position: -200px -800px;
+    height: 17px;
+
+    &:hover {
+      background-position: 0 -800px;
+    }
+  }
+
+  &.php-unit {
+    background-position: -200px -616px;
+    height: 83px;
+
+    &:hover {
+      background-position: 0 -616px;
+    }
+  }
+
+  &.ansible {
+    background-position: -200px -78px;
+    height: 81px;
+
+    &:hover {
+      background-position: 0 -78px;
+    }
+  }
+
+  &.sass {
+    background-position: -200px -210px;
+    height: 75px;
+
+    &:hover {
+      background-position: 0 -210px;
+    }
+  }
+
 }
