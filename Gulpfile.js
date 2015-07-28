@@ -7,7 +7,8 @@ var src              = [],
             jquery: "bower_components/foundation/js/vendor/jquery.js",
             foundation: "bower_components/foundation/js/foundation.min.js"
         }
-    }
+    },
+    slick = 'bower_components/slick-carousel/slick/'
 ;
 
 src['style']         = "src/Resources/styles/**/*.scss";
@@ -57,7 +58,7 @@ gulp.task('styles', function() {
     // delete all css files
     del(web['style']+'/*.css');
     // build css files
-    gulp.src([src['style']])
+    gulp.src([src['style'], slick+'slick.scss'])
         .pipe(sass({ errLogToConsole: true }))
         .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(concat({ path: 'app.min.css'}))
@@ -73,7 +74,7 @@ gulp.task('styles', function() {
 // Task to install scripts in a dev environment
 gulp.task('dev-scripts', function(cb) {
     // move js files
-    gulp.src([src['script']])
+    gulp.src([src['script'], slick+'slick.js'])
         /*.pipe(jshint())
         .pipe(jshint.reporter('default'))*/
         .pipe(gulp.dest(web['script']))
@@ -92,7 +93,7 @@ gulp.task('dev-scripts', function(cb) {
 gulp.task('prod-scripts', function(cb) {
     // delete all css files
     del(web['script']+'/*.js');
-    gulp.src([foundation.script.foundation, src['script']])
+    gulp.src([foundation.script.foundation, src['script'], slick+'slick.js'])
         .pipe(uglify())
         .pipe(concat({ path: 'app.min.js'}))
         .pipe(rev())
