@@ -24,26 +24,25 @@
   margin: 0;
 
   a {
-    display: inline-block;
+    display: block;
     height: inherit;
+    position: relative;
     width: 100%;
 
-    span {
-      background-image: url("/images/idci_logo.png");
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: 13rem;
-      display: inline-block;
-      height: 3.7rem;
-      text-align: center;
-      text-indent: -9999px;
-      width: 100%;
+    img {
+      position: absolute;
+      left: 50%;
+      margin-left: -50px;
+      margin-top: -15px;
+      top: 50%;
     }
   }
 }
 
 nav {
-  text-transform: capitalize;
+  font-family: Oswald, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 
   ul {
     line-height: 4.8rem;

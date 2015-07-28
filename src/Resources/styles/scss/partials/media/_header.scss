@@ -1,3 +1,86 @@
+@media #{$xlarge-only} {
+  .logo {
+    width: 15rem;
+
+    a {
+
+      img {
+        left: 50%;
+        margin-left: -80px;
+        margin-top: -25px;
+        top: 50%;
+        width: 10rem;
+      }
+    }
+  }
+
+  .nav-menu {
+    a {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media #{$large-only} {
+  .logo {
+    width: 15rem;
+
+    a {
+
+      img {
+        left: 50%;
+        margin-left: -80px;
+        margin-top: -25px;
+        top: 50%;
+        width: 10rem;
+      }
+    }
+  }
+
+  .nav-menu {
+    a {
+      font-size: .9rem;
+    }
+  }
+
+
+  .langs {
+
+    p {
+      font-size: .6rem;
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media #{$medium-only} {
+  .logo {
+    height: 100%;
+    margin: 0;
+    width: 8rem;
+  }
+
+  .dropdown.button::after, button.dropdown::after {
+    right: 0;
+  }
+
+  .f-dropdown {
+    position: fixed!important;
+    &.open {
+      left: 82%!important;
+      top: 4.9rem!important;
+      width: 8rem;
+    }
+  }
+}
+
 @media #{$small-only} {
   .header-container {
     background: $idci-blue;
@@ -9,22 +92,6 @@
     background: transparent;
     height: 4rem;
     width: 8rem;
-
-    a {
-
-      span {
-        background-image: url(/images/idci_logo.png);
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: 6rem;
-        display: inline-block;
-        height: 1.7rem;
-        line-height: 1.5rem;
-        text-align: center;
-        text-indent: -9999px;
-        width: 100%;
-      }
-    }
   }
 
   .nav-menu {
@@ -107,83 +174,6 @@
         color: $idci-white;
         font-size: 1rem;
       }
-    }
-  }
-}
-
-@media #{$medium-only} {
-  .logo {
-    height: 100%;
-    margin: 0;
-    width: 8rem;
-
-    a {
-      padding-top: .5rem;
-      width: 100%;
-
-      span {
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        background-size: 6rem;
-        height: 1.7rem;
-        line-height: 2.5rem;
-        text-indent: -9999px;
-        width: 100%;
-      }
-    }
-  }
-
-  .dropdown.button::after, button.dropdown::after {
-    right: 0;
-  }
-
-  .f-dropdown {
-    position: fixed!important;
-    &.open {
-      left: 82%!important;
-      top: 4.9rem!important;
-      width: 8rem;
-    }
-  }
-}
-
-@media #{$large-only} {
-  .logo {
-    width: 15rem;
-  }
-
-  .nav-menu {
-    a {
-      font-size: .9rem;
-    }
-  }
-
-
-  .langs {
-
-    p {
-      font-size: .6rem;
-    }
-
-    ul {
-      margin: 0;
-
-      li {
-        margin-left: 0;
-      }
-    }
-  }
-
-}
-
-@media #{$xlarge-only} {
-  .logo {
-    width: 15rem;
-  }
-
-  .nav-menu {
-    a {
-      font-size: 1rem;
     }
   }
 }
