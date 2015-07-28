@@ -29,7 +29,6 @@ $idci-circle-border: 2px;
       left: $idci-circle-size / 4;
       position: absolute;
       top: $idci-circle-size / 4;
-      transition: all 0.3s ease;
       width: $idci-circle-size / 2;
       z-index: 200;
     }
@@ -43,7 +42,6 @@ $idci-circle-border: 2px;
       left: $idci-circle-size / 3;
       position: absolute;
       top: $idci-circle-size / 3;
-      transition: all 0.3s ease;
       width: $idci-circle-size / 4;
       z-index: 100;
     }

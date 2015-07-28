@@ -2,7 +2,7 @@
  *** Footer ***
  **************/
 
-.idci-mini-footer a, .close-footer {
+.close-footer {
     color: $idci-blue;
     font-size: 2rem;
 
@@ -12,16 +12,30 @@
 }
 
 .idci-mini-footer {
-  background: $idci-dark-grey;
-  bottom: 0;
-  border-top-left-radius: 50%;
+  background: none;
+  border: .2rem solid $idci-blue;
+  bottom: 2rem;
+  cursor: pointer;
   height: 3rem;
   line-height: 3.5rem;
   position: fixed;
-  right: 0;
+  right: 2rem;
   text-align: center;
-  width: 3rem;
+  width: 6rem;
   z-index: 9999999;
+
+  a {
+    color: $idci-blue;
+    font-size: 2rem;
+  }
+
+  &:hover {
+    border-color: $idci-light-blue;
+
+    a {
+      color: $idci-light-blue;
+    }
+  }
 }
 
 .close-footer {
