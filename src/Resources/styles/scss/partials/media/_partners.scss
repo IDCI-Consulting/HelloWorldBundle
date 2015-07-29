@@ -1,0 +1,32 @@
+@media #{$small-only} {
+  .partner {
+    background-image: url("/images/partners.jpg");
+    display: block;
+    margin: 1rem auto;
+    text-indent: -9999px;
+
+    &.mbcreation-logo {
+      background-position: 0 0;
+      width: 140px;
+      height: 140px;
+    }
+
+    &.mahii-logo {
+      background-position: 0 -140px;
+      width: 140px;
+      height: 140px;
+    }
+
+    &.profilcreatif-logo {
+      background-position: 0 -280px;
+      width: 140px;
+      height: 140px;
+    }
+
+    &.arcencielophile-logo {
+      background-position: 0 -420px;
+      width: 140px;
+      height: 140px;
+    }
+  }
+}

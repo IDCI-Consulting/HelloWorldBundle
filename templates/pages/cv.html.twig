@@ -1,8 +1,15 @@
 {% extends 'layout.html.twig' %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'team'
+    } %}
+{% endblock %}
+
 {% block main_content %}
     <div class="row">
-        <div class="small-12 columns">
+        <div class="small-12 columns cv">
             {% include 'partials/cv/cvRaw.html.twig' with {'cv': cv} %}
             <a class="button small export-cv" href="{{ path('cv', {'_locale': app.translator.locale, 'name': name, '_format': 'pdf'}) }}">{% trans %}Download{% endtrans %}</a>
         </div>

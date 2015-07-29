@@ -119,6 +119,15 @@
         margin: 0;
         text-align: center;
 
+        &.active {
+
+          a {
+            background-color: $idci-light-blue;
+            color: $idci-white;
+            border: none;
+          }
+        }
+
         a {
           color: $idci-white;
           font-size: .8rem;

@@ -1,9 +1,11 @@
 .course-box {
   border: .2rem solid $idci-dark-grey;
   height: 20rem;
+  margin: 1rem auto;
   text-align: center;
+  width: 25rem;
 
-  img  {
+  img   {
     border-bottom: .2rem solid $idci-dark-grey;
   }
 
