@@ -1,5 +1,12 @@
 {% extends "layout.html.twig" %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'contact'
+    } %}
+{% endblock %}
+
 {% block main_content %}
 <section class="row team">
     <header>

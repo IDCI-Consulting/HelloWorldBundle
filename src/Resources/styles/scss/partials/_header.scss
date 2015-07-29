@@ -47,6 +47,14 @@ nav {
   ul {
     line-height: 4.8rem;
 
+    li.active {
+
+      a {
+        color: $idci-green;
+        border-bottom: .2rem solid $idci-green;
+      }
+    }
+
     a {
       color: $idci-black;
       font-size: .6rem;

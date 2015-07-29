@@ -6,6 +6,13 @@
 <script src="{{ asset('js/headMouseTracker/initImages.js') }}"></script>
 {% endblock %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'team'
+    } %}
+{% endblock %}
+
 {% block main_content %}
 <section class="row team">
     <header>

@@ -1,5 +1,12 @@
 {% extends "layout.html.twig" %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'partners'
+    } %}
+{% endblock %}
+
 {% block main_content %}
     {% include 'partials/asideMenu.html.twig' %}
     {% include 'partials/partners/partners.html.twig' %}
