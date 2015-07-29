@@ -1,0 +1,33 @@
+.tabs {
+  .tab-title {
+
+    a {
+      background-color: transparent;
+      border-bottom: .2rem solid $idci-light-blue;
+      color: $idci-blue;
+      font-family: Oswald, sans-serif;
+      margin: 1rem 1rem 1rem 0;
+      text-transform: uppercase;
+    }
+
+    &.active a, & > a:hover {
+      background-color: $idci-light-blue;
+      color: $idci-white;
+    }
+  }
+}
+
+.tabs-content {
+  .content {
+    text-align: left;
+
+    h3, h4 {
+      color: $idci-green;
+      margin-top: 2rem;
+    }
+
+    ul {
+      list-style-image: url("/images/balise_right.svg");
+    }
+  }
+}

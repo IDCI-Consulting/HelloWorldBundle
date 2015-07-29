@@ -33,8 +33,10 @@ Developer: Développeur
 Manager: Gérant
 Our clients: Nos clients
 Our projects: Nos projets
+Our courses: Nos formations
 Our partners: Nos partenaires
 They talk about us: Ils parlents de nous
+Choose one of: Choisissez l'une de
 
 #Form labels
 Company: Entreprise
@@ -49,6 +51,7 @@ Validate: Valider
 #Header
 home: accueil
 the company: la société
+our courses: nos formations
 the team: l'équipe
 our activities: nos activités
 our partners: nos partenaires
@@ -74,3 +77,10 @@ Junior Developer: Développeur Junior
 
 #Ace editor
 Write your code here: Ecrivez votre code ici
+
+#Courses
+Day 1: Jour 1
+Day 2: Jour 2
+Day 3: Jour 3
+Day 4: Jour 4
+Day 5: Jour 5

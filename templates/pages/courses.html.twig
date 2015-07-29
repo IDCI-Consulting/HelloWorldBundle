@@ -1,0 +1,17 @@
+{% extends "layout.html.twig" %}
+
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'courses'
+    } %}
+{% endblock %}
+
+{% block main_content %}
+    {% include 'partials/asideMenu.html.twig' %}
+    {% include 'partials/courses/courses.html.twig' %}
+    {% include 'partials/courses/poo.html.twig' %}
+    {% include 'partials/courses/html5_css3.html.twig' %}
+    {% include 'partials/courses/symfony2.html.twig' %}
+    {% include 'partials/courses/wordpress.html.twig' %}
+{% endblock %}

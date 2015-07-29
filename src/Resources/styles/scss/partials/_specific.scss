@@ -20,12 +20,16 @@ h1.logo {
   }
 }
 
-#approach, #advice, #open-source, #comments {
+#approach, #advice, #open-source, #comments, #symfony2 {
   background: $idci-light-grey;
 }
 
-#web-development, #projects {
+#web-development, #projects, #poo {
   background: $idci-dark-grey;
+}
+
+section.courses {
+  padding: 6rem 0 0 0;
 }
 
 #tools {

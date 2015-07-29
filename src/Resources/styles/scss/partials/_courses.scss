@@ -1,0 +1,14 @@
+.course-box {
+  border: .2rem solid $idci-dark-grey;
+  height: 20rem;
+  text-align: center;
+
+  img  {
+    border-bottom: .2rem solid $idci-dark-grey;
+  }
+
+  p {
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+  }
+}

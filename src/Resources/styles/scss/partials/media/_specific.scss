@@ -6,6 +6,10 @@
       }
     }
   }
+
+  .hide-for-small-only.arrow {
+    display: inline!important;
+  }
 }
 
 @media #{$medium-only} {
@@ -24,10 +28,14 @@
       font-size: .8rem;
     }
   }
+
+  .hide-for-small-only.arrow {
+    display: inline!important;
+  }
 }
 
 @media #{$small-only} {
-  #training, #clients, #partner, .team {
+  #training, #clients, #partner, .team, #course {
     margin-top: 4rem;
   }
 

@@ -121,6 +121,22 @@ $intlApp
     ->bind('partners')
 ;
 
+// Course page
+$intlApp
+    ->get(
+        '/courses',
+        function (Request $request, $_locale) use ($app) {
+
+            return $app['twig']->render(
+                'pages/courses.html.twig'
+            );
+        }
+    )
+    ->before($buildLocaleLinks)
+    ->before($buildAsideMenu)
+    ->bind('courses')
+;
+
 // Blog page
 $intlApp
     ->get(

@@ -1,0 +1,9 @@
+@media #{$small-only} {
+  section.courses {
+    padding: 0;
+  }
+
+  .course-box {
+    margin-bottom: 1rem;
+  }
+}

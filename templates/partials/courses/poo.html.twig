@@ -1,0 +1,45 @@
+<section id="{% trans %}poo{% endtrans %}" class="row full-width">
+    <header class="small-8 medium-12 columns accordion-toggle">
+        <div class="row">
+            <h2 class="small-10 medium-12 columns">
+                POO-UML-MERISE-SCM
+                <i class="hide-for-medium-up fa fa-comment picture"></i>
+            </h2>
+            <div class="hide-for-medium-up small-2 columns toggle-icon">
+                <i class="fa fa-angle-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="small-12 columns accordion-content">
+        <ul class="tabs" data-tab>
+            <li class="tab-title active"><a href="#poo-day1">{% trans %}Day 1{% endtrans %}</a></li>
+            <li class="tab-title"><a href="#poo-day2">{% trans %}Day 2{% endtrans %}</a></li>
+            <li class="tab-title"><a href="#poo-day3">{% trans %}Day 3{% endtrans %}</a></li>
+            <li class="tab-title"><a href="#poo-day4">{% trans %}Day 4{% endtrans %}</a></li>
+        </ul>
+
+        <div class="tabs-content">
+            <div class="content active" id="poo-day1">
+                {% filter markdown %}
+                {% include 'contents/courses/poo/day1.md.twig' %}
+                {% endfilter %}
+            </div>
+            <div class="content" id="poo-day2">
+                {% filter markdown %}
+                {% include 'contents/courses/poo/day2.md.twig' %}
+                {% endfilter %}
+            </div>
+            <div class="content" id="poo-day3">
+                {% filter markdown %}
+                {% include 'contents/courses/poo/day3.md.twig' %}
+                {% endfilter %}
+            </div>
+            <div class="content" id="poo-day4">
+                {% filter markdown %}
+                {% include 'contents/courses/poo/day4.md.twig' %}
+                {% endfilter %}
+            </div>
+        </div>
+    </div>
+</section>

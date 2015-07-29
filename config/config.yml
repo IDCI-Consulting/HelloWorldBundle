@@ -15,7 +15,7 @@ i18n_route_generator:
 menu:
     - {label: 'home', route: 'index'}
 
-    - {label: 'the company', route: 'company'}
+    - {label: 'our courses', route: 'courses'}
 
     - {label: 'the team', route: 'team'}
 
