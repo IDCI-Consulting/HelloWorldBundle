@@ -13,6 +13,26 @@ $idci-circle-border: 2px;
 .aside-navigation-link {
   color: $idci-blue;
 
+  &.active {
+    color: $idci-light-blue;
+
+    .idci-circle {
+
+      .fix {
+        background: $idci-light-blue;
+      }
+
+      .expandable {
+        background: 0 0;
+        border: $idci-circle-border solid $idci-light-blue;
+        height: $idci-circle-size - $idci-circle-border * 2;
+        left: 0;
+        top: 0;
+        width: $idci-circle-size - $idci-circle-border * 2;
+      }
+    }
+  }
+
   .idci-circle {
     display: inline-block;
     height: $idci-circle-size;
