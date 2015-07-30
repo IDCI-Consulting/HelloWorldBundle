@@ -132,6 +132,7 @@ $intlApp
             );
         }
     )
+    ->before($buildTabsCourseMenu)
     ->before($buildLocaleLinks)
     ->before($buildAsideMenu)
     ->bind('courses')

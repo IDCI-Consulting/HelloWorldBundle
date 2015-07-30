@@ -9,6 +9,7 @@ use Provider\MarkdownParserServiceProvider;
 use Provider\I18nRouteGeneratorServiceProvider;
 use Provider\SnappyServiceProvider;
 use Provider\YamlConfigServiceProvider;
+use Provider\FinderServiceProvider;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
@@ -48,6 +49,7 @@ $app->register(new SnappyServiceProvider(), array(
     'snappy.image_binary' => '/usr/local/bin/wkhtmltoimage',
     'snappy.pdf_binary'   => '/usr/local/bin/wkhtmltopdf',
 ));
+$app->register(new FinderServiceProvider());
 
 $app['snappy.pdf_options'] = array('encoding' => 'UTF-8');
 
@@ -65,6 +67,7 @@ $app['translator'] = $app->extend('translator', function ($translator, $app) {
     $translator->addLoader('yaml', new YamlFileLoader());
 
     $translator->addResource('yaml', __DIR__.'/Resources/translations/messages.fr.yml', 'fr');
+    $translator->addResource('yaml', __DIR__.'/Resources/translations/messages.en.yml', 'en');
     $translator->addResource('yaml', __DIR__.'/Resources/translations/validators.fr.yml', 'fr', 'validators');
 
     return $translator;
@@ -134,6 +137,38 @@ $buildAsideMenu = function (Request $request, Application $app) {
     }
 
     $app['twig']->addGlobal('aside_menu', $asideMenu);
+};
+
+$buildTabsCourseMenu = function (Request $request, Application $app) {
+    $locale = $request->attributes->get('_locale');
+
+    $app['finder']
+        ->files()
+        ->name('*_'.$locale.'.md.twig')
+        ->in(__DIR__.'/../templates/contents/courses/');
+    $tabsCourseMenu = array();
+
+    foreach ($app['finder'] as $file) {
+        // Decode into utf8
+        $content = $file->getContents();
+
+        preg_match_all(
+            "/((\#{2}).*(?<title>[\s\w-]+))?\{(?<day>.*)\}(?<content>[?.\n\w#éà=èç()\/ *';&â\"'ô\-,:!]*?)/siuU",
+            $content,
+            $matches
+        );
+
+        $courseContent = array();
+        $title = trim($matches['title'][0]);
+
+        foreach ($matches['day'] as $i => $day) {
+            $courseContent[$day] = $matches['content'][$i];
+        }
+
+        $tabsCourseMenu[$title] = $courseContent;
+    }
+
+    $app['twig']->addGlobal('tabs_course_menu', $tabsCourseMenu);
 };
 
 return $app;
