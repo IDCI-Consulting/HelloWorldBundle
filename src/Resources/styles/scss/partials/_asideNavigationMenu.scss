@@ -51,6 +51,7 @@ $idci-circle-border: 2px;
       top: $idci-circle-size / 4;
       width: $idci-circle-size / 2;
       z-index: 200;
+      @include transition(all, 0.2s);
     }
 
     .expandable {
@@ -64,6 +65,7 @@ $idci-circle-border: 2px;
       top: $idci-circle-size / 3;
       width: $idci-circle-size / 4;
       z-index: 100;
+      @include transition(all, 0.2s);
     }
   }
 
