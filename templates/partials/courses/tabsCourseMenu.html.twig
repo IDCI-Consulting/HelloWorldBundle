@@ -1,0 +1,37 @@
+{% for title, courses in tabs_course_menu %}
+    <section id="{{ title }}" class="row full-width">
+        <header class="small-8 medium-12 columns accordion-toggle">
+            <div class="row">
+                <h2 class="small-10 medium-12 columns">
+                    {{ title }}
+                    <i class="hide-for-medium-up fa fa-comment picture"></i>
+                </h2>
+                <div class="hide-for-medium-up small-2 columns toggle-icon">
+                    <i class="fa fa-angle-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="small-12 medium-8 columns accordion-content">
+            <ul class="tabs" data-tab>
+                {% for day, courseContent in courses %}
+                    <li class="tab-title"><a href="#{{ title|trim }}-{{ day }}">{{ day|trans }}</a></li>
+                {% endfor %}
+            </ul>
+
+            <div class="tabs-content">
+                {% for day, courseContent in courses %}
+                <div class="content" id="{{ title }}-{{ day }}">
+                    {{ courseContent|markdown }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endfor %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.tabs li:first-child').addClass('active');
+        $('div.tabs-content > div:first-child').addClass('active');
+    });
+</script>
