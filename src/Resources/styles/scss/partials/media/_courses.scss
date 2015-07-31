@@ -1,9 +1,21 @@
+@media #{$medium-only} {
+    .course-box {
+      margin-bottom: 1rem;
+      width: 15rem;
+    }
+}
+
 @media #{$small-only} {
   section.courses {
     padding: 0;
   }
 
+  .course-boxes {
+    padding: 0;
+  }
+
   .course-box {
     margin-bottom: 1rem;
+    width: 9rem;
   }
 }

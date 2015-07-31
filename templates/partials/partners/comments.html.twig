@@ -13,7 +13,7 @@
 
     <div class="medium-12 columns accordion-content">
         <div class="comments">
-            <div class="row comment">
+            <div class="comment">
                 <div class="medium-6 large-4 columns">
                     <div class="browser-mockup">
                         <img src="{{ asset('images/body.png') }}" />
@@ -26,3 +26,9 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.comments').slick();
+    });
+</script>
