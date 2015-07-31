@@ -163,10 +163,15 @@
                 });
 
                 request.done(function(content) {
-                    var $modal = $('<div id="idci-modal" class="reveal-modal" data-reveal aria-labelledby="contact" aria-hidden="true" role="dialog"><a class="close-reveal-modal" aria-label="Close">&#215;</a></div>');
+                    var $modal = $(
+                        '<div id="idci-modal" class="reveal-modal" data-reveal aria-labelledby="contact" aria-hidden="true" role="dialog">' +
+                            '<a class="close-reveal-modal" aria-label="Close">&#215;</a>' +
+                        '</div>'
+                    );
                     $modal.append(content);
                     $('footer').after($modal);
                     $modal.foundation('reveal', 'open');
+                    focusFieldEffect();
                 });
 
                 request.fail(function(jqXHR, textStatus) {

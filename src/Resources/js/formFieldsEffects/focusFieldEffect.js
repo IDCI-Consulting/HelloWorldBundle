@@ -1,7 +1,7 @@
 /**
  * Created by brahim on 28/05/15.
  */
-(function() {
+var focusFieldEffect =function() {
     // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
     if (!String.prototype.trim) {
         (function() {
@@ -30,4 +30,7 @@
             classie.remove(e.target.parentNode, 'input--filled');
         }
     }
-})();
+};
+
+
+focusFieldEffect();
