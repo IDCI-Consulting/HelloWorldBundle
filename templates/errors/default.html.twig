@@ -1,5 +1,13 @@
 {% extends "layout.html.twig" %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    } %}
+{% endblock %}
+
 {% block main_content %}
-    An error occurred.
+    <div class="errors">
+        {{ message|trans }}
+    </div>
 {% endblock %}
