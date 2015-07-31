@@ -152,20 +152,36 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
         // Decode into utf8
         $content = $file->getContents();
 
+        $regex = <<<EOF
+/
+(##(?<title>.*))??
+(\[description\](?<description>.*))??
+\{(?<day>.*)\}
+(?<content>[?.\n\wéàèçâô#=<>()\/ *';&\\"'\-,:!]*?)
+/siU
+EOF;
+
         preg_match_all(
-            "{((\#{2}).*(?<title>[\s\w-]+))?\{(?<day>.*)\}(?<content>[?.\n\wéàèçâô#=<>()\/ *';&\"'\-,:!]*?)}siU",
+            $regex,
             $content,
             $matches
         );
 
-        $courseContent = array();
+        $courses = array();
+        
         $title = trim($matches['title'][0]);
+        
+        $description = trim($matches['description'][0]);
 
-        foreach ($matches['day'] as $i => $day) {
-            $courseContent[$day] = $matches['content'][$i];
+        if (strlen($description) !== 0) {
+            $tabsCourseMenu[$title]['description'] = $description;
         }
 
-        $tabsCourseMenu[$title] = $courseContent;
+        foreach ($matches['day'] as $i => $day) {
+            $courses[$day] = $matches['content'][$i];
+        }
+
+        $tabsCourseMenu[$title]["courses"] = $courses;
     }
 
     $app['twig']->addGlobal('tabs_course_menu', $tabsCourseMenu);

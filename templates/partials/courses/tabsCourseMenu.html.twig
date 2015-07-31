@@ -13,14 +13,19 @@
         </header>
 
         <div class="small-12 medium-8 columns accordion-content">
+
+            {% if courses['description'] is defined %}
+                <p class="course-description">{{ courses['description'] }}</p>
+            {% endif %}
+
             <ul class="tabs" data-tab>
-                {% for day, courseContent in courses %}
+                {% for day, courseContent in courses['courses'] %}
                     <li class="tab-title"><a href="#{{ title|trim }}-{{ day }}">{{ day|trans }}</a></li>
                 {% endfor %}
             </ul>
 
             <div class="tabs-content">
-                {% for day, courseContent in courses %}
+                {% for day, courseContent in courses['courses'] %}
                 <div class="content" id="{{ title }}-{{ day }}">
                     {{ courseContent|markdown }}
                 </div>
