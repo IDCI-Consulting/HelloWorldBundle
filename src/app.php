@@ -152,14 +152,12 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
         // Decode into utf8
         $content = $file->getContents();
 
-        $regex = <<<EOF
-/
-(##(?<title>.*))??
-(\[description\](?<description>.*))??
-\{(?<day>.*)\}
-(?<content>[?.\n\wéàèçâô#=<>()\/ *';&\\"'\-,:!]*?)
-/siU
-EOF;
+        $regex = "/".
+            "(##(?<title>.*))??".
+            "(\[description\](?<description>.*))??".
+            "\{(?<day>.*)\}".
+            "(?<content>[?.\n\wéàèçâô#=<>()\/ *';&\\\"'\-,:!]*?)/siU"
+        ;
 
         preg_match_all(
             $regex,
@@ -167,16 +165,15 @@ EOF;
             $matches
         );
 
-        $courses = array();
-        
         $title = trim($matches['title'][0]);
-        
+
         $description = trim($matches['description'][0]);
 
         if (strlen($description) !== 0) {
             $tabsCourseMenu[$title]['description'] = $description;
         }
 
+        $courses = array();
         foreach ($matches['day'] as $i => $day) {
             $courses[$day] = $matches['content'][$i];
         }
