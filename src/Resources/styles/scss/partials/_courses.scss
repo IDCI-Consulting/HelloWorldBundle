@@ -4,6 +4,7 @@
   margin: 1rem auto;
   text-align: center;
   width: 25rem;
+  @include transition(all, .3s);
 
   img   {
     border-bottom: .2rem solid $idci-dark-grey;

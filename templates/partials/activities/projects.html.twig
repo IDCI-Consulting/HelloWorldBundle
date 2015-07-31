@@ -11,9 +11,9 @@
         </div>
     </header>
 
-    <div class="medium-12 columns accordion-content">
+    <div class="medium-12 columns accordion-content projects-content">
         <div class="projects">
-            <div class="row project">
+            <div class="project">
                 <div class="medium-6 large-4 columns">
                     <div class="browser-mockup">
                         <img src="{{ asset('images/moniteur.png') }}" />
@@ -23,7 +23,7 @@
                     {% include 'contents/activities/moniteur_' ~ app.translator.locale ~ '.html.twig' %}
                 </div>
             </div>
-            <div class="row project">
+            <div class="project">
                 <div class="medium-6 large-4 columns">
                     <div class="browser-mockup">
                         <img src="{{ asset('images/body.png') }}" />
@@ -36,3 +36,13 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.projects').slick({
+            inifinite: true,
+            nextArrow: '<img class="slick-arrow next right" src="{{ asset('images/slick_arrow.svg') }}"/>',
+            prevArrow: false
+        });
+    });
+</script>

@@ -73,16 +73,10 @@
       .contact-us-link {
 
         a {
-          background: 0 0;
+          background: $idci-light-blue;
           border: none;
-          color: $idci-white;
-          font-size: 1.5rem;
-          margin: 0;
-          text-decoration: underline;
-
-          &:hover {
-            color: $idci-light-blue;
-          }
+          text-transform: uppercase;
+          width: 90%;
         }
       }
     }
@@ -96,6 +90,7 @@
       }
 
       p {
+        color: $idci-white;
         line-height: 1rem;
 
         &:first-child {
@@ -121,13 +116,23 @@
         width: 100%;
 
         li {
+          background-color: $idci-light-blue;
+          border-left: .1rem solid $idci-blue;
+          border-right: .1rem solid $idci-blue;
           height: 3rem;
-          width: 33.3%
+          width: 33.3%;
+
+          &:first-child {
+            border-left: none;
+          }
+
+          &:last-child {
+            border-right: none;
+          }
         }
       }
 
       li.twitter {
-        background-color: rgb(64, 153, 255);
 
         a {
 
@@ -138,7 +143,6 @@
       }
 
       li.rss {
-        background-color: rgb(255, 148, 66);
 
         a {
 
@@ -149,7 +153,6 @@
       }
 
       li.github {
-        background-color: rgb(0, 0, 0);
 
         a {
 
