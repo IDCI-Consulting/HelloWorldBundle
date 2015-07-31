@@ -31,3 +31,46 @@
         {% endif %}
     {% endspaceless %}
 {% endblock form_errors %}
+
+{% block form_widget_simple %}
+    {% set type = type|default('text') %}
+    <input class="input__field input__field--juro" type="{{ type }}" {{ block('widget_attributes') }}
+        {% if value is not empty %}
+            value="{{ value }}"
+        {% endif %}
+    />
+{% endblock form_widget_simple %}
+
+{% block form_row %}
+    <div class="input input--juro">
+        {{ form_label(form) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
+    </div>
+{% endblock form_row %}
+
+{%- block form_label -%}
+    {% if label is not sameas(false) -%}
+        {% if not compound -%}
+            {% set label_attr = label_attr|merge({'for': id}) %}
+        {%- endif %}
+        {% if required -%}
+            {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %}
+        {%- endif %}
+        {% if label is empty -%}
+            {%- if label_format is not empty -%}
+                {% set label = label_format|replace({
+                    '%name%': name,
+                    '%id%': id,
+                }) %}
+            {%- else -%}
+                {% set label = name|humanize %}
+            {%- endif -%}
+        {%- endif -%}
+        <label class="input__label input__label--juro" {% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>
+            <span class="input__label-content input__label-content--juro">
+                {{ label|trans({}, translation_domain) }}
+            </span>
+        </label>
+    {%- endif -%}
+{%- endblock form_label -%}
