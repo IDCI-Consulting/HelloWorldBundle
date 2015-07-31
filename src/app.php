@@ -153,7 +153,7 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
         $content = $file->getContents();
 
         preg_match_all(
-            "/((\#{2}).*(?<title>[\s\w-]+))?\{(?<day>.*)\}(?<content>[?.\n\w#éà=èç()\/ *';&â\"'ô\-,:!]*?)/siuU",
+            "{((\#{2}).*(?<title>[\s\w-]+))?\{(?<day>.*)\}(?<content>[?.\n\wéàèçâô#=<>()\/ *';&\"'\-,:!]*?)}siU",
             $content,
             $matches
         );
