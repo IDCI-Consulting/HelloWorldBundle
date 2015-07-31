@@ -1,4 +1,6 @@
 .reveal-modal.open {
   position:fixed;
   top:10%!important; /* override inline style injected from JS */
+  overflow: auto;
+  height: 80%;
 }
