@@ -15,6 +15,7 @@
   }
 
   .nav-menu {
+
     a {
       font-size: 1rem;
     }
@@ -38,6 +39,10 @@
   }
 
   .nav-menu {
+    li {
+      margin-left: .9rem;
+    }
+
     a {
       font-size: .9rem;
     }
@@ -45,10 +50,6 @@
 
 
   .langs {
-
-    p {
-      font-size: .6rem;
-    }
 
     ul {
       margin: 0;
@@ -67,16 +68,9 @@
     width: 8rem;
   }
 
-  .dropdown.button::after, button.dropdown::after {
-    right: 0;
-  }
-
-  .f-dropdown {
-    position: fixed!important;
-    &.open {
-      left: 82%!important;
-      top: 4.9rem!important;
-      width: 8rem;
+  .nav-menu {
+    li {
+      margin-left: .9rem;
     }
   }
 }
@@ -151,9 +145,16 @@
   .f-dropdown {
     position: fixed!important;
     width: 100%!important;
+
     &.open {
       left: 0!important;
       top: 3.6rem!important;
+    }
+
+    li {
+      a {
+        padding: 1rem;
+      }
     }
   }
 

@@ -35,10 +35,20 @@
 }
 
 @media #{$small-only} {
-  #training, #clients, #partner, .team, #course, .errors {
+  #training, #clients, #partner, .team, #course, .contact, .errors {
     margin-top: 4rem;
   }
 
+  .team, .contact {
+    header {
+      h2 {
+        i {
+          display: inline-block!important;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
   .accordion-toggle {
     background: $idci-dark-grey;
     border: .05rem solid $idci-white;
@@ -97,10 +107,14 @@
   }
 
   .accordion-content {
+    background-color: $idci-white;
     display: none;
     padding: 1rem;
   }
 
+  .projects-content, .comments-content {
+    display: block;
+  }
 
   .idci-content {
     padding: 1rem;

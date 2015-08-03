@@ -89,6 +89,10 @@ button.dropdown {
   &:hover {
     background: none!important;
   }
+
+  &::after {
+    left: 2rem;
+  }
 }
 
 .langs {
@@ -98,7 +102,7 @@ button.dropdown {
   ul, p {
     display: block;
     float: left;
-    line-height: 5rem;
+    line-height: 4.2rem;
   }
 
   p {

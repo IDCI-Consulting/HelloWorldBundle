@@ -22,8 +22,8 @@
                 {% block nav %}{% endblock %}
             </nav>
 
-            <div class="hide-for-medium-down large-2 columns langs">
-                <p class="choose-language">{% trans %}Choose the language{% endtrans %}</p>
+            <div class="show-for-medium-up medium-2 columns langs">
+                <p class="show-for-xlarge-up choose-language">{% trans %}Choose the language{% endtrans %}</p>
                 <ul class="hide-for-small-only idci-inline-list">
                     {% for locale, route in i18n_routes %}
                         <li{% if app.translator.locale == locale %} class="active"{% endif %}>
@@ -35,7 +35,7 @@
                 </ul>
             </div>
 
-            <div class="show-for-medium-down small-3 medium-1 medium-push-1 columns ">
+            <div class="show-for-small-only small-3 columns langs">
                 <button data-dropdown="drop-flags" aria-controls="drop1" class="dropdown dropdown-flag active"><img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ app.translator.locale }}" /></button>
                 <ul id="drop-flags" data-dropdown-content class="f-dropdown">
                     {% for locale, route in i18n_routes %}

@@ -13,9 +13,10 @@
   }
 
   .slick-arrow {
+    height: 1.5rem;
 
     &.next.right {
-      right: -2rem;
+      right: -1.5rem;
     }
   }
 }

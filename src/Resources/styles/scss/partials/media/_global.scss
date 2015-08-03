@@ -48,7 +48,6 @@
 
   .button {
     background-color: $idci-green;
-    border: 2px solid $idci-dark-green;
     @include border-radius(0);
     font-size: 1rem;
     margin-top: 1rem;
