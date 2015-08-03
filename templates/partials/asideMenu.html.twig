@@ -13,3 +13,17 @@
         {% endfor %}
     </ul>
 {% endif %}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.aside-navigation-link').on('click', function(event) {
+            event.preventDefault();
+
+            var $sectionId = $(this).attr('href');
+
+            $('body').animate({
+                scrollTop: $($sectionId).offset().top
+            }, 'slow');
+        });
+    });
+</script>
