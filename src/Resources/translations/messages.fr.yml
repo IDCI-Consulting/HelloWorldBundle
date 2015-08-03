@@ -3,12 +3,12 @@ Salesman: Commercial
 Technique: Technique
 Phone: Téléphone
 Address: Adresse
-french: français
-english: anglais
-engineering: ingénerie
-development: développement
+Engineering: Ingénerie
+Development: Développement
+Integration: Intégration
 Training: Formation
 Advice: Conseil
+Advices: Conseils
 Web development: Développement web
 Our philosophy: Notre philosophie
 Our approach: Notre approche
@@ -27,8 +27,6 @@ Open Source Contribution: Contribution Open Source
 Follow us: Suivez nous
 The team: L'équipe
 Download: Télécharger
-We do: '{1}Nous faisons de la|{2}Nous faisons du'
-See: '{1}Voir|{2}Voir le'
 Developer: Développeur
 Manager: Gérant
 Our clients: Nos clients
@@ -37,6 +35,8 @@ Our courses: Nos formations
 Our partners: Nos partenaires
 They talk about us: Ils parlents de nous
 Choose one of: Choisissez l'une de
+We specialize in: Nous sommes spécialisés dans
+Presentation: Présentation
 
 #Form labels
 Company: Entreprise
@@ -66,7 +66,9 @@ Our contact details: Nos Coordonnées
 
 #Languages
 French: Français
+french: français
 English: Anglais
+english: anglais
 
 #Notifications
 Your message could not be sent: Votre message n'a pas pu être envoyé
@@ -84,3 +86,7 @@ day2: jour 2
 day3: jour 3
 day4: jour 4
 day5: jour 5
+
+# Trans choice
+We do: '{1}Nous faisons de la|{2}Nous faisons du'
+See: '{1}Voir|{2}Voir le'

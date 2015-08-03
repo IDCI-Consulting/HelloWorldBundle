@@ -35,3 +35,22 @@ h3.trainings {
     }
   }
 }
+
+.scroll-to {
+  border: 2px solid $idci-light-blue;
+  border-radius: 100%;
+  display: inline-block;
+  height: 8rem;
+  line-height: 8rem;
+  margin: 5rem auto 0 auto;
+  width: 8rem;
+
+  &:hover {
+    border-color: $idci-blue;
+  }
+
+  img {
+    height: 5rem;
+    width: 5rem;
+  }
+}

@@ -16,8 +16,7 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('.aside-navigation-link').on('click', function(event) {
-            event.preventDefault();
+        $('.aside-navigation-link, .scroll-to').on('click', function(event) {
 
             var $sectionId = $(this).attr('href');
 

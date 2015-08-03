@@ -10,18 +10,15 @@ h1.logo {
   padding: 3rem;
 }
 
-#training {
-  margin: 0;
+#presentation {
+  background: url("/images/background_presentation.jpg") no-repeat;
+  padding-top: 10rem;
 }
 
 #training, #philosophy {
   em, h3 {
     color: $idci-green;
   }
-}
-
-.errors {
-  margin-top: 6rem;
 }
 
 #approach, #advice, #open-source, #comments, #symfony2 {
@@ -37,7 +34,8 @@ section.courses {
 }
 
 section.contact-form {
-  margin: 0 0.8rem;
+  margin-left: .8rem;
+  margin-right: .8rem;
 }
 
 #tools {
@@ -48,4 +46,16 @@ section.contact-form {
 
 .accordion-content {
   padding: 3rem;
+}
+
+.acronym {
+  color: $idci-green;
+  font-family: Oswald, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.fade-in-block {
+  opacity: 0;
 }
