@@ -6,11 +6,8 @@
   width: 25rem;
   @include transition(all, .3s);
 
-  img   {
-    border-bottom: .2rem solid $idci-dark-grey;
-  }
-
   p {
+    border-top: .2rem solid $idci-dark-grey;
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
   }
