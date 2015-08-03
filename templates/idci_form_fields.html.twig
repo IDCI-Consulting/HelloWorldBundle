@@ -41,11 +41,17 @@
     />
 {% endblock form_widget_simple %}
 
+{% block textarea_widget %}
+    {% spaceless %}
+        <textarea class="input__field input__field--juro" {{ block('widget_attributes') }}>{{ value }}</textarea>
+    {% endspaceless %}
+{% endblock textarea_widget %}
+
 {% block form_row %}
     <div class="input input--juro">
+        {{ form_widget(form) }}
         {{ form_label(form) }}
         {{ form_errors(form) }}
-        {{ form_widget(form) }}
     </div>
 {% endblock form_row %}
 

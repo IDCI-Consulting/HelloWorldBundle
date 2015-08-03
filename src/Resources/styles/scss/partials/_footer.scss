@@ -22,7 +22,7 @@
   right: 2rem;
   text-align: center;
   width: 6rem;
-  z-index: 9999999;
+  z-index: 999;
 
   a {
     color: $idci-blue;
@@ -58,6 +58,7 @@ footer {
   padding-top: 1.2rem;
   position: absolute;
   width:100%;
+  z-index: 999;
 
   p {
     text-align: center;

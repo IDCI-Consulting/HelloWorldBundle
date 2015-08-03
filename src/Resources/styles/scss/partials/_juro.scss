@@ -18,10 +18,10 @@
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-appearance: none; /* for box shadows to show on iOS */
-}
 
-.input__field:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .input__label {
@@ -66,9 +66,20 @@
 .input__label--juro {
   padding: 0;
   width: 100%;
-  height: 100%;
   background: #fff;
   text-align: left;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 solid transparent;
+    -webkit-transition: border-width 0.3s, border-color 0.3s;
+    transition: border-width 0.3s, border-color 0.3s;
+  }
 }
 
 .input__label-content--juro {
@@ -79,18 +90,6 @@
   transition: transform 0.3s, color 0.3s;
 
   text-rendering: geometricPrecision;
-}
-
-.input__label--juro::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0px solid transparent;
-  -webkit-transition: border-width 0.3s, border-color 0.3s;
-  transition: border-width 0.3s, border-color 0.3s;
 }
 
 .input__field--juro:focus + .input__label--juro::before,
@@ -107,12 +106,14 @@
   transform: translate3d(0, -1.5rem, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
 }
 
-.input textarea {
-  width: 100%;
-  height: 8rem;
-  margin-bottom: -8px;
-  border: none;
-  border-top: 1px solid #ddd;
+textarea.input__field--juro {
+  height: 9.5rem;
+  margin-top: 2rem;
+  padding-top: 0;
   resize: none;
-  padding: 1rem;
+  width: calc(100% - 8px);
+
+  & + label {
+    height: 12rem;
+  }
 }
