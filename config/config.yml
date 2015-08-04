@@ -19,7 +19,7 @@ menu:
 
     - {label: 'the team', route: 'team'}
 
-    - {label: 'our activities', route: 'activities'}
+    - {label: 'our achievements', route: 'activities'}
 
     - {label: 'our partners', route: 'partners'}
 
