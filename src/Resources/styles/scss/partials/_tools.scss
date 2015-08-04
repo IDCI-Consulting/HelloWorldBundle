@@ -264,4 +264,12 @@ a.tools-sprite {
     }
   }
 
+  &.wordpress {
+    background-position: -200px -922px;
+    height: 24px;
+
+    &:hover {
+      background-position: 0 -922px;
+    }
+  }
 }

@@ -5,8 +5,21 @@
 <span class="hide-for-small-only arrow"><img src="{{ asset('images/balise_right.svg') }}" /></span>
 
 
-<ul class="idci-inline-list courses">
-    <li>Symfony2</li>
-    <li>HTML5/CSS3</li>
-    <li>Programmation orientée objet (Langage PHP)</li>
-</ul>
+<div class="courses">
+    {% for course in app.config.courses %}
+        <div>
+            <a href="{{ path('courses', {'_locale': app.translator.locale}) }}"  class="tools-sprite {{ course }}">{{ course }}</a>
+        </div>
+    {% endfor %}
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.courses').slick({
+            infinite: true,
+            nextArrow: '<img class="slick-arrow next right" src="{{ asset('images/slick_arrow.svg') }}"/>',
+            prevArrow: false,
+            speed: 300
+        });
+    });
+</script>

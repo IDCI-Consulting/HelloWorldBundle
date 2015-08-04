@@ -1,3 +1,10 @@
+@media #{$large-only} {
+
+  .projects-content {
+    padding:  5rem 10rem;
+  }
+}
+
 @media #{$small-only} {
   .partner {
     background-image: url("/images/partners.jpg");

@@ -31,6 +31,8 @@
 /***********************
  *** Idci components ***
  ***********************/
+@import 'partials/global';
+@import 'partials/specific';
 @import 'partials/activities';
 @import 'partials/asideNavigationMenu';
 @import 'partials/browser';
@@ -42,20 +44,20 @@
 @import 'partials/flash';
 @import 'partials/footer';
 @import 'partials/formErrors';
-@import 'partials/global';
 @import 'partials/header';
 @import 'partials/index';
 @import 'partials/juro';
 @import 'partials/modal';
 @import 'partials/mouseTracker';
 @import 'partials/partners';
-@import 'partials/specific';
 @import 'partials/team';
 @import 'partials/tools';
 
 /*************************************
  *** Idci media queries components ***
  *************************************/
+@import 'partials/media/global';
+@import 'partials/media/specific';
 @import 'partials/media/activities';
 @import 'partials/media/asideNavigationMenu';
 @import 'partials/media/courses';
@@ -63,12 +65,11 @@
 @import 'partials/media/editor';
 @import 'partials/media/flash';
 @import 'partials/media/footer';
-@import 'partials/media/global';
 @import 'partials/media/header';
 @import 'partials/media/index';
 @import 'partials/media/juro';
 @import 'partials/media/modal';
 @import 'partials/media/partners';
-@import 'partials/media/specific';
 @import 'partials/media/team';
 @import 'partials/media/tools';
+@import 'partials/theme/course';

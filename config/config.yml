@@ -12,6 +12,12 @@ i18n_route_generator:
         fr: 'French'
         en: 'English'
 
+courses:
+    - 'symfony2'
+    - 'html5-css3'
+    - 'php'
+    - 'wordpress'
+
 menu:
     - {label: 'home', route: 'index'}
 
