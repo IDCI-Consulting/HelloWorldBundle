@@ -35,8 +35,7 @@
         removeClass = function(elem, c) {
             elem.classList.remove(c);
         };
-    }
-    else {
+    } else {
         hasClass = function(elem, c) {
             return classReg(c).test(elem.className);
         };
