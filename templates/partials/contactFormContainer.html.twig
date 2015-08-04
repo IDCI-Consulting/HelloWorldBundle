@@ -13,7 +13,7 @@
             $formContainer.on('submit', 'form', function(event) {
                 event.preventDefault();
 
-                $output.html('<p>Load</p>');
+                $output.html('<img class="ajax-loader" src="{{ asset('images/ajaxLoader.gif') }}" />');
                 var request = $.ajax({
                     url: $(this).attr('action'),
                     method: $(this).attr('method'),
