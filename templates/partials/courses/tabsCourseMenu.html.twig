@@ -33,6 +33,9 @@
                 </div>
                 {% endfor %}
             </div>
+            <a href="{{ path('course', {"_locale": app.translator.locale, "name": title, "_format": 'pdf'}) }}" class="button small">
+                {% trans %}download{% endtrans %}
+            </a>
         </div>
     </section>
 {% endfor %}

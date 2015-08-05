@@ -9,27 +9,6 @@
   }
 }
 
-.slick-arrow {
-  cursor: pointer;
-  height: 2rem;
-  position: absolute;
-
-  &.next.bottom,  &.previous.top {
-    width: 100%;
-  }
-
-  &.next.bottom {
-    bottom: 0;
-  }
-
-  &.previous.top {
-    top: 0;
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-}
-
 /**************************
  *** Sprite declaration ***
  **************************/

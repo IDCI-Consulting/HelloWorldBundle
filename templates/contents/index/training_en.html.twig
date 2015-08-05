@@ -4,8 +4,25 @@
 <h3 class="trainings">different courses</h3>
 <span class="arrow"><img src="{{ asset('images/balise_right.svg') }}" /></span>
 
-<ul class="idci-inline-list courses">
-    <li>Symfony2</li>
-    <li>HTML5/CSS3</li>
-    <li>Object-oriented programming (PHP language)</li>
-</ul>
+<div class="courses">
+    {% for course in app.config.courses %}
+        <div>
+            <a href="{{ path('courses', {'_locale': app.translator.locale}) }}"  class="tools-sprite {{ course }}">{{ course }}</a>
+        </div>
+    {% endfor %}
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.courses').slick({
+            infinite: true,
+            nextArrow: '<img class="slick-arrow next right" src="{{ asset('images/slick_arrow.svg') }}"/>',
+            prevArrow: '<img class="slick-arrow previous left" src="{{ asset('images/slick_arrow.svg') }}"/>',
+            speed: 300,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            fade: true,
+            cssEase: 'linear'
+        });
+    });
+</script>

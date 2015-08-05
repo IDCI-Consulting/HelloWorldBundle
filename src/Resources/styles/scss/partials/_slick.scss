@@ -1,0 +1,36 @@
+.slick-arrow {
+  cursor: pointer;
+  height: 2rem;
+  position: absolute;
+
+  &.next.bottom,  &.previous.top {
+    width: 100%;
+  }
+
+  &.next.bottom {
+    bottom: 0;
+  }
+
+  &.next.right {
+    right: -3rem;
+    top: 50%;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  &.previous.left {
+    left: -2rem;
+    top: 50%;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  &.previous.top {
+    top: 0;
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}

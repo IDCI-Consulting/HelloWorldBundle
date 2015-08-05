@@ -35,7 +35,7 @@
 }
 
 @media #{$small-only} {
-  #training, #clients, #partner, .team, #course, .contact, .errors {
+  #training, #clients, #partner, #achievements, .team, #course, .contact, .errors {
     margin-top: 4rem;
   }
 
@@ -49,6 +49,7 @@
       }
     }
   }
+
   .accordion-toggle {
     background: $idci-dark-grey;
     border: .05rem solid $idci-white;
@@ -112,7 +113,7 @@
     padding: 1rem;
   }
 
-  .projects-content, .comments-content {
+  .projects-content, .comments-content, .training-content {
     display: block;
   }
 

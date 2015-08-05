@@ -15,25 +15,7 @@ h3.trainings {
 
 .courses {
   margin: 0 auto;
-  padding-top: 2rem;
-
-  li {
-    display: inline;
-    float: none;
-    margin: 0;
-
-    &:after {
-      content: "-";
-      margin: 0 1rem;
-    }
-
-    &:last-child {
-
-      &:after {
-        content: none;
-      }
-    }
-  }
+  width: 50%;
 }
 
 .scroll-to {

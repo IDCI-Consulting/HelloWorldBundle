@@ -11,12 +11,11 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        var liHeight = 0;
-
         $('.tools-list.{{ title }}').slick({
-            infinite: true,
             nextArrow: '<img class="slick-arrow next bottom" src="{{ asset('images/slick_arrow.svg') }}"/>',
             prevArrow: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
             slidesToShow: 4,
             slidesToScroll: 1,
             speed: 300,

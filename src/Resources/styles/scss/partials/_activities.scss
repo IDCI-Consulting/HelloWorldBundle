@@ -30,25 +30,6 @@
   }
 }
 
-.slick-arrow {
-
-  &.next.right {
-    right: -3rem;
-    top: 50%;
-    -ms-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  &.previous.left {
-    left: -2rem;
-    top: 50%;
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-}
-
 .project {
   padding: 1rem 0;
 }
