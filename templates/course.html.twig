@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block stylesheets %}
+        <link href="{{ asset('css/' ~ getRevFilename('app.min.css') ~ '') }}" rel="stylesheet" type="text/css" />
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

@@ -5,6 +5,7 @@
  */
 
 use Provider\ContactManagerServiceProvider;
+use Provider\CourseManagerServiceProvider;
 use Provider\MarkdownParserServiceProvider;
 use Provider\I18nRouteGeneratorServiceProvider;
 use Provider\SnappyServiceProvider;
@@ -22,7 +23,6 @@ use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 $app = new Application();
 
@@ -44,6 +44,7 @@ $app->register(new I18nRouteGeneratorServiceProvider());
 $app->register(new MarkdownParserServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
 $app->register(new ContactManagerServiceProvider());
+$app->register(new CourseManagerServiceProvider());
 $app->register(new YamlConfigServiceProvider(__DIR__ . '/../config/config.yml'));
 $app->register(new SnappyServiceProvider(), array(
     'snappy.image_binary' => '/usr/local/bin/wkhtmltoimage',
@@ -152,18 +153,7 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
         // Decode into utf8
         $content = $file->getContents();
 
-        $regex = "/".
-            "(##(?<title>.*))??".
-            "(\[description\](?<description>.*))??".
-            "\{(?<day>.*)\}".
-            "(?<content>[?.\n\wéàèçâô#=<>()\/ *';&\\\"'\-,:!]*?)/siU"
-        ;
-
-        preg_match_all(
-            $regex,
-            $content,
-            $matches
-        );
+        $matches = $app['course_manager']->matchContent($content);
 
         $title = trim($matches['title'][0]);
 

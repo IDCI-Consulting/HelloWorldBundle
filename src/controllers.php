@@ -138,6 +138,86 @@ $intlApp
     ->bind('courses')
 ;
 
+$intlApp
+    ->get(
+        '/course/{name}.{_format}',
+        function (Request $request, $_locale, $name, $_format) use ($app) {
+
+            try {
+                $course = $app['twig']->render(sprintf('contents/courses/%s_%s.md.twig', $name, $_locale), array());
+            } catch (\Exception $e) {
+                throw new NotFoundHttpException(sprintf(
+                    'The %s\'s course doesn\'t exist',
+                    $name
+                ));
+            }
+
+            $response = new Response();
+
+            if ($_format === 'md') {
+                $response->headers->set('Content-Type', 'text/markdown');
+                $response->setContent($course);
+
+                return $response;
+            }
+
+            $matches = $app['course_manager']->matchContent($course);
+
+            $matchedCourse = '';
+            foreach ($matches['day'] as $i => $day) {
+                $day = $app['translator']->trans($day);
+
+                $matchedCourse .= sprintf(
+                    '##%s %s',
+                    $day,
+                    $matches['content'][$i]
+                );
+            }
+
+            $course = $app['twig']->render(
+                sprintf(
+                    'partials/courses/%s_%s.html.twig',
+                    $name,
+                    $_locale
+                ),
+                array(
+                    'content' => $app['markdown']->transform($matchedCourse)
+                )
+            );
+
+            if ($_format === 'html') {
+                return $course;
+            }
+
+            if ($_format === 'pdf') {
+                $response->headers->set('Content-Type', 'application/pdf');
+                $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
+
+                $response->setContent($app['snappy.pdf']->getOutput(
+                    $app['url_generator']->generate(
+                        'course',
+                        array(
+                            '_locale' => $_locale,
+                            'name'    => $name,
+                            '_format' => 'html'
+                        ),
+                        true
+                    )
+                ));
+
+                return $response;
+            }
+
+            return $app['twig']->render(
+                'pages/courses.html.twig'
+            );
+        }
+    )
+    ->before($buildLocaleLinks)
+    ->assert('_format', 'md|html|pdf')
+    ->bind('course')
+;
+
 // Blog page
 $intlApp
     ->get(
@@ -158,7 +238,13 @@ $intlApp
     ->match(
         '/contact',
         function (Request $request, $_locale) use ($app) {
-            $form = $app['form.factory']->createBuilder(new ContactType())->getForm();
+            $contactType = new ContactType();
+
+            if ($request->isXmlHttpRequest()) {
+                $contactType->setName('modal_contact');
+            }
+
+            $form = $app['form.factory']->createBuilder($contactType)->getForm();
 
             if ($request->getMethod() === 'POST') {
                 $form->handleRequest($request);
@@ -257,7 +343,19 @@ $intlApp
 
             if ($_format === 'pdf') {
                 $response->headers->set('Content-Type', 'application/pdf');
-                $response->setContent($app['snappy.pdf']->getOutputFromHtml($cv));
+                $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
+
+                $response->setContent($app['snappy.pdf']->getOutput(
+                    $app['url_generator']->generate(
+                        'cv',
+                        array(
+                            '_locale' => $_locale,
+                            'name'    => $name,
+                            '_format' => 'html'
+                        ),
+                        true
+                    )
+                ));
 
                 return $response;
             }
