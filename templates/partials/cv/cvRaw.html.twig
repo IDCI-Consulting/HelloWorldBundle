@@ -1,1 +1,5 @@
-{{ cv|raw }}
+{% extends 'cv.html.twig' %}
+
+{% block content %}
+    {{ cv|raw }}
+{% endblock %}

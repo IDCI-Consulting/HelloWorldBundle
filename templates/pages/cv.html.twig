@@ -8,9 +8,11 @@
 {% endblock %}
 
 {% block main_content %}
-    <div class="row">
-        <div class="small-12 columns cv">
+    <div class="row full-width cv">
+        <div class="small-12">
             {% include 'partials/cv/cvRaw.html.twig' with {'cv': cv} %}
+        </div>
+        <div class="small-12 columns">
             <a class="button small export-cv" href="{{ path('cv', {'_locale': app.translator.locale, 'name': name, '_format': 'pdf'}) }}">{% trans %}Download{% endtrans %}</a>
         </div>
     </div>
