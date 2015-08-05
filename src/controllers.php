@@ -175,11 +175,7 @@ $intlApp
             }
 
             $course = $app['twig']->render(
-                sprintf(
-                    'partials/courses/%s_%s.html.twig',
-                    $name,
-                    $_locale
-                ),
+                'partials/courses/courseRaw.html.twig',
                 array(
                     'content' => $app['markdown']->transform($matchedCourse)
                 )
@@ -336,12 +332,24 @@ $intlApp
             $cv = $app['markdown']->transform($cv);
 
             if ($_format === 'html') {
-                $response->setContent($cv);
-
-                return $response;
+                return $app['twig']->render(
+                    'partials/cv/cvRaw.html.twig',
+                    array(
+                        'cv' => $cv
+                    )
+                );
             }
 
             if ($_format === 'pdf') {
+                // Add option to remove the margin on pdf generation
+                $app['snappy.pdf_options'] = array(
+                    'encoding'   => 'UTF-8',
+                    'margin-top' => 0,
+                    'margin-right' => 0,
+                    'margin-bottom' => 0,
+                    'margin-left' => 0
+                );
+
                 $response->headers->set('Content-Type', 'application/pdf');
                 $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
 
