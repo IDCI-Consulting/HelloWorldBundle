@@ -1,6 +1,8 @@
 .input {
   position: relative;
+  min-height: 4rem;
   margin: 1rem auto;
+  max-height: 8rem;
   max-width: 40rem;
   vertical-align: top;
   border: 1px solid #ccc;
@@ -83,7 +85,7 @@
 }
 
 .input__label-content--juro {
-  padding: 2rem 1rem;
+  padding: 1rem;
   -webkit-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
   -webkit-transition: -webkit-transform 0.3s, color 0.3s;
@@ -94,26 +96,34 @@
 
 .input__field--juro:focus + .input__label--juro::before,
 .input--filled .input__label--juro::before {
-  border-width: 8px;
+  border-width: 5px;
   border-color: $idci-light-blue;
-  border-top-width: 2rem;
+  border-top-width: 1.5rem;
 }
 
 .input__field--juro:focus + .input__label--juro .input__label-content--juro,
 .input--filled .input__label--juro .input__label-content--juro {
   color: #fff;
-  -webkit-transform: translate3d(0, -1.5rem, 0) scale3d(0.75, 0.75, 1);
-  transform: translate3d(0, -1.5rem, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
+  -webkit-transform: translate3d(0, -1rem, 0) scale3d(0.75, 0.75, 1);
+  transform: translate3d(0, -1rem, 0) scale3d(0.75, 0.75, 1) translateZ(1px);
 }
 
 textarea.input__field--juro {
-  height: 9.5rem;
-  margin-top: 2rem;
+  height: 6rem;
+  margin-top: 1.5rem;
   padding-top: 0;
   resize: none;
-  width: calc(100% - 8px);
+  width: calc(100% - 5px);
 
   & + label {
-    height: 12rem;
+    height: 8rem;
+  }
+}
+
+form {
+  .button {
+    display: block;
+    margin: 0 auto;
+    width: 8rem;
   }
 }

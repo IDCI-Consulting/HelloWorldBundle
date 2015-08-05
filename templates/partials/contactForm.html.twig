@@ -1,9 +1,6 @@
 {% form_theme form 'idci_form_fields.html.twig' %}
 
-<form action="{{ path('contact', {_locale: app.translator.locale}) }}" method="post" novalidate>
+<form action="{{ path('contact', {_locale: app.translator.locale}) }}" method="post" novalidate {{ form_enctype(form) }}>
     {{ form_errors(form) }}
     {{ form_widget(form) }}
-    <button type="submit" class="small button" name="submit">
-        <span>{% trans %}Validate{% endtrans %}</span>
-    </button>
 </form>

@@ -14,6 +14,8 @@ use Symfony\Component\Validator\Constraints as Constraints;
 
 class ContactType extends AbstractType
 {
+    private $name = 'contact';
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $notBlankConstraint = new Constraints\NotBlank(array(
@@ -58,16 +60,32 @@ class ContactType extends AbstractType
                     $notBlankConstraint,
                 )
             ))
+            ->add('validate', 'submit', array(
+                'label' => 'Validate',
+                'attr' => array(
+                    'class' => 'button small'
+                )
+            ))
         ;
     }
 
     /**
-     * Returns the name of this type.
+     * Returns the name of ContactType.
      *
      * @return string The name of this type
      */
     public function getName()
     {
-        return 'contact';
+        return $this->name;
+    }
+
+    /**
+     * Sets the name of ContactType.
+     *
+     * @return string The name of this type
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 }
