@@ -154,7 +154,7 @@ $intlApp
 
             $response = new Response();
 
-            if ($_format === 'md') {
+            if ('md' === $_format) {
                 $response->headers->set('Content-Type', 'text/markdown');
                 $response->setContent($course);
 
@@ -181,7 +181,7 @@ $intlApp
                 )
             );
 
-            if ($_format === 'html') {
+            if ('html' === $_format) {
                 return $course;
             }
 
@@ -312,7 +312,7 @@ $intlApp
 
             $response = new Response();
 
-            if ($_format === 'md') {
+            if ('md' === $_format) {
                 $response->headers->set('Content-Type', 'text/markdown');
                 $response->setContent($cv);
 
@@ -326,11 +326,11 @@ $intlApp
                 'theme' => $theme
             ));
 
-            if ($_format === 'html') {
+            if ('html' === $_format) {
                 return $cvHtml;
             }
 
-            if ($_format === 'pdf') {
+            if ('pdf' === $_format) {
                 // Add option to remove the margin on pdf generation
                 $app['snappy.pdf_options'] = array(
                     'encoding'   => 'UTF-8',
