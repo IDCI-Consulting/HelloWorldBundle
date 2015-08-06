@@ -1,0 +1,64 @@
+/****************************
+ *** Settings importation ***
+ ****************************/
+@import '../settings';
+
+* {
+  color: $idci-blue;
+  font-size: .6rem;
+}
+
+.content {
+  height: 29.7cm;
+  margin: 0 auto;
+  width: 21cm;
+}
+
+h2, h4, p {
+  padding: .5rem 1rem;
+}
+
+h4 {
+  color: $idci-blue;
+  font-size: 1.5rem;
+}
+
+strong {
+  color: $idci-light-blue;
+  display: block;
+}
+
+section {
+  padding: 1rem;
+
+  p:first-child {
+    color: $idci-blue;
+    font-size: 1.3rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  &:nth-child(even) {
+    background-color: $idci-dark-grey;
+  }
+
+  &:nth-child(3) {
+    background-color: $idci-light-grey;
+  }
+}
+
+ul {
+  list-style-type: none;
+
+  li {
+    margin-left: 13rem;
+    padding-bottom: .5rem;
+    position: relative;
+
+    em {
+      color: $idci-green;
+      position: absolute;
+      left: -13rem;
+    }
+  }
+}
