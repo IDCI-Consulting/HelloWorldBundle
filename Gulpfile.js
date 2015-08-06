@@ -11,7 +11,7 @@ var src              = [],
     slick = 'bower_components/slick-carousel/slick/'
 ;
 
-src['style']         = "src/Resources/styles/**/*.scss";
+src['style']         = ["src/Resources/styles/scss/main.scss", 'bower_components/slick-carousel/slick/slick.scss'];
 src['template']      = "templates/**/*";
 src['script']        = "src/Resources/js/**/*.js";
 src['plugins']       = "src/Resources/plugins/**/*";
@@ -33,13 +33,15 @@ var chmod            = require('gulp-chmod'),
     rev              = require('gulp-rev'),
     sass             = require('gulp-sass'),
     uglify           = require('gulp-uglify'),
-    spritesmith      = require('gulp.spritesmith')
+    spritesmith      = require('gulp.spritesmith'),
+    rename           = require('gulp-rename')
 ;
 
 // Task to watch files
 gulp.task('watch', ['init'], function() {
     livereload.listen();
     gulp.watch(src['style'], ['styles']);
+    gulp.watch(['src/Resources/styles/scss/theme/*.scss'], ['styles']);
     gulp.watch(src['template'], ['reload-templates']);
     gulp.watch(src['script'], ['dev-scripts']);
 });
@@ -58,7 +60,10 @@ gulp.task('styles', function() {
     // delete all css files
     del(web['style']+'/*.css');
     // build css files
-    gulp.src([src['style'], slick+'slick.scss'])
+
+    gulp.start('cv-theme');
+
+    gulp.src(src['style'])
         .pipe(sass({ errLogToConsole: true }))
         .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(concat({ path: 'app.min.css'}))
@@ -67,6 +72,19 @@ gulp.task('styles', function() {
         .pipe(gulp.dest(web['style']))
         .pipe(rev.manifest(src['manifest']+'rev-manifest.json', {base: src['manifest'], merge: true}))
         .pipe(gulp.dest(src['manifest']))
+        .pipe(livereload())
+    ;
+});
+
+gulp.task('cv-theme', function() {
+    // build css files
+    gulp.src(['src/Resources/styles/scss/theme/*.scss'])
+        .pipe(sass({ errLogToConsole: true }))
+        .pipe(minifycss({keepSpecialComments: 0}))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('web/css/cv/theme/'))
         .pipe(livereload())
     ;
 });
