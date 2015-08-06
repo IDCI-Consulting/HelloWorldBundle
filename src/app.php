@@ -52,6 +52,10 @@ $app->register(new SnappyServiceProvider(), array(
 ));
 $app->register(new FinderServiceProvider());
 
+$app['snappy.pdf_options'] = array(
+    'encoding'   => 'UTF-8',
+);
+
 $app['swiftmailer.options'] = $app['config']['swiftmailer'];
 
 $app['menu.options'] = $app['config']['menu'];
