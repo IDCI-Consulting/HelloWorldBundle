@@ -12,6 +12,12 @@
   }
 }
 
+@media #{$large-only} {
+  .projects-content {
+    padding:  5rem 10rem;
+  }
+}
+
 @media #{$medium-only} {
   section {
     header {
@@ -31,6 +37,10 @@
 
   .hide-for-small-only.arrow {
     display: inline!important;
+  }
+
+  .projects-content {
+    padding:  5rem 8rem;
   }
 }
 

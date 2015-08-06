@@ -44,7 +44,7 @@
     }
 
     a {
-      font-size: .9rem;
+      font-size: .8rem;
     }
   }
 
@@ -71,6 +71,10 @@
   .nav-menu {
     li {
       margin-left: .9rem;
+
+      a {
+        font-size: .5rem;
+      }
     }
   }
 }
