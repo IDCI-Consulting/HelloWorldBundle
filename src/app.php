@@ -176,4 +176,22 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
     $app['twig']->addGlobal('tabs_course_menu', $tabsCourseMenu);
 };
 
+$buildCv = function (Request $request, Application $app) {
+    $name = $request->attributes->get('name');
+
+    $content = $app['twig']->render(sprintf('contents/cv/%s.md.twig', $name));
+
+    $content = preg_replace('/[^#]###[^#]/', '=### ', $content);
+    $content .= '=';
+
+    preg_match_all("/#{3}(?<content>.*)=/sU", $content, $matches);
+
+    $htmlCv = '';
+    foreach ($matches['content'] as $content) {
+        $htmlCv .= '<section markdown="1">'.$app['markdown']->transform($content).'</section>';
+    }
+
+    $app['twig']->addGlobal('html_cv', $htmlCv);
+};
+
 return $app;

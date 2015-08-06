@@ -358,6 +358,7 @@ $intlApp
             );
         }
     )
+    ->before($buildCv)
     ->before($buildLocaleLinks)
     ->assert('_format', 'md|html|pdf')
     ->value('_format', '')
