@@ -1,5 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+
+    {% include 'partials/cv/stylesheet.html.twig' with {"theme": theme} %}
+{% endblock %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
@@ -9,11 +15,11 @@
 
 {% block main_content %}
     <div class="row full-width cv">
-        <div class="small-12">
-            {% include 'partials/cv/cvRaw.html.twig' with {'cv': cv} %}
+        <div class="small-12 columns">
+            {{ cv|raw }}
         </div>
         <div class="small-12 columns">
-            <a class="button small export-cv" href="{{ path('cv', {'_locale': app.translator.locale, 'name': name, '_format': 'pdf'}) }}">{% trans %}Download{% endtrans %}</a>
+            <a class="button small export-cv" href="{{ path('cv', {'_locale': app.translator.locale, 'theme': 'idci', 'name': name, '_format': 'pdf'}) }}">{% trans %}Download{% endtrans %}</a>
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,3 @@
+{% set absolutePath = app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ asset('css/' ~ getRevFilename('app.min.css') ~ '') %}
+
+<link href="{{ absolutePath }}" rel="stylesheet" type="text/css" />

@@ -22,8 +22,9 @@
 .tabs-content {
 
   .content {
+    opacity:0;
     text-align: left;
-    @include transition(all, .2s);
+    @include transition(all, .6s, ease-out);
 
     h3, h4 {
       color: $idci-green;
@@ -34,14 +35,10 @@
       list-style-image: url("/images/balise_right.svg");
     }
 
-    .course-content {
-      opacity:0;
-      @include transition(all, .6s, ease-out);
-
-      &.on {
-        opacity:1;
-      }
+    &.on {
+      opacity:1;
     }
+
   }
 }
 

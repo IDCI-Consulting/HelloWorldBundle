@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% set absolutePath = app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ asset('css/' ~ getRevFilename('app.min.css') ~ '') %}
+    <link href="{{ absolutePath }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="content">
+    {{ course|markdown }}
+</div>
+</body>
+</html>

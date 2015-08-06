@@ -27,9 +27,7 @@
             <div class="tabs-content">
                 {% for day, courseContent in courses['courses'] %}
                 <div class="content" id="{{ title }}-{{ day }}">
-                    <div class="course-content">
-                        {{ courseContent|markdown }}
-                    </div>
+                    {{ courseContent|markdown }}
                 </div>
                 {% endfor %}
             </div>
@@ -42,11 +40,12 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.tabs li:first-child').addClass('active');
-        $('div.tabs-content > div:first-child').addClass('active').find('.course-content').addClass('on');
+
+        $('div.tabs-content > div:first-child').addClass('active on');
 
         $('.tabs').on('click', 'li', function(event) {
-            $('.tabs-content .content').find('.course-content').removeClass('on');
-            $('.content.active').find('.course-content').fadeIn('slow').addClass('on');
+            $('.tabs-content').find('.content').removeClass('on');
+            $('.content.active').fadeIn('slow').addClass('on');
         });
     });
 

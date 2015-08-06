@@ -13,5 +13,5 @@
 
     {% include 'contents/team/brahim_' ~ app.translator.locale ~ '.html.twig' %}
 
-    <a href="{{ path('cv', {_locale: app.translator.locale, 'name': 'brahim_boukoufallah'}) }}" class="button small see-cv small-12">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
+    <a href="{{ path('cv', {_locale: app.translator.locale, 'theme': 'idci', 'name': 'brahim_boukoufallah'}) }}" class="button small see-cv small-12">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
 </article>

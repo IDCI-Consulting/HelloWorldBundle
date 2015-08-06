@@ -175,9 +175,9 @@ $intlApp
             }
 
             $course = $app['twig']->render(
-                'partials/courses/courseRaw.html.twig',
+                'partials/courses/output.html.twig',
                 array(
-                    'content' => $app['markdown']->transform($matchedCourse)
+                    'course' => $app['markdown']->transform($matchedCourse)
                 )
             );
 
@@ -189,17 +189,7 @@ $intlApp
                 $response->headers->set('Content-Type', 'application/pdf');
                 $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
 
-                $response->setContent($app['snappy.pdf']->getOutput(
-                    $app['url_generator']->generate(
-                        'course',
-                        array(
-                            '_locale' => $_locale,
-                            'name'    => $name,
-                            '_format' => 'html'
-                        ),
-                        true
-                    )
-                ));
+                $response->setContent($app['snappy.pdf']->getOutputFromHtml($course));
 
                 return $response;
             }
@@ -308,8 +298,8 @@ $intlApp
 
 $intlApp
     ->get(
-        '/cv/{name}.{_format}',
-        function (Request $request, $_locale, $name, $_format) use ($app) {
+        '/cv/{theme}/{name}.{_format}',
+        function (Request $request, $_locale, $theme, $name, $_format) use ($app) {
 
             try {
                 $cv = $app['twig']->render(sprintf('contents/cv/%s.md.twig', $name), array());
@@ -331,13 +321,13 @@ $intlApp
 
             $cv = $app['markdown']->transform($cv);
 
+            $cvHtml = $app['twig']->render('partials/cv/output.html.twig', array(
+                'cv' => $cv,
+                'theme' => $theme
+            ));
+
             if ($_format === 'html') {
-                return $app['twig']->render(
-                    'partials/cv/cvRaw.html.twig',
-                    array(
-                        'cv' => $cv
-                    )
-                );
+                return $cvHtml;
             }
 
             if ($_format === 'pdf') {
@@ -353,17 +343,7 @@ $intlApp
                 $response->headers->set('Content-Type', 'application/pdf');
                 $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
 
-                $response->setContent($app['snappy.pdf']->getOutput(
-                    $app['url_generator']->generate(
-                        'cv',
-                        array(
-                            '_locale' => $_locale,
-                            'name'    => $name,
-                            '_format' => 'html'
-                        ),
-                        true
-                    )
-                ));
+                $response->setContent($app['snappy.pdf']->getOutputFromHtml($cvHtml));
 
                 return $response;
             }
@@ -372,7 +352,8 @@ $intlApp
                 'pages/cv.html.twig',
                 array(
                     'name' => $name,
-                    'cv'   => $cv
+                    'cv'   => $cv,
+                    'theme' => $theme
                 )
             );
         }
