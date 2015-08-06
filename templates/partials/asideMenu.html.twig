@@ -20,7 +20,7 @@
 
             var $sectionId = $(this).attr('href');
 
-            $('body').animate({
+            $('body, html').animate({
                 scrollTop: $($sectionId).offset().top
             }, 'slow');
         });

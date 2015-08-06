@@ -45,8 +45,8 @@ String.prototype.decode = function(encoding) {
             return false
         }
 
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
+        var docViewTop = $(document).scrollTop();
+        var docViewBottom = docViewTop + $(document).height();
 
         var elemTop = el.offset().top;
         var elemBottom = elemTop + el.height();
@@ -72,7 +72,7 @@ String.prototype.decode = function(encoding) {
         $('.fade-in-block').each( function(i){
 
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            var bottom_of_window = $(document).scrollTop() + $('body, html').height();
 
             /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
             bottom_of_window = bottom_of_window + 200;
