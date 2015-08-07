@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block header %}
-    <div class="row full-width header-container">
+    <div class="full-width header-container">
         <header>
             <a class="hide-for-medium-up small-2 columns menu-icon">
                 <i class="fa fa-bars"></i>
@@ -102,6 +102,7 @@
         </script>
 
         <div class="row">
+            {% if not hide_contact_link %}
             <div class="medium-4 columns footer-part contact-us ">
                 <p class="hide-for-small-only">
                     {% trans %}For any other request{% endtrans %}
@@ -111,6 +112,7 @@
                     <a id="contact-link" href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button small" data-reveal-id="idci-modal">{% trans %}Contact us{% endtrans %}</a>
                 </p>
             </div>
+            {% endif %}
 
             <div class="medium-4 columns footer-part address ">
                 <h3 class="idci-light-blue">
@@ -165,6 +167,9 @@
                             '<a class="close-reveal-modal" aria-label="Close">&#215;</a>' +
                         '</div>'
                     );
+
+                    $modal.find('.close-reveal-modal').after('<h2>Contact</h2>');
+
                     $modal.append(content);
                     $('footer').after($modal);
                     $modal.foundation('reveal', 'open');
