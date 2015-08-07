@@ -33,15 +33,13 @@ var chmod            = require('gulp-chmod'),
     rev              = require('gulp-rev'),
     sass             = require('gulp-sass'),
     uglify           = require('gulp-uglify'),
-    spritesmith      = require('gulp.spritesmith'),
-    rename           = require('gulp-rename')
+    spritesmith      = require('gulp.spritesmith')
 ;
 
 // Task to watch files
 gulp.task('watch', ['init'], function() {
     livereload.listen();
-    gulp.watch(src['style'], ['styles']);
-    gulp.watch(['src/Resources/styles/scss/theme/*.scss'], ['styles']);
+    gulp.watch("src/Resources/styles/**/*.scss", ['styles']);
     gulp.watch(src['template'], ['reload-templates']);
     gulp.watch(src['script'], ['dev-scripts']);
 });
