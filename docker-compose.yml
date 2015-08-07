@@ -1,5 +1,5 @@
 silex:
-  image: brah0um/silex-dev-idci:1.0
+  image: ovski/silex-dev-idci
   volumes:
    - .:/var/www
    - /var/log/docker/nginx/idci/:/var/log/nginx
