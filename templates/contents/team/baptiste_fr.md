@@ -1,0 +1,4 @@
+
+Si je suis tombé dans le monde informatique par hasard, j'y suis resté par passion.
+J'ai un goût prononcé pour le travail bien fait et les choses qui fonctionne bien.
+J'ai aussi un goût prononcé pour le chocolat et les glaces en été.
