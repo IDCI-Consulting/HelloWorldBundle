@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block main_content %}
-<section class="row team">
+<section class="full-width team">
     <header class="small-12 columns">
         <h2 class="title">
             <i class="show-for-small-only fa fa-user"></i>
@@ -22,32 +22,11 @@
         </h2>
     </header>
 
-    {%
-        include 'partials/team/gabriel.html.twig'
-            with {
-                'firstName': 'gabriel',
-            }
-    %}
-
-    {%
-        include 'partials/team/frederic.html.twig'
-            with {
-                'firstName': 'frederic',
-            }
-    %}
-
-    {%
-        include 'partials/team/baptiste.html.twig'
-            with {
-                'firstName': 'baptiste',
-            }
-    %}
-
-    {%
-        include 'partials/team/brahim.html.twig'
-        with {
-            'firstName': 'brahim',
-        }
-    %}
+    <div class="row">
+        {% include 'partials/team/gabriel.html.twig' %}
+        {% include 'partials/team/frederic.html.twig' %}
+        {% include 'partials/team/baptiste.html.twig'  %}
+        {% include 'partials/team/brahim.html.twig' %}
+    </div>
 </section>
 {% endblock %}

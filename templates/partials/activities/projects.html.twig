@@ -12,34 +12,17 @@
     </header>
 
     <div class="medium-12 columns accordion-content projects-content">
-        <div class="projects">
-            <div class="project">
-                <div class="medium-12 large-4 columns">
-                    <div class="browser-mockup">
-                        <img src="{{ asset('images/moniteur.png') }}" />
-                    </div>
-                </div>
-                <div class="medium-12 large-8 columns">
-                    {% include 'contents/activities/moniteur_' ~ app.translator.locale ~ '.html.twig' %}
-                </div>
+        {% for realisation in realisations %}
+            <div class="realisation">
+                {{ realisation|raw }}
             </div>
-            <div class="project">
-                <div class="medium-12 large-4 columns">
-                    <div class="browser-mockup">
-                        <img src="{{ asset('images/body.png') }}" />
-                    </div>
-                </div>
-                <div class="medium-12 large-8 columns">
-                    {% include 'contents/activities/bodysculpt_' ~ app.translator.locale ~ '.html.twig' %}
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('.projects').slick({
+        $('.projects-content').slick({
             inifinite: true,
             nextArrow: '<img class="slick-arrow next right" src="{{ asset('images/slick_arrow.svg') }}"/>',
             prevArrow: false

@@ -19,92 +19,94 @@
     {% include 'partials/index/approach.html.twig' %}
 
 
-    <section id="{% trans %}tools{% endtrans %}" class="row tools fade-in-block">
-        <header>
-            <h2>
-                {% trans %}Our tools{% endtrans %}
-            </h2>
-        </header>
-        <div class="medium-2 columns">
-            {%
+    <section id="{% trans %}tools{% endtrans %}" class="tools full-width">
+        <div class="row">
+            <header>
+                <h2>
+                    {% trans %}Our tools{% endtrans %}
+                </h2>
+            </header>
+            <div class="medium-2 columns">
+                {%
+                    include 'partials/index/tools.html.twig'
+                    with {
+                        'class': 'backend',
+                        'title': 'Backend',
+                        'images': {
+                            'php': 'https://secure.php.net/',
+                            'symfony1': 'http://symfony.com/legacy',
+                            'symfony2': 'http://symfony.com/',
+                            'node': 'https://nodejs.org/',
+                            'meteor': 'https://www.meteor.com/'
+                        }
+                    }
+                %}
+            </div>
+
+            <div class="medium-2 columns">
+                {%
+                    include 'partials/index/tools.html.twig'
+                    with {
+                        'class': 'databases',
+                        'title': 'Databases',
+                        'images': {
+                            'mysql': 'https://www.mysql.fr/',
+                            'mongodb': 'https://www.mongodb.org/',
+                            'postgresql': 'http://www.postgresql.org/',
+                            'redis': 'http://redis.io/'
+                        }
+                    }
+                %}
+            </div>
+
+            <div class="medium-3 columns">
+                {%
                 include 'partials/index/tools.html.twig'
                 with {
-                    'class': 'backend',
-                    'title': 'Backend',
-                    'images': {
-                        'php': 'https://secure.php.net/',
-                        'symfony1': 'http://symfony.com/legacy',
-                        'symfony2': 'http://symfony.com/',
-                        'node': 'https://nodejs.org/',
-                        'meteor': 'https://www.meteor.com/'
-                    }
-                }
-            %}
-        </div>
-
-        <div class="medium-2 columns">
-            {%
-                include 'partials/index/tools.html.twig'
-                with {
-                    'class': 'databases',
-                    'title': 'Databases',
-                    'images': {
-                        'mysql': 'https://www.mysql.fr/',
-                        'mongodb': 'https://www.mongodb.org/',
-                        'postgresql': 'http://www.postgresql.org/',
-                        'redis': 'http://redis.io/'
-                    }
-                }
-            %}
-        </div>
-
-        <div class="medium-3 columns">
-            {%
-            include 'partials/index/tools.html.twig'
-            with {
-            'class': 'infrastructure',
-            'title': 'Infrastructure',
-            'images': {
-            'varnish': 'https://www.varnish-cache.org/',
-            'proxmox': 'https://www.proxmox.com/en/',
-            'ansible': 'http://www.ansible.com/home',
-            'elk': 'http://www.ansible.com/home',
-            'docker': 'http://www.ansible.com/home',
-            }
-            }
-            %}
-        </div>
-
-        <div class="medium-2 columns">
-            {%
-                include 'partials/index/tools.html.twig'
-                with {
-                    'class': 'frontend',
-                    'title': 'Frontend',
-                    'images': {
-                        'html5-css3': 'http://www.w3.org/TR/html5/',
-                        'bootstrap': 'http://getbootstrap.com/',
-                        'foundation': 'http://foundation.zurb.com/',
-                        'angular': 'https://angularjs.org/',
-                        'sass': 'http://sass-lang.com/',
-                    }
-                }
-            %}
-        </div>
-
-        <div class="medium-2 medium-pull-1 columns">
-            {%
-            include 'partials/index/tools.html.twig'
-            with {
-                'class': 'qualite',
-                'title': 'Quality',
+                'class': 'infrastructure',
+                'title': 'Infrastructure',
                 'images': {
-                    'php-unit': 'https://phpunit.de/',
-                    'gitlab': 'https://about.gitlab.com/',
-                    'redmine': 'http://www.redmine.org/projects/redmine/wiki',
+                'varnish': 'https://www.varnish-cache.org/',
+                'proxmox': 'https://www.proxmox.com/en/',
+                'ansible': 'http://www.ansible.com/home',
+                'elk': 'http://www.ansible.com/home',
+                'docker': 'http://www.ansible.com/home',
                 }
-            }
-            %}
+                }
+                %}
+            </div>
+
+            <div class="medium-2 columns">
+                {%
+                    include 'partials/index/tools.html.twig'
+                    with {
+                        'class': 'frontend',
+                        'title': 'Frontend',
+                        'images': {
+                            'html5-css3': 'http://www.w3.org/TR/html5/',
+                            'bootstrap': 'http://getbootstrap.com/',
+                            'foundation': 'http://foundation.zurb.com/',
+                            'angular': 'https://angularjs.org/',
+                            'sass': 'http://sass-lang.com/',
+                        }
+                    }
+                %}
+            </div>
+
+            <div class="medium-2 medium-pull-1 columns">
+                {%
+                include 'partials/index/tools.html.twig'
+                with {
+                    'class': 'qualite',
+                    'title': 'Quality',
+                    'images': {
+                        'php-unit': 'https://phpunit.de/',
+                        'gitlab': 'https://about.gitlab.com/',
+                        'redmine': 'http://www.redmine.org/projects/redmine/wiki',
+                    }
+                }
+                %}
+            </div>
         </div>
     </section>
 </div>

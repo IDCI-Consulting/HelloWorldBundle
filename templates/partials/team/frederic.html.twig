@@ -6,12 +6,14 @@
     </header>
 
     <div class="content-wrapper">
-        <div class="image-holder {{ firstName }}">
+        <div class="image-holder frederic">
             <div class="profile-picture front"></div>
         </div>
     </div>
 
-    {% include 'contents/team/frederic_' ~ app.translator.locale ~ '.html.twig' %}
+    {% filter markdown %}
+    {% include 'contents/team/frederic_' ~ app.translator.locale ~ '.md' %}
+    {% endfilter %}
 
     <a href="{{ path('cv', {_locale: app.translator.locale, 'theme': 'idci', 'name': 'frederic_bondaz'}) }}" class="button small small-12 see-cv">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
 </article>
