@@ -13,8 +13,11 @@
             </a>
 
             <h1 class="small-3 medium-1 large-2 columns logo">
-                <a href="{{ path('index', {'_locale': app.translator.locale}) }}">
+                <a class="hide-for-small-only" href="{{ path('index', {'_locale': app.translator.locale}) }}">
                     <img src="{{ asset('images/logo_idci.svg') }}"/>
+                </a>
+                <a class="show-for-small-only" href="{{ path('index', {'_locale': app.translator.locale}) }}">
+                    <img src="{{ asset('images/logo_idci_white.svg') }}"/>
                 </a>
             </h1>
 
