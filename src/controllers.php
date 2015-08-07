@@ -48,11 +48,10 @@ $intlApp
         '/',
         function (Request $request, $_locale) use ($app) {
 
-            return $app['twig']->render(
-                'pages/index.html.twig'
-            );
+            return $app['twig']->render('pages/index.html.twig');
         }
     )
+    ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->before($buildAsideMenu)
     ->bind('index')
@@ -64,11 +63,10 @@ $intlApp
         '/company',
         function (Request $request, $_locale) use ($app) {
 
-            return $app['twig']->render(
-                'pages/company.html.twig'
-            );
+            return $app['twig']->render('pages/company.html.twig');
         }
     )
+    ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->bind('company')
 ;
@@ -79,11 +77,10 @@ $intlApp
         '/team',
         function (Request $request, $_locale) use ($app) {
 
-            return $app['twig']->render(
-                'pages/team.html.twig'
-            );
+            return $app['twig']->render('pages/team.html.twig');
         }
     )
+    ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->before($buildAsideMenu)
     ->bind('team')
@@ -95,12 +92,12 @@ $intlApp
         '/activities',
         function (Request $request, $_locale) use ($app) {
 
-            return $app['twig']->render(
-                'pages/activities.html.twig'
-            );
+            return $app['twig']->render('pages/activities.html.twig');
         }
     )
+    ->before($hideContactLink)
     ->before($buildLocaleLinks)
+    ->before($buildRealisations)
     ->before($buildAsideMenu)
     ->bind('activities')
 ;
@@ -111,11 +108,11 @@ $intlApp
         '/partners',
         function (Request $request, $_locale) use ($app) {
 
-            return $app['twig']->render(
-                'pages/partners.html.twig'
-            );
+
+            return $app['twig']->render('pages/partners.html.twig');
         }
     )
+    ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->before($buildAsideMenu)
     ->bind('partners')
@@ -127,11 +124,10 @@ $intlApp
         '/courses',
         function (Request $request, $_locale) use ($app) {
 
-            return $app['twig']->render(
-                'pages/courses.html.twig'
-            );
+            return $app['twig']->render('pages/courses.html.twig');
         }
     )
+    ->before($hideContactLink)
     ->before($buildTabsCourseMenu)
     ->before($buildLocaleLinks)
     ->before($buildAsideMenu)
@@ -144,7 +140,7 @@ $intlApp
         function (Request $request, $_locale, $name, $_format) use ($app) {
 
             try {
-                $course = $app['twig']->render(sprintf('contents/courses/%s_%s.md.twig', $name, $_locale), array());
+                $course = $app['twig']->render(sprintf('contents/courses/%s_%s.md', $name, $_locale), array());
             } catch (\Exception $e) {
                 throw new NotFoundHttpException(sprintf(
                     'The %s\'s course doesn\'t exist',
@@ -194,11 +190,10 @@ $intlApp
                 return $response;
             }
 
-            return $app['twig']->render(
-                'pages/courses.html.twig'
-            );
+            return $app['twig']->render('pages/courses.html.twig');
         }
     )
+    ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->assert('_format', 'md|html|pdf')
     ->bind('course')
@@ -210,11 +205,10 @@ $intlApp
         '/blog',
         function (Request $request, $_locale) use ($app) {
 
-            return $app['twig']->render(
-                'pages/blog.html.twig'
-            );
+            return $app['twig']->render('pages/blog.html.twig');
         }
     )
+    ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->bind('blog')
 ;
@@ -292,6 +286,7 @@ $intlApp
         },
         "GET|POST"
     )
+    ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->bind('contact')
 ;
@@ -302,7 +297,7 @@ $intlApp
         function (Request $request, $_locale, $theme, $name, $_format) use ($app) {
 
             try {
-                $cv = $app['twig']->render(sprintf('contents/cv/%s.md.twig', $name), array());
+                $cv = $app['twig']->render(sprintf('contents/cv/%s.md', $name), array());
             } catch (\Exception $e) {
                 throw new NotFoundHttpException(sprintf(
                     'The %s\'s cv doesn\'t exist',
@@ -348,16 +343,14 @@ $intlApp
                 return $response;
             }
 
-            return $app['twig']->render(
-                'pages/cv.html.twig',
-                array(
-                    'name' => $name,
-                    'cv'   => $cv,
-                    'theme' => $theme
-                )
-            );
+            return $app['twig']->render('pages/cv.html.twig', array(
+                'name' => $name,
+                'cv'   => $cv,
+                'theme' => $theme
+            ));
         }
     )
+    ->before($hideContactLink)
     ->before($buildCv)
     ->before($buildLocaleLinks)
     ->assert('_format', 'md|html|pdf')
