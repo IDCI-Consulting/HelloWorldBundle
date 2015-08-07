@@ -113,12 +113,21 @@ $app['twig'] = $app->extend(
  * Middlewares *
  ***************/
 
+$hideContactLink = function (Request $request, Application $app) {
+    $hideContactLink = false;
+
+    if ($request->attributes->get('_route') === 'contact') {
+        $hideContactLink = true;
+    }
+
+    $app['twig']->addGlobal('hide_contact_link', $hideContactLink);
+};
+
 $buildLocaleLinks = function (Request $request, Application $app) {
     $app['translator']->setLocale($request->get('_locale'));
     $i18nRoutes = $app['i18n_route_generator']->generate($request);
 
     $app['twig']->addGlobal('i18n_routes', $i18nRoutes);
-
 };
 
 $buildAsideMenu = function (Request $request, Application $app) {
@@ -147,12 +156,11 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
 
     $app['finder']
         ->files()
-        ->name('*_'.$locale.'.md.twig')
+        ->name('*_'.$locale.'.md')
         ->in(__DIR__.'/../templates/contents/courses/');
     $tabsCourseMenu = array();
 
     foreach ($app['finder'] as $file) {
-        // Decode into utf8
         $content = $file->getContents();
 
         $matches = $app['course_manager']->matchContent($content);
@@ -179,7 +187,7 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
 $buildCv = function (Request $request, Application $app) {
     $name = $request->attributes->get('name');
 
-    $content = $app['twig']->render(sprintf('contents/cv/%s.md.twig', $name));
+    $content = $app['twig']->render(sprintf('contents/cv/%s.md', $name));
 
     $content = preg_replace('/[^#]###[^#]/', '=### ', $content);
     $content .= '=';
@@ -188,10 +196,30 @@ $buildCv = function (Request $request, Application $app) {
 
     $htmlCv = '';
     foreach ($matches['content'] as $content) {
-        $htmlCv .= '<section markdown="1">'.$app['markdown']->transform($content).'</section>';
+        $htmlCv .= '<section markdown="1" class="cv-part">'.$app['markdown']->transform($content).'</section>';
     }
 
     $app['twig']->addGlobal('html_cv', $htmlCv);
+};
+
+$buildRealisations = function (Request $request, Application $app) {
+    $locale = $request->attributes->get('_locale');
+
+    $app['finder']
+        ->files()
+        ->name('*_'.$locale.'.md')
+        ->in(__DIR__.'/../templates/contents/activities/');
+
+    $realisations = array();
+
+    foreach ($app['finder'] as $file) {
+        // Decode into utf8
+        $content = $file->getContents();
+
+        $realisations[] = $app['markdown']->transform($content);
+    }
+
+    $app['twig']->addGlobal('realisations', $realisations);
 };
 
 return $app;
