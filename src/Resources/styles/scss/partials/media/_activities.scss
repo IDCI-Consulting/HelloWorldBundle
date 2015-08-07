@@ -1,22 +1,5 @@
-@media #{$medium-only} {
-  .slick-arrow {
-
-    &.next.right {
-      right: -2rem;
-    }
-  }
-}
-
 @media #{$small-only} {
   .project-title {
     font-size: 2rem;
-  }
-
-  .slick-arrow {
-    height: 1.5rem;
-
-    &.next.right {
-      right: -1.5rem;
-    }
   }
 }

@@ -45,6 +45,11 @@
 }
 
 @media #{$small-only} {
+
+  .wrapper {
+    min-height: 50%;
+  }
+
   #training, #clients, #partner, #achievements, .team, #course, .contact, .errors {
     margin-top: 4rem;
   }

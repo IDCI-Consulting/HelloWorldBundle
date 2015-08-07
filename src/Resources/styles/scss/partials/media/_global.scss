@@ -1,3 +1,11 @@
+@media #{$medium-up} {
+
+  section.full-width {
+    min-height: 100vh;
+    padding-top: 6rem;
+  }
+}
+
 @media #{$small-only} {
 
   section {

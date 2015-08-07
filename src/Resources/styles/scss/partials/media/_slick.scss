@@ -1,5 +1,31 @@
+@media #{$large-only} {
+  .slick-arrow {
+
+    &.next.right {
+      right: 7rem;
+    }
+  }
+}
+
+@media #{$medium-only} {
+  .slick-arrow {
+
+    &.next.right {
+      right: 5rem;
+    }
+  }
+}
+
 @media #{$small-only} {
   .courses {
     width: 70%;
+  }
+
+  .slick-arrow {
+    height: 1.2rem!important;
+
+    &.next.right {
+      right: -.7rem;
+    }
   }
 }
