@@ -11,6 +11,11 @@
  * _2014_ Développement de Map Your Stories, un prototype permettant la création de plans de métro personnalisables
  * _2013_ IDCI-Consulting: Stage de 6 semaines (du 20/05/2013 au 28/06/2013) Conception et développement d'une plate-forme de gestion de note de frais
 
+### PROJETS PERSONNELS
+
+* _2015_ Réalisation d'un générateur de formulaire avec Symfony2. (API REST)
+* _2014_ Réalisation d'une application gérant des commandes de bar avec AngularJS.
+
 ### FORMATION
 
  * _2015_ License Professionnelle Systèmes Informatiques et Logiciels: Concepteur et Gestionnaire de Sites Internet (METINET)
