@@ -1,0 +1,13 @@
+@media #{$medium-up} {
+
+  .tabs-content {
+
+    .content {
+
+      ul {
+        list-style-image: url("/images/balise_right.svg");
+      }
+
+    }
+  }
+}
