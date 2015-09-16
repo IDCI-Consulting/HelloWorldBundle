@@ -1,8 +1,8 @@
 <p><em>With our 7 years of experience,</em> we offer <em>several courses</em> ranging from HTML5 / CSS3 to develop complex applications with PHP Symfony2 framework.</p>
 
-<span class="arrow"><img src="{{ asset('images/balise_left.svg') }}" /></span>
+<span class="show-for-large-up arrow"><img src="{{ asset('images/balise_left.svg') }}" /></span>
 <h3 class="trainings">different courses</h3>
-<span class="arrow"><img src="{{ asset('images/balise_right.svg') }}" /></span>
+<span class="show-for-large-up arrow"><img src="{{ asset('images/balise_right.svg') }}" /></span>
 
 <div class="courses">
     {% for course in app.config.courses %}
@@ -11,18 +11,3 @@
         </div>
     {% endfor %}
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.courses').slick({
-            infinite: true,
-            nextArrow: false,
-            prevArrow: false,
-            speed: 300,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            fade: true,
-            cssEase: 'linear'
-        });
-    });
-</script>

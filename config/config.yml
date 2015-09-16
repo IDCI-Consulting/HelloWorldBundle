@@ -36,7 +36,7 @@ idci_code_writer:
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/GenealogyBundle/master/Controller/ImageController.php
             language: 'php'
-            theme: github
+            theme: ambiance
 
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/GenealogyBundle/master/Repository/ElementRepository.php
@@ -46,12 +46,12 @@ idci_code_writer:
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/ExtraFormBundle/master/Controller/ApiController.php
             language: 'php'
-            theme: tomorrow
+            theme: tomorrow_night
 
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleScheduleBundle/master/Entity/LocationAwareCalendarEntity.php
             language: 'php'
-            theme: sqlserver
+            theme: chaos
 
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleScheduleBundle/master/Entity/CalendarEntityRelation.php
@@ -61,16 +61,16 @@ idci_code_writer:
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleMetadataBundle/master/Resources/views/Form/fields.html.twig
             language: 'twig'
-            theme: github
+            theme: cobalt
 
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/BrowserCapabilities/master/js/codebarReader.js
             language: 'javascript'
-            theme: xcode
+            theme: clouds_midnight
 
         -
             url: https://raw.githubusercontent.com/IDCI-Consulting/Run4Fun/master/src/R4F/Bundle/SiteBundle/Resources/public/css/style.css
             language: 'css'
-            theme: solarized_light
+            theme: solarized_dark
 
 

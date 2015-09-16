@@ -61,7 +61,7 @@ class ContactType extends AbstractType
                 )
             ))
             ->add('validate', 'submit', array(
-                'label' => 'Validate',
+                'label' => 'Send',
                 'attr' => array(
                     'class' => 'button small'
                 )

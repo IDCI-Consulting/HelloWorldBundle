@@ -1,8 +1,23 @@
-@media #{$medium-only} {
-    .course-box {
-      margin-bottom: 1rem;
-      width: 15rem;
+@media #{$medium-up} {
+  .course-box {
+
+    .scroll-to {
+
+      img {
+        width: 100%;
+      }
     }
+  }
+
+  h2.course-name {
+    font-family: 'Oswald-Bold', sans-serif;
+  }
+}
+
+@media #{$medium-only} {
+  .course-box {
+    margin-bottom: 1rem;
+  }
 }
 
 @media #{$small-only} {
@@ -10,13 +25,7 @@
     padding: 0;
   }
 
-  .course-boxes {
-    padding: 0;
-  }
-
   .course-box {
-    margin-bottom: 1rem;
-    width: 9rem;
 
     p {
       line-height: 2.5rem;

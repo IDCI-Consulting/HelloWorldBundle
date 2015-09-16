@@ -1,5 +1,6 @@
 body {
   font-family: Molengo, sans-serif;
+  font-size: 16px;
   height: 100%;
 }
 
@@ -68,11 +69,20 @@ section.full-width {
     height: 15rem;
   }
 
+  .tools-icon {
+    height: 4rem;
+    margin-top: 2rem;
+  }
+
   em, h3 {
     color: $idci-light-blue;
     font-style: normal;
   }
 
+}
+
+section.contact {
+  background-color: $idci-light-grey;
 }
 
 .full-width {

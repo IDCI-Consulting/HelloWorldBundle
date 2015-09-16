@@ -5,12 +5,14 @@
 
 ### HTML / CSS
 
-#### Introduction / 2 heures
+#### **Introduction**
+_2 heures_
 
 * Fonctionnement du web
 * W3C : de l'utilité des normes
 
-#### HTML5 / CSS3 : pourquoi ils font tant parler d'eux / 2 heures
+#### **HTML5 / CSS3 : pourquoi ils font tant parler d'eux**
+_2 heures_
 
 * Pourquoi utiliser le HTML et le CSS ? Comment les utiliser ? Et le HTML5 / CSS3 dans tout ça ?
 * Optimisation des balises pour les moteurs de recherche (SEO)
@@ -19,12 +21,14 @@
 
 ### HTML5 ###
 
-#### Utiliser le HTML 5 aujourd'hui  / 1 heure
+#### **Utiliser le HTML 5 aujourd'hui**
+_1 heure_
 
 * Savoir quand choisir le HTML 5
 * Utiliser le HTML 5 avec des navigateurs qui ne le supportent pas
 
-#### Balisage HTML 5 / 3 heures
+#### **Balisage HTML 5**
+_3 heures_
 
 * Structure d'une page : disparition des notions "en ligne" et "bloc"
 * Doctype en HTML5
@@ -35,12 +39,14 @@
 
 {day2}
 
-#### Web sémantique et HTML 5 / 2 heures
+#### **Web sémantique et HTML 5**
+_2 heures_
 
 * Elements sémantiques : donner du sens à ses contenus
 * Les micro données
 
-#### Formulaires HTML 5 / 3 heures
+#### **Formulaires HTML 5**
+_3 heures_
 
 * Balise form;
 * Créer et utiliser des formulaires en HTML 5
@@ -48,7 +54,8 @@
 * Les validations de formulaire en HTML5
 * Auto focus
 
-#### Vue d'ensemble des APIs javascript pour HTML 5 / 3 heures
+#### **Vue d'ensemble des APIs javascript pour HTML 5**
+_3 heures_
 
 * Les APIs HTML 5
 * Gestion des fichiers
@@ -58,7 +65,8 @@
 
 {day3}
 
-#### Zoom sur l'API de gestion audio et vidéo en HTML 5  / 4 heures
+#### **Zoom sur l'API de gestion audio et vidéo en HTML 5**
+_4 heures_
 
 * Les éléments audio et video
 * Les conteneurs
@@ -68,7 +76,8 @@
 * Streaming
 * Ajouter des sous-titres à une vidéo HTML5
 
-#### Zoom sur l'API de dessin en HTML 5  / 4 heures
+#### **Zoom sur l'API de dessin en HTML 5**
+_4 heures_
 
 * Dessiner en JavaScript
 * Canvas vs SVG
@@ -77,7 +86,8 @@
 
 {day4}
 
-#### Zoom sur l'API de communication en HTML 5  / 4 heures
+#### **Zoom sur l'API de communication en HTML 5**
+_4 heures_
 
 * Les événements
 * Envoi de messages entre documents
@@ -87,13 +97,15 @@
 * Présentation de node.js
 * Les Web Workers pour le multi-tâches
 
-#### Zoom sur l'API de géo-localisation avec HTML 5 / 2 heures
+#### **Zoom sur l'API de géo-localisation avec HTML 5**
+_2 heures_
 
 * Vue d'ensemble
 * La vie privée de l'utilisateur
 * Géolocaliser ses utilisateurs sur Google Maps
 
-#### Zoom sur l'API de storage avec HTML 5  / 2 heures
+#### **Zoom sur l'API de storage avec HTML 5**
+_2 heures_
 
 * API storage
 * Storage local
@@ -104,7 +116,8 @@
 
 ### HTML / CSS
 
-#### Zoom sur l'API de storage avec HTML 5  / 2 heures
+#### **Zoom sur l'API de storage avec HTML 5**
+_2 heures_
 
 * Vue d'ensemble : se passer d'images, éviter les astuces
 * Selecteurs CSS3
@@ -115,7 +128,8 @@
 * Mise en page et positionnement
 * Autres nouveautés
 
-#### CSS3 : mise en page et positionnement / 3 heures
+#### **CSS3 : mise en page et positionnement**
+_3 heures_
 
 * Vue d'ensemble : clarifier le code, éviter la multiplication de imbriquées
 * Niveau de présentation
@@ -126,7 +140,8 @@
 * Positionnement par grille
 * Rotation d'éléments
 
-#### CSS3 : animation / 2 heures
+#### **CSS3 : animation**
+_2 heures_
 
 * Transformations (2D et 3D)
 * Transitions

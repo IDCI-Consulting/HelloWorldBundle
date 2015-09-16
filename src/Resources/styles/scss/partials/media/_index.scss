@@ -1,3 +1,17 @@
+@media #{$large-up} {
+  .arrow {
+    display: inline!important;
+  }
+
+  .training-content {
+
+    .idci-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
 @media #{$large-only} {
 
   #presentation {

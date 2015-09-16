@@ -45,11 +45,10 @@ $social-sprite-url: url(/images/sprite_rs.png);
   box-shadow: $property;
 }
 
-@mixin font-face($font-family, $font-url, $font-name) {
+@mixin font-face($font-family, $font-url, $font-name, $font-weight: normal) {
   @font-face {
     font-family: $font-family;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: $font-weight;
     src:  url($font-url + '/' + $font-name + '.ttf')  format('truetype');
     /*url($font-url + '/' + $font-name + '.eot') format('eot'),
     url($font-url + '/' + $font-name + '.woff') format('woff'),
@@ -115,6 +114,7 @@ $social-sprite-url: url(/images/sprite_rs.png);
 
 @include font-face('Molengo', $font-url, 'Molengo');
 @include font-face('Oswald', $font-url, 'Oswald-Light');
+@include font-face('Oswald-Bold', $font-url, 'Oswald-Bold', 'bold');
 
 /*****************************
  *** Foundation components ***

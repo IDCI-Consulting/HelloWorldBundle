@@ -3,7 +3,8 @@
 
 {day1}
 
-#### Introduction / 4 heures
+#### **Introduction**
+_4 heures_
 
 * Définition
 * Historique
@@ -14,7 +15,8 @@
 * Instanciation d'objet
 * Clonage d'un objet
 
-#### Méthodes / 2 heures
+#### **Méthodes**
+_2 heures_
 
 * Constructeur, destructeur
 * toString
@@ -22,7 +24,8 @@
 * Méthode abstraite
 * Méthode static
 
-#### 3 grands concepts / 2 heures
+#### **3 grands concepts**
+_2 heures_
 
 * Encapsulation
 * Héritage
@@ -30,15 +33,18 @@
 
 {day2}
 
-#### Visibilité / 1 heure
+#### **Visibilité**
+_1 heure_
 
 * public
 * private
 * protected
 
-#### Classe abstraite / Interface / 1 heure
+#### **Classe abstraite / Interface**
+_1 heure_
 
-#### UML / Merise / 2 heures
+#### **UML / Merise**
+_2 heures_
 
 * UML
 * Base de données
@@ -47,13 +53,16 @@
 
 ### Design pattern
 
-#### Introduction / 1 heure
-#### Utilisation  / 1 heure
+#### **Introduction**
+_1 heure_
+#### **Utilisation**
+_1 heure_
 
 * Quand utiliser les DP?
 * Quand NE PAS utiliser les DP?
 
-#### Quelques exemples / 2 heures
+#### **Quelques exemples**
+_2 heures_
 
 * Factory
 * Observer
@@ -61,9 +70,12 @@
 
 {day3}
 
-#### Zoom sur le DP MVC / 2 heures
-#### Zoom sur l'injection de dépendance / 2 heures
-### SCM / 4 heures
+#### **Zoom sur le DP MVC**
+_2 heures_
+#### **Zoom sur l'injection de dépendance**
+_2 heures_
+### **SCM**
+_4 heures_
 
 #### Définition
 * Qu'est ce qu'est un SCM?
@@ -90,7 +102,8 @@
 
 {day4}
 
-### Bug Tracker / 2 heures
+### **Bug Tracker**
+_2 heures_
 
 * Définition
 * Pourquoi en utiliser un?

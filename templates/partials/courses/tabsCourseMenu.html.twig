@@ -2,8 +2,9 @@
     <section id="{{ title }}" class="row full-width">
         <header class="small-8 medium-12 columns accordion-toggle">
             <div class="row">
-                <h2 class="small-10 medium-12 columns">
+                <h2 class="small-10 medium-12 columns course-name">
                     {{ title }}
+                    {#<a href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button small">Nous contact</a>#}
                     <i class="hide-for-medium-up fa fa-book picture"></i>
                 </h2>
                 <div class="hide-for-medium-up small-2 columns toggle-icon">
@@ -12,6 +13,10 @@
             </div>
         </header>
 
+        {# Break the accordion in mobile screen #}
+        {#<div class="medium-4 columns course-logo">#}
+            {#<img src="{{ asset('images/'~ title ~'.svg') }}" />#}
+        {#</div>#}
         <div class="small-12 medium-8 columns accordion-content">
 
             {% if courses['description'] is defined %}

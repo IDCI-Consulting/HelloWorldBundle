@@ -3,20 +3,23 @@
 
 {day1}
 
-#### Introduction / 2 heures
+#### **Introduction**
+_2 heures_
 
 * Internet != Le WEB
 * Protocole HTTP (RFC2616)
 * W3C: Utilité des normes dans le web
 
-#### Un bon environnement et de bonnes pratiques / 2 heures
+#### **Un bon environnement et de bonnes pratiques**
+_2 heures_
 
 * Quel IDE
 * Utiliser un SCM (SVN, Git, ...)
 * Utiliser un bug tracker (Trac, Mantis, Redmine, Github, ...)
 * Les conventions de codage de WP
 
-#### WP: un CMS, une communauté / 4 heures
+#### **WP: un CMS, une communauté**
+_4 heures_
 
 * Un CMS c'est quoi?
 * Quelques CMS
@@ -27,7 +30,8 @@
 
 {day2}
 
-#### Utilisation de WP / 4 heures
+#### **Utilisation de WP**
+_4 heures_
 
 * Différence entre article / page
 * Créer ses premières pages
@@ -38,7 +42,8 @@
 * Gérer les utilisateurs
 * Tour d'horizon des réglages disponibles
 
-#### WP: Créer son propre thème / 4 heures
+#### **WP: Créer son propre thème**
+_4 heures_
 
 * Les thèmes WP, comment ça marche?
 * Créer son thème: comment ça marche ?
@@ -47,13 +52,15 @@
 
 {day3}
 
-#### WP: un CMS, des plugins / 2 heures
+#### **WP: un CMS, des plugins**
+_2 heures_
 
 * Trouver des plugins
 * Installer des plugins
 * Créer des plugins
 
-#### WP: utilisation avancée / 4 heures
+#### **WP: utilisation avancée**
+_4 heures_
 
 * Utiliser les champs personnalisés
 * Référencer son blog

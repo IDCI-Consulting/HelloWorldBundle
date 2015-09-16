@@ -12,6 +12,7 @@ $idci-circle-border: 2px;
 
 .aside-navigation-link {
   color: $idci-blue;
+  text-transform: uppercase;
 
   &.active {
     color: $idci-light-blue;

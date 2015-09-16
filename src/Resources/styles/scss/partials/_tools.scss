@@ -14,10 +14,11 @@
  *** Sprite declaration ***
  **************************/
 a.tools-sprite {
-  display: block;
+  display: inline-block;
   background: url("/images/technos.jpg") no-repeat;
   margin: 1rem auto 0;
   text-indent: -9999px;
+  vertical-align: middle;
   width: 100px;
 
   &.php {
@@ -156,7 +157,7 @@ a.tools-sprite {
     &:hover {
       background-position: -1820px 0;
       height: 140px;
-      margin-bottom: 21px;
+      margin-bottom: 5px;
     }
   }
 
@@ -251,5 +252,12 @@ a.tools-sprite {
     &:hover {
       background-position: 0 -922px;
     }
+  }
+}
+
+div.courses {
+
+  a.tools-sprite {
+    margin-right: 1rem;
   }
 }

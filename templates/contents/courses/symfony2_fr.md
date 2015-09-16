@@ -3,26 +3,30 @@
 
 {day1}
 
-#### Introduction / 2 heures
+#### **Introduction**
+_2 heures_
 
 * Internet != Le WEB
 * Protocole HTTP (RFC2616)
 * Quelques frameworks PHP : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony
 * Pourquoi Symfony2 ?
 
-#### Un bon environnement et de bonnes pratiques / 2 heures
+#### **Un bon environnement et de bonnes pratiques**
+_2 heures_
 
 * Quel IDE
 * Utiliser un SCM (SVN, Git, ...)
 * Utiliser un bug tracker (Trac, Mantis, Redmine, Github, ...)
 * Les conventions de codage
 
-#### Introduction aux Design pattern / 2 heures
+#### **Introduction aux Design pattern**
+_2 heures_
 
 * Présentation générale
 * Le MVC en détail
 
-#### La structure des applications avec Symfony2 / 2 heures
+#### **La structure des applications avec Symfony2**
+_2 heures_
 
 * La notion "d'application" => App/
 * La notion de "bundles"
@@ -32,14 +36,16 @@
 
 {day2}
 
-#### Le Controller dans Symfony2 / 4 heures
+#### **Le Controller dans Symfony2**
+_4 heures_
 
 * Object Request
 * Object Response
 * Le routing
 * Les annotations
 
-#### Les vues (templating) avec Symfony2 / 4 heures
+#### **Les vues (templating) avec Symfony2**
+_4 heures_
 
 * Twig
 * Heritage de template
@@ -49,13 +55,15 @@
 
 {day3}
 
-#### ORM et DBAL (Database Abstraction Layer) / 4 heures
+#### **ORM et DBAL (Database Abstraction Layer)**
+_4 heures_
 
 * PDO
 * Doctrine
 * Propel
 
-#### Les forms (formulaires) / 4 heures
+#### **Les forms (formulaires)**
+_4 heures_
 
 * AbstractType
 * Les champs
@@ -64,24 +72,28 @@
 
 {day4}
 
-#### Créer un service / 4 heures
+#### **Créer un service**
+_4 heures_
 
 * Injection de dépendance
 * Conteneur de service
 
-#### La sécurité / 4 heures
+#### **La sécurité**
+_4 heures_
 
 * Autorisation
 * Authentification
 
 {day5}
 
-#### Les tests / 4 heures
+#### **Les tests**
+_4 heures_
 
 * Les tests unitaires avec PHPUnit
 * Les tests fonctionnels
 
-#### Aller plus loin / 4 heures
+#### **Aller plus loin**
+_4 heures_
 
 * Utiliser la configuration
 * Créer des commandes Symfony2
