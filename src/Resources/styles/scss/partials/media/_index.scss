@@ -30,6 +30,15 @@
   }
 }
 
+@media #{$medium-up} {
+  #presentation, #training, #advice, #web-development, #philosophy, #approach, #tools {
+
+    h2, h3.sub-title {
+      font-family: 'Oswald-Bold', sans-serif;
+    }
+  }
+}
+
 @media #{$medium-only} {
 
   #presentation {
