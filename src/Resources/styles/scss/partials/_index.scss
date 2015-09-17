@@ -27,15 +27,27 @@ h3.trainings {
     height: 6rem;
     line-height: 6rem;
     margin: 5rem auto 0 auto;
+    position: relative;
     width: 6rem;
+
+    span {
+      background: url('/images/slick_arrow.svg') no-repeat;
+      background-position: 50%;
+      display: inline-block;
+      height: 3rem;
+      left: 25%;
+      position: absolute;
+      top: 25%;
+      width: 3rem;
+    }
 
     &:hover {
       border-color: $idci-blue;
-    }
 
-    img {
-      height: 3rem !important;
-      width: 3rem;
+      span {
+        background: url('/images/slick_arrow_dark_blue.svg') no-repeat;
+        background-position: 50%;
+      }
     }
   }
 }
