@@ -4,7 +4,7 @@ $(document).ready(function () {
                 event.preventDefault();
                 // create accordion variables
                 var accordion = $(this);
-                var accordionContent = accordion.next('.accordion-content');
+                var accordionContent = accordion.siblings('.accordion-content');
                 var accordionToggleIcon = $(this).find('.toggle-icon');
 
                 // toggle accordion link open class
