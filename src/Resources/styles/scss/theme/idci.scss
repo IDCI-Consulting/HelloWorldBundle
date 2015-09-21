@@ -5,6 +5,7 @@
 
 section.cv-part {
   padding: 1rem;
+  page-break-inside: avoid;
 
   h2, h4, p {
     padding: .5rem 1rem;
