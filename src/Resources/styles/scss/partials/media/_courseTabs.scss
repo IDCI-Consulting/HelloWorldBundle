@@ -17,4 +17,13 @@
 
     }
   }
+
+}
+@media #{$medium-only} {
+  .course-name {
+
+    .contact-us {
+      right: 3rem;
+    }
+  }
 }
