@@ -7,6 +7,6 @@
 
 <div class="courses">
     {% for course in app.config.courses %}
-            <a href="{{ path('courses', {'_locale': app.translator.locale}) }}"  class="tools-sprite {{ course }}">{{ course }}</a>
+        <a href="{{ path('courses', {'_locale': app.translator.locale}) }}#{{ course }}"  class="tools-sprite {{ course }}">{{ course }}</a>
     {% endfor %}
 </div>

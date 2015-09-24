@@ -2,11 +2,12 @@ $idci-circle-size: 20px;
 $idci-circle-border: 2px;
 
 .aside-navigation-menu {
-  font-size: 1.2rem;
+  font-size: .9rem;
+  line-height: 2rem;
   position: fixed;
   right: 3rem;
   text-align: right;
-  top: 20%;
+  top: 25%;
   z-index: 1000;
 }
 

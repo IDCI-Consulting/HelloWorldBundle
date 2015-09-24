@@ -15,7 +15,6 @@ i18n_route_generator:
 courses:
     - 'symfony2'
     - 'html5-css3'
-    - 'php'
     - 'wordpress'
 
 menu:

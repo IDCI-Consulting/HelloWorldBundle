@@ -23,108 +23,116 @@
   .brahim .profile-picture {
     background-image: url(/images/brahim/sprite.png);
 
-      &.downleft {
-        background-position: 0 0;
-        width: 260px;
-        height: 260px;
-      }
-      &.upleft {
-        background-position: -260px 0;
-        width: 260px;
-        height: 260px;
-      }
-      &.down {
-        background-position: -260px -260px;
-        width: 260px;
-        height: 259px;
-      }
-      &.up {
-        background-position: -259px -520px;
-        width: 260px;
-        height: 258px;
-      }
-      &.left {
-        background-position: -520px 0;
-        width: 259px;
-        height: 260px;
-      }
-      &.front {
-        background-position: 0px -520px;
-        width: 259px;
-        height: 259px;
-      }
-      &.upright {
-        background-position: -520px -260px;
-        width: 259px;
-        height: 260px;
-      }
-      &.right {
-        background-position: -519px -520px;
-        width: 258px;
-        height: 258px;
-      }
-      &.downright {
-        background-position: 0px -260px;
-        width: 260px;
-        height: 260px;
-      }
-  }
-
-  .gabriel .profile-picture {
-    background-image: url(/images/gabriel/sprite.jpg);
-
-    &.upleft {
+    &.down {
       background-position: 0 0;
       width: 260px;
       height: 260px;
     }
 
-    &.up {
+    &.downright {
       background-position: -260px 0;
       width: 260px;
       height: 260px;
     }
 
-    &.left {
-      background-position: 0px -260px;
+    &.downleft {
+      background-position: 0 -364px;
       width: 260px;
       height: 260px;
     }
 
     &.front {
-      background-position: -260px -260px;
+      background-position: 0 -728px;
+      width: 259px;
+      height: 260px;
+    }
+
+    &.right {
+      background-position: -260px -364px;
       width: 260px;
       height: 260px;
     }
 
-    &.upright {
+    &.left {
       background-position: -520px 0;
       width: 260px;
       height: 260px;
     }
 
-    &.right {
-      background-position: -520px -260px;
+    &.up {
+      background-position: -260px -728px;
+      width: 259px;
+      height: 260px;
+    }
+
+    &.upright {
+      background-position: -520px -364px;
       width: 260px;
       height: 260px;
     }
 
-    &.downleft {
-      background-position: 0px -520px;
+    &.upleft {
+      background-position: -520px -728px;
       width: 260px;
-      height: 260px;
+      height: 259px;
     }
+  }
+
+  .gabriel .profile-picture {
+    background-image: url(/images/gabriel/sprite.jpg);
 
     &.down {
-      background-position: -260px -520px;
+      background-position: 0 0;
       width: 260px;
       height: 260px;
     }
 
     &.downright {
-      background-position: -520px -520px;
+      background-position: -260px 0;
       width: 260px;
       height: 260px;
+    }
+
+    &.downleft {
+      background-position: 0 -364px;
+      width: 260px;
+      height: 260px;
+    }
+
+    &.front {
+      background-position: 0 -728px;
+      width: 259px;
+      height: 260px;
+    }
+
+    &.right {
+      background-position: -260px -364px;
+      width: 260px;
+      height: 260px;
+    }
+
+    &.left {
+      background-position: -520px 0;
+      width: 260px;
+      height: 260px;
+    }
+
+    &.up {
+      background-position: -260px -728px;
+      width: 259px;
+      height: 260px;
+    }
+
+    &.upright {
+      background-position: -520px -364px;
+      width: 260px;
+      height: 260px;
+    }
+
+    &.upleft {
+      background-position: -520px -728px;
+      width: 260px;
+      height: 259px;
     }
   }
 
