@@ -57,6 +57,20 @@ $intlApp
     ->bind('index')
 ;
 
+// Mentions page
+$intlApp
+    ->get(
+        '/mentions',
+        function (Request $request, $_locale) use ($app) {
+
+            return $app['twig']->render('pages/mentions.html.twig');
+        }
+    )
+    ->before($hideContactLink)
+    ->before($buildLocaleLinks)
+    ->bind('mentions')
+;
+
 // Company page
 $intlApp
     ->get(

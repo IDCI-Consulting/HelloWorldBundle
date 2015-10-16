@@ -110,7 +110,7 @@
                         &#169; 2015
                     </li>
                     <li class="small-4 columns">
-                        <a href="#mentions" class="mentions">{% trans %}Mentions légales{% endtrans %}</a>
+                        <a href="{{ path('mentions', {_locale: app.translator.locale}) }}" class="mentions">{% trans %}Mentions légales{% endtrans %}</a>
                     </li>
                     <li class="small-4 columns">
                         <a href="#gmap" class="maps">{% trans %}Plan du site{% endtrans %}</a>

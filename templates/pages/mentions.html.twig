@@ -1,0 +1,14 @@
+{% extends "layout.html.twig" %}
+
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu
+    } %}
+{% endblock %}
+
+{% block main_content %}
+    <section class="legal-notice full-width">
+        <div class="row">
+            {% include 'contents/mentions/' ~ app.translator.locale ~ '.html.twig' %}
+    </section>
+{% endblock %}
