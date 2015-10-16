@@ -2,6 +2,14 @@
   .arrow {
     display: inline!important;
   }
+
+  section.trainings {
+
+    .idci-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 @media #{$large-only} {

@@ -72,80 +72,59 @@
 {% endblock %}
 
 {% block footer %}
-    <div class="hide-for-small-only idci-mini-footer">
-        <a class="fa fa-envelope-o"></a>
-    </div>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.idci-mini-footer').on('click', function(e) {
-                $('footer').css('display', 'block');
-                $('.idci-mini-footer').attr("style", "display: none !important");
-            });
-
-            $(window).scroll(function() {
-                if($(window).scrollTop() + $(window).height() >= $(document).height() - 1) {
-                    $('footer').css('display', 'block');
-                    $('.idci-mini-footer').attr("style", "display: none !important");
-                }
-            });
-        });
-    </script>
 
     <footer class="idci-footer">
-        <a class="hide-for-small-only close-footer">&#215;</a>
-
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.close-footer').on('click', function(e) {
-                    $('footer').css('display', 'none');
-                    $('.idci-mini-footer').attr("style", "display: block !important");
-                });
-            });
-        </script>
 
         <div class="row">
-            {% if not hide_contact_link %}
-            <div class="medium-4 columns footer-part contact-us ">
-                <p class="hide-for-small-only">
-                    {% trans %}For any other request{% endtrans %}
-                </p>
-                <p class="hide-for-small-only">{% trans %}do not hesitate to{% endtrans %}</p>
-                <p class="contact-us-link">
-                    <a id="contact-link" href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button small" data-reveal-id="idci-modal">{% trans %}Contact us{% endtrans %}</a>
-                </p>
-            </div>
-            {% endif %}
-
             <div class="medium-4 columns footer-part address ">
-                <h3 class="idci-light-blue">
-                    {% trans %}Our contact details{% endtrans %}
-                </h3>
+                <h4 class="idci-light-blue">
+                    IDCI-Consulting
+                </h4>
                 <p>256 rue Francis de Pressensé</p>
                 <p>69100 Villeurbanne - FRANCE</p>
+            </div>
+            <div class="medium-4 columns footer-part coords">
                 <p>
-                    <i class="fa fa-phone"></i>
+                    <span class="phone"></span>
                     <a href="tel:0663231207" class="phonenumber">06 63 23 12 07</a>
                 </p>
                 <p>
-                    <i class="fa fa-envelope-o"></i>
+                    <span class="mail"></span>
                     <a href="mailto:contact@idci-consulting.fr" class="mail">contact@idci-consulting.fr</a>
                 </p>
             </div>
-
             <div class="medium-4 columns footer-part footer-socials ">
-                <h3 class="hide-for-small-only idci-light-blue">
-                    {% trans %}Follow us{% endtrans %}
-                </h3>
-                <ul class="socials">
-                    <li class="twitter">
+                <ul class="row socials">
+                    <li class="small-6 columns twitter">
                         <a href="https://twitter.com/idciconsulting" target="_blank"><span>Twitter</span></a>
                     </li>
-                    <li class="github">
+                    <li class="small-6 columns github">
                         <a href="https://github.com/IDCI-Consulting" target="_blank"><span>Github</span></a>
                     </li>
                 </ul>
             </div>
+            <hr class="hide-for-small-only" />
+            <div class="medium-7 columns footer-part sub-footer">
+                <ul class="row">
+                    <li class="small-4 columns">
+                        &#169; 2015
+                    </li>
+                    <li class="small-4 columns">
+                        <a href="#mentions" class="mentions">{% trans %}Mentions légales{% endtrans %}</a>
+                    </li>
+                    <li class="small-4 columns">
+                        <a href="#gmap" class="maps">{% trans %}Plan du site{% endtrans %}</a>
+                    </li>
+                </ul>
+            </div>
+            {% if not hide_contact_link %}
+                <div class="medium-5 columns footer-part sub-footer contact-us">
+                    <p class="contact-us-link">
+                        <span class="hide-for-small-only">Pour toute demande</span>
+                        <a id="contact-link" href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button tiny" data-reveal-id="idci-modal">{% trans %}Contact us{% endtrans %}</a>
+                    </p>
+                </div>
+            {% endif %}
         </div>
     </footer>
 {% endblock %}

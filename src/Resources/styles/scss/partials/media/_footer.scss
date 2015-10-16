@@ -2,9 +2,9 @@
 
   footer {
     padding: 5rem;
-    position: fixed;
 
     p {
+      color: $idci-darker-grey;
       font-size: 1rem;
       line-height: 1rem;
 
@@ -14,12 +14,12 @@
 
     }
 
-    .contact-us {
-      text-align: center;
+    .phonenumber, .mail {
+      color: $idci-darker-grey;
+    }
 
-      p:last-child {
-        line-height: 5rem;
-      }
+    .footer-part {
+      text-align: left;
     }
 
     .address {
@@ -46,13 +46,13 @@
       .socials {
 
         li {
-          background-color: $idci-light-blue;
-          margin: 0 .5rem;
-          padding: .5rem;
+          padding: 0;
+          width: 20%;
           @include transition(all, .4s);
 
-          &:hover {
-            background-color: $idci-blue;
+          &:last-child {
+            float: left;
+            margin: 0;
           }
         }
       }
@@ -65,28 +65,56 @@
     background: $idci-blue;
     color: $idci-white;
     display: block;
-    text-transform: capitalize;
-    z-index: 888;
+    height: 28rem;
+    text-align: center;
+
+    p, li, a {
+      color: $idci-white;
+      font-weight: bold;
+    }
+
+    .coords {
+      text-align: center;
+
+      p {
+        width: 100%;
+      }
+
+      span {
+
+        &.phone {
+          background-image: url("/images/phone_white.svg");
+        }
+
+        &.mail {
+          background-image: url("/images/mail_white.svg");
+        }
+      }
+    }
 
     .contact-us {
-      padding-left: 7rem;
 
       .contact-us-link {
+        text-align: center;
 
         a {
           background: $idci-light-blue;
           border: none;
           text-transform: uppercase;
-          width: 90%;
+          width: 100%;
+        }
+
+        span {
+          margin-top: 1rem;
         }
       }
     }
 
     .address {
       font-size: 1rem;
-      padding-left: 7rem;
 
-      h3 {
+      h4 {
+        color: $idci-white;
         font-size: 2rem;
         margin: 0 0 2rem 0;
       }
@@ -98,14 +126,14 @@
         &:first-child {
           margin-bottom: 2rem;
         }
+      }
+    }
 
-        a {
-          color: $idci-white;
+    a {
+      color: $idci-white;
 
-          &.mail {
-            text-decoration: underline;
-          }
-        }
+      &.mail {
+        text-decoration: underline;
       }
     }
 
@@ -113,23 +141,18 @@
       padding: 0;
 
       .socials {
-        height: 1rem;
-        margin: 0;
+        height: 3rem;
+        margin: 1rem 0;
+        padding: 0;
         width: 100%;
 
         li {
-          background-color: $idci-light-blue;
-          border-left: .1rem solid $idci-blue;
-          border-right: .1rem solid $idci-blue;
-          height: 3rem;
-          width: 50%;
-
-          &:first-child {
-            border-left: none;
-          }
+          float: none;
+          height: 100%;
+          width: 20%;
 
           &:last-child {
-            border-right: none;
+            float: none;
           }
         }
       }
@@ -162,6 +185,19 @@
             @include social-background-position('github');
           }
         }
+      }
+    }
+
+    .sub-footer {
+
+      > ul {
+        text-align: center;
+      }
+
+      &.contact-us {
+        display: block;
+        height: 36px;
+        margin-bottom: 0;
       }
     }
   }

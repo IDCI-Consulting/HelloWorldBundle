@@ -5,6 +5,7 @@ $idci-white: #FFF;
 $idci-blue: #394A59;
 $idci-light-blue: #0DB0D1;
 $idci-dark-grey: #DEDDD8;
+$idci-darker-grey: #595959;
 $idci-light-grey: #f7f7f7;
 $idci-green: #1E9847;
 $idci-dark-green: #007A01;
@@ -17,7 +18,7 @@ $moniteur-color: #C51617;
 $bodysculpt-color: #DA0B13;
 
 $font-url: '/fonts';
-$social-sprite-url: url(/images/sprite_rs.png);
+$social-sprite-url: url("/images/rs.png");
 
 
 /*******************
@@ -56,8 +57,8 @@ $social-sprite-url: url(/images/sprite_rs.png);
   }
 }
 
-@mixin vertical-align {
-  position: relative;
+@mixin vertical-align($position: relative) {
+  position: $position;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -66,39 +67,30 @@ $social-sprite-url: url(/images/sprite_rs.png);
 
 @mixin social-background-position($social-name) {
 
-  background-size: 100px;
+  background-size: 160px;
   margin: 0.5em auto 0 auto;
 
   @if($social-name == 'twitter') {
-    background-position: 0 0;
-    height: 35px;
-    width: 35px;
+    background-position: -60px 0;
+    height: 40px;
+    width: 40px;
   } @else if($social-name == 'rss') {
     background-position: -32px 0;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
   } @else {
-    background-position: -66px 0;
-    height: 35px;
-    width: 35px;
+    background-position: 0 0;
+    height: 40px;
+    width: 40px;
   }
 
-  @media #{$small-only} {
-    background-size: 150px;
-    margin: 0 auto;
-
-    @if ($social-name == 'twitter') {
-      background-position: 0 0;
-      height: 48px;
-      width: 50px;
-    } @else if ($social-name == 'rss') {
-      background-position: -50px 0;
-      height: 48px;
-      width: 50px;
+  &:hover {
+    @if($social-name == 'twitter') {
+      background-position: -60px -41px;
+    } @else if($social-name == 'rss') {
+      background-position: -32px -41px;
     } @else {
-      background-position: -100px 0;
-      height: 48px;
-      width: 50px;
+      background-position: 0 -41px;
     }
   }
 }
