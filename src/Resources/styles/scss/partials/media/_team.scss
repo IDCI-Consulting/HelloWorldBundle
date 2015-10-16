@@ -9,6 +9,18 @@
   }
 }
 
+@media #{$medium-up} {
+
+  article.member {
+    min-height: 605px;
+
+    .content-wrapper + p {
+      margin-top: 1rem;
+      min-height: 160px;
+    }
+  }
+}
+
 @media #{$small-only} {
 
   .team {
