@@ -18,6 +18,13 @@
   }
 }
 
+@media #{$medium-up} {
+
+  iframe.gmap {
+    height: 600px;
+  }
+}
+
 @media #{$medium-only} {
   section {
     header {
@@ -63,6 +70,10 @@
         }
       }
     }
+  }
+
+  iframe.gmap {
+    height: 400px;
   }
 
   .accordion-toggle {
