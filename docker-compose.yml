@@ -11,12 +11,12 @@ silex:
   environment:
    - VIRTUAL_HOST=dev.idci.fr # edit your /etc/hosts file accordingly. This value is useful if a container jwilder/nginx-proxy is running.
   restart: always
-elk:
-  image: ovski/elk:elasticdump
-  environment:
-   - VIRTUAL_HOST=dev.logs.idci.fr
-  volumes:
-   - /var/docker/elk/idci/:/data
-  ports:
-   - 8094:80 
-  restart: always
+#elk:
+#  image: ovski/elk:elasticdump
+#  environment:
+#   - VIRTUAL_HOST=dev.logs.idci.fr
+#  volumes:
+#   - /var/docker/elk/idci/:/data
+#  ports:
+#   - 8094:80 
+#  restart: always
