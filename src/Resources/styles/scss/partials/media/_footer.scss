@@ -14,6 +14,13 @@
 
     }
 
+    .contact-us-link {
+
+      span {
+        display: inline-block!important;
+      }
+    }
+
     .phonenumber, .mail {
       color: $idci-darker-grey;
     }
@@ -96,6 +103,7 @@
 
       .contact-us-link {
         text-align: center;
+        margin-top: 1rem;
 
         a {
           background: $idci-light-blue;

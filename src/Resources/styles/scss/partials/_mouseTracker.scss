@@ -20,61 +20,48 @@
     }
   }
 
+  .profile-picture {
+    width: 260px;
+    height: 260px;
+  }
+
   .brahim .profile-picture {
     background-image: url(/images/brahim/sprite.png);
 
     &.down {
       background-position: 0 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.downright {
       background-position: -260px 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.downleft {
       background-position: 0 -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.front {
       background-position: 0 -728px;
-      width: 259px;
-      height: 260px;
     }
 
     &.right {
       background-position: -260px -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.left {
       background-position: -520px 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.up {
       background-position: -260px -728px;
-      width: 259px;
-      height: 260px;
     }
 
     &.upright {
       background-position: -520px -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.upleft {
       background-position: -520px -728px;
-      width: 260px;
-      height: 259px;
     }
   }
 
@@ -83,115 +70,47 @@
 
     &.down {
       background-position: 0 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.downright {
       background-position: -260px 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.downleft {
       background-position: 0 -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.front {
       background-position: 0 -728px;
-      width: 259px;
-      height: 260px;
     }
 
     &.right {
       background-position: -260px -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.left {
       background-position: -520px 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.up {
       background-position: -260px -728px;
-      width: 259px;
-      height: 260px;
     }
 
     &.upright {
       background-position: -520px -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.upleft {
       background-position: -520px -728px;
-      width: 260px;
-      height: 259px;
     }
   }
 
-  .frederic .profile-picture {
-    background-image: url(/images/frederic/sprite.jpg);
+  .frederic {
 
-    &.upleft {
-      background-position: 0 0;
-      width: 260px;
-      height: 260px;
-    }
-
-    &.up {
-      background-position: -260px 0;
-      width: 260px;
-      height: 260px;
-    }
-
-    &.left {
-      background-position: 0px -260px;
-      width: 260px;
-      height: 260px;
-    }
-
-    &.front {
-      background-position: -260px -260px;
-      width: 260px;
-      height: 260px;
-    }
-
-    &.upright {
-      background-position: -520px 0;
-      width: 260px;
-      height: 260px;
-    }
-
-    &.right {
-      background-position: -520px -260px;
-      width: 260px;
-      height: 260px;
-    }
-
-    &.downleft {
-      background-position: 0px -520px;
-      width: 260px;
-      height: 260px;
-    }
-
-    &.down {
-      background-position: -260px -520px;
-      width: 260px;
-      height: 260px;
-    }
-
-    &.downright {
-
-      background-position: -520px -520px;
-      width: 260px;
-      height: 260px;
+    .profile-picture {
+      background-image: url('/images/frederic/frederic.png');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
@@ -200,55 +119,37 @@
 
     &.down {
       background-position: 0 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.downright {
       background-position: -260px 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.downleft {
       background-position: 0 -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.front {
       background-position: 0 -728px;
-      width: 259px;
-      height: 260px;
     }
 
     &.right {
       background-position: -260px -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.left {
       background-position: -520px 0;
-      width: 260px;
-      height: 260px;
     }
 
     &.up {
       background-position: -260px -728px;
-      width: 259px;
-      height: 260px;
     }
 
     &.upright {
       background-position: -520px -364px;
-      width: 260px;
-      height: 260px;
     }
 
     &.upleft {
       background-position: -520px -728px;
-      width: 260px;
-      height: 259px;
     }
   }

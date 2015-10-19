@@ -120,7 +120,7 @@
             {% if not hide_contact_link %}
                 <div class="medium-5 columns footer-part sub-footer contact-us">
                     <p class="contact-us-link">
-                        <span class="hide-for-small-only">Pour toute demande</span>
+                        <span class="hide-for-small-only">{% trans %}Pour toute demande{% endtrans %}</span>
                         <a id="contact-link" href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button tiny" data-reveal-id="idci-modal">{% trans %}Contact us{% endtrans %}</a>
                     </p>
                 </div>
