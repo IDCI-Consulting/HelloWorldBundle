@@ -8,6 +8,9 @@
 {% endblock %}
 
 {% block main_content %}
-    {% include 'partials/asideMenu.html.twig' %}
-    {% include 'partials/blog/articlesByCategories.html.twig' %}
+    <div class="row">
+        <div class="small-12 columns blog-article">
+            {{ article|raw }}
+        </div>
+    </div>
 {% endblock %}

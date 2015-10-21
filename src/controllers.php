@@ -222,9 +222,31 @@ $intlApp
             return $app['twig']->render('pages/blog.html.twig');
         }
     )
+    ->before($buildArticlesList)
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
+    ->before($buildAsideMenu)
     ->bind('blog')
+;
+
+// Article page
+$intlApp
+    ->get(
+        '/article/{file}',
+        function (Request $request, $_locale, $file) use ($app) {
+            $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
+
+            return $app['twig']->render(
+                'pages/article.html.twig',
+                array(
+                    'article' => $app['markdown']->transform($article)
+                )
+            );
+        }
+    )
+    ->before($hideContactLink)
+    ->before($buildLocaleLinks)
+    ->bind('article')
 ;
 
 // Contact page

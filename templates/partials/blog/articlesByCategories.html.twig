@@ -1,0 +1,34 @@
+<section id="{% trans %}articles-by-categories{% endtrans %}" class="by-categories full-width">
+    <div class="row">
+        <header class="small-8 medium-12 columns accordion-toggle">
+            <div class="row">
+                <h3 class="hide-for-small-only medium-12 columns">{% trans %}Our articles{% endtrans %}</h3>
+                <h2 class="small-10 medium-12 columns">
+                    {% trans %}By categories{% endtrans %}
+                    <i class="hide-for-medium-up fa fa-book picture"></i>
+                </h2>
+                <div class="hide-for-medium-up small-2 columns toggle-icon">
+                    <i class="fa fa-angle-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="small-12 columns accordion-content">
+            <div class="row">
+                {% for category, articles in articles_by_categories %}
+                    <div class="small-12 columns category"><p>{{ category }}</p></div>
+                    {% for article in articles %}
+                        <div class="small-12 columns article">
+                            <div class="row">
+                                <span class="small-1 columns"></span>
+                                <a class="small-11 columns" href="{{ path('article', {_locale: app.translator.locale, 'file': article['file']}) }}">
+                                    {{ article['title'] }} <em>le {{ article['date'] }} par {{ article['author'] }}</em>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

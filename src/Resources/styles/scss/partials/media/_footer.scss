@@ -73,7 +73,6 @@
     color: $idci-white;
     display: block;
     height: 28rem;
-    text-align: center;
 
     p, li, a {
       color: $idci-white;
@@ -81,7 +80,6 @@
     }
 
     .coords {
-      text-align: center;
 
       p {
         width: 100%;
@@ -102,7 +100,6 @@
     .contact-us {
 
       .contact-us-link {
-        text-align: center;
         margin-top: 1rem;
 
         a {
@@ -152,6 +149,7 @@
         height: 3rem;
         margin: 1rem 0;
         padding: 0;
+        text-align: left;
         width: 100%;
 
         li {

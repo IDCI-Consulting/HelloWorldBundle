@@ -222,4 +222,23 @@ $buildRealisations = function (Request $request, Application $app) {
     $app['twig']->addGlobal('realisations', $realisations);
 };
 
+$buildArticlesList = function (Request $request, Application $app) {
+    $locale = $request->get('_locale');
+    $articlesByCategories = array();
+    $categories = $app['config']['blog'][$locale]['categories'];
+    $articles = $app['config']['blog'][$locale]['articles'];
+
+    foreach ($categories as $index => $category) {
+        $articlesByCategories[$category] = array();
+
+        foreach ($articles as $key => $article) {
+            if (in_array($category, $article['categories'])) {
+                array_push($articlesByCategories[$category], $article);
+            }
+        }
+    }
+
+    $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
+};
+
 return $app;
