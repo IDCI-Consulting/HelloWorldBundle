@@ -19,15 +19,11 @@ courses:
 
 menu:
     - {label: 'home', route: 'index'}
-
     - {label: 'our courses', route: 'courses'}
-
     - {label: 'the team', route: 'team'}
-
     - {label: 'our achievements', route: 'activities'}
-
     - {label: 'our partners', route: 'partners'}
-
+    - {label: 'blog', route: 'blog'}
     - {label: 'contact', route: 'contact'}
 
 idci_code_writer:
@@ -71,5 +67,17 @@ idci_code_writer:
             url: https://raw.githubusercontent.com/IDCI-Consulting/Run4Fun/master/src/R4F/Bundle/SiteBundle/Resources/public/css/style.css
             language: 'css'
             theme: solarized_dark
+
+blog:
+    fr:
+        categories:
+            - "Symfony2"
+            - "Symposium"
+        articles:
+        # file property will match the url parameter for route named article
+            - {file: "symposium", title: "Mise en place de bootstrap et enrichissement de la documentation autour de Symposium", date: "dd/MM/yyyy" , author: "brahim", categories: ["Symfony2", "Symposium"]}
+            - {file: "fos-user-bundle", title: " FOSUserBundle gerer les utilisateurs avec Symfony2", date: "dd/MM/yyyy" , author: "brahim", categories: ["Symfony2"]}
+            - {file: "symposium", title: "titi", date: "dd/MM/yyyy" , author: "brahim", categories: ["Symposium"]}
+
 
 
