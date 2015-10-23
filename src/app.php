@@ -222,20 +222,47 @@ $buildRealisations = function (Request $request, Application $app) {
     $app['twig']->addGlobal('realisations', $realisations);
 };
 
+$buildBlogSlide = function (Request $request, Application $app) {
+    $locale = $request->get('_locale');
+    $articles = $app['config']['blog'][$locale]['articles'];
+
+    foreach ($articles as $key => $article) {
+        $article['date'] = date_create_from_format('d/m/Y', $article['date']);
+    }
+
+    usort($articles, function ($article1, $article2) {
+        if ($article1['date'] == $article2['date']) {
+            return 0;
+        }
+
+        return ($article1['date'] < $article2['date']) ? 1 : -1;
+    });
+
+    $app['twig']->addGlobal('last_articles', $articles);
+};
+
 $buildArticlesList = function (Request $request, Application $app) {
     $locale = $request->get('_locale');
     $articlesByCategories = array();
     $categories = $app['config']['blog'][$locale]['categories'];
     $articles = $app['config']['blog'][$locale]['articles'];
-
     foreach ($categories as $index => $category) {
         $articlesByCategories[$category] = array();
 
         foreach ($articles as $key => $article) {
+            $article['date'] = date_create_from_format('d/m/Y', $article['date']);
             if (in_array($category, $article['categories'])) {
                 array_push($articlesByCategories[$category], $article);
             }
         }
+
+        usort($articlesByCategories[$category], function ($article1, $article2) {
+            if ($article1['date'] == $article2['date']) {
+                return 0;
+            }
+
+            return ($article1['date'] < $article2['date']) ? 1 : -1;
+        });
     }
 
     $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);

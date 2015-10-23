@@ -1,0 +1,33 @@
+
+@media #{$medium-up} {
+  .articles {
+
+    .title {
+      height: 15rem;
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media #{$small-only} {
+  .articles {
+
+    .columns > img {
+      height: 9rem!important;
+    }
+
+    .read-article {
+
+      position: absolute;
+      bottom: 0;
+    }
+
+    a {
+      font-size: .8rem;
+      padding: .5rem;
+    }
+  }
+}

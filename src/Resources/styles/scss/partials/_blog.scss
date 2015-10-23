@@ -1,3 +1,43 @@
+.articles {
+  .slick-arrow.next.right {
+    right: 0;
+  }
+
+  img {
+    height: 9rem;
+  }
+
+  .info {
+    color: $idci-category-blue;
+
+    span {
+      margin-right: 3rem;
+    }
+  }
+
+  .title {
+    height: 5rem;
+
+    p {
+      color: $idci-blue;
+      font-weight: bold;
+      margin: 0;
+      padding: 1rem 0;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    background-color: $idci-category-blue;
+    color: $idci-white;
+    display: inline-block;
+    font-weight: bold;
+    padding: .5rem 3rem;
+    text-transform: uppercase;
+  }
+}
+
 .by-categories {
 
   .accordion-content {

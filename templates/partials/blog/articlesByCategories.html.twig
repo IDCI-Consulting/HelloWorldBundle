@@ -20,11 +20,11 @@
                     {% for article in articles %}
                         <div class="small-12 columns article">
                             <div class="row">
-                                <div class="small-1 columns">
+                                <div class="small-2 medium-1 columns">
                                     <span {% if article['image'] is defined %} style="background: url('/images/blog/{{ article['image'] }}') no-repeat;background-size: 100% 100%;"{% endif %}></span>
                                 </div>
-                                <a class="small-11 columns" href="{{ path('article', {_locale: app.translator.locale, 'file': article['file']}) }}">
-                                    {{ article['title'] }} <em>le {{ article['date'] }} par {{ article['author'] }}</em>
+                                <a class="small-10 medium-11 columns" href="{{ path('article', {_locale: app.translator.locale, 'file': article['file']}) }}">
+                                    {{ article['title'] }} <em>le {{ article['date']|date('d/m/Y') }} par {{ article['author'] }}</em>
                                 </a>
                             </div>
                         </div>

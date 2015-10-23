@@ -222,6 +222,7 @@ $intlApp
             return $app['twig']->render('pages/blog.html.twig');
         }
     )
+    ->before($buildBlogSlide)
     ->before($buildArticlesList)
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
