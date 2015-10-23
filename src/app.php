@@ -241,4 +241,48 @@ $buildArticlesList = function (Request $request, Application $app) {
     $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
 };
 
+//$buildArticleMenu = function (Request $request, Application $app) {
+//    $text = $app['twig']->render(sprintf(
+//        'contents/blog/%s/%s.md',
+//        $request->get('_locale'),
+//        $request->get('file')
+//    ));
+//    # Remove UTF-8 BOM, if present.
+//    $text = preg_replace('{^\xEF\xBB\xBF}', '', $text);
+//
+//    # Standardize line endings:
+//    #   DOS to Unix and Mac to Unix
+//    $text = preg_replace('{\r\n?}', "\n", $text);
+//
+//    # atx-style headers:
+//    # # Header 1        {#header1}
+//    # ## Header 2       {#header2}
+//    # ## Header 2 with closing hashes ##  {#header3}
+//    # ...
+//    # ###### Header 6   {#header2}
+//    #
+//    preg_match_all('{
+//    ^(?<level>\#{1,6})
+//    [ ]*
+//    (?<title>.+?)
+//    \#*
+//    (?:[ ]+\{\#(?<href>[-_:[:alnum:]]+)\})?
+//    [ ]*
+//    \n+
+//  }uxm', $text, $matches);
+//
+//    $menu = '<ul>';
+//    foreach($matches['title'] as $i => $title) {
+//        $menu .= sprintf('<li class="level%d"><a href="#%s">%s</a></li>',
+//            strlen($matches['level'][$i]),
+//            $matches['href'][$i],
+//            trim($title)
+//        );
+//    }
+//
+//    $menu .= '</ul>';
+//
+//    $app['twig']->addGlobal('article_summary', $menu);
+//};
+
 return $app;

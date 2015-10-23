@@ -1,5 +1,16 @@
 {% extends "layout.html.twig" %}
 
+{% block idci_logo %}
+<h1 class="small-3 medium-1 large-2 columns logo">
+    <a class="hide-for-small-only" href="{{ path('index', {'_locale': app.translator.locale}) }}">
+        <img src="{{ asset('images/logo_idci.svg') }}" alt="idci-logo" title="IDCI Consulting"/>
+    </a>
+    <a class="show-for-small-only" href="{{ path('index', {'_locale': app.translator.locale}) }}">
+        <img src="{{ asset('images/logo_idci_white.svg') }}" alt="idci-logo-white" title="IDCI Consulting"/>
+    </a>
+</h1>
+{% endblock  %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,

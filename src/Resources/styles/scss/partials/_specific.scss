@@ -2,6 +2,10 @@ h1.logo {
   background: 0 0;
 }
 
+body {
+  margin-top: 5rem;
+}
+
 .button.learn-more {
   float: right;
 }
@@ -12,7 +16,6 @@ h1.logo {
 
 #presentation {
   background: url("/images/background_presentation.jpg") no-repeat;
-  padding-top: 10rem;
 }
 
 #training, #philosophy {

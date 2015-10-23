@@ -72,12 +72,10 @@ blog:
     fr:
         categories:
             - "Symfony2"
-            - "Symposium"
         articles:
         # file property will match the url parameter for route named article
-            - {file: "symposium", title: "Mise en place de bootstrap et enrichissement de la documentation autour de Symposium", date: "dd/MM/yyyy" , author: "brahim", categories: ["Symfony2", "Symposium"]}
-            - {file: "fos-user-bundle", title: " FOSUserBundle gerer les utilisateurs avec Symfony2", date: "dd/MM/yyyy" , author: "brahim", categories: ["Symfony2"]}
-            - {file: "symposium", title: "titi", date: "dd/MM/yyyy" , author: "brahim", categories: ["Symposium"]}
+            - {file: "fos-user-bundle", image: "symfony2-logo.png", title: "FOSUserBundle: Comment gérer les utilisateurs avec Symfony2", date: "dd/MM/yyyy" , author: "Brahim Boukoufallah", categories: ["Symfony2"]}
+            - {file: "pager-fanta", image: "symfony2-logo.png", title: "WhiteOctoberPagerfantaBundle : Comment paginer vos listes avec Symfony2 ?", date: "dd/MM/yyyy" , author: "Gabriel Bondaz", categories: ["Symfony2"]}
 
 
 

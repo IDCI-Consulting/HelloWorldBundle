@@ -12,14 +12,16 @@
                 <i class="fa fa-bars"></i>
             </a>
 
-            <h1 class="small-3 medium-1 large-2 columns logo">
+            {% block idci_logo %}
+            <div class="small-3 medium-1 large-2 columns logo">
                 <a class="hide-for-small-only" href="{{ path('index', {'_locale': app.translator.locale}) }}">
-                    <img src="{{ asset('images/logo_idci.svg') }}"/>
+                    <img src="{{ asset('images/logo_idci.svg') }}" alt="idci-logo" title="IDCI Consulting"/>
                 </a>
                 <a class="show-for-small-only" href="{{ path('index', {'_locale': app.translator.locale}) }}">
-                    <img src="{{ asset('images/logo_idci_white.svg') }}"/>
+                    <img src="{{ asset('images/logo_idci_white.svg') }}" alt="idci-logo-white" title="IDCI Consulting"/>
                 </a>
-            </h1>
+            </div>
+            {% endblock %}
 
             <nav class="medium-7 large-6 columns nav-menu">
                 {% block nav %}{% endblock %}

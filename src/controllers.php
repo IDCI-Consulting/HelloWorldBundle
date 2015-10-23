@@ -234,8 +234,15 @@ $intlApp
     ->get(
         '/article/{file}',
         function (Request $request, $_locale, $file) use ($app) {
-            $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
 
+            try {
+                $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
+            } catch (\Exception $e) {
+                throw new NotFoundHttpException(sprintf(
+                    'The file named %s does not exist',
+                    $file
+                ));
+            }
             return $app['twig']->render(
                 'pages/article.html.twig',
                 array(
