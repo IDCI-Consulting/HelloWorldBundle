@@ -1,6 +1,17 @@
+.blog {
+  .last-articles, .by-categories {
+    min-height: inherit;
+  }
+}
+
 .articles {
   .slick-arrow.next.right {
     right: 0;
+  }
+
+  .read-article {
+    position: absolute;
+    bottom: 0;
   }
 
   img {

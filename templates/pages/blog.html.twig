@@ -8,7 +8,9 @@
 {% endblock %}
 
 {% block main_content %}
-    {% include 'partials/asideMenu.html.twig' %}
-    {% include 'partials/blog/lastArticles.html.twig' %}
-    {% include 'partials/blog/articlesByCategories.html.twig' %}
+    <div class="blog">
+        {% include 'partials/asideMenu.html.twig' %}
+        {% include 'partials/blog/lastArticles.html.twig' %}
+        {% include 'partials/blog/articlesByCategories.html.twig' %}
+    </div>
 {% endblock %}
