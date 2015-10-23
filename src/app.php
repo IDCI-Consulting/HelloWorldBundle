@@ -30,8 +30,8 @@ $app->register(new RoutingServiceProvider());
 $app->register(
     new TranslationServiceProvider(),
     array(
-        'locale' => 'en',
-        'locale_fallbacks' => array('en'),
+        'locale' => 'fr',
+        'locale_fallbacks' => array('fr'),
     )
 );
 $app->register(new FormServiceProvider());
@@ -70,7 +70,7 @@ $app['translator'] = $app->extend('translator', function ($translator, $app) {
     $translator->addLoader('yaml', new YamlFileLoader());
 
     $translator->addResource('yaml', __DIR__.'/Resources/translations/messages.fr.yml', 'fr');
-    $translator->addResource('yaml', __DIR__.'/Resources/translations/messages.en.yml', 'en');
+    //$translator->addResource('yaml', __DIR__.'/Resources/translations/messages.en.yml', 'en');
     $translator->addResource('yaml', __DIR__.'/Resources/translations/validators.fr.yml', 'fr', 'validators');
 
     return $translator;
