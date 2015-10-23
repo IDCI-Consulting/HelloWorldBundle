@@ -95,7 +95,7 @@ blog:
             - {file: "symposium", image: "symposium.png", title: "Symposium un outil pour réussir l’organisation de vos événements", date: "22/11/2011" , author: "Frédéric Bondaz", categories: ["Symposium"]}
 
             #Tutos et astuces
-            - {file: "environement-php-mysql", title: "Mettre en place un environnement de développement pour réaliser un site avec PHP et MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
+            - {file: "environement-php-mysql", image: "mysql-php-logo.png", title: "Mettre en place un environnement de développement pour réaliser un site avec PHP et MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
             - {file: "google-apps", image: "google-logo.png", title: "Les Google Apps pour votre domaine", date: "17/06/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
 
             #Wordpress
