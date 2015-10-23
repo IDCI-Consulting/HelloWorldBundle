@@ -1,9 +1,13 @@
 
-## FOSUserBundle gerer les utilisateurs avec Symfony2 
+# FOSUserBundle gerer les utilisateurs avec Symfony2 #
 
 ![Symfony2 logo](/images/blog/symfony2.png "Symfony2")
 
-### Introduction ###
+## Introduction ##
+<p class="notice question" markdown="1">
+    ATTENTION : Cet article a été écrit pour FOSUserBundle 1.2
+</p>
+
 **Gérer les utilisateurs** inscription, connexion, droits d'accès, etc.. a toujours
 été un plaisir avec **symfony** grâce aux plugins:
 
@@ -14,16 +18,16 @@ Ce n'est pas bien plus dur avec **Symfony2** ! Cela est même simplifié au maxi
 bien que dépaysant au début. Le bundle **FOSUserBundle** répond aux mêmes problématiques
 mais fluidifie les choses, les rend plus intuitives.
 
-### FOSUserBundle : Installation ###
+## FOSUserBundle : Installation ##
 
 Il vous faut tout d'abord récupérer les sources du bundle et les placer dans le dossier vendor.
 Pour cela, 2 solutions s'offrent à vous :
 
-#### 1) Installation de FOSUSerBundle en clonant le dépôt git ####
+### 1) Installation de FOSUSerBundle en clonant le dépôt git ###
 
     $ git clone https://github.com/FriendsOfSymfony/FOSUserBundle.git vendor/bundles/FOS/UserBundle
 
-#### 2) Installation de FOSUSerBundle via les dépendances git ####
+### 2) Installation de FOSUSerBundle via les dépendances git ###
 
 Ajoutez les lignes suivantes dans votre fichier `deps` :
 
@@ -64,7 +68,7 @@ Si vous avez encore des doutes sur l'utilité des namespaces ou que vous êtes s
 quant à son utilisation, je vous renvoie à ce très bon article de
 [Pascal MARTIN sur le sujet](http://blog.pascal-martin.fr/post/php-5.3-namespace-1-espaces-de-noms).
 
-### Créer votre entity User en surchargeant l'utilisateur de FOSUserBundle ###
+## Créer votre entity User en surchargeant l'utilisateur de FOSUserBundle ##
 
 Pour hériter d'un bundle avec Symfony2, il suffit de définir le bundle parent
 dans votre classe :
@@ -108,7 +112,7 @@ tous les fonctionnalités de FOSUserBundle s'appliqueront à cet utilisateur :
         protected $id;
     }
 
-### Configuration de FOSUserBundle ###
+## Configuration de FOSUserBundle ##
 
 Il vous faut maintenant configurer le bundle.
 Pour cela, éditez votre fichier `config.yml`:
@@ -154,7 +158,7 @@ Vous avez désormais toute une floppée d'actions possibles grâce au bundle **F
 Un coup d'oeil à la suite de cet article vous permettra de faire un tour d'horizon
 rapide de ce bundle pour une utilisation optimale.
 
-### Ajoutez des champs à votre entity User ###
+## Ajoutez des champs à votre entity User ##
 
 Vous souhaitez également que l'utilisateur renseigne nom, prénom, date de naissance,
 etc... lors de son inscription, que faire ?
@@ -243,7 +247,7 @@ données, votre table `fos_user` contiendra vos nouveaux champs :
 
 ![Base de données](/images/blog/database.png)
 
-### Routing, actions et templates utilisés par FOSUserBundle ###
+## Routing, actions et templates utilisés par FOSUserBundle ##
 
 Vous devez en tout premier lieu importer toutes les routes du bundle :
 
@@ -304,7 +308,7 @@ Vous devez en tout premier lieu importer toutes les routes du bundle :
 Comme vous pouvez le remarquer, les fichiers de routing fournis par **FOSUserBundle**
 sont au format xml.
 
-### Gérer les droits d'accès des utilisateurs avec Symfony2 ###
+## Gérer les droits d'accès des utilisateurs avec Symfony2 ##
 
 Tout est désormais fonctionnel, vous n'avez plus qu'à restreindre l'accès aux pages souhaitées.
 Cela se passe dans le fichier de configuration `security.yml` :
@@ -346,7 +350,7 @@ ou encore user du fichier security.yml pour une gestion plus fine des accès.
 Vous pouvez désormais gérer au cas par cas les espaces sécurisés simplement grâce
 à leurs routes !
 
-### Récupérer et utiliser l'utilisateur dans une action avec Symfony2 ###
+## Récupérer et utiliser l'utilisateur dans une action avec Symfony2 ##
 
 L'utilisateur est stocké en session, dans le contexte de l'application. Mais récupérer
 celui-ci sous forme d'objet dans une action peut vite devenir un casse-tête,
@@ -359,14 +363,14 @@ Vous pouvez ensuite manipuler cet objet comme bon vous semble et récupérer vos
 
 `$user-&gt;getlocation()`
 
-### Gérer l'utilisateur et ses droits d'accès dans un template twig avec Symfony2 ###
+## Gérer l'utilisateur et ses droits d'accès dans un template twig avec Symfony2 ##
 
 Comment tester si l'utilisateur possède les bons droits d'accès dans un template avec Symfony2?
 Un jeu d'enfant avec twig ! En effet, twig dispose d'une kyrielle de fonctions de base :
 
 
 
-### Utilisez vos propres templates pour décorer FOSUserBundle ###
+## Utilisez vos propres templates pour décorer FOSUserBundle ##
 
 Pour utiliser vos templates, il va falloir surcharger les templates existant du bundle
 **FOSUserBundle** en respectant la hierarchie imposée par celui-ci.
@@ -393,7 +397,7 @@ Le template d'inscription sera dorénavant décoré par le template de base.
 Ce mécanisme vous permet d'utiliser une des grandes forces de
 [Twig](http://twig.sensiolabs.org/): l'héritage de templates !
 
-### Envoyez un email de confirmation pour la création d'un utilisateur ###
+## Envoyez un email de confirmation pour la création d'un utilisateur ##
 
 Vous rêviez de pouvoir valider automatiquement vos utilisateurs en leur envoyant
 un email de confirmation avec un lien à cliquer pour valider ladite inscription ?
@@ -456,28 +460,28 @@ Il ne vous reste plus ensuite qu'à définir le template que vous souhaitez util
     {% endblock %}
     {% endverbatim %}
 
-### Utiliser la ligne de commande pour gérer vos utilisateurs avec FOSUserBundle ###
+## Utiliser la ligne de commande pour gérer vos utilisateurs avec FOSUserBundle ##
 
 Le bundle FOSUSerBundle vous propose toute une kyrielle de commandes permettant de gérer vos utilisateurs :
 
-#### 1) Création &amp; activation ####
+### 1) Création & activation ###
 
     $ php app/console fos:user:create monutilisateur test@example.com motdepasse
     $ php app/console fos:user:activate monutilisateur
     $ php app/console fos:user:deactivate monutilisateur
 
-#### 2) Gestion des rôles ####
+### 2) Gestion des rôles ###
 
     $ php app/console fos:user:promote monutilisateur ROLE_ADMIN
     $ php app/console fos:user:demote testuser ROLE_ADMIN
 
-#### 3) Changement de mot de passe ####
+### 3) Changement de mot de passe ###
 
     $ php app/console fos:user:change-password monutilisateur nouveaumotdepasse
 
-### Erreurs courantes avec FOSUserBundle ###
+## Erreurs courantes avec FOSUserBundle ##
 
-#### 1) Problèmes de configuration de FOSUserBundle ####
+### 1) Problèmes de configuration de FOSUserBundle ###
 
 **Problème :**
 
@@ -501,7 +505,7 @@ ErrorException: Warning: class_parents(): Class MyApp\Entity\User does not exist
 dans `app/config/config.yml`. Vérifiez que votre namespace
 est bon, que votre classe se situe bien là ou vous l'avez définie.
 
-#### 2) Problèmes de surcharge de l'entity User de FOSUserBundle ####
+### 2) Problèmes de surcharge de l'entity User de FOSUserBundle ###
 
 **Problème :** Vous n'arrivez pas à surcharger le formulaire d'édition
 de profil de FOSUserBundle, rien à y faire vous avez cette erreur :
@@ -533,7 +537,7 @@ pour l'édition de profil, c'est la fonction *buildUserForm()* qu'il faut surcha
         }
     }
 
-### Conclusion ###
+## Conclusion ##
 
 **Symfony2** est amélioré par rapport à son predecesseur vieillissant. Là où **symfony**
 proposait un plugin agreable d'utilisation mais rendant les choses vite complexe
@@ -543,4 +547,4 @@ Ce framework ainsi que ses bundles sont des outils de grande qualité !
 N'hésitez pas à nous faire vos retours.
 
 Si vous souhaitez une formation sur les frameworks **symfony** ou **Symfony2**
-[contactez-nous](http://www.idci-consulting.fr/contact).
+[contactez nous]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").

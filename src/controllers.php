@@ -11,7 +11,7 @@ $intlApp = $app['controllers_factory'];
 $redirectApp = $app['controllers_factory'];
 
 //Routing requirements
-$intlApp->assert('_locale', 'fr|en');
+$intlApp->assert('_locale', 'fr');
 
 /*******************
  * App Controllers *
@@ -239,8 +239,8 @@ $intlApp
                 $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
             } catch (\Exception $e) {
                 throw new NotFoundHttpException(sprintf(
-                    'The file named %s does not exist',
-                    $file
+                    'An error occured: %s',
+                    $e->getMessage()
                 ));
             }
             return $app['twig']->render(

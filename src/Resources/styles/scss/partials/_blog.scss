@@ -48,8 +48,6 @@
       }
     }
   }
-
-
 }
 
 .blog-article {
@@ -60,17 +58,26 @@
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0 0 3rem;
+    text-transform: none;
+  }
+
+  h1 {
     text-align: center;
 
     & + p {
 
       img {
-        text-align: center;
+        margin: 0 auto;
       }
     }
   }
 
+  img {
+    display: block;
+  }
+
   h2 {
+    border-bottom: 2px dotted $idci-category-blue;
     padding-top: 2rem;
   }
 
@@ -100,6 +107,43 @@
       color: inherit;
       background-color: transparent;
       border: 0;
+    }
+  }
+
+  ul {
+    color: $idci-blue;
+    list-style: circle;
+    margin-bottom: 20px;
+    margin-left: 32px;
+  }
+
+  .notice {
+    margin: 20px 20px 10px;
+    padding: 10px 25px 10px 40px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    position: relative;
+
+    p {
+      margin: 0;
+    }
+
+    &::before {
+      background: url('/images/blog/questionmark.png') no-repeat top left;
+      content: "-";
+      display: inline-block;
+      height: 40px;
+      left: -10px;
+      position: absolute;
+      text-indent: -9999px;
+      top: -10px;
+      width: 40px;
+    }
+
+    &.question {
+      background: #dff0fd;
+      color: #296a88;
     }
   }
 }
