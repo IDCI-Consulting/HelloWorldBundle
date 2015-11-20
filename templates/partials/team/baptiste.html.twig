@@ -1,4 +1,4 @@
-<article class="small-12 medium-4 columns member">
+<article class="small-12 medium-6 large-4 columns member">
     <header>
         <h3 class="member-name">Baptiste Bouchereau</h3>
 
@@ -11,9 +11,11 @@
         </div>
     </div>
 
-    {% filter markdown %}
-    {% include 'contents/team/baptiste_' ~ app.translator.locale ~ '.md' %}
-    {% endfilter %}
+    <div class="member-description">
+        {% filter markdown %}
+        {% include 'contents/team/baptiste_' ~ app.translator.locale ~ '.md' %}
+        {% endfilter %}
+    </div>
 
     <a href="{{ path('cv', {_locale: app.translator.locale, 'theme': 'idci', 'name': 'baptiste_bouchereau'}) }}" class="button small small-12 see-cv">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
 </article>

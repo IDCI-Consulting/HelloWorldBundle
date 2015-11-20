@@ -21,6 +21,7 @@
   }
 
   .profile-picture {
+    background-color: $idci-dark-grey;
     width: 260px;
     height: 260px;
   }
@@ -108,9 +109,10 @@
   .frederic {
 
     .profile-picture {
-      background-image: url('/images/frederic/frederic.png');
+      //background-image: url('/images/frederic/frederic.png');
       background-repeat: no-repeat;
       background-size: cover;
+      margin: 0 auto;
     }
   }
 

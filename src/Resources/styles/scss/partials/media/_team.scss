@@ -1,10 +1,18 @@
+@media #{$large-up} {
+  .member-description {
+    line-height: 350px;
+    min-height: 350px;
+  }
+}
+
 @media #{$medium-only} {
   .member-name, .job-position {
     font-size: 1rem;
   }
 
   .member-description {
-    height: 10rem;
+    line-height: 300px;
+    min-height: 300px;
     font-size: .8rem;
   }
 }
@@ -12,7 +20,7 @@
 @media #{$medium-up} {
 
   article.member {
-    min-height: 605px;
+    min-height: 700px;
 
     .content-wrapper + p {
       margin-top: 1rem;
