@@ -1,6 +1,6 @@
 @media #{$large-up} {
   .arrow {
-    display: inline!important;
+    display: inline !important;
   }
 
   section.trainings {
@@ -15,7 +15,12 @@
 @media #{$large-only} {
 
   #presentation {
-    padding-top: 6rem;
+    padding-top: 0;
+
+    h2 {
+      height: 20rem;
+      padding-top: 4rem;
+    }
   }
 
   .scroll-to {
@@ -51,8 +56,37 @@
     width: 6rem;
 
     img {
-      height: 3rem!important;
+      height: 3rem !important;
       width: 3rem;
+    }
+  }
+}
+
+@media #{$small-only} {
+
+  #presentation {
+    padding: 2rem 0;
+
+      header {
+        background: 0 0;
+      }
+
+    h3 {
+      margin: 0 0 1.75rem;
+    }
+
+    .scroll-to {
+      border-color: $idci-blue;
+      height: 4rem;
+      line-height: 4rem;
+      width: 4rem;
+
+      span {
+        background: url('/images/slick_arrow_dark_blue.svg') no-repeat;
+        background-position: 50%;
+        height: 2rem;
+        width: 2rem;
+      }
     }
   }
 }

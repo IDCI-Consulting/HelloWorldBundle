@@ -97,7 +97,7 @@
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 1.5rem;
       height: 100%;
       margin: 0;
 
@@ -153,6 +153,16 @@
 
   #training, #advice, #web-development {
     background: $idci-white;
+  }
+
+  .acronym {
+    padding-top: 1rem;
+
+    p {
+      display: inline-block;
+      font-size: 1rem;
+      margin: 0;
+    }
   }
 
 }
