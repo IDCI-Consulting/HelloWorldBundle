@@ -34,7 +34,7 @@
       -moz-transition: .25s ease-in-out;
       -o-transition: .25s ease-in-out;
       transition: .25s ease-in-out;
-      width: 80%;
+      width: 2rem;
 
       &:nth-child(1) {
         top: $hamburger-height / 4;
@@ -84,7 +84,7 @@
           -moz-transform: rotate(-45deg);
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
-          top: 32px;
+          top: 28px;
           left: 10px;
         }
       }
