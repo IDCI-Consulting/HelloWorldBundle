@@ -8,13 +8,13 @@
   }
 
   .hide-for-small-only.arrow {
-    display: inline!important;
+    display: inline !important;
   }
 }
 
 @media #{$large-only} {
   .projects-content {
-    padding:  5rem 10rem;
+    padding: 5rem 10rem;
   }
 }
 
@@ -27,7 +27,9 @@
 
 @media #{$medium-only} {
   section {
+
     header {
+
       h2 {
         letter-spacing: .5rem;
       }
@@ -43,11 +45,11 @@
   }
 
   .hide-for-small-only.arrow {
-    display: inline!important;
+    display: inline !important;
   }
 
   .projects-content {
-    padding:  5rem 8rem;
+    padding: 5rem 8rem;
   }
 }
 
@@ -58,14 +60,14 @@
   }
 
   body {
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
 
   .team, .contact {
     header {
       h2 {
         i {
-          display: inline-block!important;
+          display: inline-block !important;
           font-size: 2.5rem;
         }
       }
@@ -77,8 +79,7 @@
   }
 
   .accordion-toggle {
-    background: $idci-dark-grey;
-    border: .05rem solid $idci-white;
+    background: $idci-white;
     font-weight: 300;
     height: 5rem;
     position: relative;
@@ -87,12 +88,12 @@
     width: 100%;
 
     &:hover {
-      background: #999;
+      background: $idci-dark-grey;
       cursor: pointer;
     }
 
     &.open {
-      background: #999;
+      background: $idci-dark-grey;
     }
 
     h2 {
@@ -113,7 +114,6 @@
     }
 
     .toggle-icon {
-      border-left: 1px solid $idci-white;
       font-size: 1.5rem;
       height: 5rem;
       line-height: 5rem;
@@ -151,7 +151,7 @@
     }
   }
 
-  #training,  #advice, #web-development {
+  #training, #advice, #web-development {
     background: $idci-white;
   }
 
