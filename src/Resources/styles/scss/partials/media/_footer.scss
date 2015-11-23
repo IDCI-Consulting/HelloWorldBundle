@@ -17,7 +17,7 @@
     .contact-us-link {
 
       span {
-        display: inline-block!important;
+        display: inline-block !important;
       }
     }
 
@@ -70,12 +70,10 @@
 @media #{$small-only} {
   footer {
     background: $idci-blue;
-    color: $idci-white;
     display: block;
     height: 28rem;
 
     p, li, a {
-      color: $idci-white;
       font-weight: bold;
     }
 
@@ -98,15 +96,16 @@
     }
 
     .contact-us {
+      height: 100%;
+      padding-top: 1rem;
 
       .contact-us-link {
-        margin-top: 1rem;
 
         a {
-          background: $idci-light-blue;
           border: none;
+          font-size: .7rem;
           text-transform: uppercase;
-          width: 100%;
+          width: 50%;
         }
 
         span {
@@ -119,13 +118,11 @@
       font-size: 1rem;
 
       h4 {
-        color: $idci-white;
         font-size: 2rem;
         margin: 0 0 2rem 0;
       }
 
       p {
-        color: $idci-white;
         line-height: 1rem;
 
         &:first-child {
@@ -135,7 +132,6 @@
     }
 
     a {
-      color: $idci-white;
 
       &.mail {
         text-decoration: underline;
