@@ -1,3 +1,5 @@
+@import 'hamburger';
+
 @media #{$xlarge-only} {
   .logo {
     width: 15rem;
@@ -83,9 +85,8 @@
 
 @media #{$small-only} {
   .header-container {
-    background: $idci-blue;
-    border-bottom: .1rem solid $idci-white;
     height: 4rem;
+    margin-top: 2rem;
   }
 
   .logo {
@@ -94,15 +95,36 @@
     width: 8rem;
   }
 
+  .langs {
+    background: $black;
+    height: 2rem;
+    position: absolute;
+    top: -2rem;
+
+    .idci-inline-list {
+      float: right;
+      height: 100%;
+      line-height: 2rem;
+
+      li {
+        height: 100%;
+
+        a {
+          height: 100%;
+        }
+      }
+    }
+  }
+
   .nav-menu {
-    background: $idci-blue;
-    border-right: 1px solid $idci-white;
-    border-top: 1px solid $idci-blue;
+    background: rgba(0, 0, 0, 0.8);
+    border-right: .2rem solid $idci-dark-grey;
+    border-top: .2rem solid $idci-white;
     display: none;
     left: 0;
     padding: 0;
     position: absolute;
-    top: 3.9rem;
+    top: 3.8rem;
     width: 15rem;
     z-index: 999;
 
@@ -123,7 +145,7 @@
         &.active {
 
           a {
-            background-color: $idci-light-blue;
+            background-color: $idci-light-blue-opac;
             color: $idci-white;
             border: none;
           }
