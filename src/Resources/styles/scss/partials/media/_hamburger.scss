@@ -1,7 +1,7 @@
 /**
  * Hamburger style with animations
  */
-@media #{$small-only} {
+@media screen and (max-width: 1150px) {
   $hamburger-height: 3rem;
   $hamburger-width: 100%;
 
@@ -71,7 +71,7 @@
           -o-transform: rotate(45deg);
           transform: rotate(45deg);
           top: 6px;
-          left: 9px;
+          left: 15px;
         }
 
         &:nth-child(2) {
@@ -85,7 +85,7 @@
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
           top: 28px;
-          left: 10px;
+          left: 15px;
         }
       }
     }

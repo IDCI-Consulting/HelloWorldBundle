@@ -1,6 +1,10 @@
 @import 'hamburger';
 
 @media #{$xlarge-only} {
+  .menu-icon {
+    display: none;
+  }
+
   .logo {
     width: 15rem;
 
@@ -26,6 +30,10 @@
 }
 
 @media #{$large-only} {
+  .menu-icon {
+    display: none;
+  }
+
   .logo {
     width: 15rem;
 
@@ -68,7 +76,6 @@
   .logo {
     height: 100%;
     margin: 0;
-    width: 8rem;
   }
 
   .nav-menu {
@@ -82,7 +89,7 @@
   }
 }
 
-@media #{$small-only} {
+@media screen and (max-width: 1150px) {
   .header-container {
     height: 4rem;
     margin-top: 2rem;
@@ -91,7 +98,12 @@
   .logo {
     background: transparent;
     height: 4rem;
-    width: 9rem;
+
+    a {
+      img {
+        left: 45%;
+      }
+    }
   }
 
   .langs {
@@ -213,6 +225,18 @@
       i {
         color: $idci-white;
         font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media #{$small-only} {
+
+  .logo {
+
+    a {
+      img {
+        left: 35%;
       }
     }
   }

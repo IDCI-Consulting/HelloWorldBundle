@@ -8,7 +8,7 @@
 {% block header %}
     <div class="full-width header-container">
         <header>
-            <a class="hide-for-medium-up small-3 columns menu-icon">
+            <a class="small-3 medium-2 columns menu-icon">
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -17,7 +17,7 @@
             </a>
 
             {% block idci_logo %}
-            <div class="small-9 medium-1 large-2 columns logo">
+            <div class="small-9 medium-10 large-2 columns logo">
                 <a href="{{ path('index', {'_locale': app.translator.locale}) }}">
                     <img src="{{ asset('images/logo_idci.svg') }}" alt="idci-logo" title="IDCI Consulting"/>
                 </a>
@@ -28,7 +28,7 @@
                 {% block nav %}{% endblock %}
             </nav>
 
-            <div class="medium-2 columns langs">
+            <div class="medium-12 large-3 columns langs">
                 <p class="show-for-xlarge-up choose-language">{% trans %}Choose the language{% endtrans %}</p>
                 <ul class="idci-inline-list">
                     {% for locale, route in i18n_routes %}

@@ -89,3 +89,16 @@ h3.trainings {
     }
   }
 }
+
+#presentation {
+  display: inline-block;
+  min-height: calc(100vh - 6rem);
+  line-height: calc(100vh - 6rem);
+  padding-top: 0;
+
+  > .row {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+  }
+}

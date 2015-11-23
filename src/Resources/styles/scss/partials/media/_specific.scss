@@ -53,7 +53,7 @@
   }
 }
 
-@media #{$small-only} {
+@media screen and (max-width: 1150px) {
 
   .wrapper {
     min-height: 45%;

@@ -46,10 +46,6 @@
 
 @media #{$medium-only} {
 
-  #presentation {
-    padding-top: 5rem;
-  }
-
   .scroll-to {
     height: 6rem;
     line-height: 6rem;
@@ -65,7 +61,6 @@
 @media #{$small-only} {
 
   #presentation {
-    padding: 2rem 0;
 
       header {
         background: 0 0;
