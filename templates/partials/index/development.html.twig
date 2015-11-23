@@ -2,9 +2,12 @@
     <header class="small-8 medium-12 columns accordion-toggle">
         <div class="row">
             <h3 class="hide-for-small-only">{% transchoice 2 from "messages" %}We do{% endtranschoice %}</h3>
+
             <h2 class="small-10 medium-12 columns">
-                <img class="show-for-small-only accordion-image" src="{{ asset("images/icon_dev.svg") }}" />
                 {% trans %}Web development{% endtrans %}
+                <div class="show-for-small-only accordion-image">
+                    <img src="{{ asset("images/icon_dev.svg") }}"/>
+                </div>
             </h2>
             <div class="hide-for-medium-up small-2 columns toggle-icon">
                 <i class="fa fa-angle-down"></i>
@@ -45,7 +48,7 @@
         }
     };
 
-    var getFileRaw = function(editor) {
+    var getFileRaw = function (editor) {
         // Clear the timeout callback
         clearTimeout(timer);
 
@@ -60,21 +63,21 @@
         $.ajax({
             url: file.url,
             method: "GET",
-            success: function(fileRaw) {
+            success: function (fileRaw) {
                 // Github api provides the fileraw's content encoded in base64 format. We need to use atob() function to decode it.
                 var content = fileRaw;
 
-                editor.getSession().setMode("ace/mode/"+file.language);
-                editor.setTheme("ace/theme/"+file.theme);
+                editor.getSession().setMode("ace/mode/" + file.language);
+                editor.setTheme("ace/theme/" + file.theme);
                 showText(editor, content, 0);
             },
-            error: function(jqXHR, textStatus, errorThrown) {
+            error: function (jqXHR, textStatus, errorThrown) {
                 showText(editor, '//{% trans %}Write your code here{% endtrans %}!!!')
             }
         });
     };
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         var editor = ace.edit("editor");
 
         // Disable warn message in console. Advised by Ace developers.
@@ -96,7 +99,7 @@
         getFileRaw(editor);
 
         // Call getFIleRaw every 2 minutes
-        setInterval(function() {
+        setInterval(function () {
             getFileRaw(editor);
         }, 120000);
     });

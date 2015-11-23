@@ -3,8 +3,10 @@
         <div class="row">
             <h3 class="hide-for-small-only medium-12">{% transchoice 2 from "messages" %}We do{% endtranschoice %}</h3>
             <h2 class="small-10 medium-12 columns">
-                <img class="show-for-small-only accordion-image" src="{{ asset("images/conseil.svg") }}" />
                 {% trans %}Advice{% endtrans %}
+                <div class="show-for-small-only accordion-image">
+                    <img src="{{ asset("images/conseil.svg") }}"/>
+                </div>
             </h2>
             <div class="hide-for-medium-up small-2 columns toggle-icon">
                 <i class="fa fa-angle-down"></i>

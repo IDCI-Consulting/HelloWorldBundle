@@ -55,13 +55,16 @@
 
 @media screen and (max-width: 1025px) {
 
-  section.full-width {
+  .accordion-image {
+    display: inline-block ! important;
+    float: left;
+    height: 100%;
+    margin-right: 1rem;
+    vertical-align: middle;
+    width: 2rem;
 
-    img.accordion-image {
-      display: inline-block ! important;
-      height: 100%;
-      margin: 0;
-      width: 3rem;
+    img {
+      height: auto ! important;
     }
   }
 
@@ -71,17 +74,6 @@
 
   body {
     margin-top: 6rem;
-  }
-
-  .team, .contact {
-    header {
-      h2 {
-        i {
-          display: inline-block !important;
-          font-size: 2.5rem;
-        }
-      }
-    }
   }
 
   iframe.gmap {
