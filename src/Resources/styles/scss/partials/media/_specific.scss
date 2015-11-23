@@ -55,6 +55,16 @@
 
 @media screen and (max-width: 1025px) {
 
+  section.full-width {
+
+    img.accordion-image {
+      display: inline-block ! important;
+      height: 100%;
+      margin: 0;
+      width: 3rem;
+    }
+  }
+
   .wrapper {
     min-height: 45%;
   }
@@ -83,6 +93,7 @@
     font-weight: 300;
     height: 5rem;
     position: relative;
+    text-align: left;
     text-decoration: none;
     text-transform: uppercase;
     width: 100%;
