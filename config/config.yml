@@ -80,7 +80,7 @@ blog:
         # file property will match the url parameter for route named article
 
             #Symfony1
-            - {file: "symfony-1", image: "symfony1-logo.jpg", title: "Créer un projet Symfony 1.x depuis la sandbox sous Ubuntu", date: "29/09/2011" , author: "Gabriel Bondaz", categories: ["Symfony1"]}
+            - {file: "creer-un-projet-symfony-1-x-depuis-la-sandbox-sous-ubuntu", image: "symfony1-logo.jpg", title: "Créer un projet Symfony 1.x depuis la sandbox sous Ubuntu", date: "29/09/2011" , author: "Gabriel Bondaz", categories: ["Symfony1"]}
 
             #Symfony2
             - {file: "pager-fanta", image: "symfony2-logo.png", title: "WhiteOctoberPagerfantaBundle : Comment paginer vos listes avec Symfony2 ?", date: "04/02/2013" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
@@ -95,7 +95,7 @@ blog:
             - {file: "symposium", image: "symposium.png", title: "Symposium un outil pour réussir l’organisation de vos événements", date: "22/11/2011" , author: "Frédéric Bondaz", categories: ["Symposium"]}
 
             #Tutos et astuces
-            - {file: "environement-php-mysql", image: "mysql-php-logo.png", title: "Mettre en place un environnement de développement pour réaliser un site avec PHP et MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
+            - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Mettre en place un environnement de développement pour réaliser un site avec PHP et MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
             - {file: "google-apps", image: "google-logo.png", title: "Les Google Apps pour votre domaine", date: "17/06/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
 
             #Wordpress
