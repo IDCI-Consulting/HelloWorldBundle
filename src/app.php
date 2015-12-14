@@ -105,6 +105,15 @@ $app['twig'] = $app->extend(
             )
         );
 
+        $twig->addFunction(
+            new \Twig_SimpleFunction(
+                'file_exists',
+                function ($filePath) use ($app) {
+                    return file_exists(sprintf('%s/../%s', __DIR__, $filePath));
+                }
+            )
+        );
+
         return $twig;
     }
 );

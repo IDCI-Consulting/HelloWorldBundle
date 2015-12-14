@@ -8,6 +8,13 @@
 
 {% block main_content %}
     <div class="errors">
-        {{ message|trans }}
+        <div class="row">
+            <div class="small-12 columns code">
+                <strong>{{ code }}</strong>
+            </div>
+            <div class="small-12 columns message">
+                <p>{{ 'This is not the web page you are looking for' |trans }}</p>
+            </div>
+        </div>
     </div>
 {% endblock %}

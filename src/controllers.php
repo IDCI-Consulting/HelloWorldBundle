@@ -402,6 +402,8 @@ $intlApp
     ->bind('cv')
 ;
 
+//$app->before($buildLocaleLinks, Application::EARLY_EVENT);
+
 $app
     ->error(
         function (\Exception $e, Request $request, $code) use ($app) {
@@ -409,7 +411,7 @@ $app
                 return;
             }
 
-            // 404.html, or 40x.html, or 4xx.html, or error.html
+            // 404.html, or 4xx.html.twig, or 500.html.twig, or 5xx.html.twig or default.html.twig
             $templates = array(
                 'errors/'.$code.'.html.twig',
                 'errors/'.substr($code, 0, 2).'x.html.twig',

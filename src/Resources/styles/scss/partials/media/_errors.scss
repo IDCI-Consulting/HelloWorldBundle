@@ -1,0 +1,12 @@
+@media #{$small-only} {
+
+  .errors {
+
+    .message {
+
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}
