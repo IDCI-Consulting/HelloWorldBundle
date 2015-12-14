@@ -13,10 +13,10 @@
         </header>
 
         {# Break the accordion in mobile screen #}
-        <div class="medium-4 columns hide-for-small-only course-logo">
+        <div class="large-4 columns hide-for-medium-down course-logo">
             <img src="{{ asset('images/'~ title ~'.svg') }}" />
         </div>
-        <div class="small-12 medium-8 columns accordion-content">
+        <div class="small-12 large-8 columns accordion-content">
 
             {% if courses['description'] is defined %}
                 <p class="course-description">{{ courses['description'] }}</p>

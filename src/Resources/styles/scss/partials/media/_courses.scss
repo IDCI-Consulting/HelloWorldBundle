@@ -18,6 +18,10 @@
   .course-box {
     margin-bottom: 1rem;
   }
+
+  .tabs .tab-title, .tabs dd {
+    float: none;
+  }
 }
 
 @media #{$small-only} {
