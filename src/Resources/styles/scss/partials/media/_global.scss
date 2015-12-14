@@ -49,14 +49,9 @@
   }
 
   .button {
-    background-color: $idci-green;
     @include border-radius(0);
     font-size: 1rem;
     margin-top: 1rem;
     width: 100%;
-
-    &:hover {
-      background-color: $idci-dark-green;
-    }
   }
 }

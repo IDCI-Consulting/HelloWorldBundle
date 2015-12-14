@@ -9,6 +9,13 @@
       margin-right: 0;
     }
   }
+
+  #tools {
+
+    .sub-title {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 @media #{$small-only} {
