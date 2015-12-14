@@ -17,5 +17,7 @@
         {% endfilter %}
     </div>
 
-    <a href="{{ path('cv', {_locale: app.translator.locale, 'theme': 'idci', 'name': 'frederic_bondaz'}) }}" class="button small small-12 see-cv">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
+    {% if file_exists('templates/contents/cv/frederic_bondaz.md') %}
+        <a href="{{ path('cv', {_locale: app.translator.locale, 'theme': 'idci', 'name': 'frederic_bondaz'}) }}" class="button small small-12 see-cv">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
+    {% endif %}
 </article>
