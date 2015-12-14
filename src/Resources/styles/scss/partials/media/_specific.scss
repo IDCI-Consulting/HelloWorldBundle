@@ -27,6 +27,10 @@
 }
 
 @media #{$medium-only} {
+  body {
+    margin-top: 4rem;
+  }
+
   section {
 
     header {
@@ -75,7 +79,7 @@
   }
 
   body {
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
 
   iframe.gmap {

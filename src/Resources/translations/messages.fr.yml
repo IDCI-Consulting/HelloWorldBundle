@@ -104,3 +104,10 @@ By categories: Par catégories
 articles-by-categories: articles-par-categories
 last-articles: derniers-articles
 last articles: derniers articles
+
+# Errors
+This is not the web page you are looking for: Ce n'est pas la page web que vous recherchez
+An error occurred , please try again later: Une erreur est survenue, s'il vous plaît réessayer plus tard
+Internal Server Error: Erreur interne du serveur
+Bad request: Mauvaise requête
+Error, try again later: Erreur, réessayez plus tard
