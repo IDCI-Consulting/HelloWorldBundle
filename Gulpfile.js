@@ -82,6 +82,7 @@ gulp.task('cv-theme', function() {
         .pipe(rename({
             suffix: '.min'
         }))
+        .pipe(chmod(775))
         .pipe(gulp.dest('web/css/cv/theme/'))
         .pipe(livereload())
     ;
