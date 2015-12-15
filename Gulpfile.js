@@ -11,6 +11,21 @@ var src              = [],
     slick = 'bower_components/slick-carousel/slick/'
 ;
 
+// set the folder name and the relative paths
+// in the example the images are in ./assets/images
+// and the public directory is ../public
+var imagePaths = {
+    src: 'web/images/',
+    dest: 'web/images'
+};
+
+// create an array of image groups (see comments above)
+// specifying the folder name, the ouput dimensions and
+// whether or not to crop the images
+var images = [
+    { folder: 'resize', width: 800, height: 500, crop: true }
+];
+
 src['style']         = ["src/Resources/styles/scss/main.scss", 'bower_components/slick-carousel/slick/slick.scss'];
 src['template']      = "templates/**/*";
 src['script']        = "src/Resources/js/**/*.js";
@@ -33,7 +48,10 @@ var chmod            = require('gulp-chmod'),
     rev              = require('gulp-rev'),
     sass             = require('gulp-sass'),
     uglify           = require('gulp-uglify'),
-    spritesmith      = require('gulp.spritesmith')
+    spritesmith      = require('gulp.spritesmith'),
+    imageresize      = require('gulp-image-resize'),
+    imagemin         = require('gulp-imagemin'),
+    pngquant         = require('imagemin-pngquant')
 ;
 
 // Task to watch files
@@ -165,4 +183,42 @@ gulp.task('sprite', function () {
         }))
         .pipe(gulp.dest(web['images']))
     ;
+});
+
+// images gulp task
+gulp.task('resize-images', function () {
+
+    // loop through image groups
+    images.forEach(function(type){
+
+        // build the resize object
+        var resize_settings = {
+            width: type.width,
+            crop: type.crop,
+            // never increase image dimensions
+            upscale : false
+        };
+
+        // only specify the height if it exists
+        if (type.hasOwnProperty("height")) {
+            resize_settings.height = type.height
+        }
+
+        gulp
+            // grab all images from the folder
+            .src(imagePaths.src+type.folder+'/**/*')
+            // resize them according to the width/height settings
+            .pipe(imageresize(resize_settings))
+            // optimize the images
+            .pipe(imagemin({
+                progressive: true,
+                // set this if you are using svg images
+                svgoPlugins: [{removeViewBox: false}],
+                use: [pngquant()]
+            }))
+            .pipe(chmod(775))
+            // output each image to the dest path
+            // maintaining the folder structure
+            .pipe(gulp.dest(imagePaths.dest));
+    });
 });
