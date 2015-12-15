@@ -95,3 +95,7 @@ section.contact {
   @include inline-list;
   margin: 0;
 }
+
+a {
+  outline: none;
+}

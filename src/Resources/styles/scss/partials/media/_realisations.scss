@@ -1,7 +1,7 @@
-@media #{$large-up} {
+@media only screen and (min-width: 1081px) {
   section.full-width {
     .realisation {
-      height: 320px;
+      min-height: 320px;
       line-height: 320px;
       position: relative;
       text-align: left;
@@ -9,7 +9,7 @@
       & > p:first-child {
         display: inline-block;
         height: 100%;
-        margin: 0 0 0 1rem;
+        margin: 0 1rem;
         width: 38%;
 
         & + div {
@@ -18,9 +18,6 @@
           line-height: normal;
           vertical-align: middle;
           width: 50%;
-
-          h3 {
-          }
         }
       }
 
@@ -38,6 +35,21 @@
 
       .description {
         text-align: justify;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  section.full-width {
+
+    .realisation {
+
+      h3 {
+        color: $idci-green;
+        font-size: 2.5rem;
+        padding: .5rem 0;
+        text-align: center;
       }
     }
   }
