@@ -45,12 +45,14 @@ section.cv-part {
     background-color: $idci-light-grey;
   }
 
-  ul {
-    list-style-type: none;
+  > ul {
     margin-bottom: 0;
 
-    li {
-      font-size: .6rem;
+    ul {
+      list-style: dot;
+    }
+
+    > li {
       margin-bottom: 1rem;
       margin-left: 13rem;
       padding-bottom: .5rem;
@@ -62,6 +64,19 @@ section.cv-part {
         position: absolute;
         left: -13rem;
       }
+    }
+  }
+
+  li {
+    font-size: .7rem;
+
+    a {
+      display: inline;
+    }
+
+    strong {
+      color: inherit;
+      display: inline;
     }
   }
 }
