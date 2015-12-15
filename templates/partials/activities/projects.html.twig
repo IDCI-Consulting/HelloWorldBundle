@@ -11,7 +11,7 @@
     </header>
 
     <div class="medium-12 columns accordion-content projects-content">
-        {% for realisation in realisations %}
+        {% for realisation in realisations|sort %}
             <div class="realisation">
                 {{ realisation|raw }}
             </div>

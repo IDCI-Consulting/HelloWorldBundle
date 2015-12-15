@@ -3,6 +3,10 @@
   section.full-width {
     min-height: 100vh;
     padding-top: 6rem;
+
+    &:first-child {
+      padding-top: 0;
+    }
   }
 }
 

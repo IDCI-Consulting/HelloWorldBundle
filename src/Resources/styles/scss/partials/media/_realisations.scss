@@ -1,9 +1,47 @@
-@media #{$xlarge-up} {
+@media #{$large-up} {
+
+  .realisation.slick-slide {
+    outline: none;
+  }
   section.full-width {
     .realisation {
+      height: 320px;
+      line-height: 320px;
+      position: relative;
+      text-align: left;
+
+      & > p:first-child {
+        display: inline-block;
+        height: 100%;
+        margin: 0 0 0 1rem;
+        width: 38%;
+
+        & + div {
+          display: inline-block;
+          height: 100%;
+          line-height: normal;
+          vertical-align: middle;
+          width: 50%;
+
+          h3 {
+          }
+        }
+      }
 
       p {
-        padding: 0 15rem;
+        font-family: Molengo, sans-serif;
+        text-align: justify;
+      }
+
+      h3 {
+        color: $idci-green;
+        font-size: 2.5rem;
+        padding: .5rem 0;
+        text-align: center;
+      }
+
+      .description {
+        text-align: justify;
       }
     }
   }

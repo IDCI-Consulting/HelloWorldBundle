@@ -1,4 +1,11 @@
 @media #{$small-only} {
+  .partners {
+
+    .accordion-content {
+      display: block;
+    }
+  }
+
   .partner {
     background-image: url("/images/partners.jpg");
     display: block;
