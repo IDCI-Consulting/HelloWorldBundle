@@ -66,3 +66,17 @@ div#contact {
     text-transform: uppercase;
   }
 }
+
+em.sub-title {
+  font-family: Oswald, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.4375rem;
+  margin: 3.75rem 0 2rem;
+  text-transform: uppercase;
+
+  // {
+  //  font-weight: normal;
+  //  letter-spacing: 0.125rem;
+  //}
+}
