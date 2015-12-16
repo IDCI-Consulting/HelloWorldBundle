@@ -8,7 +8,8 @@ var src              = [],
             foundation: "bower_components/foundation/js/foundation.min.js"
         }
     },
-    slick = 'bower_components/slick-carousel/slick/'
+    slick = 'bower_components/slick-carousel/slick/slick.js',
+    ace = 'src/Resources/plugins/ace-editor/ace.js'
 ;
 
 // set the folder name and the relative paths
@@ -107,9 +108,9 @@ gulp.task('cv-theme', function() {
 });
 
 // Task to install scripts in a dev environment
-gulp.task('dev-scripts', function(cb) {
+gulp.task('dev-scripts', function() {
     // move js files
-    gulp.src([src['script'], slick+'slick.js'])
+    gulp.src([src['script'], slick, ace])
         /*.pipe(jshint())
         .pipe(jshint.reporter('default'))*/
         .pipe(gulp.dest(web['script']))
@@ -125,10 +126,10 @@ gulp.task('dev-scripts', function(cb) {
 });
 
 // Task to install scripts in a prod environment
-gulp.task('prod-scripts', function(cb) {
+gulp.task('prod-scripts', function() {
     // delete all css files
     del(web['script']+'/*.js');
-    gulp.src([foundation.script.foundation, src['script'], slick+'slick.js'])
+    gulp.src([foundation.script.jquery, foundation.script.foundation, src['script'], slick, ace])
         .pipe(uglify())
         .pipe(concat({ path: 'app.min.js'}))
         .pipe(rev())

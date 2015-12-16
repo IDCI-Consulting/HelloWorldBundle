@@ -5,11 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
         {% block stylesheets %}{% endblock %}
-        {% if app.debug %}
-            <script src="{{ asset('js/jquery.js') }}"></script>
-        {% else %}
-            <script src="{{ asset('js/jquery.min.js') }}"></script>
-        {% endif %}
+
     </head>
 
     <body>
@@ -21,22 +17,28 @@
         </div>
 
         {% block javascripts %}
-            <script src="{{asset('plugins/ace-editor/ace.js') }}" type="text/javascript" charset="utf-8"></script>
             {% if app.debug %}
                 <script src="http://127.0.0.1:35729/livereload.js?ext=Chrome&amp;extver=2.1.0"></script>
+                <script src="{{ asset('js/jquery.min.js') }}"></script>
                 <script src="{{ asset('js/modernizr.js') }}"></script>
                 <script src="{{ asset('js/foundation.min.js') }}"></script>
-                <script src="{{asset('js/formFieldsEffects/classie.js') }}"></script>
-                <script src="{{asset('js/formFieldsEffects/focusFieldEffect.js') }}"></script>
-                <script src="{{asset('js/accordionHandler/accordion.js') }}"></script>
-                <script src="{{asset('js/init/init.js') }}"></script>
-                <script src="{{asset('js/menuHandler/animateHamburgerMenu.js') }}"></script>
-                <script src="{{asset('js/headerHandler/navHandler.js') }}"></script>
-                <script src="{{asset('js/slick.js') }}"></script>
+                <script src="{{ asset('js/init/init.js') }}"></script>
+                <script src="{{ asset('js/idciScripts/end.js') }}"></script>
+                <script src="{{ asset('js/idciScripts/flashMessages.js') }}"></script>
+                <script src="{{ asset('js/idciScripts/scrollTo.js') }}"></script>
+                <script src="{{ asset('js/idciScripts/slick.js') }}"></script>
+                <script src="{{ asset('js/idciScripts/tabs.js') }}"></script>
+                <script src="{{ asset('js/formFieldsEffects/classie.js') }}"></script>
+                <script src="{{ asset('js/formFieldsEffects/focusFieldEffect.js') }}"></script>
+                <script src="{{ asset('js/accordionHandler/accordion.js') }}"></script>
+                <script src="{{ asset('js/headerHandler/animateHamburgerMenu.js') }}"></script>
+                <script src="{{ asset('js/headerHandler/navHandler.js') }}"></script>
+                <script src="{{ asset('js/slick.js') }}"></script>
             {% block devJavascripts %}{% endblock %}
             {% else %}
                 <script src="{{ asset('js/' ~ getRevFilename('app.min.js') ~ '') }}"></script>
             {% endif %}
+            <script src="{{ asset('plugins/ace-editor/ace.js') }}" type="text/javascript" charset="utf-8"></script>
         {% endblock %}
     </body>
 </html>

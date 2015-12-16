@@ -14,31 +14,19 @@
 {% endblock %}
 
 {% block main_content %}
-<section class="full-width team">
-    <header class="small-12 columns">
-        <h1 class="title">
-            <i class="show-for-small-only fa fa-user"></i>
-            {% trans %}The team{% endtrans %}
-        </h1>
-    </header>
+    <section class="full-width team">
+        <header class="small-12 columns">
+            <h1 class="title">
+                <i class="show-for-small-only fa fa-user"></i>
+                {% trans %}The team{% endtrans %}
+            </h1>
+        </header>
 
-    <div class="row">
-        {% include 'partials/team/gabriel.html.twig' %}
-        {% include 'partials/team/frederic.html.twig' %}
-        {% include 'partials/team/baptiste.html.twig'  %}
-        {% include 'partials/team/brahim.html.twig' %}
-    </div>
-</section>
-<script type="text/javascript">
-    // Get all articles & add 'end' class at the last of them
-    $(document).ready(function() {
-        var $articles = $('article.member');
-        var length = $articles.length;
-        $articles.each(function(index) {
-            if (index == length -1) {
-                $(this).addClass('end');
-            }
-        });
-    });
-</script>
+        <div class="row">
+            {% include 'partials/team/gabriel.html.twig' %}
+            {% include 'partials/team/frederic.html.twig' %}
+            {% include 'partials/team/baptiste.html.twig'  %}
+            {% include 'partials/team/brahim.html.twig' %}
+        </div>
+    </section>
 {% endblock %}

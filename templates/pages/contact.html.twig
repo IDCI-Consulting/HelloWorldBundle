@@ -8,13 +8,56 @@
 {% endblock %}
 
 {% block main_content %}
-<section class="row contact full-width">
-    <header class="small-12 columns">
-        <h1 class="title">
-            {% trans %}Contact{% endtrans %}
-        </h1>
-    </header>
+    <section class="row contact full-width">
+        <header class="small-12 columns">
+            <h1 class="title">
+                {% trans %}Contact{% endtrans %}
+            </h1>
+        </header>
 
-    {% include 'partials/contactFormContainer.html.twig' with {'form': form} %}
-</section>
+        {% include 'partials/contactFormContainer.html.twig' with {'form': form} %}
+    </section>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" charset="UTF-8">
+        $(document).ready(function() {
+            var $output = $('<div id="output"></div>');
+            var $formContainer = $('.form-container');
+            $formContainer.after($output);
+
+            $formContainer.on('submit', 'form', function(event) {
+                event.preventDefault();
+
+                $output.html('<img class="ajax-loader" src="{{ asset('images/ajaxLoader.gif') }}" />');
+                var request = $.ajax({
+                    url: $(this).attr('action'),
+                    method: $(this).attr('method'),
+                    data: $(this).serialize(),
+                    dataType: "html"
+                });
+
+                request.done(function(content, textStatus, xhr) {
+                    $output.empty();
+                    var statusCode = xhr.statusCode().status;
+
+                    if (xhr.getResponseHeader('X-Message')) {
+                        $.notify(xhr.getResponseHeader('X-Level'), xhr.getResponseHeader('X-Message').decode());
+                    }
+
+                    if (201 !== parseInt(statusCode)) {
+                        $formContainer.html(content);
+                    } else {
+                        $formContainer.find('form').get(0).reset();
+                    }
+                });
+
+                request.fail(function(xhr, textStatus) {
+                    console.log("Request failed: " + textStatus);
+                });
+            });
+        });
+    </script>
 {% endblock %}
