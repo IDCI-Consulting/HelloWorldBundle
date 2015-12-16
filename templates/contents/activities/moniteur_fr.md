@@ -2,7 +2,7 @@
 ![le moniteur](/images/moniteur.png){.browser-mockup}
 
 <div markdown="1">
-### [Le moniteur](http://lemoniteur.fr/)
+## [Le moniteur](http://lemoniteur.fr/)
 
 
 <div class="description" markdown="1">

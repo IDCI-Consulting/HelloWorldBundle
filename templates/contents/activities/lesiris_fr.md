@@ -2,7 +2,7 @@
 ![lesiris](/images/lesiris.png){.browser-mockup}
 
 <div markdown="1">
-### [Lesiris](http://www.lesiris.com/)
+## [Lesiris](http://www.lesiris.com/)
 
 <div class="description" markdown="1">
 Bienvenue au pays des volcans d'Auvergne ! Les 4 maisons, situées dans le département du Puy de Dôme en France, reçoivent des groupes toute l'année.

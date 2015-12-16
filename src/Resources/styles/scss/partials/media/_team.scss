@@ -1,5 +1,5 @@
 @media #{$medium-only} {
-  .member-name, .job-position {
+  .member-name, em.job-position {
     font-size: 1rem;
   }
 
@@ -58,7 +58,7 @@
     }
   }
 
-  .member-name, .job-position {
+  .member-name, em.job-position {
     font-size: 1rem;
     text-align: center;
   }

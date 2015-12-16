@@ -2,7 +2,7 @@
 ![bodysculpt](/images/l-appart.png){.browser-mockup}
 
 <div markdown="1">
-### [L'Appart fitness](http://www.l-appart.net/)
+## [L'Appart fitness](http://www.l-appart.net/)
 
 
 <div class="description" markdown="1">

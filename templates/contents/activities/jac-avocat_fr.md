@@ -2,7 +2,7 @@
 ![jac-avocat](/images/jac-avocat.png){.browser-mockup}
 
 <div markdown="1">
-### [JAC avocat](http://www.jac-avocat.fr/)
+## [JAC avocat](http://www.jac-avocat.fr/)
 
 
 <div class="description" markdown="1">

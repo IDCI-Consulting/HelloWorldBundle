@@ -2,7 +2,7 @@
 ![chine-france](/images/chine-france.png){.browser-mockup}
 
 <div markdown="1">
-### [Chine france](http://www.chine-france.com/)
+## [Chine france](http://www.chine-france.com/)
 
 
 <div class="description" markdown="1">

@@ -5,13 +5,17 @@ section.team {
   height: 100%;
 }
 
-.member-name {
-  color: $idci-blue;
+h2.member-name {
+  color: $idci-light-blue;
+  font-size: 1.7rem;
+  letter-spacing: 0;
 }
 
-.job-position {
-  color: $idci-green;
+em.job-position {
+  color: $idci-green ! important;
+  display: block;
   font-size: 1.5rem;
+  margin: 1rem 0;
   text-transform: uppercase;
 }
 
