@@ -4,9 +4,7 @@
             <em class="hide-for-small-only medium-12 columns sub-title">{% transchoice 1 from "messages" %}We do{% endtranschoice %}</em>
             <h2 class="small-10 medium-12 columns">
                 {% trans %}Training{% endtrans %}
-                <div class="show-for-small-only accordion-image">
-                    <img src="{{ asset("images/formation.svg") }}"/>
-                </div>
+                <img src="{{ asset("images/formation.svg") }}" class="show-for-small-only accordion-image" alt="{% trans %}training icon{% endtrans %}"/>
             </h2>
             <div class="hide-for-medium-up small-2 columns toggle-icon">
                 <i class="fa fa-angle-down"></i>
@@ -17,7 +15,7 @@
     <div class="small-12 medium-10 medium-pull-1 large-8 large-pull-2 columns accordion-content">
         <div class="row">
             <div class="hide-for-small-only medium-8 medium-push-2 large-8 large-push-2 columns illustration">
-                <img src="{{ asset("images/formation.svg") }}" />
+                <img src="{{ asset("images/formation.svg") }}" alt="{% trans %}training icon{% endtrans %}"/>
             </div>
             <div class="medium-10 medium-pull-1 large-8 large-pull-2 columns idci-content">
                 {% include 'contents/index/training_' ~ app.translator.locale ~ '.html.twig' %}
