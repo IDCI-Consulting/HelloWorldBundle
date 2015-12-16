@@ -17,3 +17,18 @@
         {% include 'partials/blog/articlesByCategories.html.twig' %}
     </div>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.articles').slick({
+                inifinite: true,
+                nextArrow: '<img class="slick-arrow next right" src="{{ asset('images/slick_arrow.svg') }}"/>',
+                prevArrow: false,
+                autoplay: true,
+                autoplaySpeed: 10000
+            });
+        });
+    </script>
+{% endblock %}
