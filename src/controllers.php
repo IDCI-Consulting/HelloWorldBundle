@@ -373,7 +373,7 @@ $intlApp
                 // Add option to remove the margin on pdf generation
                 $app['snappy.pdf_options'] = array(
                     'encoding'   => 'UTF-8',
-                    'margin-top' => 0,
+                    'margin-top' => 1,
                     'margin-right' => 0,
                     'margin-bottom' => 0,
                     'margin-left' => 0
