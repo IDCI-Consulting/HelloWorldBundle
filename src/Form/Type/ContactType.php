@@ -23,11 +23,8 @@ class ContactType extends AbstractType
         ));
 
         $builder
-            ->add('company', 'text', array(
-                'required' => false,
-            ))
+            ->add('company', 'text', array())
             ->add('website', 'url', array(
-                'required' => false,
                 'constraints' => array(
                     new Constraints\Url()
                 )
@@ -62,9 +59,6 @@ class ContactType extends AbstractType
             ))
             ->add('validate', 'submit', array(
                 'label' => 'Send',
-                'attr' => array(
-                    'class' => 'button small'
-                )
             ))
         ;
     }

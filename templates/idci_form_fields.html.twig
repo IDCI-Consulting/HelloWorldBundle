@@ -73,7 +73,7 @@
                 {% set label = name|humanize %}
             {%- endif -%}
         {%- endif -%}
-        <label class="input__label input__label--juro" {% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}"{% endfor %}>
+        <label {% for attrname, attrvalue in label_attr %} {{ attrname }}="{{ attrvalue }}{% if attrname == 'class' %} input__label input__label--juro{% endif %}"{% endfor %}>
             <span class="input__label-content input__label-content--juro">
                 {{ label|trans({}, translation_domain) }}
             </span>
