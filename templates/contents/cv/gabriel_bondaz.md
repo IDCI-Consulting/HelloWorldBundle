@@ -8,7 +8,7 @@
 
  * _Depuis Septembre 2008_ Création de IDCI-CONSULTING | Associé et ingénieur recherche et développement
  * Intervenant à l'Université Claude Bernard Lyon 1: Formation Web (Html, Css, Joomla, Magento, Wordpress, Dreamweaver)
- * Formateur PHP / Synfony 1 / Symfony 2  dans le cadre de formation professionnelles (APTA – Clermont Ferrand, ASP via Sodifrance, Proximit, ICAP)
+ * Formateur PHP / Symfony 1 / Symfony 2  dans le cadre de formation professionnelles (APTA – Clermont Ferrand, ASP via Sodifrance, Proximit, ICAP)
  * Conception et développement de sites web professionnels en Php (Framework Symfony)
  * Encadrement de l’équipe technique (symfony 1, symfony 2, Wordpress, Magento)
  * Mise en place de l'infrastructure serveur (Firewall, Reverse Proxy, dns, dhcp, Serveur Web, Serveur Ftp, Subversion, Base de données)
@@ -28,7 +28,7 @@
  * Tessi Marketing : Expertise Symfony2
  * _2014_ Ecole normale supérieur de Lyon : Développement d’une plate-forme de gestion des pads
  * Tessi Marketing : Expertise symfony 2
- * Formation Php5 / Synfony 2 pour OPCADIA,
+ * Formation Php5 / Symfony 2 pour OPCADIA,
  * _2005 – 2007_ Université Claude Bernard  Technicien de Recherche et de Formation
  * Installation et Configuration de salles informatiques multi système d'exploitation (Windows/Linux). 
  * Mise en place d'un outil de gestion du parc informatique: GLPI (Gestionnaire Libre de Parc Informatique). 

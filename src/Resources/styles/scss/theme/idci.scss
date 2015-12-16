@@ -101,6 +101,10 @@ section.cv-part {
         position: relative;
         text-align: left;
 
+        li {
+          margin: 0;
+        }
+
         em {
           color: $idci-green;
           position: absolute;
