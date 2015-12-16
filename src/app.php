@@ -203,7 +203,7 @@ $buildCv = function (Request $request, Application $app) {
 
     preg_match_all("/#{3}(?<content>.*)=/sU", $content, $matches);
 
-    $htmlCv = sprintf('<div class="%s"', $name);
+    $htmlCv = sprintf('<div class="%s">', $name);
     foreach ($matches['content'] as $content) {
         $htmlCv .= '<section markdown="1" class="cv-part">'.$app['markdown']->transform($content).'</section>';
     }

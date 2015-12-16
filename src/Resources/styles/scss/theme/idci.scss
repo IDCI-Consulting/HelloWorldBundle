@@ -5,6 +5,10 @@
 @import '../partials/header';
 @import '../partials/media/header';
 
+div.row.cv {
+  padding-top: 5rem;
+}
+
 section.cv-part {
   padding: 1rem;
   page-break-inside: avoid;
@@ -27,16 +31,20 @@ section.cv-part {
     display: block;
   }
 
+  &:first-child {
+
+    p:first-child {
+      color: $idci-green;
+      font-size: 2rem;
+    }
+  }
+
   p:first-child {
     color: $idci-blue;
     font-size: 1.3rem;
     margin-bottom: .8rem;
     padding: 0;
     text-align: center;
-  }
-
-  &:nth-child(1) {
-    padding-top: 6rem;
   }
 
   &:nth-child(even) {
@@ -89,7 +97,6 @@ section.cv-part {
 
   section.cv-part {
     page-break-inside: avoid;
-
 
     ul {
       list-style-type: none;
