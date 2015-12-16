@@ -8,9 +8,24 @@
       padding-top: 0;
     }
   }
+
+  h1.title {
+    letter-spacing: .4rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
 }
 
 @media #{$small-only} {
+
+  h1.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    height: 100%;
+    line-height: 5rem;
+    margin: 0;
+  }
 
   section {
     min-height: 3rem;

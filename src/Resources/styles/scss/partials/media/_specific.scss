@@ -61,6 +61,11 @@
 
 @media #{$small-only} {
 
+  em.sub-title {
+    font-size: 1rem;
+    margin: 1.75rem 0;
+  }
+
   .accordion-image {
     display: inline-block ! important;
     float: left;

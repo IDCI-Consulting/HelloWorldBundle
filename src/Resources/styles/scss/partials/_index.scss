@@ -76,20 +76,6 @@ h3.trainings {
   }
 }
 
-#presentation, #training, #advice, #web-development, #philosophy, #approach, #tools {
-
-  h3 {
-    font-weight: bold;
-    letter-spacing: 0.4375rem;
-    margin: 3.75rem 0;
-
-    &.sub-title {
-      font-weight: normal;
-      letter-spacing: 0.125rem;
-    }
-  }
-}
-
 #presentation {
   display: inline-block;
   min-height: calc(100vh - 6rem);
