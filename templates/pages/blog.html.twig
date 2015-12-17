@@ -8,14 +8,14 @@
 {% endblock %}
 
 {% block main_content %}
-    <div class="blog">
+    <section class="full-width blog">
         <div class="row">
             <h1 class="small-12 columns title">Blog</h1>
         </div>
         {% include 'partials/asideMenu.html.twig' %}
         {% include 'partials/blog/lastArticles.html.twig' %}
         {% include 'partials/blog/articlesByCategories.html.twig' %}
-    </div>
+    </section>
 {% endblock %}
 
 {% block javascripts %}
