@@ -1,8 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-{% endblock %}
-
 {% block header %}
     <div class="full-width header-container">
         <header>
@@ -26,6 +23,7 @@
                 {% block nav %}{% endblock %}
             </nav>
 
+            {# Snippet for langs management #}
             {#<div class="medium-12 large-3 columns langs">#}
                 {#<p class="show-for-xlarge-up choose-language">{% trans %}Choose the language{% endtrans %}</p>#}
                 {#<ul class="idci-inline-list">#}
@@ -123,6 +121,8 @@
 {% endblock %}
 
 {% block javascripts %}
+    {# Import stylesheet at the bottom. Advised by Google PageSpeed Insights #}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="{{ asset('css/' ~ getRevFilename('app.min.css') ~ '') }}" rel="stylesheet" type="text/css" />
     {{ parent() }}
