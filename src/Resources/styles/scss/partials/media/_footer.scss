@@ -72,6 +72,7 @@
     background: $idci-blue;
     display: block;
     height: 28rem;
+    text-align: center;
 
     p, li, a {
       font-weight: bold;
@@ -145,16 +146,23 @@
         height: 3rem;
         margin: 1rem 0;
         padding: 0;
-        text-align: left;
+        text-align: center;
         width: 100%;
 
         li {
           float: none;
           height: 100%;
+          margin: 0;
           width: 20%;
 
           &:last-child {
             float: none;
+          }
+
+          a {
+            span {
+              margin: 0 ! important;
+            }
           }
         }
       }

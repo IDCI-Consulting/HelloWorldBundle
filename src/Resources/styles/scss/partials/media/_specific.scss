@@ -19,13 +19,6 @@
   }
 }
 
-@media #{$medium-up} {
-
-  iframe.gmap {
-    height: 500px;
-  }
-}
-
 @media #{$medium-only} {
   body {
     margin-top: 4rem;
@@ -88,8 +81,10 @@
     margin-top: 4rem;
   }
 
-  iframe.gmap {
-    height: 400px;
+  .iframe-container {
+    background-color: $idci-light-grey;
+    border-top: none;
+    padding: 0 2rem 2rem;
   }
 
   .accordion-toggle {
@@ -177,6 +172,13 @@
       display: inline-block;
       font-size: 1rem;
       margin: 0;
+    }
+  }
+
+  .contact, .blog {
+
+    h1.title {
+      text-align: center;
     }
   }
 

@@ -87,3 +87,15 @@ em.sub-title {
     padding-top: 2rem;
   }
 }
+
+
+.iframe-container {
+  background-color: $idci-light-grey;
+  border-top: .2rem solid $idci-dark-grey;
+
+  iframe.gmap {
+    height: 18.75rem;
+    width: 100%;
+  }
+}
+
