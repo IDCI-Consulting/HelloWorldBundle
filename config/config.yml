@@ -17,6 +17,8 @@ courses:
     - 'html5-css3'
     - 'wordpress'
 
+cv_theme: 'idci'
+
 menu:
     - {label: 'home', route: 'index'}
     - {label: 'our courses', route: 'courses'}
