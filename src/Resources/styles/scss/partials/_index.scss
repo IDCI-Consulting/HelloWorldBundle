@@ -77,7 +77,9 @@ h3.trainings {
 }
 
 #presentation {
-  display: inline-block;
+  align-items: center;
+  background-size: cover;
+  display: flex;
   min-height: calc(100vh - 6rem);
   line-height: calc(100vh - 6rem);
   padding-top: 0;
