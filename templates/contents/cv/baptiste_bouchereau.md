@@ -1,8 +1,9 @@
 ### CURRICULUM VITAE
-#### BAPTISTE BOUCHEREAU
+#### BAPTISTE BOUCHEREAU, 24 ans
+##### Profil d'Ingénieur, Analyste/Développeur Web Full Stack
 **baptiste.bouchereau@idci-consulting.fr**
-**0662354536**
-**24 ans, Développeur, Anglais niveau C1 Validé à l'aide du CAE - Cambridge English Advanced Certificate**
+**06 62 35 45 36**
+**Anglais niveau C1 Validé à l'aide du CAE - Cambridge English Advanced Certificate**
 
 ### EXPERIENCES PROFESSIONNELLES
 

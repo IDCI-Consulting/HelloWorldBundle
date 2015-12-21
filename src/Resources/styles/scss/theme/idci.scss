@@ -9,11 +9,41 @@ div.row.cv {
   padding-top: 5rem;
 }
 
+// specific to pdf version
+.content.pdf {
+  section > ul > li {
+    padding-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  section:first-child {
+    h4, h5 {
+      text-align: center;
+    }
+  }
+}
+
+// specific to html version
+.html {
+  section.cv-part > ul li {
+    margin-left: 12rem;
+    margin-right: 12rem;
+    font-size: 1rem;
+
+    > ul li {
+      margin-left: 1rem;
+    }
+
+    em {
+      left: -12rem;
+    }
+  }
+}
+
 section.cv-part {
   padding: 1rem;
-  page-break-inside: avoid;
 
-  h2, h4, p {
+  h2, h4, h5, p {
     padding: .5rem 1rem;
   }
 
@@ -63,9 +93,10 @@ section.cv-part {
     }
 
     > li {
-      margin-bottom: 1rem;
+      page-break-inside: avoid;
+      margin-bottom: 0.5rem;
       margin-left: 14rem;
-      padding-bottom: .5rem;
+      padding-top: 0rem;
       position: relative;
       text-align: left;
 
