@@ -372,7 +372,6 @@ $intlApp
             }
 
             if ('pdf' === $_format) {
-                //return $cvHtml;
                 // Add option to remove the margin on pdf generation
                 $app['snappy.pdf_options'] = array(
                     'encoding'   => 'UTF-8',
