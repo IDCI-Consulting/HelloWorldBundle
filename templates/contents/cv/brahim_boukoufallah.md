@@ -1,8 +1,9 @@
 ### CURRICULUM VITAE
-#### BRAHIM BOUKOUFALLAH
+#### BRAHIM BOUKOUFALLAH, 25 ans
+##### Profil d'Analyste/Développeur Web Full Stack
 **brahim.boukoufallah@idci-consulting.fr**
-**0634457623**
-**25 ans, Développeur, Anglais maîtrisé**
+**06 34 45 76 23**
+**Anglais maîtrisé**
 
 ### EXPERIENCES PROFESSIONNELLES
 

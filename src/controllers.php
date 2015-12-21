@@ -361,8 +361,10 @@ $intlApp
             $cv = $app['markdown']->transform($cv);
 
             $cvHtml = $app['twig']->render('partials/cv/output.html.twig', array(
-                'cv' => $cv,
-                'theme' => $theme
+                'cv'     => $cv,
+                'theme'  => $theme,
+                'format' => $_format,
+                'name'   => $name
             ));
 
             if ('html' === $_format) {
@@ -370,10 +372,11 @@ $intlApp
             }
 
             if ('pdf' === $_format) {
+                //return $cvHtml;
                 // Add option to remove the margin on pdf generation
                 $app['snappy.pdf_options'] = array(
                     'encoding'   => 'UTF-8',
-                    'margin-top' => 1,
+                    'margin-top' => 0,
                     'margin-right' => 0,
                     'margin-bottom' => 0,
                     'margin-left' => 0

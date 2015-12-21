@@ -1,8 +1,9 @@
 ### CURRICULUM VITAE
-#### GABRIEL BONDAZ
+#### GABRIEL BONDAZ, 31 ans
+##### INGENIEUR / FORMATEUR
 **gabriel.bondaz@idci-consulting.fr**
-**0663231207**
-**31 ans, INGENIEUR / FORMATEUR, Anglais maîtrisé**
+**06 63 23 12 07**
+**Anglais maîtrisé**
 
 ### EXPERIENCES PROFESSIONNELLES
 
