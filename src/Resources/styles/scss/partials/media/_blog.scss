@@ -13,7 +13,40 @@
 }
 
 @media #{$small-only} {
+  .by-categories {
+
+    .article {
+
+      > .row {
+        background-position-x: .5rem ! important;
+        min-height: 5rem;
+      }
+    }
+  }
+
   .articles {
+
+    .info {
+      text-align: left;
+
+      span {
+        margin-right : 1rem;
+      }
+    }
+
+    .title {
+
+      p {
+        font-size: .7rem;
+      }
+    }
+
+    .read-article {
+
+      a {
+        font-size: .7rem;
+      }
+    }
 
     .columns > img {
       height: auto;
@@ -26,7 +59,7 @@
     }
   }
 
-  #derniers-articles {
+  .last-articles {
     .slick-slider .slick-track {
       min-height: 10rem;
     }
