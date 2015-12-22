@@ -16,12 +16,19 @@
   .articles {
 
     .columns > img {
-      height: 9rem!important;
+      height: auto;
+      margin-top: 1rem;
     }
 
     a {
       font-size: .8rem;
       padding: .5rem;
+    }
+  }
+
+  #derniers-articles {
+    .slick-slider .slick-track {
+      min-height: 10rem;
     }
   }
 }
