@@ -100,7 +100,7 @@
                         <a href="{{ path('mentions', {_locale: app.translator.locale}) }}" class="mentions">{% trans %}Legal Notice{% endtrans %}</a>
                     </li>
                     <li class="small-4 columns">
-                        <a href="#gmap" data-reveal-id="modal-gmap" class="maps">{% trans %}Sitemap{% endtrans %}</a>
+                        <a href="{{ path('sitemap_xml', {_locale: app.translator.locale}) }}" data-reveal-id="modal-gmap" class="maps">{% trans %}Sitemap{% endtrans %}</a>
                     </li>
                 </ul>
             </div>

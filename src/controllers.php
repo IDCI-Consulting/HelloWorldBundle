@@ -439,7 +439,7 @@ $intlApp
     )
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
-    ->assert('_format', 'xml')
+    ->bind('sitemap_xml')
 ;
 
 //$app->before($buildLocaleLinks, Application::EARLY_EVENT);
