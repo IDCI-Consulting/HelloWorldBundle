@@ -11,6 +11,7 @@ use Provider\I18nRouteGeneratorServiceProvider;
 use Provider\SnappyServiceProvider;
 use Provider\YamlConfigServiceProvider;
 use Provider\FinderServiceProvider;
+use Provider\SitemapManagerServiceProvider;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
@@ -51,6 +52,7 @@ $app->register(new SnappyServiceProvider(), array(
     'snappy.pdf_binary'   => '/usr/local/bin/wkhtmltopdf',
 ));
 $app->register(new FinderServiceProvider());
+$app->register(new SitemapManagerServiceProvider());
 
 $app['snappy.pdf_options'] = array(
     'encoding'   => 'UTF-8',

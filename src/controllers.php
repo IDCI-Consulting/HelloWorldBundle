@@ -8,7 +8,7 @@ use Form\Type\ContactType;
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 $intlApp = $app['controllers_factory'];
-$redirectApp = $app['controllers_factory'];
+$baseApp = $app['controllers_factory'];
 
 //Routing requirements
 $intlApp->assert('_locale', 'fr');
@@ -18,7 +18,7 @@ $intlApp->assert('_locale', 'fr');
  *******************/
 
 // Redirect to home page according to the browser's preferred language
-$redirectApp
+$baseApp
     ->get(
         '/',
         function (Request $request) use ($app) {
@@ -40,6 +40,20 @@ $redirectApp
         }
     )
     ->bind('redirect-index')
+;
+
+$baseApp
+    ->get(
+        '/sitemap.{_format}',
+        function (Request $request) use ($app) {
+            // TODO : set the locale dynamically
+
+        }
+    )
+    ->assert('_format', 'xml')
+    ->value('_format', 'xml')
+    ->bind('sitemap')
+
 ;
 
 // Home page
@@ -372,7 +386,6 @@ $intlApp
             }
 
             if ('pdf' === $_format) {
-                //return $cvHtml;
                 // Add option to remove the margin on pdf generation
                 $app['snappy.pdf_options'] = array(
                     'encoding'   => 'UTF-8',
@@ -403,6 +416,30 @@ $intlApp
     ->assert('_format', 'md|html|pdf')
     ->value('_format', '')
     ->bind('cv')
+;
+
+$intlApp
+    ->get(
+        '/sitemap.xml',
+        function (Request $request, $_locale) use ($app) {
+            $hostname = $request->getHost();
+            $response = new Response();
+
+            $app['sitemap_manager']->addConfiguration('_locale', $_locale);
+            $urls = $app['sitemap_manager']->build();
+
+            $response->headers->set('Content-Type', 'text/xml');
+            $response->setContent($app['twig']->render('pages/sitemap.xml.twig', array(
+                'urls'     => $urls,
+                'hostname' => $hostname,
+            )));
+
+            return $response;
+        }
+    )
+    ->before($hideContactLink)
+    ->before($buildLocaleLinks)
+    ->assert('_format', 'xml')
 ;
 
 //$app->before($buildLocaleLinks, Application::EARLY_EVENT);
@@ -438,4 +475,4 @@ $app
 ;
 
 $app->mount('/{_locale}', $intlApp);
-$app->mount('/', $redirectApp);
+$app->mount('/', $baseApp);

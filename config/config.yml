@@ -19,6 +19,7 @@ courses:
 
 cv_theme: 'idci'
 
+# Nav menu
 menu:
     - {label: 'home', route: 'index'}
     - {label: 'our courses', route: 'courses'}
@@ -28,6 +29,8 @@ menu:
     - {label: 'blog', route: 'blog'}
     - {label: 'contact', route: 'contact'}
 
+
+# Ace editor
 idci_code_writer:
     files:
         -
@@ -70,6 +73,7 @@ idci_code_writer:
             language: 'css'
             theme: solarized_dark
 
+# Blog page
 blog:
     fr:
         categories:
@@ -106,3 +110,66 @@ blog:
             - {file: "install-wordpress", image: "wordpress-logo.png", title: "Installer WordPress", date: "25/11/2011" , author: "Gabriel Bondaz", categories: ["Wordpress"]}
             - {file: "presentation-wordpress", image: "wordpress-logo.png", title: "Présentation de WordPress", date: "14/11/2011" , author: "Gabriel Bondaz", categories: ["Wordpress"]}
 
+# Params for sitemap
+sitemap:
+    default:
+        priority: 0.5
+        lastmod: 18/12/2015
+        changefreq: "monthly"
+    routes:
+        index:
+            priority: 1
+            lastmod: 18/12/2015
+            changefreq: "monthly"
+        courses:
+            priority: 1
+            lastmod: 18/12/2015
+            changefreq: "monthly"
+        contact:
+            priority: 0.9
+            lastmod: 18/12/2015
+            changefreq: "monthly"
+        team:
+            priority: 0.7
+            lastmod: 18/12/2015
+            changefreq: "monthly"
+        activities:
+            priority: 0.7
+            lastmod: 18/12/2015
+            changefreq: "monthly"
+        partners:
+            priority: 0.6
+            lastmod: 18/12/2015
+            changefreq: "monthly"
+        blog:
+            priority: 0.9
+            lastmod: 18/12/2015
+            changefreq: "monthly"
+        cv:
+            priority: 0.8
+            lastmod: 21/12/2015
+            changefreq: "monthly"
+            params:
+                - {theme: "idci", name: "baptiste_bouchereau"}
+                - {theme: "idci", name: "brahim_boukoufallah"}
+                - {theme: "idci", name: "gabriel_bondaz"}
+        article:
+            priority: 0.8
+            lastmod: 21/12/2015
+            changefreq: "monthly"
+            params:
+                - {file: "backoffice-wordpress"}
+                - {file: "behaviors-doctrine2"}
+                - {file: "bundle-composer-broadcast"}
+                - {file: "creer-un-projet-symfony-1-x-depuis-la-sandbox-sous-ubuntu"}
+                - {file: "environment-php-mysql"}
+                - {file: "fos-user-bundle"}
+                - {file: "google-apps"}
+                - {file: "i18n-wordpress"}
+                - {file: "idci-webpage-screenshot-bundle"}
+                - {file: "install-wordpress"}
+                - {file: "pager-fanta"}
+                - {file: "phpillow-couchdb"}
+                - {file: "presentation-wordpress"}
+                - {file: "symposium"}
+                - {file: "type-doctrine2"}
