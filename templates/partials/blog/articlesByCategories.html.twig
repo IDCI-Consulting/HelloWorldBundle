@@ -18,7 +18,7 @@
                     <div class="small-12 columns category"><p>{{ category }}</p></div>
                     {% for article in articles %}
                         <div class="small-12 columns article">
-                            <div class="row" {% if article['image'] is defined %} style="background: url('/images/blog/{{ article['image'] }}') no-repeat;"{% endif %}>
+                            <div class="row" {% if article['image'] is defined %} style="background-image: url('/images/blog/{{ article['image'] }}');"{% endif %}>
                                 <a class="small-10 small-push-2 medium-11 columns" href="{{ path('article', {_locale: app.translator.locale, 'file': article['file']}) }}">
                                     {{ article['title'] }} <em>le {{ article['date']|date('d/m/Y') }} par {{ article['author'] }}</em>
                                 </a>
