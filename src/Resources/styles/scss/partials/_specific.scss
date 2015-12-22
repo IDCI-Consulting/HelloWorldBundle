@@ -99,3 +99,28 @@ em.sub-title {
   }
 }
 
+div.sitemap {
+  padding-top: 6rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+svg.sitemap {
+  display: block;
+  width: 100%;
+
+  circle {
+    fill: $idci-light-blue;
+  }
+
+  text {
+    font-size: 21px;
+
+    &:hover {
+      fill: $idci-light-blue;
+    }
+  }
+}
+

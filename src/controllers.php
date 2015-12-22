@@ -42,20 +42,6 @@ $baseApp
     ->bind('redirect-index')
 ;
 
-$baseApp
-    ->get(
-        '/sitemap.{_format}',
-        function (Request $request) use ($app) {
-            // TODO : set the locale dynamically
-
-        }
-    )
-    ->assert('_format', 'xml')
-    ->value('_format', 'xml')
-    ->bind('sitemap')
-
-;
-
 // Home page
 $intlApp
     ->get(
@@ -440,6 +426,26 @@ $intlApp
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->bind('sitemap_xml')
+;
+
+$intlApp
+    ->get(
+        '/sitemap',
+        function (Request $request, $_locale) use ($app) {
+            $hostname = $request->getHost();
+
+            $app['sitemap_manager']->addConfiguration('_locale', $_locale);
+            $urls = $app['sitemap_manager']->build();
+
+            return $app['twig']->render('pages/sitemap.svg.twig', array(
+                'urls'     => $urls,
+                'hostname' => $hostname,
+            ));
+        }
+    )
+    ->before($hideContactLink)
+    ->before($buildLocaleLinks)
+    ->bind('sitemap')
 ;
 
 //$app->before($buildLocaleLinks, Application::EARLY_EVENT);

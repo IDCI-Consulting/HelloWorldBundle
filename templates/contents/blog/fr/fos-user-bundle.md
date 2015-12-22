@@ -59,9 +59,9 @@ Une fois **FOSUserBundle** ajouté aux vendors, il vous faut l'activer dans le K
     
     <!--?php <br ?--> // app/autoload.php
     
-    $loader-&gt;registerNamespaces(array(
+    $loader->registerNamespaces(array(
     // ...
-        'FOS' =&gt; __DIR__.'/../vendor/bundles',
+        'FOS' => __DIR__.'/../vendor/bundles',
     ));
 
 Si vous avez encore des doutes sur l'utilité des namespaces ou que vous êtes sceptiques
@@ -217,7 +217,7 @@ Pour continuer sur notre exemple, voici comment ajouter notre fameux champ *loca
             parent::buildForm($builder, $options);
             
             // Ajoutez vos champs ici, revoilà notre champ *location* :
-            $builder-&gt;add('location');
+            $builder->add('location');
         }
         
         public function getName()
@@ -357,11 +357,11 @@ celui-ci sous forme d'objet dans une action peut vite devenir un casse-tête,
 bien que cela soit utile dans de nombreuses situations.
 Voici une bonne façon de faire :
 
-`$user = $this-&gt;container-&gt;get('security.context')-&gt;getToken()-&gt;getUser()`
+`$user = $this->container->get('security.context')->getToken()->getUser()`
 
 Vous pouvez ensuite manipuler cet objet comme bon vous semble et récupérer vos attributs nouvellement créés :
 
-`$user-&gt;getlocation()`
+`$user->getlocation()`
 
 ## Gérer l'utilisateur et ses droits d'accès dans un template twig avec Symfony2 ##
 
@@ -528,7 +528,7 @@ pour l'édition de profil, c'est la fonction *buildUserForm()* qu'il faut surcha
         {
             parent::buildUserForm($builder, $options);
             // On ajoute nos champs :
-            $builder-&gt;add('location');
+            $builder->add('location');
         }
     
         public function getName()
