@@ -238,16 +238,11 @@ $buildBlogSlide = function (Request $request, Application $app) {
     $locale = $request->get('_locale');
     $articles = $app['config']['blog'][$locale]['articles'];
 
-    foreach ($articles as $key => $article) {
-        $article['date'] = date_create_from_format('d/m/Y', $article['date']);
-    }
-
     usort($articles, function ($article1, $article2) {
-        if ($article1['date'] == $article2['date']) {
-            return 0;
-        }
+        $article1['date'] = date_create_from_format('d/m/Y', $article1['date']);
+        $article2['date'] = date_create_from_format('d/m/Y', $article2['date']);
 
-        return ($article1['date'] < $article2['date']) ? 1 : -1;
+        return $article2['date']->getTimestamp() - $article1['date']->getTimestamp();
     });
 
     $app['twig']->addGlobal('last_articles', $articles);

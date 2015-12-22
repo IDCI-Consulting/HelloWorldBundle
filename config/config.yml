@@ -77,11 +77,11 @@ idci_code_writer:
 blog:
     fr:
         categories:
-            - "Symfony1"
             - "Symfony2"
+            - "Symfony1"
+            - "Wordpress"
             - "Symposium"
             - "Tutos et astuces"
-            - "Wordpress"
         articles:
         # file property will match the url parameter for route named article
 
