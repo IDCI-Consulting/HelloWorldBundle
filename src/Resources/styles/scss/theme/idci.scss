@@ -25,10 +25,13 @@ div.row.cv {
 
 // specific to html version
 .html {
-  section.cv-part > ul li {
-    margin-left: 12rem;
-    margin-right: 12rem;
+
+  section.cv-part li {
     font-size: 1rem;
+  }
+
+  section.cv-part > ul > li {
+    margin-left: 12rem;
 
     > ul li {
       margin-left: 1rem;
