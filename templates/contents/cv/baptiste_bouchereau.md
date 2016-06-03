@@ -1,5 +1,5 @@
 ### CURRICULUM VITAE
-#### BAPTISTE BOUCHEREAU, 24 ans
+#### BAPTISTE BOUCHEREAU, 25 ans
 ##### Profil d'Ingénieur, Analyste/Développeur Web Full Stack
 **baptiste.bouchereau@idci-consulting.fr**
 **06 62 35 45 36**
@@ -8,12 +8,22 @@
 ### EXPERIENCES PROFESSIONNELLES
 
  * _Depuis Septembre 2015_ Indépendant chez IDCI-CONSULTING | Analyste Développeur
+ * _2016_ Mission de 5 mois à Carglass à Courbevoie. Développement backend du nouveau site de Carglass France.
+   * Développement/maintenance et amélioration de diverses fonctionnalités et bundles symfony2:
+     * Développement de web services avec FosRestBundle
+     * Analyse et développement de modules pour gérer la prise en charge bris de glace par les assurances
+     * Envoi de mail aux utilisateurs avec Amazon Simple Email Service
+     * Utilisation du SGBD Oracle
+    * Rédaction de spécifications de web services
+    * Installation d'un wiki (Dokuwiki) pour améliorer le partage d'information avec les équipes
+    * Automatisation des déploiements avec Ansible
  * _2015_ Réalisation d'une application de gestion de brevet pour le groupe Dynergie
    * Conception de l'application: modélisation UML des brevets.
    * Réalisation d'une interface d'administration des brevets en **Symfony2**
      * Utilisation de SonataAdminBundle pour l'interface
      * Exposition des brevets via une api REST (utilisation des bundles FOSRestBundle et JMSSerializerBundle)
    * Réalisation du Frontend avec les technologies AngularJS, SASS et les librairies GoogleChart.
+ * Enseignant vacataire à l'université de Lyon 1 en licence e-business (module de 28h de cours sur la réalisation de sites e-commerce en php avec Wordpress et Prestashop)
  * Réalisation de 2 sites au responsive design pour des agences marketing ([www.tessicustomermarketing.fr](http://www.tessicustomermarketing.fr), [pmc-net.net](http://pmc-net.net))
    * Utilisation du CMS **WordPress**. Création de thèmes personnalisés pour chacun des sites. Ajout de custom posts pour la gestion des réalisations des entreprises.
    * Framework CSS **Foundation 5**. Utilisation de **Sass**.
@@ -47,9 +57,11 @@
  * _2012_ Réalisation et intégration de plusieurs sites vitrines aux thèmes et backends personnalisés sous **WordPress**. ([www.bodysculpt.fr](http://www.bodysculpt.fr), [www.chine-france.com](http://www.chine-france.com), [www.l-appart.net](http://www.l-appart.net))
  * _Novembre 2011_ Stage au CIRC (Centre International de recherche sur le Cancer)
    * Conception et réalisation d'un cahier de laboratoire électronique pour les différentes équipes scientifiques à l'aide du CMS **WordPress**.
+
 ### PROJETS PERSONNELS
 
- * _2015_ Réalisation d'une application de révision de vocabulaire de langues étrangères (**Symfony2**)([learn-vocabulary.com](http://learn-vocabulary.com))
+ * _2016_ Réalisatioin d'un mini-jeu de grattage pour fêter des anniversaires de manière original avec **CreateJs** ([happy-birthday.pro](http://happy-birthday.pro))
+ * _2015_ Réalisation d'une application de révision de vocabulaire de langues étrangères en **Symfony2**. ([learn-vocabulary.com](http://learn-vocabulary.com))
  * Réalisation du portfolio d'une artiste sous **WordPress** avec le framework CSS **Bootstrap 3** ([clemencebouchereau.com](http://clemencebouchereau.com))
  * _2014_ Réalisation d'un jeu de Quizz mobile avec **Cordova**.
 

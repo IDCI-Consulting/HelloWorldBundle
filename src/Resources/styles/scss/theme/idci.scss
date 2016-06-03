@@ -12,8 +12,12 @@ div.row.cv {
 // specific to pdf version
 .content.pdf {
   section > ul > li {
+    margin: 0 2rem 0 8rem;
     padding-top: 1rem;
-    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  section > ul > li ul li {
   }
 
   section:first-child {
@@ -92,6 +96,7 @@ section.cv-part {
     margin-bottom: 0;
 
     ul {
+      padding-top: 0.5rem;
       list-style: dot;
     }
 
