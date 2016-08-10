@@ -2,7 +2,8 @@
 #### BAPTISTE BOUCHEREAU, 25 ans
 ##### Profil d'Ingénieur, Analyste/Développeur Web Full Stack
 
-![github logo](/images/github-icon.png "Logo github") [https://github.com/ovski4](https://github.com/ovski4)
+![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
+[github.com/ovski4](https://github.com/ovski4)
 
 **baptiste.bouchereau@idci-consulting.fr**
 **06 62 35 45 36**
