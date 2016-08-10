@@ -6,4 +6,13 @@
     margin: 1rem auto;
     width: 10rem;
   }
+
+  section:first-child {
+    a {
+      display: inline-block;
+      font-weight: bold;
+      margin: 0;
+      color: #0DB0D1;
+    }
+  }
 }

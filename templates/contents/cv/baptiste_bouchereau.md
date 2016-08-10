@@ -1,6 +1,9 @@
 ### CURRICULUM VITAE
 #### BAPTISTE BOUCHEREAU, 25 ans
 ##### Profil d'Ingénieur, Analyste/Développeur Web Full Stack
+
+![github logo](/images/github-icon.png "Logo github") [https://github.com/ovski4](https://github.com/ovski4)
+
 **baptiste.bouchereau@idci-consulting.fr**
 **06 62 35 45 36**
 **Anglais niveau C1 Validé à l'aide du CAE - Cambridge English Advanced Certificate**
@@ -8,15 +11,15 @@
 ### EXPERIENCES PROFESSIONNELLES
 
  * _Depuis Septembre 2015_ Indépendant chez IDCI-CONSULTING | Analyste Développeur
- * _2016_ Mission de 5 mois à Carglass à Courbevoie. Développement backend du nouveau site de Carglass France.
-   * Développement/maintenance et amélioration de diverses fonctionnalités et bundles symfony2:
+ * _2016_ Mission de 7 mois à Carglass à Courbevoie. Développement backend du nouveau site de Carglass France.
+   * Développement/maintenance et améliorations de diverses fonctionnalités et bundles symfony2:
      * Développement de web services avec FosRestBundle
-     * Analyse et développement de modules pour gérer la prise en charge bris de glace par les assurances
-     * Envoi de mail aux utilisateurs avec Amazon Simple Email Service
-     * Utilisation du SGBD Oracle
+     * Analyse et développement de bundles pour gérer la prise en charge bris de glace par les assurances
+     * Envoi de mail aux utilisateurs avec **Amazon Simple Email Service**
+     * Utilisation du SGBD Oracle avec **Doctrine2**
     * Rédaction de spécifications de web services
     * Installation d'un wiki (Dokuwiki) pour améliorer le partage d'information avec les équipes
-    * Automatisation des déploiements avec Ansible
+    * Automatisation des déploiements avec **Ansible**
  * _2015_ Réalisation d'une application de gestion de brevet pour le groupe Dynergie
    * Conception de l'application: modélisation UML des brevets.
    * Réalisation d'une interface d'administration des brevets en **Symfony2**
