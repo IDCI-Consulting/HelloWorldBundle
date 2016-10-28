@@ -10,7 +10,7 @@ swiftmailer:
 i18n_route_generator:
     languages:
         fr: 'French'
-        #en: 'English'
+        en: 'English'
 
 courses:
     - 'symfony2'
