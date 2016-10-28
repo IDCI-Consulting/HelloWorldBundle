@@ -11,7 +11,7 @@ $intlApp = $app['controllers_factory'];
 $baseApp = $app['controllers_factory'];
 
 //Routing requirements
-$intlApp->assert('_locale', 'fr');
+$intlApp->assert('_locale', 'fr|en');
 
 /*******************
  * App Controllers *
