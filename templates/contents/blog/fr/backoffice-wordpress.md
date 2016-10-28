@@ -17,7 +17,7 @@ Le back office de WordPress est un espace réservé, accessible par un login et 
 
 ![WP Admin](/images/blog/wp_install_8.png "WP Admin")
 
-Une fois connecté dans cette espace vous pourrez alors:
+Une fois connecté dans cet espace vous pourrez alors:
 
 * Gérer le contenu de votre site (Articles, Pages, Médias, Liens)
 * Modérer les commentaires déposés par les internautes
@@ -273,7 +273,7 @@ Il ne vous reste plus qu'à l'activer.
 
 <p class="notice question" markdown="1">
 Chaque plugin s'utilise différemment, certain ajoute une entrée dans le menu pour
-être configuré, d'autre s'utilise via des tags à insérer dans vos contenus, ...  
+être configuré, d'autre s'utilise via des tags à insérer dans vos contenus, ...
 Afin de savoir comment utiliser un plugin, prenez connaissance de la documentation
 fournie avec le plugin: Directement sur le site de WordPress. En lisant le fichier **readme.txt** généralement présent dans le dossier du plugin.
 </p>

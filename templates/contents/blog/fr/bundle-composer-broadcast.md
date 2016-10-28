@@ -131,8 +131,8 @@ Indiquez votre API Token et le nom d'utilisateur de votre compte. Cochez le bout
 
 ![Hook services](/images/blog/service_hooks.png)
 
-Vous pouvez retourner sur [https://packagist.org/profile/](https://packagist.org/profile/). Recharger la page.
-Si tout c'est bien passé, le message vert indiquant le type de mise à jour à disparu.
+Vous pouvez retourner sur [https://packagist.org/profile/](https://packagist.org/profile/). Rechargez la page.
+Si tout s'est bien passé, le message vert indiquant le type de mise à jour à disparu.
 
 ## Intallation de votre bundle via composer ##
 

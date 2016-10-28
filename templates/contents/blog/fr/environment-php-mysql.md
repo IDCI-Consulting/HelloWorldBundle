@@ -77,7 +77,7 @@ entre deux méthodes:
 De nombreux sites exposent les différences entre ces deux méthodes. Par défaut,
 le serveur Apache interprétera le code PHP par la méthode "module Apache", mais
 ceci est paramétrable. Pour vérifier que votre serveur HTTP est bien configuré pour
-exécuter du code PHP, vous pouvez créer un fichier nommé phpinfo.php est le déposer
+exécuter du code PHP, vous pouvez créer un fichier nommé phpinfo.php et le déposer
 à la racine Web de votre serveur HTTP:
 
 * c:\wamp\www\ avec WAMP sous Windows
@@ -130,15 +130,15 @@ site web à associer.
 
     ServerName local.domain
     ServerAdmin webmaster@local.domain.fr
-    
+
     DocumentRoot /home/user/workspace/domain_path
-    
-    
+
+
     Options Indexes FollowSymLinks MultiViews
     AllowOverride All
     Order allow,deny
     allow from all
-    
+
     ErrorLog /var/log/apache2/error_local.domain.log
     # Possible values include: debug, info, notice, warn, error, crit, alert, emerg.
     LogLevel warn
@@ -250,11 +250,11 @@ Vous pouvez également exécuter les requêtes SQL suivantes en replaçant **use
 par le nom de l'utilisateur que vous voulez créer et *** par le mot de passe
 
     CREATE USER 'user'@'%' IDENTIFIED BY '***';
-    
+
     GRANT USAGE ON * . * TO 'user'@'%' IDENTIFIED BY '***' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
-    
+
     CREATE DATABASE IF NOT EXISTS `user` ;
-    
+
     GRANT ALL PRIVILEGES ON `user` . * TO 'user'@'%';
 
 En résumé vous venez de créer une base nommée **user** et vous avez créé un utilisateur
