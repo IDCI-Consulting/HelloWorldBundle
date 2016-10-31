@@ -64,7 +64,7 @@
 
 ### PROJETS PERSONNELS
 
- * _2016_ Réalisatioin d'un mini-jeu de grattage pour fêter des anniversaires de manière original avec **CreateJs** ([happy-birthday.pro](http://happy-birthday.pro))
+ * _2016_ Réalisation d'un mini-jeu de grattage pour fêter des anniversaires de manière original avec **CreateJs** ([happy-birthday.pro](http://happy-birthday.pro))
  * _2015_ Réalisation d'une application de révision de vocabulaire de langues étrangères en **Symfony2**. ([learn-vocabulary.com](http://learn-vocabulary.com))
  * Réalisation du portfolio d'une artiste sous **WordPress** avec le framework CSS **Bootstrap 3** ([clemencebouchereau.com](http://clemencebouchereau.com))
  * _2014_ Réalisation d'un jeu de Quizz mobile avec **Cordova**.

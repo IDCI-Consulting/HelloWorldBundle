@@ -98,7 +98,7 @@ _4 heures_
 * Utiliser la configuration
 * Créer des commandes Symfony2
 * Utiliser des bundles existants
-* FOSUserBundle (Gestion des utilisateur)
+* FOSUserBundle (Gestion des utilisateurs)
 * DoctrineFixtures (L'import de données)
 * Créer des bundles réutilisables
 * Le cache HTTP (ESI, varnish, ...)

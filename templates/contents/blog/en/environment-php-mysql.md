@@ -146,36 +146,25 @@ The Domain Name System [DNS](https://en.wikipedia.org/wiki/Domain_Name_System) i
 
 During a DNS resolution, your computer will execute differents things :
 * Local resolution : search if the DNS entry is define locally. If it's the case, it will use this adresse.
-*If it's not the case, 
+* If it's not the case, it will effectuate an away resolution. The questioned DNS will return the answer if it knows the searched association, otherwise, it will question an other DNS server and so on and so forth until it obtains...
+* The answer
+* The computer which made the request originally will put the obtained answer in cache for potentials futures requests so it can contact server related to searched domain.
 
 
+To define locally an association between an IP adress and a domain name, you have to add an entry in the ['hosts' file](https://en.wikipedia.org/wiki/Hosts_(file)).
 
-Lors d'une résolution DNS votre ordinateur va commencer par faire une **1] Resolution local**,
-c'est à dire rechercher si l'entrée DNS recherchée est définie localement. Si oui,
-utilisation de cette adresse, sinon il va effectuer une **2] Résolution distante**.
-Le serveur DNS interrogé retournera la reponse si il connait l'association recherchée,
-sinon il interrogera un autre serveur DNS et ainsi de suite jusqu'à l'obtention de
-**3] La réponse**. L'ordinateur à l'origine de la demande mettra **4] En cache la réponse**
-ainsi obtenue pour d'éventuelles futures requêtes et pourra ainsi contacter le serveur
-corespondant au domaine recherché.
+In the case of a local developpment, to associate the adress **local.domain** to your own machine, ie the [localhost](https://en.wikipedia.org/wiki/Localhost). You have to add the entry **127.0.0.1 local domain**.
 
-Pour définir localement une association entre une adresse IP et un nom de domaine
-il faut ajouter une entrée dans [le fichier 'hosts'](http://fr.wikipedia.org/wiki/Hosts).
-
-Dans le cas d'un développement local, pour associer l'adresse **local.domain** à votre
-propre machine c'est à dire le [localhost](http://fr.wikipedia.org/wiki/Localhost)
-il faut ajouter l'entrée **127.0.0.1 local.domain**.
-
-Sous système Debian et dérivés (Ubuntu, ...), éditer **le fichier hosts**:
+With Debian system and others (Ubuntu, etc) edit the **hosts files**:
 
     $ sudo vi /etc/hosts
 
-Puis ajouter l'association Adresse IPNom de domaine souhaitée.
+Then, add the assocation IP adress / Domain name you want:
 
     127.0.0.1 local.domain
 
-Pour vérifier la prise en compte de votre changement par votre système, effectuer
-une requête ping. Vous devez obtenir le résultat suivant:
+To check the consideration of your change by your system, effectuate a ping request.
+You have to obtain this result :
 
     $ ping local.domain
     PING localhost (127.0.0.1) 56(84) bytes of data.
@@ -185,50 +174,40 @@ une requête ping. Vous devez obtenir le résultat suivant:
     64 bytes from localhost (127.0.0.1): icmp_seq=4 ttl=64 time=0.027 ms
     ....
 
-Si vous obtenez le message suivant:
+If you obtain this message:
+
 
     $ ping local.domain
     ping: unknown host local.domain
 
-C'est que vous n'avez pas ajouté correctement l'entrée dans votre fichier hosts.
+It's that you didn't had the entry correctly in your hosts file.
 
-## Paramètrer MySQL ##
+## Configure MySQL ##
 
-[MySQL](http://fr.wikipedia.org/wiki/MySQL) est un SGBDR (Système de Gestion de Base de Donnée Relationnelle).
-C'est un logiciel libre développé sous double licence en fonction de l'utilisation
-qui en est faite :
+[MySQL](https://en.wikipedia.org/wiki/MySQL) is a DBMS (Data Base Managment Systeme). It's a free software developped under a double licence according to the utilisation :
 
-* Dans un produit libre: **licence publique générale GNU (GPL)**
-* Dans un produit propriétaire: **licence payante**
+* In a free product: **general public license (GNU)**
+* In an owner product: **charged licence** 
 
-Pour les applications comme WordPress, Joomla, Drupal, PrestaShop, Magento, ...
-il faudra renseigner, durant la phase d'intallation, les informations pour la connexion
-à la base de donnée MySQL.
+For applications like WordPress, Joomla, Drupal, PrestaShop, Magento, etc, you have to inform, during the installation phase, informations for connexions to the MySQL's database.
 
-Une bonne pratique consiste à créer un utilisateur avec des accès bien définis sur une base,
-plutôt que d'utiliser le même compte sur toutes les bases (par exemple le compte root).
-Cela permet un meilleur cloisonnement et offre ainsi une meilleure sécurité. Ce n'est
-pas une obligation dans un environnement de développement mais vivement recommandé
-dans un environnement 'dit' de production.
-Pour cela vous pouvez utiliser l'outil [phpMyAdmin](http://fr.wikipedia.org/wiki/PhpMyAdmin),
-accessible depuis un navigateur, et procéder comme suit:
 
-![Privileges](/images/blog/pma_privileges.png "Aller sur l'onglet privilège")
+A good practice includes to create a user with defined access on a base, rather than use the same account on every bases (for example, the root account). It allows to have a better compartmentalization and a best security. It's not an obligation in a development's environment, but it's intensely recommand to a production's environment.
+For this, you can use the tool [phpMyAdmin](https://en.wikipedia.org/wiki/PhpMyAdmin), easy to reach from a browser, and apply this : 
 
-![Nouveau utilisateur](/images/blog/pma_new_user.png "Nouveau utilisateur")
+![Privileges](/images/blog/pma_privileges.png "Go to the Privilege tab")
 
-![Ajouter utilisateur](/images/blog/pma_add_new_user.png "Ajouter un nouveau utilisateur")
+![Nouveau utilisateur](/images/blog/pma_new_user.png "New user")
 
-![Go](/images/blog/pma_go.png "Valider")
+![Ajouter utilisateur](/images/blog/pma_add_new_user.png "Add a new user")
+
+![Go](/images/blog/pma_go.png "Validate")
 
 <p class="notice question" markdown="1">
-L'URL d'accès à votre phpMyAdmin est différente suivant votre système d'exploitation
-ou suivant votre configuration. Sous système Debian ou dérivés (Ubuntu, ...) il
-est accessible depuis l'URL suivante: http://localhost/phpmyadmin
+The access URL to your phpMyAdmin is different according to your operating system or your configuration. With Debian system and others (Ubuntu, etc), it accesibles from the URL http://localhost/phpmyadmin.
 </p>
 
-Vous pouvez également exécuter les requêtes SQL suivantes en replaçant **user**
-par le nom de l'utilisateur que vous voulez créer et *** par le mot de passe
+You could also execute theses SQL requests by replacing **user** by the user name you want to create and *** by the password:
 
     CREATE USER 'user'@'%' IDENTIFIED BY '***';
 
@@ -238,17 +217,16 @@ par le nom de l'utilisateur que vous voulez créer et *** par le mot de passe
 
     GRANT ALL PRIVILEGES ON `user` . * TO 'user'@'%';
 
-En résumé vous venez de créer une base nommée **user** et vous avez créé un utilisateur
-**user** avec le mot de passe **user** disposant de tous les droits sur cette base.
+To sum up, you just created a base named **user** and a user **user** with the password **user** available having all rights on this database.
 
     host: localhost
     nom de la base de donnée: user
     utilisateur: user
     mot de passe: user
 
-Ces informations vous seront demandées lors de l'installation d'une application PHP
-qui utilise le SGBDR MySQL pour stocker des données.
+These informations will be request to you during an application PHP's intallation which use the DBMS to store datas.
 
-Si vous souhaitez une assistance pour la mise en place d'un environnement de développement
-pour vos équipes ou encore une aide pour le déploiement et la migration de votre site,
-vous pouvez nous [contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
+
+If you need an assistance to arrange a development's environment to your teams, or an help to deployment and migration of your website, you could [contact us]({{ path('contact', {_locale: app.translator.locale}) }} "Contact us").
+
+

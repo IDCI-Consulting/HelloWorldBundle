@@ -17,7 +17,7 @@
    * Formation des équipes en place
    * Management de projet
    * Technologie : Php 5 / Symfony 1.3
- * _2010_ Groupe Moniteur : Pilotage du projet de refonde du site [www.lemoniteur.fr/](http://www.lemoniteur.fr/)
+ * _2010_ Groupe Moniteur : Pilotage du projet de refonte du site [www.lemoniteur.fr/](http://www.lemoniteur.fr/)
    * Encadrement d’une équipe de 3 développeurs
    * Technologie : Php 5 / Symfony 1.4
  * _2011_ Allopneus : Conseil et formation des équipes dans le cadre du changement de version du site [www.allopneus.com](http://www.allopneus.com)
