@@ -36,29 +36,28 @@
  * Dévelopment of plugins for the SPIRAL platform (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon1).
  * _2005_ Calcul center of IN2P3 | 16 weeks internship (from 04/04/2004 to 31/07/2005)
  * Establishment of an informatic protocole to medicals images at DICOM format, from an IRM to a SRB base. Project BIRNy rename LyNDA (Lyon Neuroimaging Database & Applications)
- 
- Mise en place d'un protocole informatique pour le transfert d'images médicales au format DICOM depuis un IRM, à destination d'une base SRB. Projet BIRNy rebaptisé LyNDA (Lyon Neuroimaging Database & Applications)
- * _2004_ Laboratoire Lagep | Stage de 10 semaines (du 05/04/2004 au 13/06/2004)
- * Refonte complète du site Internet ([www.lagep.cpe.fr](http://www.lagep.cpe.fr)). Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour pour le site.
 
-### FORMATION
+ * _2004_ Laboratory Lagep | 10 weeks internship (du 05/04/2004 au 13/06/2004)
+ * Full reworking of the website ([www.lagep.cpe.fr](http://www.lagep.cpe.fr)). Establishment of the web server with Linux Debian, creation of some uptading's tools for the website.
+
+### TRAINING
 
 * _2008_ Master MIAGE
-* _2005_ Licence professionelle Informatique (nouvelles architectures applicatives)
-* _2004_ DUT Informatique
+* _2005_ Bachelor's degree in Informatics (new application architecture)
+* _2004_ DUT Informatics
 
-### OUTILS INFORMATIQUE
+### INFORMATICS TOOLS
 
-* _Systèmes_ d'exploitations: Ms Dos, Windows, MacOS, Linux, Unix
-* _Réseaux_ Dns (bind), Dhcp, Reverse proxy et load balancing (pound), Firewall (iptables), Serveur Http (Apache, lighttpd), Serveur FTP (vsFtp)
-* _Langages_ C, C++, Java, Python, Php, Html, xHtml, JavaScript, Sql, Pl/Sql, Prolog, Shell Script
+* _Operating Systems_: Ms Dos, Windows, MacOS, Linux, Unix
+* _Networks_ Dns (bind), Dhcp, Reverse proxy and load balancing (pound), Firewall (iptables), Serveur Http (Apache, lighttpd), Serveur FTP (vsFtp)
+* _Langagues_ C, C++, Java, Python, Php, Html, xHtml, JavaScript, Sql, Pl/Sql, Prolog, Shell Script
 * _Technologies_ Dhtml, Ajax, Framework Symfony, Ejb 3, Svn (Versionning), Trac/Redmine (Suivi dvpts & Bug trackeur), virtualisation de serveur (Xen, OpenVZ, KVM)
 * _CMS_ Joomla, Drupal, Wordpress, Dreamweaver
-* _Graphisme_ Notions de photoshop et Gimp
-* _Bureautique_ Les suites Microsoft Office et Open Office
+* _Graphics_ Notions of Photoshop et Gimp
+* _Office equipments_ Microsoft Office suites and Open Office
 
-### EXPERIENCES PERSONNELLES
+### PERSONNALS EXPERIENCES
 
-* _2004 – 2005_ Elu étudiant au Conseil d'Administration de l'université Lyon 1 et président de l'association Student Club 
-* _Juillet 2004 et 2005_ Bénévole durant le festival Solidays à Paris, pour l'association Solidarité Sida
-* _2003_ Brevet de Secouriste. (AFPS)
+* _2004 – 2005_ Elected studient at the board of directors of Lyon 1 University and president of the association Student Club.
+* _Juillet 2004 et 2005_ Volunteer during the Solidays festival in Paris, to the association AIDS
+* _2003_ Fist-aid certificate (AFPS)
