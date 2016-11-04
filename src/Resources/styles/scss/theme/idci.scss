@@ -9,6 +9,10 @@ div.row.cv {
   padding-top: 5rem;
 }
 
+.show-for-small-only {
+  display: none;
+}
+
 // specific to pdf version
 .content.pdf {
   section > ul > li {
@@ -127,6 +131,16 @@ section.cv-part {
       color: inherit;
       display: inline;
     }
+  }
+}
+
+@media #{$small-only} {
+  .hide-for-small-only {
+    display: none;
+  }
+
+  .show-for-small-only {
+    display: block;
   }
 }
 

@@ -15,10 +15,13 @@
 
 {% block main_content %}
     <div class="row full-width cv">
+        <div class="small-12 show-for-small-only columns">
+            <a class="button small export-cv" href="{{ path('cv', {'_locale': app.translator.locale, 'theme': 'idci', 'name': name, '_format': 'pdf'}) }}">{% trans %}Download{% endtrans %}</a>
+        </div>
         <div class="small-12 columns html">
             {{ html_cv|raw }}
         </div>
-        <div class="small-12 columns">
+        <div class="small-12 hide-for-small-only columns">
             <a class="button small export-cv" href="{{ path('cv', {'_locale': app.translator.locale, 'theme': 'idci', 'name': name, '_format': 'pdf'}) }}">{% trans %}Download{% endtrans %}</a>
         </div>
     </div>
