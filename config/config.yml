@@ -109,6 +109,19 @@ blog:
             - {file: "backoffice-wordpress", image: "wordpress-logo.png", title: "Introduction au BackOffice de WordPress", date: "08/01/2012" , author: "Gabriel Bondaz", categories: ["Wordpress"]}
             - {file: "install-wordpress", image: "wordpress-logo.png", title: "Installer WordPress", date: "25/11/2011" , author: "Gabriel Bondaz", categories: ["Wordpress"]}
             - {file: "presentation-wordpress", image: "wordpress-logo.png", title: "Présentation de WordPress", date: "14/11/2011" , author: "Gabriel Bondaz", categories: ["Wordpress"]}
+    en:
+        categories:
+            - "Symfony2"
+            - "Tutos et astuces"
+        articles:
+        # file property will match the url parameter for route named article
+
+            #Symfony2
+            - {file: "bundle-composer-broadcast", image: "symfony2-logo.png", title: "Create a Symfony2 Bundle reusable and broadcast it via Composer", date: "15/01/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
+            - {file: "type-doctrine2", image: "symfony2-logo.png", title: "How to create a new type Doctrine2 with Symfony2", date: "18/01/2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+
+            #Tutos et astuces
+            - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Implement a workspace of developpment to realize a website with PHP and MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
 
 # Params for sitemap
 sitemap:

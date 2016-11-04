@@ -17,7 +17,7 @@
         {% endfilter %}
     </div>
 
-    {% if file_exists('templates/contents/cv/gabriel_bondaz.md') %}
-        <a href="{{ path('cv', {_locale: app.translator.locale, 'theme': app.config.cv_theme, 'name': 'gabriel_bondaz'}) }}" class="button small small-12 see-cv">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
+    {% if file_exists('templates/contents/cv/gabriel_bondaz_'~app.translator.locale~'.md') %}
+        <a href="{{ path('cv', {_locale: app.translator.locale, 'theme': app.config.cv_theme, 'name': 'gabriel_bondaz_'~app.translator.locale}) }}" class="button small small-12 see-cv">{% transchoice 2 from "messages" %}See{% endtranschoice %} CV</a>
     {% endif %}
 </article>

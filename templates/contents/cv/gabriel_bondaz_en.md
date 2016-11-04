@@ -1,9 +1,9 @@
 ### CURRICULUM VITAE
-#### GABRIEL BONDAZ, 31 ans
+#### GABRIEL BONDAZ, 31 years old
 ##### ENGINEER / TRAINER
 **gabriel.bondaz@idci-consulting.fr**
 **06 63 23 12 07**
-**Anglais maîtrisé**
+**Mastered english**
 
 ### PROFESIONALS EXPERIENCES
 
@@ -13,7 +13,7 @@
   * Conception and development of profesionals websites with PHP (Framework Symfony)
   * Managmement of technical staff (Symfony1, Symfony2, Wordpress, Magento)
   * Establishment of server infrastructure (Firewall, Reverse Proxy, DNS, dhcp, Web Server, Ftp Sever, Subversion, Database)
- _2009_ Service for Ajilon  : establishment of the website [www.fidroit.fr](http://www.fidroit.fr)
+ * _2009_ Service for Ajilon  : establishment of the website [www.fidroit.fr](http://www.fidroit.fr)
    * Training in place's staff
    * Projects's management
    * Technology : Php5 / Symfony1.3
@@ -30,13 +30,12 @@
  * _2014_ Ecole normale supérieure de Lyon : Development of a management pads's platform
  * Tessi Marketing : Expertise symfony 2
  * Formation Php5 / Symfony2 for OPCADIA,
- * _2005 – 2007_ Lyon 1 University Research and Training's technician
+ * _2005 – 2007_ Lyon 1 University Research and Training's technician  
  * Installation and Configuration of informatics rooms multi operating systems (Windows/Linux). 
  * Establishment of a gestion's tool of informatic park: GLPI (Gestionnaire Libre de Parc Informatique). 
- * Dévelopment of plugins for the SPIRAL platform (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon1).
+ * Dévelopment of plugins for the SPIRAL platform (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon1).  
  * _2005_ Calcul center of IN2P3 | 16 weeks internship (from 04/04/2004 to 31/07/2005)
- * Establishment of an informatic protocole to medicals images at DICOM format, from an IRM to a SRB base. Project BIRNy rename LyNDA (Lyon Neuroimaging Database & Applications)
-
+   * Establishment of an informatic protocole to medicals images at DICOM format, from an IRM to a SRB base. Project BIRNy rename LyNDA (Lyon Neuroimaging Database & Applications)
  * _2004_ Laboratory Lagep | 10 weeks internship (du 05/04/2004 au 13/06/2004)
  * Full reworking of the website ([www.lagep.cpe.fr](http://www.lagep.cpe.fr)). Establishment of the web server with Linux Debian, creation of some uptading's tools for the website.
 

@@ -134,6 +134,22 @@ section.cv-part {
 
   // Re-import header because foundation override it
 
+  .html {
+
+    section.cv-part li {
+      font-size: 1rem;
+    }
+
+    section.cv-part > ul > li {
+      margin-left: 8rem;
+
+      em {
+        font-size: 0.8rem;
+        left: -9rem;
+      }
+    }
+  }
+
   section.cv-part {
     page-break-inside: avoid;
 
