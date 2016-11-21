@@ -1,6 +1,14 @@
+# Comment créer un parcours complexe avec StepBundle ? #
 
-Dans un deuxième temps, nous allons voir ensemble comment créer un processus d'inscription avancé.
-Celui-ci sera composé de plusieurs steps et plusieurs paths.
+## Introduction ##
+
+Nous vous présentons aujourd'hui un deuxième article à propos d'une utilisation plus complexe de StepBundle.
+
+Nous allons donc voir ensemble comment créer et mettre en place un processus d'inscription plus complexe. Vous pouvez vous référer à notre premier article (/*lien ici*/) pour ce qui concerne le vocabulaire, l'utilisation et l'installation de StepBundle.
+
+Notre processus d'inscription sera composé de plusieurs steps et plusieurs paths.
+
+
 
 Une fois de plus, nous allons travailler dans le fichier `DefaultController.php`
 

@@ -1,16 +1,16 @@
-# Comment créer un workflow avec StepBundle ? #
+# Comment créer un formulaire de contact avec StepBundle ? #
 
 
 ## Introduction ##
 
 
 Nous avons crée StepBundle pour répondre à un besoin client.
-Il nous fallait réaliser facilement des parcours interactifs avec un internaute et de pouvoir déclencher facilement différents évenements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre). L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être configurable (et non pas hardcodé, codé en dur).
+Il nous fallait pouvoir réaliser facilement des parcours interactifs avec un internaute et déclencher facilement différents évenements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre). L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être configurable (et non pas hardcodé).
 
-Nous avons testé d'autres bundles existants, qui semblaient répondre à notre problématique client, mais ceux-ci ne nous nous pas convaincu.
-Dans un autre artcile, nous vous présenterons un comparatif entre ces différents bundles et StepBundle.
+Nous avons testé d'autres bundles existants, qui semblaient répondre à notre problématique client, mais ceux-ci ne nous pas convaincu.
+Dans un autre articile, nous vous présenterons un comparatif entre ces différents bundles et StepBundle.
 
-Comme nous n'avions pas été convaincu, nous avons choisi de développer notre propre Bundle. Ainsi, nous avons pensé ce bundle générique et réutilisable.
+Ainsi, nous avons choisi de développer notre propre Bundle. En cela, nous avons pensé ce bundle générique et réutilisable.
 
 Cet article a pour vocation de vous le présenter au travers de deux exemples concrets.
 
@@ -46,7 +46,7 @@ Nous allons utiliser un diagramme qui fera office de légende.
 
 ![Legende StepBundle](demo_step/img/legendStepBundle.png "Légende StepBundle")
 
-## Pourquoi utiliser le StepBundle ? ##
+## Pourquoi utiliser StepBundle ? ##
 
 StepBundle permet de mettre en place aussi bien un parcours simple (une étape, un chemin) qu'un parcours plus complexes (plusieurs étapes et chemins). Vous pouvez commencer facilement à partir d'une configuration, qui représente la map, en utilisant le langage `yml` ou `json`.
 Vous pouvez aussi représenter une map en utilisant directement la programmation objet, mais cela est peut-être plus compliqués pour des non initiés au code et à la programmation objet.
@@ -58,10 +58,8 @@ Sans plus attendre, rentrons dans le vif du sujet et partons à la rencontre de 
 Commençons par créer un projet Symfony en version 2.8, nous appelerons ce projet 'demo_step'.
 
 ```sh
-$ php TODO:mettre la commande Symfony
+$ symfony new demo_step 2.8
 ```
-
-
 
 
 ## Installation ##
@@ -102,16 +100,22 @@ public function registerBundles()
 }
 ```
 
-Notre bundle est installé et prêt à l'emploi, nous allons maintenant tester deux cas d'utilisation : un cas simple (formulaire de contact) et un cas plus complexe (processus d'inscription en plusieurs étapes).
+Notre bundle est installé et prêt à l'emploi, nous allons maintenant tester un cas d'utilisation : un cas simple, le formulaire de contact.
 
-## Faire un formulaire de contact simple ##
+## Créer le formulaire de contact avec StepBundle ##
 
-Dans un premier temps, nous avons choisi de réaliser un parcours composé d'une seule étape : un formulaire de contact, et un seul chemin représentant la soumission des données saisies. 
+Nous avons donc choisi de réaliser un parcours composé d'une seule étape : un formulaire de contact, et un seul chemin représentant la soumission des données saisies. 
 Nous pouvons voir ce cas comme l'utilisation du contact form 7 de Wordpress à la sauce Symfony.
-Voici une illustration du rendu attendu.
-// ajouter visuel (et url) + commenter 
 
-Et pour se faire, nous allons utiliser StepBundle. 
+Voici une illustration du rendu attendu.
+
+![Screenshot Contact Form](/images/screenshot_contact_form.png "Screenshot Contact Form")
+
+Dans la barre de recherche, nous avons notre ```localhost:8000``` suivi de la route que nous avons préalablement configuré : ```/contact```.
+Ensuite, nous pouvoir voir le titre de notre formulaire de contact 'Personal informations', suivi des champs de saisies à compléter par l'utilisateur.
+Comme notre formulaire ne se compose que d'une seule step et d'une seule path, notre bouton n'est pas 'next' mais bien 'end'.
+
+Prêt à commencer avec StepBundle ? 
 
 Nous allons travailler dans le fichier `DefaultController.php` du bundle crée par défaut `AppBundle`.
 
@@ -234,11 +238,16 @@ Ouvrez dans votre navigateur votre projet Symfony et rendez-vous sur l'URL `/con
 
 ![Legende simple form](demo_step/img/legend_simple_form.png "Légende Simple Form")
 
+
+## Enregistrer les données ##
+
+
+
 // Finir le cas : sauvegarder les données et/ou envoi de mail (c'est mieux). que se passe il quand on valide le formulaire ?
 
 Passer par les events.
 
 
-
+## Conclusion ##
 
 
