@@ -141,15 +141,17 @@ Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
 
 Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `localhost:8000/contact` afin d'apprécier votre nouveau formulaire de contact.
 
+Voici comment nous l'avons représenté avec notre légende :
+
 ![Legende simple form](demo_step/img/legend_simple_form.png "Légende Simple Form")
 
 
-## Enregistrer les données ##
+## Les events : générer un envoi de mail ##
+
+Enfin, nous aimerions mettre en place l'envoi d'un mail récapitulatif à l'utilisateur. Pour notre exemple et comme nous avons crée une seul step, nous allons déclencher cet envoi lors du clic sur le bouton `end`.
+Sinon, il est possible de générer l'envoi de mail à un autre moment.
 
 
-Finir le cas par un envoi de mail
-
-Passer par les events.
 
 
 ## Conclusion ##

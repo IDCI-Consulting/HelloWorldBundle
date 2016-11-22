@@ -109,7 +109,7 @@ Notre Bundle est installé et prêt à l'emploi.
 Dans notre prochain article, nous découvrirons une utilisation concrète et simple du StepBundle.
 On se retrouve ici /*mettre lien*/ pour la suite : une utilisation concrète du StepBundle au travers d'un formulaire de contact simple.
 
-Ci-dessous, voici notre fameux tableaux comparatif des Bundles visant à mettre en valeur leurs points forts et leurs points faibles.
+Ci-dessous, voici notre fameux tableau comparatif des Bundles visant à mettre en valeur leurs points forts et leurs points faibles.
 
 ## Comparatif ##
 
