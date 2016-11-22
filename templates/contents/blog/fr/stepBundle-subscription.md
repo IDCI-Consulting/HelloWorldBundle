@@ -2,11 +2,15 @@
 
 ## Introduction ##
 
-Nous vous présentons aujourd'hui un deuxième article à propos d'une utilisation plus complexe de StepBundle.
+Une fois de plus, nous retournons à notre StepBundle, cette fois-ci, nous allons vous présenter une utilisation plus complexe : la création d'un processus d'inscription.
+Pour des renseignements concernant l'utilisation et l'installation de StepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
 
-Nous allons donc voir ensemble comment créer et mettre en place un processus d'inscription plus complexe. Vous pouvez vous référer à notre premier article (/*lien ici*/) pour ce qui concerne le vocabulaire, l'utilisation et l'installation de StepBundle.
 
-Notre processus d'inscription sera composé de plusieurs steps et plusieurs paths.
+## Créer le processus d'inscription avec StepBundle ##
+
+Nous avons donc choisi de créer un parcours composé de plusieurs steps et de plusieurs paths.
+
+Pour cet exemple, nous avons choisi d'imaginer un extrait de processus d'inscription à l'université, en cela, le choix de l'utilisateur entre deux villes d'étude va changer la page de destination.
 
 
 
@@ -27,7 +31,7 @@ use DateTime;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/contact/", name="test")
+     * @Route("/subscription/", name="subscription")
      *
      *
      * @Method({"GET", "POST"})
@@ -37,12 +41,15 @@ class DefaultController extends Controller
 ```
 
 Ici, nous créeons notre map et mettons en place cinq steps.
+
+/*Mettre illustration*/
+
 Si vous regardez les premières lignes de plus près, vous trouverez l'URL de Google : nous avons ajouté des paramètres précisant la destination finale. A la fin de notre formulaire, l'utilisateur est donc redirigé vers la page d'accueil de Google.
 Aussi, grâce au paramètre "choice", nous avons mis en place un menu déroulant.
 Dans cet exemple, l'utilisateur choisit sa ville d'étude, Lyon ou Paris. En fonction de sa réponse, il sera redirigé vers les cursus d'une ville, ou de l'autre. Mais nous en rediscuterons en regardant les paths...
 
 ```php
-    public function inscriptionAction(Request $request)
+    public function subscriptionAction(Request $request)
     {   
         $map = $this
             ->get('idci_step.map.builder.factory')
@@ -139,13 +146,7 @@ Dans cet exemple, l'utilisateur choisit sa ville d'étude, Lyon ou Paris. En fon
                 'description' => 'Inscription done',
                 'content'     => '<h1>Thank you !</h1><h2>Please, join the proof of entitlement</h2> <h3>inscriptions.school@school.com</h3>',
             ))
-```
 
-Voici maintenant les paths, ils sont au nombre de cinq.
-Contrairement à notre premier exemple, nous utilisons aussi des paths à destinations conditionnelles.
-Il vous faut aussi mettre une destination par défaut.
-
-```php
             ->addPath(
                 'single',
                 array(
@@ -220,9 +221,7 @@ Il vous faut aussi mettre une destination par défaut.
     }
 }
 ```
-Voici notre processus d'inscription avancé :
 
-![Legende subscription form](demo_step/img/legend_subscription_form.png "Légende Subscription Form")
 
 
 ## Les events ##
