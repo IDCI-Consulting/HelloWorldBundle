@@ -106,8 +106,8 @@ public function registerBundles()
 
 Notre Bundle est installé et prêt à l'emploi.
 
-Dans notre prochain article, nous découvrirons une utilisation concrète et simple du StepBundle.
-On se retrouve ici /*mettre lien*/ pour la suite : une utilisation concrète du StepBundle au travers d'un formulaire de contact simple.
+Dans notre prochain article, nous testerons un cas concret d'utilisation du StepBundle : la création d'un formulaire de contact. Retrouvons nous ici /*mettre le lien*/
+
 
 Ci-dessous, voici notre fameux tableau comparatif des Bundles visant à mettre en valeur leurs points forts et leurs points faibles.
 
