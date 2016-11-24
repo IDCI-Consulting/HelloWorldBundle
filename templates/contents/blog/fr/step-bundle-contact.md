@@ -314,8 +314,11 @@ Ainsi, dans la configuration du parcours, nous pourrons utiliser notre service g
 
 Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier configuration.
 
+StepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant des input de type "submit" pour envoyer les données de la step en cours.
 
-//définir le code et ce qu'il fait
+Le système "d'évent" s'appuie donc sur les événements définis par le Framework pour les FormType, nous vous revoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
+
+/*Schéma illustration*/
 
 
 ```php
@@ -348,124 +351,138 @@ Voici comment nous l'avons représenté avec notre légende :
 
 ![Legende simple form](demo_step/img/legend_simple_form.png "Légende Simple Form")
 
-## La conf ##
-
-Possibilité de tout faire dans la conf et non dans le controller, moins de code en dur
+## Particularité de StepBundle ##
 
 
-`config.yml`
+Nous avons vu comment déclarer un configuration dans le Controller, cependant, StepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`. 
+Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
 
-// config.yml
-$map = $this
-            ->get('idci_step.map.builder.factory')
-            ->createNamedBuilder('simple map', array(), array(
-                'final_destination' => 'http://localhost:8000/idci/contact/'
-            ))
-            ->addStep('info', 'form', array(
-                'title'            => 'Personal informations',
-                'description'      => 'The personal data step',
-                'builder' => $this->get('form.factory')->createBuilder()
-                    ->add('first_name', 'text', array(
-                        'constraints' => array(
-                            new \Symfony\Component\Validator\Constraints\NotBlank()
-                    ->add('last_name', 'text')
-                    ->add('phone_number','text')
-                    ->add('email','text')        
-
+Voici notre même exemple dans notre fichier `config.yml`: 
+      
+```yaml
 idci_step:
     maps:
         contact:
             name: "contact"
             steps:
                 info:
-                    form:
+                    type: "form"
+                    options:
                         title: "Personal informations"
                         description: "The personal data step"
-                            first_name: "text"
-                            last_name: "text"
-                            phone_number: "text"
-                            email: "text"
-              paths:
-                    -
-                        type: "end"
-                        options: 
-                            source: info
-                            next_options:
-                                label: "end"
-                         events:
-                                form.post_bind:
+                        @builder:
+                            worker: "form_builder"
+                            parameters:
+                                fields:
                                     -
-                                        action: send_thanks_email
-                                        name: send_thanks_email
-                                        parameters:
-                                            email: "{{ flow_data.data.info.email }}"
-                                            
-     ->addStep('cursus', 'form', array(
-                'title'            => 'Your course',
-                'description'      => 'Course and studying city',
-                'builder' => $this->get('form.factory')->createBuilder()
-                    ->add('diploma_date', 'choice', array(
-                        'label'   => "When did you obtain your high school diploma ?",
-                        'choices' => range(date('Y') - 100, date('Y')),
-                        'constraints' => array(
-                            new \Symfony\Component\Validator\Constraints\NotBlank()
-                        )
-                    ))
-                    ->add('university_level', 'choice', array(
-                        'label' => 'What is your university level ?',
-                        'choices' => array(
-                            'bac1' => 'Bac+1',
-                            'bac2' => 'Bac+2',
-                            'bac3' => 'Bac+3',
-                            'bac4' => 'Bac+4',
-                        )
-                    ))
-                    ->add('study_city', 'choice', array(
-                        'label' => 'Where do you want to study ?',
-                        'choices' => array(
-                            'Lyon' => 'Lyon',
-                            'Paris' => 'Paris',                                    
-      
-      
-      maps:
-        suscription:
-            name: "subscription"
-            steps:
-                personal:
-                    form:
-                        title: "Personal informations"
-                        description: "The personal data step"
-                            first_name: "text"
-                            last_name: "text"
-                            phone_number: "text"
-                            email: "text"
-                            post_code: "text"
-                            city: "text"
-                 cursus:
-                    form:
-                        title: "Your course"
-                        description: "Course and studying city"
-                            diploma_date:
-                                choice:
-                                    label: "When did you obtain your high school diploma ?"
-                                        choice:
-                                            /*voir comment intégrer le dateTime*/
-                             university_level:
-                                choice:
-                                    label: "What is your university level ?"
-                                        bac1: "Bac+1"
-                                        bac2: "Bac+2"
-                                        bac3: "Bac+3"
-                                        bac4: "Bac+4"
-                             study_city:
-                                choice:
-                                    label:"Where do you want to study ?"
-                                        lyon: "Lyon"
-                                        paris: "Paris"    
-                            
-            
+                                        name: "first_name"
+                                        type: "text"
+                                    -
+                                        name: "last_name"
+                                        type: "text"
+                                    -
+                                        name: "phone_number"
+                                        type: "text"
+                                    -
+                                        name: "email"
+                                        type: "text"
             paths:
                 -
+                    type: "end"
+                    options:
+                        source: info
+                        next_options:
+                            label: "end"
+                        events:
+                            form.post_bind:
+                                -
+                                    action: send_thanks_email
+                                    name: send_thanks_email
+                                    parameters:
+                                        email: "{{ flow_data.data.info.email }}"
+       
+```
+
+Dans le `DefaultController.php` :
+
+```php
+<?php
+
+namespace IDCI\ContactBundle\Controller;
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+class DefaultController extends Controller
+{
+    /**
+     * @Route("/contact/", name="contact")
+     *
+     *
+     * @Method({"GET", "POST"})
+     * @Template("AppBundle:Default:defaultForm.html.twig")
+     */
+    public function contactAction(Request $request)
+    {
+        $navigator = $this
+            ->get('idci_step.navigator.factory')
+            ->createNavigator(
+                $request,
+                'contact'
+            )
+        ;
+
+        if ($navigator->hasFinished()) {
+            $navigator->clear();
+
+            return $this->redirect($navigator->getFinalDestination());
+        }
+        if ($navigator->hasNavigated() || $navigator->hasReturned()) {
+            return $this->redirect($this->generateUrl(
+                'contact',
+                $navigator->getUrlQueryParameters()
+            ));
+        }
+
+        return array('navigator' => $navigator);
+    }
+
+    /**
+     * @Route("/subscription/", name="subscription")
+     *
+     *
+     * @Method({"GET", "POST"})
+     * @Template("AppBundle:Default:defaultForm.html.twig")
+     */
+    public function subscriptionAction(Request $request)
+    {
+        $navigator = $this
+            ->get('idci_step.navigator.factory')
+            ->createNavigator(
+            $request,
+            'subscription'
+            )
+        ;
+
+        if ($navigator->hasFinished()) {
+            $navigator->clear();
+
+            return $this->redirect($navigator->getFinalDestination());
+        }
+        if ($navigator->hasNavigated() || $navigator->hasReturned()) {
+            return $this->redirect($this->generateUrl('subscription', $navigator->getUrlQueryParameters()));
+        }
+
+        return array('navigator' => $navigator);
+    }
+}
+```
+
+
+/*A mettre en forme*/
 
 
 
