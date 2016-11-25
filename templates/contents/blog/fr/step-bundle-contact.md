@@ -12,7 +12,7 @@ Nous pouvons voir ce cas comme l'utilisation du contact form 7 de Wordpress à l
 
 Voici une illustration du rendu attendu.
 
-![Screenshot Contact Form](/images/screenshot_contact_form.png "Screenshot Contact Form")
+![Screenshot Contact Form](/images/blog/screenshot_contact_form.png "Screenshot Contact Form")
 
 Dans la barre de recherche, nous avons notre ```localhost:8000``` suivi de la route que nous avons préalablement configuré : ```/contact```.
 Ensuite, nous pouvoir voir le titre de notre formulaire de contact 'Personal informations', suivi des champs de saisies à compléter par l'utilisateur.
@@ -374,7 +374,7 @@ Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `loc
 
 Voici comment nous l'avons représenté avec notre légende :
 
-![Legende simple form](/images/contact_legend.pdf "Légende Simple Form")
+![Legende simple form](/images/blog/contact_legend.pdf "Légende Simple Form")
 
 ## Particularité de StepBundle ##
 

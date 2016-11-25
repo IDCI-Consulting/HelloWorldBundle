@@ -15,7 +15,7 @@ Une fois de plus, nous allons travailler dans le fichier `DefaultController.php`
 
 Ici, nous créeons notre map et mettons en place cinq steps.
 
-![Legende simple form](/images/subscription_legend.pdf "Légende Simple Form")
+![Legende simple form](/images/blog/subscription_legend.pdf "Légende Simple Form")
 
 Si vous regardez les premières lignes de plus près dans l'exemple ci-dessous, vous trouverez l'URL de notre site : nous avons ajouté des paramètres précisant la destination finale. A la fin de notre formulaire, l'utilisateur est donc redirigé vers la page d'accueil d'IDCI Consulting.
 Aussi, grâce au paramètre "choice", nous avons mis en place un menu déroulant.
