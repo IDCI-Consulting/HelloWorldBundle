@@ -1,11 +1,9 @@
 # Comment créer un formulaire de contact avec StepBundle ? #
 
-
 ## Introduction ##
 
 Retour à notre StepBundle et son application effective : la création d'un formulaire de contact simple.
 Pour des renseignements concernant l'utilisation et l'installation de StepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
-
 
 ## Créer le formulaire de contact avec StepBundle ##
 
@@ -26,8 +24,8 @@ Nous allons travailler dans le fichier `DefaultController.php` du bundle crée p
 
 Commençons par créer une première action `contact` : 
 
-
 ```php
+// src/AppBundle/Controller/DefaultController.php
 <?php
 
 namespace AppBundle\Controller;
@@ -61,6 +59,9 @@ Puis, notre seule chemin (path) sera la soumission du formulaire qui mettra fin 
 Comme nous l'avons vu plus haut, il existe trois types de chemins : 'single', 'conditional' et 'end'. Dans notre cas, le type 'end' sera celui que nous allons utiliser.
 
 ```php
+    ...
+    public function contactAction(Request $request)
+    {
         $map = $this
             ->get('idci_step.map.builder.factory')
             ->createNamedBuilder('contact map')
@@ -85,15 +86,21 @@ Comme nous l'avons vu plus haut, il existe trois types de chemins : 'single', 'c
             )
             ->getMap($request)
         ;
+    }
 ```
 
 Notre map est maintenant prête, il faut maintenant créer le 'navigator' à partir de celle-ci : 
 
 ```php
+    ...
+    public function contactAction(Request $request)
+    {
+        ...
         $navigator = $this
             ->get('idci_step.navigator.factory')
             ->createNavigator($request, $map)
         ;
+    }
 ```
 
 Enfin, il faut définir les redirections à effectuer en fonction de la navigation réalisée par l'internaute. Trois cas sont possibles : 
@@ -103,6 +110,10 @@ Enfin, il faut définir les redirections à effectuer en fonction de la navigati
 
 
 ```php
+    ...
+    public function contactAction(Request $request)
+    {
+        ...
         if ($navigator->hasFinished()) {
             $navigator->clear();
 
@@ -120,6 +131,7 @@ Enfin, il faut définir les redirections à effectuer en fonction de la navigati
 Le travail dans le controleur est terminé, il ne nous reste plus qu'à afficher notre 'navigator' dans un template twig. Pour cela, éditons le ficher `Resources/views/Default/contact.html.twig` :
 
 ```twig
+{# src/AppBundle/Resources/views/Default/contact.html.twig #}
 {% extends "::base.html.twig" %}
 
 {% block stylesheets %}
@@ -152,9 +164,9 @@ Dans un premier temps, il nous faut donc créer notre `PathEventAction` :
 
 ```php
 <?php
-// src/IDCI/AppBundle/Path/Event/Action
+// src/AppBundle/Path/Event/Action
 
-namespace IDCI\AppBundle\Path\Event\Action;
+namespace AppBundle\Path\Event\Action;
 
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use IDCI\Bundle\StepBundle\Path\Event\Action\AbstractPathEventAction;
@@ -238,7 +250,7 @@ Voici le rendu final de notre `PathEventAction` :
 ```php
 <?php
 
-namespace IDCI\AppBundle\Path\Event\Action;
+namespace AppBundle\Path\Event\Action;
 
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use IDCI\Bundle\StepBundle\Path\Event\Action\AbstractPathEventAction;
@@ -318,29 +330,42 @@ StepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une ste
 
 Le système "d'évent" s'appuie donc sur les événements définis par le Framework pour les FormType, nous vous revoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
 
-//Je peux reprendre un schéma de Symfony comme exemple ou c'est mieux d'en refaire un ?
+/*Mettre un schéma*/
 
 
 ```php
-->addPath(
-    'end',
-    array(
-        'source'       => 'info',
-        'next_options' => array(
-            'label' => 'end',
-        ),
-        'events' => array(
-            'form.post_bind' => array(
+// src/AppBundle/Controller/DefaultController
+
+class DefaultController extends Controller
+{
+    ...
+    public function contactAction(Request $request)
+    {
+        $map = $this
+            ...
+            ->addPath(
+                'end',
                 array(
-                    'action'     => 'send_thanks_email',
-                    'parameters' => array(
-                        'email' => '{{ flow_data.data.info.email }}',
+                    'source'       => 'info',
+                    'next_options' => array(
+                        'label' => 'end',
+                    ),
+                    'events' => array(
+                        'form.post_bind' => array(
+                            array(
+                                'action'     => 'send_thanks_email',
+                                'parameters' => array(
+                                    'email' => '{{ flow_data.data.info.email }}',
+                                )
+                            )
+                        )
                     )
                 )
             )
-        )    
-    )
-)
+        ;
+        ...
+    }
+}
 ```
 
 Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
@@ -359,55 +384,57 @@ Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire
 Voici notre même exemple dans notre fichier `config.yml`: 
       
 ```yaml
+# app/config/config.yml
+....
 idci_step:
     maps:
         contact:
-            name: "contact"
+            name: 'contact'
             steps:
                 info:
-                    type: "form"
+                    type: 'form'
                     options:
-                        title: "Personal informations"
-                        description: "The personal data step"
+                        title: 'Personal informations'
+                        description: 'The personal data step'
                         @builder:
-                            worker: "form_builder"
+                            worker: 'form_builder'
                             parameters:
                                 fields:
                                     -
-                                        name: "first_name"
-                                        type: "text"
+                                        name: 'first_name'
+                                        type: 'text'
                                     -
-                                        name: "last_name"
-                                        type: "text"
+                                        name: 'last_name'
+                                        type: 'text'
                                     -
-                                        name: "phone_number"
-                                        type: "text"
+                                        name: 'phone_number'
+                                        type: 'text'
                                     -
-                                        name: "email"
-                                        type: "text"
+                                        name: 'email'
+                                        type: 'text'
             paths:
                 -
-                    type: "end"
+                    type: 'end'
                     options:
                         source: info
                         next_options:
-                            label: "end"
+                            label: 'end'
                         events:
                             form.post_bind:
                                 -
                                     action: send_thanks_email
                                     name: send_thanks_email
                                     parameters:
-                                        email: "{{ flow_data.data.info.email }}"
-       
+                                        email: '{{ flow_data.data.info.email }}'
 ```
 
 Dans le `DefaultController.php` :
 
 ```php
+// src/AppBundle/Controller/DefaultController
 <?php
 
-namespace IDCI\ContactBundle\Controller;
+namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -453,7 +480,7 @@ class DefaultController extends Controller
 
 ## Conclusion ##
 
-StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits.
+StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créant des `PathEventAction` et en les configurant selon vos souhaits.
 Il est aussi possible de créer des parcours plus complexes, comme nous le verrons dans notre prochain article.
 Puis, StepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
 

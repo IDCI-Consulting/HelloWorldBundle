@@ -5,17 +5,24 @@
 Une fois de plus, nous retournons à notre StepBundle, cette fois-ci, nous allons vous présenter une utilisation plus complexe : la création d'un processus d'inscription.
 Pour des renseignements concernant l'utilisation et l'installation de StepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
 
-
 ## Créer le processus d'inscription avec StepBundle ##
 
 Nous avons donc choisi de créer un parcours composé de plusieurs steps et de plusieurs paths.
 
 Pour cet exemple, nous avons choisi d'imaginer un extrait de processus d'inscription à l'université, en cela, le choix de l'utilisateur entre deux villes d'étude va changer la page de destination.
 
-
 Une fois de plus, nous allons travailler dans le fichier `DefaultController.php`
 
+Ici, nous créeons notre map et mettons en place cinq steps.
+
+![Legende simple form](/images/subscription_legend.pdf "Légende Simple Form")
+
+Si vous regardez les premières lignes de plus près dans l'exemple ci-dessous, vous trouverez l'URL de notre site : nous avons ajouté des paramètres précisant la destination finale. A la fin de notre formulaire, l'utilisateur est donc redirigé vers la page d'accueil d'IDCI Consulting.
+Aussi, grâce au paramètre "choice", nous avons mis en place un menu déroulant.
+Dans cet exemple, l'utilisateur choisit sa ville d'étude, Lyon ou Paris. En fonction de sa réponse, il sera redirigé vers les cursus d'une ville, ou de l'autre. Mais nous en rediscuterons en regardant les paths...
+
 ```php
+// src/AppBundle/Controller/DefaultController
 <?php
 
 namespace AppBundle\Controller;
@@ -25,7 +32,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use DateTime;
 
 class DefaultController extends Controller
 {
@@ -36,24 +42,12 @@ class DefaultController extends Controller
      * @Method({"GET", "POST"})
      * @Template()
      */
-       
-```
-
-Ici, nous créeons notre map et mettons en place cinq steps.
-
-/*Mettre illustration*/
-
-Si vous regardez les premières lignes de plus près, vous trouverez l'URL de Google : nous avons ajouté des paramètres précisant la destination finale. A la fin de notre formulaire, l'utilisateur est donc redirigé vers la page d'accueil de Google.
-Aussi, grâce au paramètre "choice", nous avons mis en place un menu déroulant.
-Dans cet exemple, l'utilisateur choisit sa ville d'étude, Lyon ou Paris. En fonction de sa réponse, il sera redirigé vers les cursus d'une ville, ou de l'autre. Mais nous en rediscuterons en regardant les paths...
-
-```php
     public function subscriptionAction(Request $request)
     {   
         $map = $this
             ->get('idci_step.map.builder.factory')
             ->createNamedBuilder('test map', array(), array (
-                'final_destination' => 'http://www.google.fr',
+                'final_destination' => 'http://www.idci-consulting.fr',
             ))
             ->addStep('personal', 'form', array(
                 'title'            => 'Personal information',
@@ -220,14 +214,12 @@ Dans cet exemple, l'utilisateur choisit sa ville d'étude, Lyon ou Paris. En fon
     }
 }
 ```
+
+// revenir sur le conditional destination path
+
 Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
 
 Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `localhost:8000/suscription` afin d'apprécier votre nouveau formulaire de contact.
-
-Voici comment nous l'avons représenté avec notre légende :
-
-![Legende simple form](/images/subscription_legend.pdf "Légende Simple Form")
-
 
 ### Particularité de StepBundle ###
 
@@ -237,43 +229,45 @@ Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire
 Voici notre même exemple dans notre fichier `config.yml`: 
 
 ```yaml
- subscription:
-            name: "subscription"
+idci_step:
+    maps:
+        subscription:
+            name: 'subscription'
             steps:
                 personal:
-                    type: "form"
+                    type: 'form'
                     options:
-                        title: "Personal informations"
-                        description: "The personal data step"
+                        title: 'Personal informations'
+                        description: 'The personal data step'
                         @builder:
-                            worker: "form_builder"
+                            worker: 'form_builder'
                             parameters:
                                 fields:
                                     -
-                                        name: "first_name"
-                                        type: "text"
+                                        name: 'first_name'
+                                        type: 'text'
                                     -
-                                        name: "last_name"
-                                        type: "text"
+                                        name: 'last_name'
+                                        type: 'text'
                                     -
-                                        name: "phone_number"
-                                        type: "text"
+                                        name: 'phone_number'
+                                        type: 'text'
                                     -
-                                        name: "email"
-                                        type: "text"
+                                        name: 'email'
+                                        type: 'text'
                                     -
-                                        name: "zip_code"
-                                        type: "text"
+                                        name: 'zip_code'
+                                        type: 'text'
                                     -
-                                        name: "city"
-                                        type: "text"
+                                        name: 'city'
+                                        type: 'text'
                 cursus:
-                    type: "form"
+                    type: 'form'
                     options:
-                        title: "Your course"
-                        description: "Course and studying city"
+                        title: 'Your course'
+                        description: 'Course and studying city'
                         @builder:
-                            worker: "form_builder"
+                            worker: 'form_builder'
                             parameters:
                                 fields:
                                     -
@@ -283,117 +277,118 @@ Voici notre même exemple dans notre fichier `config.yml`:
                                         name: 'university_level'
                                         type: 'Symfony\Component\Form\Extension\Core\Type\ChoiceType'
                                         options:
-                                            label: "What is your university level ?"
+                                            label: 'What is your university level ?'
                                             choices:
-                                                bac1: "Bac+1"
-                                                bac2: "Bac+2"
-                                                bac3: "Bac+3"
-                                                bac4: "Bac+4"
+                                                bac1: 'Bac+1'
+                                                bac2: 'Bac+2'
+                                                bac3: 'Bac+3'
+                                                bac4: 'Bac+4'
                                     -
                                         name: 'study_city'
                                         type: 'Symfony\Component\Form\Extension\Core\Type\ChoiceType'
                                         options:
-                                            label: "Where do you want to study ?"
+                                            label: 'Where do you want to study ?'
                                             choices:
-                                                lyon: "Lyon"
-                                                paris: "Paris"
+                                                Lyon: 'Lyon'
+                                                Paris: 'Paris'
                 cursus_lyon:
-                    type: "form"
+                    type: 'form'
                     options:
-                        title: "Welcome to Lyon, we hope you like quenelle of pike !"
-                        description: "The differents courses in Lyon"
+                        title: 'Welcome to Lyon, we hope you like quenelle of pike !'
+                        description: 'The differents courses in Lyon'
                         @builder:
-                            worker: "form_builder"
+                            worker: 'form_builder'
                             parameters:
                                 fields:
                                     -
-                                        name: "cursus"
-                                        type: "Symfony\Component\Form\Extension\Core\Type\ChoiceType"
+                                        name: 'cursus'
+                                        type: 'Symfony\Component\Form\Extension\Core\Type\ChoiceType'
                                         options:
                                             choices:
-                                                bts_comm: "HDN Communication"
-                                                bts_mktg: "HDN Marketing"
-                                                bachelor_comm: "Bachelor Communication"
-                                                bachelor_mktg: "Bachelor Marketing"
-                                                bachelor_digital: "Bachelor Digital"
-                                                master_comm: "Master degree Communication"
-                                                master_mktg: "Master degree Marketing"
-                                                master_digital: "Master degree Digital"
+                                                bts_comm: 'HDN Communication'
+                                                bts_mktg: 'HDN Marketing'
+                                                bachelor_comm: 'Bachelor Communication'
+                                                bachelor_mktg: 'Bachelor Marketing'
+                                                bachelor_digital: 'Bachelor Digital'
+                                                master_comm: 'Master degree Communication'
+                                                master_mktg: 'Master degree Marketing'
+                                                master_digital: 'Master degree Digital'
                 cursus_paris:
-                    type: "form"
+                    type: 'form'
                     options:
-                        title: "Welcome to Paris, we hope you like the subway !"
-                        description: "The differents courses in Paris"
+                        title: 'Welcome to Paris, we hope you like the subway !'
+                        description: 'The differents courses in Paris'
                         @builder:
-                            worker: "form_builder"
+                            worker: 'form_builder'
                             parameters:
                                 fields:
                                     -
-                                        name: "cursus"
-                                        type: "Symfony\Component\Form\Extension\Core\Type\ChoiceType"
+                                        name: 'cursus'
+                                        type: 'Symfony\Component\Form\Extension\Core\Type\ChoiceType'
                                         options:
                                             choices:
-                                                bts_comm: "HDN Communication"
-                                                bts_mktg: "HDN Marketing"
-                                                bts_business: "HDN Business"
-                                                bachelor_comm: "Bachelor Communication"
-                                                bachelor_mktg: "Bachelor Marketing"
-                                                bachelor_business: "Bachelor Business"
-                                                master_comm: "Master degree Communication"
-                                                master_mktg: "Master degree Marketing"
-                                                master_business: "Master degree Digital"
+                                                bts_comm: 'HDN Communication'
+                                                bts_mktg: 'HDN Marketing'
+                                                bts_business: 'HDN Business'
+                                                bachelor_comm: 'Bachelor Communication'
+                                                bachelor_mktg: 'Bachelor Marketing'
+                                                bachelor_business: 'Bachelor Business'
+                                                master_comm: 'Master degree Communication'
+                                                master_mktg: 'Master degree Marketing'
+                                                master_business: 'Master degree Digital'
                 end:
-                    type: "html"
+                    type: 'html'
                     options:
-                        title: "Inscription online"
-                        description: "Inscription done"
-                        content: "Thank you ! Please, join the proof of entitlement. Inscriptions.school@school.com"
+                        title: 'Inscription online'
+                        description: 'Inscription done'
+                        content: 'Thank you ! Please, join the proof of entitlement. Inscriptions.school@school.com'
             paths:
                 -
-                    type: "single"
+                    type: 'single'
                     options:
-                        source: "personal"
-                        destination: "cursus"
+                        source: 'personal'
+                        destination: 'cursus'
                         next_options:
-                            label: "next"
+                            label: 'next'
                 -
-                    type: "conditional_destination"
+                    type: 'conditional_destination'
                     options:
-                        source: "cursus"
+                        source: 'cursus'
                         destinations:
-                            cursus_lyon: "{{flow_data.data.cursus.study_city == 'lyon' }}"
-                            cursus_paris: "{{flow_data.data.cursus.study_city == 'paris' }}"
-                        default_destination: "cursus_paris"
+                            cursus_lyon: '{{flow_data.data.cursus.study_city == 'Lyon' }}'
+                            cursus_paris: '{{flow_data.data.cursus.study_city == 'Paris' }}'
+                        default_destination: 'cursus_paris'
                         next_options:
-                            label: "next"
+                            label: 'next'
                 -
-                    type: "single"
+                    type: 'single'
                     options:
-                        source: "cursus_lyon"
-                        destination: "end"
+                        source: 'cursus_lyon'
+                        destination: 'end'
                         next_options:
-                            label: "next"
+                            label: 'next'
                 -
-                    type: "single"
+                    type: 'single'
                     options:
-                        source: "cursus_paris"
-                        destination: "end"
+                        source: 'cursus_paris'
+                        destination: 'end'
                         next_options:
-                            label: "next"
+                            label: 'next'
                 -
-                    type: "end"
+                    type: 'end'
                     options:
-                        source: "end"
+                        source: 'end'
                         next_options:
-                            label: "end"
+                            label: 'end'
 ```
 
 Dans le `DefaultController.php` :
 
 ```php
+// src/AppBundle/Controller/DefaultController
 <?php
 
-namespace IDCI\ContactBundle\Controller;
+namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

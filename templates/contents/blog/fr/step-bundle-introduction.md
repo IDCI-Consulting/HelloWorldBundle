@@ -1,10 +1,8 @@
 # Introduction à StepBundle #
 
-
 ## Introduction ##
 
-
-Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une création de worflow conversationnel. 
+Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une création de worflow conversationnel.
 Il nous fallait pouvoir réaliser facilement des parcours interactifs avec un internaute et déclencher facilement différents évenements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre). L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être configurable (et non pas hardcodé).
 
 Nous avons testé d'autres bundles existants, qui semblaient répondre à notre problématique client, mais ceux-ci ne nous pas convaincu. En bas de page, nous avons ajouté un tableau comparatif de ces différents bundles.
@@ -18,9 +16,7 @@ Nous avons utilisé la métaphore de la navigation tout au long de notre dévelo
 
 Dans un premier temps, nous devons définir une map, et imaginer chaque écran (page web) comme une step, puis les lier entre elles en utilisant les paths qui ajouteront des boutons de navigation.
 
-
 > Remarque : cet article est destiné à Symfony 2.8
-
 
 ### Qu'est-ce qu'une map ? ###
 
@@ -38,7 +34,6 @@ Un path est un itinéraire qui a pour origine une step et pour destination zéro
     * le single : une seule destination
     * le conditionnel : plusieurs destinations en fonction de règles conditionnelles.
     * le end : le path qui détermine une fin de navigation.
-
 
 ## Légende ##
 
@@ -58,13 +53,11 @@ Voici une liste non exhaustive des cas d'utilisation de StepBundle : un formulai
 
 Sans plus attendre, rentrons dans le vif du sujet et partons à la rencontre de ce Bundle.
 
-
 Commençons par créer un projet Symfony en version 2.8, nous appelerons ce projet 'demo_step'.
 
 ```sh
 $ symfony new demo_step 2.8
 ```
-
 
 ## Installation ##
 
@@ -98,7 +91,7 @@ Enfin, enregistrons le bundle dans votre fichier `AppKernel.php` :
 public function registerBundles()
 {
     $bundles = array(
-        // ...
+        ...
         new JMS\SerializerBundle\JMSSerializerBundle(),
         new IDCI\Bundle\StepBundle\IDCIStepBundle(),
     );
