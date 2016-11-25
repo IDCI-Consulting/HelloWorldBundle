@@ -11,15 +11,16 @@ Nous avons testé d'autres bundles existants, qui semblaient répondre à notre 
 
 Ainsi, nous avons choisi de développer notre propre Bundle. En cela, nous avons pensé ce bundle générique et réutilisable.
 
-Cet article a pour vocation de vous le présenter au travers de deux exemples concrets.
+Cet article a pour vocation de vous présenter StepBundle. Dans nos articles suivants, nous rentrerons dans le vif du sujet et vous parlerons des spécifités de StepBundle au travers d'applications concretes.
 
 StepBundle permet de simplifier la création d'un parcours interactif à destination d'un internaute. Sa configuration se définie par un système de map (carte), de step (étape) et de path (chemin).
 Nous avons utilisé la métaphore de la navigation tout au long de notre développement.
 
-Dans un premier temps, vous devez définir une map, et imaginer chaque écran (page web) comme une step, puis les lier entre elles en utilisant les paths qui ajouteront des boutons de navigation.
+Dans un premier temps, nous devons définir une map, et imaginer chaque écran (page web) comme une step, puis les lier entre elles en utilisant les paths qui ajouteront des boutons de navigation.
 
 
 > Remarque : cet article est destiné à Symfony 2.8
+
 
 ### Qu'est-ce qu'une map ? ###
 
@@ -46,7 +47,7 @@ Nous allons utiliser un diagramme qui fera office de légende.
 * Les carrés représentent les steps.
 * Les flèches représentent les paths.
 
-![Legende StepBundle](demo_step/img/legendStepBundle.png "Légende StepBundle")
+![Legende StepBundle](/images/legend_StepBundle.png "Légende StepBundle")
 
 ## Pourquoi utiliser StepBundle ? ##
 
@@ -106,7 +107,8 @@ public function registerBundles()
 
 Notre Bundle est installé et prêt à l'emploi.
 
-Dans notre prochain article, nous testerons un cas concret d'utilisation du StepBundle : la création d'un formulaire de contact. Retrouvons nous ici /*mettre le lien*/
+
+Dans notre prochain article, nous testerons un cas concret d'utilisation du StepBundle : la création d'un formulaire de contact.
 
 
 Ci-dessous, voici notre fameux tableau comparatif des Bundles visant à mettre en valeur leurs points forts et leurs points faibles.

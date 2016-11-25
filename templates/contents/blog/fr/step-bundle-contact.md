@@ -9,7 +9,7 @@ Pour des renseignements concernant l'utilisation et l'installation de StepBundle
 
 ## Créer le formulaire de contact avec StepBundle ##
 
-Nous avons donc choisi de réaliser un parcours composé d'une seule step : un formulaire de contact, et un seul chemin représentant la soumission des données saisies. 
+Nous avons donc choisi de réaliser un parcours composé d'une seule step : un formulaire de contact, et un seul path représentant la soumission des données saisies. 
 Nous pouvons voir ce cas comme l'utilisation du contact form 7 de Wordpress à la sauce Symfony.
 
 Voici une illustration du rendu attendu.
@@ -146,9 +146,9 @@ Il est possible de brancher des events sur des paths ou des steps à n'importe q
 ### Créer un service pour notre event d'envoi de mail ###
 
 Nous pouvons considérer un service comme une classe qui est rendue accessible partout dans notre application.
-Dans un premier temps, il nous faut créer notre `PathEventAction` :
+Dans un premier temps, il nous faut donc créer notre `PathEventAction` :
 
-_Remarque : Pour l'envoi de notre mail, nous avons utiliser la librairie Swif Mailer, nous vous renvoyons à la doc Symfony (.en) : [Doc Swift Mailer](http://symfony.com/doc/current/email.html)._
+> Remarque : Pour l'envoi de notre mail, nous avons utilisé la librairie Swif Mailer, nous vous renvoyons à la doc Symfony (.en) : [Doc Swift Mailer](http://symfony.com/doc/current/email.html)._
 
 ```php
 <?php
@@ -312,13 +312,13 @@ Ainsi, dans la configuration du parcours, nous pourrons utiliser notre service g
 
 ### Utiliser le service ###
 
-Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier configuration.
+Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier `DefaultController.php`.
 
 StepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant des input de type "submit" pour envoyer les données de la step en cours.
 
 Le système "d'évent" s'appuie donc sur les événements définis par le Framework pour les FormType, nous vous revoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
 
-/*Schéma illustration*/
+//Je peux reprendre un schéma de Symfony comme exemple ou c'est mieux d'en refaire un ?
 
 
 ```php
@@ -349,10 +349,9 @@ Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `loc
 
 Voici comment nous l'avons représenté avec notre légende :
 
-![Legende simple form](demo_step/img/legend_simple_form.png "Légende Simple Form")
+![Legende simple form](/images/contact_legend.pdf "Légende Simple Form")
 
 ## Particularité de StepBundle ##
-
 
 Nous avons vu comment déclarer un configuration dans le Controller, cependant, StepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`. 
 Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
@@ -449,48 +448,14 @@ class DefaultController extends Controller
 
         return array('navigator' => $navigator);
     }
-
-    /**
-     * @Route("/subscription/", name="subscription")
-     *
-     *
-     * @Method({"GET", "POST"})
-     * @Template("AppBundle:Default:defaultForm.html.twig")
-     */
-    public function subscriptionAction(Request $request)
-    {
-        $navigator = $this
-            ->get('idci_step.navigator.factory')
-            ->createNavigator(
-            $request,
-            'subscription'
-            )
-        ;
-
-        if ($navigator->hasFinished()) {
-            $navigator->clear();
-
-            return $this->redirect($navigator->getFinalDestination());
-        }
-        if ($navigator->hasNavigated() || $navigator->hasReturned()) {
-            return $this->redirect($this->generateUrl('subscription', $navigator->getUrlQueryParameters()));
-        }
-
-        return array('navigator' => $navigator);
-    }
 }
 ```
 
-
-/*A mettre en forme*/
-
-
-
 ## Conclusion ##
 
-StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci selon vos souhaits.
-Il est aussi possible de créer des parcours plus complexes, comme nous le verrons dans cet article /*mettre le lien ici*/.
-StepBundle permet aussi de faire des modifications dans la configuration, sans avoir besoin de retourner dans le Controller, ce qui "est moins lourd" /*REVOIR CETTE TOURNURE*/
+StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits.
+Il est aussi possible de créer des parcours plus complexes, comme nous le verrons dans notre prochain article.
+Puis, StepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
 
 N'hésitez pas à nous faire vos retours.
 

@@ -13,7 +13,6 @@ Nous avons donc choisi de créer un parcours composé de plusieurs steps et de p
 Pour cet exemple, nous avons choisi d'imaginer un extrait de processus d'inscription à l'université, en cela, le choix de l'utilisateur entre deux villes d'étude va changer la page de destination.
 
 
-
 Une fois de plus, nous allons travailler dans le fichier `DefaultController.php`
 
 ```php
@@ -221,9 +220,21 @@ Dans cet exemple, l'utilisateur choisit sa ville d'étude, Lyon ou Paris. En fon
     }
 }
 ```
+Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
+
+Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `localhost:8000/suscription` afin d'apprécier votre nouveau formulaire de contact.
+
+Voici comment nous l'avons représenté avec notre légende :
+
+![Legende simple form](/images/subscription_legend.pdf "Légende Simple Form")
 
 
-### La conf ###
+### Particularité de StepBundle ###
+
+Nous avons vu comment déclarer un configuration dans le Controller, cependant, StepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`. 
+Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
+
+Voici notre même exemple dans notre fichier `config.yml`: 
 
 ```yaml
  subscription:
@@ -377,11 +388,62 @@ Dans cet exemple, l'utilisateur choisit sa ville d'étude, Lyon ou Paris. En fon
                             label: "end"
 ```
 
+Dans le `DefaultController.php` :
+
+```php
+<?php
+
+namespace IDCI\ContactBundle\Controller;
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+class DefaultController extends Controller
+{
+/**
+     * @Route("/subscription/", name="subscription")
+     *
+     *
+     * @Method({"GET", "POST"})
+     * @Template("AppBundle:Default:defaultForm.html.twig")
+     */
+    public function subscriptionAction(Request $request)
+    {
+        $navigator = $this
+            ->get('idci_step.navigator.factory')
+            ->createNavigator(
+            $request,
+            'subscription'
+            )
+        ;
+
+        if ($navigator->hasFinished()) {
+            $navigator->clear();
+
+            return $this->redirect($navigator->getFinalDestination());
+        }
+        if ($navigator->hasNavigated() || $navigator->hasReturned()) {
+            return $this->redirect($this->generateUrl('subscription', $navigator->getUrlQueryParameters()));
+        }
+
+        return array('navigator' => $navigator);
+    }
+}
+```
+
+## Conclusion ##
+
+StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
+
+Puis, StepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
+
+N'hésitez pas à nous faire vos retours.
+
+Si vous avez besoin d'aide ou d'une expertise, vous pouvez [nous contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
 
 
-## Les events ##
-
-Dans un deuxième temps, nous allons vous parler des fonctionnalités plus avancées du StepBundle : les events.
-Ceux-ci vont vous permettre de personnaliser vos steps et vos paths.
 
 
