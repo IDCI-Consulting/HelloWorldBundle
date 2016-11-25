@@ -374,7 +374,7 @@ Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `loc
 
 Voici comment nous l'avons représenté avec notre légende :
 
-![Legende simple form](/images/blog/contact_legend.pdf "Légende Simple Form")
+![Legende simple form](/images/blog/stepBundle_contact.png "Légende Simple Form")
 
 ## Particularité de StepBundle ##
 
