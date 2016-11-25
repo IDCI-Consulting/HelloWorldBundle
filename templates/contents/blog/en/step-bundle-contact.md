@@ -1,28 +1,28 @@
-# Comment créer un formulaire de contact avec StepBundle ? #
+# How to create a contact form with StepBundle ? #
 
 ## Introduction ##
 
-Retour à notre StepBundle et son application effective : la création d'un formulaire de contact simple.
-Pour des renseignements concernant l'utilisation et l'installation de StepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
+Back to our StepBundle and its effective application : the creation of a simple contact form. 
+If you need more informations about StepBundle's using and installation, you could read our introduction article here /*mettre le lien*/
 
-## Créer le formulaire de contact avec StepBundle ##
+## Create the contact form with StepBundle ##
 
-Nous avons donc choisi de réaliser un parcours composé d'une seule step : un formulaire de contact, et un seul path représentant la soumission des données saisies. 
-Nous pouvons voir ce cas comme l'utilisation du contact form 7 de Wordpress à la sauce Symfony.
+So, we have chosen to realize a process composed of one step : a contact form, and one path representing input datas's submission .
+We can imagine this case as the utilisation of WordPress's contact form 7 with the Symfony touch.
 
-Voici une illustration du rendu attendu.
+Here's an illustration of the rendering : 
 
 ![Screenshot Contact Form](/images/blog/screenshot_contact_form.png "Screenshot Contact Form")
 
-Dans la barre de recherche, nous avons notre ```localhost:8000``` suivi de la route que nous avons préalablement configuré : ```/contact```.
-Ensuite, nous pouvoir voir le titre de notre formulaire de contact 'Personal informations', suivi des champs de saisies à compléter par l'utilisateur.
-Comme notre formulaire ne se compose que d'une seule step et d'une seule path, notre bouton n'est pas 'next' mais bien 'end'.
+In the search bar, we have our ```localhost:8000``` follow by the route we previously set up : ```/contact```.
+Then, we can see the title of our contact form 'Personal informations', follow by input fields that the user will complete.
+As our form is composed by one step and one path, our button is not "next", but "end".
 
-Prêt à commencer avec StepBundle ? 
+Ready to start with StepBundle ?
 
-Nous allons travailler dans le fichier `DefaultController.php` du bundle crée par défaut `AppBundle`.
+We will work in the bundle's `DefaultController.php` file  created by default `AppBundle`.
 
-Commençons par créer une première action `contact` : 
+Let's start by creating a first action `contact` : 
 
 ```php
 // src/AppBundle/Controller/DefaultController.php
@@ -51,12 +51,12 @@ class DefaultController extends Controller
     }
 ```
 
-Dans cette action, nous allons définir notre première map. 
-Celle-ci se compose donc d'une seule step qui affichera un formulaire afin d'y saisir des données. Comme nous l'avons vu plus haut, il existe de base deux types de steps : 'html' et 'form'. Dans notre cas, le type 'form' sera celui que nous allons utiliser. Grâce à celui-ci, nous allons pouvoir définir l'ensemble des champs de saisie que nous voulons afficher à l'internaute.
-Dans notre exemple, nous demanderons le prénom, le nom, le numéro de téléphone et l'adresse email.
- 
-Puis, notre seul chemin (path) sera la soumission du formulaire qui mettra fin à notre navigation. 
-Comme nous l'avons vu plus haut, il existe trois types de chemins : 'single', 'conditional' et 'end'. Dans notre cas, le type 'end' sera celui que nous allons utiliser.
+In this action, we will define our first map.
+So, this is composed of one step which will display a form in order to enter datas. As we had seen it above, there are two types of steps by default : 'html' and 'form'. In our case, the 'form' type will be the one we will use. Thanks to this, we will define all the input fields we want to display to the user.
+In our example, we will ask first name, last name, phone number and email adress.
+
+Then, our own path will be the submission of the form which will end the navigation.
+As we have seen it above, it exists three typs of paths : 'single', 'conditional' and 'end'. In our case, the 'end' type will be the one we will use.
 
 ```php
     ...
@@ -89,7 +89,7 @@ Comme nous l'avons vu plus haut, il existe trois types de chemins : 'single', 'c
     }
 ```
 
-Notre map est maintenant prête, il faut donc créer le 'navigator' à partir de celle-ci : 
+Our map is ready now. You have to create the 'navigator' from this one:
 
 ```php
     ...
@@ -103,10 +103,11 @@ Notre map est maintenant prête, il faut donc créer le 'navigator' à partir de
     }
 ```
 
-Enfin, il faut définir les redirections à effectuer en fonction de la navigation réalisée par l'internaute. Trois cas sont possibles : 
-    * Fin de navigation : lorsque l'on emprunte un chemin de type 'end'.
-    * Navigation : lorsque l'on emprunte un chemin de type 'single' ou 'conditional'.
-    * Le retour : lorsque l'on décide de retourner à une step précédente.
+Finally, you have to define the redirections to make according to the navigation realized by the user.
+Three cases are possible :
+   * End of navigation : when you follow a route of 'end' type
+   * Navigation : when you follow a path of 'single' or 'conditional' type
+   * Return : when you decide to go back to a previous step
 
 
 ```php
@@ -128,7 +129,8 @@ Enfin, il faut définir les redirections à effectuer en fonction de la navigati
 }
 ```
 
-Le travail dans le controleur est terminé, il ne nous reste plus qu'à afficher notre 'navigator' dans un template twig. Pour cela, éditons le ficher `Resources/views/Default/contact.html.twig` :
+We have now finished to work in our controller, we just have to diplay our 'navigator' in a twig template.
+We have to edit our file `Resources/views/Default/contact.html.twig` :
 
 ```twig
 {# src/AppBundle/Resources/views/Default/contact.html.twig #}
@@ -149,18 +151,18 @@ Le travail dans le controleur est terminé, il ne nous reste plus qu'à afficher
 {% endblock %}
 ```
 
-## Les events : générer un envoi de mail ##
+## Events : generate an email's sending ## 
 
-Les events définissent les actions de notre parcours (steps, paths), nous en avons crée quelques uns qui sont présents par défaut, mais il est possible d'en créer soi même. 
-Pour notre exemple, nous allons mettre en place un event pour envoyer un email à la fin de notre step (lors du clic sur le bouton `end`).
-Il est possible de brancher des events sur des paths ou des steps à n'importe quel moment de votre parcours.
+Events define actions of our process (steps, paths), we have created a few which are present by default, but it is possible to create some.
+For our example, we will create an event to send an email at the end of our step (when the user clics on `end` button).
+It's possible to connect events on paths or steps any time of your process.
 
-### Créer un service pour notre event d'envoi de mail ###
+### Create a service to our event ###
 
-Nous pouvons considérer un service comme une classe qui est rendue accessible partout dans notre application.
-Dans un premier temps, il nous faut donc créer notre `PathEventAction` :
+We can considere a service as a class which is accessible every where in our application.
+In a first phase, we have to create a `PathEventAction` :
 
-> Remarque : Pour l'envoi de notre mail, nous avons utilisé la librairie Swif Mailer, nous vous renvoyons à la doc Symfony (.en) : [Doc Swift Mailer](http://symfony.com/doc/current/email.html)._
+> Note : To send our email, we have used the Swift Mailer library, you can read the Symfony documentation : [Doc Swift Mailer](http://symfony.com/doc/current/email.html)._
 
 ```php
 <?php
@@ -204,7 +206,8 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
     }
 }
 ```
-La fonction `setDefaultParameters` nous permet de définir nos paramètres. Dans notre cas, nous avons besoin d'un seul paramètre : l'adresse vers laquelle nous enverrons l'email.
+
+The `setDefaultParameters` function allows us to define our parameters. In our cas, we just need one parametre : the email adress.
 
 ```php
 /**
@@ -222,7 +225,7 @@ protected function setDefaultParameters(OptionsResolverInterface $resolver)
 }
 ```
 
-La fonction `doExecute`, comme son nom l'indique, va permettre à l'action de s'éxécuter. C'est donc dans le corps de cette fonction que nous allons écrire le bout de code nous permettant de créer l'envoi de mail.
+The `doExecute` function, as its name said, will allow to the action to execute itself. So, it's in this function's body that we will write the code allowing us to create the email's sending.
 
 ```php
 /**

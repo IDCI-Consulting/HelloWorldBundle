@@ -25,22 +25,22 @@ Une map définit le workflow de navigation, elle se compose de steps et de paths
 ### Qu'est-ce qu'une step ? ###
 
 Une step se matérialise par une page web, et définit un potentiel point de passage. Elle peut être de différents types. Par défaut, notre bundle fournit deux types :
-    * html : affichage d'un contenu HTML.
-    * form : affichage d'un formulaire (FormType Symfony).
+   * html : affichage d'un contenu HTML
+   * form : affichage d'un formulaire (FormType Symfony)
 
 ### Qu'est-ce qu'un path ? ###
 
 Un path est un itinéraire qui a pour origine une step et pour destination zéro ou plusieurs steps. Il peut être de différents types. Par défaut, notre bundle fournit trois types : 
-    * le single : une seule destination
-    * le conditionnel : plusieurs destinations en fonction de règles conditionnelles.
-    * le end : le path qui détermine une fin de navigation.
+   * le single : une seule destination
+   * le conditionnel : plusieurs destinations en fonction de règles conditionnelles.
+   * le end : le path qui détermine une fin de navigation.
 
 ## Légende ##
 
 Nous allons utiliser un diagramme qui fera office de légende.
 
-* Les carrés représentent les steps.
-* Les flèches représentent les paths.
+   * Les carrés représentent les steps.
+   * Les flèches représentent les paths.
 
 ![Legende StepBundle](/images/blog//legend_StepBundle.png "Légende StepBundle")
 
@@ -53,7 +53,7 @@ Voici une liste non exhaustive des cas d'utilisation de StepBundle : un formulai
 
 Sans plus attendre, rentrons dans le vif du sujet et partons à la rencontre de ce Bundle.
 
-Commençons par créer un projet Symfony en version 2.8, nous appelerons ce projet 'demo_step'.
+Commençons par créer un projet Symfony en version 2.8, nous appelerons ce projet `demo_step`.
 
 ```sh
 $ symfony new demo_step 2.8
