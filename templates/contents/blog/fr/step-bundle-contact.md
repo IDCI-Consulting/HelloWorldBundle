@@ -152,7 +152,7 @@ Le travail dans le controleur est terminé, il ne nous reste plus qu'à afficher
 ## Les events : générer un envoi de mail ##
 
 Les events définissent les actions de notre parcours (steps, paths), nous en avons crée quelques uns qui sont présents par défaut, mais il est possible d'en créer soi même. 
-Pour notre exemple, nous allons mettre en place un event pour envoyer un email à la fin de notre step (lors du clic sur le bouton `end`).
+Pour notre exemple, nous allons mettre en place un event visant à envoyer un email à la fin de notre step (lors du clic sur le bouton `end`).
 Il est possible de brancher des events sur des paths ou des steps à n'importe quel moment de votre parcours.
 
 ### Créer un service pour notre event d'envoi de mail ###
@@ -212,7 +212,7 @@ La fonction `setDefaultParameters` nous permet de définir nos paramètres. Dans
  */
 protected function setDefaultParameters(OptionsResolverInterface $resolver)
 {
-    // on défini un paramètre 'email' qui est un string et est requis
+    // définition d'un paramètre 'email' qui est un string et est obligatoire
     $resolver
         ->setRequired(array('email'))
         ->setAllowedTypes(array(
