@@ -1,9 +1,9 @@
-# Comment créer un parcours complexe avec StepBundle ? #
+# Comment créer un parcours complexe avec IDCIStepBundle ? #
 
 ## Introduction ##
 
-Une fois de plus, nous retournons à notre StepBundle, cette fois-ci, nous allons vous présenter une utilisation plus complexe : la création d'un processus d'inscription.
-Pour des renseignements concernant l'utilisation et l'installation de StepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
+Une fois de plus, nous retournons à notre IDCIStepBundle, cette fois-ci, nous allons vous présenter une utilisation plus complexe : la création d'un processus d'inscription.
+Pour des renseignements concernant l'utilisation et l'installation de IDCIStepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
 
 ## Créer le processus d'inscription avec StepBundle ##
 
@@ -43,7 +43,7 @@ class DefaultController extends Controller
      * @Template()
      */
     public function subscriptionAction(Request $request)
-    {   
+    {
         $map = $this
             ->get('idci_step.map.builder.factory')
             ->createNamedBuilder('test map', array(), array (
@@ -221,12 +221,12 @@ Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
 
 Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `localhost:8000/subscription` afin d'apprécier votre nouveau parcours d'inscription.
 
-### Particularité de StepBundle ###
+### Particularité de IDCIStepBundle ###
 
-Nous avons vu comment déclarer un configuration dans le Controller, cependant, StepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`. 
+Nous avons vu comment déclarer un configuration dans le Controller, cependant, IDCIStepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`.
 Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
 
-Voici notre même exemple dans notre fichier `config.yml`: 
+Voici notre même exemple dans notre fichier `config.yml`:
 
 ```yaml
 idci_step:
@@ -429,17 +429,17 @@ class DefaultController extends Controller
 }
 ```
 
-## Les events ##
+## Les event actions ##
 
-Comme nous l'avons vu dans notre article précédent, les events définissent les actions de notre parcours (steps, paths). Nous en avons crée quelques uns qui sont présents par défaut, mais il est possible d'en créer soi même. 
-Pour notre exemple, nous allons mettre en place un event visant à sauvegarder en base les données de l'utilisateur à la fin de notre step (lors du clic sur le bouton `end`).
-Il est possible de brancher des events sur des paths ou des steps à n'importe quel moment de votre parcours.
+Les `event actions` définissent les actions à éxécuter lors de notre navigation (steps, paths), nous en avons mis en place quelques uns qui sont présents par défaut avec IDCIStepBundle, mais il est possible d'en créer soi même.
+Pour notre exemple, nous allons mettre en place un event action visant à sauvegarder en base les données de l'utilisateur à la fin de notre step (lors du clic sur le bouton `end`).
+Il est possible de brancher des `event actions` sur des `paths` ou des `steps` à n'importe quel moment de votre parcours.
 
 Pré-requis :
 - Doctrine
 - Entity Manager
 
-### Créer un service pour notre event de sauvegarde de données ###
+### Créer un service pour notre event action de sauvegarde de données ###
 
 Nous pouvons considérer un service comme une classe qui est rendue accessible partout dans notre application.
 Dans un premier temps, il nous faut donc créer notre `PathEventAction` :
@@ -628,9 +628,9 @@ Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut 
 ### Utiliser le service ###
 
 
-StepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant des input de type "submit" pour envoyer les données de la step en cours.
+IDCIStepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant des input de type "submit" pour envoyer les données de la step en cours.
 
-Le système "d'évent" s'appuie donc sur les événements définis par le Framework pour les FormType, nous vous revoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
+Le système `d'event` s'appuie donc sur les événements définis par le Framework pour les FormType, nous vous revoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
 
 Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier `config.yml`. Il nous suffit d'ajouter ces quelques lignes à la fin de notre path `end`:
 
@@ -650,8 +650,8 @@ Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous 
 ### Créer l'entity_manager ###
 
 Enfin, nous devons créer notre entity manager, celui-ci va effectuer les requêtes SQL.
-// Principe d'encapsulation + doc ? 
-// Parler des champs 
+// Principe d'encapsulation + doc ?
+// Parler des champs
 Nous allons donc créer un fichier `subscription.php` :
 
 ```php
@@ -997,7 +997,7 @@ use Doctrine\ORM\Mapping as ORM;
 }
 ```
 
-Nous avons maintenant notre table `subscription` avec les informations de mapping 
+Nous avons maintenant notre table `subscription` avec les informations de mapping
 Ensuite, il nous faut créer une table correspondante dans la base de données, voici la commande :
 
 $ php bin/console doctrine:schema:update --force
@@ -1011,14 +1011,11 @@ Pour montrer que l'event marche, //screenshot de la fin du parcours
 
 ## Conclusion ##
 
-StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
 
-Puis, StepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
+IDCIStepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
+
+Puis, IDCIStepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
 
 N'hésitez pas à nous faire vos retours.
 
 Si vous avez besoin d'aide ou d'une expertise, vous pouvez [nous contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
-
-
-
-

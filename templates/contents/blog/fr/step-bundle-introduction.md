@@ -62,7 +62,7 @@ Commençons par créer un projet Symfony en version 2.8, nous appelerons ce proj
 
 
 ```sh
-$ symfony new demo_step 2.8 -> Faire avec composer
+$ composer create-project symfony/framework-standard-edition my_project_name "2.8.*"
 ```
 
 ## Installation ##
@@ -79,13 +79,13 @@ Ajoutons la dépendance avec notre bundle, en modifiant le fichier `composer.jso
 Ou en éxécutant la commande composer suivante :
 
 ```sh
-composer require idci/step-bundle:~1.5
+$ composer require idci/step-bundle:~1.5
 ```
 
 Puis, installons cette nouvelle dépendance en utilisant composer :
 
 ```sh
-$ php composer.phar update
+$ composer update
 ```
 
 Puis, déclarons le bundle dans votre fichier `AppKernel.php` :
@@ -109,7 +109,7 @@ Enfin, ajoutons les spécificités de configuration de ce Bundle à notre applic
 ```yaml
 imports:
     ...
-    - { resource: @IDCIStepBundle/Resources/config/config.yml}
+    - { resource: @IDCIStepBundle/Resources/config/config.yml }
 ```
 
 Notre Bundle est installé et prêt à l'emploi.

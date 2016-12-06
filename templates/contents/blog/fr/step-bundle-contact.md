@@ -314,7 +314,7 @@ Nous avons donc crée notre `PathEventAction`. Déclarons le pour que celui-ci s
 ```yml
 services:
     idci_step.path_event.action.send_thanks_email:
-        class: IDCI\AppBundle\Path\Event\Action\SendThanksEmailPathEventAction
+        class: AppBundle\Path\Event\Action\SendThanksEmailPathEventAction
         arguments: [@mailer]
         tags:
             - { name: idci_step.path_event.action, alias: send_thanks_email }
@@ -328,7 +328,7 @@ Pour utiliser notre nouveau service et ainsi brancher notre event action, rendon
 
 IDCIStepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant les input de type "submit" pour envoyer les données de la step en cours.
 
-Le système "d'évent" s'appuie donc sur les événements définis par le Framework pour les FormType.
+Le système `d'event` s'appuie donc sur les événements définis par le Framework pour les FormType.
 
 Nous vous renvoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
 
