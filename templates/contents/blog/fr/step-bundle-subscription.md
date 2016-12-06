@@ -635,6 +635,7 @@ Le système "d'évent" s'appuie donc sur les événements définis par le Framew
 Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier `config.yml`. Il nous suffit d'ajouter ces quelques lignes à la fin de notre path `end`:
 
 ```yaml
+                ...
                     type: "end"
                     options:
                         source: "end"
@@ -1009,8 +1010,6 @@ Pour montrer que l'event marche, //screenshot de la fin du parcours
 // Aller chercher des objets dans la base de données ?
 
 ## Conclusion ##
-
-// Retravailler la conclusion, plus spécifique
 
 StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
 
