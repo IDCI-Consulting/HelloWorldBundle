@@ -88,7 +88,7 @@ Puis, installons cette nouvelle dépendance en utilisant composer :
 $ composer update
 ```
 
-Puis, déclarons le bundle dans votre fichier `AppKernel.php` :
+Déclarons le bundle dans votre fichier `AppKernel.php` :
 
 ```php
 <?php
@@ -114,9 +114,7 @@ imports:
 
 Notre Bundle est installé et prêt à l'emploi.
 
-
 Dans notre prochain article, nous testerons un cas concret d'utilisation du StepBundle : la création d'un formulaire de contact.
-
 
 Ci-dessous, voici notre fameux tableau comparatif des Bundles visant à mettre en valeur leurs points forts et leurs points faibles.
 

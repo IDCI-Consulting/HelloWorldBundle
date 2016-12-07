@@ -162,6 +162,8 @@ Dans un premier temps, il nous faut donc créer notre `PathEventAction` :
 
 > Remarque : Pour l'envoi de notre mail, nous avons utilisé la librairie Swift Mailer, nous vous renvoyons à la doc Symfony (.en) : [Doc Swift Mailer](http://symfony.com/doc/current/email.html)._
 
+> N'oublier pas de configurer le Mailer
+
 ```php
 <?php
 // src/AppBundle/Path/Event/Action
@@ -309,9 +311,11 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 
 ### Déclarer notre event action en tant que service ###
 
-Nous avons donc crée notre `PathEventAction`. Déclarons le pour que celui-ci soit accessible depuis le `container`. Pour cela, nous nous rendons dans le fichier `services.yml` :
+Nous avons donc crée notre `PathEventAction`. Déclarons le pour que celui-ci soit accessible depuis le `container`. Pour cela, nous éditons le fichier `services.yml` :
 
 ```yml
+// src/AppBundle/Resources/config
+
 services:
     idci_step.path_event.action.send_thanks_email:
         class: AppBundle\Path\Event\Action\SendThanksEmailPathEventAction
@@ -455,7 +459,7 @@ class DefaultController extends Controller
      *
      *
      * @Method({"GET", "POST"})
-     * @Template("AppBundle:Default:defaultForm.html.twig")
+     * @Template("AppBundle:Default:contact.html.twig")
      */
     public function contactAction(Request $request)
     {

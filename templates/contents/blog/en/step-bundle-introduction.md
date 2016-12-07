@@ -1,17 +1,17 @@
-## Introduction to StepBundle ##
+## Introduction to IDCIStepBundle ##
 
 ## Introduction ##
 
 Further to a customer need, we asked ourself how to answer to the problematic of a conversational worflow's creation.
-We wanted to realize easily some interactives processes with an internet user and trigger differents events (sending an email, backup on database, call to a web service) according to users actions (transition of a step to an other). The evolution of processes complexity was an important point, whole of the workflow needed to be configurable (and not hardcode).
+We wanted to realize easily some interactives processes with an internet user and trigger differents events (send an email, backup on database, call to a web service) according to users actions (transition of a step to an other). The evolution of processes complexity was an important point, whole of the workflow needed to be configurable (and not hardcode).
 
 We have tested some existing bundles, which seems to answer to our customer problematic, but these did not convinced us. At the bottom of the page, we have added a table comparative of these differents bundles.
 
 In this way, we have chosen to develop our own bundle. In that, we thought this bundle generic and reusable.
 
-This article intended to present you StepBundle. In our next articles, we will get to the heart of the matter and speak of StepBundle specificities by concrete applications.
+This article intended to present you IDCIStepBundle. In our next articles, we will get to the heart of the matter and speak of IDCIStepBundle specificities by concrete examples.
 
-StepBundle allows you to simplify the interactive process's creation bound for the internet user. Its setup define itslef by a system of map, step and path.
+IDCIStepBundle allows you to simplify the interactive process's creation bound for the internet user. Its setup define itself by a system of map, step and path.
 We have used the navigation metaphor throughout our whole development.
 
 In the first time, we have to define a map and imagine every screen (web page) as a step, then link itselves by using paths which will add navigations's buttons.
@@ -42,26 +42,31 @@ We will use a diagram which be used as a legend.
    * Squares represents steps
    * Array reprents paths
 
-![StepBundle legend](/images/blog//legend_StepBundle.png "StepBundle legend")
+![IDCIStepBundle legend](/images/blog//legend_StepBundle.png "IDCIStepBundle legend")
 
-## Why use StepBundle ? ##
+## Why use IDCIStepBundle ? ##
 
-StepBundle allows to organize a simple process (one step, one path) but also a complex process (several steps and paths). You can start easily from a configuration, which represent the map, by using the language `yml` or `json`.
+IDCIStepBundle allows to organize a simple process (one step, one path) but also a complex process (several steps and paths). You can start easily from a configuration, which represent the map, by using the language `yml` or `json`.
 You could also represente a map by using directly the object programmation, but this is maybe more complicated for non initiated in code and object programmation.
 
-Here's a non exhaustive list of use cases of StepBundle ; contact form, inscription process, questionnaire, survey, etc.
+Here's a non exhaustive list of use cases of StepBundle ;
+ * contact form
+ * inscription process
+ * questionnaire
+ * survey
+ * etc.
 
 Let's cut to chase et meet this Bundle !
 
 Start by create a Symfony project in 2.8 version, we will name this project `demo_step`.
 
 ```sh
-$ symfony new demo_step 2.8
+$ composer create-project symfony/framework-standard-edition my_project_name "2.8.*"
 ```
 
 ## Installation ##
 
-Let's declare dependencies, by modifiying the file `composer.json` :
+Let's declare the dependencie, by modifiying the file `composer.json` :
 
 ```json
 "require": {
@@ -111,4 +116,3 @@ CraueFormFlow
 Kitpage
 Sylius Flow Bundle
 SURFnet SamlBundle
-
