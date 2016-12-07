@@ -12,7 +12,7 @@ Nous pouvons voir ce cas comme l'utilisation du contact form 7 de Wordpress à l
 
 Voici une illustration du rendu attendu.
 
-![Screenshot Contact Form](/images/blog/screenshot_contact_form.png "Screenshot Contact Form")
+![Step Bundle Contact Form URL](/images/blog/stepBundle_contact_url.png "Contact Form URL")
 
 Dans la barre de recherche, nous avons notre `localhost:8000` suivi de la route que nous avons préalablement configuré : `/contact`.
 Ensuite, nous pouvoir voir le titre de notre formulaire de contact 'Personal informations', suivi des champs de saisies à compléter par l'utilisateur.
@@ -334,8 +334,8 @@ Nous vous renvoyons à la doc Symfony pour en savoir plus: [Les Form Events](htt
 
 Voici deux schémas explicatifs :
 
-![StepBundle Form Events](/images/blog/stepBundle_FormType.png "StepBundle Form Events")
-![StepBundle Form Events](/images/blog/stepBundle_FormType2.png "StepBundle Form Events")
+![StepBundle Form Events](/images/blog/stepBundle_FormEvent1.png "StepBundle Form Events")
+![StepBundle Form Events](/images/blog/stepBundle_FormEvent2.png "StepBundle Form Events")
 
 
 ```php

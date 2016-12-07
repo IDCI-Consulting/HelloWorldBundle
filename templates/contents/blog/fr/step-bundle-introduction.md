@@ -42,7 +42,7 @@ Nous allons utiliser un diagramme qui fera office de légende.
    * Les carrés représentent les steps.
    * Les flèches représentent les paths.
 
-![Legende StepBundle](/images/blog//legend_StepBundle.png "Légende StepBundle")
+![Legende StepBundle](/images/blog//stepBundle_legend.png "Légende StepBundle")
 
 ## Pourquoi utiliser StepBundle ? ##
 

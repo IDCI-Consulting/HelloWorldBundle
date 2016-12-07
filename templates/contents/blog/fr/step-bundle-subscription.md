@@ -13,9 +13,9 @@ Pour cet exemple, nous avons choisi d'imaginer un extrait de processus d'inscrip
 
 Une fois de plus, nous allons travailler dans le fichier `DefaultController.php`
 
-Ici, nous créeons notre map et mettons en place cinq steps :
+Voici une illustration du rendu attendu.
 
-![Legende parcours subscription](/images/blog/stepBundle_subscription.png "Légende parcours subscription")
+![IDCIStepBundle Subscription URL](/images/blog/stepBundle_subscription_url.png "IDCIStepBundle Subscription URL")
 
 Si vous regardez les premières lignes de plus près dans l'exemple ci-dessous, vous trouverez l'URL de notre site : nous avons ajouté des paramètres précisant la destination finale. A la fin de notre formulaire, l'utilisateur est donc redirigé vers la page d'accueil d'IDCI Consulting.
 Aussi, grâce au paramètre "choice", nous avons mis en place un menu déroulant.
@@ -220,6 +220,10 @@ class DefaultController extends Controller
 Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
 
 Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `localhost:8000/subscription` afin d'apprécier votre nouveau parcours d'inscription.
+
+Voici comment nous l'avons représenté avec notre légende :
+
+![Légende IDCIStepBundle Subscription](/images/blog/stepBundle_subscription.png "Légende IDCIStepBundle Subscription")
 
 ### Particularité de IDCIStepBundle ###
 
@@ -627,10 +631,16 @@ Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut 
 
 ### Utiliser le service ###
 
+IDCIStepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant les input de type "submit" pour envoyer les données de la step en cours.
 
-IDCIStepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant des input de type "submit" pour envoyer les données de la step en cours.
+Le système `d'event` s'appuie donc sur les événements définis par le Framework pour les FormType.
 
-Le système `d'event` s'appuie donc sur les événements définis par le Framework pour les FormType, nous vous revoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
+Nous vous renvoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
+
+Voici deux schémas explicatifs :
+
+![StepBundle Form Events](/images/blog/stepBundle_FormEvent1.png "StepBundle Form Events")
+![StepBundle Form Events](/images/blog/stepBundle_FormEvent2.png "StepBundle Form Events")
 
 Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier `config.yml`. Il nous suffit d'ajouter ces quelques lignes à la fin de notre path `end`:
 
