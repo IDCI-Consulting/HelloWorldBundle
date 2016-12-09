@@ -1,4 +1,4 @@
-# Comment créer un formulaire de contact avec StepBundle ? #
+# Créer un formulaire de contact avec IDCIStepBundle #
 
 ## Introduction ##
 
@@ -69,10 +69,10 @@ Comme nous l'avons vu plus haut, il existe trois types de chemins : 'single', 'c
                 'title'            => 'Contact',
                 'description'      => 'The contact form',
                 'builder' => $this->get('form.factory')->createBuilder()
-                    ->add('first_name',   'text', array('label' => 'prénom'))
-                    ->add('last_name',    'text', array('label' => 'nom'))
-                    ->add('phone_number', 'text', array('label' => 'téléphone'))
-                    ->add('email',        'text', array('label' => 'email'))
+                    ->add('first_name',   'text', array('label' => 'First Name'))
+                    ->add('last_name',    'text', array('label' => 'Last Name'))
+                    ->add('phone_number', 'text', array('label' => 'Phone Number'))
+                    ->add('email',        'text', array('label' => 'Email'))
                 ,
             ))
             ->addPath(

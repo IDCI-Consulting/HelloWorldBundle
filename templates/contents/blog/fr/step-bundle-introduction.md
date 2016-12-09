@@ -1,4 +1,4 @@
-# Introduction à StepBundle #
+# Introduction à IDCIStepBundle #
 
 ## Introduction ##
 
@@ -25,24 +25,26 @@ Une map définit le workflow de navigation, elle se compose de steps et de paths
 ### Qu'est-ce qu'une step ? ###
 
 Une step se matérialise par une page web, et définit un potentiel point de passage. Elle peut être de différents types. Par défaut, notre bundle fournit deux types de `step` :
-   * html : affichage d'un contenu HTML
-   * form : affichage d'un formulaire (FormType Symfony)
+
+* html : affichage d'un contenu HTML
+* form : affichage d'un formulaire (FormType Symfony)
 
 ### Qu'est-ce qu'un path ? ###
 
 Un path est un itinéraire qui a pour origine une step et pour destination zéro ou plusieurs steps. Il peut être de différents types. Par défaut, notre bundle fournit trois types de `path` :
-   * le single : une seule destination
-   * le conditionnel : plusieurs destinations en fonction de règles conditionnelles.
-   * le end : le path qui détermine une fin de navigation.
+
+* le single : une seule destination
+* le conditionnel : plusieurs destinations en fonction de règles conditionnelles.
+* le end : le path qui détermine une fin de navigation.
 
 ## Légende ##
 
 Nous allons utiliser un diagramme qui fera office de légende.
 
-   * Les carrés représentent les steps.
-   * Les flèches représentent les paths.
+* Les carrés représentent les steps.
+* Les flèches représentent les paths.
 
-![Legende StepBundle](/images/blog//stepBundle_legend.png "Légende StepBundle")
+![Legende IDCIStepBundle](/images/blog//stepBundle_legend.png "Légende IDCIStepBundle")
 
 ## Pourquoi utiliser StepBundle ? ##
 
@@ -50,11 +52,12 @@ StepBundle permet de mettre en place aussi bien un parcours simple (une step, un
 Vous pouvez aussi représenter une map en utilisant directement la programmation objet, mais cela est peut-être plus compliqué pour des non initiés au code et à la programmation objet.
 
 Voici une liste non exhaustive des cas d'utilisation de StepBundle :
- * un formulaire de contact,
- * un processus d'inscription,
- * un questionnaire,
- * une enquête,
- * etc.
+
+* un formulaire de contact,
+* un processus d'inscription,
+* un questionnaire,
+* une enquête,
+* etc.
 
 Sans plus attendre, rentrons dans le vif du sujet et partons à la rencontre de ce Bundle.
 
@@ -62,7 +65,7 @@ Commençons par créer un projet Symfony en version 2.8, nous appelerons ce proj
 
 
 ```sh
-$ composer create-project symfony/framework-standard-edition my_project_name "2.8.*"
+$ composer create-project symfony/framework-standard-edition demo_step "2.8.*"
 ```
 
 ## Installation ##
@@ -120,7 +123,6 @@ Ci-dessous, voici notre fameux tableau comparatif des Bundles visant à mettre e
 
 ## Comparatif ##
 
-CraueFormFlow
-Kitpage
-Sylius Flow Bundle
-SURFnet SamlBundle
+* CraueFormFlowBundle
+* Kitpage
+* Sylius Flow Bundle

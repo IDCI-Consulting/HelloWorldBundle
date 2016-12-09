@@ -1,4 +1,4 @@
-# Comment créer un parcours complexe avec IDCIStepBundle ? #
+# Créer un parcours complexe avec IDCIStepBundle #
 
 ## Introduction ##
 

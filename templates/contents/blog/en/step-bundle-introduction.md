@@ -25,15 +25,17 @@ A map defined the navigation's workflow, it is composed of steps and paths.
 ### What is a step ? ###
 
 A step materialize itself by a web page, and define a potential passage's point. It can be of differents types. By default, our bundle supply two types :
-   * html : display of a HTML content
-   * form : display of a form (FormType Symfony)
+
+* html : display of a HTML content
+* form : display of a form (FormType Symfony)
 
 ### What is a path ? ###
 
 A path is a route which has a step as origine and zero or several steps as destinations. It can be of diferents types. By default, our bundle supply three types :
-   * single : one destination
-   * conditional : several destinations according to conditionals rules
-   * end : determine a navigation's end
+
+* single : one destination
+* conditional : several destinations according to conditionals rules
+* end : determine a navigation's end
 
 ## Legend ##
 
@@ -42,14 +44,15 @@ We will use a diagram which be used as a legend.
    * Squares represents steps
    * Array reprents paths
 
-![IDCIStepBundle legend](/images/blog//legend_StepBundle.png "IDCIStepBundle legend")
+![IDCIStepBundle diagramm](/images/blog//stepBundle_legend.png "IDCIStepBundle diagramm")
 
 ## Why use IDCIStepBundle ? ##
 
 IDCIStepBundle allows to organize a simple process (one step, one path) but also a complex process (several steps and paths). You can start easily from a configuration, which represent the map, by using the language `yml` or `json`.
 You could also represente a map by using directly the object programmation, but this is maybe more complicated for non initiated in code and object programmation.
 
-Here's a non exhaustive list of use cases of StepBundle ;
+Here's a non exhaustive list of use cases of StepBundle :
+
  * contact form
  * inscription process
  * questionnaire
