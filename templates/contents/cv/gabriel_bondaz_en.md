@@ -7,7 +7,7 @@
 
 ### PROFESIONALS EXPERIENCES
 
- * _Depuis Septembre 2008_ Creation of IDCI-Consulting | Associate and engineer research and development
+ * _For Septembrer 2008_ Creation of IDCI-Consulting | Associate and engineer research and development
   * Speaker at Lyon 1 University: Web training (Html, Css, Joomla, Magento, Wordpress, Dreamweaver)
   * Trainer PHP / Symfony1 / Symfony2  as part of profesionals trainings (APTA – Clermont Ferrand, ASP via Sodifrance, Proximit, ICAP)
   * Conception and development of profesionals websites with PHP (Framework Symfony)
@@ -24,16 +24,16 @@
    * Management of a 6 developers's team
    * Technology : Php5 / Symfony2
  * _2012_  MB Création : Counsel, development and staffs's training on Symfony2
- * Training Php5 / Symfony2 for Proventis.
- * _2013_ Training Php5 / Symfony2 for Proventis, UCBL.
+ * Training Php5 / Symfony2 for Proventis
+ * _2013_ Training Php5 / Symfony2 for Proventis, UCBL
  * Tessi Marketing : Expertise Symfony2
  * _2014_ Ecole normale supérieure de Lyon : Development of a management pads's platform
  * Tessi Marketing : Expertise symfony 2
  * Formation Php5 / Symfony2 for OPCADIA,
  * _2005 – 2007_ Lyon 1 University Research and Training's technician
- * Installation and Configuration of informatics rooms multi operating systems (Windows/Linux). 
- * Establishment of a gestion's tool of informatic park: GLPI (Gestionnaire Libre de Parc Informatique). 
- * Dévelopment of plugins for the SPIRAL platform (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon1).
+ * Installation and Configuration of informatics rooms multi operating systems (Windows/Linux)
+ * Establishment of a gestion's tool of informatic park: GLPI (Gestionnaire Libre de Parc Informatique)
+ * Dévelopment of plugins for the SPIRAL platform (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon1)
  * _2005_ Calcul center of IN2P3 | 16 weeks internship (from 04/04/2004 to 31/07/2005)
  * Establishment of an informatic protocole to medicals images at DICOM format, from an IRM to a SRB base. Project BIRNy rename LyNDA (Lyon Neuroimaging Database & Applications)
 
@@ -58,6 +58,6 @@
 
 ### PERSONNALS EXPERIENCES
 
-* _2004 – 2005_ Elected studient at the board of directors of Lyon 1 University and president of the association Student Club.
+* _2004 – 2005_ Elected studient at the board of directors of Lyon 1 University and president of the association Student Club
 * _Juillet 2004 et 2005_ Volunteer during the Solidays festival in Paris, to the association AIDS
 * _2003_ Fist-aid certificate (AFPS)

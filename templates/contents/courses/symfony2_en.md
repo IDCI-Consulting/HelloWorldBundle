@@ -9,14 +9,14 @@ _2 hours_
 * Internet != web
 * HTTP protocol (RFC2616)
 * Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony
-* Why Symfony2?
+* Why Symfony2 ?
 
 #### **A good environment and good practicals**
 _2 hours_
 
-* What IDE?
+* What IDE ?
 * Use a SCM (SVN, Git, ...)
-* Utilise a bug tracker (Trac, Mantis, Redmine, Github, ...)
+* Use a bug tracker (Trac, Mantis, Redmine, Github, ...)
 * Coding's conventions
 
 #### **Introduction to Design pattern**
