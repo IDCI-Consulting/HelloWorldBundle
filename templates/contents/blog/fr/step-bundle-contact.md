@@ -237,7 +237,7 @@ protected function doExecute(PathEventInterface $event, array $parameters = arra
             ->setSubject('Hey there')
             ->setFrom('noreply@idci-consulting.fr')
             ->setTo($parameters['email'])
-            ->setBody('Hi, we are going to treat your request.')
+            ->setBody($parameters['message'])
         ;
 
         $this->mailer->send($message);
@@ -298,7 +298,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
                 ->setSubject('Hey there')
                 ->setFrom('noreply@idci-consulting.fr')
                 ->setTo($parameters['email'])
-                ->setBody('Hi, we are going to treat your request.')
+                ->setBody($parameters['message'])
             ;
 
             $this->mailer->send($message);
@@ -341,6 +341,16 @@ Voici deux schémas explicatifs :
 ![StepBundle Form Events](/images/blog/stepBundle_FormEvent1.png "StepBundle Form Events")
 ![StepBundle Form Events](/images/blog/stepBundle_FormEvent2.png "StepBundle Form Events")
 
+> Le cas du `flow_data` : comme nous allons le voir, nous utilisons ci-dessous le flow_data.
+> Le flow_data va nous permettre de recueillir les données que l'utilisateur a rentré dans un champ. Ici, nous l'avons utilisé deux fois :
+
+* L'adresse mail : le flow data nous permet de connaître l'adresse de destination.
+* Le prénom : le flow data nous permet de personnaliser notre email en fonction du prénom de l'utilisateur.
+
+C'est le principe du merge token (champ de fusion), nativement proposé par IDCIStepBundle, qui propose de remplacer des informations.
+Le premier paramètre, `flow_data`, est prédéfini. Pour le deuxième paramètre, ici `data`, il en existe trois cas :
+Puis, il nous suffit d'ajouter le nom de l'étape et le champ concerné.
+
 
 ```php
 // src/AppBundle/Controller/DefaultController
@@ -362,9 +372,10 @@ class DefaultController extends Controller
                     'events' => array(
                         'form.post_bind' => array(
                             array(
-                                'action'     => 'send_thanks_email',
-                                'parameters' => array(
-                                    'email' => '{{ flow_data.data.info.email }}',
+                                'action'      => 'send_thanks_email',
+                                'parameters'  => array(
+                                    'email'   => '{{ flow_data.data.info.email }}',
+                                    'message' => 'Thank you {{ flow_data.data.info.first_name }} to contact us',
                                 )
                             )
                         )
@@ -435,7 +446,8 @@ idci_step:
                                     action: send_thanks_email
                                     name: send_thanks_email
                                     parameters:
-                                        email: '{{ flow_data.data.info.email }}'
+                                        email: "{{ flow_data.data.info.email }}"
+                                        message: "Thank you {{ flow_data.data.info.first_name }} to contact us"
 ```
 
 Dans le `DefaultController.php` :
