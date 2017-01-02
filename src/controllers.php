@@ -472,7 +472,16 @@ $app
             }
 
             // See https://github.com/silexphp/Silex/issues/1129
-            $_locale = $request->getPreferredLanguage($availableLanguages);
+            $_locale = explode('/', trim(str_replace(
+                $app['request_context']->getBaseUrl(),
+                '',
+                $request->getRequestUri()
+            ), '/'));
+            $_locale = array_shift($_locale);
+
+            if (!in_array($_locale, $availableLanguages)) {
+                $_locale = $request->getPreferredLanguage($availableLanguages);
+            }
 
             $app['request_context']->setParameters(array('_locale' => $_locale));
             $app['translator']->setLocale($_locale);
