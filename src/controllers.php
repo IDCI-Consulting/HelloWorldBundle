@@ -457,6 +457,28 @@ $app
                 return;
             }
 
+            $availableLanguages = array();
+            $routes = array();
+
+            foreach ($app['i18n_route_generator.languages'] as $locale => $language) {
+                $availableLanguages[] = $locale;
+
+                $generatedRoute = $app['url_generator']->generate('index', array('_locale' => $locale));
+
+                $routes[$locale] = array(
+                    'route'    => $generatedRoute,
+                    'language' => $language
+                );
+            }
+
+            // See https://github.com/silexphp/Silex/issues/1129
+            $_locale = $request->getPreferredLanguage($availableLanguages);
+
+            $app['request_context']->setParameters(array('_locale' => $_locale));
+            $app['translator']->setLocale($_locale);
+
+            $app['twig']->addGlobal('i18n_routes', $routes);
+
             // 404.html, or 4xx.html.twig, or 500.html.twig, or 5xx.html.twig or default.html.twig
             $templates = array(
                 'errors/'.$code.'.html.twig',
@@ -470,8 +492,8 @@ $app
                     ->resolveTemplate($templates)
                     ->render(
                         array(
-                            'code'        => $code,
-                            'message'     => $e->getMessage()
+                            'code'    => $code,
+                            'message' => $e->getMessage()
                         )
                     ),
                 $code
