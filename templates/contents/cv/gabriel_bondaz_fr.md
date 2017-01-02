@@ -25,19 +25,19 @@
    * Technologie : Php 5 / Symfony 2
  * _2012_  MB Création : Conseil, développement et formation des équipes sur Symfony2
  * Formation Php5 / Symfony2 pour Proventis.
- * _2013_ Formation Php5 / Symfony 2 pour Proventis, UCBL.
+ * _2013_ Formation Php5 / Symfony 2 pour Proventis, UCBL
  * Tessi Marketing : Expertise Symfony2
  * _2014_ Ecole normale supérieur de Lyon : Développement d’une plate-forme de gestion des pads
  * Tessi Marketing : Expertise symfony 2
  * Formation Php5 / Symfony 2 pour OPCADIA,
  * _2005 – 2007_ Université Claude Bernard  Technicien de Recherche et de Formation
- * Installation et Configuration de salles informatiques multi système d'exploitation (Windows/Linux). 
- * Mise en place d'un outil de gestion du parc informatique: GLPI (Gestionnaire Libre de Parc Informatique). 
- * Développement de plugins pour la plate-forme SPIRAL (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon1).
+ * Installation et Configuration de salles informatiques multi système d'exploitation (Windows/Linux)
+ * Mise en place d'un outil de gestion du parc informatique: GLPI (Gestionnaire Libre de Parc Informatique)
+ * Développement de plugins pour la plate-forme SPIRAL (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon1)
  * _2005_ Centre de calcul de l’IN2P3 | Stage de 16 semaines (du 04/04/2004 au 31/07/2005)
  * Mise en place d'un protocole informatique pour le transfert d'images médicales au format DICOM depuis un IRM, à destination d'une base SRB. Projet BIRNy rebaptisé LyNDA (Lyon Neuroimaging Database & Applications)
  * _2004_ Laboratoire Lagep | Stage de 10 semaines (du 05/04/2004 au 13/06/2004)
- * Refonte complète du site Internet ([www.lagep.cpe.fr](http://www.lagep.cpe.fr)). Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour pour le site.
+ * Refonte complète du site Internet ([www.lagep.cpe.fr](http://www.lagep.cpe.fr)). Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour pour le site
 
 ### FORMATION
 
@@ -57,6 +57,6 @@
 
 ### EXPERIENCES PERSONNELLES
 
-* _2004 – 2005_ Elu étudiant au Conseil d'Administration de l'université Lyon 1 et président de l'association Student Club 
+* _2004 – 2005_ Elu étudiant au Conseil d'Administration de l'université Lyon 1 et président de l'association Student Club
 * _Juillet 2004 et 2005_ Bénévole durant le festival Solidays à Paris, pour l'association Solidarité Sida
-* _2003_ Brevet de Secouriste. (AFPS)
+* _2003_ Brevet de Secouriste (AFPS)

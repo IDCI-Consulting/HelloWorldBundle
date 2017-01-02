@@ -9,14 +9,14 @@ _4 hours_
 * Definition
 * Historic
 * Object / class
-* Declaration
+* Statement
 * Fields
 * Methods
 * Object's instantiation
 * Object's cloning
 
 #### **Methods**
-_2 heures_
+_2 hours_
 
 * Builder, destroyer
 * toString
@@ -34,7 +34,7 @@ _2 hours_
 {day2}
 
 #### **Visibility**
-_1 heure_
+_1 hour_
 
 * Public
 * Private
@@ -59,7 +59,7 @@ _1 hour_
 #### **Utilisation**
 _1 hour_
 
-* When use Quand utiliser DP?
+* When use DP?
 * When NOT TO use DP?
 
 #### **Some examples**
@@ -99,12 +99,12 @@ _4 hours_
 * Mercurial
 
 #### Versionning
-#### Branches
+#### Branchs
 
 {day4}
 
 #### **Bug Tracker**
-_2 heures_
+_2 hours_
 
 * Definition
 * Why use one ?
