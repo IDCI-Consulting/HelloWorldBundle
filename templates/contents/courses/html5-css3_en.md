@@ -11,8 +11,6 @@ _2 hours_
 * Web functioning
 * W3C : usefulness of standards
 
-Savoir q
-
 #### **HTML5 / CSS3 : why do we hear so much about them**
 _2 hours_
 
@@ -41,13 +39,13 @@ _3 hours_
 {day2}
 
 #### **Semantic web and HTML 5**
-_2 heures_
+_2 hours_
 
 * Semantics elements : give sens to your contents
 * Micro datas
 
 #### **HTML 5 forms**
-_3 heures_
+_3 hours_
 
 * Form tag
 * Create and use HTML 5 forms
@@ -56,7 +54,7 @@ _3 heures_
 * Auto focus
 
 #### **Panoramic views of APIs javascript for HTML 5**
-_3 heures_
+_3 hours_
 
 * APIs HTML 5
 * File's gestion
@@ -100,7 +98,6 @@ _2 hours_
 
 * Panoramic view
 * Private life of users
-La vie privée de l'utilisateur
 * Geolocate users on Google Maps
 
 #### **Zoom on storage's API with HTML 5**
@@ -116,7 +113,7 @@ _2 hours_
 ### HTML / CSS
 
 #### **Zoom on strorage's API with HTML 5**
-_2 heures_
+_2 hours_
 
 * Panoramic view : do without images, avoid tricks
 * CSS3 selectors
@@ -125,7 +122,7 @@ _2 heures_
 * Transparence
 * Text's effects
 * Page layout and positioning
-* Other novelties 
+* Other novelties
 
 #### **CSS3 : page layout and positioning**
 _3 hours_
@@ -139,7 +136,7 @@ _3 hours_
 * Elements's rotation
 
 #### **CSS3 : animation**
-_2 heures_
+_2 hours_
 
 * Transformations (2D and 3D)
 * Transitions

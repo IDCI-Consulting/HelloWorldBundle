@@ -7,21 +7,21 @@
 
 ### PROFESSIONALS EXPERIENCES
 
- * _Depuis Juillet 2014_ Employee at IDCI-Consulting | Analyst developer
- * _2015_ Realisation of a brevet's managment application to Dynergie group.
-   * Backend with **Symfony2** exposing a **REST** api.
-   * Front end with **AngularJS** operating API in the form of graphics.
+ * _For July 2014_ Employee at IDCI-Consulting | Analyst developer
+ * _2015_ Realisation of a brevet's managment application to Dynergie group
+   * Backend with **Symfony2** exposing a **REST** api
+   * Front end with **AngularJS** operating API in the form of graphics
  * Realisation of two websites with **responsive design** to marketing agencies, with the CMS **WordPress** and the framework **Foundation 5**. Creation of two customizables templates ([www.tessicustomermarketing.fr](http://www.tessicustomermarketing.fr), [pmc-net.net](http://pmc-net.net))
- * Participation at development of some bundles **Symfony2** for Tessi Marketing Services group.
+ * Participation at development of some bundles **Symfony2** for Tessi Marketing Services group
  * Development and integration of the new website of IDCI-Consulting with the micro-framework **Silex**
- * _2014_ Development of Mapyourstories's api, a prototype allowing creation of subway's maps customizable, collaboratively and in real time with the framework **MeteorJS**.
+ * _2014_ Development of Mapyourstories's api, a prototype allowing creation of subway's maps customizable, collaboratively and in real time with the framework **MeteorJS**
  * _2013_ **Internship at IDCI-Consulting** : Conception and realisation of a platform allowing the expenses account's management with the framework Symfony2
- 
+
 
 ### PERSONNAL PROJECTS
 
-* _2015_ Réalisation of a form's generator with **Symfony2**. (API REST)
-* _2014_ Réalisation of an application managing bar's orders with **AngularJS**.
+* _2015_ Realisation of a form's generator with **Symfony2**. (API REST)
+* _2014_ Realisation of an application managing bar's orders with **AngularJS**
 
 ### FORMATION
 
