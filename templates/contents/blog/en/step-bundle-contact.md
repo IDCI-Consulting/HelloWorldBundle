@@ -1,9 +1,11 @@
 # How to create a contact form with StepBundle ?
 
+
 ## Introduction
 
 Back to our StepBundle and its effective application : the creation of a simple contact form.
 If you need more informations about StepBundle's using and installation, you could read our introduction article here /*mettre le lien*/
+
 
 ## Create the contact form with StepBundle
 
@@ -151,11 +153,13 @@ We have to edit our file `Resources/views/Default/contact.html.twig` :
 {% endblock %}
 ```
 
+
 ## Events : generate an email's sending
 
 Events define actions of our process (steps, paths), we have created a few which are present by default, but it is possible to create some.
 For our example, we will create an event to send an email at the end of our step (when the user clics on `end` button).
 It's possible to connect events on paths or steps any time of your process.
+
 
 ### Create a service to our event
 
@@ -310,6 +314,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 }
 ```
 
+
 ### Déclarer notre event en tant que service
 
 Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut le déclarer pour que celui-ci soit accessible depuis le `container`. Pour cela, nous nous rendons dans le fichier `services.yml` :
@@ -324,6 +329,7 @@ services:
 ```
 
 Ainsi, dans la configuration du parcours, nous pourrons utiliser notre service grâce à l'identifiant `send_thanks_email`.
+
 
 ### Utiliser le service
 
@@ -378,6 +384,7 @@ Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `loc
 Voici comment nous l'avons représenté avec notre légende :
 
 ![Legende simple form](/images/blog/stepBundle_contact.png "Légende Simple Form")
+
 
 ## Particularité de StepBundle
 
@@ -480,6 +487,7 @@ class DefaultController extends Controller
     }
 }
 ```
+
 
 ## Conclusion
 

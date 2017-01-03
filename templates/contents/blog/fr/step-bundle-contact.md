@@ -1,9 +1,11 @@
 # Créer un formulaire de contact avec IDCIStepBundle
 
+
 ## Introduction
 
 Retour à notre StepBundle avec un cas concret : la création d'un formulaire de contact simple.
 Pour des renseignements concernant l'utilisation et l'installation de StepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
+
 
 ## Créer le formulaire de contact avec StepBundle
 
@@ -149,11 +151,13 @@ Le travail dans le controleur est terminé, il ne nous reste plus qu'à afficher
 {% endblock %}
 ```
 
+
 ## Les event actions : générer un envoi de mail
 
 Les `event actions` définissent les actions à éxécuter lors de notre navigation (steps, paths), nous en avons mis en place quelques uns qui sont présents par défaut avec IDCIStepBundle, mais il est possible d'en créer soi même.
 Pour notre exemple, nous allons mettre en place un event action visant à envoyer un email à la fin de notre step (lors du clic sur le bouton `end`).
 Il est possible de brancher des `event actions` sur des `paths` ou des `steps` à n'importe quel moment de votre parcours.
+
 
 ### Créer un service pour notre event action d'envoi de mail
 
@@ -309,6 +313,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 }
 ```
 
+
 ### Déclarer notre event action en tant que service
 
 Nous avons donc crée notre `PathEventAction`. Déclarons le pour que celui-ci soit accessible depuis le `container`. Pour cela, nous éditons le fichier `services.yml` :
@@ -325,6 +330,7 @@ services:
 ```
 
 Ainsi, dans la configuration du parcours, nous pourrons utiliser notre service taggé grâce à l'identifiant (alias) `send_thanks_email`.
+
 
 ### Utiliser le service
 
@@ -344,8 +350,8 @@ Voici deux schémas explicatifs :
 > Le cas du `flow_data` : comme nous allons le voir, nous utilisons ci-dessous le flow_data.
 > Le flow_data va nous permettre de recueillir les données que l'utilisateur a rentré dans un champ. Ici, nous l'avons utilisé deux fois :
 
-* L'adresse mail : le flow data nous permet de connaître l'adresse de destination.
-* Le prénom : le flow data nous permet de personnaliser notre email en fonction du prénom de l'utilisateur.
+ - L'adresse mail : le flow data nous permet de connaître l'adresse de destination.
+ - Le prénom : le flow data nous permet de personnaliser notre email en fonction du prénom de l'utilisateur.
 
 C'est le principe du merge token (champ de fusion), nativement proposé par IDCIStepBundle, qui propose de remplacer des informations.
 Le premier paramètre, `flow_data`, est prédéfini. Pour le deuxième paramètre, ici `data`, il en existe trois cas :
@@ -396,6 +402,7 @@ Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `loc
 Voici comment nous l'avons représenté avec notre légende :
 
 ![Legende simple form](/images/blog/stepBundle_contact.png "Légende Simple Form")
+
 
 ## Particularité de IDCIStepBundle
 
@@ -499,6 +506,7 @@ class DefaultController extends Controller
     }
 }
 ```
+
 
 ## Conclusion
 

@@ -1,9 +1,11 @@
 # Créer un parcours complexe avec IDCIStepBundle
 
+
 ## Introduction
 
 Une fois de plus, nous retournons à notre IDCIStepBundle, cette fois-ci, nous allons vous présenter une utilisation plus complexe : la création d'un processus d'inscription.
 Pour des renseignements concernant l'utilisation et l'installation de IDCIStepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
+
 
 ## Créer le processus d'inscription avec StepBundle
 
@@ -225,6 +227,7 @@ Voici comment nous l'avons représenté avec notre légende :
 
 ![Légende IDCIStepBundle Subscription](/images/blog/stepBundle_subscription.png "Légende IDCIStepBundle Subscription")
 
+
 ### Particularité de IDCIStepBundle
 
 Nous avons vu comment déclarer un configuration dans le Controller, cependant, IDCIStepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`.
@@ -433,6 +436,7 @@ class DefaultController extends Controller
 }
 ```
 
+
 ## Les event actions
 
 Les `event actions` définissent les actions à éxécuter lors de notre navigation (steps, paths), nous en avons mis en place quelques uns qui sont présents par défaut avec IDCIStepBundle, mais il est possible d'en créer soi même.
@@ -442,6 +446,7 @@ Il est possible de brancher des `event actions` sur des `paths` ou des `steps` �
 Pré-requis :
 - Doctrine
 - Entity Manager
+
 
 ### Créer un service pour notre event action de sauvegarde de données
 
@@ -509,8 +514,8 @@ Pour plus de renseignements concernant l'utilisation de `flush` et `persist`, no
 ```
 
 La fonction `setDefaultParameters` nous permet de définir nos paramètres. Dans notre cas, nous avons spécifié deux choses :
-- les paramètres obligatoires (`setRequired`)
-- les paramètres optionnels (`setOptional`)
+ - les paramètres obligatoires (`setRequired`)
+ - les paramètres optionnels (`setOptional`)
 
 ```php
     /**
@@ -617,6 +622,7 @@ class SaveDataPathEventAction extends AbstractPathEventAction
 }
 ```
 
+
 ### Déclarer notre event en tant que service
 
 Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut le déclarer pour que celui-ci soit accessible depuis le `container`. Pour cela, nous nous rendons dans le fichier `services.yml` :
@@ -628,6 +634,7 @@ Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut 
         tags:
             - { name: idci_step.path_event.action, alias: save_data }
 ```
+
 
 ### Utiliser le service
 
@@ -656,6 +663,7 @@ Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous 
                                 -
                                     action: save_data
 ```
+
 
 ### Créer l'entity_manager
 
@@ -1018,6 +1026,7 @@ Grâce à notre méthode `persist` et notre `flush`, nous pouvons enregistrer no
 Pour montrer que l'event marche, //screenshot de la fin du parcours
 
 // Aller chercher des objets dans la base de données ?
+
 
 ## Conclusion
 

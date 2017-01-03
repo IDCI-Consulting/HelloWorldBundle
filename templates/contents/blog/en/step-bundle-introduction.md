@@ -1,11 +1,14 @@
 ## Introduction to IDCIStepBundle
 
+
 ## Introduction
 
-Further to a customer need, we asked ourself how to answer to the problematic of a conversational worflow's creation.
-We wanted to realize easily some interactives processes with an internet user and trigger differents events (send an email, backup on database, call to a web service) according to users actions (transition of a step to an other). The evolution of processes complexity was an important point, whole of the workflow needed to be configurable (and not hardcode).
+Further to a customer need, we asked ourself how to answer to the problematic of an interactive worflow's creation.
+We wanted to realize easily some navigables processes with an internet user and trigger differents events (send an email, backup on database, call to a web service) according to users actions (transition of a step to an other).
+The evolution of processes complexity was an important point, whole of the workflow needed to be configurable (and not hardcode).
 
-We have tested some existing bundles, which seems to answer to our customer problematic, but these did not convinced us. At the bottom of the page, we have added a table comparative of these differents bundles.
+We have tested some existing bundles, which seems to answer to our customer problematic, but these did not convinced us.
+At the bottom of the page, we have added a table comparative of these differents bundles.
 
 In this way, we have chosen to develop our own bundle. In that, we thought this bundle generic and reusable.
 
@@ -18,9 +21,11 @@ In the first time, we have to define a map and imagine every screen (web page) a
 
 > Note : this article is intended for Symfony 2.8
 
+
 ### What is a map ?
 
 A map defined the navigation's workflow, it is composed of steps and paths.
+
 
 ### What is a step ?
 
@@ -28,6 +33,7 @@ A step materialize itself by a web page, and define a potential passage's point.
 
 * html : display of a HTML content
 * form : display of a form (FormType Symfony)
+
 
 ### What is a path ?
 
@@ -37,6 +43,7 @@ A path is a route which has a step as origine and zero or several steps as desti
 * conditional : several destinations according to conditionals rules
 * end : determine a navigation's end
 
+
 ## Legend
 
 We will use a diagram which be used as a legend.
@@ -45,6 +52,7 @@ We will use a diagram which be used as a legend.
    * Array reprents paths
 
 ![IDCIStepBundle diagramm](/images/blog//stepBundle_legend.png "IDCIStepBundle diagramm")
+
 
 ## Why use IDCIStepBundle ?
 
