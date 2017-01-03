@@ -34,8 +34,8 @@ Une map définit le workflow de navigation, elle se compose de steps et de paths
 Une step se matérialise par une page web, et définit un potentiel point de passage.
 Elle peut être de différents types. Par défaut, notre bundle fournit deux types de `step` :
 
-    -  **html** : affichage d'un contenu HTML
-    -  **form** : affichage d'un formulaire (FormType Symfony)
+ - **html** : affichage d'un contenu HTML
+ - **form** : affichage d'un formulaire (FormType Symfony)
 
 
 ### Qu'est-ce qu'un path ? ###
@@ -43,17 +43,17 @@ Elle peut être de différents types. Par défaut, notre bundle fournit deux typ
 Un path est un itinéraire qui a pour origine une step et pour destination zéro ou plusieurs steps.
 Il peut être de différents types. Par défaut, notre bundle fournit trois types de `path` :
 
-    -  **single** : une seule destination
-    -  **conditionnel** : plusieurs destinations en fonction de règles conditionnelles.
-    -  **end** : le path qui détermine une fin de navigation.
+ - **single** : une seule destination
+ - **conditionnel** : plusieurs destinations en fonction de règles conditionnelles.
+ - **end** : le path qui détermine une fin de navigation.
 
 
 ## Légende ##
 
 Nous allons utiliser un diagramme qui fera office de légende.
 
-    -  Les carrés représentent les steps.
-    -  Les flèches représentent les paths.
+ - Les carrés représentent les steps.
+ - Les flèches représentent les paths.
 
 ![Legende IDCIStepBundle](/images/blog/stepBundle_legend.png "Légende IDCIStepBundle")
 
@@ -66,11 +66,11 @@ Vous pouvez aussi représenter une map en utilisant directement la programmation
 
 Voici une liste non exhaustive des cas d'utilisation de StepBundle :
 
-    * Un formulaire de contact,
-    * Un processus d'inscription,
-    * Un questionnaire,
-    * Une enquête,
-    * Etc.
+ - Un formulaire de contact,
+ - Un processus d'inscription,
+ - Un questionnaire,
+ - Une enquête,
+ - Etc.
 
 Sans plus attendre, partons à la rencontre de ce Bundle.
 
@@ -140,36 +140,74 @@ Dans notre prochain article, nous testerons un cas concret d'utilisation du Step
 
 Voici notre tableau comparatif (points forts / points faibles) des Bundles permetant de réaliser des workflows intéractifs.
 
-<div markdown="1">
-    <table>
-        <thead>
-            <tr>
-                <th>Bundle</th>
-                <th>Forces</th>
-                <th>Faiblesses</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>CraueFormFlowBundle</th>
-                <td>TODO</td>
-                <td>TODO</td>
-            </tr>
-            <tr>
-                <th>Kitpage</th>
-                <td>TODO</td>
-                <td>TODO</td>
-            </tr>
-            <tr>
-                <th>SyliusFlowBundle</th>
-                <td>TODO</td>
-                <td>TODO</td>
-            </tr>
-            <tr>
-                <th>IDCIStepBundle</th>
-                <td>TODO</td>
-                <td>TODO</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table>
+    <thead>
+        <tr>
+            <th>Bundle</th>
+            <th>Forces</th>
+            <th>Faiblesses</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                <a href="https://github.com/craue/CraueFormFlowBundle" target="_blank">CraueFormFlowBundle</a>
+            </th>
+            <td>
+                <ul>
+                    <li>Un FormType pour tous les flow</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>TODO</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <a href="https://github.com/kitpages/KitpagesWorkflowBundle" target="_blank">KitpagesWorkflowBundle</a>
+            </th>
+            <td>
+                <ul>
+                    <li>Existe seulement en version beta.</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>TODO</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <a href="https://github.com/Sylius/SyliusFlowBundle" target="_blank">SyliusFlowBundle</a>
+            </th>
+            <td>
+                <ul>
+                    <li>Est afficher en "read only" sur github</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>TODO</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <a href="https://github.com/IDCI-Consulting/StepBundle" target="_blank">IDCIStepBundle</a>
+            </th>
+            <td>
+                <ul>
+                    <li>Use native de merge token</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>TODO</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
