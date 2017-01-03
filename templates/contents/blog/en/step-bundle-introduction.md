@@ -1,6 +1,6 @@
-## Introduction to IDCIStepBundle ##
+## Introduction to IDCIStepBundle
 
-## Introduction ##
+## Introduction
 
 Further to a customer need, we asked ourself how to answer to the problematic of a conversational worflow's creation.
 We wanted to realize easily some interactives processes with an internet user and trigger differents events (send an email, backup on database, call to a web service) according to users actions (transition of a step to an other). The evolution of processes complexity was an important point, whole of the workflow needed to be configurable (and not hardcode).
@@ -18,18 +18,18 @@ In the first time, we have to define a map and imagine every screen (web page) a
 
 > Note : this article is intended for Symfony 2.8
 
-### What is a map ? ###
+### What is a map ?
 
 A map defined the navigation's workflow, it is composed of steps and paths.
 
-### What is a step ? ###
+### What is a step ?
 
 A step materialize itself by a web page, and define a potential passage's point. It can be of differents types. By default, our bundle supply two types :
 
 * html : display of a HTML content
 * form : display of a form (FormType Symfony)
 
-### What is a path ? ###
+### What is a path ?
 
 A path is a route which has a step as origine and zero or several steps as destinations. It can be of diferents types. By default, our bundle supply three types :
 
@@ -37,7 +37,7 @@ A path is a route which has a step as origine and zero or several steps as desti
 * conditional : several destinations according to conditionals rules
 * end : determine a navigation's end
 
-## Legend ##
+## Legend
 
 We will use a diagram which be used as a legend.
 
@@ -46,7 +46,7 @@ We will use a diagram which be used as a legend.
 
 ![IDCIStepBundle diagramm](/images/blog//stepBundle_legend.png "IDCIStepBundle diagramm")
 
-## Why use IDCIStepBundle ? ##
+## Why use IDCIStepBundle ?
 
 IDCIStepBundle allows to organize a simple process (one step, one path) but also a complex process (several steps and paths). You can start easily from a configuration, which represent the map, by using the language `yml` or `json`.
 You could also represente a map by using directly the object programmation, but this is maybe more complicated for non initiated in code and object programmation.
@@ -67,7 +67,7 @@ Start by create a Symfony project in 2.8 version, we will name this project `dem
 $ composer create-project symfony/framework-standard-edition my_project_name "2.8.*"
 ```
 
-## Installation ##
+## Installation
 
 Let's declare the dependencie, by modifiying the file `composer.json` :
 
@@ -113,9 +113,8 @@ Below, our comparative table of bundles aiming to demonstrate strongs points and
 In our next article, we will test a concrete case of StepBundle utilisation : the creation of a contact form.
 
 
-## Table ##
+## Table
 
 CraueFormFlow
 Kitpage
 Sylius Flow Bundle
-SURFnet SamlBundle

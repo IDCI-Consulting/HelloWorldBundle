@@ -1,11 +1,11 @@
-# Créer un formulaire de contact avec IDCIStepBundle #
+# Créer un formulaire de contact avec IDCIStepBundle
 
-## Introduction ##
+## Introduction
 
 Retour à notre StepBundle avec un cas concret : la création d'un formulaire de contact simple.
 Pour des renseignements concernant l'utilisation et l'installation de StepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
 
-## Créer le formulaire de contact avec StepBundle ##
+## Créer le formulaire de contact avec StepBundle
 
 Nous avons donc choisi de réaliser un parcours composé d'une seule step : un formulaire de contact, et un seul path représentant la soumission des données saisies.
 Nous pouvons voir ce cas comme l'utilisation du contact form 7 de Wordpress à la sauce Symfony.
@@ -149,20 +149,20 @@ Le travail dans le controleur est terminé, il ne nous reste plus qu'à afficher
 {% endblock %}
 ```
 
-## Les event actions : générer un envoi de mail ##
+## Les event actions : générer un envoi de mail
 
 Les `event actions` définissent les actions à éxécuter lors de notre navigation (steps, paths), nous en avons mis en place quelques uns qui sont présents par défaut avec IDCIStepBundle, mais il est possible d'en créer soi même.
 Pour notre exemple, nous allons mettre en place un event action visant à envoyer un email à la fin de notre step (lors du clic sur le bouton `end`).
 Il est possible de brancher des `event actions` sur des `paths` ou des `steps` à n'importe quel moment de votre parcours.
 
-### Créer un service pour notre event action d'envoi de mail ###
+### Créer un service pour notre event action d'envoi de mail
 
 Nous pouvons considérer un service comme une classe qui est rendue accessible partout dans notre application.
 Dans un premier temps, il nous faut donc créer notre `PathEventAction` :
 
 > Remarque : Pour l'envoi de notre mail, nous avons utilisé la librairie Swift Mailer, nous vous renvoyons à la doc Symfony (.en) : [Doc Swift Mailer](http://symfony.com/doc/current/email.html)._
 
-> N'oublier pas de configurer le Mailer
+> N'oubliez pas de configurer le Mailer
 
 ```php
 <?php
@@ -309,7 +309,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 }
 ```
 
-### Déclarer notre event action en tant que service ###
+### Déclarer notre event action en tant que service
 
 Nous avons donc crée notre `PathEventAction`. Déclarons le pour que celui-ci soit accessible depuis le `container`. Pour cela, nous éditons le fichier `services.yml` :
 
@@ -326,7 +326,7 @@ services:
 
 Ainsi, dans la configuration du parcours, nous pourrons utiliser notre service taggé grâce à l'identifiant (alias) `send_thanks_email`.
 
-### Utiliser le service ###
+### Utiliser le service
 
 Pour utiliser notre nouveau service et ainsi brancher notre event action, rendons nous dans notre fichier `DefaultController.php`.
 
@@ -397,7 +397,7 @@ Voici comment nous l'avons représenté avec notre légende :
 
 ![Legende simple form](/images/blog/stepBundle_contact.png "Légende Simple Form")
 
-## Particularité de IDCIStepBundle ##
+## Particularité de IDCIStepBundle
 
 Nous avons vu comment déclarer un configuration dans le Controller, cependant, IDCIStepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`.
 Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
@@ -500,7 +500,7 @@ class DefaultController extends Controller
 }
 ```
 
-## Conclusion ##
+## Conclusion
 
 IDCIStepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créant des event actions (PathEventAction, StepEventAction) et en les configurant selon vos souhaits.
 Il est aussi possible de créer des parcours plus complexes, comme nous le verrons dans un prochain article.

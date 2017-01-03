@@ -1,16 +1,16 @@
-# How to create a contact form with StepBundle ? #
+# How to create a contact form with StepBundle ?
 
-## Introduction ##
+## Introduction
 
-Back to our StepBundle and its effective application : the creation of a simple contact form. 
+Back to our StepBundle and its effective application : the creation of a simple contact form.
 If you need more informations about StepBundle's using and installation, you could read our introduction article here /*mettre le lien*/
 
-## Create the contact form with StepBundle ##
+## Create the contact form with StepBundle
 
 So, we have chosen to realize a process composed of one step : a contact form, and one path representing input datas's submission .
 We can imagine this case as the utilisation of WordPress's contact form 7 with the Symfony touch.
 
-Here's an illustration of the rendering : 
+Here's an illustration of the rendering :
 
 ![Screenshot Contact Form](/images/blog/screenshot_contact_form.png "Screenshot Contact Form")
 
@@ -22,7 +22,7 @@ Ready to start with StepBundle ?
 
 We will work in the bundle's `DefaultController.php` file  created by default `AppBundle`.
 
-Let's start by creating a first action `contact` : 
+Let's start by creating a first action `contact` :
 
 ```php
 // src/AppBundle/Controller/DefaultController.php
@@ -151,13 +151,13 @@ We have to edit our file `Resources/views/Default/contact.html.twig` :
 {% endblock %}
 ```
 
-## Events : generate an email's sending ## 
+## Events : generate an email's sending
 
 Events define actions of our process (steps, paths), we have created a few which are present by default, but it is possible to create some.
 For our example, we will create an event to send an email at the end of our step (when the user clics on `end` button).
 It's possible to connect events on paths or steps any time of your process.
 
-### Create a service to our event ###
+### Create a service to our event
 
 We can considere a service as a class which is accessible every where in our application.
 In a first phase, we have to create a `PathEventAction` :
@@ -190,7 +190,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
     {
         $this->mailer = $mailer;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -240,7 +240,7 @@ protected function doExecute(PathEventInterface $event, array $parameters = arra
             ->setTo($parameters['email'])
             ->setBody('Hi, we are going to treat your request.')
         ;
-        
+
         $this->mailer->send($message);
     } catch (\Exception $e) {
         throw $e;
@@ -301,7 +301,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
                 ->setTo($parameters['email'])
                 ->setBody('Hi, we are going to treat your request.')
             ;
-            
+
             $this->mailer->send($message);
         } catch (\Exception $e) {
             var_dump($e->getMessage());
@@ -310,7 +310,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 }
 ```
 
-### Déclarer notre event en tant que service ###
+### Déclarer notre event en tant que service
 
 Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut le déclarer pour que celui-ci soit accessible depuis le `container`. Pour cela, nous nous rendons dans le fichier `services.yml` :
 
@@ -325,7 +325,7 @@ services:
 
 Ainsi, dans la configuration du parcours, nous pourrons utiliser notre service grâce à l'identifiant `send_thanks_email`.
 
-### Utiliser le service ###
+### Utiliser le service
 
 Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier `DefaultController.php`.
 
@@ -379,13 +379,13 @@ Voici comment nous l'avons représenté avec notre légende :
 
 ![Legende simple form](/images/blog/stepBundle_contact.png "Légende Simple Form")
 
-## Particularité de StepBundle ##
+## Particularité de StepBundle
 
-Nous avons vu comment déclarer un configuration dans le Controller, cependant, StepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`. 
+Nous avons vu comment déclarer un configuration dans le Controller, cependant, StepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`.
 Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
 
-Voici notre même exemple dans notre fichier `config.yml`: 
-      
+Voici notre même exemple dans notre fichier `config.yml`:
+
 ```yaml
 # app/config/config.yml
 ....
@@ -481,7 +481,7 @@ class DefaultController extends Controller
 }
 ```
 
-## Conclusion ##
+## Conclusion
 
 StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créant des `PathEventAction` et en les configurant selon vos souhaits.
 Il est aussi possible de créer des parcours plus complexes, comme nous le verrons dans notre prochain article.
@@ -490,6 +490,3 @@ Puis, StepBundle permet de faire des modifications directement dans la configura
 N'hésitez pas à nous faire vos retours.
 
 Si vous avez besoin d'aide ou d'une expertise, vous pouvez [nous contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
-
-
-
