@@ -107,9 +107,9 @@ Our map is ready now. You have to create the 'navigator' from this one:
 
 Finally, you have to define the redirections to make according to the navigation realized by the user.
 Three cases are possible :
-   * End of navigation : when you follow a route of 'end' type
-   * Navigation : when you follow a path of 'single' or 'conditional' type
-   * Return : when you decide to go back to a previous step
+ - End of navigation : when you follow a route of 'end' type
+ - Navigation : when you follow a path of 'single' or 'conditional' type
+ - Return : when you decide to go back to a previous step
 
 
 ```php

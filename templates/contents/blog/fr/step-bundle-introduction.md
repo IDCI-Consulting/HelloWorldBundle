@@ -175,12 +175,12 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
             </th>
             <td>
                 <ul>
-                    <li>Seulement en version beta.</li>
+                    <li></li>
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>TODO</li>
+                    <li>Seulement en version beta.</li>
                 </ul>
             </td>
         </tr>
@@ -190,12 +190,12 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
             </th>
             <td>
                 <ul>
-                    <li>Affiché en "read only" sur Github</li>
+                    <li></li>
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>TODO</li>
+                    <li>Affiché en "read only" sur Github</li>
                 </ul>
             </td>
         </tr>
@@ -207,10 +207,11 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
                 <ul>
                     <li>Usage natif de merge token <!--Rééxpliquer rapidement--></li>
                     <li>Retour en arrière</li>
+                    <li>Possibilités de configuration sont nombreuses</li>
                     <li>Debuger avec historique de navigation</li>
                     <li>Configuration directement dans la conf, donc controller plus léger et plus maniable</li>
                     <li>Event actions à brancher sur les paths ou les steps</li>
-                    <li>Enregistrement de l'ensemble des données de navigations (retour en arrière, réactualisation de page)
+                    <li>Enregistrement de l'ensemble des données de navigation (retour en arrière, réactualisation de page)
                 </ul>
             </td>
             <td>
