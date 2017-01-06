@@ -1,29 +1,31 @@
 EN.
 
-# Créer un parcours complexe avec IDCIStepBundle
+# Create a complex process with IDCIStepBundle
 
 
 ## Introduction
 
-Une fois de plus, nous retournons à notre IDCIStepBundle, cette fois-ci, nous allons vous présenter une utilisation plus complexe : la création d'un processus d'inscription.
-Pour des renseignements concernant l'utilisation et l'installation de IDCIStepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
+Once again, we return at our IDCIStepBundle, this time we are going to present you a more complex use : creation of a registration process.
+If you need details about installation and use, you could report yourself to our introduction article here /*link*/
 
 
-## Créer le processus d'inscription avec StepBundle
+## Create the registration form with IDCIStepBundle
 
-Nous avons donc choisi de créer un parcours composé de plusieurs steps et de plusieurs paths.
+So, we have chosen to create a process composed of several steps and several paths.
 
-Pour cet exemple, nous avons choisi d'imaginer un extrait de processus d'inscription à l'université, en cela, le choix de l'utilisateur entre deux villes d'étude va changer la page de destination.
+For this example, we have chosen to imagine an extract of registration form to university, in that, the user's choice between two cities will change the destination's page.
 
-Une fois de plus, nous allons travailler dans le fichier `DefaultController.php`
+Once more, we are goig to work in the `DefaultController.php` file.
 
-Voici une illustration du rendu attendu.
+Here's an illustration of the rendering we are waiting for.
 
 ![IDCIStepBundle Subscription URL](/images/blog/stepBundle_subscription_url.png "IDCIStepBundle Subscription URL")
 
-Si vous regardez les premières lignes de plus près dans l'exemple ci-dessous, vous trouverez l'URL de notre site : nous avons ajouté des paramètres précisant la destination finale. A la fin de notre formulaire, l'utilisateur est donc redirigé vers la page d'accueil d'IDCI Consulting.
-Aussi, grâce au paramètre "choice", nous avons mis en place un menu déroulant.
-Dans cet exemple, l'utilisateur choisit sa ville d'étude, Lyon ou Paris. En fonction de sa réponse, il sera redirigé vers les cursus d'une ville, ou de l'autre. Mais nous en rediscuterons en regardant les paths...
+If you are watching the first lines closer in the example below, you will will find the URL of our website : we add parameters explaining the final destination.
+At the end of our process, user is redirecting to the IDCI-Consulting's home page.
+Also, through the "choice" paremeter, we have organize a drop-down menu.
+In this example, user chooses his study city, Lyon or Paris. According to his answer, he will be redirected to the courses of a city, or the other.
+But we will discuss this later by watching paths...
 
 ```php
 // src/AppBundle/Controller/DefaultController
@@ -221,21 +223,21 @@ class DefaultController extends Controller
 
 // revenir sur le conditional destination path
 
-Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
+Your form is ready, you just have to test it.
 
-Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `localhost:8000/subscription` afin d'apprécier votre nouveau parcours d'inscription.
+Open your Symfony project in your browser and go to the `localhost:8000/subscription` URL in order to enjoy your new registration form.
 
-Voici comment nous l'avons représenté avec notre légende :
+Here's how we depict it with our caption :
 
 ![Légende IDCIStepBundle Subscription](/images/blog/stepBundle_subscription.png "Légende IDCIStepBundle Subscription")
 
 
-### Particularité de IDCIStepBundle
+### IDCIStepBundle's particularities
 
-Nous avons vu comment déclarer un configuration dans le Controller, cependant, IDCIStepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`.
-Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
+We have seen how to declare a configuration in the Controller, however, IDCIStepBundle allows altough to create maps directly in `config.yml` file and not in `DefaultController.php`.
+We recommend you to use this method because this avoid to need to rewrite the code, and this is lighter.
 
-Voici notre même exemple dans notre fichier `config.yml`:
+Heres's our same example in our `config.yml` file :
 
 ```yaml
 idci_step:
@@ -391,7 +393,7 @@ idci_step:
                             label: 'end'
 ```
 
-Dans le `DefaultController.php` :
+In the `DefaultController.php` file :
 
 ```php
 // src/AppBundle/Controller/DefaultController
@@ -439,23 +441,23 @@ class DefaultController extends Controller
 ```
 
 
-## Les event actions
+## Event actions
 
-Les `event actions` définissent les actions à éxécuter lors de notre navigation (steps, paths), nous en avons mis en place quelques uns qui sont présents par défaut avec IDCIStepBundle, mais il est possible d'en créer soi même.
-Pour notre exemple, nous allons mettre en place un event action visant à sauvegarder en base les données de l'utilisateur à la fin de notre step (lors du clic sur le bouton `end`).
-Il est possible de brancher des `event actions` sur des `paths` ou des `steps` à n'importe quel moment de votre parcours.
+`Event actions` define actions to execute during our navigation (steps, paths), we have organize some which are present by default with IDCIStepBundle, but it is possible to create some by yourself.
+To our example, we are going to organize an event action aims at save in database the user's datas at the end of our step (while the clic on the `end` button).
+It is possible to connect `event actions` on `paths` or `steps` when you want, on your process.
 
-Pré-requis :
-- Doctrine
-- Entity Manager
+Requirements :
+ - Doctrine
+ - Entity Manager
 
 
-### Créer un service pour notre event action de sauvegarde de données
+### Create a service to our event action of back-up's datas
 
-Nous pouvons considérer un service comme une classe qui est rendue accessible partout dans notre application.
-Dans un premier temps, il nous faut donc créer notre `PathEventAction` :
+We could consider a service as a class wich is render accessible anywhere in our application.
+Firstly, we have to create our `PathEventAction` :
 
-> Remarque : Pour la sauvegarde de nos données, nous avons utilisé la librairie Doctrine, nous vous renvoyons à la doc Symfony (.en) : [Doc Doctrine](http://symfony.com/doc/current/doctrine.html)._
+> Remark : to our back-up's datas, we used the Doctrine library, you could read the Symfony doc  : [Doc Doctrine](http://symfony.com/doc/current/doctrine.html)._
 
 ```php
 <?php
@@ -491,11 +493,11 @@ class SaveDataPathEventAction extends AbstractPathEventAction
     }
 ```
 
-La fonction `doExecute`, comme son nom l'indique, va permettre à l'action de s'éxécuter. C'est donc dans le corps de cette fonction que nous allons écrire le bout de code nous permettant de générer la sauvegarde de données.
-`Persist` permet de dire que cette entité est maintenant gérée directement par Doctrine.
-`Flush` permet à Doctrine d'effectuer les requêtes nécessaires pour sauvegarder les entités.
+The `doExecute` function, as its name indicate it, will allow the action to execute itself. So, it is in this function's body that we are to write the code allowing us to generate the back-up's datas.
+`Persist` allows to say that this entity is now genereate directly by Doctrine.
+`Flush` allows to Doctrine to effectuate necessaries requests to save entities.
 
-Pour plus de renseignements concernant l'utilisation de `flush` et `persist`, nous vous renvoyons à la doc d'Open Classrooms, cette fois-ci en français : [Doc `flush` et `persist`](https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony2/manipuler-ses-entites-avec-doctrine2)._
+If you need more informations, you can read the Doctrine's doc here [Doc `flush` et `persist`](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/working-with-objects.html)
 
 ```php
     /**
@@ -515,9 +517,9 @@ Pour plus de renseignements concernant l'utilisation de `flush` et `persist`, no
     }
 ```
 
-La fonction `setDefaultParameters` nous permet de définir nos paramètres. Dans notre cas, nous avons spécifié deux choses :
- - les paramètres obligatoires (`setRequired`)
- - les paramètres optionnels (`setOptional`)
+The `setDefaultParameters` function allow us to define our parameters. In our case, we have specify two things :
+ - unavoidables parameters (`setRequired`)
+ - optionals parameters (`setOptional`)
 
 ```php
     /**
@@ -546,8 +548,7 @@ La fonction `setDefaultParameters` nous permet de définir nos paramètres. Dans
     }
 }
 ```
-
-Voici le rendu final de notre `PathEventAction` :
+Here's the final rendering of our `PathEventAction` :
 
 ```php
 <?php
@@ -625,9 +626,10 @@ class SaveDataPathEventAction extends AbstractPathEventAction
 ```
 
 
-### Déclarer notre event en tant que service
+### Declare our event as a service
 
-Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut le déclarer pour que celui-ci soit accessible depuis le `container`. Pour cela, nous nous rendons dans le fichier `services.yml` :
+So, we have created our `PathEventAction`. Subsequently, we have to declare it, so it will be accessible from the `container`.
+We have to go to our `services.yml` file :
 
 ```yml
     idci_step.path_event.action.save_data:
@@ -638,20 +640,21 @@ Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut 
 ```
 
 
-### Utiliser le service
+### Use the service
 
-IDCIStepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant les input de type "submit" pour envoyer les données de la step en cours.
+IDCIStepBundle is based on the Symfony FormType's using to display a step.
+Navigation's buttons are "submit" type's input to send datas of the current step.
 
-Le système `d'event` s'appuie donc sur les événements définis par le Framework pour les FormType.
+So, `event` system is lean on events defined by the Framework to the FormType.
 
-Nous vous renvoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
+If you need more, you can red the Symfony doc : [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
 
-Voici deux schémas explicatifs :
+Here are two explanatories diagramms :
 
 ![StepBundle Form Events](/images/blog/stepBundle_FormEvent1.png "StepBundle Form Events")
 ![StepBundle Form Events](/images/blog/stepBundle_FormEvent2.png "StepBundle Form Events")
 
-Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier `config.yml`. Il nous suffit d'ajouter ces quelques lignes à la fin de notre path `end`:
+To use our new service and connect our event, we have to go to our `config.yml` file. We just have to add these few lines at the end of our `end` path :
 
 ```yaml
                 ...
@@ -667,12 +670,14 @@ Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous 
 ```
 
 
-### Créer l'entity_manager
+### Create the entity_manager
 
-Enfin, nous devons créer notre entity manager, celui-ci va effectuer les requêtes SQL.
+Finally, we have to create our entity manager, it is going to execute SQL requests.
+
 // Principe d'encapsulation + doc ?
 // Parler des champs
-Nous allons donc créer un fichier `subscription.php` :
+
+So, we are going to create a file named `subscription.php` :
 
 ```php
 // src/AppBundle/Entity
@@ -748,11 +753,11 @@ class Subscription
     private $cursus;
 ```
 
-Ensuite, il nous faut générer les getters et les setters grâce à cette ligne de commande :
+Then, we have to generate getters and setters with this command's line :
 
 $ php bin/console doctrine:generate:entities AppBundle/Entity/Subscription
 
-Si nous regardons à la fin de notre fichier `subscription.php`, nous voyons que les getters et les setters se sont ajoutés automatiquement à la fin de notre fichier :
+If we watch at the end of our `subscription.php`file, we can see that getters and setters are automatically add themeselves :
 
 // développer getter/setter
 
@@ -1016,14 +1021,12 @@ use Doctrine\ORM\Mapping as ORM;
     }
 }
 ```
-
-Nous avons maintenant notre table `subscription` avec les informations de mapping
-Ensuite, il nous faut créer une table correspondante dans la base de données, voici la commande :
+Now, we have our `subscription` table with the mapping informations.
+The, we have to create a related table in the database, here's the command :
 
 $ php bin/console doctrine:schema:update --force
 
-
-Grâce à notre méthode `persist` et notre `flush`, nous pouvons enregistrer nos données dans la base.
+Thanks to our `persist` and `flush` method, we could register our data in the base.
 
 Pour montrer que l'event marche, //screenshot de la fin du parcours
 
@@ -1033,10 +1036,11 @@ Pour montrer que l'event marche, //screenshot de la fin du parcours
 ## Conclusion
 
 
-IDCIStepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
+IDCIStepBundle offer a large possibilities's scope thanks to configuration and personnalisation. It is possible to do simple process, as we saw it with our contact form, but it is also possible to optimize it, by creating `PathEventAction` and configure themselves as you want.
+We couls also, as we have seen it, create morecomplex process.
 
-Puis, IDCIStepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
+Then, IDCIStepBundle allows to do modifications directly in the configuration, without having to rewrite in the Controller, which allow more maniabily.
 
-N'hésitez pas à nous faire vos retours.
+Don't hesitate to do your feedback.
 
-Si vous avez besoin d'aide ou d'une expertise, vous pouvez [nous contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
+If you need help or expertise to your Symfony projects, you could [contact us]({{ path('contact', {_locale: app.translator.locale}) }} "Contact us")

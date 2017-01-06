@@ -205,3 +205,5 @@ In our next article, we will test a concrete case of StepBundle utilisation : th
         </tr>
     </tbody>
 </table>
+
+/* Conclusion */

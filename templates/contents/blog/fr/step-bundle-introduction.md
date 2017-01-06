@@ -222,3 +222,5 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
         </tr>
     </tbody>
 </table>
+
+/* Conclusion */

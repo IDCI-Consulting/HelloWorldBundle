@@ -750,7 +750,7 @@ Ensuite, il nous faut générer les getters et les setters grâce à cette ligne
 
 $ php bin/console doctrine:generate:entities AppBundle/Entity/Subscription
 
-Si nous regardons à la fin de notre fichier `subscription.php`, nous voyons que les getters et les setters se sont ajoutés automatiquement à la fin de notre fichier :
+Si nous regardons à la fin de notre fichier `subscription.php`, nous voyons que les getters et les setters se sont ajoutés automatiquement :
 
 // développer getter/setter
 
@@ -1031,7 +1031,7 @@ Pour montrer que l'event marche, //screenshot de la fin du parcours
 ## Conclusion
 
 
-IDCIStepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
+IDCIStepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de faire des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
 
 Puis, IDCIStepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
 
