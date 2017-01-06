@@ -60,7 +60,7 @@ Nous allons utiliser un diagramme qui fera office de légende.
 
 ## Pourquoi utiliser StepBundle ?
 
-StepBundle permet de mettre en place aussi bien un parcours simple (une step, un path) qu'un parcours plus complexes (plusieurs steps et paths).
+IDCIStepBundle permet de mettre en place aussi bien un parcours simple (une step, un path) qu'un parcours plus complexes (plusieurs steps et paths).
 Vous pouvez commencer facilement à partir d'une configuration, qui représente la map, en utilisant le langage `yml` ou `json`.
 Vous pouvez aussi représenter une map en utilisant directement la programmation objet, mais cela est peut-être plus compliqué pour des non initiés au code et à la programmation objet.
 
@@ -133,7 +133,7 @@ imports:
 
 Notre Bundle est installé et prêt à l'emploi.
 
-Dans notre prochain article, nous testerons un cas concret d'utilisation du StepBundle : la création d'un formulaire de contact.
+Dans notre prochain article, nous testerons un cas concret d'utilisation de IDCIStepBundle : la création d'un formulaire de contact.
 
 
 ## Comparatif
@@ -223,4 +223,4 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
     </tbody>
 </table>
 
-/* Conclusion */
+/* Conclusion */ contactez nous

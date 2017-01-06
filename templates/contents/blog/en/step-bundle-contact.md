@@ -211,7 +211,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 }
 ```
 
-The `setDefaultParameters` function allows us to define our parameters. In our cas, we just need one parametre : the email adress.
+The `setDefaultParameters` function allows us to define our parameters. In our cas, we just need one parameter : the email adress.
 
 ```php
 /**
@@ -252,7 +252,7 @@ protected function doExecute(PathEventInterface $event, array $parameters = arra
 }
 ```
 
-Voici le rendu final de notre `PathEventAction` :
+Here's the final rendering of our `PathEventAction` :
 
 ```php
 <?php
@@ -315,9 +315,10 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 ```
 
 
-### Déclarer notre event en tant que service
+### Declare our event as a service
 
-Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut le déclarer pour que celui-ci soit accessible depuis le `container`. Pour cela, nous nous rendons dans le fichier `services.yml` :
+So, we have to create our `PathEventAction`. Subsequently, we have to declare it to make it accessible from the `container`.
+We have to go to our `services.yml` file :
 
 ```yml
 services:
@@ -328,16 +329,19 @@ services:
             - { name: idci_step.path_event.action, alias: send_thanks_email }
 ```
 
-Ainsi, dans la configuration du parcours, nous pourrons utiliser notre service grâce à l'identifiant `send_thanks_email`.
+In this way, in the process's configuration, we could use our service thanks to the id `send_thanks_email`.
 
 
-### Utiliser le service
+### Use the service
 
-Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier `DefaultController.php`.
+To use our service and connect our event, we have to go to our `DefaultController.php`file.
 
-StepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant des input de type "submit" pour envoyer les données de la step en cours.
+IDCIStepBundle is based on the Symfony FormType's using to display a step.
+Navigation's buttons are "submit" type's input to send datas of the current step.
 
-Le système "d'évent" s'appuie donc sur les événements définis par le Framework pour les FormType, nous vous revoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
+So, `event` system is lean on events defined by the Framework to the FormType.
+
+If you need more, you can read the Symfony doc : [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
 
 /*Mettre un schéma*/
 
@@ -377,21 +381,21 @@ class DefaultController extends Controller
 }
 ```
 
-Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
+Your form is ready, you just have to test it.
 
-Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `localhost:8000/contact` afin d'apprécier votre nouveau formulaire de contact.
+Open your Symfony project in your browser and go to the `localhost:8000/contact` URL in order to enjoy your new registration form.
 
-Voici comment nous l'avons représenté avec notre légende :
+Here's how we depict it with our caption :
 
-![Legende simple form](/images/blog/stepBundle_contact.png "Légende Simple Form")
+![Diagramm simple form](/images/blog/stepBundle_contact.png "Diagramm Simple Form")
 
 
-## Particularité de StepBundle
+## IDCIStepBundle's particularity
 
-Nous avons vu comment déclarer un configuration dans le Controller, cependant, StepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`.
-Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
+We have seen how to declare a configuration in the Controller, however, IDCIStepBundle allows altough to create maps directly in `config.yml` file and not in `DefaultController.php`.
+We recommend you to use this method because this avoid to need to rewrite the code, and this is lighter.
 
-Voici notre même exemple dans notre fichier `config.yml`:
+Heres's our same example in our `config.yml` file :
 
 ```yaml
 # app/config/config.yml
@@ -438,7 +442,7 @@ idci_step:
                                         email: '{{ flow_data.data.info.email }}'
 ```
 
-Dans le `DefaultController.php` :
+In the `DefaultController.php` :
 
 ```php
 // src/AppBundle/Controller/DefaultController
@@ -491,10 +495,11 @@ class DefaultController extends Controller
 
 ## Conclusion
 
-StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créant des `PathEventAction` et en les configurant selon vos souhaits.
-Il est aussi possible de créer des parcours plus complexes, comme nous le verrons dans notre prochain article.
-Puis, StepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
+IDCIStepBundle offer a large possibilities's scope thanks to configuration and personnalisation. It is possible to do simple process, as we saw it with our contact form, but it is also possible to optimize it, by creating `PathEventAction` and configure themselves as you want.
+We couls also, as we have seen it, create morecomplex process.
 
-N'hésitez pas à nous faire vos retours.
+Then, IDCIStepBundle allows to do modifications directly in the configuration, without having to rewrite in the Controller, which allow more maniabily.
 
-Si vous avez besoin d'aide ou d'une expertise, vous pouvez [nous contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
+Don't hesitate to do your feedback.
+
+If you need help or expertise to your Symfony projects, you could [contact us]({{ path('contact', {_locale: app.translator.locale}) }} "Contact us")

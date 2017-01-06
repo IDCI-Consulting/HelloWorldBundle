@@ -229,10 +229,10 @@ Open your Symfony project in your browser and go to the `localhost:8000/subscrip
 
 Here's how we depict it with our caption :
 
-![Légende IDCIStepBundle Subscription](/images/blog/stepBundle_subscription.png "Légende IDCIStepBundle Subscription")
+![Diagramm IDCIStepBundle Subscription](/images/blog/stepBundle_subscription.png "Diagramm IDCIStepBundle Subscription")
 
 
-### IDCIStepBundle's particularities
+### IDCIStepBundle's particularity
 
 We have seen how to declare a configuration in the Controller, however, IDCIStepBundle allows altough to create maps directly in `config.yml` file and not in `DefaultController.php`.
 We recommend you to use this method because this avoid to need to rewrite the code, and this is lighter.
@@ -647,7 +647,7 @@ Navigation's buttons are "submit" type's input to send datas of the current step
 
 So, `event` system is lean on events defined by the Framework to the FormType.
 
-If you need more, you can red the Symfony doc : [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
+If you need more, you can read the Symfony doc : [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
 
 Here are two explanatories diagramms :
 

@@ -3,11 +3,11 @@
 
 ## Introduction
 
-Retour à notre StepBundle avec un cas concret : la création d'un formulaire de contact simple.
-Pour des renseignements concernant l'utilisation et l'installation de StepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
+Retour à notre IDCIStepBundle avec un cas concret : la création d'un formulaire de contact simple.
+Pour des renseignements concernant l'utilisation et l'installation de IDCIStepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
 
 
-## Créer le formulaire de contact avec StepBundle
+## Créer le formulaire de contact avec IDCIStepBundle
 
 Nous avons donc choisi de réaliser un parcours composé d'une seule step : un formulaire de contact, et un seul path représentant la soumission des données saisies.
 Nous pouvons voir ce cas comme l'utilisation du contact form 7 de Wordpress à la sauce Symfony.
@@ -20,7 +20,7 @@ Dans la barre de recherche, nous avons notre `localhost:8000` suivi de la route 
 Ensuite, nous pouvoir voir le titre de notre formulaire de contact 'Personal informations', suivi des champs de saisies à compléter par l'utilisateur.
 Comme notre formulaire ne se compose que d'une seule step et d'un seule path, nous placerons un bouton de fin de parcours ("end").
 
-Prêt à commencer avec StepBundle ?
+Prêt à commencer avec IDCIStepBundle ?
 
 Nous allons travailler dans le fichier `DefaultController.php` du bundle crée par défaut `AppBundle`.
 
@@ -54,7 +54,8 @@ class DefaultController extends Controller
 ```
 
 Dans cette action, nous allons définir notre première map.
-Celle-ci se compose donc d'une seule step qui affichera un formulaire afin d'y saisir des données. Comme nous l'avons vu plus haut, il existe de base deux types de steps : 'html' et 'form'. Dans notre cas, le type 'form' sera celui que nous allons utiliser. Grâce à celui-ci, nous allons pouvoir définir l'ensemble des champs de saisie que nous voulons afficher à l'internaute.
+Celle-ci se compose donc d'une seule step qui affichera un formulaire afin d'y saisir des données. Comme nous l'avons vu plus haut, il existe de base deux types de steps : 'html' et 'form'.
+Dans notre cas, le type 'form' sera celui que nous allons utiliser. Grâce à celui-ci, nous allons pouvoir définir l'ensemble des champs de saisie que nous voulons afficher à l'internaute.
 Dans notre exemple, nous demanderons le prénom, le nom, le numéro de téléphone et l'adresse email.
 
 Puis, notre seul chemin (path) sera la soumission du formulaire qui mettra fin à notre navigation.
@@ -106,9 +107,9 @@ Notre map est maintenant prête, il faut donc créer le `navigator` à partir de
 ```
 
 Enfin, il faut définir les redirections à effectuer en fonction de la navigation réalisée par l'internaute. Trois cas sont possibles :
-    * Fin de navigation : lorsque l'on emprunte un chemin de type 'end'.
-    * Navigation : lorsque l'on emprunte un chemin de type 'single' ou 'conditional'.
-    * Le retour : lorsque l'on décide de retourner à une step précédente.
+ - Fin de navigation : lorsque l'on emprunte un chemin de type 'end'.
+ - Navigation : lorsque l'on emprunte un chemin de type 'single' ou 'conditional'.
+ - Le retour : lorsque l'on décide de retourner à une step précédente.
 
 
 ```php
