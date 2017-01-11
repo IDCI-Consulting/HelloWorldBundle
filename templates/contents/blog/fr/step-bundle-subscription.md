@@ -1,11 +1,13 @@
-# Créer un parcours complexe avec IDCIStepBundle #
+# Créer un parcours complexe avec IDCIStepBundle
 
-## Introduction ##
+
+## Introduction
 
 Une fois de plus, nous retournons à notre IDCIStepBundle, cette fois-ci, nous allons vous présenter une utilisation plus complexe : la création d'un processus d'inscription.
 Pour des renseignements concernant l'utilisation et l'installation de IDCIStepBundle, vous pouvez vous reporter à notre article d'introduction ici /*mettre lien vers article d'intro*/.
 
-## Créer le processus d'inscription avec StepBundle ##
+
+## Créer le processus d'inscription avec StepBundle
 
 Nous avons donc choisi de créer un parcours composé de plusieurs steps et de plusieurs paths.
 
@@ -225,7 +227,8 @@ Voici comment nous l'avons représenté avec notre légende :
 
 ![Légende IDCIStepBundle Subscription](/images/blog/stepBundle_subscription.png "Légende IDCIStepBundle Subscription")
 
-### Particularité de IDCIStepBundle ###
+
+### Particularité de IDCIStepBundle
 
 Nous avons vu comment déclarer un configuration dans le Controller, cependant, IDCIStepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`.
 Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
@@ -433,7 +436,8 @@ class DefaultController extends Controller
 }
 ```
 
-## Les event actions ##
+
+## Les event actions
 
 Les `event actions` définissent les actions à éxécuter lors de notre navigation (steps, paths), nous en avons mis en place quelques uns qui sont présents par défaut avec IDCIStepBundle, mais il est possible d'en créer soi même.
 Pour notre exemple, nous allons mettre en place un event action visant à sauvegarder en base les données de l'utilisateur à la fin de notre step (lors du clic sur le bouton `end`).
@@ -443,7 +447,8 @@ Pré-requis :
 - Doctrine
 - Entity Manager
 
-### Créer un service pour notre event action de sauvegarde de données ###
+
+### Créer un service pour notre event action de sauvegarde de données
 
 Nous pouvons considérer un service comme une classe qui est rendue accessible partout dans notre application.
 Dans un premier temps, il nous faut donc créer notre `PathEventAction` :
@@ -509,8 +514,8 @@ Pour plus de renseignements concernant l'utilisation de `flush` et `persist`, no
 ```
 
 La fonction `setDefaultParameters` nous permet de définir nos paramètres. Dans notre cas, nous avons spécifié deux choses :
-- les paramètres obligatoires (`setRequired`)
-- les paramètres optionnels (`setOptional`)
+ - les paramètres obligatoires (`setRequired`)
+ - les paramètres optionnels (`setOptional`)
 
 ```php
     /**
@@ -617,7 +622,8 @@ class SaveDataPathEventAction extends AbstractPathEventAction
 }
 ```
 
-### Déclarer notre event en tant que service ###
+
+### Déclarer notre event en tant que service
 
 Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut le déclarer pour que celui-ci soit accessible depuis le `container`. Pour cela, nous nous rendons dans le fichier `services.yml` :
 
@@ -629,7 +635,8 @@ Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut 
             - { name: idci_step.path_event.action, alias: save_data }
 ```
 
-### Utiliser le service ###
+
+### Utiliser le service
 
 IDCIStepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant les input de type "submit" pour envoyer les données de la step en cours.
 
@@ -657,7 +664,8 @@ Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous 
                                     action: save_data
 ```
 
-### Créer l'entity_manager ###
+
+### Créer l'entity_manager
 
 Enfin, nous devons créer notre entity manager, celui-ci va effectuer les requêtes SQL.
 // Principe d'encapsulation + doc ?
@@ -742,7 +750,7 @@ Ensuite, il nous faut générer les getters et les setters grâce à cette ligne
 
 $ php bin/console doctrine:generate:entities AppBundle/Entity/Subscription
 
-Si nous regardons à la fin de notre fichier `subscription.php`, nous voyons que les getters et les setters se sont ajoutés automatiquement à la fin de notre fichier :
+Si nous regardons à la fin de notre fichier `subscription.php`, nous voyons que les getters et les setters se sont ajoutés automatiquement :
 
 // développer getter/setter
 
@@ -1019,10 +1027,11 @@ Pour montrer que l'event marche, //screenshot de la fin du parcours
 
 // Aller chercher des objets dans la base de données ?
 
-## Conclusion ##
+
+## Conclusion
 
 
-IDCIStepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
+IDCIStepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de faire des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créeant des `PathEventAction` et en les configurant selon vos souhaits. Nous pouvons aussi, comme nous venons de le voir, créer des parcours plus complexes.
 
 Puis, IDCIStepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
 

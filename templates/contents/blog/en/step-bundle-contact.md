@@ -1,16 +1,18 @@
-# How to create a contact form with StepBundle ? #
+# How to create a contact form with StepBundle ?
 
-## Introduction ##
 
-Back to our StepBundle and its effective application : the creation of a simple contact form. 
+## Introduction
+
+Back to our StepBundle and its effective application : the creation of a simple contact form.
 If you need more informations about StepBundle's using and installation, you could read our introduction article here /*mettre le lien*/
 
-## Create the contact form with StepBundle ##
+
+## Create the contact form with StepBundle
 
 So, we have chosen to realize a process composed of one step : a contact form, and one path representing input datas's submission .
 We can imagine this case as the utilisation of WordPress's contact form 7 with the Symfony touch.
 
-Here's an illustration of the rendering : 
+Here's an illustration of the rendering :
 
 ![Screenshot Contact Form](/images/blog/screenshot_contact_form.png "Screenshot Contact Form")
 
@@ -22,7 +24,7 @@ Ready to start with StepBundle ?
 
 We will work in the bundle's `DefaultController.php` file  created by default `AppBundle`.
 
-Let's start by creating a first action `contact` : 
+Let's start by creating a first action `contact` :
 
 ```php
 // src/AppBundle/Controller/DefaultController.php
@@ -105,9 +107,9 @@ Our map is ready now. You have to create the 'navigator' from this one:
 
 Finally, you have to define the redirections to make according to the navigation realized by the user.
 Three cases are possible :
-   * End of navigation : when you follow a route of 'end' type
-   * Navigation : when you follow a path of 'single' or 'conditional' type
-   * Return : when you decide to go back to a previous step
+ - End of navigation : when you follow a route of 'end' type
+ - Navigation : when you follow a path of 'single' or 'conditional' type
+ - Return : when you decide to go back to a previous step
 
 
 ```php
@@ -151,13 +153,15 @@ We have to edit our file `Resources/views/Default/contact.html.twig` :
 {% endblock %}
 ```
 
-## Events : generate an email's sending ## 
+
+## Events : generate an email's sending
 
 Events define actions of our process (steps, paths), we have created a few which are present by default, but it is possible to create some.
 For our example, we will create an event to send an email at the end of our step (when the user clics on `end` button).
 It's possible to connect events on paths or steps any time of your process.
 
-### Create a service to our event ###
+
+### Create a service to our event
 
 We can considere a service as a class which is accessible every where in our application.
 In a first phase, we have to create a `PathEventAction` :
@@ -190,7 +194,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
     {
         $this->mailer = $mailer;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -207,7 +211,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 }
 ```
 
-The `setDefaultParameters` function allows us to define our parameters. In our cas, we just need one parametre : the email adress.
+The `setDefaultParameters` function allows us to define our parameters. In our cas, we just need one parameter : the email adress.
 
 ```php
 /**
@@ -240,7 +244,7 @@ protected function doExecute(PathEventInterface $event, array $parameters = arra
             ->setTo($parameters['email'])
             ->setBody('Hi, we are going to treat your request.')
         ;
-        
+
         $this->mailer->send($message);
     } catch (\Exception $e) {
         throw $e;
@@ -248,7 +252,7 @@ protected function doExecute(PathEventInterface $event, array $parameters = arra
 }
 ```
 
-Voici le rendu final de notre `PathEventAction` :
+Here's the final rendering of our `PathEventAction` :
 
 ```php
 <?php
@@ -301,7 +305,7 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
                 ->setTo($parameters['email'])
                 ->setBody('Hi, we are going to treat your request.')
             ;
-            
+
             $this->mailer->send($message);
         } catch (\Exception $e) {
             var_dump($e->getMessage());
@@ -310,9 +314,11 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
 }
 ```
 
-### Déclarer notre event en tant que service ###
 
-Nous avons donc crée notre `PathEventAction`. Dans un deuxième temps, il faut le déclarer pour que celui-ci soit accessible depuis le `container`. Pour cela, nous nous rendons dans le fichier `services.yml` :
+### Declare our event as a service
+
+So, we have to create our `PathEventAction`. Subsequently, we have to declare it to make it accessible from the `container`.
+We have to go to our `services.yml` file :
 
 ```yml
 services:
@@ -323,15 +329,19 @@ services:
             - { name: idci_step.path_event.action, alias: send_thanks_email }
 ```
 
-Ainsi, dans la configuration du parcours, nous pourrons utiliser notre service grâce à l'identifiant `send_thanks_email`.
+In this way, in the process's configuration, we could use our service thanks to the id `send_thanks_email`.
 
-### Utiliser le service ###
 
-Pour utiliser notre nouveau service et ainsi brancher notre event, rendons nous dans notre fichier `DefaultController.php`.
+### Use the service
 
-StepBundle se base sur l'utilisation d'un FormType Symfony pour afficher une step. Les boutons de navigation étant des input de type "submit" pour envoyer les données de la step en cours.
+To use our service and connect our event, we have to go to our `DefaultController.php`file.
 
-Le système "d'évent" s'appuie donc sur les événements définis par le Framework pour les FormType, nous vous revoyons à la doc Symfony pour en savoir plus: [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
+IDCIStepBundle is based on the Symfony FormType's using to display a step.
+Navigation's buttons are "submit" type's input to send datas of the current step.
+
+So, `event` system is lean on events defined by the Framework to the FormType.
+
+If you need more, you can read the Symfony doc : [Les Form Events](https://symfony.com/doc/2.8/form/events.html).
 
 /*Mettre un schéma*/
 
@@ -371,21 +381,22 @@ class DefaultController extends Controller
 }
 ```
 
-Votre formulaire est prêt, il ne vous reste plus qu'à le tester.
+Your form is ready, you just have to test it.
 
-Ouvrez votre projet Symfony dans votre navigateur, et rendez-vous sur l'URL `localhost:8000/contact` afin d'apprécier votre nouveau formulaire de contact.
+Open your Symfony project in your browser and go to the `localhost:8000/contact` URL in order to enjoy your new registration form.
 
-Voici comment nous l'avons représenté avec notre légende :
+Here's how we depict it with our caption :
 
-![Legende simple form](/images/blog/stepBundle_contact.png "Légende Simple Form")
+![Diagramm simple form](/images/blog/stepBundle_contact.png "Diagramm Simple Form")
 
-## Particularité de StepBundle ##
 
-Nous avons vu comment déclarer un configuration dans le Controller, cependant, StepBundle permet aussi de créer nos maps directement dans le fichier `config.yml` et non dans le fichier `DefaultController.php`. 
-Nous vous conseillons cette méthode car cela évite d'avoir besoin de réecrire le code, et cela est plus léger.
+## IDCIStepBundle's particularity
 
-Voici notre même exemple dans notre fichier `config.yml`: 
-      
+We have seen how to declare a configuration in the Controller, however, IDCIStepBundle allows altough to create maps directly in `config.yml` file and not in `DefaultController.php`.
+We recommend you to use this method because this avoid to need to rewrite the code, and this is lighter.
+
+Heres's our same example in our `config.yml` file :
+
 ```yaml
 # app/config/config.yml
 ....
@@ -431,7 +442,7 @@ idci_step:
                                         email: '{{ flow_data.data.info.email }}'
 ```
 
-Dans le `DefaultController.php` :
+In the `DefaultController.php` :
 
 ```php
 // src/AppBundle/Controller/DefaultController
@@ -481,15 +492,14 @@ class DefaultController extends Controller
 }
 ```
 
-## Conclusion ##
 
-StepBundle offre un large champ de possibilités grâce à la configuration et la personnalisation. Il est possible de mettre des parcours simples, comme nous l'avons vu avec notre formulaire de contact, mais il est aussi envisageable d'optimiser celui-ci, par exemple en créant des `PathEventAction` et en les configurant selon vos souhaits.
-Il est aussi possible de créer des parcours plus complexes, comme nous le verrons dans notre prochain article.
-Puis, StepBundle permet de faire des modifications directement dans la configuration, sans avoir besoin de rééecrire dans le Controller, ce qui permet plus de maniabilité.
+## Conclusion
 
-N'hésitez pas à nous faire vos retours.
+IDCIStepBundle offer a large possibilities's scope thanks to configuration and personnalisation. It is possible to do simple process, as we saw it with our contact form, but it is also possible to optimize it, by creating `PathEventAction` and configure themselves as you want.
+We couls also, as we have seen it, create morecomplex process.
 
-Si vous avez besoin d'aide ou d'une expertise, vous pouvez [nous contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
+Then, IDCIStepBundle allows to do modifications directly in the configuration, without having to rewrite in the Controller, which allow more maniabily.
 
+Don't hesitate to do your feedback.
 
-
+If you need help or expertise to your Symfony projects, you could [contact us]({{ path('contact', {_locale: app.translator.locale}) }} "Contact us")

@@ -1,7 +1,7 @@
-# Introduction à IDCIStepBundle #
+# Introduction à IDCIStepBundle
 
 
-## Introduction ##
+## Introduction
 
 Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une création de workflow interactif.
 Il fallait pouvoir réaliser facilement des parcours navigable par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
@@ -24,12 +24,12 @@ Dans un premier temps, nous devons définir une map, et imaginer chaque écran (
 > Remarque : cet article est destiné à Symfony 2.8
 
 
-### Qu'est-ce qu'une map ? ###
+### Qu'est-ce qu'une map ?
 
 Une map définit le workflow de navigation, elle se compose de steps et de paths.
 
 
-### Qu'est-ce qu'une step ? ###
+### Qu'est-ce qu'une step ?
 
 Une step se matérialise par une page web, et définit un potentiel point de passage.
 Elle peut être de différents types. Par défaut, notre bundle fournit deux types de `step` :
@@ -38,7 +38,7 @@ Elle peut être de différents types. Par défaut, notre bundle fournit deux typ
  - **form** : affichage d'un formulaire (FormType Symfony)
 
 
-### Qu'est-ce qu'un path ? ###
+### Qu'est-ce qu'un path ?
 
 Un path est un itinéraire qui a pour origine une step et pour destination zéro ou plusieurs steps.
 Il peut être de différents types. Par défaut, notre bundle fournit trois types de `path` :
@@ -48,7 +48,7 @@ Il peut être de différents types. Par défaut, notre bundle fournit trois type
  - **end** : le path qui détermine une fin de navigation.
 
 
-## Légende ##
+## Légende
 
 Nous allons utiliser un diagramme qui fera office de légende.
 
@@ -58,9 +58,9 @@ Nous allons utiliser un diagramme qui fera office de légende.
 ![Legende IDCIStepBundle](/images/blog/stepBundle_legend.png "Légende IDCIStepBundle")
 
 
-## Pourquoi utiliser StepBundle ? ##
+## Pourquoi utiliser StepBundle ?
 
-StepBundle permet de mettre en place aussi bien un parcours simple (une step, un path) qu'un parcours plus complexes (plusieurs steps et paths).
+IDCIStepBundle permet de mettre en place aussi bien un parcours simple (une step, un path) qu'un parcours plus complexes (plusieurs steps et paths).
 Vous pouvez commencer facilement à partir d'une configuration, qui représente la map, en utilisant le langage `yml` ou `json`.
 Vous pouvez aussi représenter une map en utilisant directement la programmation objet, mais cela est peut-être plus compliqué pour des non initiés au code et à la programmation objet.
 
@@ -83,7 +83,7 @@ $ composer create-project symfony/framework-standard-edition demo_step "2.8.*"
 ```
 
 
-## Installation ##
+## Installation
 
 Ajoutons la dépendance avec notre bundle, en modifiant le fichier `composer.json` :
 
@@ -133,10 +133,10 @@ imports:
 
 Notre Bundle est installé et prêt à l'emploi.
 
-Dans notre prochain article, nous testerons un cas concret d'utilisation du StepBundle : la création d'un formulaire de contact.
+Dans notre prochain article, nous testerons un cas concret d'utilisation de IDCIStepBundle : la création d'un formulaire de contact.
 
 
-## Comparatif ##
+## Comparatif
 
 Voici notre tableau comparatif (points forts / points faibles) des Bundles permetant de réaliser des workflows intéractifs.
 
@@ -156,11 +156,16 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
             <td>
                 <ul>
                     <li>Un FormType pour tous les flow</li>
+                    <li>Retour à la page précédente et enregistrement des informations</li>
+                    <li>Proposition de deux types d'approches (un FormType pour tout le flow, un par step)
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>TODO</li>
+                    <li>Création de nombreux fichiers lors de l'installation</li>
+                    <li>Pas d'enregistrement de l'ensemble des données de navigation (quand réactualisation)</li>
+                    <li>Moins pratique pour la réalisation d'un long formulaire, car 1 fichier = 1 step</li>
+                    <li>Pas de modifications dans la conf, donc moins de maniabilité</li>
                 </ul>
             </td>
         </tr>
@@ -170,12 +175,12 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
             </th>
             <td>
                 <ul>
-                    <li>Existe seulement en version beta.</li>
+                    <li></li>
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>TODO</li>
+                    <li>Seulement en version beta.</li>
                 </ul>
             </td>
         </tr>
@@ -185,12 +190,12 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
             </th>
             <td>
                 <ul>
-                    <li>Est afficher en "read only" sur github</li>
+                    <li></li>
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>TODO</li>
+                    <li>Affiché en "read only" sur Github</li>
                 </ul>
             </td>
         </tr>
@@ -200,14 +205,22 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
             </th>
             <td>
                 <ul>
-                    <li>Use native de merge token</li>
+                    <li>Usage natif de merge token <!--Rééxpliquer rapidement--></li>
+                    <li>Retour en arrière</li>
+                    <li>Possibilités de configuration sont nombreuses</li>
+                    <li>Debuger avec historique de navigation</li>
+                    <li>Configuration directement dans la conf, donc controller plus léger et plus maniable</li>
+                    <li>Event actions à brancher sur les paths ou les steps</li>
+                    <li>Enregistrement de l'ensemble des données de navigation (retour en arrière, réactualisation de page)
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>TODO</li>
+                    <li>Pas de FormType pour tous les flow</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
+
+/* Conclusion */ contactez nous
