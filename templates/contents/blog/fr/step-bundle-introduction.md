@@ -4,7 +4,7 @@
 ## Introduction ##
 
 Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une création de workflow interactif.
-Il nous fallait pouvoir réaliser facilement des parcours navigable par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
+Il fallait pouvoir réaliser facilement des parcours navigable par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
 L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être configurable (et non pas hardcodé).
 
 Nous avons testé des bundles existants, qui semblaient répondre à notre problématique client, mais ceux-ci n'étaient pas satisfaisant.
@@ -75,7 +75,7 @@ Voici une liste non exhaustive des cas d'utilisation de StepBundle :
 Sans plus attendre, partons à la rencontre de ce Bundle.
 
 
-Commençons par créer un projet Symfony en version 2.8, nous appelerons ce projet `demo_step`.
+Commençons par créer un projet Symfony en version 2.8, nous appellerons ce projet `demo_step`.
 
 
 ```sh
@@ -106,7 +106,7 @@ Puis, installons cette nouvelle dépendance en utilisant composer :
 $ composer update
 ```
 
-Déclarons le bundle dans votre fichier `AppKernel.php` :
+Déclarons le bundle dans notre fichier `AppKernel.php` :
 
 ```php
 <?php
