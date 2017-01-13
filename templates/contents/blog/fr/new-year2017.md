@@ -2,13 +2,11 @@
 
 L'équipe d'IDCI vous souhaite une très bonne année.
 
-Nous vous souhaitons de continuer à entreprendre pour rendre notre monde meilleur.
-
-Pour cette nouvelle année, nous vous souhaitons de continuer à explorer vos idées et votre créativité. Tester de nouvelles choses et être curieux sur ce qui vous entoure.
+Nous vous souhaitons de continuer à explorer vos idées et votre créativité. Tester de nouvelles choses et être curieux sur ce qui vous entoure.
 Prendre soin de vous et partager avec ceux que vous aimez. Encourager votre entourage à se surpasser avec vous. Avoir de nouveaux projets et les réaliser.
 Relever des nouveaux défis et recommencer encore pour passer au-dessus d'éventuels difficultés. Être surpris et poursuivre votre évolution.
 
-Nous souhaitons partager avec vous quelques moments forts d'IDCI en 2016.
+Nous aimerions partager avec vous quelques moments forts d'IDCI en 2016.
 
 
 ### Une évolution de l'équipe
@@ -21,6 +19,8 @@ Il a rejoint ainsi à ce poste Gabriel et Frédéric BONDAZ. Baptiste ajoute aus
 Il est devenu également formateur à l'INSEEC et à la 3WAcademy.
 
 **Eddie Barraco** travaille en alternance chez IDCI-Consulting depuis cette année pour se former au métier de développeur.
+
+![IDCI team](/images/blog/new-year2017-team.jpg "IDCI team")
 
 
 ### Partenaires pédagogique
@@ -37,8 +37,6 @@ Nous avons changé de locaux et terminé notre installation dans un nouvel espac
 Nous sommes maintenant au :
 109 Rue Francis de Pressensé, Batiment 9G
 69100 Villeurbanne
-
-// nouvelle photo de l'équipe
 
 
 ### L'arrêt du hosting
