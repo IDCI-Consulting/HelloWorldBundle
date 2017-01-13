@@ -206,4 +206,4 @@ In our next article, we will test a concrete case of StepBundle utilisation : th
     </tbody>
 </table>
 
-/* Conclusion */
+If you need help or expertise about IDCIStepBundle, you could [contact us]({{ path('contact', {_locale: app.translator.locale}) }} "Contact us")

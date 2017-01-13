@@ -2,11 +2,11 @@
 
 IDCI's team wish you a very happy New Year.
 
+We wish you to continue to hold forth to make our world better.
+
 For this new year, we wish you to continue to explore your ideas and your creativity. To test new things and to be curious about everything around you.
 To take care of you and to share with people you love. To cheer on your entourage to surpass itself. To have new projects and to realize them.
-To rise to a challenge et restart to pass through potentials fails. To be surprised and to pursue your evolution.
-
-We wish you to continue to hold forth to make our world better.
+To rise to a challenge and restart to pass through potentials fails. To be surprised and to pursue your evolution.
 
 We would like to share with you some IDCI's highlights in 2016.
 
@@ -34,8 +34,8 @@ It was important to us to thanks our partnership of their trust and wish them a 
 
 ### New premises
 
-We have changed of premises and finish our installtion in a new work space, which match more with our needs's company.
-We are now here :
+We changed of premises and finished our installation in a new work space, which match more with our needs's company.
+We are now located at :
 109 Rue Francis de Pressensé, Batiment 9G
 69100 Villeurbanne
 

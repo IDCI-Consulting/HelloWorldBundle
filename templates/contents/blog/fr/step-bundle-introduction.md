@@ -223,4 +223,5 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
     </tbody>
 </table>
 
-/* Conclusion */ contactez nous
+Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle vous pouvez
+[nous contacter](http://www.idci-consulting.fr/contact "Contactez-nous").
