@@ -48,7 +48,7 @@ Les derniers site web client ont été migré cette année 2016.
 
 ### Le CA
 
-En 2016, nous avons vu la croissance de notre chiffre d'affaire augmenter de 154%.
+En 2016, nous avons vu notre chiffre d'affaire augmenter de 154%.
 
 2017 s'annonce donc pour nous comme une année pleine de rebondissements, d'évolution, et très certainement d'expansion de notre équipe.
 Nous aurons encore de nouvelles choses à vous montrer.
