@@ -66,5 +66,3 @@ _4 heures_
 * Référencer son blog
 * Comprendre la notion de permaliens
 * Jouer avec les attachments
-
-

@@ -21,7 +21,7 @@ _2 hours_
 #### **WP: a CMS, a community**
 _4 hours_
 
-* What is a CMS c'est quoi?
+* What is a CMS ?
 * Some CMS
 * Why choose WordPress as a CMS ?
 * WordPress's installation and configuration
@@ -34,7 +34,7 @@ _4 hours_
 _4 hours_
 
 * Difference between article / page
-* Crearte your first pages
+* Create your first pages
 * Integrate medias (images, vidéos, etc) and handle them
 * Create articles and classify them by categories
 * Change templates
@@ -66,4 +66,3 @@ _4 hours_
 * Optimize your blog for search engines
 * Understand the permalinks's notions
 * Play with attachments
-

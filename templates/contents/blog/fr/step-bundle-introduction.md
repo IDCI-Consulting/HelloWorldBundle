@@ -4,11 +4,11 @@
 ## Introduction
 
 Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une création de workflow interactif.
-Il nous fallait pouvoir réaliser facilement des parcours navigable par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
+Il fallait pouvoir réaliser facilement des parcours navigable par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
 L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être configurable (et non pas hardcodé).
 
-Nous avons testé des bundles existants, qui semblaient répondre à notre problématique client, mais ceux-ci n'étaient pas satisfaisant.
-En bas de page, nous avons ajouté un tableau comparatif de ces différents bundles.
+Nous avons testé des bundles existants, qui semblaient répondre à notre problématique, mais ceux-ci n'étaient pas satisfaisant.
+En bas de page, nous avons ajouté un rapide [comparatif](#Comparatif) de ces différents bundles.
 
 Ainsi, nous avons choisi de développer notre propre Bundle et nous l'avons pensé générique et réutilisable.
 
@@ -75,7 +75,7 @@ Voici une liste non exhaustive des cas d'utilisation de StepBundle :
 Sans plus attendre, partons à la rencontre de ce Bundle.
 
 
-Commençons par créer un projet Symfony en version 2.8, nous appelerons ce projet `demo_step`.
+Commençons par créer un projet Symfony en version 2.8, nous appellerons ce projet `demo_step`.
 
 
 ```sh
@@ -106,7 +106,7 @@ Puis, installons cette nouvelle dépendance en utilisant composer :
 $ composer update
 ```
 
-Déclarons le bundle dans votre fichier `AppKernel.php` :
+Déclarons le bundle dans notre fichier `AppKernel.php` :
 
 ```php
 <?php
@@ -138,7 +138,7 @@ Dans notre prochain article, nous testerons un cas concret d'utilisation de IDCI
 
 ## Comparatif
 
-Voici notre tableau comparatif (points forts / points faibles) des Bundles permetant de réaliser des workflows intéractifs.
+Voici un tableau comparatif (points forts / points faibles) des Bundles permetant de réaliser des workflows intéractifs.
 
 <table>
     <thead>
@@ -155,47 +155,17 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
             </th>
             <td>
                 <ul>
-                    <li>Un FormType pour tous les flow</li>
-                    <li>Retour à la page précédente et enregistrement des informations</li>
-                    <li>Proposition de deux types d'approches (un FormType pour tout le flow, un par step)
+                    <li>Compatible avec symfony2 et 3.</li>
+                    <li>Retour en arrière possible sur plusieurs niveau avec conservation des données saisies à chaque étape.</li>
+                    <li>Deux approches possible (un "FormType" pour tout le flow, ou un "FormType" par step)</li>
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>Création de nombreux fichiers lors de l'installation</li>
+                    <li>Création de nombreux fichiers necessaires pour réaliser des parcours complexe car 1 fichier = 1 step.</li>
                     <li>Pas d'enregistrement de l'ensemble des données de navigation (quand réactualisation)</li>
-                    <li>Moins pratique pour la réalisation d'un long formulaire, car 1 fichier = 1 step</li>
-                    <li>Pas de modifications dans la conf, donc moins de maniabilité</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <a href="https://github.com/kitpages/KitpagesWorkflowBundle" target="_blank">KitpagesWorkflowBundle</a>
-            </th>
-            <td>
-                <ul>
-                    <li></li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Seulement en version beta.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <a href="https://github.com/Sylius/SyliusFlowBundle" target="_blank">SyliusFlowBundle</a>
-            </th>
-            <td>
-                <ul>
-                    <li></li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Affiché en "read only" sur Github</li>
+                    <li>On ne peux pas définir les étapes via de la configuration.</li>
+                    <li>Pas de notion de chemins, les étapes se suives chronologiquement.</li>
                 </ul>
             </td>
         </tr>
@@ -205,23 +175,29 @@ Voici notre tableau comparatif (points forts / points faibles) des Bundles perme
             </th>
             <td>
                 <ul>
-                    <li>Usage natif de merge token <!--Rééxpliquer rapidement--></li>
-                    <li>Retour en arrière</li>
-                    <li>Possibilités de configuration sont nombreuses</li>
-                    <li>Debuger avec historique de navigation</li>
-                    <li>Configuration directement dans la conf, donc controller plus léger et plus maniable</li>
-                    <li>Event actions à brancher sur les paths ou les steps</li>
-                    <li>Enregistrement de l'ensemble des données de navigation (retour en arrière, réactualisation de page)
+                    <li>Utilisation de chemins "path" reliant les étapes "step", ce qui permet une navigation par forcément chronologique entre chaque étapes.</li>
+                    <li>Parcours entiérement configurable (json/yaml), possibilité également de les "hardcoder".</li>
+                    <li>Sauvegarde de l'ensemble des données saisies ou récupérées durant la navigation.</li>
+                    <li>Retour en arrière possible sur plusieurs niveau avec conservation des données saisies à chaque étape.</li>
+                    <li>Usage natif de "champs de fusion" permettant de récupérer facilement les données saisies ou autres.</li>
+                    <li>"Debugger" intégrer contenant l'historique et le donnée de navigation.</li>
+                    <li>Possibilité de brancher des "EventActions" sur les "paths" ou les "steps".</li>
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>Pas de FormType pour tous les flow</li>
+                    <li>Seulement compatible avec Symfony 2 pour le moment.</li>
+                    <li>La configuration devient rapidement très dense.</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
+
+D'autres bundles ont été rapidement analysé mais pas testé:
+
+ - [KitpagesWorkflowBundle](https://github.com/kitpages/KitpagesWorkflowBundle){target="_blank"} => Seulement en version beta.
+ - [SyliusFlowBundle](https://github.com/Sylius/SyliusFlowBundle){target="_blank"} => Affiché en "read only" sur Github
 
 Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle vous pouvez
 [nous contacter](http://www.idci-consulting.fr/contact "Contactez-nous").
