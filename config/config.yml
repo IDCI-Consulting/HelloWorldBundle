@@ -82,8 +82,12 @@ blog:
             - "Wordpress"
             - "Symposium"
             - "Tutos et astuces"
+            - "Divers"
         articles:
         # file property will match the url parameter for route named article
+
+            #Divers
+            - {file: "new-year2017", image: "new-year2017.jpg", title: "Nos voeux 2017", date: "13/01/2017" , author: "Louise Millon", categories: ["Divers"]}
 
             #Symfony1
             - {file: "creer-un-projet-symfony-1-x-depuis-la-sandbox-sous-ubuntu", image: "symfony1-logo.jpg", title: "Créer un projet Symfony 1.x depuis la sandbox sous Ubuntu", date: "29/09/2011" , author: "Gabriel Bondaz", categories: ["Symfony1"]}
@@ -113,8 +117,12 @@ blog:
         categories:
             - "Symfony2"
             - "Tutos et astuces"
+            - "Divers"
         articles:
         # file property will match the url parameter for route named article
+
+            #Divers
+            - {file: "new-year2017", image: "new-year2017.jpg", title: "Our 2017 wishes", date: "13/01/2017" , author: "Louise Millon", categories: ["Divers"]}
 
             #Symfony2
             - {file: "bundle-composer-broadcast", image: "symfony2-logo.png", title: "Create a Symfony2 Bundle reusable and broadcast it via Composer", date: "15/01/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
