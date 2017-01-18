@@ -131,6 +131,27 @@ blog:
             #Tutos et astuces
             - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Implement a workspace of developpment to realize a website with PHP and MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
 
+achievements:
+    le_moniteur:
+        image_path: /images/moniteur.png
+        url: "http://lemoniteur.fr/"
+        title: "Le moniteur"
+        enabled: true
+        content:
+            fr:>
+lemoniteur.fr est un site d'information pour les acteurs publics et privés de la construction et des collectivités Locales.
+
+IDCI-Consulting est intervenu auprès d'eux pour un audit détaillé de l'ancienne version de leur site WEB.
+A la suite de cet audit, mise en place, développement et accompagnement des équipes sur le projet du nouveau site (mis en ligne en Mai 2011).
+Refonte du processus de création de compte (inscriptions) et de l'espace résérvé (Service Premium).
+            en:>
+lemoniteur.fr is a website for building professionals and locals communities.
+
+IDCI-Consulting has taken action beside them to a detail audit of their old website's version.
+After this audit, setting up, developpment et teams's accompanying on the new website's project (online on may 2015).
+Reworking of the processus of account's creation (inscriptions) and placeholder (premium service).
+
+
 # Params for sitemap
 sitemap:
     default:
