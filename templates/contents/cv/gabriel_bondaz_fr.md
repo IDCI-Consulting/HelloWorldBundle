@@ -29,7 +29,7 @@
  * Tessi Marketing : Expertise Symfony2
  * _2014_ Ecole normale supérieur de Lyon : Développement d’une plate-forme de gestion des pads
  * Tessi Marketing : Expertise symfony 2
- * Formation Php5 / Symfony 2 pour OPCADIA,
+ * Formation Php5 / Symfony 2 pour OPCADIA
  * _2005 – 2007_ Université Claude Bernard  Technicien de Recherche et de Formation
  * Installation et Configuration de salles informatiques multi système d'exploitation (Windows/Linux)
  * Mise en place d'un outil de gestion du parc informatique: GLPI (Gestionnaire Libre de Parc Informatique)

@@ -23,7 +23,7 @@
 ### FORMATION
 
  * _2015_ **License Professionnelle Systèmes Informatiques et Logiciels: Concepteur et Gestionnaire de Sites Internet** (METINET)
- * _2014_ **BTS SIO** (Service Informatique aux Orgnisations)
+ * _2014_ **BTS SIO** (Service Informatique aux Organisations)
 
 ### OUTILS INFORMATIQUE
 
