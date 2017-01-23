@@ -122,14 +122,14 @@ blog:
         # file property will match the url parameter for route named article
 
             #Various
-            - {file: "new-year2017", image: "new-year2017.jpg", title: "Our 2017 wishes", date: "13/01/2017" , author: "Louise Millon", categories: ["Divers"]}
+            - {file: "new-year2017", image: "new-year2017.jpg", title: "Our 2017 wishes", date: "13/01/2017" , author: "Louise Millon", categories: ["Various"]}
 
             #Symfony2
             - {file: "bundle-composer-broadcast", image: "symfony2-logo.png", title: "Create a Symfony2 Bundle reusable and broadcast it via Composer", date: "15/01/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
             - {file: "type-doctrine2", image: "symfony2-logo.png", title: "How to create a new type Doctrine2 with Symfony2", date: "18/01/2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
 
             #Tutos and tips
-            - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Implement a workspace of developpment to realize a website with PHP and MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
+            - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Implement a workspace of developpment to realize a website with PHP and MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos and tips"]}
 
 # Params for sitemap
 sitemap:
