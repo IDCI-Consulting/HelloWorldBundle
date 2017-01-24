@@ -3,6 +3,12 @@
 #### GABRIEL BONDAZ, 31 Ans
 ##### Ingénieur / Formateur
 
+![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
+[Github](https://github.com/konandrum)
+
+![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
+[Linkedin](https://www.linkedin.com/in/gabriel-bondaz)
+
 **gabriel.bondaz@idci-consulting.fr**
 **06 63 23 12 07**
 **Anglais niveau C1**
@@ -25,7 +31,7 @@
 
  - *2013*
 - Formation PHP5 / Symfony2 pour Proventis, [Université Claude Bernard Lyon 1](http://www.univ-lyon1.fr/)
-- expertise Symfony2 pour Tessi Marketing
+- Expertise Symfony2 pour Tessi Marketing
 
  - *2012*
 - Conseil, développement et formations des équipes sur Symfony2 pour [MB Création](https://www.mbcreation.net/)

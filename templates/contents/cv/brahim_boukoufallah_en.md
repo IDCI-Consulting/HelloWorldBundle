@@ -1,6 +1,13 @@
 ### CURRICULUM VITAE
 #### BRAHIM BOUKOUFALLAH, 26 years old
-##### Developer Web Full Stack and Analyst's profile
+##### Developer Web Full Stack / Trainer
+
+![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
+[Github](https://github.com/Brah0um)
+
+![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
+[Linkedin](https://www.linkedin.com/in/brahim-boukoufallah)
+
 **brahim.boukoufallah@idci-consulting.fr**
 **07 68 65 39 61**
 **Mastered english**
@@ -11,7 +18,7 @@
  * _2015_ Realisation of a brevet's managment application to Dynergie group
    * Backend with **Symfony2** exposing a **REST** api
    * Front end with **AngularJS** operating API in the form of graphics
- * Realisation of two websites with **responsive design** to marketing agencies, with the CMS **WordPress** and the framework **Foundation 5**. Creation of two customizables templates ([www.tessicustomermarketing.fr](http://www.tessicustomermarketing.fr), [pmc-net.net](http://pmc-net.net))
+ * Realisation of two websites with **responsive design** to marketing agencies, with the CMS **WordPress** and the framework **Foundation 5**. Creation of two customizables templates
  * Participation at development of some bundles **Symfony2** for Tessi Marketing Services group
  * Development and integration of the new website of IDCI-Consulting with the micro-framework **Silex**
  * _2014_ Development of Mapyourstories's api, a prototype allowing creation of subway's maps customizable, collaboratively and in real time with the framework **MeteorJS**

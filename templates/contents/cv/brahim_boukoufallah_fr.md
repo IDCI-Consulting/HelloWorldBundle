@@ -1,6 +1,13 @@
 ### CURRICULUM VITAE
 #### BRAHIM BOUKOUFALLAH, 26 ans
-##### Profil d'Analyste/Développeur Web Full Stack
+##### Développeur Web Full Stack / Formateur
+
+![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
+[Github](https://github.com/Brah0um)
+
+![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
+[Linkedin](https://www.linkedin.com/in/brahim-boukoufallah)
+
 **brahim.boukoufallah@idci-consulting.fr**
 **07 68 65 39 61**
 **Anglais maîtrisé**
@@ -9,7 +16,7 @@
 
  * _Depuis Juillet 2014_ Salarié chez IDCI-Consulting | Analyste développeur
  * _2015_ Réalisation d'une application de gestion de brevet pour le groupe Dynergie: backend avec **Symfony2** exposant une api **REST**. Frontend avec **AngularJS** exploitant l'api sous forme de graphiques
- * Réalisation de 2 sites au **responsive design** pour des agences marketing avec le CMS **WordPress**, en utilisant le framework **Foundation 5**. Création de deux thèmes personnalisables ([www.tessicustomermarketing.fr](http://www.tessicustomermarketing.fr), [pmc-net.net](http://pmc-net.net))
+ * Réalisation de 2 sites au **responsive design** pour des agences marketing avec le CMS **WordPress**, en utilisant le framework **Foundation 5**. Création de deux thèmes personnalisables
  * Participation au développement de divers bundles **Symfony2** pour le groupe Tessi Marketing Services.
  * Développement et intégration du nouveau site IDCI-Consulting avec le micro-framework **Silex**
  * _2014_ Développement de Mapyourstories, un prototype permettant la création de plans de métro personnalisables collaborativement et en temps réel avec le framework **MeteorJS**

@@ -3,7 +3,10 @@
 ##### Profil d'Ingénieur, Analyste/Développeur Web Full Stack
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
-[github.com/ovski4](https://github.com/ovski4)
+[Github](https://github.com/ovski4)
+
+![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
+[Linkedin](https://www.linkedin.com/in/baptiste-bouchereau)
 
 **baptiste.bouchereau@idci-consulting.fr**
 **06 62 35 45 36**
@@ -28,7 +31,7 @@
      * Exposition des brevets via une api REST (utilisation des bundles FOSRestBundle et JMSSerializerBundle)
    * Réalisation du Frontend avec les technologies AngularJS, SASS et les librairies GoogleChart.
  * Enseignant vacataire à l'université de Lyon 1 en licence e-business (module de 28h de cours sur la réalisation de sites e-commerce en php avec Wordpress et Prestashop)
- * Réalisation de 2 sites au responsive design pour des agences marketing ([www.tessicustomermarketing.fr](http://www.tessicustomermarketing.fr), [pmc-net.net](http://pmc-net.net))
+ * Réalisation de 2 sites au responsive design pour des agences marketing
    * Utilisation du CMS **WordPress**. Création de thèmes personnalisés pour chacun des sites. Ajout de custom posts pour la gestion des réalisations des entreprises
    * Framework CSS **Foundation 5**. Utilisation de **Sass**
    * Ajax pour la récupération et l'affichage d'actualités

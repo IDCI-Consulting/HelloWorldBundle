@@ -1,10 +1,13 @@
 ### CURRICULUM VITAE
 
-#### BRAHIM BOUKOUFALLAH, 26 Ans
-#### Analyste / Développeur Web Full Stack
+#### BRAHIM BOUKOUFALLAH, 27 ans
+#### Développeur Web Full Stack / Formateur
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
 [Github](https://github.com/Brah0um)
+
+![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
+[Linkedin](https://www.linkedin.com/in/brahim-boukoufallah)
 
 **brahim.boukoufallah@idci-consulting.fr**
 **07 68 65 39 61**
@@ -15,7 +18,12 @@
 
  - *Depuis Juillet 2014* Salarié chez IDCI-Consulting | Analyste & Développeur Web Full Stack
 
- - *2016* Intervenant à l'Inseec Digital Institute et à la 3W Academy
+ - *2016*
+- Intervenant à l'Inseec Digital Institute
+- Enseignement des langages de programmation web PHP & MySQL
+
+- Intervenant à la 3W Academy
+- Enseignement des langages de programmation web HTML & CSS
 
  - *2015* Réalisation d'une application de gestion de brevet pour le groupe Dynergie
 - Backend avec **Symfony2** exposant une API **REST**
@@ -26,7 +34,7 @@
 - Framework **Foundation 5**
 - Création de deux thèmes personnalisables
 
- - Participation au développement de divers bundles **Symfony2** pour le groupe Tessi Marketing Services.
+ - Participation au développement de divers bundles **Symfony2** pour le groupe Tessi Marketing Services
 
  - Développement et intégration du nouveau site IDCI-Consulting
 - Micro-framework **Silex**
@@ -57,26 +65,26 @@
 - **Configuration Management** : Ansible
 
  - *Langages*
-- Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script
+- PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script
 
  - *OS* Windows, Linux (Debian et Ubuntu)
 
  - *Technologies*
-- **Framework backend** : Symfony2, Silex
+- **Framework backend** : Symfony2/3, Silex
 - **Framework frontend** : AngularJS
-- **Framework CSS**: Bootstrap, Foundation
+- **Framework CSS**: Bootstrap, Foundation, Materialize
 - **Moteur de template**  : Twig, Handlebars
-- **CMS** : WordPress
+- **CMS** : WordPress, Prestashop
 - **Versioning** : Git, Svn
 - **Base de données** : Mysql, MongoDB
 - **Virtualisation** : Docker
-- **Gestion de projet** : Redmine
+- **Gestion de projet** : Redmine, Trello
 - **Autres** : Ajax, jQuery, Gulp
 
  - *Graphisme* Notions de Gimp et Photoshop
 
 
 
-### EXPERIENCES PERSONNELLES //ET LOISIRS ?
+### EXPERIENCES PERSONNELLES
 
  - *2008-2013* Équipier polyvalent à Mcdonalds à temps partiel

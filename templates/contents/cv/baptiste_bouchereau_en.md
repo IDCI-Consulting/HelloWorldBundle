@@ -3,7 +3,10 @@
 ##### Analyst/Déveloper Web Full Stack and Engineer's profile
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
-[github.com/ovski4](https://github.com/ovski4)
+[Github](https://github.com/ovski4)
+
+![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
+[Linkedin](https://www.linkedin.com/in/baptiste-bouchereau)
 
 **baptiste.bouchereau@idci-consulting.fr**
 **06 62 35 45 36**
@@ -21,14 +24,14 @@
     * Redaction of web services's specifications
     * Installation of a wiki (Dokuwiki) to improve information's sharing with teams
     * Deployments's automation with **Ansible**
- * _2015_ Realisation of a brevet's managment application to Dynergie group
+ * _2015_ Realisation of a brevet's management application to Dynergie group
    * Application's conceptualisation : brevets's modelisation UML
    * Réalisation of an interface's administrations of brevets with **Symfony2**
      * SonataAdminBundle's utilisation to the interface
      * Brevets's exposition via a REST api (utilisation of bundles FOSRestBundle et JMSSerializerBundle)
    * Frontend's realisation with technologies AngularJS, SASS and librairies GoogleChart
  * Supply teacher at Lyon 1 University in Licence e-business (unit of 28h of classes about e-commerce websites's realisation in PHP with Wordpress and Prestashop)
- * Realisation of 2 websites with responsive design to marketing agencies ([www.tessicustomermarketing.fr](http://www.tessicustomermarketing.fr), [pmc-net.net](http://pmc-net.net))
+ * Realisation of 2 websites with responsive design to marketing agencies
    * Use of the CMS **WordPress**. Creation of customized templates to each websites. Add custom posts to manage the companies's realisations.
    * Framework CSS **Foundation 5**. Use of **Sass**
    * Ajax to news's recovery and display
