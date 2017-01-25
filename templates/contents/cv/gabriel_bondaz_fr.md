@@ -32,7 +32,7 @@
  * _2013_ Formation PHP5 et Symfony2 pour Proventis, Université Claude Bernard Lyon 1
  * Expertise Symfony2 pour Tessi Marketing
  * _2012_ Conseil, développement et formations des équipes sur Symfony2 pour [MB Création](https://www.mbcreation.net/)
- * Formation PHP5 et Symfony2 pour Proventis.
+ * Formation PHP5 et Symfony2 pour Proventis
  * _2011_ Conseil et formation des équipes dans le cadre du changement de version du site web pour [Allopneus](http://www.allopneus.com/)
    * Encadrement d'une équipe de 6 développeurs
    * Technologies : PHP5 et Symfony2
