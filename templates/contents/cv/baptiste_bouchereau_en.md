@@ -1,106 +1,104 @@
 ### CURRICULUM VITAE
+
 #### BAPTISTE BOUCHEREAU, 25 years old
-##### Analyst/Déveloper Web Full Stack and Engineer's profile
+##### Full Stack Web Developer / Engineer
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
 [Github](https://github.com/ovski4)
 
 ![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
-[Linkedin](https://www.linkedin.com/in/baptiste-bouchereau)
+[Linkedin](https://www.linkedin.com/in/baptiste-bouchereau/en)
 
 **baptiste.bouchereau@idci-consulting.fr**
 **06 62 35 45 36**
 **English level C1 Validate with the help of CAE - Cambridge English Advanced Certificate**
 
-### PROFESSIONALS EXPERIENCES
 
- * _For September 2015_ Indépendent at IDCI-CONSULTING | Developer Analyst
- * _2016_ 7 months's mission at Courbevoie. Backend development of the Carglass France's new website
-   * Dévelopment/maintenance and improvements of some functionalities and symfony2 bundles:
-     * Web services's development with FosRestBundle
-     * Analyse and development of bundles to handle pick up charge bris de glace by assurances
-     * Mail's sending to users with **Amazon Simple Email Service**
-     * Use of SGBD Oracle with **Doctrine2**
-    * Redaction of web services's specifications
-    * Installation of a wiki (Dokuwiki) to improve information's sharing with teams
-    * Deployments's automation with **Ansible**
- * _2015_ Realisation of a brevet's management application to Dynergie group
-   * Application's conceptualisation : brevets's modelisation UML
-   * Réalisation of an interface's administrations of brevets with **Symfony2**
-     * SonataAdminBundle's utilisation to the interface
-     * Brevets's exposition via a REST api (utilisation of bundles FOSRestBundle et JMSSerializerBundle)
-   * Frontend's realisation with technologies AngularJS, SASS and librairies GoogleChart
- * Supply teacher at Lyon 1 University in Licence e-business (unit of 28h of classes about e-commerce websites's realisation in PHP with Wordpress and Prestashop)
- * Realisation of 2 websites with responsive design to marketing agencies
-   * Use of the CMS **WordPress**. Creation of customized templates to each websites. Add custom posts to manage the companies's realisations.
-   * Framework CSS **Foundation 5**. Use of **Sass**
-   * Ajax to news's recovery and display
- * Involvment to multiples Symfony2 bundles's development to Tessi Marketing Services group
-   * Bundle allowing to generate uniques coding to promotionnals
-   * Bundle allowing to manage steps of participation to repayment's offers
- * Improvment of workflow at IDCI-Consulting. Arranging of an uninterrupted integration's platform and automation of developments's environments with Docker
-   * Arranging of an uninterrupted integration's platform **Gitlab** and **Gitlab-CI**
-   * Deployment of dockered applications in recipe with **Ansible**.
-   * Automation of development's environments with **Docker** and **docker-compose**
-     * MySQL container, containing database
-     * Adminer container, manage's gestion of database
-     * Nginx container, containing application, with task runner gulp allowing functionalities as livereload, saas compilation, javascript and CSS files's minification.
-     * ELK container, with stack Elasticearch, Kibana, Logstash, allowing to make the logs's analysis getting out the nginx container.
+### PROFESSIONAL EXPERIENCES
 
- * _2014_ 3 months's internship in a startup to Santa Monica. Realisation of a news's website.
-   * Application's conception: UML modelling
-   * Website's development with **Symfony2**
-   * Website's integration with the framework **Bootstrap2**
-   * Team's formation about the framework **Symfony2**
- * Development of Mapyourstories's api, a prototype allowing creation of subway's maps customizable, collaboratively and in real time with the framework **MeteorJS**
-   * API's realisation allowing to exposed generate plans
-   * Creation of scripts with PhantomJS to generate pictures of plans
- * Development and integration of a pads managment's platform with **Symfony2** to ENS of Lyon, and an unit to the e-learning claroline-connect's platform
-   * Plugins's development to etherpad-lite
-   * Interface Symfony2's creation, exploiting the etherpad-lite's api to create pads and integrate them in iframes
- * _2013_ Dévelopment of a bundle **Symfony2** of generation web pages's screenshots. This bundle allows to obtain page web's images in differents formats (jpg, gif, base64…), differents resolutions, by using **PhantomJS**
-   * Realisation of a backend in Symfony2 exposing genealogies
-   * Exposition of the genealogy's elements via an API REST
-   * Api's exploitation on a website developed with the CMS WordPress to manage the thoroughbred horses's genealogy.
+ * _Since September 2015_ Independent at IDCI-CONSULTING | Developer Web / Engineer
+ * _2016_ Professionalizing [courses](https://www.idci-consulting.fr/en/courses#symfony2) on Symfony framework
+ * Created a [SVG editor](https://github.com/IDCI-Consulting/SvgEditor) in JavaScript for a marketing operation
+ * 7 months mission at Courbevoie. Backend development of the Carglass France new website
+   * Involved in design and writing of interface functional specifications
+   * Used of SGBD Oracle with Doctrine2
+   * Deployments automation with Ansible
+   * Organized a wiki (Dokuwiki) to improve information sharing with teams
+ * Teached at Lyon 1 University, E-business class
+    * 28h of courses
+    * Teached e-commerce websites creation with the CMS Prestashop
+ * _2015_ Created an application to manage patents for Dynergie group
+   * Designed the application
+   * Developed backend with Symfony2 and exposed patents via a REST api
+   * Developed frontend with AngularJS, SASS and GoogleChart library
+* Created two websites with responsive design for marketing agencies
+   * CMS : WordPress
+   * Created custom themes for each website
+   * Framework CSS : Foundation 5
+   * Used Sass
+ * Developed several Symfony2 bundles for a marketing agency
+   * Bundle to generate uniques coding for promotional offers
+   * Bundle to manage steps of participation in refund offers
+ * Improved IDCI-Consulting workflow
+   * Setted up a continuous integration platform with Gitlab and Gitlab-CI
+   * Deployed dockered applications in pre-production with Ansible
+   * Automated of development environments setup with Docker and docker-compose
+ * _2014_ 3 months internship in a startup, Santa Monica : created a news website
+   * Designed the application
+   * Framework CSS : Bootstrap
+   * Team formation about the Symfony2 framework
+ * Developed Mapyourstories, a prototype to create customizable subway maps in collaboration and real time
+   * Framework : MeteorJS
+ * Developed and integrated a pads managment platform with Symfony2 and an module claroline-connect e-learning, for the ENS Lyon
+   * Developed plugins for etherpad-lite
+   * Created a plugin for the claroline plateform to create and integrate pads
+ * _2013_ Developed a Symfony2 bundle to generate web pages screenshots in different formats (.jpg, .gif, etc) and resolutions
+   * Used PhantomJS
+ * _November 2011_ Internship at IARC (International Agency of Research on Cancer)
+   * Designed and producted an electronic lab book for several scientific teams
+   * CMS : WordPress
 
- * _2012_ Realisation and integration of some websites fronts, with customized templates and backends with **WordPress**. ([www.bodysculpt.fr](http://www.bodysculpt.fr), [www.chine-france.com](http://www.chine-france.com), [www.l-appart.net](http://www.l-appart.net))
- * _Novembre 2011_ Internship at CIRC (Centre International de recherche sur le Cancer)
-   * Conception et realisation of an electronic notebook's laboratory to team's membres with the CMS **WordPress**
 
 ### PERSONNAL PROJECTS
 
- * _2016_ Realisation of a mini scratch game to celebrate birthdays with fun, with **CreateJs** ([happy-birthday.pro](http://happy-birthday.pro))
- * _2015_ Realisation of a vocabulary revision's application of foreigns languages with **Symfony2**. ([learn-vocabulary.com](http://learn-vocabulary.com))
- * Realisation of an artiste's portfolio with **Wordpress** and the framework CSS **Bootstrap 3** ([clemencebouchereau.com](http://clemencebouchereau.com))
- * _2014_ Realisation of a quizz mobile game with **Cordova**
+ * _2016_ Created a mini scratch game to celebrate birthdays in an original way, with CreateJs ([happy-birthday.pro](http://happy-birthday.pro))
+ * _2015_ Created a vocabulary revision application to learn foreign languages with Symfony2 ([learn-vocabulary.com](http://learn-vocabulary.com))
+ * Created the portfolio of an artist ([clemencebouchereau.com](http://clemencebouchereau.com))
+   * CMS : WordPress
+   * Framework CSS : Bootstrap
+ * _2014_ Created a quizz mobile game with Cordova
+
 
 ### EDUCATION
 
- * _2015_ Engineer's diploma CPE Lyon : block release informatic and communication's network
+ * _2015_ CPE Lyon Engineering degree : Development and Networks
  * _2015_ Certification CAE - English level C1
- * _2012_ University technologic diploma in informatics
- * _2009_ Scientific Baccalauréat with honours
+ * _2012_ University Technologic Degree in computer sciences
+ * _2009_ Scientific Baccalaureat
 
-### INFORMATICS TOOLS
 
- * _Operating systems_ Windows, Linux (Debian & Ubuntu, Archlinux)
- * _System management_
- * Serveur HTTP Apache, Nginx
- * Cache and reverse proxy Varnish
- * Configuration Management: Ansible
+### SKILLS
+
+ * _System management_ **Server HTTP** : Apache, Nginx
+ * **Configuration Management** : Ansible
+ * **Cache and reverse** : proxy Varnish
+ * _OS_ Windows, Linux (Debian & Ubuntu, Archlinux)
  * _Languages_ Java, PHP, HTML5, CSS3, SASS, JavaScript, Sql, Shell Script
- * _Technologies_ **Framework backend**: Symfony2, Silex, MeteorJs
- * **Framework css**: Bootstrap, Foundation
- * **Template's engines**: Twig, Handlebars
- * **CMS**: Wordpress
- * **Versioning**: Git, Svn
- * **DB**: Mysql, MongoDB
- * **Virtualisation**: Docker
- * **Project's management**: Redmine
- * **Task runner**: Gulp
- * **Others**: Ajax, Jquery
- * _Graphics_ Gimp's notions
+ * _Technologies_ **Backend framework** : Symfony2, Silex, MeteorJs
+ * **Frontend framework** : Angular 1.2, VueJS 2, jQuery
+ * **CSS framework** : Bootstrap, Foundation
+ * **Template engines** : Twig, Handlebars
+ * **CMS** : Wordpress, Prestashop
+ * **Databases** : Mysql, MongoDB
+ * **Versioning** : Git, Svn
+ * **Virtualisation** : Docker
+ * **Project management** : Redmine
+ * **Task runner** : Gulp
+ * **AMQP Tools** : RabbitMQ
+ * **Modélisation** : UML
+ * _Graphic design_ Gimp notions
+
 
 ### PERSONAL EXPERIENCES
 
- * _July 2012, 2013 and 2015_ Volunteer during the Solidays festival in Paris, to the association AIDS
+ * _July 2012, 2013, 2015_ Volunteer during the Solidays festival in Paris for AIDS

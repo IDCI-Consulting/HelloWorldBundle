@@ -1,69 +1,84 @@
 ### CURRICULUM VITAE
+
 #### GABRIEL BONDAZ, 31 years old
-##### ENGINEER / TRAINER
+##### Engineer / Teacher
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
 [Github](https://github.com/konandrum)
 
 ![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
-[Linkedin](https://www.linkedin.com/in/gabriel-bondaz)
+[Linkedin](https://www.linkedin.com/in/gabriel-bondaz/en)
 
 **gabriel.bondaz@idci-consulting.fr**
 **06 63 23 12 07**
-**Mastered english**
+**English mastered**
 
-### PROFESIONALS EXPERIENCES
 
- * _For Septembrer 2008_ Creation of IDCI-Consulting | Associate and engineer research and development
-  * Speaker at Lyon 1 University: Web training (Html, Css, Joomla, Magento, Wordpress, Dreamweaver)
-  * Trainer PHP / Symfony1 / Symfony2  as part of profesionals trainings (APTA – Clermont Ferrand, ASP via Sodifrance, Proximit, ICAP)
-  * Conception and development of profesionals websites with PHP (Framework Symfony)
-  * Managmement of technical staff (Symfony1, Symfony2, Wordpress, Magento)
-  * Establishment of server infrastructure (Firewall, Reverse Proxy, DNS, dhcp, Web Server, Ftp Sever, Subversion, Database)
- * _2009_ Service for Ajilon  : establishment of the website [www.fidroit.fr](http://www.fidroit.fr)
-   * Training in place's staff
-   * Projects's management
-   * Technology : Php5 / Symfony1.3
- * _2010_ Group Moniteur : management of the project of website's reworking [www.lemoniteur.fr/](http://www.lemoniteur.fr/)
-   * Management of a 3 developers's team
-   * Technology : Php5 / Symfony1.4
- * _2011_ Allopneus : Counsel and training of staffs through the version's change of the website [www.allopneus.com](http://www.allopneus.com)
-   * Management of a 6 developers's team
-   * Technology : Php5 / Symfony2
- * _2012_  MB Création : Counsel, development and staffs's training on Symfony2
- * Training Php5 / Symfony2 for Proventis
- * _2013_ Training Php5 / Symfony2 for Proventis, UCBL
- * Tessi Marketing : Expertise Symfony2
- * _2014_ Ecole normale supérieure de Lyon : Development of a management pads's platform
- * Tessi Marketing : Expertise symfony 2
- * Formation Php5 / Symfony2 for OPCADIA,
- * _2005 – 2007_ Lyon 1 University Research and Training's technician
- * Installation and Configuration of informatics rooms multi operating systems (Windows/Linux)
- * Establishment of a gestion's tool of informatic park: GLPI (Gestionnaire Libre de Parc Informatique)
- * Dévelopment of plugins for the SPIRAL platform (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon1)
- * _2005_ Calcul center of IN2P3 | 16 weeks internship (from 04/04/2004 to 31/07/2005)
- * Establishment of an informatic protocole to medicals images at DICOM format, from an IRM to a SRB base. Project BIRNy rename LyNDA (Lyon Neuroimaging Database & Applications)
- * _2004_ Laboratory Lagep | 10 weeks internship (du 05/04/2004 au 13/06/2004)
- * Full reworking of the website ([www.lagep.cpe.fr](http://www.lagep.cpe.fr)). Establishment of the web server with Linux Debian, creation of some uptading's tools for the website.
+### PROFESSIONAL EXPERIENCES
 
-### TRAINING
+ * _Since Septembrer 2008_ Created IDCI-Consulting | Co-manager, Research and Development Engineer
+ * Teached at [Lyon 1 University](http://www.univ-lyon1.fr/)
+   * Web courses : Html, Css, Joomla, Magento, Wordpress, Dreamweaver
+ * Teached PHP, Symfony1 and Symfony2 as part of professionnal courses (APTA – Clermont Ferrand, ASP via Sodifrance, Proximit, ICAP)
+ * Designed and developed professional websites with PHP (Framework Symfony)
+ * Managed technical staff (Symfony1, Symfony2, Wordpress, Magento)
+ * Setted up server infrastructure (Firewall, Reverse Proxy, DNS, dhcp, Web Server, Ftp Sever, Subversion, Database)
+ * _2014_ Developed a platform to manage pads for [ENS](http://www.ens-lyon.fr/)
+ * Symfony2 expertise for [Tessi Marketing](http://www.tessicustomermarketing.fr/)
+ * PHP5 and Symfony2 courses for [OPCADIA](http://optedif-formation.fr/)
+ * _2013_ PHP5 and Symfony2 courses for Proventis, UCBL
+ * Symfony2 expertise for Tessi Marketing
+ * _2012_ Developed, counseled and trained teams on Symfony2 for [MB Création](https://www.mbcreation.net/)
+ * PHP5 and Symfony2 courses for Proventis
+ * _2011_ Counseled and trained teams in the context of the website evolution [Allopneus](http://www.allopneus.com/)
+   * Managed a team of 6 developers
+   * Used PHP5 and Symfony2
+ * _2010_ Managed the website reworking project for [Moniteur](http://www.lemoniteur.fr/)
+   * Managed a team of 3 developers
+   * Used PHP5 and Symfony 1.4
+ * _2009_ Managed the website project for [Ajilon](http://www.fidroit.fr)
+   * Trained existing teams
+   * Project management
+   * Used PHP5 and Symfony 1.3
+ * _2005 – 2007_ Research and Teacher technician for Lyon 1 University
+   * Setted up and configurated computer rooms multi operating systems (Windows/Linux)
+   * Implementated a computer asset management tool: FCPM (Free Computer Park Manager)
+   * Developed plugins for the SPIRAL platform (an interactive and educational plateform)
+ * _2005_ Calcul center of [IN2P3](http://cc.in2p3.fr/) | Internship of 16 weeks
+   * Implementated a computer protocol for the transfer of medical images in DICOM format from an MRI to an SRB database
+ Project BIRNy renamed LyNDA (Lyon Neuroimaging Database & Applications)
+ * _2004_ Lagep Laboratory | Internship of 10 weeks
+   * Redesigned the website ([www.lagep.cpe.fr] (http://www.lagep.cpe.fr)). Implementation of the WEB server under Linux Debian, and creation of many tools for updating the site
+
+
+### EDUCATION
 
 * _2008_ Master MIAGE
-* _2005_ Bachelor's degree in Informatics (new application architecture)
-* _2004_ DUT Informatics
+* _2005_ Bachelor degree in computer sciences (New Application Architecture)
+* _2004_ DUT Computer science
 
-### INFORMATICS TOOLS
 
-* _Operating Systems_: Ms Dos, Windows, MacOS, Linux, Unix
-* _Networks_ Dns (bind), Dhcp, Reverse proxy and load balancing (pound), Firewall (iptables), Serveur Http (Apache, lighttpd), Serveur FTP (vsFtp)
+### SKILLS
+
+* _System management_ **Server HTTP** : Apache, Nginx
+* **Configuration Management** : Ansible
+* **Cache and reverse** : proxy Varnish
+* _Networks_ Dns (bind), Dhcp, Reverse proxy and load balancing (pound), Firewall (iptables), Http Server (Apache, lighttpd), FTP Server (vsFtp)
+* _OS_ Ms Dos, Windows, MacOS, Linux, Unix
 * _Langagues_ C, C++, Java, Python, Php, Html, xHtml, JavaScript, Sql, Pl/Sql, Prolog, Shell Script
-* _Technologies_ Dhtml, Ajax, Framework Symfony, Ejb 3, Svn (Versionning), Trac/Redmine (Suivi dvpts & Bug trackeur), virtualisation de serveur (Xen, OpenVZ, KVM)
-* _CMS_ Joomla, Drupal, Wordpress, Dreamweaver
-* _Graphics_ Notions of Photoshop et Gimp
-* _Office equipments_ Microsoft Office suites and Open Office
+* _Technologies_ **Framework backend** : Symfony2, Silex, MeteorJS
+* **Framework CSS** : Bootstrap, Foundation
+* **Moteur de templates** : Twig, Handlebars
+* **CMS** : WordPress, Joomla, Drupal, Dreamweaver
+* **Gestion de projet** : Trac, Redmine
+* **Versioning** : Git, Svn
+* **Virtualisation de serveur** : Xen, OpenVZ, KVM
+* _Others_ Ajax, jQuery, Ejb3, Dhtml
+* _Graphic design_ Gimp and Photoshop notions
+
 
 ### PERSONNALS EXPERIENCES
 
-* _2004 – 2005_ Elected studient at the board of directors of Lyon 1 University and president of the association Student Club
-* _Juillet 2004 et 2005_ Volunteer during the Solidays festival in Paris, to the association AIDS
+* _2004 – 2005_ Elected student on the board of Lyon 1 University and president of the 'Student Club' association
+* _Juillet 2004 and 2005_ Volunteer during the Solidays festival in Paris for AIDS
 * _2003_ Fist-aid certificate (AFPS)
