@@ -1,113 +1,156 @@
 ﻿﻿
-# Introduction au BackOffice de WordPress #
+# Introduction au back office de WordPress
 ![Wordpress logo](/images/blog/wordpress.png "Wordpress logo")
 
-Cet article présente certaines des nombreuses fonctionnalités disponible de l'outil WordPress.
-De nombreuses documentations sur ce sujet sont disponibles sur la toile mais la plus complète
-se trouve sur le site officiel [codex.wordpress.org](http://codex.wordpress.org/Main_Page).
-L'idée de cet article est de vous permettre une rapide prise en main des fonctionnalités
-essentielles et de vous accompagner en vous proposant un fil conducteur simple
-dans les coulisses de ce séduisant CMS ...
 
-Pour [installer WordPress]({{ path('article', { _locale: app.translator.locale, file: 'install-wordpress' }) }}), si c'est déjà fait, allons-y !
+Dans cet article, nous allons découvrir ensemble les nombreuses propriétés du CMS WordPress.
 
-## A quoi sert le back office de WordPress ##
+WordPress propose deux interfaces, chacune ont une utilité respective :
 
-Le back office de WordPress est un espace réservé, accessible par un login et un mot de passe.
+ - Le back office : c'est un espace réservé, accessible par un login et un mot de passe, et non visible par les internautes.
+ - Le front office : c'est la partie publique, visible par les internautes.
+
+Nous allons donc nous concentrer sur la prise en main des fonctionnalités essentielles du back office.
+
+Pour la documentation complète, nous vous renvoyons au site officiel : [codex.wordpress.org](http://codex.wordpress.org/Main_Page).
+
+Si vous n'avez pas encore installé WordPress, vous pouvez vous référer à notre article [Installer WordPress]({{ path('article', { _locale: app.translator.locale, file: 'install-wordpress' }) }}).
+
+
+## À quoi sert le back office de WordPress ?
+
+Le back office de WordPress est une interface de travail qui nous permet de gérer les contenus et les fonctionnalités.
 
 ![WP Admin](/images/blog/wp_install_8.png "WP Admin")
 
-Une fois connecté dans cet espace vous pourrez alors:
+Une fois connecté dans cet espace, nous pourrons alors :
 
-* Gérer le contenu de votre site (Articles, Pages, Médias, Liens)
+* Gérer le contenu de notre site (Articles, Pages, Médias, Liens)
 * Modérer les commentaires déposés par les internautes
 * Modifier l'apparence du site (par l'utilisation de thèmes)
-* Ajouter des extensions (plugins) pour enrichir en fonctionnalités votre site
+* Ajouter des extensions (plugins) pour enrichir les fonctionnalités de notre site
 * Administrer les utilisateurs
 * ...
 
+
+## Accès au back office
+
+Dans un premier temps, nous allons accéder à notre back office.
+
+Pour cela, nous devons ouvrir un navigateur web et renseigner l'adresse de notre site suivi de **/wp-admin**.
+
+Par défaut, l'URL de connexion se construit comme cela : "www.nom-de-votre-site/wp-admin"
+
 <p class="notice question" markdown="1">
-Pour accéder à votre back office, ouvrez un navigateur Web, puis renseignez dans
-la barre d'adresse l'URL de votre site suivi de **/wp-admin** par défaut.
+Pour une question de sécurité et pour éviter les attaques par brute force, nous vous conseillons de changer l'URL de connexion.
+De nombreux plugins proposés par le CMS répondent à ce besoin.
 </p>
 
-La navigation s'effectue par le menu qui est, présent sur la gauche de votre écran,
-le contenu des différents liens se chargeant dans la zone principale au centre.
-L'ergonomie de WordPress vous séduira par sa simplicité et sa rapide prise en main.
+
+## L'interface du back office
+
+La navigation s'effectue via le menu présent sous la forme d'une barre latérale, présent à gauche de votre écran.
+
+Le contenu de différents liens proposé dans le tableau de bord s'affichera dans la zone principale, au centre.
+
+L'ergonomie de WordPress est séduisante de par sa simplicité et sa prise en main rapide.
 
 ![BackOffice](/images/blog/backoffice.png "BackOffice")
 
-## Qu'elle est la différence entre un 'article' et une 'page' ##
 
-### La façon dont sont sauvegardées les données en base: ###
+## Les différences entre un article et une page
 
-Les articles comme les pages sont des informations enregistrées dans la même table **wp_posts**
-mais avec une valeur différente pour le champ **post_type** selon si c'est un article (**post**)
-ou une page (**page**). La différence est donc faite dans l'utilisation.
 
-### La façon dont ils sont utilisés: ###
+### Les caractéristiques d'une page et d'un article
 
-Les pages sont utilisées pour afficher des informations pérennes sans réelle limite dans le temps.
-Les liens vers les pages sont généralement regroupés sous la forme d'un menu afin
-de proposer une navigation pour votre site. Il est possible de les hiérarchiser afin
-de constituer des sous-menus, des sous-sous-menu ...
+Les articles contiennent :
 
-Les articles sont généralement utilisés pour afficher des informations d'actualité
-sur un sujet précis. Il est possible de les catégoriser.
+ - Un nom d'auteur
+ - Une date de publication (WordPress classent les articles par date)
+ - Une ou plusieurs catégories et -parfois, des mots-clefs : ces caractéristiques servent à organiser le contenu du site
+ - Un fil de commentaires
+
+Particularités des pages :
+
+ - Pas de date de publication
+ - Pas d'affichage du nom de l'auteur
+ - Pas de fil de commentaires
+ - Une présence dans les menus
+ - Possibilité de les hiérarchiser
+
+
+### La sauvegarde en base de données
+
+Les articles et les pages sont des informations enregistrées dans la même table : **wp_posts**.
+Cependant, la valeur du champ **post_type** est différente :
+
+ - Si c'est un article : **post**
+ - Si c'est une page : **page**
+
+La sauvegarde en base de données diffère donc en fonction du type de post.
+
+
+### En conclusion
+
+ - Les pages sont utilisées pour afficher des informations pérennes, sans limite de temps. Généralement, les liens vers les pages sont regroupées sous la forme de menu, qui permettent à l'internaute de naviguer sur le site.
+Il est possible de les hiérarchiser afin de constituer des sous-menus, des sous-sous-menu, etc.
+
+ - Les articles sont utilisés pour afficher des informations d'actualité sur un sujet précis. Il est possible de les catégoriser.
 
 D'autres usages sont possibles avec les articles en fonction de votre imagination:
 
-* Réaliser un encart promotionnel
-* Réaliser un slideshow
-* Afficher une 'citation du jour'
-* ...
+ - Réaliser un encart promotionnel
+ - Réaliser un slideshow
+ - Afficher une "citation du jour"
+ - ...
 
-## Comment créer un article ##
+
+## Comment créer un article ?
 
 Il suffit de cliquer dans le menu sur l'item **Articles** > **Ajouter** ou bien
 **Articles** > **Tout les articles** > **Ajouter**
 
 ![Add post](/images/blog/add_post.png "Add post")
 
-Saisissez un **titre** puis le **contenu**.
+Saisir un **titre** puis le **contenu**.
 
 ![New post](/images/blog/new_post.png "New post")
 
-Vous pouvez lui associer des catégories que vous pouvez créer à votre convenance.
+Nous pouvons lui associer des catégories, qu'il est possible de créer à notre convenance.
 
 ![Post categories](/images/blog/post_categories.png "Post categories")
 
-Vous pouvez lui associer des mots-clés pour un meilleur référencement (si vos mots-clés sont pertinents).
+Nous pouvons lui associer des mots-clés pour un meilleur référencement.
 
 ![Post tags](/images/blog/post_tags.png "Post tags")
 
-Une fois votre contenu prêt, vous pourrez alors:
+Une fois le contenu prêt, nous avons différentes possibilités :
 
 * L'enregistrer comme brouillon, puis le retravailler ultérieurement
-* Visualiser un aperçu dans votre front office
+* Visualiser un aperçu dans le front office
 * Le publier
 
 ![Post actions](/images/blog/post_actions.png "Post actions")
 
-## Comment créer une page ##
+## Comment créer une page ?
 
 Il suffit de cliquer dans le menu sur l'item **Pages** > **Ajouter** ou bien
 **Pages** > **Toutes les pages** > **Ajouter**
 
 ![Add page](/images/blog/add_page.png "Add page")
 
-Saisissez un **titre** puis le **contenu**.
+Saisir un **titre** puis le **contenu**.
 
 ![New page](/images/blog/new_page.png "New page")
 
-Vous pouvez hiérarchiser vos pages en définissant une page parent. Une page ne peut
-avoir qu'un seul parent, mais elle peut avoir plusieurs pages enfants.
-Vous pouvez définir un ordre d'affichage en renseignant le **champ order**.
-La plus petite valeur correspond à la première position dans le menu.
+Comme nous l'avons vu, il est possible de hiérarchiser les pages.
+
+Pour cela, nous devons définir une page parent. Une page ne peut avoir qu'un seul parent, mais peut avoir plusieurs pages enfants.
+Nous pouvons renseigner un ordre d'affichage grâce au champ **champ order**. La plus petite valeur correspond à la première position dans le menu.
 
 ![Page attributs](/images/blog/page_attributs.png "Page attributs")
 
-Une fois votre contenu prêt, vous pourrez alors:
+Une fois votre contenu prêt, nous avons différentes possibilités :
 
 * L'enregistrer comme brouillon, puis le retravailler ultérieurement
 * Visualiser un aperçu dans votre front office
@@ -115,11 +158,15 @@ Une fois votre contenu prêt, vous pourrez alors:
 
 ![Page actions](/images/blog/post_actions.png "Page actions")
 
-## L'éditeur de WordPress ##
 
-Vous pouvez éditer votre contenu à l'aide de l'éditeur **WYSIWYG** (What You See Is What You Get)
-ou bien directement saisir les balises **HTML**. A vous de choisir le mode d'édition
-qui vous convient le mieux.
+## L'éditeur de WordPress
+
+WordPress permet d'éditer son contenu de deux façons :
+
+ - L'éditeur **WYSIWYG** (What You See Is What You Get), onglet "Visuel"
+ - L'utilisation du **HTML**, onlet "HTML"
+
+À vous de choisir le mode d'édition qui vous convient le mieux.
 
 ![Change editor mode](/images/blog/editor_mode.png "Change editor mode")
 
@@ -135,136 +182,139 @@ situés au-dessus de l'éditeur. Les interfaces pour l'insertion de média sont 
 
 ## Les permalinks ##
 
-Le permalink correspond à l'URL (Unified Ressource Locator) permettant d'accèder
-à votre page ou votre article. C'est l'identifiant Web d'un contenu bien précis de votre site.
+Le permalink correspond à l'URL permettant d'accèder à votre page ou à votre article. C'est l'identifiant Web d'un contenu bien précis de votre site.
 
 ![Permalink](/images/blog/permalink.png "Permalink")
 
-Par défaut le permalink est constitué de l'URL de votre site suivi de /?p=id-post
-Ou 'id-post' est l'identifiant du contenu dans votre base de donnée MySQL (Table wp_post).
+Par défaut le permalink est constitué de l'URL de votre site suivi de /?p=id-post.
+"id-post" est l'identifiant du contenu dans votre base de donnée MySQL (Table wp_post).
 
-Si vous souhaitez travailler le référencement Web de vos contenus, il peut être intéressant
-d'optimiser cette URL avec des mots clés au lieu d'utiliser l'écriture par défaut.
-Pour cela il faut commencer par définir la chaîne de formatage de vos permalinks
-dans l'onglet **Réglages** > **Permaliens**
+Pour une répondre à une problématique de référencement, nous vous conseillons d'optimiser cette URL avec des mots-clefs.
+Pour modifier l'URL par défaut, il faut commencer par définir la chaîne de formatage de vos permalinks dans l'onglet **Réglages** > **Permaliens**.
 
 ![Permalink menu](/images/blog/permalink_menu.png "Permalink menu")
 
 ![Permalink format](/images/blog/permalink_format.png "Permalink format")
 
-Assurer vous d'avoir mis les bons droits sur votre dossier Web, car les modifications
-de ce paramètre entraine la création d'un fichier [.htaccess](http://fr.wikipedia.org/wiki/Htacces)
+Pour cela, il faut s'assurer que les droits soient les bons, car les modifications
+de ce paramètre entraine la création d'un fichier [.htaccess](https://openclassrooms.com/courses/le-htaccess-et-ses-fonctionnalites)
 à la racine de votre site Web.
 
+
 <p class="notice question" markdown="1">
-Pour utiliser les permalink comme bon vous semble, il faudra s'assurer que votre serveur
+Pour utiliser les permalinks comme bon vous semble, il faudra s'assurer que votre serveur
 Web est capable de faire de la réécriture d'URL. Dans le cas d'un serveur Web Apache,
 il faut activer le module rewrite. Dans les autres cas il vous faudra faire ces modifications
 par vous-même.
 </p>
 
-Pour plus d'informations voici un [lien](http://codex.wordpress.org/Using_Permalinks 'Using permalinks')
-sur comment utiliser les permalinks sur le site [http://codex.wordpress.org](http://codex.wordpress.org 'Wordpress Codex')
+Pour des informations complémentaires, voici la documentation officielle sur les [permalinks](http://codex.wordpress.org/Using_Permalinks 'Using permalinks').
 
-Une fois vos réglages effectués, il ne vous reste plus qu'à définir les URL de vos
-Articles ou de vos Pages directement dans la page d'édition de ces derniers:
+Une fois les réglages effectués, il ne nous reste plus qu'à définir les URL de nos articles et pages, directement dans la page d'édition :
 
 ![Permalink rewrite](/images/blog/permalink_rewrite.png "Permalink rewrite")
 
-## Comment fonctionne les commentaires ##
+## Les commentaires
 
 Les commentaires sont des messages laissés sur un article ou une page par des internautes.
-C'est une fonctionnalité qui est active par défaut sur l'ensemble de votre site.
+
+Cette fonctionnalité est active par dafut sur l'ensemble de notre site.
 Les commentaires se configure dans **Réglages** > **Discussion**
 
 ![Manage comments](/images/blog/manage_comments.png "Manage comments")
 
-Voici une petite FAQ (Foire Aux Questions):
 
-### Comment désactiver les commentaires ? ###
+Voici une petite FAQ (Foire Aux Questions) des questions récurrentes.
 
-Vous pouvez activer/désactiver les commentaires de manière globale, c'est à dire sur tout le site:
+### Comment désactiver les commentaires ?
+
+Il est possible d'activer/désactiver les commentaires :
+
+ - De manière générale, sur tout le site
+ - De manière ciblée, sur un article ou une page
+
+
+Voici comment faire pour désactiver tous les commentaires.
 
 ![Enable/Disable comments](/images/blog/enable_disable_comments.png "Enable/Disable comments")
 
-Ou bien de manière plus ciblée, c'est à dire sur une page ou un article bien précis.
-Pour cela aller sur l'édition de la page ou de l'article pour la/lequel vous souhaitez
-régler l'affichage des commentaires, puis afficher les options d'écran:
+Voici comment faire pour désactiver les commentaires sur une page ou un article bien précis.
+Pour cela, il faut aller sur l'édition de la page ou de l'article pour la/lequel vous souhaitez
+régler l'affichage des commentaires, puis afficher les **soptions de l'écran**.
 
 ![Display screen options](/images/blog/display_screen_options.png "Display screen options")
 
-et cocher l'option **discussion**
+Ici, cochez l'option **discussion**.
 
 ![Screen options](/images/blog/screen_options.png "Screen options")
 
-Une nouvelle fenêtre pour configurer les discussions liées à votre page ou votre article
-est maintenant disponible un peu plus bas sur votre écran. Vous pouvez alors
+Une nouvelle fenêtre pour configurer les discussions liées à notre page ou notre article
+est maintenant disponible un peu plus bas sur l'écran. Nous pouvons alors
 activer ou non les commentaires sur la page ou l'article édité.
 
 ![Discussion box](/images/blog/discussion_box.png "Discussion box")
 
-### Qui peut laisser un commentaire ? ###
+### Qui peut laisser un commentaire ?
 
-Vous pouvez imposer ou non le renseignement d'informations personnelles avant de pouvoir
-déposer un commentaire. Autrement dit, acceptez-vous ou non des messages de personnes anonymes.
-Par défaut le nom et le mail sont des champs obligatoires. Vous pouvez modifier cela
-commme suit:
+Nous pouvons imposer ou non le renseignement d'informations personnelles lors du dépot de commentaire.
+Autrement dit, les messages peuvent être anonyme ou non.
+
+Par défaut le nom et le mail sont des champs obligatoires. Il est possible de modifier cela :
 
 ![Comment user data](/images/blog/comment_user_data.png "Comment user data")
 
-### Les commentaires déposés par les internautes sont ils visibles sur mon site ? ###
+### Les commentaires déposés par les internautes sont ils visibles sur mon site ?
 
-Cela dépend encore une fois de vos réglages, par défaut les commentaires nécessitent
-une validation de la part de l'administrateur du site. Il ne vous reste plus qu'à
-faire vos réglages.
+Cela dépend encore une fois des réglages. Par défaut, les commentaires nécessitent une validation de la part de l'administrateur du site.
+Les réglages s'effectuent de la manière suivante :
 
 ![Moderate comments](/images/blog/moderate_comments.png "Moderate comments")
 
 <p class="notice question" markdown="1">
 Une fois votre site en ligne, il est possible que vous receviez des commentaires
-saisis par des 'robots', c'est à dire des programmes informatiques. Ces commentaires
+saisis par des "robots", c'est à dire des programmes informatiques. Ces commentaires
 sont facilement reconnaissables car souvent leurs contenus sont sans rapport avec
 le contenu de la page commentée. Une bonne solution pour lutter contre ces messages
 indésirables est l'utilisation de plugin par exemple Akismet
 Mais vous pouvez très bien les supprimer manuellement :)
 </p>
 
+
 ## Ajouter des Thèmes ##
 
-Les thèmes correspondent à un ensemble de fichiers qui définissent la structure HTML
-de vos pages ainsi que le design par le biais des feuilles de styles (CSS) et des images.
+Les thèmes correspondent à un ensemble de fichiers qui définissent :
 
-Vous pouvez télécharger de nombreux thème sur le site officiel de WordPress
-[http://wordpress.org/extend/themes/](http://wordpress.org/extend/themes/ "WordPress Themes")
+ - La structure HTML de vos pages
+ - Le design par le biais des feuilles de styles (CSS) et des images
 
-Lorsque vous avez téléchargé un thème au format **'zip'**, décompresser le, puis
-ajouter le dossier ainsi obtenu dans le dossier **wp-content/themes** de votre projet WordPress.
-Aller dans l'onglet **Apparence** > **Thèmes**.
+De nombreux [thèmes](http://wordpress.org/extend/themes/ "WordPress Themes") sont disponibles sur le site de WordPress.
+
+À la fin du téléchargement d'un thème, le dossier apparait au format **.zip**, il faut le décompresser puis l'ajouter dans le dossier **wp-content/themes** du projet WordPress.
+Ensuite, il faut se rendre dans l'onglet **Apparence** > **Thèmes**.
 
 ![Themes](/images/blog/themes.png "Themes")
 
 Le nouveau thème doit apparaître parmi les thèmes disponibles.
-Il ne vous reste plus qu'à l'activer.
+Il ne nous reste plus qu'à l'activer.
 
-Pour visualiser ce nouveau thème, rendez-vous sur la partie FrontOffice de votre site Web.
+Pour visualiser ce nouveau thème, rendez-vous sur la partie front office du site web.
 
 <p class="notice question" markdown="1">
-Il est également possible d'installer des thèmes directement depuis le backoffice.
-Cependant Cela nécessite d'avoir installé et configuré un serveur FTP (ou FTPS) afin
-de récupérer les thèmes choisis.
+Il est également possible d'installer des thèmes directement depuis le back office.
+Cependant, cela nécessite d'avoir installé et configuré un serveur FTP (ou FTPS) afin de récupérer les thèmes choisis.
 </p>
+
 
 ## Ajouter des Plugins ##
 
-Les plugins sont des fonctionnalités supplémentaires qui peuvent être ajoutées à votre site Web.
+Les plugins sont des fonctionnalités supplémentaires qui peuvent être ajoutées à un site Web.
 Il en existe un grand nombre et ce chiffre est en augmentation constante.
 
-Vous pouvez télécharger des plugins sur le site officiel de WordPress
-[http://wordpress.org/extend/plugins/](http://wordpress.org/extend/plugins/ "WordPress Plugins")
+WordPress propose un large choix de [plugins](http://wordpress.org/extend/plugins/ "WordPress Plugins") directement sur son site.
 
-Lorsque vous avez téléchargé un plugin au format **'zip'**, décompresser le, puis
-ajouter le dossier ainsi obtenu dans le dossier **wp-content/plugins** de votre projet WordPress.
-Aller dans l'onglet **Extensions**.
+À la fin du téléchargement d'un plugin, le dossier apparait au format **.zip**,  il faut le décompresser puis l'ajouter dans le dossier **wp-content/plugins** du projet WordPress.
+Ensuite, il faut se rendre dans l'onglet **Extensions**.
+
 
 ![Plugins](/images/blog/plugins.png "Plugins")
 
@@ -272,34 +322,32 @@ Le nouveau plugin doit apparaître parmi les plugins disponibles.
 Il ne vous reste plus qu'à l'activer.
 
 <p class="notice question" markdown="1">
-Chaque plugin s'utilise différemment, certain ajoute une entrée dans le menu pour
-être configuré, d'autre s'utilise via des tags à insérer dans vos contenus, ...
-Afin de savoir comment utiliser un plugin, prenez connaissance de la documentation
-fournie avec le plugin: Directement sur le site de WordPress. En lisant le fichier **readme.txt** généralement présent dans le dossier du plugin.
+Chaque plugin s'utilise différemment, ertains ajoutent une entrée dans le menu pour être configuré, d'autres s'utilisent via des tags à insérer dans vos contenus, etc.
+Afin de savoir comment utiliser un plugin, prenez connaissance de la documentation en lisant le fichier **readme.txt** généralement présent dans le dossier du plugin.
 </p>
 
 ## Gérer les utilisateurs ##
 
-WordPress est une application **multi-utilisateur** permettant donc à plusieurs personnes
-de gérer les contenus diffusés par l'outil.
-Différents niveaux de droits peuvent être associés à un utilisateur à savoir:
+WordPress est une application **multi-utilisateur** permettant donc à plusieurs personnes de gérer les contenus diffusés par l'outil.
+Différents niveaux de droits peuvent être associés à un utilisateur, à savoir :
 
-* Administrateur
-* Abonnée
-* Editeur
-* Auteur
-* Contributeur
+ - Administrateur
+ - Abonnée
+ - Editeur
+ - Auteur
+ - Contributeur
 
-Pour gérer les utilisateurs aller sur l'onglet **Utilisateurs** du menu
+Pour gérer les utilisateurs, allez sur l'onglet **Utilisateurs** du menu.
 
 ![Users](/images/blog/users.png "Users")
 
+
 ## Paramétrage de votre site ##
+
 
 ### Changer le titre et le slogan ###
 
-Pour modifier le titre de votre site/blog ainsi que le slogan, informations souvent
-mises en avant côté FrontOffice, Aller dans l'onglet **Réglages** > **Général**.
+Pour modifier le titre et le slogan de notre site, deux informations souvent mise en avant en front office, rendons nous dans l'onglet **Réglages** > **Général**.
 
 ![General parameters](/images/blog/general.png "General parameters")
 
@@ -308,10 +356,11 @@ mises en avant côté FrontOffice, Aller dans l'onglet **Réglages** > **Génér
 ### Modifier la page d'accueil ###
 
 Par défaut, WordPress liste les derniers articles publiés sur votre page d'accueil.
-Ceci peut être modifié pour ne lister qu'un certain nombre d'articles, ou encore
-pour afficher une page 'statique' à la place. Pour cela aller dans l'onglet **Réglages** > **Lecture**.
+Ceci peut être modifié pour ne lister qu'un certain nombre d'articles, ou encore pour afficher une page "statique" à la place.
+Pour cela, allez dans l'onglet **Réglages** > **Lecture**.
 
 ![Lecture](/images/blog/lecture.png "lecture")
+
 
 <p class="notice question" markdown="1">
 Il faut avoir créé au moins une page pour pouvoir effectuer ce changement !
@@ -319,10 +368,10 @@ Il faut avoir créé au moins une page pour pouvoir effectuer ce changement !
 
 ![Homepage parameters](/images/blog/homepage_parameters.png "Homepage parameters")
 
-Maintenant il ne vous reste plus qu'a travailler vos contenus !
+Maintenant, il ne nous reste plus qu'à travailler nos contenus !
 
-Après chaque modification réalisée côté backoffice, retournez sur la partie front,
-c'est à dire la partie publique de votre site, et visualisez le rendu.
+Après chaque modification effectuée en back office, n'hésitez pas à vous rendre en front office pour visualiser votre travail !
+
 
 <p class="notice question" markdown="1">
 Si vous utilisez la navigation par onglet et qu'une fenêtre affiche déjà une
@@ -330,7 +379,5 @@ page modifiée. Relancez une requête HTTP depuis votre navigateur afin d'actual
 le contenu modifiés (touches: F5 ou ctrl+R).
 </p>
 
-N'hésitez pas à laisser vos commentaires.
 
-Si vous souhaitez une formation plus avancée sur WordPress vous pouvez également
-[nous contacter]({{ path('contact', { _locale: app.translator.locale}) }} "Contactez-nous").
+Si vous avez des questions ou souhaitez une formation plus avancée sur WordPress, n'hésitez pas à [nous contacter]({{ path('contact', { _locale: app.translator.locale}) }} "Contactez-nous").

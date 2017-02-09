@@ -21,7 +21,11 @@ Nous avons utilisé la métaphore de la navigation tout au long de notre dévelo
 
 Dans un premier temps, nous devons définir une map, et imaginer chaque écran (page web) comme une step, puis les lier entre elles en utilisant les paths qui ajouteront des boutons de navigation.
 
-> Remarque : cet article est destiné à Symfony 2.8
+
+<p class="notice question" markdown="1">
+Cet article est destiné à Symfony 2.8
+</p>
+
 
 
 ### Qu'est-ce qu'une map ?
@@ -199,5 +203,5 @@ D'autres bundles ont été rapidement analysé mais pas testé:
  - [KitpagesWorkflowBundle](https://github.com/kitpages/KitpagesWorkflowBundle){target="_blank"} => Seulement en version beta.
  - [SyliusFlowBundle](https://github.com/Sylius/SyliusFlowBundle){target="_blank"} => Affiché en "read only" sur Github
 
-Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle vous pouvez
+Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle, vous pouvez
 [nous contacter](http://www.idci-consulting.fr/contact "Contactez-nous").
