@@ -1,3 +1,6 @@
+imports:
+    - { resource: "achivements.yml" }
+
 swiftmailer:
     host: 'smtp.gmail.com'
     port: 465
@@ -131,6 +134,7 @@ blog:
             #Tutos and tips
             - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Implement a workspace of developpment to realize a website with PHP and MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos and tips"]}
 
+
 # Params for sitemap
 sitemap:
     default:
@@ -152,11 +156,11 @@ sitemap:
             changefreq: "monthly"
         team:
             priority: 0.7
-            lastmod: 18/12/2015
+            lastmod: 10/02/2017
             changefreq: "monthly"
         activities:
             priority: 0.7
-            lastmod: 18/12/2015
+            lastmod: 10/02/2017
             changefreq: "monthly"
         partners:
             priority: 0.6
@@ -164,11 +168,11 @@ sitemap:
             changefreq: "monthly"
         blog:
             priority: 0.9
-            lastmod: 18/12/2015
+            lastmod: 10/02/2017
             changefreq: "monthly"
         cv:
             priority: 0.8
-            lastmod: 21/12/2015
+            lastmod: 10/02/2017
             changefreq: "monthly"
             params:
                 - {theme: "idci", name: "baptiste_bouchereau"}
@@ -176,7 +180,7 @@ sitemap:
                 - {theme: "idci", name: "gabriel_bondaz"}
         article:
             priority: 0.8
-            lastmod: 21/12/2015
+            lastmod: 10/02/2017
             changefreq: "monthly"
             params:
                 - {file: "backoffice-wordpress"}
@@ -194,3 +198,4 @@ sitemap:
                 - {file: "presentation-wordpress"}
                 - {file: "symposium"}
                 - {file: "type-doctrine2"}
+                - {file: "new-year2017"}

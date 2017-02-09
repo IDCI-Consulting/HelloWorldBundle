@@ -1,0 +1,138 @@
+achievements:
+    le_moniteur:
+        image_path: "/images/moniteur.png"
+        url: "http://lemoniteur.fr/"
+        title: "Le moniteur"
+        enabled: true
+        content:
+            fr: >
+                lemoniteur.fr est un site d'information pour les acteurs publics et privés de la construction et des collectivités Locales.
+
+                IDCI-Consulting est intervenu auprès d'eux pour un audit détaillé de l'ancienne version de leur site WEB.
+                A la suite de cet audit, mise en place, développement et accompagnement des équipes sur le projet du nouveau site (mis en ligne en Mai 2011).
+                Refonte du processus de création de compte (inscriptions) et de l'espace résérvé (Service Premium).
+            en: >
+                lemoniteur.fr is a website for building professionals and locals communities.
+
+                IDCI-Consulting has taken action beside them to a detail audit of their old website's version.
+                After this audit, setting up, developpment et teams's accompanying on the new website's project (online on may 2015).
+                Reworking of the processus of account's creation (inscriptions) and placeholder (premium service).
+
+    bodysculpt:
+        image_path: "/images/body.png"
+        url: "http://www.bodysculpt.fr/"
+        title: "Bodysculpt"
+        enabled: false
+        content:
+            fr: >
+                Depuis 1957, le club Body Sculpt a su surfer sur la vague du fitness pour devenir aujourd’hui l’un des piliers du secteur de la remise en forme sur Lyon et sa région.
+                Cours collectifs, suivi personnalisé ou coaching personnel : quels que soient vos motivations, leur encadrement sportif de plus de douze professeurs diplômés d’état vous soutiendra et vous guidera au quotidien dans vos activités.
+                Ils seront en mesure de vous diriger vers des activités adaptées à vos besoins et à votre niveau.
+
+                IDCI-Consulting a été amené à développer leur site de présentation de l'agence.
+            en: >
+                Since 1957, Body Sculpt's sport club had known how to take the fitness's wave to become today one of the cornerstone of reshaping's sector in Lyon and its region.
+                Group lessons, client-centred approach or personnal trainer : whatever your motivations are, their supervisory staff of more than twelve state-registered diploma's teachers will support and lead you daily in your activities.
+                They will be able to steer you to activities appropriate to your need and skills.
+
+                IDCI-Consulting was brought to developp their presentation's website.
+
+    chine_france:
+        image_path: "/images/chine-france.png"
+        url: "http://www.chine-france.com/"
+        title: "Chine France"
+        enabled: true
+        content:
+            fr: >
+                Forte d’une vingtaine d’associations, La fédération des associations Franco-Chinoise entend constituer une structure privilégiée de dialogue avec la Chine et les Chinois de France.
+                Elle vise à regrouper les associations œuvrant à promouvoir concrètement les relations d’amitié et de coopération entre la France et la Chine.
+                Avec ce site multilingue, la F.A.F.C met à disposition de ses internautes, une base de données riche en informations, liens et documents qui viendront renforcer l'interaction entre la Chine et la France.
+            en: >
+                Armed with early twenties of associations, associations's Federation Franco-Chinese intend to contitute a privileged structure of dialogue with China and France's Chinese.
+                It aims at assemble associations which work on concretes promotions of friendship and cooperation between France and China.
+                With this multilingual website, the Federation put a database at internet users's diposition : informations, links, documents which will reinforce interaction between China and France.
+
+    jac_avocat:
+        image_path: "/images/jac-avocat.png"
+        url: "http://www.jac-avocat.fr/"
+        title: "JAC Avocat"
+        enabled: true
+        content:
+            fr: >
+                C’est bien parce que les magistrats sont souvent des néophytes en informatique qu’ils ont besoin de vrais professionnels sachant s’adapter à leur langage et répondre à leurs besoins.
+                IDCI-Consulting a relevé ce défi en développant pour le cabinet d’avocat JAC un outil de communication simple et efficace.
+            en: >
+                Precisely because magistrates are often novices with informatics that they need real professionals knowing how to adapt to their language and meet their needs.
+                IDCI-Consulting has rised this challenge by developing a communication's tool simple and effective to the JAC law firm.
+
+    l_appart:
+        image_path: "/images/l-appart.png"
+        url: "http://www.l-appart.net/"
+        title: "L'Appart fitness"
+        enabled: false
+        content:
+            fr: >
+                Fort de la réussite de Bodysculpt, Fitnessea Group renouvelle sa confiance à IDCI consulting avec le relookage du site L'appart, que beaucoup considèrent comme le pilier de la remise en forme sur Lyon : un blog et des téléchargements de programmes en ligne sont au menu !
+            en: >
+                Armed with Bodysculpt's succes, Fitnessea Group renew its trust to IDCI-Consulting with the relooking of L'appart's website, that many people judge as the reshaping's cornerstone in Lyon : a blog and some downloading online's schedules are on the menu !
+
+    lesiris:
+        image_path: "/images/lesiris.png"
+        url: "http://www.lesiris.com/"
+        title: "Le Siris"
+        enabled: true
+        content:
+            fr: >
+                Bienvenue au pays des volcans d'Auvergne ! Les 4 maisons, situées dans le département du Puy de Dôme en France, reçoivent des groupes toute l'année.
+                Ce site est destiné aux écoles, colléges, lycées, club de sportifs, associations mais aussi au groupes d'étudiants ou d'adultes souhaitant par exemple venir se retrouver au centre de la France pour une réunion familiale.
+                Tous les centres sont agrée Education Nationale, Jeunesse et Sport et deux d'entre eux sont Gites de france.
+            en: >
+                Welcome to the country of Auvergne's volcanos ! Four houses, located to the Puy de Dôme's department, receive groups all year.
+                This website is destinate to schools, high schools, sports club, associations, but also students or adults's groups who wish to meet at France's center to a family meeting.
+                Every centers are approved by National Education, Minister of Youth Affairs and Sports and two of them are Gîtes de France.
+
+    pmc_net:
+        image_path: "/images/pmc-net.png"
+        url: "http://pmc-net.net/"
+        title: "PMC"
+        enabled: false
+        content:
+            fr: >
+                En 2015, Tessi renforce son pôle marketing services en faisant l’acquisition de PMC, l’agence conseil spécialiste du BOGO (Buy One Get One).
+                Grâce à un savoir-faire et un réseau de partenaires uniques sur le marché, PMC propose des opérations qui permettent aux consommateurs d’accéder, en échange d’un simple achat, à des dotations extrêmement attractives.
+
+                Tessi accorde sa confiance à IDCI-Consulting pour effectuer la refonte du site de l'agence.
+            en: >
+                In 2015, Tessi reinforce its marketing services's pole by purchasing PMC, a consulting agency specialized of BOGO (Buy One, Get One).
+                Thanks to an expertise and a unique partner's network, PMC offers some operations which allow consumer to access, in exchange for a simple buying, to extremely attractives dotations.
+
+                Tessi agrees its trust to IDCI-Consulting to perform website agency's reworking.
+
+    tcm:
+        image_path: "/images/tcm.png"
+        url: "http://www.tessicustomermarketing.fr/"
+        title: "TCM"
+        enabled: false
+        content:
+            fr: >
+                Tessi customer marketing appartient à Tessi, acteur leader sur le marché du traitement de flux en France.
+                Tessi accompagne les entreprises depuis 40 ans dans la gestion de leurs éléments vitaux : documents et moyens de paiement, transactions devises et or, marketing client.
+
+                En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
+            en: >
+                Tessi customer marketing belongs to Tessi, major leader on treatment's flux market in France.
+                Tessi escorts compagnies for forty years in vitals's elements management : documents and payment methods, devises's transactions and client marketing.
+
+                At the same time as PMC website's developpment, Tessi had called on IDCI-Consulting to perform the website Tessi marketing service's reworking, which will also become Tessi customer service.
+
+    www2012:
+        image_path: "/images/www2012.png"
+        url: "https://www2012.org"
+        title: "www2012.org"
+        enabled: true
+        content:
+            fr: >
+                Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
+                IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
+            en: >
+                Just like Google, Yahoo, or even central school of Lyon, IDCI-Consulting has become consortium World Wide 2012's partner by conceptualizing and implementing the interactive datebook's part of congress' platform which run through from 16th to 20th April 2012.
