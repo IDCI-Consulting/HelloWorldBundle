@@ -196,8 +196,9 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
 
 $buildCv = function (Request $request, Application $app) {
     $name = $request->attributes->get('name');
+    $locale = $request->attributes->get('_locale');
 
-    $content = $app['twig']->render(sprintf('contents/cv/%s.md', $name));
+    $content = $app['twig']->render(sprintf('contents/cv/%s_%s.md', $name, $locale));
 
     $content = preg_replace('/[^#]###[^#]/', '=### ', $content);
     $content .= '=';
