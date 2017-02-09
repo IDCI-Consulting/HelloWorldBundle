@@ -214,24 +214,26 @@ $buildCv = function (Request $request, Application $app) {
     $app['twig']->addGlobal('html_cv', $htmlCv);
 };
 
-$buildRealisations = function (Request $request, Application $app) {
-    $locale = $request->attributes->get('_locale');
+$buildAchievements = function (Request $request, Application $app) {
+    $achievements = array();
 
-    $app['finder']
-        ->files()
-        ->name('*_'.$locale.'.md')
-        ->in(__DIR__.'/../templates/contents/activities/');
+    foreach ($app['config']['achievements'] as $id => $achievement) {
+        if (!$achievement['enabled']) {
+            continue;
+        }
 
-    $realisations = array();
+        $content = $app['twig']->render('contents/activities/activities.md.twig', array(
+            'id'         => $id,
+            'image_path' => $achievement['image_path'],
+            'title'      => $achievement['title'],
+            'url'        => $achievement['url'],
+            'content'    => $achievement['content'][$request->get('_locale')],
+        ));
 
-    foreach ($app['finder'] as $file) {
-        // Decode into utf8
-        $content = $file->getContents();
-
-        $realisations[] = $app['markdown']->transform($content);
+        $achievements[] = $app['markdown']->transform($content);
     }
 
-    $app['twig']->addGlobal('realisations', $realisations);
+    $app['twig']->addGlobal('achivements', $achievements);
 };
 
 $buildBlogSlide = function (Request $request, Application $app) {
@@ -253,6 +255,7 @@ $buildArticlesList = function (Request $request, Application $app) {
     $articlesByCategories = array();
     $categories = $app['config']['blog'][$locale]['categories'];
     $articles = $app['config']['blog'][$locale]['articles'];
+
     foreach ($categories as $index => $category) {
         $articlesByCategories[$category] = array();
 
@@ -274,49 +277,5 @@ $buildArticlesList = function (Request $request, Application $app) {
 
     $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
 };
-
-//$buildArticleMenu = function (Request $request, Application $app) {
-//    $text = $app['twig']->render(sprintf(
-//        'contents/blog/%s/%s.md',
-//        $request->get('_locale'),
-//        $request->get('file')
-//    ));
-//    # Remove UTF-8 BOM, if present.
-//    $text = preg_replace('{^\xEF\xBB\xBF}', '', $text);
-//
-//    # Standardize line endings:
-//    #   DOS to Unix and Mac to Unix
-//    $text = preg_replace('{\r\n?}', "\n", $text);
-//
-//    # atx-style headers:
-//    # # Header 1        {#header1}
-//    # ## Header 2       {#header2}
-//    # ## Header 2 with closing hashes ##  {#header3}
-//    # ...
-//    # ###### Header 6   {#header2}
-//    #
-//    preg_match_all('{
-//    ^(?<level>\#{1,6})
-//    [ ]*
-//    (?<title>.+?)
-//    \#*
-//    (?:[ ]+\{\#(?<href>[-_:[:alnum:]]+)\})?
-//    [ ]*
-//    \n+
-//  }uxm', $text, $matches);
-//
-//    $menu = '<ul>';
-//    foreach($matches['title'] as $i => $title) {
-//        $menu .= sprintf('<li class="level%d"><a href="#%s">%s</a></li>',
-//            strlen($matches['level'][$i]),
-//            $matches['href'][$i],
-//            trim($title)
-//        );
-//    }
-//
-//    $menu .= '</ul>';
-//
-//    $app['twig']->addGlobal('article_summary', $menu);
-//};
 
 return $app;

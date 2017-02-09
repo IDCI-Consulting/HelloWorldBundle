@@ -111,7 +111,7 @@ $intlApp
     )
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
-    ->before($buildRealisations)
+    ->before($buildAchievements)
     ->before($buildAsideMenu)
     ->bind('activities')
 ;
