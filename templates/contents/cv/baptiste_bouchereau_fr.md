@@ -1,5 +1,6 @@
 ### CURRICULUM VITAE
-#### BAPTISTE BOUCHEREAU, 25 ans
+
+#### BAPTISTE BOUCHEREAU, {{ getAge('1991-03-05') }} ans
 ##### Développeur Web Full Stack / Analyste
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")

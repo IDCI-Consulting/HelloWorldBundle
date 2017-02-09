@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-#### BRAHIM BOUKOUFALLAH, 26 years old
+#### BRAHIM BOUKOUFALLAH, {{ getAge('1990-05-06') }} years old
 ##### Full Stack Web Developer / Teacher
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")

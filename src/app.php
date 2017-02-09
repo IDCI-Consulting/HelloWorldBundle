@@ -115,6 +115,26 @@ $app['twig'] = $app->extend(
             )
         );
 
+        $twig->addFunction(
+            new \Twig_SimpleFunction(
+                'getAge',
+                function ($birthday, $format = 'Y-m-d') {
+                    if (is_string($birthday)) {
+                        $birthday = \DateTime::createFromFormat($format, $birthday);
+                    }
+
+                    if (!($birthday instanceof \DateTime)) {
+                        throw new \RuntimeException('The birthday is not a valid DateTime');
+                    }
+
+                    return $birthday
+                        ->diff(new \DateTime('now'))
+                        ->y
+                    ;
+                }
+            )
+        );
+
         return $twig;
     }
 );

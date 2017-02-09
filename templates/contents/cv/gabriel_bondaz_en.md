@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-#### GABRIEL BONDAZ, 31 years old
+#### GABRIEL BONDAZ, {{ getAge('1984-07-12') }} years old
 ##### Engineer / Teacher
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
@@ -8,7 +8,6 @@
 
 ![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
 [Linkedin](https://www.linkedin.com/in/gabriel-bondaz/en)
-
 **gabriel.bondaz@idci-consulting.fr**
 **06 63 23 12 07**
 **English mastered**
