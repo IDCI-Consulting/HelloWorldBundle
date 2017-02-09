@@ -1,6 +1,6 @@
-
 ### CURRICULUM VITAE
-#### EDDIE BARRACO, 21 years old
+
+#### EDDIE BARRACO, {{ getAge('1995-11-22') }} years old
 ##### Program Analyst Profile/Full Stack Web Developer
 **eddie.barraco@idci-consulting.fr**
 **06 11 92 43 51**

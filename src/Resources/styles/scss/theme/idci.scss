@@ -39,7 +39,8 @@ div.row.cv {
   }
 
   section.cv-part > ul > li {
-    margin-left: 12rem;
+    margin-top: 1rem;
+    margin-left: 9rem;
 
     > ul li {
       margin-left: 1rem;
@@ -155,11 +156,13 @@ section.cv-part {
     }
 
     section.cv-part > ul > li {
-      margin-left: 8rem;
+      margin-left: 0;
+      margin-top: 3rem;
 
       em {
-        font-size: 0.8rem;
-        left: -9rem;
+        font-size: 1.2rem;
+        left: 0;
+        top: -2rem;
       }
     }
   }
