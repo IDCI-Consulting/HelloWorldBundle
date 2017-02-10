@@ -104,6 +104,9 @@ blog:
             - {file: "type-doctrine2", image: "symfony2-logo.png", title: "Comment créer un nouveau type Doctrine2 avec Symfony2", date: "18/01/2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
             - {file: "behaviors-doctrine2", image: "symfony2-logo.png", title: "Installer les Behaviors Doctrine2 sous Symfony2", date: "24/08/2011" , author: "Gabriel Bondaz", categories: ["Symfony2"]}
             - {file: "phpillow-couchdb", image: "symfony2-logo.png", title: "Installer PHPillow pour couchDB sur Symfony2", date: "19/06/2011" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+            - {file: "step-bundle-introduction", image: "symfony2-logo.png", title: "Introduction à IDCIStepBundle", date: "02/12/2016", author: "Louise Millon", categories: ["Symfony2"]}
+            - {file: "step-bundle-contact", image: "symfony2-logo.png", title: "Créer un formulaire de contact avec IDCIStepBundle", date: "03/12/2016", author: "Louise Millon", categories: ["Symfony2"]}
+            - {file: "step-bundle-subscription", image: "symfony2-logo.png", title: "Créer un processus d'inscription avec IDCIStepBundle", date: "04/12/2016", author: "Louise Millon", categories: ["Symfony2"]}
 
             #Symposium
             - {file: "symposium", image: "symposium.png", title: "Symposium un outil pour réussir l’organisation de vos événements", date: "22/11/2011" , author: "Frédéric Bondaz", categories: ["Symposium"]}
@@ -131,6 +134,8 @@ blog:
             #Symfony2
             - {file: "bundle-composer-broadcast", image: "symfony2-logo.png", title: "Create a Symfony2 Bundle reusable and broadcast it via Composer", date: "15/01/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
             - {file: "type-doctrine2", image: "symfony2-logo.png", title: "How to create a new type Doctrine2 with Symfony2", date: "18/01/2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+            - {file: "step-bundle-introduction", image: "symfony2-logo.png", title: "Introduction to IDCIStepBundle", date: "02/12/2016", author: "Louise Millon", categories: ["Symfony2"]}
+            - {file: "step-bundle-contact", image: "symfony2-logo.png", title: "Create a contact form with IDCIStepBundle", date: "03/12/2016", author: "Louise Millon", categories: ["Symfony2"]}
 
             #Tutos and tips
             - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Implement a workspace of developpment to realize a website with PHP and MySQL", date: "21/11/2011" , author: "Gabriel Bondaz", categories: ["Tutos and tips"]}
@@ -157,23 +162,23 @@ sitemap:
             changefreq: "monthly"
         team:
             priority: 0.7
-            lastmod: 10/02/2017
+            lastmod: 28/02/2017
             changefreq: "monthly"
         activities:
             priority: 0.7
-            lastmod: 10/02/2017
+            lastmod: 28/02/2017
             changefreq: "monthly"
         partners:
             priority: 0.6
-            lastmod: 18/12/2015
+            lastmod: 28/02/2017
             changefreq: "monthly"
         blog:
             priority: 0.9
-            lastmod: 10/02/2017
+            lastmod: 28/02/2017
             changefreq: "monthly"
         cv:
             priority: 0.8
-            lastmod: 10/02/2017
+            lastmod: 28/02/2017
             changefreq: "monthly"
             params:
                 - {theme: "idci", name: "baptiste_bouchereau"}
@@ -181,7 +186,7 @@ sitemap:
                 - {theme: "idci", name: "gabriel_bondaz"}
         article:
             priority: 0.8
-            lastmod: 10/02/2017
+            lastmod: 28/02/2017
             changefreq: "monthly"
             params:
                 - {file: "backoffice-wordpress"}

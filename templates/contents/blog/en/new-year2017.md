@@ -11,7 +11,7 @@ We would like to share with you some IDCI's highlights in 2016.
 
 ### Team evolution
 
-During year, we have seen our [team](https://www.idci-consulting.fr/fr/team "team") evolve.
+During this year, we have seen our [team](https://www.idci-consulting.fr/fr/team "team") evolve.
 
 **[Baptiste Boucherau](https://www.idci-consulting.fr/fr/cv/idci/baptiste_bouchereau_fr "Baptiste Boucherau")** became co-manager this year.
 He joined Gabriel and Fredéric BONDAZ at this post. Baptiste also add formation to his professional skills, by giving some courses at the Lyon 1 University as well as professional trainings.
