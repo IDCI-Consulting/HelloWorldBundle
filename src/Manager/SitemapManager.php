@@ -30,6 +30,18 @@ class SitemapManager
     }
 
     /**
+     * Has configuration
+     *
+     * @param string $key
+     *
+     * @return boolean
+     */
+    public function hasConfiguration($key)
+    {
+        return array_key_exists($key, $this->configuration);
+    }
+
+    /**
      * Get configuration
      *
      * @return array
@@ -72,21 +84,25 @@ class SitemapManager
                 'lastmod' => $data['lastmod']
             );
 
+
             if (array_key_exists('params', $data)) {
-                $generatedRoutes = [];
                 foreach ($data['params'] as $params) {
                     $params['_locale'] = $this->configuration['_locale'];
-                    $generatedRoutes[] = $this->urlGenerator->generate($routeName, $params);
-                }
+                    $url['loc'] = $this->urlGenerator->generate($routeName, $params);
 
-                foreach ($generatedRoutes as $route) {
-                    $url['loc'] = $route;
                     $urls[] = $url;
                 }
             } else {
                 $url['loc'] = $this->urlGenerator->generate($routeName, array(
                     '_locale' => $this->configuration['_locale']
                 ));
+
+                if ($this->hasConfiguration('other_langs')) {
+                    foreach ($this->configuration['other_langs'] as $lang) {
+                        $url['localized_locs'][] = $this->buildLocalizedLoc($routeName, $lang);
+                    }
+                }
+
                 $urls[] = $url;
             }
         }
@@ -107,5 +123,22 @@ class SitemapManager
         $this->configuration[$alias] = $value;
 
         return $this;
+    }
+
+    /**
+     * Build localized loc
+     *
+     * @param string $routeName
+     * @param string $locale
+     * @param array  $parameters
+     *
+     * @return array
+     */
+    private function buildLocalizedLoc($routeName, $locale, array $parameters = array())
+    {
+        return array(
+            'locale' => $locale,
+            'route'  => $this->urlGenerator->generate($routeName, array_merge($parameters, array('_locale' => $locale)))
+        );
     }
 }

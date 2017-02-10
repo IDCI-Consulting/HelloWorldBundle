@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
     {% for url in urls %}
         <url>{# check if hostname is not alreay in url#}
             <loc>{%if url.loc|replace({hostname:''}) == url.loc%}{{ hostname }}{{url.loc}}{%else%}{{url.loc}}{%endif%}</loc>
+            {% if url.localized_locs is defined %}
+                {% for localized_loc in url.localized_locs %}
+                    <xhtml:link rel="alternate" hreflang="{{ localized_loc.locale }}" href="{{ localized_loc.route }}" />
+                {% endfor %}
+            {% endif %}
             {% if url.lastmod is defined %}
                 <lastmod>{{url.lastmod}}</lastmod>
             {% endif %}
