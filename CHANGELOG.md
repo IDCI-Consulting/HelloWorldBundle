@@ -4,7 +4,8 @@ CHANGELOG
 2.1 / 2017-02-28
 ----------------
 
-* bug [#3686](https://redmine.idci-consulting.fr/issues/3686) Fix cv url.
+* bug [#3692](https://redmine.idci-consulting.fr/issues/3692) Fix sitemap.xml route
+* bug [#3686](https://redmine.idci-consulting.fr/issues/3686) Fix cv url
 * feature [#3685](https://redmine.idci-consulting.fr/issues/3685) New Docker architecture (docker compose version 2)
 * feature [#3684](https://redmine.idci-consulting.fr/issues/3684) Achievements are now configurable and hideable
 * bug [#3658](https://redmine.idci-consulting.fr/issues/3658) Fix error pages translations
