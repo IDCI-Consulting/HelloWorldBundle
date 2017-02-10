@@ -157,8 +157,8 @@ class DefaultController extends Controller
                 array(
                     'source'       => 'cursus',
                     'destinations' => array(
-                        'cursus_lyon' => '{{ flow_data.data.cursus.study_city == \'Lyon\' }}',
-                        'cursus_paris' => '{{ flow_data.data.cursus.study_city == \'Paris\' }}'
+                        'cursus_lyon' => '{% verbatim %}{{ flow_data.data.cursus.study_city == \'Lyon\' }}{% endverbatim %}',
+                        'cursus_paris' => '{% verbatim %}{{ flow_data.data.cursus.study_city == \'Paris\' }}{% endverbatim %}'
                     ),
                     'default_destination' => 'cursus_paris',
                     'next_options' => array(
@@ -362,8 +362,8 @@ idci_step:
                     options:
                         source: 'cursus'
                         destinations:
-                            cursus_lyon: '{{flow_data.data.cursus.study_city == 'Lyon' }}'
-                            cursus_paris: '{{flow_data.data.cursus.study_city == 'Paris' }}'
+                            cursus_lyon: '{% verbatim %}{{flow_data.data.cursus.study_city == 'Lyon' }}{% endverbatim %}'
+                            cursus_paris: '{% verbatim %}{{flow_data.data.cursus.study_city == 'Paris' }}{% endverbatim %}'
                         default_destination: 'cursus_paris'
                         next_options:
                             label: 'next'

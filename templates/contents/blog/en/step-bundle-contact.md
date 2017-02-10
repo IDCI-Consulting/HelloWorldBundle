@@ -134,6 +134,7 @@ Three cases are possible :
 We have now finished to work in our controller, we just have to diplay our 'navigator' in a twig template.
 We have to edit our file `Resources/views/Default/contact.html.twig` :
 
+{% verbatim %}
 ```twig
 {# src/AppBundle/Resources/views/Default/contact.html.twig #}
 {% extends "::base.html.twig" %}
@@ -152,7 +153,7 @@ We have to edit our file `Resources/views/Default/contact.html.twig` :
     {{ step(navigator) }}
 {% endblock %}
 ```
-
+{% endverbatim %}
 
 ## Events : generate an email's sending
 
@@ -368,7 +369,7 @@ class DefaultController extends Controller
                             array(
                                 'action'     => 'send_thanks_email',
                                 'parameters' => array(
-                                    'email' => '{{ flow_data.data.info.email }}',
+                                    'email' => '{% verbatim %}{{ flow_data.data.info.email }}{% endverbatim %}',
                                 )
                             )
                         )
@@ -439,7 +440,7 @@ idci_step:
                                     action: send_thanks_email
                                     name: send_thanks_email
                                     parameters:
-                                        email: '{{ flow_data.data.info.email }}'
+                                        email: '{% verbatim %}{{ flow_data.data.info.email }}{% endverbatim %}'
 ```
 
 In the `DefaultController.php` :

@@ -133,6 +133,7 @@ Enfin, il faut définir les redirections à effectuer en fonction de la navigati
 
 Le travail dans le controleur est terminé, il ne nous reste plus qu'à afficher notre `navigator` dans un template twig. Pour cela, éditons le ficher `Resources/views/Default/contact.html.twig` :
 
+{%verbatim%}
 ```twig
 {# src/AppBundle/Resources/views/Default/contact.html.twig #}
 {% extends "::base.html.twig" %}
@@ -151,7 +152,7 @@ Le travail dans le controleur est terminé, il ne nous reste plus qu'à afficher
     {{ step(navigator) }}
 {% endblock %}
 ```
-
+{%endverbatim%}
 
 ## Les event actions : générer un envoi de mail
 
@@ -381,8 +382,8 @@ class DefaultController extends Controller
                             array(
                                 'action'      => 'send_thanks_email',
                                 'parameters'  => array(
-                                    'email'   => '{{ flow_data.data.info.email }}',
-                                    'message' => 'Thank you {{ flow_data.data.info.first_name }} to contact us',
+                                    'email'   => '{% verbatim %}{{ flow_data.data.info.email }}{% endverbatim %}',
+                                    'message' => 'Thank you  {% verbatim %}{{ flow_data.data.info.first_name }}{% endverbatim %} to contact us',
                                 )
                             )
                         )
@@ -454,8 +455,8 @@ idci_step:
                                     action: send_thanks_email
                                     name: send_thanks_email
                                     parameters:
-                                        email: "{{ flow_data.data.info.email }}"
-                                        message: "Thank you {{ flow_data.data.info.first_name }} to contact us"
+                                        email: "{% verbatim %}{{ flow_data.data.info.email }}{% endverbatim %}"
+                                        message: "Thank you {% verbatim %}{{ flow_data.data.info.first_name }}{% endverbatim %} to contact us"
 ```
 
 Dans le `DefaultController.php` :

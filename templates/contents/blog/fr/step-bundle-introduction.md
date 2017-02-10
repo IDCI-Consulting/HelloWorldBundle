@@ -196,8 +196,8 @@ Voici un tableau comparatif (points forts / points faibles) des Bundles permetan
 
 D'autres bundles ont été rapidement analysé mais pas testé:
 
- - [KitpagesWorkflowBundle](https://github.com/kitpages/KitpagesWorkflowBundle){target="_blank"} => Seulement en version beta.
- - [SyliusFlowBundle](https://github.com/Sylius/SyliusFlowBundle){target="_blank"} => Affiché en "read only" sur Github
+ - <a href="https://github.com/kitpages/KitpagesWorkflowBundle" target="_blank">KitpagesWorkflowBundle</a> => Seulement en version beta.
+ - <a href="https://github.com/kitpages/SyliusFlowBundle" target="_blank">SyliusFlowBundle</a> => Affiché en "read only" sur Github.
 
 Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle vous pouvez
 [nous contacter](http://www.idci-consulting.fr/contact "Contactez-nous").
