@@ -1,5 +1,6 @@
 imports:
     - { resource: "achivements.yml" }
+    - { resource: "version.yml" }
 
 swiftmailer:
     host: 'smtp.gmail.com'
