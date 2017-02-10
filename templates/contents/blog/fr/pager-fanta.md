@@ -1,23 +1,29 @@
-
 # Installation de PagerFantaBundle #
 
 ![WhiteOctober Pagerfanta Symfony2](/images/blog/pagerfanta.png "WhiteOctober Pagerfanta Symfony2")
 
-## Introduction ##
 
-S'il est très facile de récupérer des listes, cela peut être un véritable
-casse tête de **paginer vos entités facilement avec symfony2**.
+## Introduction
+
+Même s'il est très facile de récupérer des listes, cela peut être un véritable casse-tête de **paginer vos entités facilement avec symfony2**.
 
 Heureusement, il existe un bundle chargé de paginer tout ça pour nous, le bien-nommé : **WhiteOctoberPagerfantaBundle** !
 
-Remarque : cet article est destiné à *Symfony 2.1.x*
-Pour les habitués de l'installation de bundle, la démarche est toujours la même : configuration du composer.json
-puis enregistrement du bundle dans l'AppKernel.
+<p class="notice question" markdown="1">
+Cet article est destiné à Symfony 2.1.x
+</p>
+
+
+Pour les habitués de l'installation de bundle, la démarche est toujours la même :
+
+ - Configuration du composer.json
+ - Enregistrement du bundle dans l'AppKernel.
 
 Si c'est le premier Bundle que vous installez, voici l'explication détaillée :
 
 Ajouter les lignes suivantes à votre composer.json (à la racine de votre projet) :
 
+```
     {
         [...]
         "require": {
@@ -27,20 +33,24 @@ Ajouter les lignes suivantes à votre composer.json (à la racine de votre proje
         },
         [...]
     }
+```
 
-Lancer ensuite la commande suivante dans votre projet
+Lancer ensuite la commande suivante dans votre projet :
 
+```sh
     $ composer.phar update
+```
 
 Vous devez avoir maintenant les dossiers `/vendor/idci`, `/vendor/pager-fanta` et `/vendor/white-october`
 comprenant eux-même les bundles précedemment cités.
 
-Il ne vous reste plus qu'à enregistrer le **Bundle WhiteOctoberPagerfantaBundle** dans le fichier `app/AppKernel.php`
+Il ne vous reste plus qu'à enregistrer le **Bundle WhiteOctoberPagerfantaBundle** dans le fichier `app/AppKernel.php` :
 
+```php
     // app/AppKernel.php
     use Symfony\Component\HttpKernel\Kernel;
     use Symfony\Component\Config\Loader\LoaderInterface;
-    
+
     class AppKernel extends Kernel
     {
         public function registerBundles()
@@ -52,39 +62,42 @@ Il ne vous reste plus qu'à enregistrer le **Bundle WhiteOctoberPagerfantaBundle
         }
         // ...
     }
+```
 
-Le bundle sont désormais installés.
+Le bundle est désormais installé !
+
 
 ## Pagination avec WhiteOctoberPagerfantaBundle ##
 
+
 ### Utilisation de pagerfanta dans le Controller ###
 
-Maintenant que votre bundle est installé, son utilisation est relativement simple.
-Toute la logique métier du bundle se situe au niveau de votre controller :
+Maintenant que notre bundle est installé, son utilisation est relativement simple.
+Toute la logique métier du bundle se situe au niveau de notre controller :
 
-1) On instancie l'Adpater qui nous conviens : tout Adpater qui implémente l'interface
-`Pagerfanta\Adapter\AdapterInterface`. De base, **Pagerfanta propose plusieurs adapters déja implémentés**,
-voici les principaux ainsi que ce qu'ils prennent en paramètre:
+**1** - Instanciation de l'Adpater qui nous convient : tout Adpater qui implémente l'interface `Pagerfanta\Adapter\AdapterInterface`.
 
-* `ArrayAdapter` pour paginer un array
-* `PropelAdapter` pour paginer une PropelQuery
-* `DoctrineORMAdapter` pour paginer une DoctrineORMQuery / un DoctrineORMQueryBuilder
-* `DoctrineCollectionAdapter` pour paginer une Doctrine Collection
-* `DoctrineODMMongoDBAdapter` pour paginer une DoctrineODMMongoDB Query
+De base, **Pagerfanta propose plusieurs adapters déja implémentés**, voici les principaux, et leurs paramètres :
 
-2) On instancie un **PagerFanta** en lui donnant notre Adpater en paramètre
+ - `ArrayAdapter` pour paginer un array
+ - `PropelAdapter` pour paginer une PropelQuery
+ - `DoctrineORMAdapter` pour paginer une DoctrineORMQuery / un DoctrineORMQueryBuilder
+ - `DoctrineCollectionAdapter` pour paginer une Doctrine Collection
+ - `DoctrineODMMongoDBAdapter` pour paginer une DoctrineODMMongoDB Query
 
-3) On travaille avec notre Pagerfanta en lui donnant le nombre d'éléments par page
-à afficher ainsi que la page courante (qui est la première page par défaut).
+**2** - Instanciation d'un **PagerFanta**, en lui donnant notre Adpater en paramètre.
+
+**3** - Travail avec notre Pagerfanta, en lui donnant le nombre d'éléments par page à afficher, ainsi que la page courante (qui est la première page par défaut).
 
 Prenons l'exemple de l'affichage d'une liste de news sur votre page d'accueil :
 
+```php
     // Namespace/MonBundle/Controller/
     // ...
     use Pagerfanta\Adapter\DoctrineORMAdapter;
     use Pagerfanta\Pagerfanta;
     use Pagerfanta\Exception\NotValidCurrentPageException;
-    
+
     class NewsController extends Controller
     {
         /**
@@ -99,21 +112,21 @@ Prenons l'exemple de l'affichage d'une liste de news sur votre page d'accueil :
         {
             // On récupère l'entity manager
             $em = $this->getDoctrine()->getEntityManager();
-            
+
             // Pour l'exemple on prends un DoctrineORMAdapter auquel on passe une Query
             // On pourrait également lui passer un QueryBuilder
             $adapter = new DoctrineORMAdapter($em->getRepository('NamespaceMonBundle:News')->getMyQuery());
             $pager = new PagerFanta($adapter);
-            
+
             // Il est judicieux de définir un paramètre dans le app/config/config.yml pour le nb d'éléments à afficher par page
             $pager->setMaxPerPage($this->container->getParameter('nb_de_news_par_page'));
-            
+
             try {
                 $pager->setCurrentPage($page);
             } catch (NotValidCurrentPageException $e) {
                 throw new NotFoundHttpException();
             }
-            
+
             /* Pour infos, quelques méthodes utiles du pager :
                 $pager->getNbResults();
                 $pager->getMaxPerPage();
@@ -125,54 +138,61 @@ Prenons l'exemple de l'affichage d'une liste de news sur votre page d'accueil :
                 $pager->getNextPage();
                 $pager->getCurrentPageResults();
             */
-            
+
             // On envoie notre pager (notre liste d'objets paginée) à notre vue
             return array(
                 'pager' => $pager
             );
         }
     }
+```
 
-### Utilisation de pagerfanta dans la vue ###
+
+### Utilisation de pagerfanta dans la vue
 
 Il nous reste maintenant à traiter l'affichage de ce fameux pager au niveau de notre vue.
-Si vous utilisez déjà Twig, c'est un jeu d'enfant. Sinon...c'est le moment de
-vous y mettre ! ;)
+Si vous utilisez déjà Twig, c'est un jeu d'enfant. Sinon... c'est le moment de vous y mettre ! ;)
 
+```
     {% verbatim %}
     {# On affiche les pages : "Précédent 1 2 3 ... 4 5 Suivant" #}
     {% if pager.haveToPaginate %}
         {{ pagerfanta(pager, 'default', {'routeName': 'homepage_paginated'}) }}
     {% endif %}
-    
+
     {# On boucle sur le pager contenant nos news paginées #}
     {% for news in pager.currentPageResults %}
-    
+
     {{ news.title }}
-    
+
     {{ news.content }}
-    
+
     {% else %}
-    
+
     Aucune news disponible.
-    
+
     {% endfor %}
-    
+
     {# On ré-affiche les pages dans un souci d'ergonomie: "Précédent 1 2 3 ... 4 5 Suivant" #}
     {% if pager.haveToPaginate %}
         {{ pagerfanta(pager, 'default', {'routeName': 'homepage_paginated'}) }}
     {% endif %}
     {% endverbatim %}
+```
 
 Pour information, le bundle propose également un **template un peu plus sympa basé sur bootstrap** (lien à insérer) :
-    
+
+```
     {% verbatim %}
     {{ pagerfanta(pager, 'twitter_bootstrap', {'routeName': 'homepage_paginated'}) }}
     {% endverbatim %}
+```
 
-L'exemple est bien sur simplifié au maximum mais a le mérite d'être clair.
-Voilà, vous savez désormais tout sur la **pagination dans symfony2 à l'aide de pagerfanta**.
+L'exemple est, bien sûr, simplifié au maximum mais a le mérite d'être clair.
+Voilà, vous savez désormais tout sur la **pagination dans Symfony2 à l'aide de pagerfanta**.
 
-Encore une fois, avant de vous lancer à corps perdu dans le developpement d'une nouvelle
-fonctionnalité, allez toujours jeter un petit coup d'oeil à KNPBundles http://knpbundles.com/
+Encore une fois, avant de vous lancer à corps perdu dans le developpement d'une nouvelle fonctionnalité,
+allez toujours jeter un petit coup d'oeil à [KNPBundles](http://knpbundles.com/)
 pour voir si un bundle faisant votre bonheur n'existerait pas déjà ! ;)
+
+Si vous avez une question sur le **PagerFantaBundle** n'hésitez pas à [nous contacter](http://www.idci-consulting.fr/contact "Contactez-nous").

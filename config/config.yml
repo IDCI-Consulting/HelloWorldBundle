@@ -157,15 +157,15 @@ sitemap:
             changefreq: "monthly"
         partners:
             priority: 0.6
-            lastmod: 18/12/2015
+            lastmod: 10/02/2017
             changefreq: "monthly"
         blog:
             priority: 0.9
-            lastmod: 18/12/2015
+            lastmod: 13/01/2017
             changefreq: "monthly"
         cv:
             priority: 0.8
-            lastmod: 21/12/2015
+            lastmod: 10/02/2017
             changefreq: "monthly"
             params:
                 - {theme: "idci", name: "baptiste_bouchereau"}
@@ -173,7 +173,7 @@ sitemap:
                 - {theme: "idci", name: "gabriel_bondaz"}
         article:
             priority: 0.8
-            lastmod: 21/12/2015
+            lastmod: 10/02/2017
             changefreq: "monthly"
             params:
                 - {file: "backoffice-wordpress"}
