@@ -8,6 +8,8 @@
 
 ![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
 [Linkedin](https://www.linkedin.com/in/gabriel-bondaz)
+
+
 **gabriel.bondaz@idci-consulting.fr**
 **06 63 23 12 07**
 **Anglais maîtrisé**
@@ -41,7 +43,7 @@
  * _2009_ Mise en oeuvre d'un site web pour [Ajilon](http://www.fidroit.fr)
    * Formation des équipes en place
    * Management de projet
-   * Technologies : Php 5 et Symfony 1.3
+   * Technologies : PHP 5 et Symfony 1.3
  * _2005-2007_ Technicien de Recherche et de Formation pour l'Université Lyon 1
 - Installation et configuration de salles informatiques multi-systèmes d'exploitations (Windows / Linux)
 - Mise en place d'un outil de gestion du parc informatique : GLPI (Gestionnaire Libre de Parc Informatique)
