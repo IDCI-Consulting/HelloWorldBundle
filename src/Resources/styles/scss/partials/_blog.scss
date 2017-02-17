@@ -179,7 +179,6 @@
     }
 
     &::before {
-      background: url('/images/blog/questionmark.png') no-repeat top left;
       content: "-";
       display: inline-block;
       height: 40px;
@@ -191,8 +190,12 @@
     }
 
     &.question {
-      background: #dff0fd;
+      background-color: #dff0fd;
       color: #296a88;
+
+      &::before {
+        background: url('/images/blog/questionmark.png') no-repeat top left;
+      }
     }
   }
 }

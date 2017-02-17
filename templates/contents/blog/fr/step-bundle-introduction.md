@@ -3,19 +3,19 @@
 
 ## Introduction
 
-Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une création de workflow interactif.
-Il fallait pouvoir réaliser facilement des parcours navigable par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
-L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être configurable (et non pas hardcodé).
+Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une **création de workflow interactif**.
+Il fallait pouvoir réaliser facilement des **parcours navigables** par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
+L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être **configurable** (et non hardcodé).
 
 Nous avons testé des bundles existants, qui semblaient répondre à notre problématique, mais ceux-ci n'étaient pas satisfaisant.
 En bas de page, nous avons ajouté un rapide [comparatif](#Comparatif) de ces différents bundles.
 
 Ainsi, nous avons choisi de développer notre propre Bundle et nous l'avons pensé générique et réutilisable.
 
-Cet article a pour vocation de vous présenter IDCIStepBundle.
+**Cet article a pour vocation d'introduire IDCIStepBundle**.
 Dans de prochains articles, nous rentrerons plus dans les détails et vous parlerons de ses spécifités au travers d'exemples concrets.
 
-IDCIStepBundle permet de simplifier la création d'un parcours interactif à destination d'un internaute.
+**IDCIStepBundle** permet de simplifier la **création d'un parcours interactif** à destination d'un internaute.
 Sa configuration se définie par un système de **Map** (carte), de **Step** (étape) et de **Path** (chemin).
 Nous avons utilisé la métaphore de la navigation tout au long de notre développement.
 
@@ -23,9 +23,8 @@ Dans un premier temps, nous devons définir une map, et imaginer chaque écran (
 
 
 <p class="notice question" markdown="1">
-Cet article est destiné à Symfony 2.8
+Ce Bundle est compatible avec la version 2.8 de Symfony. La version 3.0 sera disponible prochainement.
 </p>
-
 
 
 ### Qu'est-ce qu'une map ?
@@ -62,7 +61,7 @@ Nous allons utiliser un diagramme qui fera office de légende.
 ![Legende IDCIStepBundle](/images/blog/stepBundle_legend.png "Légende IDCIStepBundle")
 
 
-## Pourquoi utiliser StepBundle ?
+## Pourquoi utiliser IDCIStepBundle ?
 
 IDCIStepBundle permet de mettre en place aussi bien un parcours simple (une step, un path) qu'un parcours plus complexes (plusieurs steps et paths).
 Vous pouvez commencer facilement à partir d'une configuration, qui représente la map, en utilisant le langage `yml` ou `json`.
@@ -190,7 +189,7 @@ Voici un tableau comparatif (points forts / points faibles) des Bundles permetan
             </td>
             <td>
                 <ul>
-                    <li>Seulement compatible avec Symfony 2 pour le moment.</li>
+                    <li>Seulement compatible avec Symfony2 pour le moment.</li>
                     <li>La configuration devient rapidement très dense.</li>
                 </ul>
             </td>
@@ -200,8 +199,8 @@ Voici un tableau comparatif (points forts / points faibles) des Bundles permetan
 
 D'autres bundles ont été rapidement analysé mais pas testé:
 
- - [KitpagesWorkflowBundle](https://github.com/kitpages/KitpagesWorkflowBundle){target="_blank"} => Seulement en version beta.
- - [SyliusFlowBundle](https://github.com/Sylius/SyliusFlowBundle){target="_blank"} => Affiché en "read only" sur Github
+ - [KitpagesWorkflowBundle](https://github.com/kitpages/KitpagesWorkflowBundle) : Ce bundle propose seulement une version beta.
+ - [SyliusFlowBundle](https://github.com/Sylius/SyliusFlowBundle) : Ce Bundle affiche "Read only" sur Github.
 
 Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle, vous pouvez
 [nous contacter](http://www.idci-consulting.fr/contact "Contactez-nous").
