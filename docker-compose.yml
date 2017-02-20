@@ -1,14 +1,6 @@
 version: '2'
 
 services:
-#
-#  node:
-#    image: idci-website/node:6.9.5 # Recommended version
-#    container_name: idci-website-node
-#    build:
-#      context: docker/build/node6.9.5
-#    volumes:
-#      - ./:/usr/src/app
 
   php:
     image: idci-website/php:5.6-fpm
@@ -17,8 +9,6 @@ services:
       context: docker/build/php5.6
     volumes:
       - ./:/var/www/html
-#    depends_on:
-#      - node
 
   nginx:
     image: nginx:1.10

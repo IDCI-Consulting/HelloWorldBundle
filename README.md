@@ -10,24 +10,45 @@ Idci Website
 
 ```sh
 $ git clone http://gitlab.idci-consulting.fr/idci-consulting/idci-website.git
-$ cd idci-website
-$ chmod +x run.sh
-$ ./run.sh
 ```
 
-#### Installation of `composer` packages & `bower` components
+Go inside the cloned folder and use `Docker` to run all the needed containers
 
-##### You have to connect in your Docker container
+If the docker `dev` network doesn't exist:
+```sh
+$ docker network create dev
+```
+
+If the `nginx-proxy` is not running:
+```sh
+$ docker-compose -f docker/proxy-docker-compose.yml up -d
+```
+
+Then run the remaining containers:
+```sh
+$ docker-compose up -d
+```
+
+#### Installation of `composer` packages, `npm` modules & `bower` components
+
+##### Composer
 
 ```sh
-# usually the name of container is idciwebsite_silex_1
-$ docker exec -it idciwebsite_silex_1 bash
-# In your Docker container run these commands
-$ composer update
-$ npm install
-$ bower update --allow-root
-$ exit
+$ make composer-update
 ```
+
+##### Npm
+
+```sh
+$ make npm-install
+```
+
+##### Bower
+
+```sh
+$ make bower-install
+```
+
 ##### To enable the pre-commit hook, run this command
 
 ```sh
@@ -40,4 +61,16 @@ $ cp vendor/bruli/php-git-hooks/hooks/pre-commit .git/hooks/
 $ sudo chmod 775 . -R && sudo chown $USER:www-data . -R
 ```
 
-Edit your /etc/hosts file, then you can now access http://dev.idci.fr/index_dev.php
+To get access on your web applications, modify the `/etc/hosts` file:
+```
+$ sudo bash -c "echo -e '\n# IDCI-Consulting - Website\n127.0.0.1       idci-website.docker adminer.idci-website.docker' >> /etc/hosts"
+```
+
+
+##### Run Gulp tasks
+
+To run gulp tasks (to compile sass file for example) run the following (see the Gulpfile.js file to know the different tasks):
+```sh
+$ make gulp task="your_task"
+# example make gulp task="watch"
+```
