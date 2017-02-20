@@ -1,6 +1,6 @@
 {% form_theme form 'idci_form_fields.html.twig' %}
 
-<form action="{{ path('contact', {_locale: app.translator.locale}) }}" method="post" novalidate {{ form_enctype(form) }}>
+<form action="{{ path('contact', {_locale: app.translator.locale}) }}" method="post" novalidate>
     {{ form_errors(form) }}
     {{ form_widget(form) }}
 </form>

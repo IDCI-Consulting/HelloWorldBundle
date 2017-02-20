@@ -262,13 +262,7 @@ $intlApp
     ->match(
         '/contact',
         function (Request $request, $_locale) use ($app) {
-            $contactType = new ContactType();
-
-            if ($request->isXmlHttpRequest()) {
-                $contactType->setName('modal_contact');
-            }
-
-            $form = $app['form.factory']->createBuilder($contactType)->getForm();
+            $form = $app['form.factory']->createBuilder(ContactType::class)->getForm();
 
             if ($request->getMethod() === 'POST') {
                 $form->handleRequest($request);
