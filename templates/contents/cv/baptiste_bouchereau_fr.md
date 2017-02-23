@@ -1,5 +1,6 @@
 ### CURRICULUM VITAE
 
+
 #### BAPTISTE BOUCHEREAU, {{ getAge('1991-03-05') }} ans
 ##### Développeur Web Full Stack / Analyste
 
@@ -90,7 +91,7 @@
  * **Versioning** : Git, Svn
  * **BDD** : Mysql, MongoDB
  * **Virtualisation** : Docker
- * **Gestion de projet** : Redmine
+ * **Gestion de projet** : Redmine, Wekan
  * **Task runner** : Gulp
  * **Autres** : Ajax, Jquery
  * _Graphisme_ Notions de Gimp
