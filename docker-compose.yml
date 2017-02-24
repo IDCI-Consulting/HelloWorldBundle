@@ -1,11 +1,30 @@
-silex:
-  image: brah0um/silex-dev-idci
-  volumes:
-   - .:/var/www
-   - /var/log/docker/nginx/idci/:/var/log/nginx
-  ports:
-   - 8078:80
-   - 35729:35729
-  environment:
-   - VIRTUAL_HOST=dev.idci.fr
-  restart: always
+version: '2'
+
+services:
+
+  php:
+    image: idci-website/php:5.6-fpm
+    container_name: idci-website-php
+    build:
+      context: docker/build/php5.6
+    volumes:
+      - ./:/var/www/html
+
+  nginx:
+    image: nginx:1.10
+    container_name: idci-website-nginx
+    environment:
+      - VIRTUAL_HOST=idci-website.docker
+    volumes_from:
+      - php
+    volumes:
+      - ./docker/conf/nginx/vhost_silex.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/conf/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - php
+
+networks:
+
+  default:
+    external:
+      name: dev

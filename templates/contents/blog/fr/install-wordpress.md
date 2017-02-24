@@ -1,55 +1,69 @@
 ﻿﻿
 # Installer WordPress #
+
 ![Wordpress logo](/images/blog/wordpress.png "Wordpress logo")
 
-Avant d'installer WordPress, je vous recommande la lecture de cet article sur comment
-[mettre en place un environnement de développement pour réaliser un site avec php et mysql]({{ path('article', { _locale: app.translator.locale, file: 'environment-php-mysql' }) }}).
+Avant d'installer WordPress, nous vous recommandons la lecture de notre article sur [la mise en place d'un environnement de développement]({{ path('article', { _locale: app.translator.locale, file: 'environment-php-mysql' }) }}).
 
-## Récupérer les sources de WordPress ##
 
-Commencez par créer un dossier de travail (si ce n'est pas déjà fait). Puis récupérez
-les sources de WordPress en les téléchargeants:
+## Récupérer les sources de WordPress
 
-* [Version anglaise](http://wordpress.org/download/)
-* [Version française](http://fr.wordpress.org/)
+Nous vous recommandons de créer un dossier de travail, si ce n'est pas encore fait.
 
-Décompressez l'archive ainsi récupérée dans votre dossier de travail. Assurez-vous
-de bien avoir positionné les bons droits sur le dossier contenant les fichiers sources
-de WordPress.
+Nous récupérons ensuite les téléchargeants :
 
-Pour les systèmes Debian et dérivés (Ubuntu, ...), exécutez les commandes suivantes:
+ - [Version anglaise](http://wordpress.org/download/)
+ - [Version française](http://fr.wordpress.org/)
 
+Il faut ensuite décompressez l'archive récupéré, dans notre dossier de travail.
+
+Assurez-vous d'avoir les bons droits sur le dossier contenant les fichiers sources de WordPress.
+
+Pour les systèmes Debian et dérivés (Ubuntu, ...), exécuter les commandes suivantes :
+
+```sh
     $ sudo chgrp www-data -R WORKSPACE/WP_PROJECT
     $ sudo chmod 775 -R WORKSPACE/WP_PROJECT
+```
 
-Remplacez WORKSPACE par l'emplacement de votre répertoire de travail et WP_PROJECT
-par le nom de votre projet. Pour vérifier que les droits sont correctement positionnés,
-vous pouvez lancer la commande suivante:
+Puis, nous remplaçons :
 
+ - `WORKSPACE` par l'emplacement de notre répertoire de travail
+ - `WP_PROJECT` par le nom de notre projet
+
+Pour vérifier la bonne application des droits, lancer la commande suivante :
+
+```sh
     $ ls -l WORKSPACE
+```
 
-Vous devez obtenir le résultat suivant:
+Le résultat suivant doit être obtenu :
 
+```
     drwxrwxr-x 6 USER www-data 4096 2011-01-23 10:45 WP_PROJECT
+```
 
-## Installer WordPress ##
 
-Ouvrez un navigateur puis accéder à l'URL que vous avez défini pour votre site (ex: **http://local.domain/**)
-L'application détecte alors que c'est votre première connexion (par l'absence de configuration)
-et vous propose alors de procéder à l'installation de WordPress. Le processus d'installation
-de WordPress est simple et intuitif. Les informations qu'il vous faudra fournir sont:
+## Installer WordPress
 
-* les paramètres d'accès à la base de donnée MySQL
-* le titre de votre site
-* le login, le mot de passe et le mail de l'administrateur
+Nous ouvrons un navigateur et accédons à l'URL prédéfini pour notre site (ex: **http://local.domain/**)
+L'application détecte alors que c'est notre première connexion (de par l'absence de configuration) et propose alors de procéder à l'installation de WordPress.
+Le processus d'installation de WordPress est simple et intuitif.
 
-Voici une serie d'écran vous présentant l'installation de WordPress 3.2.1
+Voici les informations à fournir :
+
+ - Les paramètres d'accès à la base de donnée MySQL
+ - Le titre de notre site
+ - Le login, le mot de passe et le mail de l'administrateur
+
+Voici une série d'écrans présentant l'installation de WordPress 3.2.1 :
 
 ![WP Install 1](/images/blog/wp_install_1.png "Etape 1")
 
 ![WP Install 2](/images/blog/wp_install_2.png "Etape 2")
 
-Durant cette étape, il vous faudra renseigner les informations de connexion à la base de donnée.
+Durant cette étape, il faudra renseigner les informations de connexion à la base de données :
+
 ![WP Install 3](/images/blog/wp_install_3.png "Etape 3")
 
 ![WP Install 4](/images/blog/wp_install_4.png "Etape 4")
@@ -58,20 +72,24 @@ Durant cette étape, il vous faudra renseigner les informations de connexion à 
 
 ![WP Install 6](/images/blog/wp_install_6.png "Etape 6")
 
-Voilà vous venez d'installer WordPress !
+Voilà, vous venez d'installer WordPress !
 
-## Accèder à l'espace d'administration (Back-Office) ##
 
-Pour l'administration de votre site il faudra aller à l'adresse suivante **http://local.domain/wp-admin**
-puis saisir vos login et mot de passe définis durant la phase d'installation pour
-pouvoir accéder à l'espace d'administration de votre site.
+## Accèder à l'espace d'administration (back office)
+
+Pour l'administration de notre site, nous nous rendons à l'adresse suivante : **http://local.domain/wp-admin**.
+Nous y saisissons ensuite les login et mot de passe prédéfini, ce qui nous permettra l'accès à notre espace personnel.
 
 ![WP Install 8](/images/blog/wp_install_8.png "Etape 8")
 
-## Visualiser votre site (Front-Office) ##
+
+## Visualiser notre site (front office)
 
 Pour visualiser votre site, rendez-vous à l'adresse **http://local.domain**
 
 ![WP Install 7](/images/blog/wp_install_7.png "Etape 7")
 
+
 Bonne découverte !
+
+Si vous avez une question ou un projet web à réaliser, n'hésitez pas à nous [contacter]({{ path('contact', { _locale: app.translator.locale }) }} "Contactez-nous").

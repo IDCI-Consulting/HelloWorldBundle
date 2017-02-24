@@ -9,6 +9,12 @@
 namespace Form\Type;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Constraints;
 
@@ -23,23 +29,23 @@ class ContactType extends AbstractType
         ));
 
         $builder
-            ->add('company', 'text', array())
-            ->add('website', 'url', array(
+            ->add('company', TextType::class, array())
+            ->add('website', UrlType::class, array(
                 'constraints' => array(
                     new Constraints\Url()
                 )
             ))
-            ->add('name', 'text', array(
+            ->add('name', TextType::class, array(
                 'constraints' => array(
                     $notBlankConstraint,
                 )
             ))
-            ->add('firstname', 'text', array(
+            ->add('firstname', TextType::class, array(
                 'constraints' => array(
                     $notBlankConstraint,
                 )
             ))
-            ->add('email', 'email', array(
+            ->add('email', EmailType::class, array(
                 'constraints' => array(
                     $notBlankConstraint,
                     new Constraints\Email(array(
@@ -47,17 +53,17 @@ class ContactType extends AbstractType
                     ))
                 )
             ))
-            ->add('phonenumber', 'number', array(
+            ->add('phonenumber', NumberType::class, array(
                 'constraints' => array(
                     $notBlankConstraint,
                 )
             ))
-            ->add('project', 'textarea', array(
+            ->add('project', TextareaType::class, array(
                 'constraints' => array(
                     $notBlankConstraint,
                 )
             ))
-            ->add('validate', 'submit', array(
+            ->add('validate', SubmitType::class, array(
                 'label' => 'Send',
             ))
         ;

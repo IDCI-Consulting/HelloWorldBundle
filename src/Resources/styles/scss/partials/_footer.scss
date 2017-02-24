@@ -116,15 +116,22 @@ footer {
       a {
         background: 0 0;
         display: block;
-        text-indent: -999rem;
         vertical-align: middle;
         width: 100%;
 
-        span {
-          background-image: $social-sprite-url;
-          background-repeat: no-repeat;
+        i {
           display: block;
           margin: 0;
+          font-size: 3rem;
+          -webkit-transition: color .3s;
+          -moz-transition: color .3s;
+          -ms-transition: color .3s;
+          -o-transition: color .3s;
+          transition: color .3s;
+
+          &:hover {
+            color: $idci-light-blue;
+          }
         }
       }
     }

@@ -47,8 +47,8 @@ $app->register(new ContactManagerServiceProvider());
 $app->register(new CourseManagerServiceProvider());
 $app->register(new YamlConfigServiceProvider(__DIR__ . '/../config/config.yml'));
 $app->register(new SnappyServiceProvider(), array(
-    'snappy.image_binary' => '/usr/local/bin/wkhtmltoimage',
-    'snappy.pdf_binary'   => '/usr/local/bin/wkhtmltopdf',
+    'snappy.image_binary' => '/usr/bin/wkhtmltoimage',
+    'snappy.pdf_binary'   => '/usr/bin/wkhtmltopdf',
 ));
 $app->register(new FinderServiceProvider());
 $app->register(new SitemapManagerServiceProvider());
@@ -102,6 +102,15 @@ $app['twig'] = $app->extend(
                     $jsonArray = json_decode($json, true);
 
                     return $jsonArray[$filename];
+                }
+            )
+        );
+
+        $twig->addFunction(
+            new \Twig_SimpleFunction(
+                'file_get_contents',
+                function ($filePath) use ($app) {
+                    return file_get_contents(sprintf('%s/../%s', __DIR__, $filePath));
                 }
             )
         );

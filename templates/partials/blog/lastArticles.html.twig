@@ -25,7 +25,7 @@
                         <p>{{ article['title'] }}</p>
                     </div>
                     <div class="small-3 columns end read-article">
-                        <a href="{{ path('article', {_locale: app.translator.locale, file: article['file']}) }}">Lire l'article</a>
+                        <a href="{{ path('article', {_locale: app.translator.locale, file: article['file']}) }}">{% trans %}Read article{% endtrans %}</a>
                     </div>
                 </div>
             {% endfor %}
