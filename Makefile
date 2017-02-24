@@ -12,13 +12,13 @@ composer-add-github-token:
 	docker exec -t $(php_container_name) bash -c "composer config --global github-oauth.github.com $(token); exit $$?"
 
 npm-install:
-	docker-compose -f node-docker-compose.yml run node bash -c "npm install; exit $$?"
+	docker-compose -f node-docker-compose.yml run --rm node bash -c "npm install; exit $$?"
 
 bower-install:
-	docker-compose -f node-docker-compose.yml run node bash -c "bower install --allow-root; exit $$?"
+	docker-compose -f node-docker-compose.yml run --rm node bash -c "bower install --allow-root; exit $$?"
 
 gulp:
-	docker-compose -f node-docker-compose.yml run --service-ports node bash -c "gulp $(task)"
+	docker-compose -f node-docker-compose.yml run --rm --service-ports node bash -c "gulp $(task)"
 
 composer-update:
 	docker exec -it $(php_container_name) bash -c "composer update; exit $$?"
