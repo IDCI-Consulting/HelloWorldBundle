@@ -4,25 +4,27 @@
 ## Introduction
 
 Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une **création de workflow interactif**.
-Il fallait pouvoir réaliser facilement des parcours navigable par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
-L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être configurable (et non pas hardcodé).
+Il fallait pouvoir réaliser facilement des **parcours navigables** par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
+L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être **configurable** (et non hardcodé).
 
 Nous avons testé des bundles existants, qui semblaient répondre à notre problématique, mais ceux-ci n'étaient pas satisfaisant.
 En bas de page, nous avons ajouté un rapide [comparatif](#Comparatif) de ces différents bundles.
 
-Ainsi, nous avons choisi de développer notre propre Bundle et nous l'avons pensé générique et réutilisable.
+Ainsi, nous avons choisi de développer notre propre Bundle, nous l'avons pensé générique et réutilisable.
 
-Cet article a pour vocation de vous présenter **IDCIStepBundle**.
+**Cet article a pour vocation d'introduire IDCIStepBundle**.
 Dans de prochains articles, nous rentrerons plus dans les détails et vous parlerons de ses spécifités au travers d'exemples concrets.
 
-**IDCIStepBundle** permet de simplifier la création d'un parcours interactif à destination d'un internaute.
+**IDCIStepBundle** permet de simplifier la **création d'un parcours interactif** à destination d'un internaute.
 Sa configuration se définie par un système de **Map** (carte), de **Step** (étape) et de **Path** (chemin).
 Nous avons utilisé la métaphore de la navigation tout au long de notre développement.
 
 Dans un premier temps, nous devons définir une map, et imaginer chaque écran (page web) comme une step, puis les lier entre elles en utilisant les paths qui ajouteront des boutons de navigation.
 
-> Remarque : cet article est destiné à Symfony 2.8
 
+<p class="notice question" markdown="1">
+Ce Bundle est compatible avec la version 2.8 de Symfony. La version 3.0 sera disponible prochainement.
+</p>
 
 ### Qu'est-ce qu'une map ?
 
