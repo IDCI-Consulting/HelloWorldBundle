@@ -2,7 +2,7 @@
 
 
 #### BAPTISTE BOUCHEREAU, {{ getAge('1991-03-05') }} ans
-##### Développeur Web Full Stack / Analyste
+##### Développeur Web Full Stack / Ingénieur
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
 [Github](https://github.com/ovski4)
@@ -16,7 +16,7 @@
 
 ### EXPERIENCES PROFESSIONNELLES
 
- * _Depuis Sept. 2015_ Co-gérant chez IDCI-Consulting | Développeur Web / Analyste
+ * _Depuis Sept. 2015_ Co-gérant chez IDCI-Consulting | Développeur Web / Ingénieur
  * _2016_ [Formations](https://www.idci-consulting.fr/fr/courses#symfony2) professionnalisantes sur le Framework Symfony2
  * Réalisation d'un [éditeur SVG](https://github.com/IDCI-Consulting/SvgEditor) en JavaScript pour une opération marketing
  * Mission de 7 mois à Carglass (Courbevoie) pour la création de leur nouveau site web
@@ -77,19 +77,20 @@
  * _2009_ Baccalauréat Scientifique
 
 
-### OUTILS INFORMATIQUE
+### OUTILS INFORMATIQUES
 
- * _Administration système_ **Serveur HTTP Apache, Nginx**
+ * _Administration système_ **Serveur HTTP** : **Apache, Nginx**
  * **Cache et reverse** : proxy Varnish
- * **Configuration Management** : Ansible
+ * **IT automation** : Ansible
  * _Langages_ Java, PHP, HTML5, CSS3, SASS, JavaScript, Sql, Shell Script
  * _OS_ Windows, Linux (Debian & Ubuntu, Archlinux)
  * _Technologies_ **Framework backend** : Symfony2, Silex, MeteorJs
+ * **Framework frontend** : Angular 1.2, VueJS 2, jQuery
  * **Framework CSS** : Bootstrap, Foundation
  * **Moteur de template** : Twig, Handlebars
- * **CMS** : Wordpress
+ * **CMS** : WordPress
  * **Versioning** : Git, Svn
- * **BDD** : Mysql, MongoDB
+ * **Base de données** : Mysql, MongoDB
  * **Virtualisation** : Docker
  * **Gestion de projet** : Redmine, Wekan
  * **Task runner** : Gulp

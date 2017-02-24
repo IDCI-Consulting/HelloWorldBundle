@@ -31,7 +31,7 @@
  * Développement et intégration du nouveau site IDCI-Consulting
  * _2014_ Développement de Mapyourstories, un prototype permettant la création de plans de métro personnalisables collaborativement et en temps réel
    * Framework : MeteorJS
- * _2013_ Stage à IDCI-Consulting : Conception et réalisation d'une plate-forme permettant la gestion de note de frais
+ * _2013_ Stage chez IDCI-Consulting : Conception et réalisation d'une plate-forme permettant la gestion de note de frais
    * Framework : Symfony2
 
 ### PROJETS PERSONNELS
@@ -42,7 +42,7 @@
 
 ### FORMATION
 
- * _2015_ License Professionnelle Systèmes Informatiques et Logiciels : Concepteur et Gestionnaire de Sites Internet (METINET)
+ * _2015_ License [METINET](http://iut.univ-lyon1.fr/formation/offre-de-formations/informatique-bourg-en-bresse-/licence-professionnelle-metiers-de-l-informatique-applications-web-parcours-metinet-concepteur-et-gestionnaire-de-sites-internet-metinet--602777.kjsp)
  * _2014_ **BTS SIO** (Service Informatique aux Organisations)
 
 

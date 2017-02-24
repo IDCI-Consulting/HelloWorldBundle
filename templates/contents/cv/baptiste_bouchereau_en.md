@@ -80,22 +80,22 @@
 ### SKILLS
 
  * _System management_ **Server HTTP** : Apache, Nginx
- * **Configuration Management** : Ansible
  * **Cache and reverse** : proxy Varnish
- * _OS_ Windows, Linux (Debian & Ubuntu, Archlinux)
+ * **IT automation** : Ansible
  * _Languages_ Java, PHP, HTML5, CSS3, SASS, JavaScript, Sql, Shell Script
+ * _OS_ Windows, Linux (Debian & Ubuntu, Archlinux)
  * _Technologies_ **Backend framework** : Symfony2, Silex, MeteorJs
  * **Frontend framework** : Angular 1.2, VueJS 2, jQuery
  * **CSS framework** : Bootstrap, Foundation
  * **Template engines** : Twig, Handlebars
  * **CMS** : Wordpress, Prestashop
- * **Databases** : Mysql, MongoDB
  * **Versioning** : Git, Svn
- * **Virtualisation** : Docker
+ * **Databases** : Mysql, MongoDB
+ * **Virtualization** : Docker
  * **Project management** : Redmine
  * **Task runner** : Gulp
  * **AMQP Tools** : RabbitMQ
- * **Modélisation** : UML
+ * **Modeling** : UML
  * _Graphic design_ Gimp notions
 
 
