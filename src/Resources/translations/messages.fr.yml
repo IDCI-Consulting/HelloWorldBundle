@@ -97,8 +97,8 @@
 'day5': "jour 5"
 
 # Trans choice
-'We do': "'{1}Nous faisons de la|{2}Nous faisons du'"
-'See': "'{1}Voir|{2}Voir le'"
+'We do': "{1} Nous faisons de la|{2} Nous faisons du"
+'See': "{1} Voir|{2} Voir le"
 
 # Blog page
 'Our articles': "Nos articles"
