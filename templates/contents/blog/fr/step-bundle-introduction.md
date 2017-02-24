@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une création de workflow interactif.
+Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une **création de workflow interactif**.
 Il fallait pouvoir réaliser facilement des parcours navigable par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre).
 L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être configurable (et non pas hardcodé).
 
@@ -12,10 +12,10 @@ En bas de page, nous avons ajouté un rapide [comparatif](#Comparatif) de ces di
 
 Ainsi, nous avons choisi de développer notre propre Bundle et nous l'avons pensé générique et réutilisable.
 
-Cet article a pour vocation de vous présenter IDCIStepBundle.
+Cet article a pour vocation de vous présenter **IDCIStepBundle**.
 Dans de prochains articles, nous rentrerons plus dans les détails et vous parlerons de ses spécifités au travers d'exemples concrets.
 
-IDCIStepBundle permet de simplifier la création d'un parcours interactif à destination d'un internaute.
+**IDCIStepBundle** permet de simplifier la création d'un parcours interactif à destination d'un internaute.
 Sa configuration se définie par un système de **Map** (carte), de **Step** (étape) et de **Path** (chemin).
 Nous avons utilisé la métaphore de la navigation tout au long de notre développement.
 
@@ -196,8 +196,8 @@ Voici un tableau comparatif (points forts / points faibles) des Bundles permetan
 
 D'autres bundles ont été rapidement analysé mais pas testé:
 
- - <a href="https://github.com/kitpages/KitpagesWorkflowBundle" target="_blank">KitpagesWorkflowBundle</a> => Seulement en version beta.
- - <a href="https://github.com/kitpages/SyliusFlowBundle" target="_blank">SyliusFlowBundle</a> => Affiché en "read only" sur Github.
+ - <a href="https://github.com/kitpages/KitpagesWorkflowBundle" target="_blank">KitpagesWorkflowBundle</a> : ce bundle existe seulement en version beta.
+ - <a href="https://github.com/kitpages/SyliusFlowBundle" target="_blank">SyliusFlowBundle</a> : ce bundle est affiché en "read only" sur Github.
 
 Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle vous pouvez
 [nous contacter](http://www.idci-consulting.fr/contact "Contactez-nous").
