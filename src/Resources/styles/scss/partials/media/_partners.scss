@@ -7,33 +7,36 @@
   }
 
   .partner {
-    background-image: url("/images/partners.jpg");
+    background-image: url("/images/partners.png");
     display: block;
     margin: 1rem auto;
     text-indent: -9999px;
+    width: 140px;
+    height: 135px;
 
     &.mbcreation-logo {
       background-position: 0 0;
-      width: 140px;
-      height: 140px;
+
     }
 
     &.mahii-logo {
       background-position: 0 -140px;
-      width: 140px;
-      height: 140px;
     }
 
     &.profilcreatif-logo {
       background-position: 0 -280px;
-      width: 140px;
-      height: 140px;
     }
 
     &.arcencielophile-logo {
       background-position: 0 -420px;
-      width: 140px;
-      height: 140px;
+    }
+
+    &.ochelys-logo {
+      background-position: 0 -557px;
+    }
+
+    &.jeromemulsant-logo {
+      background-position: 0 -700px;
     }
   }
 }

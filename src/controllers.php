@@ -111,7 +111,7 @@ $intlApp
     )
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
-    ->before($buildRealisations)
+    ->before($buildAchievements)
     ->before($buildAsideMenu)
     ->bind('activities')
 ;
@@ -262,13 +262,7 @@ $intlApp
     ->match(
         '/contact',
         function (Request $request, $_locale) use ($app) {
-            $contactType = new ContactType();
-
-            if ($request->isXmlHttpRequest()) {
-                $contactType->setName('modal_contact');
-            }
-
-            $form = $app['form.factory']->createBuilder($contactType)->getForm();
+            $form = $app['form.factory']->createBuilder(ContactType::class)->getForm();
 
             if ($request->getMethod() === 'POST') {
                 $form->handleRequest($request);
@@ -341,7 +335,7 @@ $intlApp
         function (Request $request, $_locale, $theme, $name, $_format) use ($app) {
 
             try {
-                $cv = $app['twig']->render(sprintf('contents/cv/%s.md', $name), array());
+                $cv = $app['twig']->render(sprintf('contents/cv/%s_%s.md', $name, $_locale), array());
             } catch (\Exception $e) {
                 throw new NotFoundHttpException(sprintf(
                     'The %s\'s cv doesn\'t exist',
@@ -404,14 +398,28 @@ $intlApp
     ->bind('cv')
 ;
 
-$intlApp
+$baseApp
     ->get(
         '/sitemap.xml',
-        function (Request $request, $_locale) use ($app) {
+        function (Request $request) use ($app) {
             $hostname = $request->getHost();
             $response = new Response();
+            $availableLanguages = array();
 
-            $app['sitemap_manager']->addConfiguration('_locale', $_locale);
+            foreach ($app['i18n_route_generator.languages'] as $locale => $language) {
+                $availableLanguages[] = $locale;
+            }
+
+            $locale = $request->getPreferredLanguage($availableLanguages);
+
+            $app['sitemap_manager']->addConfiguration('_locale', $locale);
+
+            if (($key = array_search($locale, $availableLanguages)) !== false) {
+                unset($availableLanguages[$key]);
+            }
+
+            $app['sitemap_manager']->addConfiguration('other_langs', $availableLanguages);
+
             $urls = $app['sitemap_manager']->build();
 
             $response->headers->set('Content-Type', 'text/xml');
@@ -423,9 +431,6 @@ $intlApp
             return $response;
         }
     )
-    ->before($hideContactLink)
-    ->before($buildLocaleLinks)
-    ->bind('sitemap_xml')
 ;
 
 $intlApp
@@ -433,10 +438,8 @@ $intlApp
         '/sitemap',
         function (Request $request, $_locale) use ($app) {
             $hostname = $request->getHost();
-
             $app['sitemap_manager']->addConfiguration('_locale', $_locale);
             $urls = $app['sitemap_manager']->build();
-
             return $app['twig']->render('pages/sitemap.svg.twig', array(
                 'urls'     => $urls,
                 'hostname' => $hostname,

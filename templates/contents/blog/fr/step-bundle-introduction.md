@@ -10,7 +10,7 @@ L'évolutivité de la complexité des parcours étant un point important, l'ense
 Nous avons testé des bundles existants, qui semblaient répondre à notre problématique, mais ceux-ci n'étaient pas satisfaisant.
 En bas de page, nous avons ajouté un rapide [comparatif](#Comparatif) de ces différents bundles.
 
-Ainsi, nous avons choisi de développer notre propre Bundle et nous l'avons pensé générique et réutilisable.
+Ainsi, nous avons choisi de développer notre propre Bundle, nous l'avons pensé générique et réutilisable.
 
 **Cet article a pour vocation d'introduire IDCIStepBundle**.
 Dans de prochains articles, nous rentrerons plus dans les détails et vous parlerons de ses spécifités au travers d'exemples concrets.
@@ -202,5 +202,5 @@ D'autres bundles ont été rapidement analysé mais pas testé:
  - [KitpagesWorkflowBundle](https://github.com/kitpages/KitpagesWorkflowBundle) : Ce bundle propose seulement une version beta.
  - [SyliusFlowBundle](https://github.com/Sylius/SyliusFlowBundle) : Ce Bundle affiche "Read only" sur Github.
 
-Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle, vous pouvez
+Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle vous pouvez
 [nous contacter](http://www.idci-consulting.fr/contact "Contactez-nous").

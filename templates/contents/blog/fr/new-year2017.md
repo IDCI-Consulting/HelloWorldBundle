@@ -1,6 +1,6 @@
 # Nos voeux pour 2017
 
-L'équipe d'IDCI vous souhaite une très bonne année.
+**L'équipe d'IDCI vous souhaite une très bonne année.**
 
 Nous vous souhaitons de continuer à explorer vos idées et votre créativité. Tester de nouvelles choses et être curieux sur ce qui vous entoure.
 Prendre soin de vous et partager avec ceux que vous aimez. Encourager votre entourage à se surpasser avec vous. Avoir de nouveaux projets et les réaliser.
@@ -11,11 +11,12 @@ Nous aimerions partager avec vous quelques moments forts d'IDCI en 2016.
 
 ### Une évolution de l'équipe
 
-Durant l'année, nous avons vu notre équipe évoluer.
-**[Baptiste Boucherau] (https://www.idci-consulting.fr/fr/cv/idci/baptiste_bouchereau_fr "Baptiste Boucherau")** est devenu co-gérant cette année.
+Durant l'année, nous avons vu notre [équipe](https://www.idci-consulting.fr/fr/team "équipe") évoluer.
+
+**[Baptiste Boucherau](https://www.idci-consulting.fr/fr/cv/idci/baptiste_bouchereau_fr "Baptiste Boucherau")** est devenu co-gérant cette année.
 Il a rejoint ainsi à ce poste Gabriel et Frédéric BONDAZ. Baptiste ajoute aussi la formation à ses compétences professionnelles, et ce en ayant animé plusieurs cours à l'Université Lyon 1 et des formations professionelles.
 
-**[Brahim Boukoufallah] https://www.idci-consulting.fr/fr/cv/idci/brahim_boukoufallah_fr "Brahim Boukoufallah")** a rejoint l'équipe plus durablement en signant un CDI après un stage et une alternance chez IDCI.
+**[Brahim Boukoufallah](https://www.idci-consulting.fr/fr/cv/idci/brahim_boukoufallah_fr "Brahim Boukoufallah")** a rejoint l'équipe plus durablement en signant un CDI après un stage et une alternance chez IDCI.
 Il est devenu également formateur à l'INSEEC et à la 3WAcademy.
 
 **Eddie Barraco** travaille en alternance chez IDCI-Consulting depuis cette année pour se former au métier de développeur.
@@ -47,9 +48,10 @@ Les derniers site web client ont été migré cette année 2016.
 
 ### Le CA
 
-En 2016, nous avons vu la croissance de notre chiffre d'affaire augmenter de 154%.
+En 2016, nous avons vu notre chiffre d'affaire augmenter de 154%.
 
-2017 s'annonce donc pour nous comme une année pleine de rebondissements, d'évolution, et très certainement d'expansion de notre équipe. Nous aurons encore de nouvelles choses à vous montrer.
+2017 s'annonce donc pour nous comme une année pleine de rebondissements, d'évolution, et très certainement d'expansion de notre équipe.
+Nous aurons encore de nouvelles choses à vous montrer.
 
 Merci d'avoir passé cette année à nos cotés.
 

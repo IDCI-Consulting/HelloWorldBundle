@@ -18,14 +18,13 @@
 {% block main_content %}
     {% include 'partials/asideMenu.html.twig' %}
     {% include 'partials/index/presentation.html.twig' %}
-    {% include 'partials/index/training.html.twig' %}
     {% include 'partials/index/advice.html.twig' %}
+    {% include 'partials/index/training.html.twig' %}
     {% include 'partials/index/development.html.twig' %}
 
     <div class="hide-for-small-only">
         {% include 'partials/index/philosophy.html.twig' %}
         {% include 'partials/index/approach.html.twig' %}
-
 
         <section id="{% trans %}tools{% endtrans %}" class="tools full-width">
             <div class="row">
@@ -80,6 +79,7 @@
                             'ansible': 'http://www.ansible.com/home',
                             'elk': 'https://www.elastic.co/fr/products',
                             'docker': 'https://www.docker.com/',
+                            'rabbitmq': 'https://www.rabbitmq.com/'
                         }
                     }
                     %}
@@ -200,4 +200,3 @@
         });
     </script>
 {% endblock %}
-

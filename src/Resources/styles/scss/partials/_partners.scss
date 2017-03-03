@@ -1,5 +1,5 @@
 .partner {
-  background-image: url("/images/partners.jpg");
+  background-image: url("/images/partners.png");
   display: block;
   margin: 1rem auto;
   text-indent: -9999px;
@@ -37,10 +37,30 @@
   &.arcencielophile-logo {
     background-position: -280px -420px;
     width: 140px;
-    height: 140px;
+    height: 138px;
 
     &:hover {
       background-position: 0 -420px;
+    }
+  }
+
+  &.ochelys-logo {
+    background-position: -280px -557px;
+    width: 140px;
+    height: 140px;
+
+    &:hover {
+      background-position: 0 -557px;
+    }
+  }
+
+    &.jeromemulsant-logo {
+    background-position: -280px -700px;
+    width: 140px;
+    height: 140px;
+
+    &:hover {
+      background-position: 0 -700px;
     }
   }
 }

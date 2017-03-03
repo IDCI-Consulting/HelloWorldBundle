@@ -3,7 +3,7 @@
 {% block stylesheets %}
     {{ parent() }}
 
-    {% include 'partials/cv/stylesheet.html.twig' with {"theme": theme} %}
+    <link href="{{ asset('css/cv/theme/' ~ theme ~ '.min.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block nav %}

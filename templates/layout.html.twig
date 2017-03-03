@@ -30,7 +30,7 @@
                     {% for locale, route in i18n_routes %}
                         <li{% if app.translator.locale == locale %} class="active"{% endif %}>
                             <a href="{{ route['route'] }}">
-                                <img src="{{ asset('images/blank.gif') }}" class="flag flag-{{ locale }}" />
+                                <img src="{{ asset('images/blank.gif') }}" alt="lang {{ locale }}" class="flag flag-{{ locale }}" />
                             </a>
                         </li>
                     {% endfor %}
@@ -82,11 +82,14 @@
             </div>
             <div class="medium-4 columns footer-part footer-socials ">
                 <ul class="row socials">
-                    <li class="small-6 columns twitter">
-                        <a href="https://twitter.com/idciconsulting" target="_blank"><span>Twitter</span></a>
+                    <li class="small-4 columns">
+                        <a href="https://twitter.com/idciconsulting" target="_blank" ><i class="fa fa-twitter"></i></a>
                     </li>
-                    <li class="small-6 columns github">
-                        <a href="https://github.com/IDCI-Consulting" target="_blank"><span>Github</span></a>
+                    <li class="small-4 columns github">
+                        <a href="https://github.com/IDCI-Consulting" target="_blank"><i class="fa fa-github"></i></a>
+                    </li>
+                    <li class="small-4 columns github">
+                        <a href="https://www.facebook.com/idciconsulting" target="_blank"><i class="fa fa-facebook"></i></a>
                     </li>
                 </ul>
             </div>
@@ -94,7 +97,7 @@
             <div class="medium-7 columns footer-part sub-footer">
                 <ul class="row">
                     <li class="small-4 columns">
-                        &#169; 2015
+                        <p>&#169; 2017 - idci v{{ app.config.version }}</p>
                     </li>
                     <li class="small-4 columns">
                         <a href="{{ path('mentions', {_locale: app.translator.locale}) }}" class="mentions">{% trans %}Legal Notice{% endtrans %}</a>
@@ -119,7 +122,7 @@
 {% block stylesheets %}
     {# Import stylesheet at the bottom. Advised by Google PageSpeed Insights #}
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
     <link href="{{ asset('css/' ~ getRevFilename('app.min.css') ~ '') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 

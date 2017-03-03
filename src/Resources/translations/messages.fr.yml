@@ -1,127 +1,127 @@
-Contact: Contact
-Salesman: Commercial
-Technique: Technique
-Phone: Téléphone
-Address: Adresse
-Engineering: Ingénierie
-Development: Développement
-Integration: Intégration
-Training: Formation
-Advice: Conseil
-Advices: Conseils
-Web development: Développement web
-Our philosophy: Notre philosophie
-Our approach: Notre approche
-Our tools: Nos outils
-Backend: Backend
-Databases: Données
-Quality: Qualité
-Frontend: Frontend
-Infrastructure: Infrastructure
-learn more: en savoir +
-Contact us: Nous contacter
-Clients: Clients
-Projects: Projets
-Open Source Contribution: Contribution Open Source
-Follow us: Suivez nous
-The team: L'équipe
-Download: Télécharger
-Developer: Développeur
-Manager: Gérant
-Our clients: Nos clients
-Our projects: Nos projets
-Our courses: Nos formations
-Our partners: Nos partenaires
-Our methodology: Notre méthodologie
-They talk about us: Ils parlents de nous
-Choose one of: Choisissez l'une de
-We specialize in: Nous sommes spécialisés dans
-Presentation: Présentation
-Web architecture: L'Architecture web
-download: télécharger
-training: formation
-by: par
-added at: ajouté le
+'Contact': "Contact"
+'Salesman': "Commercial"
+'Technique': "Technique"
+'Phone': "Téléphone"
+'Address': "Adresse"
+'Engineering': "Ingénierie"
+'Development': "Développement"
+'Integration': "Intégration"
+'Training': "Formation"
+'Advice': "Conseil"
+'Advices': "Conseils"
+'Web development': "Développement web"
+'Our philosophy': "Notre philosophie"
+'Our approach': "Notre approche"
+'Our tools': "Nos outils"
+'Backend': "Backend"
+'Databases': "Données"
+'Quality': "Qualité"
+'Frontend': "Frontend"
+'Infrastructure': "Infrastructure"
+'learn more': "en savoir +"
+'Contact us': "Nous contacter"
+'Clients': "Clients"
+'Projects': "Projets"
+'Open Source Contribution': "Contribution Open Source"
+'Follow us': "Suivez nous"
+'The team': "L'équipe"
+'Download': "Télécharger"
+'Developer': "Développeur"
+'Manager': "Gérant"
+'Our clients': "Nos clients"
+'Our projects': "Nos projets"
+'Our courses': "Nos formations"
+'Our partners': "Nos partenaires"
+'Our methodology': "Notre méthodologie"
+'They talk about us': "Ils parlents de nous"
+'Choose one of': "Choisissez l'une de"
+'We specialize in': "Nous sommes spécialisés dans"
+'Presentation': "Présentation"
+'Web architecture': "L'Architecture web"
+'download': "télécharger"
+'training': "formation"
+'by': "par"
+'added at': "ajouté le"
 
 #Form labels
-Company: Entreprise
-Website: Site web
-Name: Nom
-Firstname: Prénom
-Email: Email
-Phonenumber: Téléphone
-Project: Projet
-Validate: Valider
-Send: Envoyer
+'Company': "Entreprise"
+'Website': "Site web"
+'Name': "Nom"
+'Firstname': "Prénom"
+'Email': "Email"
+'Phonenumber': "Téléphone"
+'Project': "Projet"
+'Validate': "Valider"
+'Send': "Envoyer"
 
 #Header
-home: accueil
-the company: la société
-our courses: nos formations
-the team: l'équipe
-our achievements: nos réalisations
-our activities: nos activités
-our partners: nos partenaires
-blog: blog
-contact: contact
-Choose the language: Choisissez la langue
+'home': "accueil"
+'the company': "la société"
+'our courses': "nos formations"
+'the team': "l'équipe"
+'our achievements': "nos réalisations"
+'our activities': "nos activités"
+'our partners': "nos partenaires"
+'blog': "blog"
+'contact': "contact"
+'Choose the language': "Choisissez la langue"
 
 #Footer
-For any request: Pour toute demande
-do not hesitate to: n'hésiter pas à
-Our contact details: Nos Coordonnées
-Legal Notice: Mentions légales
-Sitemap: Plan du site
+'For any request': "Pour toute demande"
+'do not hesitate to': "n'hésiter pas à"
+'Our contact details': "Nos Coordonnées"
+'Legal Notice': "Mentions légales"
+'Sitemap': "Plan du site"
 
 #Languages
-French: Français
-french: français
-English: Anglais
-english: anglais
+'French': "Français"
+'french': "français"
+'English': "Anglais"
+'english': "anglais"
 
 #Notifications
-Your message could not be sent: Votre message n'a pas pu être envoyé
-Your message is sent: Votre message est envoyé
+'Your message could not be sent': "Votre message n'a pas pu être envoyé"
+'Your message is sent': "Votre message est envoyé"
 
 #brahim
-Junior Developer: Développeur Junior
+'Junior Developer': "Développeur Junior"
 
 #Ace editor
-Write your code here: Ecrivez votre code ici
+'Write your code here': "Ecrivez votre code ici"
 
 #Courses
-day1: jour 1
-day2: jour 2
-day3: jour 3
-day4: jour 4
-day5: jour 5
+'day1': "jour 1"
+'day2': "jour 2"
+'day3': "jour 3"
+'day4': "jour 4"
+'day5': "jour 5"
 
 # Trans choice
-We do: '{1}Nous faisons de la|{2}Nous faisons du'
-See: '{1}Voir|{2}Voir le'
+'We do': "{1} Nous faisons de la|{2} Nous faisons du"
+'See': "{1} Voir|{2} Voir le"
 
 # Blog page
-Our articles: Nos articles
-By categories: Par catégories
-articles-by-categories: articles-par-categories
-last-articles: derniers-articles
-last articles: derniers articles
-
+'Our articles': "Nos articles"
+'By categories': "Par catégories"
+'articles-by-categories': "articles-par-categories"
+'last-articles': "derniers-articles"
+'last articles': "derniers articles"
+'Read article': "Lire l'article"
 # Errors
-This is not the web page you are looking for: Ce n'est pas la page web que vous recherchez
-An error occurred , please try again later: Une erreur est survenue, s'il vous plaît réessayer plus tard
-Internal Server Error: Erreur interne du serveur
-Bad request: Mauvaise requête
-Error, try again later: Erreur, réessayez plus tard
+'This is not the web page you are looking for': "Ce n'est pas la page web que vous recherchez"
+'An error occurred , please try again later': "Une erreur est survenue, s'il vous plaît réessayer plus tard"
+'Internal Server Error': "Erreur interne du serveur"
+'Bad request': "Mauvaise requête"
+'Error, try again later': "Erreur, réessayez plus tard"
 
 # img alt attribute
-left arrow: flèche gauche
-right arrow: flèche droite
-tools icon: icône outils
-oop image: image poo
-course title image: image titre cours
-advice icon: icône conseil
-agile icon: icône agile
-web development icon: icône développement web
-opensource icon: icône open source
-training icon: icône formation
+'left arrow': "flèche gauche"
+'right arrow': "flèche droite"
+'tools icon': "icône outils"
+'oop uml image': "image poo uml"
+'course title image': "image titre cours"
+'advice icon': "icône conseil"
+'agile icon': "icône agile"
+'web development icon': "icône développement web"
+'opensource icon': "icône open source"
+'training icon': "icône formation"
