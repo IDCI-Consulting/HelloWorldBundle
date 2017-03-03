@@ -80,7 +80,7 @@
 
  * _Administration système_ **Serveur HTTP** : Apache, Nginx
  * **Réseaux** : DNS (bind), DHCP, Reverse proxy et load balancing (varnish, pound), Firewall (iptables), Serveur HTTP (Apache, lighttpd, nginx), Serveur FTP (vsFtp)
- * **IT automation** : Ansible, SaltStack
+ * **Configuration Management** : Ansible, SaltStack
  * _Langages_ C, C++, Java, Python, PHP, Html, xHtml, Html5, JavaScript, Sql, Pl/Sql, Prolog, Shell Script
  * _OS_ Ms Dos, Windows, MacOS, Linux, Unix
  * _Technologies_ **Framework PHP** : Symfony 1/2/3, Silex, Laravel, Zend framework

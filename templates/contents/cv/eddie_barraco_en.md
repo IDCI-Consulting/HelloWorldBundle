@@ -29,7 +29,7 @@
 
  * _System management_ **Server HTTP** : Apache, Nginx
  * _Networks_ Dns (bind), Dhcp, Reverse proxy, Firewall (Iptables)
- * **IT automation** : Ansible
+ * **Configuration Management** : Ansible
  * _Langagues_ PHP, HTML5, CSS3, JavaScript, Shell/Bash Script, C, C++, Sql, Java
  * _OS_ Windows (7, 8, 8.1, 10), Linux (Debian, Ubuntu, ArchLinux)
  * _Technologies_ **Framework backend** : Symfony2, Silex, AngularJS

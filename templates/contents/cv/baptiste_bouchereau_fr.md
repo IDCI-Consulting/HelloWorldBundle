@@ -81,7 +81,7 @@
 
  * _Administration système_ **Serveur HTTP** : **Apache, Nginx**
  * **Cache et reverse** : proxy Varnish
- * **IT automation** : Ansible
+ * **Configuration Management** : Ansible
  * _Langages_ Java, PHP, HTML5, CSS3, SASS, JavaScript, Sql, Shell Script
  * _OS_ Windows, Linux (Debian & Ubuntu, Archlinux)
  * _Technologies_ **Framework backend** : Symfony2, Silex, MeteorJs

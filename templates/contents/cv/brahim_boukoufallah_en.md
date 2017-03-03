@@ -53,7 +53,7 @@
 ### SKILLS
 
  * _System management_ **Server HTTP** : Apache, Nginx
- * **IT automation** : Ansible
+ * **Configuration Management** : Ansible
  * _Languages_ Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script
  * _OS_ Windows, Linux (Debian and Ubuntu)
  * _Technologies_ **Backend framework** : Symfony2, Silex
