@@ -2,7 +2,7 @@
 
 
 #### BAPTISTE BOUCHEREAU, {{ getAge('1991-03-05') }} ans
-##### Développeur Web Full Stack / Ingénieur
+##### Analyste | Ingénieur
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
 [Github](https://github.com/ovski4)
@@ -16,7 +16,7 @@
 
 ### EXPERIENCES PROFESSIONNELLES
 
- * _Depuis Sept. 2015_ Co-gérant chez IDCI-Consulting | Développeur Web / Ingénieur
+ * _Depuis Sept. 2015_ Co-gérant chez IDCI-Consulting | Co-gérant & Ingénieur
  * _2016_ [Formations](https://www.idci-consulting.fr/fr/courses#symfony2) professionnalisantes sur le Framework Symfony2
  * Réalisation d'un [éditeur SVG](https://github.com/IDCI-Consulting/SvgEditor) en JavaScript pour une opération marketing
  * Mission de 7 mois à Carglass (Courbevoie) pour la création de leur nouveau site web

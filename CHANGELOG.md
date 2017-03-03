@@ -23,3 +23,4 @@ CHANGELOG
 * feature [#3717](https://redmine.idci-consulting.fr/issues/3717) Adding missing ALT tags.
 * feature [#3723](https://redmine.idci-consulting.fr/issues/3723) Rework and update all resumes.
 * bug [#3724](https://redmine.idci-consulting.fr/issues/3724) Fix translation, rework and update english resumes.
+* feature [#3725](https://redmine.idci-consulting.fr/issues/3725) Update and rework articles.

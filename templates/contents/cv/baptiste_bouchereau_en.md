@@ -1,7 +1,7 @@
 ### CURRICULUM VITAE
 
 #### BAPTISTE BOUCHEREAU, {{ getAge('1991-03-05') }} years old
-##### Full Stack Web Developer / Engineer
+##### Analyst | Engineer
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
 [Github](https://github.com/ovski4)
@@ -16,7 +16,7 @@
 
 ### PROFESSIONAL EXPERIENCES
 
- * _Since September 2015_ Independent at IDCI-CONSULTING | Developer Web / Engineer
+ * _Since September 2015_ Independent at IDCI-CONSULTING | Co-manager & Engineer
  * _2016_ Professionalizing [courses](https://www.idci-consulting.fr/en/courses#symfony2) on Symfony framework
  * Created a [SVG editor](https://github.com/IDCI-Consulting/SvgEditor) in JavaScript for a marketing operation
  * 7 months mission at Courbevoie. Backend development of the Carglass France new website
