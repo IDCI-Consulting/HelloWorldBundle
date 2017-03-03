@@ -104,7 +104,7 @@ blog:
             - {file: "type-doctrine2", image: "symfony2-logo.png", title: "Comment créer un nouveau type Doctrine2 avec Symfony2", date: "18/01/2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
             - {file: "behaviors-doctrine2", image: "symfony2-logo.png", title: "Installer les Behaviors Doctrine2 sous Symfony2", date: "24/08/2011" , author: "Gabriel Bondaz", categories: ["Symfony2"]}
             - {file: "phpillow-couchdb", image: "symfony2-logo.png", title: "Installer PHPillow pour couchDB sur Symfony2", date: "19/06/2011" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
-            - {file: "step-bundle-introduction", image: "symfony2-logo.png", title: "Introduction à IDCIStepBundle", date: "03/03/2016", author: "Louise Millon", categories: ["Symfony2"]}
+            - {file: "step-bundle-introduction", image: "symfony2-logo.png", title: "Introduction à IDCIStepBundle", date: "03/03/2017", author: "Louise Millon", categories: ["Symfony2"]}
 
             #Symposium
             - {file: "symposium", image: "symposium.png", title: "Symposium un outil pour réussir l’organisation de vos événements", date: "22/11/2011" , author: "Frédéric Bondaz", categories: ["Symposium"]}
