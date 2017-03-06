@@ -14,7 +14,7 @@
 'Our approach': "Notre approche"
 'Our tools': "Nos outils"
 'Backend': "Backend"
-'Databases': "Données"
+'Storage': "Stockage"
 'Quality': "Qualité"
 'Frontend': "Frontend"
 'Infrastructure': "Infrastructure"
@@ -107,6 +107,7 @@
 'last-articles': "derniers-articles"
 'last articles': "derniers articles"
 'Read article': "Lire l'article"
+
 # Errors
 'This is not the web page you are looking for': "Ce n'est pas la page web que vous recherchez"
 'An error occurred , please try again later': "Une erreur est survenue, s'il vous plaît réessayer plus tard"

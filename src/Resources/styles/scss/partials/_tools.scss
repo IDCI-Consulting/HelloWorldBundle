@@ -119,6 +119,15 @@ a.tools-sprite {
     }
   }
 
+  &.kyototycoon {
+    background-position: -106px -796px;
+    height: 20px;
+
+    &:hover {
+      background-position: 0 -796px;
+    }
+  }
+
   &.html5-css3 {
     background-position: -107px -424px;
     height: 71px;

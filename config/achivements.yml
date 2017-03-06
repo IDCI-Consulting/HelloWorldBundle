@@ -56,7 +56,7 @@ achievements:
         image_path: "/images/jac-avocat.png"
         url: "http://www.jac-avocat.fr/"
         title: "JAC Avocat"
-        enabled: true
+        enabled: false
         content:
             fr: >
                 C’est bien parce que les magistrats sont souvent des néophytes en informatique qu’ils ont besoin de vrais professionnels sachant s’adapter à leur langage et répondre à leurs besoins.
@@ -80,7 +80,7 @@ achievements:
         image_path: "/images/lesiris.png"
         url: "http://www.lesiris.com/"
         title: "Le Siris"
-        enabled: true
+        enabled: false
         content:
             fr: >
                 Bienvenue au pays des volcans d'Auvergne ! Les 4 maisons, situées dans le département du Puy de Dôme en France, reçoivent des groupes toute l'année.
