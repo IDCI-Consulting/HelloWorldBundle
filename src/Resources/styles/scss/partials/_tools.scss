@@ -22,7 +22,7 @@
  **************************/
 a.tools-sprite {
   display: inline-block;
-  background: url("/images/technos.jpg") no-repeat;
+  background: url("/images/technos1.jpg") no-repeat;
   background-size: 20rem;
   margin: 1rem auto 0;
   text-indent: -9999px;
@@ -120,11 +120,11 @@ a.tools-sprite {
   }
 
   &.kyototycoon {
-    background-position: -106px -796px;
-    height: 20px;
+    background-position: -106px -1150px;
+    height: 60px;
 
     &:hover {
-      background-position: 0 -796px;
+      background-position: 0 -1150px;
     }
   }
 
@@ -221,7 +221,7 @@ a.tools-sprite {
 
   &.redmine {
     background-position: -107px -853px;
-    height: 18px;
+    height: 19px;
 
     &:hover {
       background-position: 0 -853px;
@@ -229,11 +229,11 @@ a.tools-sprite {
   }
 
   &.php-unit {
-    background-position: -107px -656px;
-    height: 89px;
+    background-position: -107px -657px;
+    height: 88px;
 
     &:hover {
-      background-position: 0 -656px;
+      background-position: 0 -657px;
     }
   }
 
