@@ -1,7 +1,7 @@
 ### CURRICULUM VITAE
 
 #### GABRIEL BONDAZ, {{ getAge('1984-07-12') }} ans
-##### Ingénieur / Formateur
+##### Ingénieur | Formateur
 
 ![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
 [Github](https://github.com/konandrum)
@@ -18,8 +18,9 @@
 ### EXPERIENCES PROFESSIONNELLES
 
 
-_Depuis Sept. 2008_ Création de IDCI-Consulting | Co-gérant / Ingénieur Recherche et Développement
+_Depuis Sept. 2008_
 
+  - Création de IDCI-Consulting | Co-gérant / Ingénieur Recherche et Développement
   - Intervenant à l'[Université Lyon 1](http://www.univ-lyon1.fr/)
   - Formateur WEB : HTML, Css, Js, PHP, Magento, Wordpress, PrestaShop
   - Formateur dans le cadre de formation professionnelles (APTA - Clermont Ferrand, [ASP](https://www.asp-public.fr/), [Proximit](http://www.proximit.fr/), [iCap](http://icap.univ-lyon1.fr/), [EITE](http://www.eite.fr/), [OPCADIA](https://optedif-formation.fr/), etc)
@@ -28,12 +29,13 @@ _Depuis Sept. 2008_ Création de IDCI-Consulting | Co-gérant / Ingénieur Reche
   - Mise en place d'infrastructure serveur (Firewall, Reverse Proxy, Load Balancer, Cache, DNS, DHCP, Serveur Web, Serveur FTP, Base de données, Virtualisation, Dockerisation)
   - Gestion d'équipe et de projet de développement Web
 
-_Depuis Juin 2013_ Consultant WEB pour le groupe [Tessi Marketing](http://www.tessicustomermarketing.fr/)
+_Depuis Juin 2013_
 
-  - Analyse et refonte du nouveau S.I (Projet DIGIFID v2)
-  - Accompagnement des équipes techniques (8 développeurs)
-  - Mise en place de la stack DévOps
-  - Développements WEB PHP (Symfony 2.4/2.8)
+  - Consultant WEB pour le groupe [Tessi Marketing](http://www.tessicustomermarketing.fr/)
+   - Analyse et refonte du nouveau S.I (Projet DIGIFID v2)
+   - Accompagnement des équipes techniques (8 développeurs)
+   - Mise en place de la stack DévOps
+   - Développements WEB PHP (Symfony 2.4/2.8)
 
 _2016_
 
@@ -50,37 +52,43 @@ _2012_
   - Conseil, développement et formations des équipes sur Symfony2 pour [MB Création](https://www.mbcreation.net/)
   - Intervenant à l'[ENS](http://archinfo.universite-lyon.fr/)
 
-_2011_ Conseil et formation des équipes dans le cadre du changement de version du site web pour [Allopneus](http://www.allopneus.com/)
+_2011_
 
-  - Accompagnement des équipes techniques (6 développeurs)
-  - Développements web php (Symfony 2.0/2.1)
+  - Conseil et formation des équipes dans le cadre du changement de version du site web pour [Allopneus](http://www.allopneus.com/)
+   - Accompagnement des équipes techniques (6 développeurs)
+   - Développements web php (Symfony 2.0/2.1)
 
-_2010_ Pilotage du projet de refonte du site web pour le Groupe [Moniteur](http://www.lemoniteur.fr/)
+_2010_
 
-  - Accompagnement des équipes techniques (3 développeurs)
-  - Développements web php (Symfony 1.4)
+  - Pilotage du projet de refonte du site web pour le Groupe [Moniteur](http://www.lemoniteur.fr/)
+   - Accompagnement des équipes techniques (3 développeurs)
+   - Développements web php (Symfony 1.4)
 
-_2009_ Mise en oeuvre d'un site web pour [Ajilon](http://www.fidroit.fr)
+_2009_
 
-  - Accompagnement des équipes techniques (4 développeurs)
-  - Développements web php (Symfony 1.4)
+  - Mise en oeuvre d'un site web pour [Ajilon](http://www.fidroit.fr)
+   - Accompagnement des équipes techniques (4 développeurs)
+   - Développements web php (Symfony 1.4)
 
 
-_2005-2007_ Technicien de Recherche et de Formation à l'Université Lyon 1 service [iCap](http://icap.univ-lyon1.fr/)
+_2005-2007_
 
-  - Installation et configuration de salles informatiques multi-systèmes d'exploitations (Windows / Linux)
-  - Mise en place d'un outil de gestion du parc informatique : GLPI (Gestionnaire Libre de Parc Informatique)
-  - Développement de plugins pour la plate-forme SPIRAL (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon 1)
+  - Technicien de Recherche et de Formation à l'Université Lyon 1 service [iCap](http://icap.univ-lyon1.fr/)
+   - Installation et configuration de salles informatiques multi-systèmes d'exploitations (Windows / Linux)
+   - Mise en place d'un outil de gestion du parc informatique : GLPI (Gestionnaire Libre de Parc Informatique)
+   - Développement de plugins pour la plate-forme SPIRAL (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon 1)
 
-_2005_ Centre de calcul de l’[IN2P3](http://cc.in2p3.fr/) | Stage de 16 semaines
+_2005_
 
-  - Mise en place d'un protocole informatique pour le transfert d'images médicales au format DICOM depuis un IRM, à destination d'une base SRB
-  - Projet BIRNy rebaptisé LyNDA (Lyon Neuroimaging Database & Applications)
+  - Centre de calcul de l’[IN2P3](http://cc.in2p3.fr/) | Stage de 16 semaines
+   - Mise en place d'un protocole informatique pour le transfert d'images médicales au format DICOM depuis un IRM, à destination d'une base SRB
+   - Projet BIRNy rebaptisé LyNDA (Lyon Neuroimaging Database & Applications)
 
-_2004_ [Laboratoire Lagep](http://www.lagep.cpe.fr/) | Stage de 10 semaines
+_2004_
 
-  - Refonte du site Internet
-  - Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour
+  - [Laboratoire Lagep](http://www.lagep.cpe.fr/) | Stage de 10 semaines
+   - Refonte du site Internet
+   - Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour
 
 
 ### FORMATION
@@ -125,6 +133,14 @@ _Technologies_
 
 ### EXPERIENCES PERSONNELLES
 
-- _Depuis 2004_ Bénévole pour l'association [Solidarité Sida](http://www.solidarite-sida.org/) et sur le festival Solidays à Paris.
-- _2004 – 2005_ Elu étudiant au Conseil d'Administration de l'université Lyon 1 et président de l'association Student Club
-- _2003_ Brevet de Secouriste (AFPS)
+_Depuis 2004_
+
+  - Bénévole pour l'association [Solidarité Sida](http://www.solidarite-sida.org/) et sur le festival Solidays à Paris.
+
+_2004 – 2005_
+
+  - Elu étudiant au Conseil d'Administration de l'université Lyon 1 et président de l'association Student Club
+
+_2003_
+
+  - Brevet de Secouriste (AFPS)

@@ -16,61 +16,98 @@
 
 ### PROFESSIONAL EXPERIENCES
 
- * _Since July 2014_ Employee at IDCI-Consulting | Web Developer/ Teacher
- * _2016_ Teached at Inseec Digital Institute
-   * Web programmation languages : PHP & MySQL
- * Teached at 3W Academy
-   * Web programmation languages : HTML/CSS
- * _2015_ Created an application to manage patents for Dynergie group
-   * Backend with Symfony2 and exposed patents via a REST api
-   * Front end with AngularJS to display graphical information about patents
-* Created two websites with responsive design for marketing agencies
-   * CMS : WordPress
-   * Created custom themes for each website
-   * Framework CSS : Foundation 5
-   * Used PHP, Gulp and Sass
- * Developed several Symfony2 bundles for a marketing agency
- * Developed and integrated new IDCI-Consulting website
-   * Micro-framework : Silex
- * Developed Mapyourstories, a prototype to create customizable subway maps in collaboration and real time
-   * Framework : MeteorJS
- * _2013_ Internship at IDCI-Consulting : Created a platform to manage expenses report
-   * Framework : Symfony2
+_Since July 2014_
+
+  - Employee at IDCI-Consulting | Web Developer/ Teacher
+
+_2016_
+
+  - Teached at Inseec Digital Institute
+   - Web programmation languages : PHP & MySQL
+  - Teached at 3W Academy
+   - Web programmation languages : HTML/CSS
+
+_2015_
+
+  - Created an application to manage patents for Dynergie group
+   - Backend with Symfony2 and exposed patents via a REST api
+   - Front end with AngularJS to display graphical information about patents
+  - Created two websites with responsive design for marketing agencies
+   - CMS : WordPress
+   - Created custom themes for each website
+   - Framework CSS : Foundation 5
+   - Used PHP, Gulp and Sass
+  - Developed several Symfony2 bundles for a marketing agency
+  - Developed and integrated new IDCI-Consulting website
+   - Micro-framework : Silex
+  - Developed Mapyourstories, a prototype to create customizable subway maps in collaboration and real time
+   - Framework : MeteorJS
+
+_2013_
+
+  - Internship at IDCI-Consulting : Created a platform to manage expenses report
+   - Framework : Symfony2
 
 
 ### PERSONNAL PROJECTS
 
- * _2015_ Created a form generator with Symfony2 (API REST)
- * _2014_ Created an application to manage orders with AngularJS
+_2015_
+
+  - Created a form generator with Symfony2 (API REST)
+
+_2014_
+
+  - Created an application to manage orders with AngularJS
 
 
 ### FORMATION
 
- * _2015_ Bachelor degree in Web Development
- * _2014_ HDN in Computer Science
+_2015_
+
+  - Bachelor degree in Web Development
+
+_2014_
+
+  - HDN in Computer Science
 
 
 ### SKILLS
 
- * _System management_ **Server HTTP** : Apache, Nginx
- * **Configuration Management** : Ansible
- * _Languages_ Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script
- * _OS_ Windows, Linux (Debian and Ubuntu)
- * _Technologies_ **Backend framework** : Symfony2, Silex
- * **Frontend framework** : AngularJS, jQuery
- * **CSS framework** : Bootstrap, Foundation
- * **Template engine** : Twig, Handlebars
- * **CMS** : WordPress, Prestashop
- * **Versioning** : Git, Svn
- * **Databases** : MySQL, MongoDB
- * **Virtualization** : Docker
- * **Project management** : Redmine
- * **Task runner** : Gulp
- * **AMQP Tools** : RabbitMQ
- * **Others** : Ajax
- * _Graphic design_ Gimp and Photoshop notions
+_System management_
+
+  - **Server HTTP** : Apache, Nginx
+  - **Configuration Management** : Ansible
+
+_Languages_
+
+  - Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script
+
+_OS_
+
+  - Windows, Linux (Debian and Ubuntu)
+
+_Technologies_
+
+  - **Backend framework** : Symfony2, Silex
+  - **Frontend framework** : AngularJS, jQuery
+  - **CSS framework** : Bootstrap, Foundation
+  - **Template engine** : Twig, Handlebars
+  - **CMS** : WordPress, Prestashop
+  - **Versioning** : Git, Svn
+  - **Databases** : MySQL, MongoDB
+  - **Virtualization** : Docker
+  - **Project management** : Redmine
+  - **Task runner** : Gulp
+  - **AMQP Tools** : RabbitMQ
+  - **Others** : Ajax
+
+_Graphic design_
+
+  - Gimp and Photoshop notions
 
 
 ### PERSONAL EXPERIENCES
 
- * _2008 - 2013_ Employee at McDonalds
+_2008 - 2013_
+
+  - Employee at McDonalds
