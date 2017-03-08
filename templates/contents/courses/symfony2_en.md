@@ -15,9 +15,9 @@ _2 hours_
 #### A good environment and good practicals
 _2 hours_
 
- - What IDE ?
- - Use a SCM (SVN, Git, ...)
- - Use a bug tracker (Trac, Mantis, Redmine, Github, ...)
+ - Which IDE ?
+ - Use a SCM (SVN, Git, etc)
+ - Use a bug tracker (Trac, Mantis, Redmine, Github, etc)
  - Coding conventions
 
 
@@ -28,7 +28,7 @@ _2 hours_
  - MVC in detail
 
 
-#### Applications's strucure with Symfony2
+#### Strucure applications with Symfony2
 _2 hours_
 
  - The "application" notion => App/
@@ -40,20 +40,20 @@ _2 hours_
 {day2}
 
 
-#### The Controller in Symfony2
+#### Controller in Symfony2
 _4 hours_
 
  - Object Request
  - Object Response
- - The routing
- - The annotations
+ - Routing
+ - Annotations
 
 
 #### Views (templating) with Symfony2
 _4 hours_
 
  - Twig
- - Template's heritage
+ - Template heritage
  - Include views
  - Restore views
  - Twig filters
@@ -83,8 +83,8 @@ _4 hours_
 #### Create a service
 _4 hours_
 
- - Dependency's injection
- - Service's container
+ - Dependency injection
+ - Service container
 
 
 #### Security
@@ -109,7 +109,7 @@ _4 hours_
  - Use the configuration
  - Create Symfony2 commands
  - Use bundles already existing
- - FOSUserBundle (Users's gestion)
+ - FOSUserBundle (Users gestion)
  - DoctrineFixtures (Datas's import)
  - Create reusable bundles
- - The HTTP cache (ESI, varnish, ...)
+ - The HTTP cache (ESI, varnish, etc)

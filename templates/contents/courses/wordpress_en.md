@@ -26,9 +26,9 @@ _4 hours_
  - What is a CMS ?
  - Some CMS
  - Why choose WordPress as a CMS ?
- - WordPress's installation and configuration
- - WordPress's database
- - The codex, WordPress's bible
+ - WordPress installation and configuration
+ - WordPress database
+ - The codex, WordPress bible
 
 {day2}
 
@@ -49,8 +49,8 @@ _4 hours_
 ####  WP: Create your own template
 _4 hours_
 
- - WordPress's template, how does it work ?
- - Create your template: how ?
+ - WordPress template, how does it work ?
+ - Create your template : how ?
  - Use the codex to customize your template
 
 
@@ -70,5 +70,5 @@ _4 hours_
 
  - Use personalized fields
  - Optimize your blog for search engines
- - Understand the permalinks's notions
+ - Understand the permalinks notions
  - Play with attachments

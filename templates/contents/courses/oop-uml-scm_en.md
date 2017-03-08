@@ -9,11 +9,11 @@ _4 hours_
  - Definition
  - Historic
  - Object / class
- - Statement
+ - Declaration
  - Fields
  - Methods
- - Object's instantiation
- - Object's cloning
+ - Objects instantiation
+ - Objects cloning
 
 
 #### Methods
@@ -94,8 +94,8 @@ _4 hours_
 
 
 #### Definition
- - What is a SCM?
- - Why use one?
+ - What is a SCM ?
+ - Why use one ?
 
 
 #### Some useful commands

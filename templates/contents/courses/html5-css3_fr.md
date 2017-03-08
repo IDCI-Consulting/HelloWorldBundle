@@ -40,7 +40,7 @@ _3 heures_
  - Les nouveaux éléments : section, article, aside, nav, etc
  - Quelques balises supplémentaires
  - Dates et temps
- - Les éléments obsolètes : center, font, frame, acronym, ...
+ - Les éléments obsolètes : center, font, frame, acronym, etc
 
 {day2}
 
@@ -79,7 +79,7 @@ _4 heures_
 
  - Les éléments audio et video
  - Les conteneurs
- - Contrôler la vidéo, l'audio avec l'API HTML5
+ - Contrôler la vidéo et l'audio avec l'API HTML5
  - Support et formats (codecs WebM, MP4, H.264, MP3, AAC, etc)
  - Gérer plusieurs sources vidéos/audios
  - Streaming
