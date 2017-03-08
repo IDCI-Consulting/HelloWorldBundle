@@ -1,7 +1,7 @@
-
 ## oop-uml-scm
 
 {day1}
+
 
 #### Introduction
 _4 hours_
@@ -15,6 +15,7 @@ _4 hours_
  - Object's instantiation
  - Object's cloning
 
+
 #### Methods
 _2 hours_
 
@@ -23,6 +24,7 @@ _2 hours_
  - getters / setters
  - Abstract method
  - Static method
+
 
 #### 3 big concepts
 _2 hours_
@@ -33,6 +35,7 @@ _2 hours_
 
 {day2}
 
+
 #### Visibility
 _1 hour_
 
@@ -40,27 +43,33 @@ _1 hour_
  - Private
  - Protected
 
+
 #### Abstract class / Interface
 _1 hour_
+
 
 #### UML / Merise
 _2 hours_
 
  - UML
- - Data base
+ - Database
  - Merise
  - Comparison object world / relationnal world
 
+
 ### Design pattern
+
 
 #### Introduction
 _1 hour_
+
 
 #### Utilisation
 _1 hour_
 
  - When use DP?
  - When NOT TO use DP?
+
 
 #### Some examples
 _2 hours_
@@ -71,16 +80,23 @@ _2 hours_
 
 {day3}
 
+
 #### Zoom on the DP MVC
 _2 hours_
+
+
 #### Zoom on the dependency's injection
 _2 hours_
+
+
 ### SCM
 _4 hours_
+
 
 #### Definition
  - What is a SCM?
  - Why use one?
+
 
 #### Some useful commands
 
@@ -92,20 +108,25 @@ _4 hours_
  - update / pull
  - status
 
+
 #### Which SCM choose ?
 
  - SVN
  - Git
  - Mercurial
 
+
 #### Versionning
+
+
 #### Branchs
 
 {day4}
+
 
 #### Bug Tracker
 _2 hours_
 
  - Definition
  - Why use one ?
- - Redmine / Mantis / github
+ - Redmine / Mantis / GitHub

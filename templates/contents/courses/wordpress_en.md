@@ -1,16 +1,17 @@
-
-## wordpress
+## WordPress
 
 {day1}
 
-####  Introduction
+
+#### Introduction
 _2 hours_
 
  - Internet != WEB
  - HTTP protocol (RFC2616)
  - W3C: Using norms in web
 
-####  A good environment and good practicals
+
+#### A good environment and good practicals
 _2 hours_
 
  - Which IDE?
@@ -18,7 +19,8 @@ _2 hours_
  - Use bug tracker (Trac, Mantis, Redmine, Github, etc)
  - Coding's conventions of WP
 
-####  WP: a CMS, a community
+
+#### WP: a CMS, a community
 _4 hours_
 
  - What is a CMS ?
@@ -29,6 +31,7 @@ _4 hours_
  - The codex, WordPress's bible
 
 {day2}
+
 
 ####  Using WP
 _4 hours_
@@ -42,6 +45,7 @@ _4 hours_
  - Handle users
  - Available setups
 
+
 ####  WP: Create your own template
 _4 hours_
 
@@ -52,12 +56,14 @@ _4 hours_
 
 {day3}
 
+
 ####  WP: a CMS, some plugins
 _2 hours_
 
  - Find plugins
  - Install plugins
  - Create plugins
+
 
 ####  WP: advanced utilisation
 _4 hours_

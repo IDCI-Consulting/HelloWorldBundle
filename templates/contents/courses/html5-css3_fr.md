@@ -1,15 +1,17 @@
-
 ## html5-css3
 
 {day1}
 
+
 ### HTML / CSS
+
 
 #### Introduction
 _2 heures_
 
  - Fonctionnement du web
  - W3C : de l'utilité des normes
+
 
 #### HTML5 / CSS3 : pourquoi ils font tant parler d'eux
 _2 heures_
@@ -19,15 +21,18 @@ _2 heures_
  - Quid de la compatibilité entre navigateurs ?
  - L'avenir du HTML ?
 
+
 ### HTML5
 
-#### Utiliser le HTML 5 aujourd'hui
+
+#### Utiliser le HTML5 aujourd'hui
 _1 heure_
 
  - Savoir quand choisir le HTML 5
- - Utiliser le HTML 5 avec des navigateurs qui ne le supportent pas
+ - Utiliser le HTML5 avec des navigateurs qui ne le supportent pas
 
-#### Balisage HTML 5
+
+#### Balisage HTML5
 _3 heures_
 
  - Structure d'une page : disparition des notions "en ligne" et "bloc"
@@ -39,11 +44,13 @@ _3 heures_
 
 {day2}
 
-#### Web sémantique et HTML 5
+
+#### Web sémantique et HTML5
 _2 heures_
 
  - Elements sémantiques : donner du sens à ses contenus
  - Les micro données
+
 
 #### Formulaires HTML 5
 _3 heures_
@@ -53,6 +60,7 @@ _3 heures_
  - Gestion des dates, des emails, ..
  - Les validations de formulaire en HTML5
  - Auto focus
+
 
 #### Vue d'ensemble des APIs javascript pour HTML 5
 _3 heures_
@@ -65,6 +73,7 @@ _3 heures_
 
 {day3}
 
+
 #### Zoom sur l'API de gestion audio et vidéo en HTML 5
 _4 heures_
 
@@ -76,6 +85,7 @@ _4 heures_
  - Streaming
  - Ajouter des sous-titres à une vidéo HTML5
 
+
 #### Zoom sur l'API de dessin en HTML 5
 _4 heures_
 
@@ -85,6 +95,7 @@ _4 heures_
  - Accessibilité
 
 {day4}
+
 
 #### Zoom sur l'API de communication en HTML 5
 _4 heures_
@@ -97,12 +108,14 @@ _4 heures_
  - Présentation de node.js
  - Les Web Workers pour le multi-tâches
 
+
 #### Zoom sur l'API de géo-localisation avec HTML 5
 _2 heures_
 
  - Vue d'ensemble
  - La vie privée de l'utilisateur
  - Géolocaliser ses utilisateurs sur Google Maps
+
 
 #### Zoom sur l'API de storage avec HTML 5
 _2 heures_
@@ -114,7 +127,9 @@ _2 heures_
 
 {day5}
 
+
 ### HTML / CSS
+
 
 #### Zoom sur l'API de storage avec HTML 5
 _2 heures_
@@ -128,6 +143,7 @@ _2 heures_
  - Mise en page et positionnement
  - Autres nouveautés
 
+
 #### CSS3 : mise en page et positionnement
 _3 heures_
 
@@ -139,6 +155,7 @@ _3 heures_
  - Comprendre les couleurs en CSS3
  - Positionnement par grille
  - Rotation d'éléments
+
 
 #### CSS3 : animation
 _2 heures_

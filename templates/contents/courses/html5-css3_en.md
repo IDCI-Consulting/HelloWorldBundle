@@ -1,15 +1,17 @@
-
 ## html5-css3
 
 {day1}
 
+
 ### HTML / CSS
+
 
 #### Introduction
 _2 hours_
 
  - Web functioning
  - W3C : usefulness of standards
+
 
 #### HTML5 / CSS3 : why do we hear so much about them
 _2 hours_
@@ -19,15 +21,18 @@ _2 hours_
  - About the compatibility between browsers ?
  - Future of HTML ?
 
+
 ### HTML5
 
-#### Use HTML 5 today
+
+#### Use HTML5 today
 _1 hour_
 
- - Learn when using HTML 5
- - Use HTML 5 with browsers which don't support it
+ - Learn when using HTML5
+ - Use HTML5 with browsers which don't support it
 
-#### HTML 5 markup
+
+#### HTML5 markup
 _3 hours_
 
  - Page's structure : Notions "in lign" and "bloc"'s desappearance
@@ -38,22 +43,25 @@ _3 hours_
 
 {day2}
 
-#### Semantic web and HTML 5
+
+#### Semantic web and HTML5
 _2 hours_
 
  - Semantics elements : give sens to your contents
  - Micro datas
 
-#### HTML 5 forms
+
+#### HTML5 forms
 _3 hours_
 
  - Form tag
- - Create and use HTML 5 forms
+ - Create and use HTML5 forms
  - Gestions of dates, emails, etc
- - Validation of HTML 5 forms
+ - Validation of HTML5 forms
  - Auto focus
 
-#### Panoramic views of APIs javascript for HTML 5
+
+#### Panoramic views of JavaScript APIs for HTML5
 _3 hours_
 
  - APIs HTML 5
@@ -64,16 +72,18 @@ _3 hours_
 
 {day3}
 
-#### Zoom on the gestion's API audio and vidéo with HTML 5
+
+#### Zoom on the API audio and vidéo management with HTML5
 _4 hours_
 
  - Audio and video elements
- - Controll video, audio with API HTML 5
+ - Controll video, audio with API HTML5
  - Support and formats (codecs WebM, MP4, H.264, MP3, AAC, etc)
  - Streaming
- - Add subtitles to a HTML 5 video
+ - Add subtitles to a HTML5 video
 
-#### Zoom on the drawing's API with HTML 5
+
+#### Zoom on the drawing's API with HTML5
 _4 hours_
 
  - Draw with JavaScript
@@ -83,24 +93,27 @@ _4 hours_
 
 {day4}
 
-#### Zoom on the communication's API with HTML 5
+
+#### Zoom on the communication API with HTML5
 _4 hours_
 
  - Events
- - Messages's sending between documents
- - Messages's sending by channels
+ - Messages sending between documents
+ - Messages sending by channels
  - The push server
  - Presentation of node.js
  - Web Workers to multitasking
 
-#### Zoom on the geolocalisation's API wwith HTML 5
+
+#### Zoom on the geolocalisation API with HTML5
 _2 hours_
 
  - Panoramic view
- - Private life of users
+ - Users private life
  - Geolocate users on Google Maps
 
-#### Zoom on storage's API with HTML 5
+
+#### Zoom on API storage with HTML5
 _2 hours_
 
  - API storage
@@ -110,7 +123,9 @@ _2 hours_
 
 {day5}
 
+
 ### HTML / CSS
+
 
 #### Zoom on strorage's API with HTML 5
 _2 hours_
@@ -124,6 +139,7 @@ _2 hours_
  - Page layout and positioning
  - Other novelties
 
+
 #### CSS3 : page layout and positioning
 _3 hours_
 
@@ -134,6 +150,7 @@ _3 hours_
  - Page layout by horizontals and verticals boxes
  - Positioning by grids
  - Elements's rotation
+
 
 #### CSS3 : animation
 _2 hours_

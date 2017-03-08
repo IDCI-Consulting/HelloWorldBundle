@@ -1,7 +1,7 @@
-
 ## symfony2
 
 {day1}
+
 
 #### Introduction
 _2 hours_
@@ -11,19 +11,22 @@ _2 hours_
  - Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony
  - Why Symfony2 ?
 
+
 #### A good environment and good practicals
 _2 hours_
 
  - What IDE ?
  - Use a SCM (SVN, Git, ...)
  - Use a bug tracker (Trac, Mantis, Redmine, Github, ...)
- - Coding's conventions
+ - Coding conventions
+
 
 #### Introduction to Design pattern
 _2 hours_
 
  - General presentation
  - MVC in detail
+
 
 #### Applications's strucure with Symfony2
 _2 hours_
@@ -36,6 +39,7 @@ _2 hours_
 
 {day2}
 
+
 #### The Controller in Symfony2
 _4 hours_
 
@@ -43,6 +47,7 @@ _4 hours_
  - Object Response
  - The routing
  - The annotations
+
 
 #### Views (templating) with Symfony2
 _4 hours_
@@ -55,12 +60,14 @@ _4 hours_
 
 {day3}
 
+
 #### ORM and DBAL (Database Abstraction Layer)
 _4 hours_
 
  - PDO
  - Doctrine
  - Propel
+
 
 #### Forms
 _4 hours_
@@ -72,11 +79,13 @@ _4 hours_
 
 {day4}
 
+
 #### Create a service
 _4 hours_
 
  - Dependency's injection
  - Service's container
+
 
 #### Security
 _4 hours_
@@ -86,11 +95,13 @@ _4 hours_
 
 {day5}
 
+
 #### Tests
 _4 hours_
 
  - Units tests with PHPUnit
  - Fonctionals tests
+
 
 #### Go further
 _4 hours_

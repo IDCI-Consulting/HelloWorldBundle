@@ -1,7 +1,7 @@
-
-## wordpress
+## WordPress
 
 {day1}
+
 
 #### Introduction
 _2 heures_
@@ -10,6 +10,7 @@ _2 heures_
  - Protocole HTTP (RFC2616)
  - W3C: Utilité des normes dans le web
 
+
 #### Un bon environnement et de bonnes pratiques
 _2 heures_
 
@@ -17,6 +18,7 @@ _2 heures_
  - Utiliser un SCM (SVN, Git, ...)
  - Utiliser un bug tracker (Trac, Mantis, Redmine, Github, ...)
  - Les conventions de codage de WP
+
 
 #### WP: un CMS, une communauté
 _4 heures_
@@ -30,6 +32,7 @@ _4 heures_
 
 {day2}
 
+
 #### Utilisation de WP
 _4 heures_
 
@@ -42,6 +45,7 @@ _4 heures_
  - Gérer les utilisateurs
  - Tour d'horizon des réglages disponibles
 
+
 #### WP: Créer son propre thème
 _4 heures_
 
@@ -52,12 +56,14 @@ _4 heures_
 
 {day3}
 
+
 #### WP: un CMS, des plugins
 _2 heures_
 
  - Trouver des plugins
  - Installer des plugins
  - Créer des plugins
+
 
 #### WP: utilisation avancée
 _4 heures_
