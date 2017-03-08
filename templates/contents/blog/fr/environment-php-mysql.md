@@ -223,8 +223,8 @@ C'est que vous n'avez pas ajouté correctement l'entrée dans votre fichier host
 [MySQL](http://fr.wikipedia.org/wiki/MySQL) est un SGBDR (Système de Gestion de Base de Donnée Relationnelle).
 C'est un logiciel libre développé sous double licence en fonction de l'utilisation qui en est faite :
 
-* Dans un produit libre : **licence publique générale GNU (GPL)**
-* Dans un produit propriétaire : **licence payante**
+ - Dans un produit libre : **licence publique générale GNU (GPL)**
+ - Dans un produit propriétaire : **licence payante**
 
 Pour les CMS (WordPress, Joomla, Drupal, etc), il faudra renseigner, durant la phase d'installation, les informations pour la connexion à la base de donnée MySQL.
 

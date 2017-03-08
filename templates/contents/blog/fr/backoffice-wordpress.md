@@ -25,12 +25,12 @@ Le back office de WordPress est une interface de travail qui nous permet de gér
 
 Une fois connecté dans cet espace, nous pourrons alors :
 
-* Gérer le contenu de notre site (Articles, Pages, Médias, Liens)
-* Modérer les commentaires déposés par les internautes
-* Modifier l'apparence du site (par l'utilisation de thèmes)
-* Ajouter des extensions (plugins) pour enrichir les fonctionnalités de notre site
-* Administrer les utilisateurs
-* ...
+ - Gérer le contenu de notre site (Articles, Pages, Médias, Liens)
+ - Modérer les commentaires déposés par les internautes
+ - Modifier l'apparence du site (par l'utilisation de thèmes)
+ - Ajouter des extensions (plugins) pour enrichir les fonctionnalités de notre site
+ - Administrer les utilisateurs
+ - Etc
 
 
 ## Accès au back office

@@ -27,10 +27,10 @@ le réutiliser dans vos futurs projets, et par la même occasion le partager à 
 
 Voici rapidement les étapes à effectuer:
 
-* Créer un dépôt pour votre bundle.
-* Créer le fichier composer.json le commiter (puis le pusher).
-* Créer un compte et enregistrer votre bundle sur packagist.
-* Activer la mise à jour automatique du bundle sous packagist (notification lors d'un push sur GitHub par exemple).
+ - Créer un dépôt pour votre bundle.
+ - Créer le fichier composer.json le commiter (puis le pusher).
+ - Créer un compte et enregistrer votre bundle sur packagist.
+ - Activer la mise à jour automatique du bundle sous packagist (notification lors d'un push sur GitHub par exemple).
 
 Pour faciliter les explications, et car rien ne vaut un bon exemple, nous allons créer un bundle nommé PartnerBundle.
 Nous partons du fait que le logiciel de gestion de versions Git ne vous est pas inconnu et que vous possédez déjà un compte sur GitHub.

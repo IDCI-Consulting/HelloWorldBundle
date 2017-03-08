@@ -10,7 +10,7 @@ La réussite d'un **évènement** est multifactorielle :
  - Choix du lieu, des intervenants, des commanditaires
  - Fluidité dans le déroulement des manifestations
  - Communication ciblée et efficace
- - ...
+ - Etc
 
 Elle est le fruit d'une réflexion à laquelle **l'organisateur** se doit de consacrer toute son énergie.
 En outre, se concentrer sur son coeur de métier, c'est aussi apprendre à gagner du temps sur les tâches à moindre valeur ajoutée.
@@ -37,7 +37,7 @@ Cet outil Web est idoine pour tout **organisateur** ambitieux, il permet tout d'
  - Relance
  - Génération et envoi de documents
  - Affectation des inscrits aux diverses manifestations
- - ...
+ - Etc
 
 De plus, il permet, en quelques clics, de **générer un support de communication (Site Web)**, que ce soit :
 

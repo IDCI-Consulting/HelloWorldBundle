@@ -19,10 +19,10 @@ Nous pouvons récupérer la sandbox depuis la page "Installation" sur le site de
 
 Autrement, il est possible de télécharger la sandox avec la dernière version du framework Symfony 1.4x grâce à ces liens :
 
-* [symfony-1.4.x.tgz](http://www.symfony-project.org/get/sf_sandbox_1_4.tgz)
-* [symfony-1.4.x.zip](http://www.symfony-project.org/get/sf_sandbox_1_4.zip)
+ - [symfony-1.4.x.tgz](http://www.symfony-project.org/get/sf_sandbox_1_4.tgz)
+ - [symfony-1.4.x.zip](http://www.symfony-project.org/get/sf_sandbox_1_4.zip)
 
-Ou enfin
+Ou enfin :
 
 ```sh
     $ wget http://www.symfony-project.org/get/sf_sandbox_1_4.tgz $HOME/workspace
