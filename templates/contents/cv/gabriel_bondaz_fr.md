@@ -1,22 +1,23 @@
 ### CURRICULUM VITAE
 
-#### GABRIEL BONDAZ, {{ getAge('1984-07-12') }} ans
-##### Ingénieur | Formateur
+**GABRIEL BONDAZ**  
+**Ingénieur | Formateur**
 
-![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
-[Github](https://github.com/konandrum)
+{% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
+[![github logo]({{ '/images/github-icon.svg' }} "Logo github")](https://github.com/konandrum)
+[![linkedin  logo]({{ '/images/linkedin-icon.svg' }} "Logo linkedin")](https://www.linkedin.com/in/gabriel-bondaz)
+{% endif %}
 
-![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
-[Linkedin](https://www.linkedin.com/in/gabriel-bondaz)
 
+### À PROPOS DE MOI
 
-**gabriel.bondaz@idci-consulting.fr**
-**06 63 23 12 07**
-**Anglais maîtrisé**
+- Age **{{ getAge('1984-07-12') }} ans**
+- Email **gabriel.bondaz@idci-consulting.fr**
+- Tél **06 63 23 12 07**
+- Langages **Anglais maîtrisé**
 
 
 ### EXPERIENCES PROFESSIONNELLES
-
 
 _Depuis Sept. 2008_
 
@@ -100,35 +101,24 @@ _2004_
 
 ### OUTILS INFORMATIQUES
 
-_Administration système_
-
-  -  **Serveur HTTP** : Apache, Nginx
-  -  **Réseaux** : DNS (bind), DHCP, Reverse proxy et load balancing (varnish, pound), Firewall (iptables), Serveur HTTP (Apache, lighttpd, nginx), Serveur FTP (vsFtp)
-  -  **Configuration Management** : Ansible, SaltStack
-
-_Langages_
-
-C, C++, Java, Python, PHP, Html, xHtml, Html5, JavaScript, Sql, Pl/Sql, Prolog, Shell Script
-
-_OS_
-
-Ms Dos, Windows, MacOS, Linux, Unix
-
-_Technologies_
-
-  -  **Framework PHP** : Symfony 1/2/3, Silex, Laravel, Zend framework
-  -  **Framework Python** : Django, Pylons project
-  -  **Framework CSS** : Bootstrap, Foundation
-  -  **Moteur de templates** : Twig, Handlebars
-  -  **CMS** : Drupal, WordPress, PrestaShop, Magento, DokuWiki
-  -  **Versioning** : Git, Svn
-  -  **Base de données** : MySQL, PostgreSQL, MongoDB, CouchDB, ElasticSearch
-  -  **Virtualisation / Conteneurisation** : Xen, OpenVZ, KVM, Docker
-  -  **Gestion de projet** : Trac, Redmine, Mantis
-  -  **Task runner** : Gulp
-  -  **AMQP Tools** : RabbitMQ
-  -  **Modélisation** : UML
-  -  **Autres** : Ajax, Jquery
+  - **Serveur HTTP** _Apache, Nginx_
+  - **Réseaux** _DNS (bind), DHCP, Reverse proxy et load balancing (varnish, pound), Firewall (iptables), Serveur HTTP (Apache, lighttpd, nginx), Serveur FTP (vsFtp)_
+  - **Configuration Management** _Ansible, SaltStack_
+  - **Langages** _C, C++, Java, Python, PHP, Html, xHtml, Html5, JavaScript, Sql, Pl/Sql, Prolog, Shell Script_
+  - **OS** _Ms Dos, Windows, MacOS, Linux, Unix_
+  - **Framework PHP** _Symfony 1/2/3, Silex, Laravel, Zend framework_
+  - **Framework Python** _Django, Pylons project_
+  - **Framework CSS** _Bootstrap, Foundation_
+  - **Moteur de templates** _Twig, Handlebars_
+  - **CMS** _Drupal, WordPress, PrestaShop, Magento, DokuWiki_
+  - **Versioning** _Git, Svn_
+  - **Base de données** _MySQL, PostgreSQL, MongoDB, CouchDB, ElasticSearch_
+  - **Virtualisation / Conteneurisation** _Xen, OpenVZ, KVM, Docker_
+  - **Gestion de projet** _Trac, Redmine, Mantis_
+  - **Task runner** _Gulp_
+  - **AMQP Tools** _RabbitMQ_
+  - **Modélisation** _UML_
+  - **Autres** _Ajax, Jquery_
 
 
 ### EXPERIENCES PERSONNELLES

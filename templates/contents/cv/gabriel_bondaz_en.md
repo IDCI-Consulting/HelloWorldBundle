@@ -1,17 +1,20 @@
 ### CURRICULUM VITAE
 
-#### GABRIEL BONDAZ, {{ getAge('1984-07-12') }} years old
-##### Engineer / Teacher
+**GABRIEL BONDAZ**
+**Engineer / Teacher**
 
-![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
-[Github](https://github.com/konandrum)
+{% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
+[![github logo]({{ '/images/github-icon.svg' }} "Logo github")](https://github.com/konandrum)
+[![linkedin  logo]({{ '/images/linkedin-icon.svg' }} "Logo linkedin")](https://www.linkedin.com/in/gabriel-bondaz/en)
+{% endif %}
 
-![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
-[Linkedin](https://www.linkedin.com/in/gabriel-bondaz/en)
 
-**gabriel.bondaz@idci-consulting.fr**
-**06 63 23 12 07**
-**English mastered**
+### ABOUT ME
+
+- Age **{{ getAge('1984-07-12') }} years old**
+- Email **gabriel.bondaz@idci-consulting.fr**
+- Phone **06 63 23 12 07**
+- Languages **English mastered**
 
 
 ### PROFESSIONAL EXPERIENCES
@@ -104,38 +107,24 @@ _2004_
 
 ### SKILLS
 
-_System management_
-
-  - **Server HTTP** : Apache, Nginx
-  - **Networks** : Dns (bind), Dhcp, Reverse proxy and load balancing (pound), Firewall (iptables), Http Server (Apache, lighttpd), FTP Server (vsFtp)
-  - **Cache and reverse** : proxy Varnish
-  - **Configuration Management** : Ansible, SaltStack
-
-_Langagues_
-
-  - C, C++, Java, Python, PHP, Html, xHtml, Html5, JavaScript, Sql, Pl/Sql, Prolog, Shell Script
-
-_OS_
-
-  - Ms Dos, Windows, MacOS, Linux, Unix
-
-_Technologies_
-
-  - **PHP framework** : Symfony 1/2/3, Silex, Laravel, Zend framework
-  - **Python framework** : Django, Pylons project
-  - **CSS framework** : Bootstrap, Foundation
-  - **Template engines** : Twig, Handlebars
-  - **CMS** : Drupal, WordPress, PrestaShop, Magento, DokuWiki
-  - **Versioning** : Git, Svn
-  - **Databases** : MySQL, PostgreSQL, MongoDB, CouchDB, ElasticSearch
-  - **Virtualization** : Docker, Xen, OpenVZ, KVM
-  - **Project management** : Trac, Redmine, Mantis
-  - **AMQP Tools** : RabbitMQ
-  - **Modeling** : UML
-
-_Others_
-
-  - Ajax, jQuery
+  - **Server HTTP** _Apache, Nginx_
+  - **Networks** _Dns (bind), Dhcp, Reverse proxy and load balancing (pound), Firewall (iptables), Http Server (Apache, lighttpd), FTP Server (vsFtp)_
+  - **Cache and reverse proxy** _Varnish_
+  - **Configuration Management** _Ansible, SaltStack_
+  - **Languages** _C, C++, Java, Python, PHP, Html, xHtml, Html5, JavaScript, Sql, Pl/Sql, Prolog, Shell Script_
+  - **OS** _Ms Dos, Windows, MacOS, Linux, Unix_
+  - **PHP framework** _Symfony 1/2/3, Silex, Laravel, Zend framework_
+  - **Python framework** _Django, Pylons project_
+  - **CSS framework** _Bootstrap, Foundation_
+  - **Template engines** _Twig, Handlebars_
+  - **CMS** _Drupal, WordPress, PrestaShop, Magento, DokuWiki_
+  - **Versioning** _Git, Svn_
+  - **Databases** _MySQL, PostgreSQL, MongoDB, CouchDB, ElasticSearch_
+  - **Virtualization** _Docker, Xen, OpenVZ, KVM_
+  - **Project management** _Trac, Redmine, Mantis_
+  - **AMQP Tools** _RabbitMQ_
+  - **Modeling** _UML_
+  - **Others** _Ajax, jQuery_
 
 
 ### PERSONNALS EXPERIENCES

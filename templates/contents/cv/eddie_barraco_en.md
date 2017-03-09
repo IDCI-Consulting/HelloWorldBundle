@@ -1,12 +1,19 @@
 ### CURRICULUM VITAE
 
-#### EDDIE BARRACO, {{ getAge('1995-11-22') }} years old
-##### Full Stack Web Developer / Analyst
+**EDDIE BARRACO**  
+**Full Stack Web Developer / Analyst**
 
-**eddie.barraco@idci-consulting.fr**
-**06 11 92 43 51**
-**Mastered english**
+{% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
+[![github logo]({{ '/images/github-icon.svg' }} "Logo github")](https://github.com/Eluminae)
+[![linkedin  logo]({{ '/images/linkedin-icon.svg' }} "Logo linkedin")](https://www.linkedin.com/in/eddie-barraco)
+{% endif %}
 
+### ABOUT ME
+
+- Age **{{ getAge('1995-11-22') }} years old**
+- Email **eddie.barraco@idci-consulting.fr**
+- Phone **06 11 92 43 51**
+- Languages **Mastered english**
 
 ### PROFESSIONNALS EXPERIENCES
 
@@ -39,40 +46,22 @@ _2014_
 
 ### SKILLS
 
-
-_System management_
-
-  - **Server HTTP** : Apache, Nginx
-
-_Networks_
-
-  - Dns (bind), Dhcp, Reverse proxy, Firewall (Iptables)
-  - **Configuration Management** : Ansible
-
-_Langagues_
-
-  - PHP, HTML5, CSS3, JavaScript, Shell/Bash Script, C, C++, Sql, Java
-
-_OS_
-
-  - Windows (7, 8, 8.1, 10), Linux (Debian, Ubuntu, ArchLinux)
-
-_Technologies_
-
-  - **Framework backend** : Symfony2, Silex, AngularJS
-  - **Queueing** : RabbitMQ
-  - **Templating** : Markdown, Twig
-  - **CMS** : WordPress
-  - **Versioning** : Git
-  - **Database** : Mysql, MongoDB
-  - **Virtualization** : Docker
-  - **Project management** : Redmine, Wekan
-  - **Others** : Ajax, Jquery
-  - **Text** : Vim
-
-_Graphic design_
-
-  - Photoshop and Gimp notions
+  - **HTTP Server** _Apache, Nginx_
+  - **Networks** _Dns (bind), Dhcp, Reverse proxy, Firewall (Iptables)_
+  - **Configuration Management** _Ansible_
+  - **Languages** _gPHP, HTML5, CSS3, JavaScript, Shell/Bash Script, C, C++, Sql, Java_
+  - **OS** _Windows (7, 8, 8.1, 10), Linux (Debian, Ubuntu, ArchLinux)_
+  - **Framework backend** _Symfony2, Silex, AngularJS_
+  - **Queueing** _RabbitMQ_
+  - **Templating** _Markdown, Twig_
+  - **CMS** _WordPress_
+  - **Versioning** _Git_
+  - **Database** _Mysql, MongoDB_
+  - **Virtualization** _Docker_
+  - **Project management** _Redmine, Wekan_
+  - **Others** _Ajax, Jquery_
+  - **Text** _Vim_
+  - **Graphic design** _Photoshop and Gimp notions_
 
 
 ### PROFESSIONALS EXPERIENCES

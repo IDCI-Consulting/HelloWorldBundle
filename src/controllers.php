@@ -378,7 +378,7 @@ $intlApp
                 $response->headers->set('Content-Type', 'application/pdf');
                 $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
 
-                $response->setContent($app['snappy.pdf']->getOutputFromHtml($cvHtml));
+                $response->setContent($app['snappy.pdf']->getOutputFromHtml($cvHtml, $app['snappy.pdf_options']));
 
                 return $response;
             }

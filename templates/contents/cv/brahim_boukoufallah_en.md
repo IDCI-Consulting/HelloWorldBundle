@@ -1,17 +1,19 @@
 ### CURRICULUM VITAE
 
-#### BRAHIM BOUKOUFALLAH, {{ getAge('1990-05-06') }} years old
-##### Full Stack Web Developer / Teacher
+**BRAHIM BOUKOUFALLAH**  
+**Full Stack Web Developer / Teacher**
 
-![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
-[Github](https://github.com/Brah0um)
+{% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
+[![github logo]({{ '/images/github-icon.svg' }} "Logo github")](https://github.com/Brah0um)
+[![linkedin  logo]({{ '/images/linkedin-icon.svg' }} "Logo linkedin")](https://www.linkedin.com/in/brahim-boukoufallah/en)
+{% endif %}
 
-![linkedin logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
-[LinkedIn](https://www.linkedin.com/in/brahim-boukoufallah/en)
+### ABOUT ME
 
-**brahim.boukoufallah@idci-consulting.fr**
-**07 68 65 39 61**
-**Mastered english**
+- Age **{{ getAge('1990-05-06') }} ans**
+- Email **brahim.boukoufallah@idci-consulting.fr**
+- Phone **07 68 65 39 61**
+- Languages **Mastered english**
 
 
 ### PROFESSIONAL EXPERIENCES
@@ -75,39 +77,26 @@ _2014_
 
 _System management_
 
-  - **Server HTTP** : Apache, Nginx
-  - **Configuration Management** : Ansible
-
-_Languages_
-
-  - Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script
-
-_OS_
-
-  - Windows, Linux (Debian and Ubuntu)
-
-_Technologies_
-
-  - **Backend framework** : Symfony2, Silex
-  - **Frontend framework** : AngularJS, jQuery
-  - **CSS framework** : Bootstrap, Foundation
-  - **Template engine** : Twig, Handlebars
-  - **CMS** : WordPress, Prestashop
-  - **Versioning** : Git, Svn
-  - **Databases** : MySQL, MongoDB
-  - **Virtualization** : Docker
-  - **Project management** : Redmine
-  - **Task runner** : Gulp
-  - **AMQP Tools** : RabbitMQ
-  - **Others** : Ajax
-
-_Graphic design_
-
-  - Gimp and Photoshop notions
+  - **Server HTTP** _Apache, Nginx_
+  - **Configuration Management** _Ansible_
+  - **Languages** _Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script_
+  - **OS** _Windows, Linux (Debian and Ubuntu)_
+  - **Backend framework** _Symfony2, Silex_
+  - **Frontend framework** _AngularJS, jQuery_
+  - **CSS framework** _Bootstrap, Foundation_
+  - **Template engine** _Twig, Handlebars_
+  - **CMS** _WordPress, Prestashop_
+  - **Versioning** _Git, Svn_
+  - **Databases** _MySQL, MongoDB_
+  - **Virtualization** _Docker_
+  - **Project management** _Redmine_
+  - **Task runner** _Gulp_
+  - **AMQP Tools** _RabbitMQ_
+  - **Others** _Ajax, Gimp and Photoshop notions_
 
 
 ### PERSONAL EXPERIENCES
 
-_2008 - 2013_
+_Since 2014_
 
-  - Employee at McDonalds
+  - Volunteer at Othmane mosque (Villeurbanne)

@@ -236,7 +236,17 @@ $buildCv = function (Request $request, Application $app) {
 
     $htmlCv = sprintf('<div class="%s">', $name);
     foreach ($matches['content'] as $content) {
-        $htmlCv .= '<section markdown="1" class="cv-part">'.$app['markdown']->transform($content).'</section>';
+        $skillClass = '';
+
+        if (preg_match('/(OUTILS INFORMATIQUE|SKILLS)/i', $content)) {
+            $skillClass = 'skills';
+        }
+
+        $htmlCv .= sprintf(
+            '<section markdown="1" class="cv-part %s">%s</section>',
+            $skillClass,
+            $app['markdown']->transform('###'.$content)
+        );
     }
     $htmlCv .= '</div>';
 
