@@ -30,7 +30,7 @@ _2 hours_
 _2 hours_
 
  - Encapsulation
- - Heritage
+ - Inheritance
  - Polymorphism
 
 {day2}
@@ -57,18 +57,18 @@ _2 hours_
  - Comparison object world / relationnal world
 
 
-### Design pattern
+### Design patterns (DP)
 
 
 #### Introduction
 _1 hour_
 
 
-#### Utilisation
+#### Use
 _1 hour_
 
- - When use DP?
- - When NOT TO use DP?
+ - When use DP ?
+ - When NOT TO use DP ?
 
 
 #### Some examples
@@ -81,11 +81,11 @@ _2 hours_
 {day3}
 
 
-#### Zoom on the DP MVC
+#### Dive into the MVC DP
 _2 hours_
 
 
-#### Zoom on the dependency's injection
+#### Dive into the dependency injection
 _2 hours_
 
 
@@ -109,7 +109,7 @@ _4 hours_
  - status
 
 
-#### Which SCM choose ?
+#### Which SCM to choose ?
 
  - SVN
  - Git
@@ -119,7 +119,7 @@ _4 hours_
 #### Versionning
 
 
-#### Branchs
+#### Branches
 
 {day4}
 

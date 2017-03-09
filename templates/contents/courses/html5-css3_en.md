@@ -9,11 +9,11 @@
 #### Introduction
 _2 hours_
 
- - Web functioning
+ - Web worflow
  - W3C : standards value
 
 
-#### HTML5 / CSS3 : why do we hear so much about them
+#### HTML5 / CSS3 : why do we hear so much about them ?
 _2 hours_
 
  - Why do we use HTML and CSS ? How to use them ? How about HTML5/CSS3 ?
@@ -35,12 +35,12 @@ _1 hour_
 #### HTML5 markup
 _3 hours_
 
- - Page structure : disappearance "in lign" and "bloc" notions
+ - Page structure : disappearance "inline" and "block" notions
  - HTML5 Doctype
- - New elements : section, article, aside, nav, etc
+ - New elements : section, article, aside, nav, etc.
  - A few more tags
  - Date and time
- - Deprecated elements : center, font, frame, acronym, etc
+ - Deprecated elements : center, font, frame, acronym, etc.
 
 {day2}
 
@@ -48,8 +48,8 @@ _3 hours_
 #### Semantic web and HTML5
 _2 hours_
 
- - Semantics elements : give meaning to your contents
- - Micro datas
+ - Semantic elements : give meaning to your contents
+ - Micro data
 
 
 #### HTML5 forms
@@ -57,7 +57,7 @@ _3 hours_
 
  - Form tag
  - Create and use HTML5 forms
- - Dates, emails, etc, management
+ - Dates, emails, management, etc.
  - HTML5 forms validation
  - Auto focus
 
@@ -65,7 +65,7 @@ _3 hours_
 #### Panoramic views of JavaScript APIs for HTML5
 _3 hours_
 
- - APIs HTML 5
+ - APIs HTML5
  - Files management
  - Offline website
  - Drag & Drop
@@ -74,18 +74,18 @@ _3 hours_
 {day3}
 
 
-#### Zoom on the API audio and vidéo management with HTML5
+#### Dive into the API audio and vidéo management with HTML5
 _4 hours_
 
  - Audio and video elements
  - Containers
- - Video and audio controll with HTML5 API
- - Support and formats (codecs WebM, MP4, H.264, MP3, AAC, etc)
+ - Video and audio control with HTML5 API
+ - Support and formats (codecs WebM, MP4, H.264, MP3, AAC, etc.)
  - Streaming
  - Add subtitles to a HTML5 video
 
 
-#### Zoom on the API drawning with HTML5
+#### Dive into the API drawing with HTML5
 _4 hours_
 
  - Draw with JavaScript
@@ -96,7 +96,7 @@ _4 hours_
 {day4}
 
 
-#### Zoom on the API communication with HTML5
+#### Dive into the API communication with HTML5
 _4 hours_
 
  - Events
@@ -107,7 +107,7 @@ _4 hours_
  - Web Workers to multitasking
 
 
-#### Zoom on the geolocalisation API with HTML5
+#### Dive into the geolocalisation API with HTML5
 _2 hours_
 
  - Panoramic view
@@ -115,7 +115,7 @@ _2 hours_
  - Geolocate users on Google Maps
 
 
-#### Zoom on API storage with HTML5
+#### Dive into API storage with HTML5
 _2 hours_
 
  - API storage
@@ -129,7 +129,7 @@ _2 hours_
 ### HTML / CSS
 
 
-#### Zoom on API storage with HTML5
+#### Dive into API storage with HTML5
 _2 hours_
 
  - Panoramic view : without images, avoid tricks

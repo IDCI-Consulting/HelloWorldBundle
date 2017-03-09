@@ -8,16 +8,16 @@ _2 hours_
 
  - Internet != WEB
  - HTTP protocol (RFC2616)
- - W3C: Using norms in web
+ - W3C: Using standards in web
 
 
-#### A good environment and good practicals
+#### A good environment and good practices
 _2 hours_
 
  - Which IDE?
  - Use a SCM (SVN, Git, etc)
  - Use bug tracker (Trac, Mantis, Redmine, Github, etc)
- - Coding's conventions of WP
+ - Coding standars of WP
 
 
 #### WP: a CMS, a community
@@ -38,20 +38,20 @@ _4 hours_
 
  - Difference between article / page
  - Create your first pages
- - Integrate medias (images, vidéos, etc) and handle them
+ - Integrate medias (images, videos, etc.) and manage them
  - Create articles and classify them by categories
- - Change templates
- - Handle commentaries
- - Handle users
+ - Change theme
+ - Manage comments
+ - Manage users
  - Available setups
 
 
-####  WP: Create your own template
+####  WP: Create your own theme
 _4 hours_
 
- - WordPress template, how does it work ?
- - Create your template : how ?
- - Use the codex to customize your template
+ - WordPress theme, how does it works ?
+ - Create your theme : how ?
+ - Use the codex to customize your theme
 
 
 {day3}
@@ -65,10 +65,10 @@ _2 hours_
  - Create plugins
 
 
-####  WP: advanced utilisation
+####  WP: advanced use
 _4 hours_
 
- - Use personalized fields
+ - Use customized fields
  - Optimize your blog for search engines
- - Understand the permalinks notions
+ - Understand the permalinks notion
  - Play with attachments

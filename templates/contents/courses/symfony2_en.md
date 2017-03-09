@@ -1,4 +1,4 @@
-## symfony2
+## Symfony2
 
 {day1}
 
@@ -12,26 +12,26 @@ _2 hours_
  - Why Symfony2 ?
 
 
-#### A good environment and good practicals
+#### A good environment and good practices
 _2 hours_
 
  - Which IDE ?
- - Use a SCM (SVN, Git, etc)
- - Use a bug tracker (Trac, Mantis, Redmine, Github, etc)
- - Coding conventions
+ - Use a SCM (SVN, Git, etc.)
+ - Use a bug tracker (Trac, Mantis, Redmine, Github, etc.)
+ - Coding standards
 
 
 #### Introduction to Design pattern
 _2 hours_
 
  - General presentation
- - MVC in detail
+ - MVC in details
 
 
-#### Strucure applications with Symfony2
+#### Structure applications with Symfony2
 _2 hours_
 
- - The "application" notion => App/
+ - The "application" notion => app/
  - The "bundles" notion
  - My specific coding => src/
  - Externals libraries => vendor/
@@ -53,7 +53,7 @@ _4 hours_
 _4 hours_
 
  - Twig
- - Template heritage
+ - Template inheritance
  - Include views
  - Restore views
  - Twig filters
@@ -75,7 +75,7 @@ _4 hours_
  - AbstractType
  - Fields
  - Validation
- - "Form events"
+ - "FormEvents"
 
 {day4}
 
@@ -100,7 +100,7 @@ _4 hours_
 _4 hours_
 
  - Units tests with PHPUnit
- - Fonctionals tests
+ - Functionals tests
 
 
 #### Go further
@@ -109,7 +109,7 @@ _4 hours_
  - Use the configuration
  - Create Symfony2 commands
  - Use bundles already existing
- - FOSUserBundle (Users gestion)
- - DoctrineFixtures (Datas's import)
+ - FOSUserBundle (Users management)
+ - DoctrineFixtures (Data import)
  - Create reusable bundles
- - The HTTP cache (ESI, varnish, etc)
+ - The HTTP cache (ESI, Varnish, etc.)
