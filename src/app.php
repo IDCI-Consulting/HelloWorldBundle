@@ -24,6 +24,7 @@ use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 $app = new Application();
 
@@ -330,5 +331,10 @@ $buildPartnersFromJson = function (Request $request, Application $app) {
 
     $app['twig']->addGlobal('partners', $decodedPartners);
 };
+
+$app->after(function (Request $request, Response $response) {
+    $response->headers->set('X-XSS-Protection', '1; mode=block');
+    $response->headers->set('X-Frame-Options',  'DENY');
+});
 
 return $app;
