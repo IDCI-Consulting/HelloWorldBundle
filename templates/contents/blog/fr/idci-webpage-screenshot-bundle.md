@@ -13,7 +13,7 @@ il est désormais possible de générer facilement des **captures d'écrans de s
 
 ## Installation
 
-<div class="notice question"><span></span>Remarque : cet article est destiné à Symfony 2.3.x</div>
+<div class="notice info"><span></span>Remarque : cet article est destiné à Symfony 2.3.x</div>
 
 Ce bundle nécessite GregwarImageBundle pour redimensionner les images.
 Nous ajoutons donc les lignes suivantes à votre composer.json (à la racine de notre projet) :

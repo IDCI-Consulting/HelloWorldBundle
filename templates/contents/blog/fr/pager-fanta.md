@@ -9,7 +9,7 @@ Même s'il est très facile de récupérer des listes, cela peut être un vérit
 
 Heureusement, il existe un bundle chargé de paginer tout ça pour nous, le bien-nommé : **WhiteOctoberPagerfantaBundle** !
 
-<p class="notice question" markdown="1">
+<p class="notice warning" markdown="1">
 Cet article est destiné à Symfony 2.1.x
 </p>
 

@@ -53,7 +53,7 @@ For it, open a web browser and write this adress : **http://localhost**.
 
 ![phpinfo](/images/blog/it_works_apache.png)
 
-<p class="notice question" markdown="1">
+<p class="notice info" markdown="1">
 Sometimes, you have to specify the port, when it is differents of the one by default (port 80). For example, it's the case for MAMP on MacOS, you have to inform this adress http://localhost:8888.
 </p>
 
@@ -126,7 +126,7 @@ Replace **local.domain** by the domain name you want use, and **domain_path** by
     LogLevel warn
     CustomLog /var/log/apache2/access_local.domain.log combined
 
-<p class="notice question" markdown="1">
+<p class="notice warning" markdown="1">
 After every modifications on Apache configuration's files, don't forget to restart service, so your new parameters will taken into account.
 </p>
 
@@ -204,7 +204,7 @@ For this, you can use the tool [phpMyAdmin](https://en.wikipedia.org/wiki/PhpMyA
 ![Go](/images/blog/pma_go.png "Validate")
 
 <p class="notice question" markdown="1">
-The access URL to your phpMyAdmin is different according to your operating system or your configuration. With Debian system and others (Ubuntu, etc), it accesibles from the URL http://localhost/phpmyadmin.
+The access URL to your phpMyAdmin is different according to your operating system or your configuration. With Debian system and others (Ubuntu, etc), it accessible from the URL http://localhost/phpmyadmin.
 </p>
 
 You could also execute theses SQL requests by replacing **user** by the user name you want to create and *** by the password:

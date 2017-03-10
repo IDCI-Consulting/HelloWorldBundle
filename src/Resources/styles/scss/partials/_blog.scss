@@ -167,6 +167,8 @@
   }
 
   .notice {
+    border: 1px solid transparent;
+    color: #296a88;
     margin: 20px 20px 10px;
     padding: 10px 25px 10px 40px;
     border-radius: 15px;
@@ -189,12 +191,41 @@
       width: 40px;
     }
 
-    &.question {
+    &.info {
       background-color: #dff0fd;
-      color: #296a88;
 
       &::before {
-        background: url('/images/blog/questionmark.png') no-repeat top left;
+        background: url('/images/blog/information-icon.svg') no-repeat top left;
+        background-size: 35px;
+      }
+    }
+
+    &.warning {
+      background-color: rgba(255, 204, 0, .4);
+      border-color: #eeb;
+
+      &::before {
+        background: url('/images/blog/exclamation-icon.svg') no-repeat;
+        background-position: -5px;
+        background-size: 45px;
+      }
+    }
+
+    &.question {
+      background-color: $idci-light-grey;
+
+      &::before {
+        background: url('/images/blog/question-icon.svg') no-repeat;
+        background-size: 40px;
+      }
+    }
+
+    &.danger {
+      background-color: #fdd;
+
+      &::before {
+        background: url('/images/blog/danger-icon.svg') no-repeat;
+        background-size: 40px;
       }
     }
   }

@@ -41,7 +41,7 @@ Pour cela, nous devons ouvrir un navigateur web et renseigner l'adresse de notre
 
 Par défaut, l'URL de connexion se construit comme cela : "www.nom-de-votre-site/wp-admin"
 
-<p class="notice question" markdown="1">
+<p class="notice info" markdown="1">
 Pour une question de sécurité et pour éviter les attaques par brute force, nous vous conseillons de changer l'URL de connexion.
 De nombreux plugins proposés par le CMS répondent à ce besoin.
 </p>
@@ -201,7 +201,7 @@ de ce paramètre entraine la création d'un fichier [.htaccess](https://openclas
 à la racine de votre site Web.
 
 
-<p class="notice question" markdown="1">
+<p class="notice info" markdown="1">
 Pour utiliser les permalinks comme bon vous semble, il faudra s'assurer que votre serveur
 Web est capable de faire de la réécriture d'URL. Dans le cas d'un serveur Web Apache,
 il faut activer le module rewrite. Dans les autres cas il vous faudra faire ces modifications
@@ -270,7 +270,7 @@ Les réglages s'effectuent de la manière suivante :
 
 ![Moderate comments](/images/blog/moderate_comments.png "Moderate comments")
 
-<p class="notice question" markdown="1">
+<p class="notice info" markdown="1">
 Une fois votre site en ligne, il est possible que vous receviez des commentaires
 saisis par des "robots", c'est à dire des programmes informatiques. Ces commentaires
 sont facilement reconnaissables car souvent leurs contenus sont sans rapport avec
@@ -321,8 +321,8 @@ Ensuite, il faut se rendre dans l'onglet **Extensions**.
 Le nouveau plugin doit apparaître parmi les plugins disponibles.
 Il ne vous reste plus qu'à l'activer.
 
-<p class="notice question" markdown="1">
-Chaque plugin s'utilise différemment, ertains ajoutent une entrée dans le menu pour être configuré, d'autres s'utilisent via des tags à insérer dans vos contenus, etc.
+<p class="notice info" markdown="1">
+Chaque plugin s'utilise différemment, certains ajoutent une entrée dans le menu pour être configuré, d'autres s'utilisent via des tags à insérer dans vos contenus, etc.
 Afin de savoir comment utiliser un plugin, prenez connaissance de la documentation en lisant le fichier **readme.txt** généralement présent dans le dossier du plugin.
 </p>
 
@@ -362,7 +362,7 @@ Pour cela, allez dans l'onglet **Réglages** > **Lecture**.
 ![Lecture](/images/blog/lecture.png "lecture")
 
 
-<p class="notice question" markdown="1">
+<p class="notice info" markdown="1">
 Il faut avoir créé au moins une page pour pouvoir effectuer ce changement !
 </p>
 

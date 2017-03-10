@@ -96,7 +96,7 @@ Enregistrez et le tour est joué !
 
 Sous un environnement Linux, il est possible d'accéder aux enregistrements DNS de n'importe quel domaine via la commande **dig**.
 
-<p class="notice question">
+<p class="notice info">
 NOTE: Sous debian (ubuntu) et dérivés pour utiliser la commande dig
 </p>
 
