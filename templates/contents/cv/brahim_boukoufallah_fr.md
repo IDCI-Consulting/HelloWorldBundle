@@ -78,7 +78,7 @@ _2014_
   - **Serveur HTTP** _Apache, Nginx_
   - **Configuration Management** _Ansible_
   - **Languages** _Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script_
-  - **OS** Windows, Linux (Debian et Ubuntu)
+  - **OS** _Windows, Linux (Debian et Ubuntu)_
   - **Framework backend** _Symfony2/3, Silex_
   - **Framework frontend** _AngularJS, jQuery_
   - **Framework CSS** _Bootstrap, Foundation_
