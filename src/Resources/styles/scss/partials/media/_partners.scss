@@ -6,37 +6,49 @@
     }
   }
 
-  .partner {
-    background-image: url("/images/partners.png");
-    display: block;
-    margin: 1rem auto;
-    text-indent: -9999px;
-    width: 140px;
-    height: 135px;
+  a.partner {
+    height: 200px;
+    transition: background-color .3s;
 
-    &.mbcreation-logo {
-      background-position: 0 0;
+    & > div {
 
-    }
+      & > div {
 
-    &.mahii-logo {
-      background-position: 0 -140px;
-    }
+        &::before {
+          border: none;
+        }
+      }
 
-    &.profilcreatif-logo {
-      background-position: 0 -280px;
-    }
+      & > span {
+        background-image: url("/images/partners.png");
+        display: inline-block;
+        height: 140px;
+        width: 140px;
+      }
 
-    &.arcencielophile-logo {
-      background-position: 0 -420px;
-    }
+      .mbcreation {
+        background-position: 0 0;
+      }
 
-    &.ochelys-logo {
-      background-position: 0 -557px;
-    }
+      .mahii {
+        background-position: 0 -140px;
+      }
 
-    &.jeromemulsant-logo {
-      background-position: 0 -700px;
+      .profilcreatif {
+        background-position: 0 -280px;
+      }
+
+      .arcencielophile {
+        background-position: 0 -420px;
+      }
+
+      .ochelys {
+        background-position: 0 -557px;
+      }
+
+      .jeromemulsant {
+        background-position: 0 -700px;
+      }
     }
   }
 }

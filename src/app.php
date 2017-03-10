@@ -317,4 +317,18 @@ $buildArticlesList = function (Request $request, Application $app) {
     $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
 };
 
+$buildPartnersFromJson = function (Request $request, Application $app) {
+    $locale = $request->get('_locale');
+    $decodedPartners = array();
+
+    $partners = json_decode(file_get_contents(sprintf('%s/Resources/public/partners.json', __DIR__)), true);
+
+    foreach ($partners as $partner) {
+        $partner['description'] = $partner['description'][$locale];
+        $decodedPartners[] = $partner;
+    }
+
+    $app['twig']->addGlobal('partners', $decodedPartners);
+};
+
 return $app;

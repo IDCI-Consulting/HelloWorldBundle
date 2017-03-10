@@ -120,12 +120,11 @@ $intlApp
 $intlApp
     ->get(
         '/partners',
-        function (Request $request, $_locale) use ($app) {
-
-
+        function () use ($app) {
             return $app['twig']->render('pages/partners.html.twig');
         }
     )
+    ->before($buildPartnersFromJson)
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->before($buildAsideMenu)
@@ -450,8 +449,6 @@ $intlApp
     ->before($buildLocaleLinks)
     ->bind('sitemap')
 ;
-
-//$app->before($buildLocaleLinks, Application::EARLY_EVENT);
 
 $app
     ->error(
