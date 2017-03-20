@@ -22,236 +22,237 @@
  **************************/
 a.tools-sprite {
   display: inline-block;
-  background: url("/images/technos1.jpg") no-repeat;
-  background-size: 20rem;
+  background: url("/images/technos2.jpg") no-repeat;
+  background-size: 18rem;
   margin: 1rem auto 0;
   text-indent: -9999px;
   vertical-align: middle;
   width: 107px;
 
   &.php {
-    background-position: -107px 0;
-    height: 56px;
+    background-position: -121px -5px;
+    height: 60px;
 
     &:hover {
-      background-position: 0 0;
+      background-position: -11px -5px;
     }
   }
 
-  &.symfony1 {
-    background-position: -106.9px -909px;
-    height: 29px;
-
-    &:hover {
-      background-position: 0px -909px;
-    }
-  }
 
   &.symfony2 {
-    background-position: -106.9px -871.5px;
-    height: 36.5px;
+    background-position: -121px -910px;
+    height: 30px;
 
     &:hover {
-      background-position: 0px -871.5px;
+      background-position: -121px -910px;
     }
   }
 
   &.node {
-    background-position: -106px -601px;
-    height: 29px;
+    background-position: -121px -563px;
+    height: 68px;
 
     &:hover {
-      background-position: 1px -601px;
+      background-position: -11px -563px;
     }
   }
 
   &.meteor {
-    background-position: -106.8px -631px;
-    height: 25.5px;
+    background-position: -121px -631px;
+    height: 31px;
 
     &:hover {
-      background-position: 0 -631px;
+      background-position: -11px -631px;
     }
   }
 
   &.mysql {
-    background-position: -106.8px -546px;
+    background-position: -121px -508px;
     height: 55px;
 
     &:hover {
-      background-position: 0 -546px;
+      background-position: -11px -508px;
     }
   }
 
   &.mongodb {
-    background-position: -107px -392px;
+    background-position: -121px -370px;
     height: 32px;
 
     &:hover {
-      background-position: 0 -392px;
+      background-position: -11px -370px;
     }
   }
 
   &.postgresql {
-    background-position: -106px -745px;
-    height: 36px;
+    background-position: -121px -740px;
+    height: 95px;
 
     &:hover {
-      background-position: 1px -745px;
+      background-position: -11px -740px;
     }
   }
 
   &.redis {
-    background-position: -107px -818px;
-    height: 33px;
+    background-position: -121px -872px;
+    height: 38px;
 
     &:hover {
-      background-position: 0px -818px;
-    }
-  }
-
-  &.rabbitmq {
-    background-position: -106px -796px;
-    height: 20px;
-
-    &:hover {
-      background-position: 0 -796px;
+      background-position: -11px -872px;
     }
   }
 
   &.kyototycoon {
-    background-position: -106.9px -1150px;
-    height: 60px;
+    background-position: -121px -1135px;
+    height: 39px;
 
     &:hover {
-      background-position: 0 -1150px;
+      background-position: -11px -1135px;
+    }
+  }
+
+  &.rabbitmq {
+    background-position: -121px -852px;
+    height: 22px;
+
+    &:hover {
+      background-position: -11px -852px;
     }
   }
 
   &.html5-css3 {
-    background-position: -107px -424px;
+    background-position: -121px -401px;
     height: 71px;
 
     &:hover {
-      background-position: 0 -424px;
+      background-position: -11px -401px;
     }
   }
 
   &.bootstrap {
-    background-position: -106px -169px;
-    height: 54px;
+    background-position: -121px -182px;
+    height: 49px;
 
     &:hover {
-      background-position: 1px -169px;
+      background-position: -11px -182px;
     }
   }
 
   &.foundation {
-    background-position: -107px -304px;
-    height: 39px;
+    background-position: -121px -312px;
+    height: 19px;
 
     &:hover {
-      background-position: 0 -304px;
-    }
-  }
-
-  &.jquery {
-    background-position: -107px -465px;
-    height: 22px;
-
-    &:hover {
-      background-position: 0 -465px;
+      background-position: -11px -312px;
     }
   }
 
   &.elk {
-    background-position: -107px -1014px;
-    height: 108px;
+    background-position: -121px -995px;
+    height: 105px;
 
     &:hover {
-      background-position: 0 -1014px;
+      background-position: -11px -995px;
     }
   }
 
   &.varnish {
-    background-position: -107px -941px;
-    height: 42px;
+    background-position: -121px -940px;
+    height: 30px;
 
     &:hover {
-      background-position: 0 -941px;
+      background-position: -11px -940px;
     }
   }
 
   &.docker {
-    background-position: -107px -1122px;
+    background-position: -121px -1100px;
     height: 27px;
 
     &:hover {
-      background-position: 0 -1122px;
+      background-position: -15px -1100px;
     }
   }
 
   &.proxmox {
-    background-position: -106px -782px;
-    height: 14px;
+    background-position: -121px -833px;
+    height: 20px;
 
 
     &:hover {
-      background-position: 1px -782px;
+      background-position: -21px -833px;
     }
   }
 
   &.angular {
-    background-position: -107px -56px;
-    height: 27px;
+    background-position: -121px -65px;
+    height: 30px;
 
     &:hover {
-      background-position: 0 -56px;
+      background-position: -15px -65px;
     }
   }
 
   &.gitlab {
-    background-position: -107px -343px;
-    height: 50px;
+    background-position: -121px -330px;
+    height: 40px;
 
     &:hover {
-      background-position: 0 -343px;
+      background-position: -15px -330px;
     }
   }
 
   &.redmine {
-    background-position: -107px -853px;
-    height: 19px;
+    background-position: -121px -1270px;
+    height: 25px;
 
     &:hover {
-      background-position: 0 -853px;
+      background-position: -11px -1270px;
     }
   }
 
   &.php-unit {
-    background-position: -107px -657px;
-    height: 88px;
+    background-position: -121px -660px;
+    height: 82px;
 
     &:hover {
-      background-position: 0 -657px;
+      background-position: -15px -660px;
     }
   }
 
   &.ansible {
-    background-position: -107px -83px;
-    height: 86px;
+    background-position: -121px -108px;
+    height: 78px;
 
     &:hover {
-      background-position: 0 -83px;
+      background-position: -121px -108px;
     }
   }
 
   &.sass {
-    background-position: -107px -224px;
-    height: 81px;
+    background-position: -121px -230px;
+    height: 83px;
 
     &:hover {
-      background-position: 0 -224px;
+      background-position: -11px -230px;
+    }
+  }
+
+  &.jquery {
+    background-position: -121px -478px;
+    height: 30px;
+
+    &:hover {
+      background-position: -11px -478px;
+    }
+  }
+
+  &.vue-js {
+    background-position: -121px -1170px;
+    height: 100px;
+
+    &:hover {
+      background-position: -11px -1170px;
     }
   }
 
