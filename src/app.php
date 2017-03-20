@@ -24,6 +24,7 @@ use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 $app = new Application();
 
@@ -236,7 +237,17 @@ $buildCv = function (Request $request, Application $app) {
 
     $htmlCv = sprintf('<div class="%s">', $name);
     foreach ($matches['content'] as $content) {
-        $htmlCv .= '<section markdown="1" class="cv-part">'.$app['markdown']->transform($content).'</section>';
+        $skillClass = '';
+
+        if (preg_match('/(OUTILS INFORMATIQUE|SKILLS)/i', $content)) {
+            $skillClass = 'skills';
+        }
+
+        $htmlCv .= sprintf(
+            '<section markdown="1" class="cv-part %s">%s</section>',
+            $skillClass,
+            $app['markdown']->transform('###'.$content)
+        );
     }
     $htmlCv .= '</div>';
 
@@ -306,5 +317,24 @@ $buildArticlesList = function (Request $request, Application $app) {
 
     $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
 };
+
+$buildPartnersFromJson = function (Request $request, Application $app) {
+    $locale = $request->get('_locale');
+    $decodedPartners = array();
+
+    $partners = json_decode(file_get_contents(sprintf('%s/Resources/public/partners.json', __DIR__)), true);
+
+    foreach ($partners as $partner) {
+        $partner['description'] = $partner['description'][$locale];
+        $decodedPartners[] = $partner;
+    }
+
+    $app['twig']->addGlobal('partners', $decodedPartners);
+};
+
+$app->after(function (Request $request, Response $response) {
+    $response->headers->set('X-XSS-Protection', '1; mode=block');
+    $response->headers->set('X-Frame-Options', 'DENY');
+});
 
 return $app;

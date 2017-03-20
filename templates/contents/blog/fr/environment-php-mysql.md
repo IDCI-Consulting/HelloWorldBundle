@@ -140,7 +140,7 @@ Remplacez **local.domain** par le nom de domaine que vous souhaitez utiliser et 
     CustomLog /var/log/apache2/access_local.domain.log combine
 ```
 
-<p class="notice question" markdown="1">
+<p class="notice warning" markdown="1">
 Après chaque modifications dans les fichiers de configuration d'apache, pensez à redémarrer le service pour que les nouveaux paramètres soient pris en compte.
 </p>
 

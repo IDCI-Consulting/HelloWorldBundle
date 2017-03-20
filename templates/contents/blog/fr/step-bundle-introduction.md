@@ -22,7 +22,7 @@ Nous avons utilisé la métaphore de la navigation tout au long de notre dévelo
 Dans un premier temps, nous devons définir une map, et imaginer chaque écran (page web) comme une step, puis les lier entre elles en utilisant les paths qui ajouteront des boutons de navigation.
 
 
-<p class="notice question" markdown="1">
+<p class="notice info" markdown="1">
 Ce Bundle est compatible avec la version 2.8 de Symfony. La version 3.0 sera disponible prochainement.
 </p>
 

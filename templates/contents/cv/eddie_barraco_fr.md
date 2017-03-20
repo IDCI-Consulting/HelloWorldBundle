@@ -1,20 +1,19 @@
 ### CURRICULUM VITAE
 
+**EDDIE BARRACO**  
+**Développeur Web Full Stack / Analyste**
 
-#### EDDIE BARRACO, {{ getAge('1995-11-22') }} ans
-##### Développeur Web Full Stack / Analyste
+{% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
+[![github logo]({{ '/images/github-icon.svg' }} "Logo github")](https://github.com/Eluminae)
+[![linkedin  logo]({{ '/images/linkedin-icon.svg' }} "Logo linkedin")](https://www.linkedin.com/in/eddie-barraco)
+{% endif %}
 
+### À PROPOS DE MOI
 
-![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
-[Github](https://github.com/Eluminae)
-
-![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
-[Linkedin](https://www.linkedin.com/in/eddie-barraco/)
-
-**eddie.barraco@idci-consulting.fr**
-**06 11 92 43 51**
-**Anglais maîtrisé**
-
+- Age **{{ getAge('1995-11-22') }} ans**
+- Email **eddie.barraco@idci-consulting.fr**
+- Tél **06 11 92 43 51**
+- Langages **Anglais maîtrisé**
 
 ### EXPERIENCES PROFESSIONNELLES
 
@@ -47,34 +46,21 @@ _2014_
 
 ### OUTILS INFORMATIQUES
 
-_Administration système_
-
-  - **Serveur HTTP** : Apache, Nginx
-
-_Administration serveur_ Dns (bind), Dhcp, Reverse proxy, Firewall (Iptables)
-
-  - **Configuration Management** : Ansible
-
-_Langages_
-
-  - PHP, HTML5, CSS3, JavaScript, Shell/Bash Script, C, C++, Sql, Java
-
-_OS_
-
-  - Windows (7, 8, 8.1, 10), Linux (Debian, Ubuntu, ArchLinux)
-
-_Technologies_
-
-  - **Framework backend** : Symfony2, Silex, AngularJS
-  - **Queueing** : RabbitMQ
-  - **Templating** : Markdown, Twig
-  - **CMS** : WordPress
-  - **Versioning** : Git
-  - **Base de données** : Mysql, MongoDB
-  - **Virtualisation** : Docker
-  - **Gestion de projet** : Redmine, Wekan
-  - **Autres** : Ajax, Jquery
-  - **Text Eddie T'Or** : Vim
+  - **Serveur HTTP** _Apache, Nginx_
+  - **Administration serveur** _Dns (bind), Dhcp, Reverse proxy, Firewall (Iptables)_
+  - **Configuration Management** _Ansible_
+  - **Langages** _PHP, HTML5, CSS3, JavaScript, Shell/Bash Script, C, C++, Sql, Java_
+  - **OS** _Windows (7, 8, 8.1, 10), Linux (Debian, Ubuntu, ArchLinux)_
+  - **Framework backend** _Symfony2, Silex, AngularJS_
+  - **Queueing** _RabbitMQ_
+  - **Templating** _Markdown, Twig_
+  - **CMS** _WordPress_
+  - **Versioning** _Git_
+  - **Base de données** _Mysql, MongoDB_
+  - **Virtualisation** _Docker_
+  - **Gestion de projet** _Redmine, Wekan_
+  - **Autres** _Ajax, Jquery_
+  - **Text Eddie T'Or** _Vim_
 
 _Graphisme_
 

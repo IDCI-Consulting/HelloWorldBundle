@@ -1,65 +1,107 @@
-.partner {
-  background-image: url("/images/partners.png");
-  display: block;
+a.partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
   margin: 1rem auto;
-  text-indent: -9999px;
+  position: relative;
+  transition: background-color .3s;
 
-  &.mbcreation-logo {
-    background-position: -280px 0;
-    width: 140px;
-    height: 140px;
+  & > div {
+    margin: auto;
+
+    & > div {
+      background-color: $idci-blue-opac; // Change here the background color as you want
+      bottom: 0;
+      box-sizing: border-box;
+      color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      opacity: 0;
+      height: 0;
+      padding: 2rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-transition: height .5s ease, opacity .5s ease;
+      -moz-transition: height .5s ease, opacity .5s ease;
+      -ms-transition: height .5s ease, opacity .5s ease;
+      -o-transition: height .5s ease, opacity .5s ease;
+      transition: height .5s ease, opacity .5s ease;
+
+      & > * {
+        color: $idci-white;
+        font-weight: bold;
+      }
+
+      &::before {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        bottom: 2rem;
+        left: 2rem;
+        border: 2px solid $idci-white;
+        content: '';
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+      }
+    }
 
     &:hover {
+      background-color: $idci-light-grey;
+
+      & > div {
+        height: 100%;
+        opacity: 1;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    & > span {
+      background-image: url("/images/partners.png");
+      display: inline-block;
+      height: 140px;
+      width: 140px;
+    }
+
+    .mbcreation {
       background-position: 0 0;
     }
-  }
 
-  &.mahii-logo {
-    background-position: -280px -140px;
-    width: 140px;
-    height: 140px;
-
-    &:hover {
+    .mahii {
       background-position: 0 -140px;
     }
-  }
 
-  &.profilcreatif-logo {
-    background-position: -280px -280px;
-    width: 140px;
-    height: 140px;
-
-    &:hover {
+    .profilcreatif {
       background-position: 0 -280px;
     }
-  }
 
-  &.arcencielophile-logo {
-    background-position: -280px -420px;
-    width: 140px;
-    height: 138px;
-
-    &:hover {
+    .arcencielophile {
       background-position: 0 -420px;
+      height: 138px;
     }
-  }
 
-  &.ochelys-logo {
-    background-position: -280px -557px;
-    width: 140px;
-    height: 140px;
-
-    &:hover {
-      background-position: 0 -558px;
+    .ochelys {
+      background-position: 0 -557px;
     }
-  }
 
-    &.jeromemulsant-logo {
-    background-position: -280px -700px;
-    width: 140px;
-    height: 140px;
-
-    &:hover {
+    .jeromemulsant {
       background-position: 0 -700px;
     }
   }
@@ -70,6 +112,6 @@ ul.partners {
 
   li {
     display: inline-block;
-    margin: 0 2rem;
+    margin: 2rem 0;
   }
 }

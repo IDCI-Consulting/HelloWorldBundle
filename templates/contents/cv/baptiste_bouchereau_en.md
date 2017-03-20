@@ -1,17 +1,19 @@
 ### CURRICULUM VITAE
 
-#### BAPTISTE BOUCHEREAU, {{ getAge('1991-03-05') }} years old
-##### Analyst | Engineer
+**BAPTISTE BOUCHEREAU**  
+**Analyst | Engineer**
 
-![github logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/github-icon.png' }} "Logo github")
-[Github](https://github.com/ovski4)
+{% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
+[![github logo]({{ '/images/github-icon.svg' }} "Logo github")](https://github.com/ovski4)
+[![linkedin  logo]({{ '/images/linkedin-icon.svg' }} "Logo linkedin")](https://www.linkedin.com/in/baptiste-bouchereau/en)
+{% endif %}
 
-![linkedin  logo]({{ app.request_stack.getCurrentRequest().getSchemeAndHttpHost() ~ '/images/linkedin-icon.png' }} "Logo linkedin")
-[Linkedin](https://www.linkedin.com/in/baptiste-bouchereau/en)
+### ABOUT ME
 
-**baptiste.bouchereau@idci-consulting.fr**
-**06 62 35 45 36**
-**English level C1 Validate with the help of CAE - Cambridge English Advanced Certificate**
+- Age **{{ getAge('1991-03-15') }} ans**
+- Email **baptiste.bouchereau@idci-consulting.fr**
+- Phone **06 62 35 45 36**
+- Languages **Mastered english**
 
 
 ### PROFESSIONAL EXPERIENCES
@@ -86,8 +88,6 @@ _2015_
 
   - Created a vocabulary revision application to learn foreign languages with Symfony2 ([learn-vocabulary.com](http://learn-vocabulary.com))
   - Created the portfolio of an artist ([clemencebouchereau.com](http://clemencebouchereau.com))
-   - CMS : WordPress
-   - Framework CSS : Bootstrap
 
 _2014_
 
@@ -115,38 +115,24 @@ _2009_
 
 ### SKILLS
 
-_System management_
-
-  - **Server HTTP** : Apache, Nginx
-  - **Cache and reverse** : proxy Varnish
-  - **Configuration Management** : Ansible
-
-_Languages_
-
-  - Java, PHP, HTML5, CSS3, SASS, JavaScript, Sql, Shell Script
-
-_OS_
-
-  - Windows, Linux (Debian & Ubuntu, Archlinux)
-
-_Technologies_
-
-  - **Backend framework** : Symfony2, Silex, MeteorJs
-  - **Frontend framework** : Angular 1.2, VueJS 2, jQuery
-  - **CSS framework** : Bootstrap, Foundation
-  - **Template engines** : Twig, Handlebars
-  - **CMS** : Wordpress, Prestashop
-  - **Versioning** : Git, Svn
-  - **Databases** : Mysql, MongoDB
-  - **Virtualization** : Docker
-  - **Project management** : Redmine
-  - **Task runner** : Gulp
-  - **AMQP Tools** : RabbitMQ
-  - **Modeling** : UML
-
-_Graphic design_
-
-  - Gimp notions
+  - **Server HTTP** _Apache, Nginx_
+  - **Cache and reverse proxy** _Varnish_
+  - **Configuration Management** _Ansible_
+  - **Languages** _Java, PHP, HTML5, CSS3, SASS, JavaScript, Sql, Shell Script_
+  - **OS** _Windows, Linux (Debian & Ubuntu, Archlinux)_
+  - **Backend framework** _Symfony2, Silex, MeteorJs_
+  - **Frontend framework** _Angular 1.2, VueJS 2, jQuery_
+  - **CSS framework** _Bootstrap, Foundation_
+  - **Template engines** _Twig, Handlebars_
+  - **CMS** _Wordpress, Prestashop_
+  - **Versioning** _Git, Svn_
+  - **Databases** _Mysql, MongoDB_
+  - **Virtualization** _Docker_
+  - **Project management** _Redmine_
+  - **Task runner** _Gulp_
+  - **AMQP Tools** _RabbitMQ_
+  - **Modeling** _UML_
+  - **Graphic design** _Gimp notions_
 
 
 ### PERSONAL EXPERIENCES

@@ -19,7 +19,7 @@ We have used the navigation metaphor throughout our whole development.
 
 In the first time, we have to define a map and imagine every screen (web page) as a step, then link itselves by using paths which will add navigations's buttons.
 
-<p class="notice question" markdown="1">
+<p class="notice warning" markdown="1">
 This article is intended for Symfony 2.8
 </p>
 

@@ -5,7 +5,7 @@
 
 ## Introduction ##
 
-<p class="notice question" markdown="1">
+<p class="notice info" markdown="1">
 ATTENTION : Cet article a été écrit pour FOSUserBundle 1.2
 </p>
 

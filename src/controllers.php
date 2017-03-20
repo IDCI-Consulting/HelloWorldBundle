@@ -120,12 +120,11 @@ $intlApp
 $intlApp
     ->get(
         '/partners',
-        function (Request $request, $_locale) use ($app) {
-
-
+        function () use ($app) {
             return $app['twig']->render('pages/partners.html.twig');
         }
     )
+    ->before($buildPartnersFromJson)
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->before($buildAsideMenu)
@@ -378,7 +377,7 @@ $intlApp
                 $response->headers->set('Content-Type', 'application/pdf');
                 $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
 
-                $response->setContent($app['snappy.pdf']->getOutputFromHtml($cvHtml));
+                $response->setContent($app['snappy.pdf']->getOutputFromHtml($cvHtml, $app['snappy.pdf_options']));
 
                 return $response;
             }
@@ -450,8 +449,6 @@ $intlApp
     ->before($buildLocaleLinks)
     ->bind('sitemap')
 ;
-
-//$app->before($buildLocaleLinks, Application::EARLY_EVENT);
 
 $app
     ->error(
