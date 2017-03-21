@@ -29,6 +29,7 @@ a.tools-sprite {
   vertical-align: middle;
   width: 107px;
 
+// BACKEND
   &.php {
     background-position: -121px -5px;
     height: 60px;
@@ -37,7 +38,6 @@ a.tools-sprite {
       background-position: -11px -5px;
     }
   }
-
 
   &.symfony2 {
     background-position: -121px -910px;
@@ -66,6 +66,7 @@ a.tools-sprite {
     }
   }
 
+//STOCKAGE
   &.mysql {
     background-position: -121px -508px;
     height: 55px;
@@ -107,7 +108,54 @@ a.tools-sprite {
     height: 39px;
 
     &:hover {
-      background-position: -11px -1135px;
+      background-position: -12px -1134px;
+    }
+  }
+
+// INFRASTRUCTURE
+  &.varnish {
+    background-position: -122px -940px;
+    height: 30px;
+
+    &:hover {
+      background-position: -13px -940px;
+    }
+  }
+
+  &.proxmox {
+    background-position: -122px -834px;
+    height: 20px;
+
+
+    &:hover {
+      background-position: -13px -834px;
+    }
+  }
+
+  &.ansible {
+    background-position: -121px -108px;
+    height: 78px;
+
+    &:hover {
+      background-position: -121px -108px;
+    }
+  }
+
+  &.elk {
+    background-position: -120px -995px;
+    height: 105px;
+
+    &:hover {
+      background-position: -12px -996px;
+    }
+  }
+
+  &.docker {
+    background-position: -121px -1100px;
+    height: 27px;
+
+    &:hover {
+      background-position: -11.5px -1100px;
     }
   }
 
@@ -120,12 +168,13 @@ a.tools-sprite {
     }
   }
 
+// FRONTEND
   &.html5-css3 {
-    background-position: -121px -401px;
+    background-position: -121px -403px;
     height: 71px;
 
     &:hover {
-      background-position: -11px -401px;
+      background-position: -12px -403px;
     }
   }
 
@@ -143,89 +192,16 @@ a.tools-sprite {
     height: 19px;
 
     &:hover {
-      background-position: -11px -312px;
-    }
-  }
-
-  &.elk {
-    background-position: -121px -995px;
-    height: 105px;
-
-    &:hover {
-      background-position: -11px -995px;
-    }
-  }
-
-  &.varnish {
-    background-position: -121px -940px;
-    height: 30px;
-
-    &:hover {
-      background-position: -11px -940px;
-    }
-  }
-
-  &.docker {
-    background-position: -121px -1100px;
-    height: 27px;
-
-    &:hover {
-      background-position: -15px -1100px;
-    }
-  }
-
-  &.proxmox {
-    background-position: -121px -833px;
-    height: 20px;
-
-
-    &:hover {
-      background-position: -21px -833px;
+      background-position: -12px -312px;
     }
   }
 
   &.angular {
-    background-position: -121px -65px;
+    background-position: -122px -66px;
     height: 30px;
 
     &:hover {
-      background-position: -15px -65px;
-    }
-  }
-
-  &.gitlab {
-    background-position: -121px -330px;
-    height: 40px;
-
-    &:hover {
-      background-position: -15px -330px;
-    }
-  }
-
-  &.redmine {
-    background-position: -121px -1270px;
-    height: 25px;
-
-    &:hover {
-      background-position: -11px -1270px;
-    }
-  }
-
-  &.php-unit {
-    background-position: -121px -660px;
-    height: 82px;
-
-    &:hover {
-      background-position: -15px -660px;
-    }
-  }
-
-  &.ansible {
-    background-position: -121px -108px;
-    height: 78px;
-
-    &:hover {
-      background-position: -121px -108px;
+      background-position: -13px -67px;
     }
   }
 
@@ -234,7 +210,7 @@ a.tools-sprite {
     height: 83px;
 
     &:hover {
-      background-position: -11px -230px;
+      background-position: -12px -230px;
     }
   }
 
@@ -243,7 +219,7 @@ a.tools-sprite {
     height: 30px;
 
     &:hover {
-      background-position: -11px -478px;
+      background-position: -11.5px -478px;
     }
   }
 
@@ -256,12 +232,40 @@ a.tools-sprite {
     }
   }
 
+// QUALITY
+  &.php-unit {
+    background-position: -121px -660px;
+    height: 82px;
+
+    &:hover {
+      background-position: -10.5px -660px;
+    }
+  }
+
+  &.gitlab {
+    background-position: -121px -330px;
+    height: 40px;
+
+    &:hover {
+      background-position: -12px -330px;
+    }
+  }
+
+  &.redmine {
+    background-position: -121px -1270px;
+    height: 25px;
+
+    &:hover {
+      background-position: -12.5px -1270px;
+    }
+  }
+
   &.wordpress {
-    background-position: -107px -983px;
+    background-position: -122px -970px;
     height: 24px;
 
     &:hover {
-      background-position: 0 -983px;
+      background-position: -13px -970px;
     }
   }
 }
