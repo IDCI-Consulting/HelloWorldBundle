@@ -1,25 +1,4 @@
 achievements:
-    le_moniteur:
-        image_path: "/images/moniteur.png"
-        url: "http://lemoniteur.fr/"
-        title: "Le moniteur"
-        enabled: true
-        content:
-            fr: >
-                lemoniteur.fr est un site d'information pour les acteurs publics et privés de la construction et des collectivités Locales.
-
-                IDCI-Consulting est intervenu auprès d'eux pour un audit détaillé de l'ancienne version de leur site WEB.
-                A la suite de cet audit, mise en place, développement et accompagnement des équipes sur le projet du nouveau site (mis en ligne en Mai 2011).
-                Refonte du processus de création de compte (inscriptions) et de l'espace résérvé (Service Premium).
-            en: >
-                lemoniteur.fr is a website for building professionals and locals communities.
-
-                IDCI-Consulting has taken action beside them to a detail audit of their old website's version.
-                After this audit, setting up, developpment et teams's accompanying on the new website's project (online on may 2015).
-                Reworking of the processus of account's creation (inscriptions) and placeholder (premium service).
-        tools: ["symfony2", "wordpress"]
-        services: ["development", "consulting", "training", "reworking"]
-
     chine_france:
         image_path: "/images/chine-france.png"
         url: "http://www.chine-france.com/"
@@ -31,60 +10,100 @@ achievements:
                 Elle vise à regrouper les associations œuvrant à promouvoir concrètement les relations d’amitié et de coopération entre la France et la Chine.
                 Avec ce site multilingue, la F.A.F.C met à disposition de ses internautes, une base de données riche en informations, liens et documents qui viendront renforcer l'interaction entre la Chine et la France.
             en: >
-                Armed with early twenties of associations, associations's Federation Franco-Chinese intend to contitute a privileged structure of dialogue with China and France's Chinese.
-                It aims at assemble associations which work on concretes promotions of friendship and cooperation between France and China.
-                With this multilingual website, the Federation put a database at internet users's diposition : informations, links, documents which will reinforce interaction between China and France.
+                The F.A.F.C gathers about twenties associations together and aims to be a strong structure of dialogue between China and France Chineses.
+                It seeks to unite associations working on friendship and cooperations promotions between China and France.
+                The Federation provides a database with a lot of informations, links and documents, to reinforce interaction between these two countries.
+                This website is multilingual.
         tools: ["wordpress"]
         services: ["development"]
 
-    jac_avocat:
-        image_path: "/images/jac-avocat.png"
-        url: "http://www.jac-avocat.fr/"
-        title: "JAC Avocat"
-        enabled: false
+    le_moniteur:
+        image_path: "/images/moniteur.png"
+        url: "http://lemoniteur.fr/"
+        title: "Le moniteur"
+        enabled: true
         content:
             fr: >
-                C’est bien parce que les magistrats sont souvent des néophytes en informatique qu’ils ont besoin de vrais professionnels sachant s’adapter à leur langage et répondre à leurs besoins.
-                IDCI-Consulting a relevé ce défi en développant pour le cabinet d’avocat JAC un outil de communication simple et efficace.
+                lemoniteur.fr est un site d'informations pour les acteurs publics et privés de la construction et des collectivités locales.
+
+                IDCI-Consulting est intervenu auprès d'eux pour un audit détaillé de l'ancienne version de leur site web.
+                A la suite de cet audit, mise en place, développement et accompagnement des équipes sur le projet du nouveau site (mis en ligne en Mai 2011).
+                Refonte du processus de création de compte (inscriptions) et de l'espace résérvé (Service Premium).
             en: >
-                Precisely because magistrates are often novices with informatics that they need real professionals knowing how to adapt to their language and meet their needs.
-                IDCI-Consulting has rised this challenge by developing a communication's tool simple and effective to the JAC law firm.
+                lemoniteur.fr is a news website to building professionals and local communities.
+
+
+                IDCI-Consulting has carried out a detailed audit of the website old version, then develop and coach teams about the new website version.
+                Also, reworking of account creation process (registration) and restricted area (Premium service).
+        tools: ["wordpress"]
+        services: ["development", "consulting"]
+
+
+    www2012:
+        image_path: "/images/www2012.png"
+        url: "https://www2012.org"
+        title: "www2012.org"
+        enabled: true
+        content:
+            fr: >
+                Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
+                IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
+            en: >
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
-    lesiris:
-        image_path: "/images/lesiris.png"
-        url: "http://www.lesiris.com/"
-        title: "Le Siris"
-        enabled: false
+    carglass:
+        image_path: "/images/carglass.png"
+        url: "https://www.carglass.fr/"
+        title: "Carglass"
+        enabled: true
         content:
             fr: >
-                Bienvenue au pays des volcans d'Auvergne ! Les 4 maisons, situées dans le département du Puy de Dôme en France, reçoivent des groupes toute l'année.
-                Ce site est destiné aux écoles, colléges, lycées, club de sportifs, associations mais aussi au groupes d'étudiants ou d'adultes souhaitant par exemple venir se retrouver au centre de la France pour une réunion familiale.
-                Tous les centres sont agrée Education Nationale, Jeunesse et Sport et deux d'entre eux sont Gites de france.
+                Refonte du site de Carglass pour améliorer la prise de rendez-vous d'un client lors d'un bris de glace
             en: >
-                Welcome to the country of Auvergne's volcanos ! Four houses, located to the Puy de Dôme's department, receive groups all year.
-                This website is destinate to schools, high schools, sports club, associations, but also students or adults's groups who wish to meet at France's center to a family meeting.
-                Every centers are approved by National Education, Minister of Youth Affairs and Sports and two of them are Gîtes de France.
-        tools: ["pĥp", "symfony"]
+        tools: ["php", "symfony2", "ansible", "oracle", "jira", "php unit", "gitlab", "jmeter"]
+        services: ["development", "consulting"]
+
+    optedif:
+        image_path: "/images/optedif.png"
+        url: "https://optedif-formation.fr/"
+        title: "Optedif"
+        enabled: true
+        content:
+            fr: >
+                Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
+                IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
+            en: >
+        tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
-    pmc_net:
-        image_path: "/images/pmc-net.png"
-        url: "http://pmc-net.net/"
-        title: "PMC"
-        enabled: false
+    allopneus:
+        image_path: "/images/allopneus.png"
+        url: "http://www.allopneus.com/"
+        title: "Allopneus"
+        enabled: true
         content:
             fr: >
-                En 2015, Tessi renforce son pôle marketing services en faisant l’acquisition de PMC, l’agence conseil spécialiste du BOGO (Buy One Get One).
-                Grâce à un savoir-faire et un réseau de partenaires uniques sur le marché, PMC propose des opérations qui permettent aux consommateurs d’accéder, en échange d’un simple achat, à des dotations extrêmement attractives.
+                Tessi customer marketing appartient à Tessi, acteur leader sur le marché du traitement de flux en France.
+                Tessi accompagne les entreprises depuis 40 ans dans la gestion de leurs éléments vitaux : documents et moyens de paiement, transactions devises et or, marketing client.
 
-                Tessi accorde sa confiance à IDCI-Consulting pour effectuer la refonte du site de l'agence.
+                En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
             en: >
-                In 2015, Tessi reinforce its marketing services's pole by purchasing PMC, a consulting agency specialized of BOGO (Buy One, Get One).
-                Thanks to an expertise and a unique partner's network, PMC offers some operations which allow consumer to access, in exchange for a simple buying, to extremely attractives dotations.
+        tools: ["wordpress", "html5-css3"]
+        services: ["development"]
 
-                Tessi agrees its trust to IDCI-Consulting to perform website agency's reworking.
+    mapyourstories:
+        image_path: "/images/mapyourstories.png"
+        url: "https://mapyourstories.com/"
+        title: "Map Your Stories"
+        enabled: true
+        content:
+            fr: >
+                Tessi customer marketing appartient à Tessi, acteur leader sur le marché du traitement de flux en France.
+                Tessi accompagne les entreprises depuis 40 ans dans la gestion de leurs éléments vitaux : documents et moyens de paiement, transactions devises et or, marketing client.
+
+                En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
+            en: >
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
@@ -100,23 +119,47 @@ achievements:
 
                 En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
             en: >
-                Tessi customer marketing belongs to Tessi, major leader on treatment's flux market in France.
-                Tessi escorts compagnies for forty years in vitals's elements management : documents and payment methods, devises's transactions and client marketing.
-
-                At the same time as PMC website's developpment, Tessi had called on IDCI-Consulting to perform the website Tessi marketing service's reworking, which will also become Tessi customer service.
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
-    www2012:
-        image_path: "/images/www2012.png"
-        url: "https://www2012.org"
-        title: "www2012.org"
-        enabled: true
+    jac_avocat:
+        image_path: "/images/jac-avocat.png"
+        url: "http://www.jac-avocat.fr/"
+        title: "JAC Avocat"
+        enabled: false
         content:
             fr: >
-                Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
-                IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
+                C’est bien parce que les magistrats sont souvent des néophytes en informatique qu’ils ont besoin de vrais professionnels sachant s’adapter à leur langage et répondre à leurs besoins.
+                IDCI-Consulting a relevé ce défi en développant pour le cabinet d’avocat JAC un outil de communication simple et efficace.
             en: >
-                Just like Google, Yahoo, or even central school of Lyon, IDCI-Consulting has become consortium World Wide 2012's partner by conceptualizing and implementing the interactive datebook's part of congress' platform which run through from 16th to 20th April 2012.
+        tools: ["wordpress", "html5-css3"]
+        services: ["development"]
+
+    lesiris:
+        image_path: "/images/lesiris.png"
+        url: "http://www.lesiris.com/"
+        title: "Le Siris"
+        enabled: false
+        content:
+            fr: >
+                Bienvenue au pays des volcans d'Auvergne ! Les 4 maisons, situées dans le département du Puy de Dôme en France, reçoivent des groupes toute l'année.
+                Ce site est destiné aux écoles, colléges, lycées, club de sportifs, associations mais aussi au groupes d'étudiants ou d'adultes souhaitant par exemple venir se retrouver au centre de la France pour une réunion familiale.
+                Tous les centres sont agrée Education Nationale, Jeunesse et Sport et deux d'entre eux sont Gites de france.
+            en: >
+        tools: ["pĥp", "symfony"]
+        services: ["development"]
+
+    pmc_net:
+        image_path: "/images/pmc-net.png"
+        url: "http://pmc-net.net/"
+        title: "PMC"
+        enabled: false
+        content:
+            fr: >
+                En 2015, Tessi renforce son pôle marketing services en faisant l’acquisition de PMC, l’agence conseil spécialiste du BOGO (Buy One Get One).
+                Grâce à un savoir-faire et un réseau de partenaires uniques sur le marché, PMC propose des opérations qui permettent aux consommateurs d’accéder, en échange d’un simple achat, à des dotations extrêmement attractives.
+
+                Tessi accorde sa confiance à IDCI-Consulting pour effectuer la refonte du site de l'agence.
+            en: >
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
