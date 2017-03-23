@@ -21,103 +21,111 @@
   a.tools-sprite {
 
     &.php {
-      background-position: 0 0;
-    }
-
-    &.symfony1 {
-      background-position: 0px -909px;
+      background-position: -11px -5px;
     }
 
     &.symfony2 {
-      background-position: 0px -872px;
+      background-position: -121px -910px;
     }
 
     &.node {
-      background-position: 1px -601px;
+      background-position: -11px -563px;
     }
 
     &.meteor {
-      background-position: 0 -631px;
+      background-position: -11px -631px;
     }
 
+    //STOCKAGE
     &.mysql {
-      background-position: 0 -546px;
+      background-position: -11px -508px;
     }
 
     &.mongodb {
-      background-position: 0 -392px;
+      background-position: -11px -370px;
     }
 
     &.postgresql {
-      background-position: 1px -745px;
+      background-position: -11px -740px;
     }
 
     &.redis {
-      background-position: 0px -818px;
+      background-position: -11px -872px;
     }
 
-    &.rabbitmq {
-      background-position: 0 -746px;
+    &.kyototycoon {
+      background-position: -12px -1134px;
     }
 
-    &.html5-css3 {
-      background-position: 0 -424px;
-    }
-
-    &.bootstrap {
-      background-position: 1px -169px;
-    }
-
-    &.foundation {
-      background-position: 0 -304px;
-    }
-
-    &.jquery {
-      background-position: 0 -465px;
-    }
-
-    &.elk {
-      background-position: 0 -1014px;
-    }
-
+    // INFRASTRUCTURE
     &.varnish {
-      background-position: 0 -941px;
-    }
-
-    &.docker {
-      background-position: 0 -1122px;
+      background-position: -13px -940px;
     }
 
     &.proxmox {
-      background-position: 1px -782px;
-    }
-
-    &.angular {
-      background-position: 0 -56px;
-    }
-
-    &.gitlab {
-      background-position: 0 -343px;
-    }
-
-    &.redmine {
-      background-position: 0 -853px;
-    }
-
-    &.php-unit {
-      background-position: 0 -656px;
+      background-position: -13px -834px;
     }
 
     &.ansible {
-      background-position: 0 -83px;
+      background-position: -121px -108px;
+    }
+
+    &.elk {
+      background-position: -12px -996px;
+    }
+
+    &.docker {
+      background-position: -11.5px -1100px;
+    }
+
+    &.rabbitmq {
+      background-position: -11px -852px;
+    }
+
+    // FRONTEND
+    &.html5-css3 {
+      background-position: -12px -403px;
+    }
+
+    &.bootstrap {
+      background-position: -11px -182px;
+    }
+
+    &.foundation {
+      background-position: -12px -312px;
+    }
+
+    &.angular {
+      background-position: -13px -67px;
     }
 
     &.sass {
-      background-position: 0 -224px;
+      background-position: -12px -230px;
+    }
+
+    &.jquery {
+      background-position: -11.5px -478px;
+    }
+
+    &.vue-js {
+      background-position: -11px -1170px;
+    }
+
+    // QUALITY
+    &.php-unit {
+      background-position: -10.5px -660px;
+    }
+
+    &.gitlab {
+      background-position: -12px -330px;
+    }
+
+    &.redmine {
+      background-position: -12.5px -1270px;
     }
 
     &.wordpress {
-      background-position: 0 -983px;
+      background-position: -13px -970px;
     }
   }
 }
