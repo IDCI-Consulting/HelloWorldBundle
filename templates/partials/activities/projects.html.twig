@@ -18,21 +18,23 @@
                         <img src="{{ achievement.image_path }}" />
                         <a class="with-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
                     </div>
-                    <a class="project-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
-                    <h4>{% trans %}Expertise{% endtrans %}</h4>
-                    <ul class="flex-list">
-                        {% for service in achievement.services %}
-                            <li><p class="expertise {{ service }}">{{ service|trans }}</p></li>
-                        {% endfor %}
-                    </ul>
-                    <h4>{% trans %}Tools{% endtrans %}</h4>
-                    <ul class="flex-list">
-                        {% for tool in achievement.tools %}
-                            <li><a href="#" class="tools-sprite {{ tool }}">{{ tool }}</a></li>
-                        {% endfor %}
-                    </ul>
-                    <h4>{% trans %}The project{% endtrans %}</h4>
-                    <p>{{ achievement.content[app.translator.locale]}}</p>
+                    <div>
+                        <a class="project-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+                        <h4>{% trans %}Expertise{% endtrans %}</h4>
+                        <ul class="flex-list">
+                            {% for service in achievement.services %}
+                                <li><p class="expertise {{ service }}">{{ service|trans }}</p></li>
+                            {% endfor %}
+                        </ul>
+                        <h4>{% trans %}Tools{% endtrans %}</h4>
+                        <ul class="flex-list">
+                            {% for tool in achievement.tools %}
+                                <li><a href="#" class="tools-sprite {{ tool }}">{{ tool }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        <h4>{% trans %}The project{% endtrans %}</h4>
+                        <p>{{ achievement.content[app.translator.locale]}}</p>
+                    </div>
                 </div>
             {% endif %}
         {% endfor %}

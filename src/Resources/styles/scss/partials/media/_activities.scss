@@ -1,5 +1,27 @@
 @media #{$small-only} {
+  #achievements {
+    .accordion-content {
+      padding-top: 2rem;
+    }
+
+    & .slick-arrow {
+
+      &.next.right {
+        display: none ! important;
+      }
+    }
+  }
+
   .project-title {
     font-size: 2rem;
+  }
+
+  .browser-mockup {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .flex-list {
+    justify-content: space-around;
   }
 }
