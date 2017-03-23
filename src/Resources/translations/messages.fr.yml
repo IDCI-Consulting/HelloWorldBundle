@@ -45,6 +45,10 @@
 
 # Achievement
 'The project': "Le projet"
+'Tools': "Outils"
+'training': "formation"
+'development': "développement"
+'reworking': "refonte"
 
 #Form labels
 'Company': "Entreprise"

@@ -59,3 +59,62 @@
 .projects-content.slick-slider {
   padding-top: 0;
 }
+
+.flex-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+
+  & > li {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.expertise {
+  text-transform: capitalize;
+
+  &.development::before {
+    background: url("/images/development.svg") no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 85px;
+    margin-bottom: 10px;
+    width: 85px;
+  }
+
+  &.consulting::before {
+    background: url("/images/consulting.svg") no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 85px;
+    margin-bottom: 10px;
+    width: 85px;
+  }
+
+  &.reworking::before {
+    background: url("/images/reworking.svg") no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 85px;
+    margin-bottom: 10px;
+    width: 85px;
+  }
+
+  &.training::before {
+    background: url("/images/training.svg") no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 85px;
+    margin-bottom: 10px;
+    width: 85px;
+  }
+}
