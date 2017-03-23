@@ -11,9 +11,15 @@
     </header>
 
     <div class="medium-12 columns accordion-content projects-content">
-        {% for achivement in achivements|sort %}
+        {% for achievement in achievements %}
             <div class="realisation">
-                {{ achivement|raw }}
+                <div class="browser-mockup">
+                    <img src="{{ achievement.image_path }}" />
+                    <a class="with-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+                </div>
+                <a class="project-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+                <h4>{% trans %}The project{% endtrans %}</h4>
+                <p>{{ achievement.content[app.translator.locale]}}</p>
             </div>
         {% endfor %}
     </div>

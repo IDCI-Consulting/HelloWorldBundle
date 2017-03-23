@@ -254,28 +254,6 @@ $buildCv = function (Request $request, Application $app) {
     $app['twig']->addGlobal('html_cv', $htmlCv);
 };
 
-$buildAchievements = function (Request $request, Application $app) {
-    $achievements = array();
-
-    foreach ($app['config']['achievements'] as $id => $achievement) {
-        if (!$achievement['enabled']) {
-            continue;
-        }
-
-        $content = $app['twig']->render('contents/activities/activities.md.twig', array(
-            'id'         => $id,
-            'image_path' => $achievement['image_path'],
-            'title'      => $achievement['title'],
-            'url'        => $achievement['url'],
-            'content'    => $achievement['content'][$request->get('_locale')],
-        ));
-
-        $achievements[] = $app['markdown']->transform($content);
-    }
-
-    $app['twig']->addGlobal('achivements', $achievements);
-};
-
 $buildBlogSlide = function (Request $request, Application $app) {
     $locale = $request->get('_locale');
     $articles = $app['config']['blog'][$locale]['articles'];

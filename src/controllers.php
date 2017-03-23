@@ -105,14 +105,13 @@ $intlApp
     ->get(
         '/activities',
         function (Request $request, $_locale) use ($app) {
-
-            return $app['twig']->render('pages/activities.html.twig');
+            return $app['twig']->render('pages/activities.html.twig', array(
+                'achievements' => $app['config']['achievements']
+            ));
         }
     )
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
-    ->before($buildAchievements)
-    ->before($buildAsideMenu)
     ->bind('activities')
 ;
 

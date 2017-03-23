@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block main_content %}
-    {% include 'partials/activities/projects.html.twig' %}
+    {% include 'partials/activities/projects.html.twig' with {'achievements': achievements}%}
 {% endblock %}
 
 
@@ -18,7 +18,7 @@
         $(document).ready(function() {
             $('.projects-content').slick({
                 autoplay: true,
-                autoplaySpeed: 15000,
+                autoplaySpeed: 5000,
                 inifinite: true,
                 nextArrow: '<img class="slick-arrow next right" src="{{ asset('images/slick_arrow.svg') }}"/>',
                 prevArrow: false
