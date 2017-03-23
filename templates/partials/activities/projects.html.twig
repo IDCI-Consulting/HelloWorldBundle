@@ -12,15 +12,17 @@
 
     <div class="medium-12 columns accordion-content projects-content">
         {% for achievement in achievements %}
-            <div class="realisation">
-                <div class="browser-mockup">
-                    <img src="{{ achievement.image_path }}" />
-                    <a class="with-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+            {% if achievement.enabled %}
+                <div class="realisation">
+                    <div class="browser-mockup">
+                        <img src="{{ achievement.image_path }}" />
+                        <a class="with-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+                    </div>
+                    <a class="project-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+                    <h4>{% trans %}The project{% endtrans %}</h4>
+                    <p>{{ achievement.content[app.translator.locale]}}</p>
                 </div>
-                <a class="project-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
-                <h4>{% trans %}The project{% endtrans %}</h4>
-                <p>{{ achievement.content[app.translator.locale]}}</p>
-            </div>
+            {% endif %}
         {% endfor %}
     </div>
 </section>
