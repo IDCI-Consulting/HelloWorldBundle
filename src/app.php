@@ -53,6 +53,7 @@ $app->register(new SnappyServiceProvider(), array(
 ));
 $app->register(new FinderServiceProvider());
 $app->register(new SitemapManagerServiceProvider());
+$app->register(new \Provider\MetaTagsGeneratorServiceProvider());
 
 $app['snappy.pdf_options'] = array(
     'encoding'   => 'UTF-8',

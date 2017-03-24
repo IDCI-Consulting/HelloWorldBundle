@@ -233,19 +233,37 @@ $intlApp
     ->get(
         '/article/{file}',
         function (Request $request, $_locale, $file) use ($app) {
+            $articleConfiguration = array();
+
+            foreach ($app['config']['blog'][$_locale]['articles'] as $article) {
+                if ($article['file'] === $file) {
+                    $articleConfiguration = $app['meta_tags_generator']->buildOpenGraphMeta(
+                        $article['title'],
+                        $app['url_generator']->generate('index', array(
+                            "_locale" => $_locale,
+                            "file"    => $article['file']
+                        )),
+                        'article',
+                        $article['image']
+                    );
+                }
+            }
 
             try {
                 $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
+                $article = $app['markdown']->transform($article);
             } catch (\Exception $e) {
                 throw new NotFoundHttpException(sprintf(
                     'An error occured: %s',
                     $e->getMessage()
                 ));
             }
+
             return $app['twig']->render(
                 'pages/article.html.twig',
                 array(
-                    'article' => $app['markdown']->transform($article)
+                    'article' => $article,
+                    'articleConfiguration' => $articleConfiguration
                 )
             );
         }

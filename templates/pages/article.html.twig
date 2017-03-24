@@ -1,5 +1,11 @@
 {% extends "layout.html.twig" %}
 
+{% block metaTags %}
+    {% for meta in articleConfiguration %}
+        <meta {{ meta.attributeName }}="{{ meta.attributeValue }}" content="{{ meta.content }}" />
+    {% endfor %}
+{% endblock %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
