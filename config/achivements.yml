@@ -49,9 +49,14 @@ achievements:
                 Le site web www2012 a été développé à l'occasion de la 21e Conférence Internationale World Wide Web,
                 il rassemble les programmes, les partenaires et des documents concernant la conférence.
 
-                Nous sommes devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant
-                la partie agenda interactive de la plate-forme du congrès qui s’est déroulé en Avril 2012.
+                Nous sommes devenus partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant
+                la partie agenda interactive de la plate-forme du congrès qui a eu lieu en Avril 2012.
             en: >
+                www2012 website has been developed to the 21st International World Wide Web Conference.
+                It gathers programs, partners and documents about the conference.
+
+                We have become partner of the consortium by conceptualizing et implementing the interactive agenda of the congress,
+                which took place at April 2012.
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
@@ -87,10 +92,6 @@ achievements:
         enabled: true
         content:
             fr: >
-                Tessi customer marketing appartient à Tessi, acteur leader sur le marché du traitement de flux en France.
-                Tessi accompagne les entreprises depuis 40 ans dans la gestion de leurs éléments vitaux : documents et moyens de paiement, transactions devises et or, marketing client.
-
-                En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
             en: >
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
