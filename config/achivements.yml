@@ -64,8 +64,21 @@ achievements:
             fr: >
                 Refonte du site de Carglass pour améliorer la prise de rendez-vous d'un client lors d'un bris de glace
             en: >
-        tools: ["php", "symfony2", "ansible", "oracle", "jira", "php unit", "gitlab", "jmeter"]
+        tools: ["symfony2", "ansible", "php-unit"]
         services: ["development", "consulting"]
+
+    optedif:
+        image_path: "/images/optedif.png"
+        url: "https://optedif-formation.fr/"
+        title: "Optedif"
+        enabled: true
+        content:
+            fr: >
+                Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
+                IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
+            en: >
+        tools: ["symfony2", "html5-css3", "docker", "rabbitmq", "php-unit"]
+        services: ["development"]
 
     allopneus:
         image_path: "/images/allopneus.png"
@@ -117,7 +130,7 @@ achievements:
                 Each map can be print on a tee-shirt, tote bag, etc, and offered as a gift.
 
                 We have undertoken challenge by taking in charge of the MeteorJS framework and creating the editor allowing to customize your map.
-        tools: ["wordpress", "html5-css3"]
+        tools: ["meteor", "html5-css3"]
         services: ["development"]
 
     tcm:

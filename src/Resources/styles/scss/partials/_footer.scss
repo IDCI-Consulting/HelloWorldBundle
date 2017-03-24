@@ -68,16 +68,14 @@ footer {
   }
 
   .coords {
-
-    p {
-      position: relative;
-      margin-bottom: 0;
-    }
-
     a {
       display: inline-block;
       height: 2rem;
-      vertical-align: middle;
+      vertical-align: top;
+    }
+
+    li {
+      text-align: left;
     }
 
     span {

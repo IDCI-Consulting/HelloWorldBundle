@@ -1,9 +1,10 @@
 .browser-mockup {
+  border-radius: 3px 3px 0 0;
   border-top: 2em solid rgba(230, 230, 230, 0.7);
   box-shadow: 0.6em 0.5em 1em -8px rgba(0,0,0,.4);
+  max-height: 60%;
   position: relative;
-  border-radius: 3px 3px 0 0;
-  width: 100%;
+  width: 80%;
 }
 
 .browser-mockup::before {
