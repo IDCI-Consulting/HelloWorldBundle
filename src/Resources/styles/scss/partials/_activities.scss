@@ -5,6 +5,10 @@
       top: 20%;
     }
   }
+
+  h4 {
+    font-size: 2rem;
+  }
 }
 
 .contribution {
@@ -65,6 +69,15 @@
   font-size: 1.5rem;
 }
 
+
+.achievement-tools {
+  padding-left: 3rem;
+}
+
+.achievement-content {
+  padding-top: 3rem;
+}
+
 .projects-content.slick-slider {
   padding-top: 0;
 }
@@ -73,7 +86,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
 
   & > li {
     margin-right: 30px;
@@ -92,9 +105,9 @@
     background-size: cover;
     content: "";
     display: block;
-    height: 85px;
+    height: 50px;
     margin-bottom: 10px;
-    width: 85px;
+    width: 50px;
   }
 
   &.consulting::before {
@@ -102,9 +115,9 @@
     background-size: cover;
     content: "";
     display: block;
-    height: 85px;
+    height: 50px;
     margin-bottom: 10px;
-    width: 85px;
+    width: 50px;
   }
 
   &.reworking::before {
@@ -112,9 +125,9 @@
     background-size: cover;
     content: "";
     display: block;
-    height: 85px;
+    height: 50px;
     margin-bottom: 10px;
-    width: 85px;
+    width: 50px;
   }
 
   &.training::before {
@@ -122,8 +135,8 @@
     background-size: cover;
     content: "";
     display: block;
-    height: 85px;
+    height: 50px;
     margin-bottom: 10px;
-    width: 85px;
+    width: 50px;
   }
 }

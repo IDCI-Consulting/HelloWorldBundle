@@ -13,13 +13,14 @@
     <div class="medium-12 columns accordion-content projects-content">
         {% for achievement in achievements %}
             {% if achievement.enabled %}
-                <div class="realisation">
-                    <div class="browser-mockup">
-                        <img src="{{ achievement.image_path }}" />
-                        <a class="with-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+                <div class="row realisation">
+                    <div class="medium-8 columns">
+                        <div class="browser-mockup">
+                            <img src="{{ achievement.image_path }}" />
+                            <a class="with-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+                        </div>
                     </div>
-                    <div>
-                        <a class="project-url" href="{{ achievement.url }}" target="_blank">{{ achievement.url }}</a>
+                    <div class="medium-4 columns achievement-tools">
                         <h4>{% trans %}Expertise{% endtrans %}</h4>
                         <ul class="flex-list">
                             {% for service in achievement.services %}
@@ -32,6 +33,8 @@
                                 <li><a href="#" class="tools-sprite {{ tool }}">{{ tool }}</a></li>
                             {% endfor %}
                         </ul>
+                    </div>
+                    <div class="medium-12 columns achievement-content">
                         <h4>{% trans %}The project{% endtrans %}</h4>
                         <p>{{ achievement.content[app.translator.locale]}}</p>
                     </div>
