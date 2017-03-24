@@ -61,7 +61,7 @@ achievements:
             fr: >
                 Refonte du site de Carglass pour améliorer la prise de rendez-vous d'un client lors d'un bris de glace
             en: >
-        tools: ["php", "symfony2", "ansible", "oracle", "jira", "php unit", "gitlab", "jmeter"]
+        tools: ["symfony2", "ansible", "php-unit"]
         services: ["development", "consulting"]
 
     optedif:
@@ -74,7 +74,7 @@ achievements:
                 Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
                 IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
             en: >
-        tools: ["wordpress", "html5-css3"]
+        tools: ["symfony2", "html5-css3", "docker", "rabbitmq", "php-unit"]
         services: ["development"]
 
     allopneus:
@@ -104,7 +104,7 @@ achievements:
 
                 En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
             en: >
-        tools: ["wordpress", "html5-css3"]
+        tools: ["meteor", "html5-css3"]
         services: ["development"]
 
     tcm:
