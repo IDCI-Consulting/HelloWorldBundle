@@ -12,6 +12,8 @@ use Provider\SnappyServiceProvider;
 use Provider\YamlConfigServiceProvider;
 use Provider\FinderServiceProvider;
 use Provider\SitemapManagerServiceProvider;
+use Provider\MetaTagsGeneratorServiceProvider;
+use Provider\QrCodeServiceProvider;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
@@ -53,7 +55,15 @@ $app->register(new SnappyServiceProvider(), array(
 ));
 $app->register(new FinderServiceProvider());
 $app->register(new SitemapManagerServiceProvider());
-$app->register(new \Provider\MetaTagsGeneratorServiceProvider());
+$app->register(new MetaTagsGeneratorServiceProvider());
+$app->register(new QrCodeServiceProvider(), array(
+    'qrcode.options' => array(
+        'size' => 200,
+        'padding' => 5,
+        'error_correction_level' => 1,
+        'foreground_color' => array('r' => 13, 'g' => 176, 'b' => 209)
+    )
+));
 
 $app['snappy.pdf_options'] = array(
     'encoding'   => 'UTF-8',

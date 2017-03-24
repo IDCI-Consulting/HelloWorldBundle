@@ -3,12 +3,14 @@
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Translation\Exception\NotFoundResourceException;
 use Form\Type\ContactType;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 $intlApp = $app['controllers_factory'];
 $baseApp = $app['controllers_factory'];
+$apiApp = $app['controllers_factory'];
 
 //Routing requirements
 $intlApp->assert('_locale', 'fr|en');
@@ -465,6 +467,29 @@ $intlApp
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->bind('sitemap')
+;
+
+$intlApp
+    ->get(
+        '/generate-qrcode',
+        function (Request $request) use ($app) {
+            $vcfFileName = $request->query->get('vcf_file_name');
+            $vcfPath = sprintf('%s/Resources/public/vcard/%s.vcf', __DIR__, $vcfFileName);
+
+            if (file_exists($vcfPath)) {
+                $app['qrcode']->setText(file_get_contents($vcfPath));
+
+                return new Response(
+                    $app['qrcode']->get(),
+                    200,
+                    array('Content-Type' => $app['qrcode']->getContentType())
+                );
+            }
+
+            throw new NotFoundResourceException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
+        }
+    )
+    ->bind('generate_vcard')
 ;
 
 $app
