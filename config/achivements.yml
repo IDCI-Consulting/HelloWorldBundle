@@ -6,14 +6,14 @@ achievements:
         enabled: true
         content:
             fr: >
-                Forte d’une vingtaine d’associations, La fédération des associations Franco-Chinoise entend constituer une structure privilégiée de dialogue avec la Chine et les Chinois de France.
-                Elle vise à regrouper les associations œuvrant à promouvoir concrètement les relations d’amitié et de coopération entre la France et la Chine.
-                Avec ce site multilingue, la F.A.F.C met à disposition de ses internautes, une base de données riche en informations, liens et documents qui viendront renforcer l'interaction entre la Chine et la France.
+                La Fédération des associations franco-chinoises a pour objectif de regrouper sur une seule et même structure une vingtaine d'associations qui contribuent à renforcer l'amitié entre la France et la Chine.
+                La F.A.F.C propose à ses utilisateurs une base de données contenant des informations, des liens vers les associations et de la documentation culturelle.
+                Le site web est disponible en anglais, français, et chinois.
             en: >
-                The F.A.F.C gathers about twenties associations together and aims to be a strong structure of dialogue between China and France Chineses.
-                It seeks to unite associations working on friendship and cooperations promotions between China and France.
-                The Federation provides a database with a lot of informations, links and documents, to reinforce interaction between these two countries.
-                This website is multilingual.
+                The F.A.F.C gathers about twenties associations together which aim to reinforce dialogue between China and France Chineses.
+                It seeks to unite associations working on friendship and cooperations promotions between these two countries.
+                The Federation provides a database with a lot of informations, links and documents.
+                This website is available in French, English and Chinese.
         tools: ["wordpress"]
         services: ["development"]
 
@@ -24,16 +24,16 @@ achievements:
         enabled: true
         content:
             fr: >
-                lemoniteur.fr est un site d'informations pour les acteurs publics et privés de la construction et des collectivités locales.
+                lemoniteur.fr est un site d'actualités à destination des acteurs publics et privés de la construction et des collectivités locales.
 
-                IDCI-Consulting est intervenu auprès d'eux pour un audit détaillé de l'ancienne version de leur site web.
-                A la suite de cet audit, mise en place, développement et accompagnement des équipes sur le projet du nouveau site (mis en ligne en Mai 2011).
-                Refonte du processus de création de compte (inscriptions) et de l'espace résérvé (Service Premium).
+                Nous sommes intervenu auprès d'eux pour un audit détaillé de l'ancienne version du site web.
+                Puis, nous avons développé, accompagné les équipes sur le projet de la nouvelle version (mise en ligne en mai 2011)
+                et participé à la refonte du processus de création de compte (inscription) et de l'espace réservé (service Premium).
             en: >
                 lemoniteur.fr is a news website to building professionals and local communities.
 
 
-                IDCI-Consulting has carried out a detailed audit of the website old version, then develop and coach teams about the new website version.
+                We have carried out a detailed audit of the website old version, then develop and coach teams about the new website version.
                 Also, reworking of account creation process (registration) and restricted area (Premium service).
         tools: ["wordpress"]
         services: ["development", "consulting"]
@@ -46,8 +46,11 @@ achievements:
         enabled: true
         content:
             fr: >
-                Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
-                IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
+                Le site web www2012 a été développé à l'occasion de la 21e Conférence Internationale World Wide Web,
+                il rassemble les programmes, les partenaires et des documents concernant la conférence.
+
+                Nous sommes devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant
+                la partie agenda interactive de la plate-forme du congrès qui s’est déroulé en Avril 2012.
             en: >
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
@@ -64,19 +67,6 @@ achievements:
         tools: ["php", "symfony2", "ansible", "oracle", "jira", "php unit", "gitlab", "jmeter"]
         services: ["development", "consulting"]
 
-    optedif:
-        image_path: "/images/optedif.png"
-        url: "https://optedif-formation.fr/"
-        title: "Optedif"
-        enabled: true
-        content:
-            fr: >
-                Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
-                IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
-            en: >
-        tools: ["wordpress", "html5-css3"]
-        services: ["development"]
-
     allopneus:
         image_path: "/images/allopneus.png"
         url: "http://www.allopneus.com/"
@@ -92,6 +82,25 @@ achievements:
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
+    optedif:
+        image_path: "/images/optedif.png"
+        url: "https://optedif-formation.fr/"
+        title: "Optedif"
+        enabled: true
+        content:
+            fr: >
+                Optedif est un site basé sur la mise en relation de formateurs et d'apprenants.
+                Le site web propose des formations dans de nombreux domaines et un espace personnel optimisé en fonction de votre profil.
+
+                Nous avons participé à l'ajout de nouvelles fonctionnalités, l'amélioration du code source et la créations d'APIs.
+            en: >
+                Optedif is a website based on linking beetween teacher and learner.
+                The website provide trainings in plenty of fields and an optimized personnal space depending on your profile.
+
+                We took part in source code improvements, APIs and new functionnalities creation.
+        tools: ["wordpress", "html5-css3"]
+        services: ["development"]
+
     mapyourstories:
         image_path: "/images/mapyourstories.png"
         url: "https://mapyourstories.com/"
@@ -99,11 +108,15 @@ achievements:
         enabled: true
         content:
             fr: >
-                Tessi customer marketing appartient à Tessi, acteur leader sur le marché du traitement de flux en France.
-                Tessi accompagne les entreprises depuis 40 ans dans la gestion de leurs éléments vitaux : documents et moyens de paiement, transactions devises et or, marketing client.
+                Mapyourstories est un site web qui permet de créer des cartes de métro personnalisables et en temps réel.
+                Chaque carte personnalisée peut être imprimé sur un support (tee-shirt, tote bag, etc) et offerte comme cadeau souvenir.
 
-                En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
+                Nous avons relevé le challenge en prenant en main le framework MétéorJS et en créant l'éditeur permettant de personnaliser sa map.
             en: >
+                Mapyourstories is a website allowing to create cutomizable maps in collaboration and real time.
+                Each map can be print on a tee-shirt, tote bag, etc, and offered as a gift.
+
+                We have undertoken challenge by taking in charge of the MeteorJS framework and creating the editor allowing to customize your map.
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
@@ -143,7 +156,8 @@ achievements:
         content:
             fr: >
                 Bienvenue au pays des volcans d'Auvergne ! Les 4 maisons, situées dans le département du Puy de Dôme en France, reçoivent des groupes toute l'année.
-                Ce site est destiné aux écoles, colléges, lycées, club de sportifs, associations mais aussi au groupes d'étudiants ou d'adultes souhaitant par exemple venir se retrouver au centre de la France pour une réunion familiale.
+                Ce site est destiné aux écoles, colléges, lycées, club de sportifs, associations mais aussi au groupes
+                d'étudiants ou d'adultes souhaitant par exemple venir se retrouver au centre de la France pour une réunion familiale.
                 Tous les centres sont agrée Education Nationale, Jeunesse et Sport et deux d'entre eux sont Gites de france.
             en: >
         tools: ["pĥp", "symfony"]
@@ -157,7 +171,8 @@ achievements:
         content:
             fr: >
                 En 2015, Tessi renforce son pôle marketing services en faisant l’acquisition de PMC, l’agence conseil spécialiste du BOGO (Buy One Get One).
-                Grâce à un savoir-faire et un réseau de partenaires uniques sur le marché, PMC propose des opérations qui permettent aux consommateurs d’accéder, en échange d’un simple achat, à des dotations extrêmement attractives.
+                Grâce à un savoir-faire et un réseau de partenaires uniques sur le marché, PMC propose des opérations qui permettent aux consommateurs d’accéder,
+                en échange d’un simple achat, à des dotations extrêmement attractives.
 
                 Tessi accorde sa confiance à IDCI-Consulting pour effectuer la refonte du site de l'agence.
             en: >
