@@ -60,7 +60,7 @@ $app->register(new QrCodeServiceProvider(), array(
     'qrcode.options' => array(
         'size' => 200,
         'padding' => 5,
-        'error_correction_level' => 1,
+        'error_correction_level' => 'high',
         'foreground_color' => array('r' => 13, 'g' => 176, 'b' => 209)
     )
 ));
