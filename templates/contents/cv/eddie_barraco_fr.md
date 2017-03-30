@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-**EDDIE BARRACO**  
+**EDDIE BARRACO**
 **Développeur Web Full Stack / Analyste**
 
 {% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
@@ -13,7 +13,7 @@
 - Age **{{ getAge('1995-11-22') }} ans**
 - Email **eddie.barraco@idci-consulting.fr**
 - Tél **06 11 92 43 51**
-- Langages **Anglais maîtrisé**
+- Langues **Anglais maîtrisé**
 
 ### EXPERIENCES PROFESSIONNELLES
 

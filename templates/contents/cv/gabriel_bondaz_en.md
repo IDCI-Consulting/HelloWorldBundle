@@ -21,7 +21,7 @@
 
 _Since Septembrer 2008_
 
-  - Created IDCI-Consulting | Co-manager, Research and Development Engineer
+  - Created IDCI-Consulting | Co-manager & Research and Development Engineer
   - Teached at Lyon 1 University
   - Web courses : HTML, CSS, Js, PHP, Magento, Wordpress, PrestaShop
   - Teached as part of professionnal courses (APTA - Clermont Ferrand, ASP, Proximit, iCap, EITE, OPCADIA, etc)
