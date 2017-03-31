@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-**BAPTISTE BOUCHEREAU**  
+**BAPTISTE BOUCHEREAU**
 **Analyst | Engineer**
 
 {% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}

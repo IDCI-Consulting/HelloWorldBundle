@@ -8,6 +8,11 @@
     </h1>
 {% endblock  %}
 
+{% block metaTags %}
+<meta /IDCI-Consulting est une société experte dans l'architecture web, PHP et Symfony.
+Nous proposons du conseil, de la formation et du développement web. >
+{% endblock %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
