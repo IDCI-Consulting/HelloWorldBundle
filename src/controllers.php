@@ -358,11 +358,10 @@ $intlApp
 
             if ('md' === $_format) {
                 $response->headers->set('Content-Type', 'text/markdown');
-                $response->setContent($app['cv_manager']->prepareMarkdownForHtml($name, $_locale));
+                $response->setContent($app['cv_manager']->buildAsMarkdown($name, $_locale));
 
                 return $response;
             }
-
 
             $md = $app['cv_manager']->prepareMarkdownForHtml($name, $_locale);
             $cv = $app['markdown']->transform($md);
