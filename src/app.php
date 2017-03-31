@@ -12,6 +12,7 @@ use Provider\SnappyServiceProvider;
 use Provider\YamlConfigServiceProvider;
 use Provider\FinderServiceProvider;
 use Provider\SitemapManagerServiceProvider;
+use Provider\CvManagerServiceProvider;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
@@ -25,6 +26,7 @@ use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 $app = new Application();
 
@@ -46,6 +48,7 @@ $app->register(new MarkdownParserServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
 $app->register(new ContactManagerServiceProvider());
 $app->register(new CourseManagerServiceProvider());
+$app->register(new CvManagerServiceProvider());
 $app->register(new YamlConfigServiceProvider(__DIR__ . '/../config/config.yml'));
 $app->register(new SnappyServiceProvider(), array(
     'snappy.image_binary' => '/usr/bin/wkhtmltoimage',
@@ -223,36 +226,6 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
     }
 
     $app['twig']->addGlobal('tabs_course_menu', $tabsCourseMenu);
-};
-
-$buildCv = function (Request $request, Application $app) {
-    $name = $request->attributes->get('name');
-    $locale = $request->attributes->get('_locale');
-
-    $content = $app['twig']->render(sprintf('contents/cv/%s_%s.md', $name, $locale));
-
-    $content = preg_replace('/[^#]###[^#]/', '=### ', $content);
-    $content .= '=';
-
-    preg_match_all("/#{3}(?<content>.*)=/sU", $content, $matches);
-
-    $htmlCv = sprintf('<div class="%s">', $name);
-    foreach ($matches['content'] as $content) {
-        $skillClass = '';
-
-        if (preg_match('/(OUTILS INFORMATIQUE|SKILLS)/i', $content)) {
-            $skillClass = 'skills';
-        }
-
-        $htmlCv .= sprintf(
-            '<section markdown="1" class="cv-part %s">%s</section>',
-            $skillClass,
-            $app['markdown']->transform('###'.$content)
-        );
-    }
-    $htmlCv .= '</div>';
-
-    $app['twig']->addGlobal('html_cv', $htmlCv);
 };
 
 $buildBlogSlide = function (Request $request, Application $app) {

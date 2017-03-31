@@ -346,29 +346,26 @@ $intlApp
 ;
 
 $intlApp
+    ->before($hideContactLink)
+    ->before($buildLocaleLinks)
+    ->assert('_format', 'md|html|pdf')
+    ->value('_format', '')
     ->get(
         '/cv/{theme}/{name}.{_format}',
-        function (Request $request, $_locale, $theme, $name, $_format) use ($app) {
-
-            try {
-                $cv = $app['twig']->render(sprintf('contents/cv/%s_%s.md', $name, $_locale), array());
-            } catch (\Exception $e) {
-                throw new NotFoundHttpException(sprintf(
-                    'The %s\'s cv doesn\'t exist',
-                    $name
-                ));
-            }
+        function ($_locale, $theme, $name, $_format) use ($app) {
 
             $response = new Response();
 
             if ('md' === $_format) {
                 $response->headers->set('Content-Type', 'text/markdown');
-                $response->setContent($cv);
+                $response->setContent($app['cv_manager']->prepareMarkdownForHtml($name, $_locale));
 
                 return $response;
             }
 
-            $cv = $app['markdown']->transform($cv);
+
+            $md = $app['cv_manager']->prepareMarkdownForHtml($name, $_locale);
+            $cv = $app['markdown']->transform($md);
 
             $cvHtml = $app['twig']->render('partials/cv/output.html.twig', array(
                 'cv'     => $cv,
@@ -377,6 +374,7 @@ $intlApp
                 'name'   => $name
             ));
 
+            //$article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
             if ('html' === $_format) {
                 return $cvHtml;
             }
@@ -393,7 +391,6 @@ $intlApp
 
                 $response->headers->set('Content-Type', 'application/pdf');
                 $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
-
                 $response->setContent($app['snappy.pdf']->getOutputFromHtml($cvHtml, $app['snappy.pdf_options']));
 
                 return $response;
@@ -406,11 +403,6 @@ $intlApp
             ));
         }
     )
-    ->before($hideContactLink)
-    ->before($buildCv)
-    ->before($buildLocaleLinks)
-    ->assert('_format', 'md|html|pdf')
-    ->value('_format', '')
     ->bind('cv')
 ;
 

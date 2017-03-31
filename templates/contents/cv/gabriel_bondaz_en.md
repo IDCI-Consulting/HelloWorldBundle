@@ -127,7 +127,7 @@ _2004_
   - **Others** _Ajax, jQuery_
 
 
-### PERSONNALS EXPERIENCES
+### PERSONAL EXPERIENCES
 
 _2004 – 2005_
 
