@@ -71,6 +71,7 @@ _2009_
    - Accompagnement des équipes techniques (4 développeurs)
    - Développements web php (Symfony 1.4)
 
+<p class="break" markdown="1"></p>
 
 _2005-2007_
 
@@ -120,6 +121,7 @@ _2004_
   - **Modélisation** _UML_
   - **Autres** _Ajax, Jquery_
 
+<p class="break" markdown="1"></p>
 
 ### EXPERIENCES PERSONNELLES
 

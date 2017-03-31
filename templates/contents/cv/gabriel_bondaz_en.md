@@ -70,6 +70,8 @@ _2009_
    - Managed technical staff (4 developers)
    - Web development PHP (Symfony 1.4)
 
+<p class="break" markdown="1"></p>
+
 _2005-2007_
 
   - Research and Teacher technician for Lyon 1 University
@@ -126,6 +128,7 @@ _2004_
   - **Modeling** _UML_
   - **Others** _Ajax, jQuery_
 
+<p class="break" markdown="1"></p>
 
 ### PERSONAL EXPERIENCES
 

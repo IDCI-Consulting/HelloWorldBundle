@@ -15,7 +15,7 @@
 - Phone **06 11 92 43 51**
 - Languages **Mastered english**
 
-### PROFESSIONNALS EXPERIENCES
+### PROFESSIONAL EXPERIENCES
 
 _Since September 2016_
 
@@ -29,7 +29,7 @@ _2016_
    - Queueing tool implementation to the Optedif project with RabbitMQ
 
 
-### TRAINING
+### EDUCATION
 
 _2017_
 
@@ -64,7 +64,7 @@ _2014_
   - **Graphic design** _Photoshop and Gimp notions_
 
 
-### PROFESSIONALS EXPERIENCES
+### PERSONAL EXPERIENCES
 
 _2015 – 2016_
 

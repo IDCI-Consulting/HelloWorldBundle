@@ -72,6 +72,7 @@ _2014_
 
   - **BTS SIO** (Service Informatique aux Organisations)
 
+<p class="break" markdown="1"></p>
 
 ### OUTILS INFORMATIQUES
 
