@@ -209,7 +209,7 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
 
         $matches = $app['course_manager']->matchContent($content);
 
-        $title = trim($matches['title'][0]);
+        $title = strtolower(trim($matches['title'][0]));
 
         $description = trim($matches['description'][0]);
 
