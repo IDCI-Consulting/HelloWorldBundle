@@ -112,8 +112,8 @@ _2004_
   - **Server HTTP** _Apache, Nginx_
   - **Networks** _Dns (bind), Dhcp, Reverse proxy and load balancing (pound), Firewall (iptables), Http Server (Apache, lighttpd), FTP Server (vsFtp)_
   - **Cache and reverse proxy** _Varnish_
-  - **Configuration Management** _Ansible, SaltStack_
   - **Languages** _C, C++, Java, Python, PHP, Html, xHtml, Html5, JavaScript, Sql, Pl/Sql, Prolog, Shell Script_
+  - **Configuration Management** _Ansible, SaltStack_
   - **OS** _Ms Dos, Windows, MacOS, Linux, Unix_
   - **PHP framework** _Symfony 1/2/3, Silex, Laravel, Zend framework_
   - **Python framework** _Django, Pylons project_

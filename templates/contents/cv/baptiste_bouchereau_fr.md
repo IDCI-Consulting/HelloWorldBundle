@@ -70,6 +70,8 @@ _2014_
    - Développement de plugins pour etherpad-lite en NodeJS
    - Création d'un plugin pour la plateforme claroline pour créer et intégrer des pads
 
+<p class="break" markdown="1"></p>
+
 _2013_
 
   - Développement d'un bundle Symfony2 générant des captures d'écran de pages web en différents formats (.jpg, .gif, etc) et résolutions
