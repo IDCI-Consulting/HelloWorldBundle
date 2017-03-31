@@ -91,7 +91,7 @@ achievements:
                 Allopneus is a french leader of supply of tyres online.
 
                 We worked on the project by training and consulting.
-        tools: ["Symfony2", ""]
+        tools: ["wordpress", "html5-css3"]
         services: ["consulting", "training"]
 
     optedif:
@@ -110,7 +110,7 @@ achievements:
                 The website provide trainings in plenty of fields and an optimized personnal space depending on your profile.
 
                 We took part in source code improvements, APIs and new functionnalities creation.
-        tools: ["Symfony2"]
+        tools: ["symfony2", "html5-css3", "docker", "rabbitmq", "php-unit"]
         services: ["development"]
 
     mapyourstories:
@@ -144,6 +144,7 @@ achievements:
 
                 En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
             en: >
+                To describe
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
@@ -157,6 +158,7 @@ achievements:
                 C’est bien parce que les magistrats sont souvent des néophytes en informatique qu’ils ont besoin de vrais professionnels sachant s’adapter à leur langage et répondre à leurs besoins.
                 IDCI-Consulting a relevé ce défi en développant pour le cabinet d’avocat JAC un outil de communication simple et efficace.
             en: >
+                To describe
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
@@ -172,6 +174,7 @@ achievements:
                 d'étudiants ou d'adultes souhaitant par exemple venir se retrouver au centre de la France pour une réunion familiale.
                 Tous les centres sont agrée Education Nationale, Jeunesse et Sport et deux d'entre eux sont Gites de france.
             en: >
+                To describe
         tools: ["pĥp", "symfony"]
         services: ["development"]
 
@@ -188,5 +191,6 @@ achievements:
 
                 Tessi accorde sa confiance à IDCI-Consulting pour effectuer la refonte du site de l'agence.
             en: >
+                To describe
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
