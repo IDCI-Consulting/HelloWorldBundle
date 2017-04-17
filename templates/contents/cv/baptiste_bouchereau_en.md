@@ -19,11 +19,11 @@
 
 _Since 2015_
 
-  - Independent at IDCI-CONSULTING | Analyst & Engineer
+  - Associate at IDCI-CONSULTING | Analyst & Engineer
 
 _2016_
 
-  - 7 months mission at Courbevoie. Backend development of the Carglass France new website
+  - 7 months mission in Paris in Carglass, the france's leading vehicle glass repair and replacement group. I was part of the team reworking the new Carglass website with the Symfony2 framework.
   - Teached professionalizing [courses](https://www.idci-consulting.fr/en/courses#symfony2) on Symfony framework
   - Created a [SVG editor](https://github.com/IDCI-Consulting/SvgEditor) in JavaScript for a marketing operation
   - Teached at Lyon 1 University, E-business class - Prestashop courses
@@ -39,7 +39,7 @@ _2015_
    - Bundle to generate uniques coding for promotional offers
    - Bundle to manage steps of participation in refund offers
  - Improved IDCI-Consulting workflow
-   - Setted up a continuous integration platform with Gitlab and Gitlab-CI
+   - Set up a continuous integration platform with Gitlab and Gitlab-CI
    - Deployed dockered applications in pre-production with Ansible
    - Automated of development environments setup with Docker and docker-compose
 
@@ -92,15 +92,15 @@ _2015_
 
 _2015_
 
-  - Certification CAE - English level C1
+  - CAE certificate - English level C1
 
 _2012_
 
-  - University Technologic Degree in computer sciences
+  - DUT informatique - 2 years technical degree in computer sciences
 
 _2009_
 
-  - Scientific Baccalaureat
+  - French high-school scientific diploma
 
 ### SKILLS
 
