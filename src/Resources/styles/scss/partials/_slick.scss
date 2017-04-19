@@ -1,6 +1,6 @@
-.slick-arrow {
+*[aria-live] + .slick-arrow {
   cursor: pointer;
-  height: 2rem!important;
+  height: 2rem;
   position: absolute;
 
   &.next.bottom,  &.previous.top {
@@ -38,6 +38,6 @@
 .slick-slide {
 
   img {
-    display: inline-block!important;
+    display: inline-block;
   }
 }

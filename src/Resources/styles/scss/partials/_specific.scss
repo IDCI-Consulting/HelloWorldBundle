@@ -55,8 +55,8 @@ section.contact-form {
   padding:  10rem 15rem;
 }
 
-.ajax-loader {
-  height: 2rem!important;
+#output .ajax-loader {
+  height: 2rem;
   margin: .5rem 0 0 0;
 }
 
@@ -123,4 +123,3 @@ svg.sitemap {
     }
   }
 }
-
