@@ -253,16 +253,16 @@ $intlApp
             }
 
             try {
-              if (!$isDisplayable) {
-                  throw new Exception('this page is not available.');
-              }
+                if (!$isDisplayable) {
+                    throw new Exception('this page is not available.');
+                }
 
-              $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
-              $article = $app['markdown']->transform($article);
+                $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
+                $article = $app['markdown']->transform($article);
             } catch (\Exception $e) {
                 throw new NotFoundHttpException(sprintf(
-                    'An error occured: %s',
-                    $e->getMessage()
+                  'An error occured: %s',
+                  $e->getMessage()
                 ));
             }
 
