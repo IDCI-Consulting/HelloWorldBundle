@@ -23,5 +23,8 @@ gulp:
 composer-update:
 	docker-compose run --rm php composer update
 
+composer-install:
+	docker-compose run --rm php composer install 
+
 command:
 	docker exec -it $(php_container_name) bash -c "$(cmd); exit $$?"

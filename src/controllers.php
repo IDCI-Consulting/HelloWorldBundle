@@ -234,6 +234,7 @@ $intlApp
         '/article/{file}',
         function (Request $request, $_locale, $file) use ($app) {
             $articleConfiguration = array();
+            $isDisplayable = false;
 
             foreach ($app['config']['blog'][$_locale]['articles'] as $article) {
                 if ($article['file'] === $file) {
@@ -246,10 +247,16 @@ $intlApp
                         'article',
                         $article['image']
                     );
+
+                    $isDisplayable = true;
                 }
             }
 
             try {
+                if (!$isDisplayable) {
+                    throw new Exception('this page is not available.');
+                }
+
                 $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
                 $article = $app['markdown']->transform($article);
             } catch (\Exception $e) {
