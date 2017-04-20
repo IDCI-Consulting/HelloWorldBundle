@@ -261,8 +261,8 @@ $intlApp
                 $article = $app['markdown']->transform($article);
             } catch (\Exception $e) {
                 throw new NotFoundHttpException(sprintf(
-                  'An error occured: %s',
-                  $e->getMessage()
+                    'An error occured: %s',
+                    $e->getMessage()
                 ));
             }
 
