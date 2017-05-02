@@ -227,7 +227,7 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
 
     $app['twig']->addGlobal('tabs_course_menu', $tabsCourseMenu);
 };
-
+//////////////////////////////////////////////////////////////////////////////////
 $buildBlogSlide = function (Request $request, Application $app) {
     $locale = $request->get('_locale');
     $articles = $app['config']['blog'][$locale]['articles'];
@@ -239,7 +239,27 @@ $buildBlogSlide = function (Request $request, Application $app) {
         return $article2['date']->getTimestamp() - $article1['date']->getTimestamp();
     });
 
-    $app['twig']->addGlobal('last_articles', $articles);
+    $lastArticles = array_slice($articles, 0, 5, true);
+
+    foreach ($lastArticles as $key => $article) {
+      $matches = array();
+      $content = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $locale, $article['file']), array());
+
+      // Get a summary from article.
+      $pattern = "/^(?!#)(?!!)((.)\W*){160} ((\w+\b)){1}/m";
+      preg_match($pattern, $content, $matches);
+
+      if ($matches[0]) {
+        $matches[0] = sprintf('%s...', $matches[0]);
+        $matches[0] = $app['markdown']->transform($matches[0]);
+      }
+
+      $article['summary'] = $matches[0] ?: "...";
+
+      $lastArticles[$key] = $article;
+    }
+
+    $app['twig'] -> addGlobal('last_articles', $lastArticles);
 };
 
 $buildArticlesList = function (Request $request, Application $app) {

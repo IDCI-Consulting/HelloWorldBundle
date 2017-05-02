@@ -1,4 +1,3 @@
-﻿﻿
 # Mettre en place un environnement de développement pour réaliser un site avec PHP et MySQL #
 ![AMPP logos](/images/blog/apache-mysql-php-phpmyadmin.png)
 

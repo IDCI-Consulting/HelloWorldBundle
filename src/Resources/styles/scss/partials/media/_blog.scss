@@ -8,6 +8,10 @@
       p {
         font-size: 1.5rem;
       }
+
+      .summary p {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -39,12 +43,24 @@
       p {
         font-size: .7rem;
       }
+
+      .summary p {
+        //TODO
+        text-transform: none;
+        width: 85%;
+        text-align: justify;
+        font-weight: normal;
+        font-size: .65rem;
+        line-height: 1rem;
+      }
     }
 
     .read-article {
+      top:0;
 
       a {
         font-size: .7rem;
+        margin-right: 6%;
       }
     }
 
@@ -60,8 +76,15 @@
   }
 
   .last-articles {
+    .slick-list {
+      padding-bottom: 10%;
+    }
     .slick-slider .slick-track {
       min-height: 10rem;
+    }
+    span {
+      margin-right: 10%;
+      font-size: 0.75rem;
     }
   }
 }

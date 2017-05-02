@@ -23,6 +23,9 @@
                     </div>
                     <div class="small-9 columns title">
                         <p>{{ article['title'] }}</p>
+                        <div class="summary">
+                            <p>{{ article['summary']|raw }}</p>
+                        </div>
                     </div>
                     <div class="small-3 columns end read-article">
                         <a href="{{ path('article', {_locale: app.translator.locale, file: article['file']}) }}">{% trans %}Read article{% endtrans %}</a>
