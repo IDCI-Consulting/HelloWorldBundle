@@ -12,7 +12,7 @@
         </header>
 
         <div class="medium-12 columns accordion-content articles">
-            {% for article in last_articles|slice(0, 5) %}
+            {% for article in last_articles %}
                 <div class="row">
                     <div class="small-12 columns info">
                         <span>{{ article['date'] }}</span>

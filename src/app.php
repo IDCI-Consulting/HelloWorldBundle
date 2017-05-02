@@ -227,7 +227,7 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
 
     $app['twig']->addGlobal('tabs_course_menu', $tabsCourseMenu);
 };
-//////////////////////////////////////////////////////////////////////////////////
+
 $buildBlogSlide = function (Request $request, Application $app) {
     $locale = $request->get('_locale');
     $articles = $app['config']['blog'][$locale]['articles'];
