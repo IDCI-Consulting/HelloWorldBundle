@@ -1,3 +1,5 @@
+var initialNavMenuHeight;
+
 function buildNavMenu () {
   var navMenu = new Array();
   var headers = document.querySelectorAll('.blog-article h2, .blog-article h3');
@@ -39,10 +41,26 @@ function buildNavMenu () {
   if (row) {
     row.insertBefore(ul, row.firstChild);
   }
+  initialNavMenuHeight = $('ul.article-navigation').height() + 120;
 
   enableScroll();
+  $( window ).scroll(handleScrollOnFooter);
 }
 
+/**
+ * Resize the nav menu when we scroll at the bottom of the page
+ * to avoid overlapping with the footer
+ */
+function handleScrollOnFooter () {
+    var containerVisibleHeight = getVisiblePart('.container.main-section');
+    var $navMenu               = $( 'ul.article-navigation' );
+
+    if (containerVisibleHeight < initialNavMenuHeight) {
+      $navMenu.height(containerVisibleHeight - 150);
+    } else {
+      $navMenu.height('auto');
+    }
+}
 
 function slugify (value) {
   var rExps= [
@@ -75,3 +93,15 @@ function slugify (value) {
     .replace(/[^a-z0-9-]/g, '')
     .replace(/\-{2,}/g,'-');
 };
+
+//Return the visible height of any element on screen
+function getVisiblePart (el) {
+  var scrollTop = $(window).scrollTop(),
+    scrollBottom = scrollTop + $(window).height(),
+    elTop = $(el).offset().top,
+    elBottom = elTop + $(el).outerHeight(),
+    visibleTop = elTop < scrollTop ? scrollTop : elTop,
+    visibleBottom = elBottom > scrollBottom ? scrollBottom : elBottom;
+
+  return Math.max(visibleBottom - visibleTop, 0);
+}
