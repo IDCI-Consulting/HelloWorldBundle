@@ -18,12 +18,14 @@
         </div>
         {% include 'partials/asideMenu.html.twig' %}
         {% include 'partials/blog/lastArticles.html.twig' %}
-        {% include 'partials/blog/articlesByCategories.html.twig' %}
+        {#{% include 'partials/blog/articlesByCategories.html.twig' %}#}
+        {% include 'partials/blog/articlesByDate.html.twig' %}
     </section>
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
+    <script src='/js/foundation.min.js'></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('.articles').slick({

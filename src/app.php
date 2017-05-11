@@ -262,31 +262,75 @@ $buildBlogSlide = function (Request $request, Application $app) {
 };
 
 $buildArticlesList = function (Request $request, Application $app) {
-    $locale = $request->get('_locale');
-    $articlesByCategories = array();
-    $categories = $app['config']['blog'][$locale]['categories'];
-    $articles = $app['config']['blog'][$locale]['articles'];
 
-    foreach ($categories as $index => $category) {
-        $articlesByCategories[$category] = array();
-
-        foreach ($articles as $key => $article) {
+    $buildListByDate = function ($articles) {
+      $articlesByDate = array();
+      $years = array();
+        foreach ($articles as $article) {
             $article['date'] = date_create_from_format('d/m/Y', $article['date']);
-            if (in_array($category, $article['categories'])) {
-                array_push($articlesByCategories[$category], $article);
+
+            if (!in_array($article['date']->format('Y'), $years)) {
+                array_push($years, $article['date']->format('Y'));
             }
         }
+          // Sort from high to low
+        rsort($years);
 
-        usort($articlesByCategories[$category], function ($article1, $article2) {
-            if ($article1['date'] == $article2['date']) {
-                return 0;
+        foreach ($years as $year) {
+            $articlesByDate[$year] = array();
+
+            foreach ($articles as $article) {
+                $article['date'] = date_create_from_format('d/m/Y', $article['date']);
+                $articleYear = $article['date']->format('Y');
+                if ($articleYear == $year) {
+                    array_push($articlesByDate[$year], $article);
+                }
             }
 
-            return ($article1['date'] < $article2['date']) ? 1 : -1;
-        });
-    }
+            usort($articlesByDate[$year], function($article1, $article2) {
+                if ($article1['date'] == $article2['date']) {
+                    return 0;
+                }
 
-    $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
+                  return ($article1['date'] < $article2['date']) ? 1 : -1;
+            });
+        }
+
+        return $articlesByDate;
+    };
+
+    // $buildListByCategories = function ($articles, $categories) {
+    //     $articlesByCategories = array();
+    //     foreach ($categories as $category) {
+    //         $articlesByCategories[$category] = array();
+    //
+    //         foreach ($articles as $article) {
+    //             $article['date'] = date_create_from_format('d/m/Y', $article['date']);
+    //             if (in_array($category, $article['categories'])) {
+    //                 array_push($articlesByCategories[$category], $article);
+    //             }
+    //         }
+    //
+    //         usort($articlesByCategories[$category], function ($article1, $article2) {
+    //             if ($article1['date'] == $article2['date']) {
+    //                 return 0;
+    //             }
+    //
+    //             return ($article1['date'] < $article2['date']) ? 1 : -1;
+    //         });
+    //     }
+    //     return $articlesByCategories;
+    // };
+
+    $locale = $request->get('_locale');
+    $articles = $app['config']['blog'][$locale]['articles'];
+    // $categories = $app['config']['blog'][$locale]['categories'];
+    // $articlesByCategories = $buildListByCategories($articles, $categories);
+    $articlesByDate = $buildListByDate($articles);
+
+
+    // $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
+    $app['twig']->addGlobal('articles_by_date', $articlesByDate);
 };
 
 $buildPartnersFromJson = function (Request $request, Application $app) {
