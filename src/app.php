@@ -191,7 +191,6 @@ $buildAsideMenu = function (Request $request, Application $app) {
             $asideMenu[$id] = $matches['title'][$j];
         }
     }
-
     $app['twig']->addGlobal('aside_menu', $asideMenu);
 };
 
