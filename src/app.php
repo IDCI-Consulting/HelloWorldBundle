@@ -186,7 +186,7 @@ $buildAsideMenu = function (Request $request, Application $app) {
      * Retrieve the ids and the text (inside h2 tag which is child of header)
      */
     foreach ($matched_sections['section'] as $i => $section) {
-        preg_match_all('/<section[ ]*id=\\"(?<id>.+)\\".*<h2.*>(?<title>.*)</siU', $section, $matches);
+        preg_match_all('/<section[ ]*id="(?<id>.+)".*<h2.*>(?<title>.*)</siU', $section, $matches);
         foreach ($matches['id'] as $j => $id) {
             $asideMenu[$id] = $matches['title'][$j];
         }
@@ -249,7 +249,7 @@ $buildBlogSlide = function (Request $request, Application $app) {
       preg_match($pattern, $content, $matches);
 
       if ($matches[0]) {
-        $matches[0] = sprintf('%s...', $matches[0]);
+        $matches[0] = sprintf('%s ...', $matches[0]);
         $matches[0] = $app['markdown']->transform($matches[0]);
       }
 
@@ -299,37 +299,37 @@ $buildArticlesList = function (Request $request, Application $app) {
         return $articlesByDate;
     };
 
-    // $buildListByCategories = function ($articles, $categories) {
-    //     $articlesByCategories = array();
-    //     foreach ($categories as $category) {
-    //         $articlesByCategories[$category] = array();
-    //
-    //         foreach ($articles as $article) {
-    //             $article['date'] = date_create_from_format('d/m/Y', $article['date']);
-    //             if (in_array($category, $article['categories'])) {
-    //                 array_push($articlesByCategories[$category], $article);
-    //             }
-    //         }
-    //
-    //         usort($articlesByCategories[$category], function ($article1, $article2) {
-    //             if ($article1['date'] == $article2['date']) {
-    //                 return 0;
-    //             }
-    //
-    //             return ($article1['date'] < $article2['date']) ? 1 : -1;
-    //         });
-    //     }
-    //     return $articlesByCategories;
-    // };
+    $buildListByCategories = function ($articles, $categories) {
+        $articlesByCategories = array();
+        foreach ($categories as $category) {
+            $articlesByCategories[$category] = array();
+
+            foreach ($articles as $article) {
+                $article['date'] = date_create_from_format('d/m/Y', $article['date']);
+                if (in_array($category, $article['categories'])) {
+                    array_push($articlesByCategories[$category], $article);
+                }
+            }
+
+            usort($articlesByCategories[$category], function ($article1, $article2) {
+                if ($article1['date'] == $article2['date']) {
+                    return 0;
+                }
+
+                return ($article1['date'] < $article2['date']) ? 1 : -1;
+            });
+        }
+        return $articlesByCategories;
+    };
 
     $locale = $request->get('_locale');
     $articles = $app['config']['blog'][$locale]['articles'];
-    // $categories = $app['config']['blog'][$locale]['categories'];
-    // $articlesByCategories = $buildListByCategories($articles, $categories);
+    $categories = $app['config']['blog'][$locale]['categories'];
+    $articlesByCategories = $buildListByCategories($articles, $categories);
     $articlesByDate = $buildListByDate($articles);
 
 
-    // $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
+    $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
     $app['twig']->addGlobal('articles_by_date', $articlesByDate);
 };
 
