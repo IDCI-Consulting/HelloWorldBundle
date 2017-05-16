@@ -84,10 +84,10 @@ function slugify (value) {
     value=value.replace(rExps[i].re, rExps[i].ch);
   }
 
-  // 1) met en bas de casse
-  // 2) remplace les espace par des tirets
-  // 3) enleve tout les caratères non alphanumeriques
-  // 4) enlève les doubles tirets
+  // 1) transform to lower case
+  // 2) replace spaces with hyphens
+  // 3) remove all non-alphanumeric characters
+  // 4) remove double hyphens
   return value.toLowerCase()
     .replace(/\s+/g, '-')
     .replace(/[^a-z0-9-]/g, '')
