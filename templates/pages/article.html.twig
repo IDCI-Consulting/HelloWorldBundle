@@ -25,8 +25,14 @@
 {% endblock %}
 
 {% block javascripts %}
+{{ parent() }}
 
+<script src="{{ asset('js/idciScripts/articleNavBuilder.js') }}"></script>
+<script src="{{ asset('js/idciScripts/scrollTo.js') }}"></script>
 <script>
+    $(document).ready(function () {
+      buildNavMenu();
+    });
     var hashCode = function(string) {
         var hash = 0, i, chr, len;
         if (string.length === 0) return hash;

@@ -1,0 +1,18 @@
+<section id="all-articles" class="full-width tabs-content">
+    <h2 class="hide-for-small-only small-10 medium-12 columns"> {% trans %}All articles{% endtrans %} </h2>
+
+    <ul class="tabs show-for-medium-up" data-tab>
+      <li class="tab-title">
+        <a href="#date">{% trans %}By date{% endtrans %}</a>
+      </li>
+      <li class="tab-title">
+        <a href="#categories">{% trans %}By categories{% endtrans %}</a>
+      </li>
+    </ul>
+    <div class="content active on" id="date">
+      {% include 'partials/blog/articlesByDate.html.twig' %}
+    </div>
+    <div class="content" id="categories">
+      {% include 'partials/blog/articlesByCategories.html.twig' %}
+    </div>
+</section>
