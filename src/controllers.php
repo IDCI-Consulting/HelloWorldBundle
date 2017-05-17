@@ -185,7 +185,8 @@ $intlApp
             $course = $app['twig']->render(
                 'partials/courses/output.html.twig',
                 array(
-                    'course' => $app['markdown']->transform($matchedCourse)
+                    'course' => $app['markdown']->transform($matchedCourse),
+                    'format' => $_format,
                 )
             );
 
