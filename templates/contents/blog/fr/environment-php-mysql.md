@@ -243,7 +243,7 @@ Pour cela vous pouvez utiliser l'outil [phpMyAdmin](http://fr.wikipedia.org/wiki
 <p class="notice question" markdown="1">
 L'URL d'accès à votre phpMyAdmin est différente suivant votre système d'exploitation
 ou suivant votre configuration. Sous système Debian ou dérivés (Ubuntu, ...) il
-est accessible depuis l'URL suivantec: http://localhost/phpmyadmin
+est accessible depuis l'URL suivante: http://localhost/phpmyadmin
 </p>
 
 Vous pouvez également exécuter les requêtes SQL suivantes en replaçant **user** par le nom de l'utilisateur que vous voulez créer et *** par le mot de passe :
@@ -271,4 +271,4 @@ Ces informations vous seront demandées lors de l'installation d'une application
 
 Si vous souhaitez une assistance pour la mise en place d'un environnement de développement
 pour vos équipes ou encore une aide pour le déploiement et la migration de votre site,
-vous pouvez nous [contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
+vous pouvez [nous contacter]({{ path('contact', {_locale: app.translator.locale}) }} "Contactez-nous").
