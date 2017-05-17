@@ -168,35 +168,6 @@
         }
       }
 
-      li.twitter {
-
-        a {
-
-          span {
-            @include social-background-position('twitter');
-          }
-        }
-      }
-
-      li.rss {
-
-        a {
-
-          span {
-            @include social-background-position('rss');
-          }
-        }
-      }
-
-      li.github {
-
-        a {
-
-          span {
-            @include social-background-position('github');
-          }
-        }
-      }
     }
 
     .sub-footer {
