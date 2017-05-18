@@ -12,3 +12,74 @@
     line-height: 4.5rem;
   }
 }
+
+.course-content {
+  width: 1170px;
+  margin: 0 auto;
+
+  h1 {
+    font-family: Oswald-Bold,sans-serif;
+    letter-spacing: .4rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  h2 {
+    border-bottom: 2px solid $idci-light-blue;
+    padding-left: 4rem;
+    margin-top: 4%;
+    color: $idci-dark-green;
+    page-break-before: auto;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    margin-left: 1rem;
+    color: $idci-green;
+    margin-top: 3%;
+    page-break-before: avoid;
+    page-break-after: avoid;
+
+  }
+
+  h3 {
+    margin-left: 0rem;
+    margin-top: 5rem;
+    color: $idci-dark-green;
+    page-break-before: avoid;
+    font-weight: bold;
+    page-break-after: avoid;
+
+
+    & + h4 {
+      margin-top: 0;
+
+    }
+
+  }
+
+  h4 + p {
+    page-break-before: avoid;
+    color: $idci-darker-grey;
+    margin-left: 1rem;
+    page-break-after: avoid;
+  }
+
+  ul {
+    page-break-inside: avoid;
+    page-break-before: avoid;
+
+    li {
+      background: url(https://idci-consulting.fr/images/balise_right.svg)  no-repeat 10px;
+      background-position: left;
+      padding-left: 2rem;
+      margin-left: 1rem;
+      page-break-after: avoid;
+
+    }
+
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+}
