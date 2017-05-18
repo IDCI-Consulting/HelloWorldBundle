@@ -4,7 +4,7 @@
 ## Introduction ##
 
 Qui n'a jamais eu envie d'insérer des miniatures sur une page web, pour avoir un aperçu d'autres pages en liens ?
-Il s'agit d'une fonctionnalité attrayante qui pourrait par exemple être mis en place sur une page ""Partenaires",
+Il s'agit d'une fonctionnalité attrayante qui pourrait par exemple être mis en place sur une page "Partenaires",
 sur le portfolio d'un développeur, etc.
 
 Avec le bundle **[IDCIWebPageScreenshotBundle](https://github.com/IDCI-Consulting/WebPageScreenShotBundle "IDCIWebPageScreenshotBundle")** pour **Symfony2**,
@@ -61,7 +61,7 @@ Puis, nous ajoutons le controleur dans le fichier `app/routing.yml`.
         type:     annotation
 ```
 
-Dans le fichier `app/parameters.yml`, il sous faudra spécifier certaines valeurs par défaut :
+Dans le fichier `app/parameters.yml`, il nous faudra spécifier certaines valeurs par défaut :
 
 ```yaml
     parameters:
