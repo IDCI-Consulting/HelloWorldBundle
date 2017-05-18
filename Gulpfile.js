@@ -131,7 +131,7 @@ gulp.task('prod-scripts', function() {
     del(web['script']+'/*.js');
     gulp.src([foundation.script.jquery, foundation.script.foundation, src['script'], slick, ace])
         .pipe(uglify())
-        .pipe(concat({ path: 'app.min.js'}))
+        //.pipe(concat({ path: 'app.min.js'}))
         .pipe(rev())
         .pipe(chmod(775))
         .pipe(gulp.dest(web['script']))
