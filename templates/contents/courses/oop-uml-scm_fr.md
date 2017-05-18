@@ -56,6 +56,7 @@ _2 heures_
  - Merise
  - Comparaison monde objet / monde relationnel
 
+<p class="pdf-break"></p>
 
 ### Design pattern
 
@@ -120,6 +121,8 @@ _4 heures_
 
 
 #### Branches
+
+<p class="pdf-break"></p>
 
 {day4}
 

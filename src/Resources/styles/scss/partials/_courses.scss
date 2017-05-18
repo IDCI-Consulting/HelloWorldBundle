@@ -29,16 +29,12 @@
     padding-left: 4rem;
     margin-top: 4%;
     color: $idci-dark-green;
-    page-break-before: auto;
-    page-break-after: avoid;
   }
 
   h4 {
     margin-left: 1rem;
     color: $idci-green;
     margin-top: 3%;
-    page-break-before: avoid;
-    page-break-after: avoid;
 
   }
 
@@ -46,9 +42,7 @@
     margin-left: 0rem;
     margin-top: 5rem;
     color: $idci-dark-green;
-    page-break-before: avoid;
     font-weight: bold;
-    page-break-after: avoid;
 
 
     & + h4 {
@@ -81,5 +75,9 @@
     &:last-child {
       margin-bottom: 2rem;
     }
+  }
+
+  .pdf-break {
+    page-break-after: always;
   }
 }

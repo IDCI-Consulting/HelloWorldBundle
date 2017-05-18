@@ -53,6 +53,7 @@ _4 heures_
  - Créer son thème: comment ça marche ?
  - Utiliser le codex pour customiser son thème
 
+ <p class="pdf-break"></p>
 
 {day3}
 
