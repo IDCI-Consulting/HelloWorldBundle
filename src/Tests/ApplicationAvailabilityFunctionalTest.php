@@ -54,6 +54,10 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
             '/en/blog',
             '/fr/contact',
             '/en/contact',
+            '/fr/mentions',
+            '/en/mentions',
+            '/fr/sitemap',
+            '/en/sitemap',
         );
 
         $this->addArticleUrls($urls, 'fr');
