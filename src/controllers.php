@@ -168,10 +168,9 @@ $intlApp
 
                 return $response;
             }
-
             $matches = $app['course_manager']->matchContent($course);
 
-            $matchedCourse = '';
+            $matchedCourse = '<h1>'.strtoupper($matches['title'][0]).'</h1>';
             foreach ($matches['day'] as $i => $day) {
                 $day = $app['translator']->trans($day);
 
@@ -181,7 +180,6 @@ $intlApp
                     $matches['content'][$i]
                 );
             }
-
             $course = $app['twig']->render(
                 'partials/courses/output.html.twig',
                 array(
