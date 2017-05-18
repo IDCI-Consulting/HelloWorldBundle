@@ -245,13 +245,17 @@ $buildBlogSlide = function (Request $request, Application $app) {
       $content = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $locale, $article['file']), array());
 
       // Get a summary from article.
-      $pattern = "/^(?!#)(?!!)((.)\W*){160} ((\w+\b)){1}/m";
+      $pattern = "/^(?!#)(?!!)((.)\W*){160} ((\w+\b)){1}/mU";
+      $pattern2 = "/\[.*$/m";
       preg_match($pattern, $content, $matches);
-
-      if ($matches[0]) {
-        $matches[0] = sprintf('%s ...', $matches[0]);
-        $matches[0] = $app['markdown']->transform($matches[0]);
-      }
+        if ($matches[0]) {
+          $matches[0] = preg_replace($pattern2, ' ', $matches[0]);
+          $matches[0] = preg_replace('/^\* .*$/m', '', $matches[0]);
+          $matches[0] = sprintf('%s ...', $matches[0]);
+          $matches[0] = $app['markdown']->transform($matches[0]);
+        } else {
+          $matches[0] = '...';
+        }
 
       $article['summary'] = $matches[0] ?: "...";
 

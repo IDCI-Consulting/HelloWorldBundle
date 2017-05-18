@@ -1,9 +1,9 @@
-# Symposium un outil pour réussir l’organisation de vos événements
+# Symposium, un outil pour réussir l’organisation de vos événements
 
 ![Symposium logo](/images/blog/symposium.png "Symposium")
 
 
-### Réussir et pérenniser son évènement (congrès, salons, séminaires, etc)
+## Réussir et pérenniser son évènement (congrès, salons, séminaires, etc)
 
 La réussite d'un **évènement** est multifactorielle :
 
@@ -29,7 +29,7 @@ Celles-ci permettront de solliciter les meilleurs intervenants et ainsi de suite
 s'est intéressé au sujet et à répondu à cette problématique par la création de **Symposium**.
 
 
-### Symposium : De la communication à la logistique, un ensemble de fonctionnalités intégrées !
+## Symposium : De la communication à la logistique, un ensemble de fonctionnalités intégrées !
 
 Cet outil Web est idoine pour tout **organisateur** ambitieux, il permet tout d'abord une automatisation des processus logistiques :
 
@@ -45,7 +45,7 @@ De plus, il permet, en quelques clics, de **générer un support de communicatio
  - En aval, pour retrouver via un espace personnalisé, des publications, des supports postés par les intervenants ou tout type de document (factures, reçus, etc)
 
 
-### Les avantages de Symposium
+## Les avantages de Symposium
 
 Outre son efficacité opérationnelle, **Symposium**, de par sa **licence GNU GPL**, garantit aux utilisateurs une évolution constante
 grâce à leur collaboration et à leur convergence vers un objectif commun : maintenir l'outil à niveau maximum de performance par la mise à jour de fonctionnalités toujours plus **innovantes**.
