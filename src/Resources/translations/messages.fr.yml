@@ -112,12 +112,13 @@
 'See': "{1} Voir|{2} Voir le"
 
 # Blog page
-'Our articles': "Nos articles"
+'All articles': "Tous les articles"
 'By categories': "Par catégories"
 'articles-by-categories': "articles-par-categories"
 'last-articles': "derniers-articles"
 'last articles': "derniers articles"
 'Read article': "Lire l'article"
+'By date': "Par date"
 
 # Errors
 'This is not the web page you are looking for': "Ce n'est pas la page web que vous recherchez"

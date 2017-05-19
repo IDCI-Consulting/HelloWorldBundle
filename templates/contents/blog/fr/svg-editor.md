@@ -1,4 +1,3 @@
-
 # Comment créer et utiliser un éditeur SVG ? #
 ![SVG logo](/images/blog/svg-logo.png "SVG logo")
 
@@ -25,11 +24,11 @@ Un éditeur SVG comme celui-ci donne les moyens de :
 * Configurer facilement l'éditeur
 * Ajouter des plugins et des nouvelles fonctionnalités
 
-### Quelle utilisation ? ### 
+### Quelle utilisation ? ###
 
 Vous pouvez en quelques minutes avoir votre éditeur SVG personnalisable sans avoir à recréer chacune des fonctionnalités avec la librairie fabricJS.
-Vous pouvez voir cet éditeur comme un framework de fabricJS. 
-Vous trouverez une verstion live ici : https://idci-consulting.github.io/SvgEditor/
+Vous pouvez voir cet éditeur comme un framework de fabricJS.
+Vous trouverez une version live ici : https://idci-consulting.github.io/SvgEditor/
 
 ### Exemple ###
 
@@ -55,7 +54,7 @@ Run the following command:
 
 docker-compose up -d
 docker exec -it svgeditor_app_1 npm install
-docker exec -it svgeditor_app_1 gulp build 
+docker exec -it svgeditor_app_1 gulp build
 
 creéra un dossier /lib avec les nouveaux scripts compatibles avec la plupart des navigateurs.
 
@@ -85,8 +84,3 @@ nous utlisons une librairie requirejs pour (pourquoi ? pour et contre)
 
 préciser comment démarerr con script (grace aà data main)
 si compatible code nouveau dans le dossier src sinon il faut changer le data main pour aller le chercher dans un autre dossier
-
-
-
-
-

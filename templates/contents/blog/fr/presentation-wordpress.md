@@ -1,5 +1,4 @@
-﻿﻿
-# Présentation de WordPress
+﻿﻿# Présentation de WordPress
 ![WordPress logo](/images/blog/wordpress.png "WordPress logo")
 
 

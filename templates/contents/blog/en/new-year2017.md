@@ -1,6 +1,6 @@
 # Our 2017 wishes
 
-IDCI's team wish you a very happy New Year.
+IDCI's team wishes you a very happy New Year.
 
 For this new year, we wish you to continue to explore your ideas and your creativity. To test new things and to be curious about everything around you.
 To take care of you and to share with people you love. To cheer on your entourage to surpass itself with you. To have new projects and to realize them.

@@ -26,9 +26,7 @@
     height: 260px;
   }
 
-  .brahim .profile-picture {
-    background-image: url(/images/brahim/sprite.png);
-
+  .profile-picture {
     &.down {
       background-position: 0 0;
     }
@@ -64,94 +62,24 @@
     &.upleft {
       background-position: -520px -728px;
     }
+  }
+
+  .brahim .profile-picture {
+    background-image: url(/images/brahim/sprite.png);
+  }
+
+  .eddie .profile-picture {
+    background-image: url(/images/eddie/sprite.png);
   }
 
   .gabriel .profile-picture {
-    background-image: url(/images/gabriel/sprite.jpg);
-
-    &.down {
-      background-position: 0 0;
-    }
-
-    &.downright {
-      background-position: -260px 0;
-    }
-
-    &.downleft {
-      background-position: 0 -364px;
-    }
-
-    &.front {
-      background-position: 0 -728px;
-    }
-
-    &.right {
-      background-position: -260px -364px;
-    }
-
-    &.left {
-      background-position: -520px 0;
-    }
-
-    &.up {
-      background-position: -260px -728px;
-    }
-
-    &.upright {
-      background-position: -520px -364px;
-    }
-
-    &.upleft {
-      background-position: -520px -728px;
-    }
-  }
-
-  .frederic {
-
-    .profile-picture {
-      //background-image: url('/images/frederic/frederic.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin: 0 auto;
-    }
+    background-image: url(/images/gabriel/sprite.png);
   }
 
   .baptiste .profile-picture {
     background-image: url(/images/baptiste/sprite.png);
+  }
 
-    &.down {
-      background-position: 0 0;
-    }
-
-    &.downright {
-      background-position: -260px 0;
-    }
-
-    &.downleft {
-      background-position: 0 -364px;
-    }
-
-    &.front {
-      background-position: 0 -728px;
-    }
-
-    &.right {
-      background-position: -260px -364px;
-    }
-
-    &.left {
-      background-position: -520px 0;
-    }
-
-    &.up {
-      background-position: -260px -728px;
-    }
-
-    &.upright {
-      background-position: -520px -364px;
-    }
-
-    &.upleft {
-      background-position: -520px -728px;
-    }
+  .frederic .profile-picture {
+    background-image: url(/images/frederic/sprite.png);
   }
