@@ -20,10 +20,29 @@
 
 }
 @media #{$medium-only} {
-  .course-name {
 
+  .course-name {
     .contact-us {
       right: 3rem;
+    }
+  }
+
+  // Style for tabs in blog
+  #all-articles ul.tabs {
+    margin-left: 0%;
+  }
+}
+
+@media #{$large-up} {
+
+  #all-articles ul.tabs {
+    li.tab-title {
+      width: 15rem;
+      padding: 3px 0 3px 30px;
+      /* reset styles (optional): */
+      list-style: none;
+      margin: 0;
+      float: none;
     }
   }
 }

@@ -1,4 +1,4 @@
-<div id="{% trans %}articles-by-categories{% endtrans %}" class="by-categories full-width">
+<div id="{% trans %}articles-by-date{% endtrans %}" class="by-categories full-width">
     <div class="row">
         <header class="small-8 medium-12 columns accordion-toggle">
             <div class="row">
@@ -11,8 +11,9 @@
 
         <div class="small-12 columns accordion-content">
             <div class="row">
-                {% for category, articles in articles_by_categories %}
-                    <div class="small-12 columns category"><p>{{ category }}</p></div>
+                {% for date, articles in articles_by_date %}
+                    <div class="small-12 columns category"><p>{{ date }}</p></div>
+
                     {% for article in articles %}
                         <div class="small-12 columns article">
                             <div class="row" {% if article['image'] is defined %} style="background-image: url('/images/blog/{{ article['image'] }}');"{% endif %}>
@@ -22,6 +23,7 @@
                             </div>
                         </div>
                     {% endfor %}
+
                 {% endfor %}
             </div>
         </div>

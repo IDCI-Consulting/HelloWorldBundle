@@ -1,8 +1,8 @@
 @media #{$large-up} {
   .arrow {
-    display: inline !important;
+    display: inline;
   }
-
+/////////////////////////////////////////////////////////////////////////////
   section.trainings {
 
     .idci-content {
@@ -36,6 +36,9 @@
 }
 
 @media #{$medium-only} {
+  .arrow {
+    display: none;
+  }
 
   .scroll-to {
     height: 6rem;
@@ -43,13 +46,16 @@
     width: 6rem;
 
     img {
-      height: 3rem !important;
+      height: 3rem;
       width: 3rem;
     }
   }
 }
 
 @media #{$small-only} {
+  .arrow {
+    display: none;
+  }
 
   #presentation {
 

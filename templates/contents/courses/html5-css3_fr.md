@@ -42,6 +42,8 @@ _3 heures_
  - Dates et temps
  - Les éléments obsolètes : center, font, frame, acronym, etc
 
+ <p class="pdf-break"></p>
+
 {day2}
 
 
@@ -60,7 +62,6 @@ _3 heures_
  - Gestion des dates, des emails, ..
  - Les validations de formulaire en HTML5
  - Auto focus
-
 
 #### Vue d'ensemble des APIs javascript pour HTML 5
 _3 heures_
@@ -94,6 +95,8 @@ _4 heures_
  - Contexte
  - Accessibilité
 
+ <p class="pdf-break"></p>
+ 
 {day4}
 
 

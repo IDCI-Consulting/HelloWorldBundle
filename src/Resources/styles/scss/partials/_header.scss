@@ -86,21 +86,6 @@ button.dropdown {
   }
 }
 
-.dropdown-flag {
-  background: none!important;
-  height: 5rem;
-  margin: 0;
-  width: 100%;
-
-  &:hover {
-    background: none!important;
-  }
-
-  &::after {
-    left: 2rem;
-  }
-}
-
 .langs {
   display: block;
   height: 100%;

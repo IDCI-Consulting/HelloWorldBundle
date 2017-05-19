@@ -42,6 +42,8 @@ _3 hours_
  - Date and time
  - Deprecated elements : center, font, frame, acronym, etc.
 
+ <p class="pdf-break"></p>
+
 {day2}
 
 
@@ -92,6 +94,8 @@ _4 hours_
  - Canvas vs SVG
  - Context
  - Accessibility
+
+ <p class="pdf-break"></p>
 
 {day4}
 

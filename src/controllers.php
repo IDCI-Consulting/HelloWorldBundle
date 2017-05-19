@@ -168,10 +168,9 @@ $intlApp
 
                 return $response;
             }
-
             $matches = $app['course_manager']->matchContent($course);
 
-            $matchedCourse = '';
+            $matchedCourse = '<h1>'.strtoupper($matches['title'][0]).'</h1>';
             foreach ($matches['day'] as $i => $day) {
                 $day = $app['translator']->trans($day);
 
@@ -181,11 +180,11 @@ $intlApp
                     $matches['content'][$i]
                 );
             }
-
             $course = $app['twig']->render(
                 'partials/courses/output.html.twig',
                 array(
-                    'course' => $app['markdown']->transform($matchedCourse)
+                    'course' => $app['markdown']->transform($matchedCourse),
+                    'format' => $_format,
                 )
             );
 
@@ -234,6 +233,7 @@ $intlApp
         '/article/{file}',
         function (Request $request, $_locale, $file) use ($app) {
             $articleConfiguration = array();
+            $isDisplayable = false;
 
             foreach ($app['config']['blog'][$_locale]['articles'] as $article) {
                 if ($article['file'] === $file) {
@@ -246,10 +246,16 @@ $intlApp
                         'article',
                         $article['image']
                     );
+
+                    $isDisplayable = true;
                 }
             }
 
             try {
+                if (!$isDisplayable) {
+                    throw new Exception('this page is not available.');
+                }
+
                 $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
                 $article = $app['markdown']->transform($article);
             } catch (\Exception $e) {

@@ -4,6 +4,11 @@
     right: 1rem;
     top: 20%;
   }
+
+  ul.article-navigation {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 @media #{$medium-only} {
