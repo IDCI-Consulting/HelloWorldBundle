@@ -7,13 +7,13 @@
 _4 hours_
 
  - Definition
- - Historic
+ - History
  - Object / class
  - Declaration
  - Fields
  - Methods
- - Objects instantiation
- - Objects cloning
+ - Object instantiation
+ - Object cloning
 
 
 #### Methods
