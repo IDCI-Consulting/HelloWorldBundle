@@ -82,7 +82,8 @@
 
   .frederic .profile-picture {
     background-image: url(/images/frederic/sprite.png);
-    background-size: cover;
+    background-size: contain;
+    background-color: #faf4f3;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: right;
   }
