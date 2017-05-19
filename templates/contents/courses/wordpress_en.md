@@ -53,6 +53,7 @@ _4 hours_
  - Create your theme : how ?
  - Use the codex to customize your theme
 
+ <p class="pdf-break"></p>
 
 {day3}
 

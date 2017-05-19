@@ -56,6 +56,7 @@ _2 hours_
  - Merise
  - Comparison object world / relationnal world
 
+<p class="pdf-break"></p>
 
 ### Design patterns (DP)
 
@@ -120,6 +121,8 @@ _4 hours_
 
 
 #### Branches
+
+<p class="pdf-break"></p>
 
 {day4}
 

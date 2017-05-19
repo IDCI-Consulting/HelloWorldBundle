@@ -49,15 +49,15 @@ String.prototype.decode = function(encoding) {
         var docViewBottom = docViewTop + $(document).height();
 
         var elemTop = el.offset().top;
-        var elemBottom = elemTop + el.height();
+        var elemBottom = elemTop + el.height() - 20;
         return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
     };
 
     $(window).scroll(function(){
         $('.aside-navigation-menu a').each(function(index, el){
             el = $(el);
-            if(isVisible(el.attr('href'))){
-                if(prev){
+            if (isVisible(el.attr('href'))) {
+                if (prev) {
                     prev.removeClass('active');
                 }
                 el.addClass('active');

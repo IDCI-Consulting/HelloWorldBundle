@@ -11,8 +11,8 @@ h2.member-name {
   letter-spacing: 0;
 }
 
-em.job-position {
-  color: $idci-green ! important;
+h2 ~ em.job-position {
+  color: $idci-green;
   display: block;
   font-size: 1.5rem;
   margin: 1rem 0;

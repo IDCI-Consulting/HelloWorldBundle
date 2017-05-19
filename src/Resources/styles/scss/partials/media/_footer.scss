@@ -17,8 +17,9 @@
     .contact-us-link {
 
       span {
-        display: inline-block !important;
+        display: inline-block;
       }
+
     }
 
     .phonenumber, .mail {
@@ -111,6 +112,7 @@
         }
 
         span {
+          display: none;
           margin-top: 1rem;
         }
       }
@@ -158,12 +160,6 @@
 
           &:last-child {
             float: none;
-          }
-
-          a {
-            span {
-              margin: 0 ! important;
-            }
           }
         }
       }

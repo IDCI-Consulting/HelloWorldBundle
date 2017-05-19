@@ -206,24 +206,6 @@
     height: 4rem;
   }
 
-  .f-dropdown {
-    position: fixed !important;
-    width: 100% !important;
-
-    &.open {
-      left: 0 !important;
-      top: 3.6rem !important;
-    }
-
-    li {
-      width: 100%;
-
-      a {
-        padding: 1rem;
-      }
-    }
-  }
-
   .search-icon {
     height: 4rem;
     line-height: 4rem;

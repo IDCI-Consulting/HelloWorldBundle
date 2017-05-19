@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        {% include 'flashMessage.html.twig' %}
+        {% block flashMessages %}{% endblock %}
         <div class="wrapper">
             {% block header %}{% endblock %}
             {% block content %}{% endblock %}
