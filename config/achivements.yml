@@ -10,9 +10,8 @@ achievements:
                 La F.A.F.C propose à ses utilisateurs une base de données contenant des informations, des liens vers les associations et de la documentation culturelle.
                 Le site web est disponible en anglais, français, et chinois.
             en: >
-                The F.A.F.C gathers about twenties associations together which aim to reinforce dialogue between China and France Chineses.
-                It seeks to unite associations working on friendship and cooperations promotions between these two countries.
-                The Federation provides a database with a lot of informations, links and documents.
+                The Federation of French Chinese Associations's objective is to regroup about twenty associations together in a single strucure, which contribute to reinforcing the friendship between China and France.
+                The Federation provides its users with a database containing a lot of information, links to the associations and cultural documentation.
                 This website is available in French, English and Chinese.
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
@@ -30,11 +29,10 @@ achievements:
                 Puis, nous avons développé, accompagné les équipes sur le projet de la nouvelle version (mise en ligne en mai 2011)
                 et participé à la refonte du processus de création de compte (inscription) et de l'espace réservé (service Premium).
             en: >
-                lemoniteur.fr is a news website to building professionals and local communities.
+                lemoniteur.fr is a news website destined to private and public players from contruction and local communities.
 
-
-                We have carried out a detailed audit of the website old version, then develop and coach teams about the new website version.
-                Also, reworking of account creation process (registration) and restricted area (Premium service).
+                We carried out a detailed audit of the old website version. Then we developed, coached teams about the new website version (put up in may 2011)
+                and participated in the reworking of the account creation process (registration) and the restricted area (Premium service).
         tools: ["wordpress"]
         services: ["development", "consulting"]
 
@@ -52,10 +50,10 @@ achievements:
                 Nous sommes devenus partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant
                 la partie agenda interactive de la plate-forme du congrès qui a eu lieu en Avril 2012.
             en: >
-                www2012 website has been developed to the 21st International World Wide Web Conference.
-                It gathers programs, partners and documents about the conference.
+                The www2012 website has been developed on the occasion of the 21st International World Wide Web Conference.
+                It contains the programs, partners and documents in relation with the conference.
 
-                We have become partner of the consortium by conceptualizing and implementing the interactive agenda of the congress,
+                We have become partner of the World Wide Web 2012 consortium by conceptualizing and implementing the interactive agenda of the congress platform,
                 which took place at April 2012.
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
@@ -88,9 +86,9 @@ achievements:
 
                 Nous avons contribué au projet en faisant de la formation et du consulting.
             en: >
-                Allopneus is a french leader of supply of tyres online.
+                Allopneus is a french specialist and leader of online sales of tyres.
 
-                We worked on the project by training and consulting.
+                We contributed to the project by doing training and consulting.
         tools: ["wordpress", "html5-css3"]
         services: ["consulting", "training"]
 
@@ -106,10 +104,10 @@ achievements:
 
                 Nous avons participé à l'ajout de nouvelles fonctionnalités, l'amélioration du code source et la créations d'APIs.
             en: >
-                Optedif is a website based on linking beetween teacher and learner.
-                The website provide trainings in plenty of fields and an optimized personnal space depending on your profile.
+                Optedif is a website aiming to bringing teachers and learners together.
+                The platform provides trainings in plenty of fields and an optimized personnal space adapted to your profile.
 
-                We took part in source code improvements, APIs and new functionnalities creation.
+                We took part in source code improvements, API creation and implementation of new functionnalities.
         tools: ["symfony2", "html5-css3", "docker", "rabbitmq", "php-unit"]
         services: ["development"]
 
@@ -125,10 +123,10 @@ achievements:
 
                 Nous avons relevé le challenge en prenant en main le framework MétéorJS et en créant l'éditeur permettant de personnaliser sa map.
             en: >
-                Mapyourstories is a website allowing to create cutomizable maps in collaboration and real time.
-                Each map can be print on a tee-shirt, tote bag, etc, and offered as a gift.
+                Mapyourstories is a website allowing users to create cutomizable underground maps which are editable in real time.
+                Each map can be printed out on a tee-shirt, tote bag, etc, and offered as a gift.
 
-                We have undertoken challenge by taking in charge of the MeteorJS framework and creating the editor allowing to customize your map.
+                We have risen up to the challenge by taking the MeteorJS framework in charge and creating the editor allowing one to customize a map.
         tools: ["meteor", "html5-css3"]
         services: ["development"]
 
