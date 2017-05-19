@@ -35,6 +35,8 @@
                 <script src="{{ asset('js/headerHandler/navHandler.js') }}"></script>
                 <script src="{{ asset('js/slick.js') }}"></script>
             {% block devJavascripts %}{% endblock %}
+            {% else %}
+                <script src="{{ asset('js/' ~ getRevFilename('app.min.js') ~ '') }}"></script>
             {% endif %}
             <script src="{{ asset('plugins/ace-editor/ace.js') }}" type="text/javascript" charset="utf-8"></script>
         {% endblock %}
