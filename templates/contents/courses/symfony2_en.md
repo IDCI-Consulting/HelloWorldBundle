@@ -31,8 +31,8 @@ _2 hours_
 #### Structure applications with Symfony2
 _2 hours_
 
- - The "application" notion => app/
- - The "bundles" notion
+ - The notion of "application" => app/
+ - The notion of "bundles"
  - My specific coding => src/
  - Externals libraries => vendor/
  - The root web => web/
@@ -108,7 +108,7 @@ _4 hours_
 
  - Use the configuration
  - Create Symfony2 commands
- - Use bundles already existing
+ - Use already existing bundles
  - FOSUserBundle (Users management)
  - DoctrineFixtures (Data import)
  - Create reusable bundles
