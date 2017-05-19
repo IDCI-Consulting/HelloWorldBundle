@@ -25,6 +25,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
     public function testPageIsSuccessful()
     {
         foreach ($this->getUrls() as $url) {
+            echo $url."\n";
             $client = $this->createClient();
             $client->request('GET', $url);
 
