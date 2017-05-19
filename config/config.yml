@@ -131,6 +131,7 @@ blog:
             - {file: "new-year2017", image: "new-year2017.jpg", title: "Our 2017 wishes", date: "13/01/2017" , author: "Louise Millon", categories: ["Various"]}
 
             #Symfony2
+            - {file: "idci-webpage-screenshot-bundle", image: "symfony2-logo.png", title: "IDCIWebPageScreenshotBundle", date: "11/09/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
             - {file: "bundle-composer-broadcast", image: "symfony2-logo.png", title: "Create a Symfony2 Bundle reusable and broadcast it via Composer", date: "15/01/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
             - {file: "type-doctrine2", image: "symfony2-logo.png", title: "How to create a new type Doctrine2 with Symfony2", date: "18/01/2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
 
