@@ -16,7 +16,7 @@ _2 hours_
 #### HTML5 / CSS3 : why do we hear so much about them ?
 _2 hours_
 
- - Why do we use HTML and CSS ? How to use them ? How about HTML5/CSS3 ?
+ - Why do we use HTML and CSS ? How to use them ? What about HTML5/CSS3 ?
  - Tags optimization to search engine (SEO)
  - About the compatibility between browsers
  - Future of HTML ?
@@ -29,13 +29,13 @@ _2 hours_
 _1 hour_
 
  - Learn when we have to use HTML5
- - Use HTML5 with browsers which don't support it
+ - Using HTML5 with browsers which don't support it
 
 
 #### HTML5 markup
 _3 hours_
 
- - Page structure : disappearance "inline" and "block" notions
+ - Page structure : disappearance of the "inline" and "block" options
  - HTML5 Doctype
  - New elements : section, article, aside, nav, etc.
  - A few more tags
@@ -104,8 +104,8 @@ _4 hours_
 _4 hours_
 
  - Events
- - Messages sending between documents
- - Messages sending by channels
+ - Sending messages between documents
+ - Sending messages by channels
  - The push server
  - Presentation of node.js
  - Web Workers to multitasking
