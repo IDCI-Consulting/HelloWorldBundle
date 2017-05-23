@@ -506,7 +506,7 @@ $intlApp
             throw new NotFoundResourceException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
         }
     )
-    ->bind('generate_vcard')
+    ->bind('generate-qrcode')
 ;
 
 $app
