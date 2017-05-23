@@ -68,7 +68,7 @@ class I18nRouteGenerator
         $this->setRouteParameters($route);
 
         if (!in_array('_locale', array_keys($route))) {
-            throw new \LogicException('You\'re route does not have a locale');
+            throw new \LogicException('Your route does not have a locale');
         }
 
         $routeName = $route['_route'];
