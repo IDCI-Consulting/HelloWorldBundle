@@ -25,7 +25,8 @@
         "symfony/yaml": "^2.7",
         "mheap/silex-markdown": "dev-master",
         "swiftmailer/swiftmailer": "^5.4",
-        "knplabs/knp-snappy": "^0.4.0"
+        "knplabs/knp-snappy": "^0.4.0",
+        "endroid/qrcode": "~1.1"
     },
     "autoload": {
         "psr-0": { "": "src/" }

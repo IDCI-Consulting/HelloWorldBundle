@@ -12,6 +12,8 @@ use Provider\SnappyServiceProvider;
 use Provider\YamlConfigServiceProvider;
 use Provider\FinderServiceProvider;
 use Provider\SitemapManagerServiceProvider;
+use Provider\MetaTagsGeneratorServiceProvider;
+use Provider\QrCodeServiceProvider;
 use Provider\CvManagerServiceProvider;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
@@ -59,6 +61,15 @@ $app->register(new SnappyServiceProvider(), array(
 ));
 $app->register(new FinderServiceProvider());
 $app->register(new SitemapManagerServiceProvider());
+$app->register(new MetaTagsGeneratorServiceProvider());
+$app->register(new QrCodeServiceProvider(), array(
+    'qrcode.options' => array(
+        'size' => 200,
+        'padding' => 5,
+        'error_correction_level' => 'high',
+        'foreground_color' => array('r' => 13, 'g' => 176, 'b' => 209)
+    )
+));
 $app->register(new \Provider\MetaTagsGeneratorServiceProvider());
 $app->register(new MonologServiceProvider(), array(
     'monolog.logfile' => $app['config']['logfile'],
