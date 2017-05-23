@@ -22,11 +22,14 @@ use Silex\Provider\HttpFragmentServiceProvider;
 use Silex\Provider\FormServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
+use Silex\Provider\MonologServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
+use Monolog\Logger;
 
 $app = new Application();
 
@@ -57,6 +60,10 @@ $app->register(new SnappyServiceProvider(), array(
 $app->register(new FinderServiceProvider());
 $app->register(new SitemapManagerServiceProvider());
 $app->register(new \Provider\MetaTagsGeneratorServiceProvider());
+$app->register(new MonologServiceProvider(), array(
+    'monolog.logfile' => $app['config']['logfile'],
+    'monolog.level'   => Logger::ERROR
+));
 
 $app['snappy.pdf_options'] = array(
     'encoding'   => 'UTF-8',

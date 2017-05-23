@@ -2,6 +2,8 @@ imports:
     - { resource: "achivements.yml" }
     - { resource: "version.yml" }
 
+logfile: "php://stderr"
+
 swiftmailer:
     host: 'smtp.gmail.com'
     port: 465
