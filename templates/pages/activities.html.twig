@@ -1,5 +1,9 @@
 {% extends "layout.html.twig" %}
 
+{% block metaTags %}
+<meta name="description" content="Découvrez nos références, outils et expertises : consulting, développement web, refonte et formations...">
+{% endblock %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
         'menu': menu,
@@ -20,7 +24,7 @@
                 autoplay: true,
                 autoplaySpeed: 5000,
                 inifinite: true,
-                nextArrow: '<img class="slick-arrow next right" src="{{ asset('images/slick_arrow.svg') }}"/>',
+                nextArrow: '<img class="slick-arrow next right hide-for-small-only" src="{{ asset('images/slick_arrow.svg') }}"/>',
                 prevArrow: false
             });
         });

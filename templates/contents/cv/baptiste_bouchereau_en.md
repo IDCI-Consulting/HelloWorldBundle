@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-**BAPTISTE BOUCHEREAU**  
+**BAPTISTE BOUCHEREAU**
 **Analyst | Engineer**
 
 {% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
@@ -15,25 +15,18 @@
 - Phone **06 62 35 45 36**
 - Languages **Mastered english**
 
-
 ### PROFESSIONAL EXPERIENCES
 
 _Since 2015_
 
-  - Independent at IDCI-CONSULTING | Analyst & Engineer
+  - Associate at IDCI-CONSULTING | Analyst & Engineer
 
 _2016_
 
-  - Professionalizing [courses](https://www.idci-consulting.fr/en/courses#symfony2) on Symfony framework
+  - 7 months mission in Paris in Carglass, the france's leading vehicle glass repair and replacement group. I was part of the team reworking the new Carglass website with the Symfony2 framework.
+  - Teached professionalizing [courses](https://www.idci-consulting.fr/en/courses#symfony2) on Symfony framework
   - Created a [SVG editor](https://github.com/IDCI-Consulting/SvgEditor) in JavaScript for a marketing operation
-  - 7 months mission at Courbevoie. Backend development of the Carglass France new website
-   - Involved in design and writing of interface functional specifications
-   - Used of SGBD Oracle with Doctrine2
-   - Deployments automation with Ansible
-   - Organized a wiki (Dokuwiki) to improve information sharing with teams
-  - Teached at Lyon 1 University, E-business class
-   - 28h of courses
-   - Teached e-commerce websites creation with the CMS Prestashop
+  - Teached at Lyon 1 University, E-business class - Prestashop courses
 
 _2015_
 
@@ -41,16 +34,12 @@ _2015_
    - Designed the application
    - Developed backend with Symfony2 and exposed patents via a REST api
    - Developed frontend with AngularJS, SASS and GoogleChart library
-  - Created two websites with responsive design for marketing agencies
-   - CMS : WordPress
-   - Created custom themes for each website
-   - Framework CSS : Foundation 5
-   - Used Sass
+  - Created 2 custom wordpress websites with custom themes for marketing agencies
   - Developed several Symfony2 bundles for a marketing agency
    - Bundle to generate uniques coding for promotional offers
    - Bundle to manage steps of participation in refund offers
  - Improved IDCI-Consulting workflow
-   - Setted up a continuous integration platform with Gitlab and Gitlab-CI
+   - Set up a continuous integration platform with Gitlab and Gitlab-CI
    - Deployed dockered applications in pre-production with Ansible
    - Automated of development environments setup with Docker and docker-compose
 
@@ -77,8 +66,9 @@ _November 2011_
    - Designed and producted an electronic lab book for several scientific teams
    - CMS : WordPress
 
+<p class="break" markdown="1"></p>
 
-### PERSONNAL PROJECTS
+### PERSONAL PROJECTS
 
 _2016_
 
@@ -102,16 +92,15 @@ _2015_
 
 _2015_
 
-  - Certification CAE - English level C1
+  - CAE certificate - English level C1
 
 _2012_
 
-  - University Technologic Degree in computer sciences
+  - DUT informatique - 2 years technical degree in computer sciences
 
 _2009_
 
-  - Scientific Baccalaureat
-
+  - French high-school scientific diploma
 
 ### SKILLS
 
@@ -123,17 +112,14 @@ _2009_
   - **Backend framework** _Symfony2, Silex, MeteorJs_
   - **Frontend framework** _Angular 1.2, VueJS 2, jQuery_
   - **CSS framework** _Bootstrap, Foundation_
-  - **Template engines** _Twig, Handlebars_
   - **CMS** _Wordpress, Prestashop_
   - **Versioning** _Git, Svn_
-  - **Databases** _Mysql, MongoDB_
+  - **Databases** _Mysql, MongoDB_, Oracle
   - **Virtualization** _Docker_
   - **Project management** _Redmine_
   - **Task runner** _Gulp_
   - **AMQP Tools** _RabbitMQ_
   - **Modeling** _UML_
-  - **Graphic design** _Gimp notions_
-
 
 ### PERSONAL EXPERIENCES
 

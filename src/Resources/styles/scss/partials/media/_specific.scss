@@ -9,7 +9,7 @@
   }
 
   .hide-for-small-only.arrow {
-    display: inline !important;
+    display: inline;
   }
 }
 
@@ -44,7 +44,7 @@
   }
 
   .hide-for-small-only.arrow {
-    display: inline !important;
+    display: inline;
   }
 
   .projects-content {
@@ -59,17 +59,17 @@
     margin: 1.75rem 0;
   }
 
-  .accordion-image {
-    display: inline-block ! important;
+  #advice .accordion-image,#formation .accordion-image,#web-development .accordion-image,#philosophy .accordion-image {
+    display: inline-block;
     float: left;
-    height: 100% ! important;
+    height: 100%;
     margin-right: 1rem;
     margin-top: 2rem;
     vertical-align: middle;
     width: 2rem;
 
     img {
-      height: auto ! important;
+      height: auto;
     }
   }
 

@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-**BRAHIM BOUKOUFALLAH**  
+**BRAHIM BOUKOUFALLAH**
 **Développeur Web Full Stack / Formateur**
 
 {% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
@@ -10,17 +10,17 @@
 
 ### À PROPOS DE MOI
 
-- Age **{{ getAge('1990-05-06') }} ans**
+- Âge **{{ getAge('1990-05-06') }} ans**
 - Email **brahim.boukoufallah@idci-consulting.fr**
 - Tél **07 68 65 39 61**
-- Langages **Anglais maîtrisé**
+- Langues **Anglais maîtrisé**
 
 
 ### EXPERIENCES PROFESSIONNELLES
 
 _Depuis Juillet 2014_
 
-  - Salarié chez IDCI-Consulting | Développeur Web / Formateur
+  - Salarié chez IDCI-Consulting | Développeur Web & Formateur
 
 _2016_
 
@@ -72,6 +72,7 @@ _2014_
 
   - **BTS SIO** (Service Informatique aux Organisations)
 
+<p class="break" markdown="1"></p>
 
 ### OUTILS INFORMATIQUES
 

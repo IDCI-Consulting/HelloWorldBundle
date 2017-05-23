@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-**BAPTISTE BOUCHEREAU**  
+**BAPTISTE BOUCHEREAU**
 **Analyste | Ingénieur**
 
 {% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
@@ -69,6 +69,8 @@ _2014_
   - Développement / intégration d'une plateforme de gestion des pads et d'un module d'e-learning claroline-connect
    - Développement de plugins pour etherpad-lite en NodeJS
    - Création d'un plugin pour la plateforme claroline pour créer et intégrer des pads
+
+<p class="break" markdown="1"></p>
 
 _2013_
 

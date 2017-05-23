@@ -14,6 +14,7 @@ use Provider\FinderServiceProvider;
 use Provider\SitemapManagerServiceProvider;
 use Provider\MetaTagsGeneratorServiceProvider;
 use Provider\QrCodeServiceProvider;
+use Provider\CvManagerServiceProvider;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
@@ -23,10 +24,14 @@ use Silex\Provider\HttpFragmentServiceProvider;
 use Silex\Provider\FormServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
+use Silex\Provider\MonologServiceProvider;
 use Silex\Provider\SwiftmailerServiceProvider;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
+use Monolog\Logger;
 
 $app = new Application();
 
@@ -48,6 +53,7 @@ $app->register(new MarkdownParserServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
 $app->register(new ContactManagerServiceProvider());
 $app->register(new CourseManagerServiceProvider());
+$app->register(new CvManagerServiceProvider());
 $app->register(new YamlConfigServiceProvider(__DIR__ . '/../config/config.yml'));
 $app->register(new SnappyServiceProvider(), array(
     'snappy.image_binary' => '/usr/bin/wkhtmltoimage',
@@ -55,6 +61,7 @@ $app->register(new SnappyServiceProvider(), array(
 ));
 $app->register(new FinderServiceProvider());
 $app->register(new SitemapManagerServiceProvider());
+<<<<<<< HEAD
 $app->register(new MetaTagsGeneratorServiceProvider());
 $app->register(new QrCodeServiceProvider(), array(
     'qrcode.options' => array(
@@ -63,6 +70,12 @@ $app->register(new QrCodeServiceProvider(), array(
         'error_correction_level' => 'high',
         'foreground_color' => array('r' => 13, 'g' => 176, 'b' => 209)
     )
+=======
+$app->register(new \Provider\MetaTagsGeneratorServiceProvider());
+$app->register(new MonologServiceProvider(), array(
+    'monolog.logfile' => $app['config']['logfile'],
+    'monolog.level'   => Logger::ERROR
+>>>>>>> master
 ));
 
 $app['snappy.pdf_options'] = array(
@@ -193,12 +206,11 @@ $buildAsideMenu = function (Request $request, Application $app) {
      * Retrieve the ids and the text (inside h2 tag which is child of header)
      */
     foreach ($matched_sections['section'] as $i => $section) {
-        preg_match_all('/<section[ ]*id=\\"(?<id>.+)\\".*<h2.*>(?<title>.*)</siU', $section, $matches);
+        preg_match_all('/<section[ ]*id="(?<id>.+)".*<h2.*>(?<title>.*)</siU', $section, $matches);
         foreach ($matches['id'] as $j => $id) {
             $asideMenu[$id] = $matches['title'][$j];
         }
     }
-
     $app['twig']->addGlobal('aside_menu', $asideMenu);
 };
 
@@ -216,7 +228,7 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
 
         $matches = $app['course_manager']->matchContent($content);
 
-        $title = trim($matches['title'][0]);
+        $title = strtolower(trim($matches['title'][0]));
 
         $description = trim($matches['description'][0]);
 
@@ -235,36 +247,6 @@ $buildTabsCourseMenu = function (Request $request, Application $app) {
     $app['twig']->addGlobal('tabs_course_menu', $tabsCourseMenu);
 };
 
-$buildCv = function (Request $request, Application $app) {
-    $name = $request->attributes->get('name');
-    $locale = $request->attributes->get('_locale');
-
-    $content = $app['twig']->render(sprintf('contents/cv/%s_%s.md', $name, $locale));
-
-    $content = preg_replace('/[^#]###[^#]/', '=### ', $content);
-    $content .= '=';
-
-    preg_match_all("/#{3}(?<content>.*)=/sU", $content, $matches);
-
-    $htmlCv = sprintf('<div class="%s">', $name);
-    foreach ($matches['content'] as $content) {
-        $skillClass = '';
-
-        if (preg_match('/(OUTILS INFORMATIQUE|SKILLS)/i', $content)) {
-            $skillClass = 'skills';
-        }
-
-        $htmlCv .= sprintf(
-            '<section markdown="1" class="cv-part %s">%s</section>',
-            $skillClass,
-            $app['markdown']->transform('###'.$content)
-        );
-    }
-    $htmlCv .= '</div>';
-
-    $app['twig']->addGlobal('html_cv', $htmlCv);
-};
-
 $buildBlogSlide = function (Request $request, Application $app) {
     $locale = $request->get('_locale');
     $articles = $app['config']['blog'][$locale]['articles'];
@@ -276,35 +258,103 @@ $buildBlogSlide = function (Request $request, Application $app) {
         return $article2['date']->getTimestamp() - $article1['date']->getTimestamp();
     });
 
-    $app['twig']->addGlobal('last_articles', $articles);
+    $lastArticles = array_slice($articles, 0, 5, true);
+
+    foreach ($lastArticles as $key => $article) {
+      $matches = array();
+      $content = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $locale, $article['file']), array());
+
+      // Get a summary from article.
+      $pattern = "/^(?!#)(?!!)((.)\W*){160} ((\w+\b)){1}/mU";
+      $pattern2 = "/\[.*$/m";
+      preg_match($pattern, $content, $matches);
+        if ($matches[0]) {
+          $matches[0] = preg_replace($pattern2, ' ', $matches[0]);
+          $matches[0] = preg_replace('/^\* .*$/m', '', $matches[0]);
+          $matches[0] = sprintf('%s ...', $matches[0]);
+          $matches[0] = $app['markdown']->transform($matches[0]);
+        } else {
+          $matches[0] = '...';
+        }
+
+      $article['summary'] = $matches[0] ?: "...";
+
+      $lastArticles[$key] = $article;
+    }
+
+    $app['twig'] -> addGlobal('last_articles', $lastArticles);
 };
 
 $buildArticlesList = function (Request $request, Application $app) {
-    $locale = $request->get('_locale');
-    $articlesByCategories = array();
-    $categories = $app['config']['blog'][$locale]['categories'];
-    $articles = $app['config']['blog'][$locale]['articles'];
 
-    foreach ($categories as $index => $category) {
-        $articlesByCategories[$category] = array();
-
-        foreach ($articles as $key => $article) {
+    $buildListByDate = function ($articles) {
+      $articlesByDate = array();
+      $years = array();
+        foreach ($articles as $article) {
             $article['date'] = date_create_from_format('d/m/Y', $article['date']);
-            if (in_array($category, $article['categories'])) {
-                array_push($articlesByCategories[$category], $article);
+
+            if (!in_array($article['date']->format('Y'), $years)) {
+                array_push($years, $article['date']->format('Y'));
             }
         }
+          // Sort from high to low
+        rsort($years);
 
-        usort($articlesByCategories[$category], function ($article1, $article2) {
-            if ($article1['date'] == $article2['date']) {
-                return 0;
+        foreach ($years as $year) {
+            $articlesByDate[$year] = array();
+
+            foreach ($articles as $article) {
+                $article['date'] = date_create_from_format('d/m/Y', $article['date']);
+                $articleYear = $article['date']->format('Y');
+                if ($articleYear == $year) {
+                    array_push($articlesByDate[$year], $article);
+                }
             }
 
-            return ($article1['date'] < $article2['date']) ? 1 : -1;
-        });
-    }
+            usort($articlesByDate[$year], function($article1, $article2) {
+                if ($article1['date'] == $article2['date']) {
+                    return 0;
+                }
+
+                  return ($article1['date'] < $article2['date']) ? 1 : -1;
+            });
+        }
+
+        return $articlesByDate;
+    };
+
+    $buildListByCategories = function ($articles, $categories) {
+        $articlesByCategories = array();
+        foreach ($categories as $category) {
+            $articlesByCategories[$category] = array();
+
+            foreach ($articles as $article) {
+                $article['date'] = date_create_from_format('d/m/Y', $article['date']);
+                if (in_array($category, $article['categories'])) {
+                    array_push($articlesByCategories[$category], $article);
+                }
+            }
+
+            usort($articlesByCategories[$category], function ($article1, $article2) {
+                if ($article1['date'] == $article2['date']) {
+                    return 0;
+                }
+
+                return ($article1['date'] < $article2['date']) ? 1 : -1;
+            });
+        }
+        return $articlesByCategories;
+    };
+
+    $locale = $request->get('_locale');
+    $articles = $app['config']['blog'][$locale]['articles'];
+    $categories = $app['config']['blog'][$locale]['categories'];
+    $articlesByCategories = $buildListByCategories($articles, $categories);
+    $articlesByDate = $buildListByDate($articles);
+
 
     $app['twig']->addGlobal('articles_by_categories', $articlesByCategories);
+    $app['twig']->addGlobal('articles_by_date', $articlesByDate);
 };
 
 $buildPartnersFromJson = function (Request $request, Application $app) {

@@ -3,6 +3,7 @@
  ****************************/
 @import '../settings';
 @import '../partials/header';
+@import '../partials/global';
 @import '../partials/media/header';
 
 div.row.cv {
@@ -15,14 +16,33 @@ div.row.cv {
 
 // specific to pdf version
 .content.pdf {
+
   section > ul > li {
     margin: 0 2rem 0 8rem;
     padding-top: 1rem;
     padding-bottom: 0;
   }
 
-  .cv-part ul {
-    page-break-inside: avoid;
+  .break {
+    page-break-after: always;
+  }
+
+  section.cv-part {
+    border: none;
+
+    ul {
+      page-break-inside: avoid;
+      list-style-type: none;
+
+      li ul li {
+        list-style-type: circle;
+      }
+    }
+  }
+
+  section.cv-part p em {
+    display: block;
+    margin-top: 20px;
   }
 
   section.cv-part:first-child {
@@ -34,6 +54,14 @@ div.row.cv {
     h3 {
       margin-bottom: 20px;
     }
+  }
+
+  section.cv-part:nth-child(2) li strong {
+    color: #0DB0D1;
+    font-size: .95rem;
+    left: 25%;
+    top: 0;
+    position: absolute;
   }
 }
 
@@ -47,7 +75,19 @@ div.columns.download-cv {
 .gabriel_bondaz {
   .skills {
     li {
-      margin-top: 40px;
+      height: 25px;
+      &:nth-child(2) {
+        height: 75px;
+      }
+      &:nth-child(4) {
+        height: 50px;
+      }
+
+      em {
+        padding-left: 50%;
+        position: relative;
+        bottom: 25px;
+      }
     }
   }
 }
@@ -128,14 +168,24 @@ section.cv-part {
   }
 
   &.skills {
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
     li {
-      position: relative;
+      display: block;
+      margin-bottom: 5px;
+
+      strong {
+        display: inline-block;
+        float: left;
+        width: 50%;
+      }
 
       em {
+        display: inline-block;
         color: $idci-black;
-        left: 40%;
-        line-height: 20px;
-        position: absolute;
         font-style: normal;
         font-weight: normal;
       }

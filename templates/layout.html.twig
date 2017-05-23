@@ -85,13 +85,16 @@
             <div class="medium-4 columns footer-part footer-socials ">
                 <ul class="row socials">
                     <li class="small-4 columns">
-                        <a href="https://twitter.com/idciconsulting" target="_blank" ><i class="fa fa-twitter"></i></a>
+                        <a href="https://twitter.com/idciconsulting" target="_blank" title="{%trans%}Follow us on{% endtrans %} Twitter" ><i class="fa fa-twitter"></i></a>
                     </li>
                     <li class="small-4 columns github">
-                        <a href="https://github.com/IDCI-Consulting" target="_blank"><i class="fa fa-github"></i></a>
+                        <a href="https://github.com/IDCI-Consulting" target="_blank" title="{%trans%}Star us on{% endtrans %} Github"><i class="fa fa-github"></i></a>
                     </li>
-                    <li class="small-4 columns github">
-                        <a href="https://www.facebook.com/idciconsulting" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <li class="small-4 columns">
+                        <a href="https://www.facebook.com/idciconsulting" target="_blank" title="{%trans%}Like us on{% endtrans %} Facebook"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="small-4 columns">
+                        <a href="http://presentation.idci.fr" target="_blank" title="{%trans%}Presentation{% endtrans %}"><i class="fa fa-question-circle"></i></a>
                     </li>
                 </ul>
             </div>
@@ -112,7 +115,6 @@
             {% if not hide_contact_link %}
                 <div class="medium-5 columns footer-part sub-footer contact-us">
                     <p class="contact-us-link">
-                        <span class="hide-for-small-only">{% trans %}For any request{% endtrans %}</span>
                         <a id="contact-link" href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button tiny" data-reveal-id="idci-modal">{% trans %}Contact us{% endtrans %}</a>
                     </p>
                 </div>

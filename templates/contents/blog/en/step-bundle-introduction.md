@@ -1,6 +1,5 @@
 ## Introduction to IDCIStepBundle
 
-
 ## Introduction
 
 Further to a customer need, we asked ourself how to answer to the problematic of an interactive worflow's creation.

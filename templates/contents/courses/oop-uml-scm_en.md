@@ -7,13 +7,13 @@
 _4 hours_
 
  - Definition
- - Historic
+ - History
  - Object / class
  - Declaration
  - Fields
  - Methods
- - Objects instantiation
- - Objects cloning
+ - Object instantiation
+ - Object cloning
 
 
 #### Methods
@@ -56,6 +56,7 @@ _2 hours_
  - Merise
  - Comparison object world / relationnal world
 
+<p class="pdf-break"></p>
 
 ### Design patterns (DP)
 
@@ -120,6 +121,8 @@ _4 hours_
 
 
 #### Branches
+
+<p class="pdf-break"></p>
 
 {day4}
 

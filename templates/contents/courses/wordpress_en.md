@@ -24,7 +24,7 @@ _2 hours_
 _4 hours_
 
  - What is a CMS ?
- - Some CMS
+ - Some CMSs
  - Why choose WordPress as a CMS ?
  - WordPress installation and configuration
  - WordPress database
@@ -36,7 +36,7 @@ _4 hours_
 ####  Using WP
 _4 hours_
 
- - Difference between article / page
+ - Difference between article and page
  - Create your first pages
  - Integrate medias (images, videos, etc.) and manage them
  - Create articles and classify them by categories
@@ -53,6 +53,7 @@ _4 hours_
  - Create your theme : how ?
  - Use the codex to customize your theme
 
+ <p class="pdf-break"></p>
 
 {day3}
 

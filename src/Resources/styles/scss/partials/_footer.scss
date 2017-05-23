@@ -65,6 +65,7 @@ footer {
 
   .contact-us-link {
     margin-bottom: 0;
+    text-align: right;
   }
 
   .coords {
@@ -130,32 +131,6 @@ footer {
           &:hover {
             color: $idci-light-blue;
           }
-        }
-      }
-    }
-
-    li.twitter {
-      a {
-        span {
-          @include social-background-position('twitter');
-        }
-      }
-    }
-
-    li.rss {
-      a {
-
-        span {
-          @include social-background-position('rss');
-        }
-      }
-    }
-
-    li.github {
-      a {
-
-        span {
-          @include social-background-position('github');
         }
       }
     }

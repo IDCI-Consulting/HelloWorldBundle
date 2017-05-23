@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-**GABRIEL BONDAZ**  
+**GABRIEL BONDAZ**
 **Ingénieur | Formateur**
 
 {% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
@@ -11,17 +11,17 @@
 
 ### À PROPOS DE MOI
 
-- Age **{{ getAge('1984-07-12') }} ans**
+- Âge **{{ getAge('1984-07-12') }} ans**
 - Email **gabriel.bondaz@idci-consulting.fr**
 - Tél **06 63 23 12 07**
-- Langages **Anglais maîtrisé**
+- Langues **Anglais maîtrisé**
 
 
 ### EXPERIENCES PROFESSIONNELLES
 
 _Depuis Sept. 2008_
 
-  - Création de IDCI-Consulting | Co-gérant / Ingénieur Recherche et Développement
+  - Création de IDCI-Consulting | Co-gérant & Ingénieur Recherche et Développement
   - Intervenant à l'[Université Lyon 1](http://www.univ-lyon1.fr/)
   - Formateur WEB : HTML, Css, Js, PHP, Magento, Wordpress, PrestaShop
   - Formateur dans le cadre de formation professionnelles (APTA - Clermont Ferrand, [ASP](https://www.asp-public.fr/), [Proximit](http://www.proximit.fr/), [iCap](http://icap.univ-lyon1.fr/), [EITE](http://www.eite.fr/), [OPCADIA](https://optedif-formation.fr/), etc)
@@ -71,6 +71,7 @@ _2009_
    - Accompagnement des équipes techniques (4 développeurs)
    - Développements web php (Symfony 1.4)
 
+<p class="break" markdown="1"></p>
 
 _2005-2007_
 
@@ -120,6 +121,7 @@ _2004_
   - **Modélisation** _UML_
   - **Autres** _Ajax, Jquery_
 
+<p class="break" markdown="1"></p>
 
 ### EXPERIENCES PERSONNELLES
 

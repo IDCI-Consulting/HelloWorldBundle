@@ -7,7 +7,7 @@ Vous êtes tombés au bon endroit !
 
 <p class="notice question" markdown="1">
 Si les mots CouchDB, Symfony2 et PHPillow ne vous semblent pas issus du fin fond
-des montagnes sibériques, vous pouvez passez directement à la 2ème partie !
+des montagnes sibériques, vous pouvez passer directement à la 2ème partie !
 </p>
 
 ## PHPillow, CouchDB, Symfony2 : petit mémo

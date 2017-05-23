@@ -14,7 +14,7 @@ achievements:
                 It seeks to unite associations working on friendship and cooperations promotions between these two countries.
                 The Federation provides a database with a lot of informations, links and documents.
                 This website is available in French, English and Chinese.
-        tools: ["wordpress"]
+        tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
     le_moniteur:
@@ -55,7 +55,7 @@ achievements:
                 www2012 website has been developed to the 21st International World Wide Web Conference.
                 It gathers programs, partners and documents about the conference.
 
-                We have become partner of the consortium by conceptualizing et implementing the interactive agenda of the congress,
+                We have become partner of the consortium by conceptualizing and implementing the interactive agenda of the congress,
                 which took place at April 2012.
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
@@ -64,26 +64,18 @@ achievements:
         image_path: "/images/carglass.png"
         url: "https://www.carglass.fr/"
         title: "Carglass"
-        enabled: true
+        enabled: false
         content:
             fr: >
-                Refonte du site de Carglass pour améliorer la prise de rendez-vous d'un client lors d'un bris de glace
+                Carglass, filière présente dans 35 pays du monde, est expert en réparation et remplacement des vitres de voitures.
+
+                Nous avons fait la refonte du site web de Carglass pour améliorer la prise de rendez-vous d'un client lors d'un bris de glace.
             en: >
+                Carglass is a company present in 35 countries. It is an expert to repair and replace damaged car windows.
+
+                We have redesign Carglass website to improve customer appointment booking throughout a glass breakage.
         tools: ["symfony2", "ansible", "php-unit"]
         services: ["development", "consulting"]
-
-    optedif:
-        image_path: "/images/optedif.png"
-        url: "https://optedif-formation.fr/"
-        title: "Optedif"
-        enabled: true
-        content:
-            fr: >
-                Tout comme Google, Yahoo ou encore l’école centrale de Lyon,
-                IDCI-Consulting est devenu partenaire du consortium World Wide Web 2012 en conceptualisant et en implémentant la partie agenda interactive de la plate-forme du congrès qui s’est déroulé du 16 au 20 avril 2012.
-            en: >
-        tools: ["symfony2", "html5-css3", "docker", "rabbitmq", "php-unit"]
-        services: ["development"]
 
     allopneus:
         image_path: "/images/allopneus.png"
@@ -92,9 +84,15 @@ achievements:
         enabled: true
         content:
             fr: >
+                Allopneus est un spécialiste et leader français de la vente de pneus sur internet.
+
+                Nous avons contribué au projet en faisant de la formation et du consulting.
             en: >
+                Allopneus is a french leader of supply of tyres online.
+
+                We worked on the project by training and consulting.
         tools: ["wordpress", "html5-css3"]
-        services: ["development"]
+        services: ["consulting", "training"]
 
     optedif:
         image_path: "/images/optedif.png"
@@ -112,7 +110,7 @@ achievements:
                 The website provide trainings in plenty of fields and an optimized personnal space depending on your profile.
 
                 We took part in source code improvements, APIs and new functionnalities creation.
-        tools: ["wordpress", "html5-css3"]
+        tools: ["symfony2", "html5-css3", "docker", "rabbitmq", "php-unit"]
         services: ["development"]
 
     mapyourstories:
@@ -146,6 +144,7 @@ achievements:
 
                 En parrallèle du développement du site PMC, Tessi fait appel à IDCI-Consulting pour effectuer la refonte du site Tessi marketing services, qui deviendra Tessi customer marketing.
             en: >
+                To describe
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
@@ -159,6 +158,7 @@ achievements:
                 C’est bien parce que les magistrats sont souvent des néophytes en informatique qu’ils ont besoin de vrais professionnels sachant s’adapter à leur langage et répondre à leurs besoins.
                 IDCI-Consulting a relevé ce défi en développant pour le cabinet d’avocat JAC un outil de communication simple et efficace.
             en: >
+                To describe
         tools: ["wordpress", "html5-css3"]
         services: ["development"]
 
@@ -174,6 +174,7 @@ achievements:
                 d'étudiants ou d'adultes souhaitant par exemple venir se retrouver au centre de la France pour une réunion familiale.
                 Tous les centres sont agrée Education Nationale, Jeunesse et Sport et deux d'entre eux sont Gites de france.
             en: >
+                To describe
         tools: ["pĥp", "symfony"]
         services: ["development"]
 
@@ -190,5 +191,6 @@ achievements:
 
                 Tessi accorde sa confiance à IDCI-Consulting pour effectuer la refonte du site de l'agence.
             en: >
+                To describe
         tools: ["wordpress", "html5-css3"]
         services: ["development"]

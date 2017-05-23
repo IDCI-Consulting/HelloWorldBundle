@@ -21,7 +21,7 @@
 
 _Since Septembrer 2008_
 
-  - Created IDCI-Consulting | Co-manager, Research and Development Engineer
+  - Created IDCI-Consulting | Co-manager & Research and Development Engineer
   - Teached at Lyon 1 University
   - Web courses : HTML, CSS, Js, PHP, Magento, Wordpress, PrestaShop
   - Teached as part of professionnal courses (APTA - Clermont Ferrand, ASP, Proximit, iCap, EITE, OPCADIA, etc)
@@ -70,6 +70,8 @@ _2009_
    - Managed technical staff (4 developers)
    - Web development PHP (Symfony 1.4)
 
+<p class="break" markdown="1"></p>
+
 _2005-2007_
 
   - Research and Teacher technician for Lyon 1 University
@@ -110,8 +112,8 @@ _2004_
   - **Server HTTP** _Apache, Nginx_
   - **Networks** _Dns (bind), Dhcp, Reverse proxy and load balancing (pound), Firewall (iptables), Http Server (Apache, lighttpd), FTP Server (vsFtp)_
   - **Cache and reverse proxy** _Varnish_
-  - **Configuration Management** _Ansible, SaltStack_
   - **Languages** _C, C++, Java, Python, PHP, Html, xHtml, Html5, JavaScript, Sql, Pl/Sql, Prolog, Shell Script_
+  - **Configuration Management** _Ansible, SaltStack_
   - **OS** _Ms Dos, Windows, MacOS, Linux, Unix_
   - **PHP framework** _Symfony 1/2/3, Silex, Laravel, Zend framework_
   - **Python framework** _Django, Pylons project_
@@ -126,8 +128,9 @@ _2004_
   - **Modeling** _UML_
   - **Others** _Ajax, jQuery_
 
+<p class="break" markdown="1"></p>
 
-### PERSONNALS EXPERIENCES
+### PERSONAL EXPERIENCES
 
 _2004 – 2005_
 

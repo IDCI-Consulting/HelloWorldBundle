@@ -17,8 +17,9 @@
     .contact-us-link {
 
       span {
-        display: inline-block !important;
+        display: inline-block;
       }
+
     }
 
     .phonenumber, .mail {
@@ -71,7 +72,7 @@
   footer {
     background: $idci-blue;
     display: block;
-    height: 28rem;
+    height: 30rem;
     text-align: center;
 
     p, li, a {
@@ -101,7 +102,6 @@
       height: 100%;
 
       .contact-us-link {
-        padding: 1rem 0;
         text-align: center;
 
         a {
@@ -112,6 +112,7 @@
         }
 
         span {
+          display: none;
           margin-top: 1rem;
         }
       }
@@ -160,44 +161,9 @@
           &:last-child {
             float: none;
           }
-
-          a {
-            span {
-              margin: 0 ! important;
-            }
-          }
         }
       }
 
-      li.twitter {
-
-        a {
-
-          span {
-            @include social-background-position('twitter');
-          }
-        }
-      }
-
-      li.rss {
-
-        a {
-
-          span {
-            @include social-background-position('rss');
-          }
-        }
-      }
-
-      li.github {
-
-        a {
-
-          span {
-            @include social-background-position('github');
-          }
-        }
-      }
     }
 
     .sub-footer {

@@ -1,5 +1,9 @@
 {% extends "layout.html.twig" %}
 
+{% block metaTags %}
+<meta name="description" content="Nous rédigeons des articles à la manière de tutoriels, principalement sur le framework Symfony2">
+{% endblock %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
@@ -14,7 +18,8 @@
         </div>
         {% include 'partials/asideMenu.html.twig' %}
         {% include 'partials/blog/lastArticles.html.twig' %}
-        {% include 'partials/blog/articlesByCategories.html.twig' %}
+        {% include 'partials/blog/allArticles.html.twig' %}
+
     </section>
 {% endblock %}
 

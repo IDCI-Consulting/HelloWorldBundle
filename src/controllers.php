@@ -170,10 +170,9 @@ $intlApp
 
                 return $response;
             }
-
             $matches = $app['course_manager']->matchContent($course);
 
-            $matchedCourse = '';
+            $matchedCourse = '<h1>'.strtoupper($matches['title'][0]).'</h1>';
             foreach ($matches['day'] as $i => $day) {
                 $day = $app['translator']->trans($day);
 
@@ -183,11 +182,11 @@ $intlApp
                     $matches['content'][$i]
                 );
             }
-
             $course = $app['twig']->render(
                 'partials/courses/output.html.twig',
                 array(
-                    'course' => $app['markdown']->transform($matchedCourse)
+                    'course' => $app['markdown']->transform($matchedCourse),
+                    'format' => $_format,
                 )
             );
 
@@ -236,6 +235,7 @@ $intlApp
         '/article/{file}',
         function (Request $request, $_locale, $file) use ($app) {
             $articleConfiguration = array();
+            $isDisplayable = false;
 
             foreach ($app['config']['blog'][$_locale]['articles'] as $article) {
                 if ($article['file'] === $file) {
@@ -248,10 +248,16 @@ $intlApp
                         'article',
                         $article['image']
                     );
+
+                    $isDisplayable = true;
                 }
             }
 
             try {
+                if (!$isDisplayable) {
+                    throw new Exception('this page is not available.');
+                }
+
                 $article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
                 $article = $app['markdown']->transform($article);
             } catch (\Exception $e) {
@@ -348,29 +354,25 @@ $intlApp
 ;
 
 $intlApp
+    ->before($hideContactLink)
+    ->before($buildLocaleLinks)
+    ->assert('_format', 'md|html|pdf')
+    ->value('_format', '')
     ->get(
         '/cv/{theme}/{name}.{_format}',
-        function (Request $request, $_locale, $theme, $name, $_format) use ($app) {
-
-            try {
-                $cv = $app['twig']->render(sprintf('contents/cv/%s_%s.md', $name, $_locale), array());
-            } catch (\Exception $e) {
-                throw new NotFoundHttpException(sprintf(
-                    'The %s\'s cv doesn\'t exist',
-                    $name
-                ));
-            }
+        function ($_locale, $theme, $name, $_format) use ($app) {
 
             $response = new Response();
 
             if ('md' === $_format) {
                 $response->headers->set('Content-Type', 'text/markdown');
-                $response->setContent($cv);
+                $response->setContent($app['cv_manager']->buildAsMarkdown($name, $_locale));
 
                 return $response;
             }
 
-            $cv = $app['markdown']->transform($cv);
+            $md = $app['cv_manager']->prepareMarkdownForHtml($name, $_locale);
+            $cv = $app['markdown']->transform($md);
 
             $cvHtml = $app['twig']->render('partials/cv/output.html.twig', array(
                 'cv'     => $cv,
@@ -379,6 +381,7 @@ $intlApp
                 'name'   => $name
             ));
 
+            //$article = $app['twig']->render(sprintf('contents/blog/%s/%s.md', $_locale, $file), array());
             if ('html' === $_format) {
                 return $cvHtml;
             }
@@ -395,7 +398,6 @@ $intlApp
 
                 $response->headers->set('Content-Type', 'application/pdf');
                 $response->headers->set('Content-Disposition', sprintf('filename="IDCI_%s.pdf"', $name));
-
                 $response->setContent($app['snappy.pdf']->getOutputFromHtml($cvHtml, $app['snappy.pdf_options']));
 
                 return $response;
@@ -408,11 +410,6 @@ $intlApp
             ));
         }
     )
-    ->before($hideContactLink)
-    ->before($buildCv)
-    ->before($buildLocaleLinks)
-    ->assert('_format', 'md|html|pdf')
-    ->value('_format', '')
     ->bind('cv')
 ;
 

@@ -26,7 +26,7 @@ Il est devenu également formateur à l'INSEEC et à la 3WAcademy.
 
 ### Partenaires pédagogique
 
-Nous avons eu cette année l'opportunité de faire de belle rencontres qui ont abouti sur de nouveaux partenariats dans le domaine de la pédagogie, à l'exemple de la [3W Academy](https://3wa.fr/ "3W Academy") et du groupe [INSEEC](https://www.inseec-digital.com/ "INSEEC").
+Nous avons eu cette année l'opportunité de faire de belles rencontres qui ont abouti sur de nouveaux partenariats dans le domaine de la pédagogie, à l'exemple de la [3W Academy](https://3wa.fr/ "3W Academy") et du groupe [INSEEC](https://www.inseec-digital.com/ "INSEEC").
 Nous sommes intervenus pour des formations avec l'objectif d'enseigner le métier de "développeur web" mais surtout l'envie de partager notre passion. Nous en sommes très heureux et espérons avoir créé des vocations ;)
 
 Nous tenons à remercier tous nos partenaires de la confiance qu'ils nous accordent et leur souhaitons une bonne année 2017.

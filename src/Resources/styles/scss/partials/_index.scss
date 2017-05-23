@@ -1,15 +1,15 @@
-.arrow {
+.idci-content .arrow {
 
   img {
-    height: 100% !important;
+    height: 100%;
     margin: 0 .5rem;
     vertical-align: top;
     width: 2rem;
   }
 }
 
-h3.trainings {
-  color: $idci-blue !important;
+.arrow + h3.trainings {
+  color: $idci-blue;
   display: inline-block;
   margin: 0;
 }

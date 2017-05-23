@@ -6,9 +6,10 @@ services:
     image: idci-website/php:5.6-fpm
     container_name: idci-website-php
     build:
-      context: docker/build/php5.6
+      context: .docker/build/php5.6
     volumes:
       - ./:/var/www/html
+    restart: always
 
   nginx:
     image: nginx:1.10
@@ -18,10 +19,11 @@ services:
     volumes_from:
       - php
     volumes:
-      - ./docker/conf/nginx/vhost_silex.conf:/etc/nginx/conf.d/default.conf
-      - ./docker/conf/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./.docker/conf/nginx/vhost_silex.conf:/etc/nginx/conf.d/default.conf
+      - ./.docker/conf/nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - php
+    restart: always
 
 networks:
 

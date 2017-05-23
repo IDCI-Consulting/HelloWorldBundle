@@ -1,10 +1,18 @@
 {% extends "layout.html.twig" %}
 
+{% block metaTags %}
+<meta name="description" content="Nous contacter par téléphone : 06 63 23 12 07, ou par mail : contact@idci-consulting.fr">
+{% endblock %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
     'active': 'contact'
     } %}
+{% endblock %}
+
+{%  block flashMessages %}
+    {% include 'flashMessage.html.twig' %}
 {% endblock %}
 
 {% block main_content %}

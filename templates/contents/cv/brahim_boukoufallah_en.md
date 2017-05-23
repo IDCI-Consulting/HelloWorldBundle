@@ -1,6 +1,6 @@
 ### CURRICULUM VITAE
 
-**BRAHIM BOUKOUFALLAH**  
+**BRAHIM BOUKOUFALLAH**
 **Full Stack Web Developer / Teacher**
 
 {% if 'pdf' != app.request_stack.getCurrentRequest().get('_format') %}
@@ -15,12 +15,11 @@
 - Phone **07 68 65 39 61**
 - Languages **Mastered english**
 
-
 ### PROFESSIONAL EXPERIENCES
 
 _Since July 2014_
 
-  - Employee at IDCI-Consulting | Web Developer/ Teacher
+  - Employee at IDCI-Consulting | Web Developer & Teacher
 
 _2016_
 
@@ -51,7 +50,7 @@ _2013_
    - Framework : Symfony2
 
 
-### PERSONNAL PROJECTS
+### PERSONAL PROJECTS
 
 _2015_
 
@@ -62,7 +61,7 @@ _2014_
   - Created an application to manage orders with AngularJS
 
 
-### FORMATION
+### EDUCATION
 
 _2015_
 
@@ -72,10 +71,9 @@ _2014_
 
   - HDN in Computer Science
 
+<p class="break" markdown="1"></p>
 
 ### SKILLS
-
-_System management_
 
   - **Server HTTP** _Apache, Nginx_
   - **Configuration Management** _Ansible_

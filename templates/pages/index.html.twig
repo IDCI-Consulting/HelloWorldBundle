@@ -8,6 +8,11 @@
     </h1>
 {% endblock  %}
 
+{% block metaTags %}
+<meta name="description" content="IDCI-Consulting est une société experte dans l'architecture web, PHP et Symfony.
+Nous proposons du conseil, de la formation et du développement web">
+{% endblock %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
@@ -21,9 +26,9 @@
     {% include 'partials/index/advice.html.twig' %}
     {% include 'partials/index/training.html.twig' %}
     {% include 'partials/index/development.html.twig' %}
+    {% include 'partials/index/philosophy.html.twig' %}
 
     <div class="hide-for-small-only">
-        {% include 'partials/index/philosophy.html.twig' %}
         {% include 'partials/index/approach.html.twig' %}
 
         <section id="{% trans %}tools{% endtrans %}" class="tools full-width">

@@ -1,5 +1,10 @@
 {% extends "layout.html.twig" %}
 
+{% block metaTags %}
+<meta name="description" content="Nous donnons des formations sur Symfony2, PHP, HTML/CSS,
+ainsi que sur la Programmation Orientée Objet, l'Unified Modeling Language et les SVN">
+{% endblock %}
+
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
