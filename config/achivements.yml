@@ -35,7 +35,7 @@ achievements:
 
                 We have carried out a detailed audit of the website old version, then develop and coach teams about the new website version.
                 Also, reworking of account creation process (registration) and restricted area (Premium service).
-        tools: ["wordpress"]
+        tools: ["symfony2", "html5-css3","php","jquery"]
         services: ["development", "consulting"]
 
 
@@ -91,7 +91,7 @@ achievements:
                 Allopneus is a french leader of supply of tyres online.
 
                 We worked on the project by training and consulting.
-        tools: ["wordpress", "html5-css3"]
+        tools: ["symfony2", "html5-css3"]
         services: ["consulting", "training"]
 
     optedif:
