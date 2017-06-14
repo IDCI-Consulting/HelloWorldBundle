@@ -22,4 +22,7 @@ build:
     - docker network create dev # It will depend if you use docker-compose v2 with internal network
     - docker-compose up -d
     - make composer-install     # Make sure to not use -it with docker exec commands
+    - make npm-install
+    - make bower-install
+    - make gulp task="prod"
     - make phpunit
