@@ -36,3 +36,4 @@ phpunit: ./vendor/phpunit/phpunit/phpunit ./phpunit.xml.dist
 	docker-compose run --rm php ./vendor/phpunit/phpunit/phpunit -c .
 
 default: bash
+
