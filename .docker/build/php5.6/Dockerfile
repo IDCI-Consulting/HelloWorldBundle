@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get install -y git wget vim build-essential libssl-dev libffi-dev python-dev tar libxrender1 libfontconfig1
 
 # 3rd part libraries
-RUN wget https://downloads.wkhtmltopdf.org/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz -P /root/
+RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz -P /root/
 RUN tar -xvf /root/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz -C /root/
 RUN mv /root/wkhtmltox/bin/wkhtmltopdf /usr/bin/wkhtmltopdf && chmod +x /usr/bin/wkhtmltopdf
 RUN mv /root/wkhtmltox/bin/wkhtmltoimage /usr/bin/wkhtmltoimage && chmod +x /usr/bin/wkhtmltoimage
