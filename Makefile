@@ -25,7 +25,7 @@ composer-update:
 
 .PHONY: composer-install
 composer-install:
-	docker-compose run --rm php composer install 
+	docker-compose run --rm php composer install
 
 .PHONY: command
 command:
@@ -33,7 +33,6 @@ command:
 
 .PHONY: phpunit
 phpunit: ./vendor/phpunit/phpunit/phpunit ./phpunit.xml.dist
-	docker-compose run --rm php ./vendor/phpunit/phpunit/phpunit -c .
+	docker-compose run --rm php bash -c './vendor/phpunit/phpunit/phpunit'
 
 default: bash
-
