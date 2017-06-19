@@ -3,11 +3,11 @@ version: '2'
 services:
 
   php:
-    image: ovski/idci-website-php:5.6-fpm    
-    # image: idci-website/php:5.6-fpm
+    # image: ovski/idci-website-php:5.6-fpm    
+    image: idci-website/php:5.6-fpm
     container_name: idci-website-php
-    # build:
-    #   context: .docker/build/php5.6
+    build:
+      context: .docker/build/php5.6
     volumes:
       - ./:/var/www/html
     restart: always
