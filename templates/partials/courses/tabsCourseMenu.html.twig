@@ -4,24 +4,52 @@
             <div class="row">
                 <h2 class="small-10 medium-12 columns course-name">
                     {{ title }}
-                    <a href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button small hide-for-small-only contact-us">{% trans %}Contact us{% endtrans %}</a>
                 </h2>
                 <div class="hide-for-medium-up small-2 columns toggle-icon">
                     <i class="fa fa-angle-down"></i>
                 </div>
+
+                <div class="large-4 columns course-buttons hide-for-large-up">
+                    <a href="{{ path('course', {"_locale": app.translator.locale, "name": title, "_format": 'pdf'}) }}" class="button small">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        {% trans %}download{% endtrans %}
+                    </a>
+                    <a href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button small">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        {% trans %}Contact us{% endtrans %}
+                    </a>
+                </div>
+
             </div>
         </header>
 
         {# Break the accordion in mobile screen #}
         <div class="large-4 columns hide-for-medium-down course-logo">
-            <img src="{{ asset('images/'~ title ~'.svg') }}" alt="{% trans %}course title image{% endtrans %}"/>
+            <img src="{{ asset('images/'~ title ~'.svg') }}" alt="{% trans %}course title image{% endtrans %}"/><br>
+            <a href="{{ path('course', {"_locale": app.translator.locale, "name": title, "_format": 'pdf'}) }}" class="button small">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                {% trans %}download{% endtrans %}
+            </a>
+            <a href="{{ path('contact', {_locale: app.translator.locale}) }}" class="button small">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                {% trans %}Contact us{% endtrans %}
+            </a>
         </div>
+
+
         <div class="small-12 large-8 columns accordion-content">
 
             {% if courses['description'] is defined %}
                 <p class="course-description">{{ courses['description'] }}</p>
             {% endif %}
 
+            <div class="large-4 columns course-buttons show-for-small-only">
+                <a href="{{ path('course', {"_locale": app.translator.locale, "name": title, "_format": 'pdf'}) }}" class="button small">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    {% trans %}download{% endtrans %}
+                </a>
+            </div>
+            
             <ul class="tabs" data-tab>
                 {% for day, courseContent in courses['courses'] %}
                     <li class="tab-title"><a href="#{{ title|trim }}-{{ day }}">{{ day|trans }}</a></li>
@@ -36,9 +64,7 @@
                 {% endfor %}
             </div>
 
-            <a href="{{ path('course', {"_locale": app.translator.locale, "name": title, "_format": 'pdf'}) }}" class="button small">
-                {% trans %}download{% endtrans %}
-            </a>
+
         </div>
     </section>
 {% endfor %}
