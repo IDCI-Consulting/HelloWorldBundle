@@ -2,13 +2,16 @@
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Translation\Exception\NotFoundResourceException;
 use Form\Type\ContactType;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 $intlApp = $app['controllers_factory'];
 $baseApp = $app['controllers_factory'];
+$apiApp = $app['controllers_factory'];
 
 //Routing requirements
 $intlApp->assert('_locale', 'fr|en');
@@ -354,13 +357,29 @@ $intlApp
 $intlApp
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
-    ->assert('_format', 'md|html|pdf')
+    ->assert('_format', 'md|html|pdf|vcf|lnk')
     ->value('_format', '')
     ->get(
         '/cv/{theme}/{name}.{_format}',
         function ($_locale, $theme, $name, $_format) use ($app) {
 
             $response = new Response();
+
+            if ('vcf' === $_format) {
+                $response->headers->set('Content-Type', 'text/x-vcard');
+                $response->setContent($app['twig']->render(sprintf('vcard/%s.vcf.twig', $name), array()));
+
+                return $response;
+            }
+
+            if ('lnk' === $_format) {
+                return $app->redirect($app['url_generator']->generate('cv', array(
+                    "_locale" => $_locale,
+                    "theme"   => "idci",
+                    "name"    => $name,
+                    "_format" => "vcf"
+                )));
+            }
 
             if ('md' === $_format) {
                 $response->headers->set('Content-Type', 'text/markdown');
@@ -462,6 +481,32 @@ $intlApp
     ->before($hideContactLink)
     ->before($buildLocaleLinks)
     ->bind('sitemap')
+;
+
+$intlApp
+    ->get(
+        '/generate-qrcode',
+        function (Request $request, $_locale) use ($app) {
+            $vcfFileName = $request->query->get('vcf_file_name');
+            $vcfPath = sprintf('vcard/%s.vcf.twig', $vcfFileName);
+
+            $app['qrcode']->setText($app['url_generator']->generate('cv', array(
+                "_locale" => $_locale,
+                "theme"   => "idci",
+                "name"    => $vcfFileName,
+                "_format" => "lnk"
+            ), UrlGeneratorInterface::ABSOLUTE_URL));
+
+            return new Response(
+                $app['qrcode']->get(),
+                200,
+                array('Content-Type' => $app['qrcode']->getContentType())
+            );
+
+            throw new NotFoundResourceException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
+        }
+    )
+    ->bind('generate-qrcode')
 ;
 
 $app

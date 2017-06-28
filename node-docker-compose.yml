@@ -6,7 +6,7 @@ services:
     image: idci-website/node:6.9.5
     container_name: idci-website-node
     build:
-      context: docker/build/node6.9.5
+      context: .docker/build/node6.9.5
     ports:
       - "35729:35729"
     volumes:

@@ -25,7 +25,8 @@
         "symfony/yaml": "^2.7",
         "mheap/silex-markdown": "dev-master",
         "swiftmailer/swiftmailer": "^5.4",
-        "knplabs/knp-snappy": "^0.4.0"
+        "knplabs/knp-snappy": "^0.4.0",
+        "endroid/qrcode": "~1.1"
     },
     "autoload": {
         "psr-0": { "": "src/" }
@@ -51,6 +52,6 @@
       "bin-dir": "bin"
     },
     "require-dev": {
-        "bruli/php-git-hooks": "~1.3"
+        "phpunit/phpunit": "^5.7"
     }
 }
