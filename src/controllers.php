@@ -366,8 +366,14 @@ $intlApp
             $response = new Response();
 
             if ('vcf' === $_format) {
+                $vcfFilePath = sprintf('vcard/%s.vcf.twig', $name);
                 $response->headers->set('Content-Type', 'text/x-vcard');
-                $response->setContent($app['twig']->render(sprintf('vcard/%s.vcf.twig', $name), array()));
+
+                if (!file_exists($vcfFilePath)) {
+                    throw new NotFoundHttpException(sprintf('File "%s.vcf" not found', $name));
+                }
+
+                $response->setContent($app['twig']->render($vcfFilePath, array()));
 
                 return $response;
             }
@@ -489,6 +495,9 @@ $intlApp
         function (Request $request, $_locale) use ($app) {
             $vcfFileName = $request->query->get('vcf_file_name');
             $vcfPath = sprintf('vcard/%s.vcf.twig', $vcfFileName);
+            if (!file_exists($vcfPath)) {
+                throw new NotFoundHttpException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
+            }
 
             $app['qrcode']->setText($app['url_generator']->generate('cv', array(
                 "_locale" => $_locale,
@@ -502,8 +511,6 @@ $intlApp
                 200,
                 array('Content-Type' => $app['qrcode']->getContentType())
             );
-
-            throw new NotFoundResourceException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
         }
     )
     ->bind('generate-qrcode')
