@@ -494,20 +494,27 @@ $intlApp
         '/generate-qrcode',
         function (Request $request, $_locale) use ($app) {
             $vcfFileName = $request->query->get('vcf_file_name');
-            $vcfPath = sprintf('vcard/%s.vcf.twig', $vcfFileName);
+            $vcfPath = sprintf(dirname(__DIR__).'/templates/vcard/%s.vcf.twig', $vcfFileName);
+
             if (!file_exists($vcfPath)) {
                 throw new NotFoundHttpException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
             }
 
-            $app['qrcode']->setText($app['url_generator']->generate('cv', array(
+            $qrCode = new $app['qrcode'](
+                $app['url_generator']->generate('cv', array(
                 "_locale" => $_locale,
                 "theme"   => "idci",
                 "name"    => $vcfFileName,
                 "_format" => "lnk"
             ), UrlGeneratorInterface::ABSOLUTE_URL));
+            $qrCode
+                ->setLogoPath(dirname(__DIR__).'/web/images/logo_idci_small.png')
+                ->setLogoWidth(78)
+                ->setForegroundColor(['r' => 57, 'g' => 74, 'b' => 89, 'a' => 0])
+            ;
 
             return new Response(
-                $app['qrcode']->get(),
+                $qrCode->writeString(PngWriter::class),
                 200,
                 array('Content-Type' => $app['qrcode']->getContentType())
             );
