@@ -13,13 +13,13 @@ Nous aimerions partager avec vous quelques moments forts d'IDCI en 2016.
 
 Durant l'année, nous avons vu notre [équipe](https://www.idci-consulting.fr/fr/team "équipe") évoluer.
 
-**[Baptiste Boucherau](https://www.idci-consulting.fr/fr/cv/idci/baptiste_bouchereau_fr "Baptiste Boucherau")** est devenu co-gérant cette année.
+**[Baptiste Boucherau]({{ path('cv',{_locale: 'fr', theme: 'idci', name: 'baptiste_bouchereau'}) }} "Baptiste Boucherau")** est devenu co-gérant cette année.
 Il a rejoint ainsi à ce poste Gabriel et Frédéric BONDAZ. Baptiste ajoute aussi la formation à ses compétences professionnelles, et ce en ayant animé plusieurs cours à l'Université Lyon 1 et des formations professionelles.
 
-**[Brahim Boukoufallah](https://www.idci-consulting.fr/fr/cv/idci/brahim_boukoufallah_fr "Brahim Boukoufallah")** a rejoint l'équipe plus durablement en signant un CDI après un stage et une alternance chez IDCI.
+**[Brahim Boukoufallah]({{ path('cv',{_locale: 'fr', theme: 'idci', name: 'brahim_boukoufallah'}) }} "Brahim Boukoufallah")** a rejoint l'équipe plus durablement en signant un CDI après un stage et une alternance chez IDCI.
 Il est devenu également formateur à l'INSEEC et à la 3WAcademy.
 
-**Eddie Barraco** travaille en alternance chez IDCI-Consulting depuis cette année pour se former au métier de développeur.
+**[Eddie Barraco]({{ path('cv',{_locale: 'fr', theme: 'idci', name: 'eddie_barraco'}) }} "Eddie Barraco")** travaille en alternance chez IDCI-Consulting depuis cette année pour se former au métier de développeur.
 
 ![IDCI team](/images/blog/new-year2017-team.jpg "IDCI team")
 

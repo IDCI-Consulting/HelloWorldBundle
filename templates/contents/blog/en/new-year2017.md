@@ -13,13 +13,13 @@ We would like to share with you some of IDCI's 2016 highlights.
 
 During this year, we have seen our [team](https://www.idci-consulting.fr/fr/team "team") evolve.
 
-**[Baptiste Boucherau](https://www.idci-consulting.fr/en/cv/idci/baptiste_bouchereau "Baptiste Boucherau")** became co-manager this year.
+**[Baptiste Bouchereau]({{ path('cv',{_locale: 'en', theme: 'idci', name: 'baptiste_bouchereau'}) }} "Baptiste Bouchereau")** became co-manager this year.
 He joined Gabriel and Fredéric BONDAZ at this post. Baptiste also added training to his professional skills, by giving some courses at the Lyon 1 University as well as providing professional training.
 
-**[Brahim Boukoufallah](https://www.idci-consulting.fr/en/cv/idci/brahim_boukoufallah "Brahim Boukoufallah")** eventually joined the team by signing a permanent contract.
+**[Brahim Boukoufallah]({{ path('cv',{_locale: 'en', theme: 'idci', name: 'brahim_boukoufallah'}) }} "Brahim Boukoufallah")** eventually joined the team by signing a permanent contract.
 He also became a trainer and gave courses at the Inseec and the 3WAcademy.
 
-**[Eddie Barraco](https://www.idci-consulting.fr/en/cv/idci/eddie_baracco "Eddie Baracco")** follows a block-release training and works at IDCI in order to train himself to the developer's profession.
+**[Eddie Barraco]({{ path('cv',{_locale: 'en', theme: 'idci', name: 'eddie_barraco'}) }} "Eddie Baracco")** follows a block-release training and works at IDCI in order to train himself to the developer's profession.
 
 ![IDCI team](/images/blog/new-year2017-team.jpg "IDCI team")
 
