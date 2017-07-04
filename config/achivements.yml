@@ -64,16 +64,16 @@ achievements:
         image_path: "/images/carglass.png"
         url: "https://www.carglass.fr/"
         title: "Carglass"
-        enabled: false
+        enabled: true
         content:
             fr: >
-                Carglass, filière présente dans 35 pays du monde, est expert en réparation et remplacement des vitres de voitures.
+                Carglass, présent dans 34 pays du monde, est expert en réparation et remplacement de vitrage automobile.
 
-                Nous avons fait la refonte du site web de Carglass pour améliorer la prise de rendez-vous d'un client lors d'un bris de glace.
+                Nous avons travaillé sur la refonte de leur site web pour améliorer le processus de prise de rendez-vous d'un client lors d'un bris de glace.
             en: >
-                Carglass is a company present in 35 countries. It is an expert to repair and replace damaged car windows.
+                Carglass is a vehicle glass repair and replacement group operating worldwide across 34 countries.
 
-                We have redesign Carglass website to improve customer appointment booking throughout a glass breakage.
+                We worked on the redesign of their website to improve customer appointment booking after a glass breakage.
         tools: ["symfony2", "ansible", "php-unit"]
         services: ["development", "consulting"]
 

@@ -91,15 +91,6 @@ class I18nRouteGenerator
 
         foreach ($this->languages as $locale => $language) {
             $this->routeParameters['_locale'] = $locale;
-            if ('cv' === $routeName) {
-                $names = explode('_', $this->routeParameters['name']);
-
-                $this->routeParameters['name'] = sprintf(
-                    '%s_%s',
-                    $names[0],
-                    $names[1]
-                );
-            }
             $generatedRoute = $this->urlGenerator->generate($routeName, $this->routeParameters);
 
             $routes[$locale] = array(
