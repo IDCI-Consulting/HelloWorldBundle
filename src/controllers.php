@@ -491,9 +491,22 @@ $intlApp
 
 $intlApp
     ->get(
-        '/generate-qrcode/{vcfFileName}/{r}.{g}.{b}',
-        function (Request $request, $_locale, $vcfFileName, $r, $g, $b) use ($app) {
+        '/generate-qrcode/{vcfFileName}',
+        function (Request $request, $_locale, $vcfFileName) use ($app) {
+
             $vcfPath = sprintf(dirname(__DIR__).'/templates/vcard/%s.vcf.twig', $vcfFileName);
+            $r = 57;
+            $g = 74;
+            $b = 89;
+            if ($request->query->has('r')) {
+                $r = intval($request->query->get('r'));
+            }
+            if ($request->query->has('g')) {
+                $g = intval($request->query->get('g'));
+            }
+            if ($request->query->has('b')) {
+                $b = intval($request->query->get('b'));
+            }
 
             if (!file_exists($vcfPath)) {
                 throw new NotFoundHttpException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
@@ -519,12 +532,6 @@ $intlApp
             );
         }
     )
-    ->assert('r', '\d+')
-    ->assert('g', '\d+')
-    ->assert('b', '\d+')
-    ->value('r', 57)
-    ->value('g', 74)
-    ->value('b', 89)
     ->bind('generate-qrcode')
 ;
 

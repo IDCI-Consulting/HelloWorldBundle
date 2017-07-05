@@ -98,7 +98,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
      */
     private function addCvUrls(&$urls)
     {
-        $extensions = array('.pdf', '.html', '.md', '');
+        $extensions = array('.pdf', '.html', '.md', '', '.vcf', '.lnk');
 
         $cvs = array_diff(
             scandir(__DIR__ . '/../../templates/contents/cv/'),
@@ -120,6 +120,24 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
             foreach ($extensions as $extension) {
                 array_push($urls, sprintf('%s%s', $url, $extension));
             }
+        }
+    }
+
+    private function addQrCodeUrls(&$urls)
+    {
+        $members = array_diff(
+            scandir(__DIR__.'/../../templates/vcard/'),
+            array('.', '..')
+        );
+
+        foreach($members as $member) {
+            //remove extensions (.vcf.twig);
+            $member = substr($member, 0, -9);
+
+            $url = sprintf('/fr/generate-qrcode/%s', $member);
+            array_push($urls, $url);
+            $url = sprintf('/en/generate-qrcode/%s', $member);
+            array_push($urls, $url);
         }
     }
 }
