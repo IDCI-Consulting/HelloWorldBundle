@@ -491,9 +491,8 @@ $intlApp
 
 $intlApp
     ->get(
-        '/generate-qrcode',
-        function (Request $request, $_locale) use ($app) {
-            $vcfFileName = $request->query->get('vcf_file_name');
+        '/generate-qrcode/{vcfFileName}/{r}.{g}.{b}',
+        function (Request $request, $_locale, $vcfFileName, $r, $g, $b) use ($app) {
             $vcfPath = sprintf(dirname(__DIR__).'/templates/vcard/%s.vcf.twig', $vcfFileName);
 
             if (!file_exists($vcfPath)) {
@@ -510,7 +509,7 @@ $intlApp
             $qrCode
                 ->setLogoPath(dirname(__DIR__).'/web/images/logo_idci_small.png')
                 ->setLogoWidth(78)
-                ->setForegroundColor(['r' => 57, 'g' => 74, 'b' => 89, 'a' => 0])
+                ->setForegroundColor(['r' => $r, 'g' => $g, 'b' => $b, 'a' => 0])
             ;
 
             return new Response(
@@ -520,6 +519,12 @@ $intlApp
             );
         }
     )
+    ->assert('r', '\d+')
+    ->assert('g', '\d+')
+    ->assert('b', '\d+')
+    ->value('r', 57)
+    ->value('g', 74)
+    ->value('b', 89)
     ->bind('generate-qrcode')
 ;
 
