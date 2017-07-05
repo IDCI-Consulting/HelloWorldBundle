@@ -64,6 +64,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
         $this->addArticleUrls($urls, 'fr');
         $this->addArticleUrls($urls, 'en');
         $this->addCvUrls($urls);
+        $this->addQrCodeUrls($urls);
 
         return $urls;
     }
