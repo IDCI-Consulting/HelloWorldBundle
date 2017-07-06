@@ -369,7 +369,7 @@ $intlApp
                 $vcfFilePath = sprintf('vcard/%s.vcf.twig', $name);
                 $response->headers->set('Content-Type', 'text/x-vcard');
 
-                if (!file_exists($vcfFilePath)) {
+                if (!file_exists('../templates/'.$vcfFilePath)) {
                     throw new NotFoundHttpException(sprintf('File "%s.vcf" not found', $name));
                 }
 
