@@ -16,6 +16,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
 
         // Useful for the contact page only (flash bag messages)
         $app['session.test'] = true;
+        $app['debug'] = true;
 
         $this->config = $app['config'];
 
@@ -64,6 +65,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
         $this->addArticleUrls($urls, 'fr');
         $this->addArticleUrls($urls, 'en');
         $this->addCvUrls($urls);
+        $this->addQrCodeUrls($urls);
 
         return $urls;
     }
@@ -98,7 +100,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
      */
     private function addCvUrls(&$urls)
     {
-        $extensions = array('.pdf', '.html', '.md', '', '.vcf', '.lnk');
+        $extensions = array('.pdf', '.html', '.md', '');
 
         $cvs = array_diff(
             scandir(__DIR__ . '/../../templates/contents/cv/'),
