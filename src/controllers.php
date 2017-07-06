@@ -369,7 +369,7 @@ $intlApp
                 $vcfFilePath = sprintf('vcard/%s.vcf.twig', $name);
                 $response->headers->set('Content-Type', 'text/x-vcard');
 
-                if (!file_exists($vcfFilePath)) {
+                if (!file_exists('../templates/'.$vcfFilePath)) {
                     throw new NotFoundHttpException(sprintf('File "%s.vcf" not found', $name));
                 }
 
@@ -491,10 +491,22 @@ $intlApp
 
 $intlApp
     ->get(
-        '/generate-qrcode',
-        function (Request $request, $_locale) use ($app) {
-            $vcfFileName = $request->query->get('vcf_file_name');
+        '/generate-qrcode/{vcfFileName}',
+        function (Request $request, $_locale, $vcfFileName) use ($app) {
+
             $vcfPath = sprintf(dirname(__DIR__).'/templates/vcard/%s.vcf.twig', $vcfFileName);
+            $r = 57;
+            $g = 74;
+            $b = 89;
+            if ($request->query->has('r')) {
+                $r = intval($request->query->get('r'));
+            }
+            if ($request->query->has('g')) {
+                $g = intval($request->query->get('g'));
+            }
+            if ($request->query->has('b')) {
+                $b = intval($request->query->get('b'));
+            }
 
             if (!file_exists($vcfPath)) {
                 throw new NotFoundHttpException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
@@ -510,7 +522,7 @@ $intlApp
             $qrCode
                 ->setLogoPath(dirname(__DIR__).'/web/images/logo_idci_small.png')
                 ->setLogoWidth(78)
-                ->setForegroundColor(['r' => 57, 'g' => 74, 'b' => 89, 'a' => 0])
+                ->setForegroundColor(['r' => $r, 'g' => $g, 'b' => $b, 'a' => 0])
             ;
 
             return new Response(

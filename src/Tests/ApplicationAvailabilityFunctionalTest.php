@@ -16,6 +16,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
 
         // Useful for the contact page only (flash bag messages)
         $app['session.test'] = true;
+        $app['debug'] = true;
 
         $this->config = $app['config'];
 
@@ -64,6 +65,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
         $this->addArticleUrls($urls, 'fr');
         $this->addArticleUrls($urls, 'en');
         $this->addCvUrls($urls);
+        $this->addQrCodeUrls($urls);
 
         return $urls;
     }
@@ -120,6 +122,24 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
             foreach ($extensions as $extension) {
                 array_push($urls, sprintf('%s%s', $url, $extension));
             }
+        }
+    }
+
+    private function addQrCodeUrls(&$urls)
+    {
+        $members = array_diff(
+            scandir(__DIR__.'/../../templates/vcard/'),
+            array('.', '..')
+        );
+
+        foreach($members as $member) {
+            //remove extensions (.vcf.twig);
+            $member = substr($member, 0, -9);
+
+            $url = sprintf('/fr/generate-qrcode/%s', $member);
+            array_push($urls, $url);
+            $url = sprintf('/en/generate-qrcode/%s', $member);
+            array_push($urls, $url);
         }
     }
 }
