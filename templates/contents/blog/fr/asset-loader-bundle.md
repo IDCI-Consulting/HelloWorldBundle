@@ -1,13 +1,13 @@
 {% verbatim %}
 # Asset Loader Bundle
 
-En travaillant avec le framework Symfony 2 (et 3), nous sommes souvent confrontés à des problématiques de chargement de dépendances front-end (ou **assets**), notamment pour des *Form Types* personnalisés. Nous allons vous présenter dans cet article les problèmes et la solution que nous proposons.
+En travaillant avec le framework Symfony 2 (et 3), nous sommes souvent confrontés à des problématiques de chargement de dépendances front-end (ou **assets**), notamment pour des *Form Types* personnalisés. Nous allons vous présenter dans cet article les problèmes rencontrés et la solution que nous proposons.
 
 
 ## Introduction
 
 Pour illustrer ces problèmes, plaçons nous dans un exemple de cas typique.  
-Imaginons que nous voulons créer un champ de formulaire personnalisé, basé sur le type texte, permettant de gérer un système de tags.  
+Imaginons que nous voulons créer un champ de formulaire personnalisé, basé sur le type texte, permettant de gérer un système de tags.
 Nous utilisons **[Taggle.js](https://jquery.com/)** afin de générer les tags et **[JQuery](https://sean.is/poppin/tags)** afin d'implémenter un système *d'autocompletion*.  
 Nous avons donc un script propre au widget pour le traitement des tags, et des scripts de dépendances, Taggle et JQuery.
 
@@ -15,12 +15,12 @@ ___
 
 On serait tenté d'inclure les dépendances dans le **script du widget** (dans des balises `<script>`), ce qui ne pose pas de problème si l'on n'en utilise **qu'une instance** à la fois. Ceci devient en effet problématique lorsque l'on souhaite en inclure plusieurs dans un formulaire : **les dépendances sont chargées dans le DOM autant de fois qu'il y a d'instances du widget**, comme illustré ci-dessous.
 
-![rendu](/images/blog/asset-loader-demo-1.png)
-![elements en double](/images/blog/asset-loader-demo-2.png)  
+![rendu avec DOM](/images/blog/asset-loader-demo-1.png)
 
 Nous pourrions contourner ce problème de chargement multiple en incluant les dépendances dans la balise `<head>` du fichier `base.html.twig`, mais cela pose deux problèmes :
-* Les dépendances seront inclus dans toutes les pages de l'application, même lorsque l'on n'en a pas besoin
-* Cela implique plus de travail pour les développeurs voulant implémenter ce widget car ils devront ajouter eux-même les dépendances dans le fichier
+
+- Les dépendances seront incluses dans toutes les pages de l'application, même lorsque l'on n'en a pas besoin
+- Cela implique plus de travail pour les développeurs voulant implémenter ce widget car ils devront ajouter eux-même les dépendances dans le fichier
 
 ___
 
@@ -41,6 +41,7 @@ De plus, les scripts étant chargés au milieu de la page, au dessus de la **[li
 ___
 
 On voudrait donc pouvoir :
+
 * Ne charger les dépendances nécessaires **qu'une seule fois par page**
 * Ne pas charger les scripts des widgets s'il n'y a pas de widget sur la page
 * Charger les dépendances en bas de la page
@@ -51,7 +52,7 @@ On voudrait donc pouvoir :
 
 ## Installation
 
-Premièrement, il nous faut charger **AssetLoaderBundle** en dépendance de notre projet. Pour cela, ajoutons-le dans le fichier `composer.json` :
+Premièrement, il faut charger **AssetLoaderBundle** en dépendance de notre projet. Pour cela, ajoutons-le dans le fichier `composer.json` :
 
 ```json
 "require": {
@@ -262,20 +263,19 @@ $this->assetCollection->add(
 
 ### Chargement manuel des assets
 
-Vous pouvez utiliser le service **idci_asset_loader.asset_dom_loader** pour charger les assets d'un ou de tous les *providers*. Ceci conduira un *subscriber* à ajouter les dépendances à la fin du *body* du document, dans la réponse du kernel.
-
+Vous pouvez utiliser le service **idci_asset_loader.asset_dom_loader** pour charger les assets d'un ou de tous les *providers*.
 ```php
 <?php
 
 // Charge les assets de tous les providers
 $this->get('idci_asset_loader.asset_dom_loader')->loadAll();
 
-// Charge les assets d'un seul provider
+// Charge les assets d'un seul provider identifié par son alias
 $this->get('idci_asset_loader.asset_dom_loader')->load('tags_type');
 ```
 ### Chargement automatique des assets
 
-Pour permettre au *subscriber* de charger les dépendances automatiquement (**recommandé**), ajoutez le paramètre suivant dans le fichier `config.yml` :
+Pour permettre au *subscriber* de charger les dépendances **automatiquement** (recommandé), ajoutez le paramètre suivant dans le fichier `config.yml` :
 
 ```yml
 # app/config/config.yml
