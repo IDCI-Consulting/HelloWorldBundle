@@ -1,30 +1,30 @@
-# How to create a contact form with StepBundle ?
+# Creating a contact form with IDCIStepBundle
 
 
 ## Introduction
 
-Back to our StepBundle and its effective application : the creation of a simple contact form.
-If you need more informations about StepBundle's using and installation, you could read our introduction article here /*mettre le lien*/
+Let us get back to our StepBundle with a concrete application : the creation of a simple contact form.
+If you need more information about how to install and use StepBundle, you can read our [introduction article](https://idci-consulting.fr/en/article/step-bundle-introduction).
 
 
 ## Create the contact form with StepBundle
 
-So, we have chosen to realize a process composed of one step : a contact form, and one path representing input datas's submission .
-We can imagine this case as the utilisation of WordPress's contact form 7 with the Symfony touch.
+We chose to build a simple process composed of one step, a contact form, and one path, representing the submission of the input data.
+We can picture this case as the use of WordPress's contact form 7, Symfony style.
 
-Here's an illustration of the rendering :
+Here's an illustration of the expected result :
 
 ![Screenshot Contact Form](/images/blog/screenshot_contact_form.png "Screenshot Contact Form")
 
-In the search bar, we have our ```localhost:8000``` follow by the route we previously set up : ```/contact```.
-Then, we can see the title of our contact form 'Personal informations', follow by input fields that the user will complete.
-As our form is composed by one step and one path, our button is not "next", but "end".
+In the search bar, we see `localhost:8000` followed by the route we previously set up : `/contact`.
+Then, we can see the title for our contact form 'Personal information', followed by the input fields for the user to fill in.
+Since our form is only composed of one step and one path, we will use an "end" button instead of "next".
 
-Ready to start with StepBundle ?
+**Are you ready to start with StepBundle ?**
 
-We will work in the bundle's `DefaultController.php` file  created by default `AppBundle`.
+We will work in the `DefaultController.php` file from the default generated bundle `AppBundle`.
 
-Let's start by creating a first action `contact` :
+Let's start by creating a first action named `contact` :
 
 ```php
 // src/AppBundle/Controller/DefaultController.php
@@ -53,30 +53,34 @@ class DefaultController extends Controller
     }
 ```
 
-In this action, we will define our first map.
-So, this is composed of one step which will display a form in order to enter datas. As we had seen it above, there are two types of steps by default : 'html' and 'form'. In our case, the 'form' type will be the one we will use. Thanks to this, we will define all the input fields we want to display to the user.
-In our example, we will ask first name, last name, phone number and email adress.
+In this action, we will define our first **map**.
+This one is composed of only one step which will display a form allowing a user to input contact data. As seen earlier, two types of steps exist by default : `'html'` and `'form'`.
+In our case, we will use the 'form' type, thanks to which we will be able to define all the input fields we want to display to the user.
+In our example, we will ask for a first name, last name, phone number and email adress.
 
-Then, our own path will be the submission of the form which will end the navigation.
-As we have seen it above, it exists three typs of paths : 'single', 'conditional' and 'end'. In our case, the 'end' type will be the one we will use.
+Then, our only path will be the submission of the form data which will end the navigation.
+As we have seen it above, there exists three typs of paths : `single`, `conditional` and `end`. In our case, we will use the 'end' type.
 
 ```php
     ...
     public function contactAction(Request $request)
     {
+        //Create the map
         $map = $this
             ->get('idci_step.map.builder.factory')
             ->createNamedBuilder('contact map')
+            //Create the step and add the fields
             ->addStep('info', 'form', array(
                 'title'            => 'Contact',
                 'description'      => 'The contact form',
-                'builder' => $this->get('form.factory')->createBuilder()
-                    ->add('first_name', 'text', array('label' => 'prénom'))
-                    ->add('last_name', 'text') //faire pareil
-                    ->add('phone_number','text')
-                    ->add('email','text')
+                'builder'          => $this->get('form.factory')->createBuilder()
+                    ->add('first_name',   'text', array('label' => 'First Name'))
+                    ->add('last_name',    'text', array('label' => 'Last Name'))
+                    ->add('phone_number', 'text', array('label' => 'Phone Number'))
+                    ->add('email',        'text', array('label' => 'Email'))
                 ,
             ))
+            //Create the path
             ->addPath(
                 'end',
                 array(
@@ -91,7 +95,7 @@ As we have seen it above, it exists three typs of paths : 'single', 'conditional
     }
 ```
 
-Our map is ready now. You have to create the 'navigator' from this one:
+Our map is now ready, thus we have to create the `navigator` from it :
 
 ```php
     ...
@@ -105,11 +109,11 @@ Our map is ready now. You have to create the 'navigator' from this one:
     }
 ```
 
-Finally, you have to define the redirections to make according to the navigation realized by the user.
+Finally, you have to define the **redirections** that take place according to the way the user navigates.
 Three cases are possible :
- - End of navigation : when you follow a route of 'end' type
- - Navigation : when you follow a path of 'single' or 'conditional' type
- - Return : when you decide to go back to a previous step
+ - End of navigation : when one follows a route of 'end' type
+ - Navigation : when one follows a route of 'single' or 'conditional' type
+ - Return : when one decides to go back to a previous step
 
 
 ```php
@@ -131,8 +135,7 @@ Three cases are possible :
 }
 ```
 
-We have now finished to work in our controller, we just have to diplay our 'navigator' in a twig template.
-We have to edit our file `Resources/views/Default/contact.html.twig` :
+The work in the controller is done, now we only have to display our `navigator` in a twig template. To do so, let's edit the `Resources/views/Default/contact.html.twig` file :
 
 {% verbatim %}
 ```twig
@@ -155,19 +158,18 @@ We have to edit our file `Resources/views/Default/contact.html.twig` :
 ```
 {% endverbatim %}
 
-## Events : generate an email's sending
+## Events : sending an email
 
-Events define actions of our process (steps, paths), we have created a few which are present by default, but it is possible to create some.
-For our example, we will create an event to send an email at the end of our step (when the user clics on `end` button).
-It's possible to connect events on paths or steps any time of your process.
+The actions that we will execute during our process of steps and paths are defined by the `event actions`. We created some which are present by default, but it is possible to create your own.
+For the sake of our example, we will create an event action aiming to send an email at the end of our step (when the user clicks on the `end` button).
+It is possible to connect `event actions` to `paths` or `steps` at any point of your process.
 
 
-### Create a service to our event
+### Creating a service for our mailer event action
 
-We can considere a service as a class which is accessible every where in our application.
-In a first phase, we have to create a `PathEventAction` :
+We can see a service as a class which is accessible everywhere in our application.
+Firstly, we have to create a `PathEventAction` :
 
-> Note : To send our email, we have used the Swift Mailer library, you can read the Symfony documentation : [Doc Swift Mailer](http://symfony.com/doc/current/email.html)._
 
 ```php
 <?php
@@ -211,8 +213,9 @@ class SendThanksEmailPathEventAction extends AbstractPathEventAction
     }
 }
 ```
+> Note : To send our email, we used the **Swift Mailer** library, which you can read about in the [Symfony documentation](http://symfony.com/doc/current/email.html). Don't forget to configure it before usage.
 
-The `setDefaultParameters` function allows us to define our parameters. In our cas, we just need one parameter : the email adress.
+The `setDefaultParameters` function allows us to define our parameters. In our case, we just need one parameter : the adress to which we will send the email.
 
 ```php
 /**
@@ -220,7 +223,7 @@ The `setDefaultParameters` function allows us to define our parameters. In our c
  */
 protected function setDefaultParameters(OptionsResolverInterface $resolver)
 {
-    // on défini un paramètre 'email' qui est un string et est requis
+    // Define an 'email' parameter which is a required String.
     $resolver
         ->setRequired(array('email'))
         ->setAllowedTypes(array(
@@ -229,7 +232,7 @@ protected function setDefaultParameters(OptionsResolverInterface $resolver)
     ;
 }
 ```
-
+***********************************************************************************************************************************************************************************************
 The `doExecute` function, as its name said, will allow to the action to execute itself. So, it's in this function's body that we will write the code allowing us to create the email's sending.
 
 ```php

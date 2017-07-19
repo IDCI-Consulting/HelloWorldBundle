@@ -61,7 +61,7 @@ Premièrement, il faut charger **AssetLoaderBundle** en dépendance de notre pro
 },
 ```
 
-Installons ensuite cette dépendance avec composer...
+Installons ensuite cette dépendance avec composer :
 
 ```sh
 $ php composer.phar update
@@ -87,7 +87,7 @@ public function registerBundles()
 
 ## Utilisation du Bundle
 
-Ajouter des assets dans votre form type est assez simple :
+Ajouter des assets dans notre form type est assez simple :
 
 * Notre **AbstractType** doit implémenter la méthode **getAssetCollection()** à partir de l'interface **AssetProviderInterface**. **AssetCollection** représente un tableau d'objets Asset
 * Nous devons définir notre type en tant que **service** et ajouter un tag nommé **idci_asset_loader.asset_provider**
@@ -264,6 +264,7 @@ $this->assetCollection->add(
 ### Chargement manuel des assets
 
 Vous pouvez utiliser le service **idci_asset_loader.asset_dom_loader** pour charger les assets d'un ou de tous les *providers*.
+
 ```php
 <?php
 
@@ -273,6 +274,7 @@ $this->get('idci_asset_loader.asset_dom_loader')->loadAll();
 // Charge les assets d'un seul provider identifié par son alias
 $this->get('idci_asset_loader.asset_dom_loader')->load('tags_type');
 ```
+
 ### Chargement automatique des assets
 
 Pour permettre au *subscriber* de charger les dépendances **automatiquement** (recommandé), ajoutez le paramètre suivant dans le fichier `config.yml` :
@@ -283,4 +285,7 @@ Pour permettre au *subscriber* de charger les dépendances **automatiquement** (
 idci_asset_loader:
     auto_load: true
 ```
+
+___
+merci ..., exemple concret -> github stepbundle(?)
 {% endverbatim %}
