@@ -287,5 +287,8 @@ idci_asset_loader:
 ```
 
 ___
-merci ..., exemple concret -> github stepbundle(?)
+
+Merci de nous avoir suivi tout au long de cet article.  
+N'hésitez pas à [nous contacter](https://idci-consulting.fr/fr/contact) pour plus d'informations.
+
 {% endverbatim %}
