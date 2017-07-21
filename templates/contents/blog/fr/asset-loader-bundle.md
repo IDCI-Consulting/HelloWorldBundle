@@ -9,6 +9,7 @@ Plaçons nous dans un exemple de cas typique: imaginons que nous voulons créer 
 Nous utilisons **[Taggle.js](https://sean.is/poppin/tags)** pour le rendu des tags et **[JQuery](https://jquery.com/)** afin d'implémenter un système *d'autocompletion*.  
 
 Nous avons donc:
+
  * un script propre au widget qui sera reponsable de la manipulation du DOM pour transformer l'input en un champ compatible avec Taggle.js
  * des scripts de dépendances: Taggle et JQuery
 ___
