@@ -1,30 +1,30 @@
 {% verbatim %}
 # Asset Loader Bundle
 
-En travaillant avec le framework Symfony 2 (et 3), nous sommes souvent confrontés à des problématiques de chargement de dépendances front-end (ou **assets**), notamment pour des *Form Types* personnalisés. Nous allons vous présenter dans cet article les problèmes rencontrés et la solution que nous proposons.
-
+La création de champs de formulaires personnalisés (*Form Types*) avec le framework Symfony 2 (et 3), confronte les développeurs à des problématiques de chargement de dépendances front-end (ou **assets**) tel que des fichiers javascripts ou css. Nous allons vous présenter dans cet article les problèmes fréquemment rencontrés et comment les résoudre avec le bundle **IdciAssetLoader**. La lecture de cet article nécessite que vous soyez à l'aide avec les **Form Type** de Symfony 2.
 
 ## Introduction
 
-Pour illustrer ces problèmes, plaçons nous dans un exemple de cas typique.  
-Imaginons que nous voulons créer un champ de formulaire personnalisé, basé sur le type texte, permettant de gérer un système de tags.
-Nous utilisons **[Taggle.js](https://jquery.com/)** afin de générer les tags et **[JQuery](https://sean.is/poppin/tags)** afin d'implémenter un système *d'autocompletion*.  
-Nous avons donc un script propre au widget pour le traitement des tags, et des scripts de dépendances, Taggle et JQuery.
+Plaçons nous dans un exemple de cas typique: imaginons que nous voulons créer un champ de formulaire personnalisé basé sur le type texte, qui nous permettra d'afficher les valeurs séparées par des virgues sous forme de tags.
+Nous utilisons **[Taggle.js](https://sean.is/poppin/tags)** pour le rendu des tags et **[JQuery](https://jquery.com/)** afin d'implémenter un système *d'autocompletion*.  
 
+Nous avons donc:
+ * un script propre au widget qui sera reponsable de la manipulation du DOM pour transformer l'input en un champ compatible avec Taggle.js
+ * des scripts de dépendances: Taggle et JQuery
 ___
 
-On serait tenté d'inclure les dépendances dans le **script du widget** (dans des balises `<script>`), ce qui ne pose pas de problème si l'on n'en utilise **qu'une instance** à la fois. Ceci devient en effet problématique lorsque l'on souhaite en inclure plusieurs dans un formulaire : **les dépendances sont chargées dans le DOM autant de fois qu'il y a d'instances du widget**, comme illustré ci-dessous.
+Nous serions tenté d'inclure les dépendances dans le **script du widget** (dans des balises `<script>`), ce qui ne pose pas de problème si notre widget n'est rendu qu'une seule fois sur la page. Ceci devient problématique lorsque l'on souhaite en inclure plusieurs sur une même page : **JQuery et Taggle seront chargés dans le DOM autant de fois qu'il y a d'instances du widget**, comme illustré ci-dessous.
 
 ![rendu avec DOM](/images/blog/asset-loader-demo-1.png)
 
-Nous pourrions contourner ce problème de chargement multiple en incluant les dépendances dans la balise `<head>` du fichier `base.html.twig`, mais cela pose deux problèmes :
+Nous pourrions contourner ce problème de chargement multiple en incluant les dépendances dans le `{% block javascripts %}` du fichier `base.html.twig`, mais cela pose deux problèmes :
 
 - Les dépendances seront incluses dans toutes les pages de l'application, même lorsque l'on n'en a pas besoin
-- Cela implique plus de travail pour les développeurs voulant implémenter ce widget car ils devront ajouter eux-même les dépendances dans le fichier
+- Cela implique plus de travail pour les développeurs voulant implémenter ce widget car ils devront ajouter eux-même les dépendances dans le fichier.
 
 ___
 
-Un autre problème se pose si notre widget utilise des scripts utilisés globalement, comme par exemple JQuery, qui seront donc chargés dans le `{% block javascripts %}` du fichier `base.html.twig`. Il y a alors un risque que le script du widget s'exécute avant le chargement de ces dépendances, étant placé au-dessus dans le code.  
+Un autre problème se pose si notre widget utilise des scripts utilisés globalement, comme par exemple JQuery, qui seront donc chargés dans le `{% block javascripts %}` du fichier `base.html.twig`. Le script du widget va s'executer avant le chargement de de JQuery, car le javascript se situera au niveau du widget dans le DOM, alors que le `{% block javascripts %}` est proprement rendu en bas de page.
 Une solution possible pour contourner ce problème peut être de **reporter** l'exécution de ce code grâce à la fonction native suivante :
 
 ```javascript
@@ -37,7 +37,7 @@ Avec cette technique, le script ne s'exécutera que lorsque la fenêtre sera ent
 
 ___
 
-De plus, les scripts étant chargés au milieu de la page, au dessus de la **[ligne de flottaison](http://www.seonity.com/definition-la-ligne-de-flottaison.php)**, posent un problème mineur d'optimisation du temps de réponse. [En savoir plus](https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent?hl=fr)
+De plus, les scripts chargés au milieu de la page (au dessus de la **[ligne de flottaison](http://www.seonity.com/definition-la-ligne-de-flottaison.php)**) posent un problème mineur d'optimisation du temps de chargement de la page. [En savoir plus](https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent?hl=fr)
 ___
 
 On voudrait donc pouvoir :
@@ -50,7 +50,7 @@ On voudrait donc pouvoir :
 **Ca tombe bien, notre [bundle](https://github.com/IDCI-Consulting/AssetLoaderBundle) fait tout ça à la fois**
 
 
-## Installation
+## Installation du bundle
 
 Premièrement, il faut charger **AssetLoaderBundle** en dépendance de notre projet. Pour cela, ajoutons-le dans le fichier `composer.json` :
 
@@ -84,7 +84,6 @@ public function registerBundles()
 }
 ```
 
-
 ## Utilisation du Bundle
 
 Ajouter des assets dans notre form type est assez simple :
@@ -92,6 +91,8 @@ Ajouter des assets dans notre form type est assez simple :
 * Notre **AbstractType** doit implémenter la méthode **getAssetCollection()** à partir de l'interface **AssetProviderInterface**. **AssetCollection** représente un tableau d'objets Asset
 * Nous devons définir notre type en tant que **service** et ajouter un tag nommé **idci_asset_loader.asset_provider**
 * Les dépendances doivent être placées dans un ou plusieurs fichiers `twig`, avec les autres fichiers de templates
+
+Notez que vous pouvez ajouter des assets de cette manière pour n'importe quel service, et non pas exclusivement pour les form types. Il suffit de créer une classe implémentant l'interface **AssetProviderInterface**, et d'enregistrer cette clase en tant que service avec le tag **idci_asset_loader.asset_provider**.
 
 Notre AbstractType devra donc ressembler à ceci :
 
@@ -144,9 +145,13 @@ class TagType extends AbstractType implements AssetProviderInterface
         // Passage de paramètre
         $this->assetCollection->add(new Asset('Form/tags_type_script.html.twig', ['form' => $view]));
 
+        // On ajoute une option pour définir le spérateur du tag
         $view->vars['separator']           = $options['separator'];
+
+        // On ajoute une option pour pouvoir formater les données d'autocomplétion récupérées via l'API
         $view->vars['jsTransformFunction'] = $options['jsTransformFunction'];
 
+        // L'url de l'api json d'autocomplétion
         if (isset($options['url'])) {
             $view->vars['url'] = $options['url'];
         }
@@ -154,12 +159,57 @@ class TagType extends AbstractType implements AssetProviderInterface
         return $view->vars;
     }
 
-    // ...
+    /**
+     * {@inheritdoc}
+     */
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver
+            ->setDefaults(array(
+                'separator'           => ',',
+                'jsTransformFunction' => 'function (tags) { return tags; };'
+            ))
+            ->setOptional(array(
+                'url'
+            ))
+            ->setAllowedTypes(array(
+                'separator'           => array('string'),
+                'jsTransformFunction' => array('string'),
+                'url'                 => array('string')
+            ))
+        ;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getParent()
+    {
+        return 'textarea';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return 'extra_form_tags';
+    }
+    /**
+     * {@inheritdoc}
+     *
+     * @deprecated
+     */
+    public function getName()
+    {
+        return $this->getBlockPrefix();
+    }
 }
 ```
 
 Notre script utilise des éléments de `view` pour fonctionner, nous passons donc celle-ci en paramètre **de l'Asset**.  
-Ici, puisque notre script a besoin de dépendances pour fonctionner, il faut charger celles-ci avant. Ainsi, on inclut ces deux éléments (dépendances et script propre) dans deux fichiers `twig` :
+Ici, puisque notre script a besoin de dépendances pour fonctionner, il faut charger celles-ci avant.
+Ainsi, on inclut ces deux éléments (dépendances et script propre) dans deux fichiers `twig` :
 
 ```twig
 {# app/Resources/views/Form/tags_type_assets.html.twig #}
