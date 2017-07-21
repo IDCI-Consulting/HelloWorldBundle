@@ -1,4 +1,4 @@
-{# verbatim #}
+{% verbatim %}
 
 # Asset Loader Bundle
 
@@ -284,7 +284,10 @@ To allow the *subscriber* to load the dependencies **automatically** (recommende
 idci_asset_loader:
     auto_load: true
 ```
+___
+Here you can see the final outcome of the Bundle :
 
+![final output](/images/blog/asset-loader-demo-2.png)
 ___
 
 Thank you for reading. Don't hesitate to [contact us](https://idci-consulting.fr/en/contact) for further information.

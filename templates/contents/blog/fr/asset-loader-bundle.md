@@ -336,6 +336,11 @@ Pour permettre au *subscriber* de charger les dépendances **automatiquement** (
 idci_asset_loader:
     auto_load: true
 ```
+___
+
+Voici un aperçu du résultat de notre Bundle :
+
+![résultat final](/images/blog/asset-loader-demo-2.png)
 
 ___
 
