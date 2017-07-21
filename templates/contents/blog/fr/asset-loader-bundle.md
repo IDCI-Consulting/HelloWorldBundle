@@ -1,11 +1,11 @@
 {% verbatim %}
 # Asset Loader Bundle
 
-La création de champs de formulaires personnalisés (*Form Types*) avec le framework Symfony 2 (et 3), confronte les développeurs à des problématiques de chargement de dépendances front-end (ou **assets**) tel que des fichiers javascripts ou css. Nous allons vous présenter dans cet article les problèmes fréquemment rencontrés et comment les résoudre avec le bundle **IdciAssetLoader**. La lecture de cet article nécessite que vous soyez à l'aide avec les **Form Type** de Symfony 2.
+La création de champs de formulaires personnalisés (*[Form Types](https://symfony.com/doc/current/reference/forms/types.html)*) avec le framework Symfony 2 (et 3) confronte les développeurs à des problématiques de chargement de dépendances front-end (ou **assets**) tel que des fichiers javascripts ou css. Nous allons vous présenter dans cet article les problèmes fréquemment rencontrés et comment les résoudre avec le bundle **IdciAssetLoader**. La lecture de cet article nécessite que vous soyez à l'aise avec les **Form Type** de Symfony 2.
 
 ## Introduction
 
-Plaçons nous dans un exemple de cas typique: imaginons que nous voulons créer un champ de formulaire personnalisé basé sur le type texte, qui nous permettra d'afficher les valeurs séparées par des virgues sous forme de tags.
+Plaçons nous dans un exemple de cas typique: imaginons que nous voulons créer un champ de formulaire personnalisé basé sur le type texte, qui nous permettra d'afficher des tags sous forme de valeurs séparées par des virgules.
 Nous utilisons **[Taggle.js](https://sean.is/poppin/tags)** pour le rendu des tags et **[JQuery](https://jquery.com/)** afin d'implémenter un système *d'autocompletion*.  
 
 Nous avons donc:
@@ -13,7 +13,7 @@ Nous avons donc:
  * des scripts de dépendances: Taggle et JQuery
 ___
 
-Nous serions tenté d'inclure les dépendances dans le **script du widget** (dans des balises `<script>`), ce qui ne pose pas de problème si notre widget n'est rendu qu'une seule fois sur la page. Ceci devient problématique lorsque l'on souhaite en inclure plusieurs sur une même page : **JQuery et Taggle seront chargés dans le DOM autant de fois qu'il y a d'instances du widget**, comme illustré ci-dessous.
+Nous serions tenté d'inclure les dépendances dans le **script du widget** (dans des balises `<script>`), ce qui ne pose pas de problème si notre widget n'est rendu qu'une seule fois sur la page. Ceci devient en effet problématique lorsque l'on souhaite en inclure plusieurs sur une même page : **JQuery et Taggle seront chargés dans le DOM autant de fois qu'il y a d'instances du widget**, comme illustré ci-dessous.
 
 ![rendu avec DOM](/images/blog/asset-loader-demo-1.png)
 
