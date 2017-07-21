@@ -107,6 +107,7 @@ blog:
             - {file: "behaviors-doctrine2", image: "symfony2-logo.png", title: "Installer les Behaviors Doctrine2 sous Symfony2", date: "24/08/2011" , author: "Gabriel Bondaz", categories: ["Symfony2"]}
             - {file: "phpillow-couchdb", image: "symfony2-logo.png", title: "Installer PHPillow pour couchDB sur Symfony2", date: "19/06/2011" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
             - {file: "step-bundle-introduction", image: "symfony2-logo.png", title: "Introduction à IDCIStepBundle", date: "03/03/2017", author: "Louise Millon", categories: ["Symfony2"]}
+            - {file: "asset-loader-bundle", image: "symfony2-logo.png", title: "La gestion des assets avec AssetLoaderBundle", date: "13/07/2017", author: "Emilio Staropoli", categories: ["Symfony2"]}
 
             #Symposium
             - {file: "symposium", image: "symposium.png", title: "Symposium un outil pour réussir l’organisation de vos événements", date: "22/11/2011" , author: "Frédéric Bondaz", categories: ["Symposium"]}
@@ -136,6 +137,7 @@ blog:
             - {file: "idci-webpage-screenshot-bundle", image: "symfony2-logo.png", title: "IDCIWebPageScreenshotBundle", date: "11/09/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
             - {file: "bundle-composer-broadcast", image: "symfony2-logo.png", title: "Create a Symfony2 Bundle reusable and broadcast it via Composer", date: "15/01/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
             - {file: "type-doctrine2", image: "symfony2-logo.png", title: "How to create a new type Doctrine2 with Symfony2", date: "18/01/2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+            - {file: "asset-loader-bundle", image: "symfony2-logo.png", title: "Handling asset loading with AssetLoaderBundle", date: "13/07/2017", author: "Emilio Staropoli", categories: ["Symfony2"]}
 
             #Symposium
             - {file: "symposium", image: "symposium.png", title: "Symposium un outil pour réussir l’organisation de vos événements", date: "22/11/2011" , author: "Frédéric Bondaz", categories: ["Symposium"]}
