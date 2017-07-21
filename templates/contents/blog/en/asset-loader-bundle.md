@@ -2,23 +2,24 @@
 
 # Asset Loader Bundle
 
-When working with the Symfony 2 / 3 frameworks, we often find ourselves facing the same issues regarding the loading of front-end dependencies or **assets**, particularly when working with custom *Form Types*. In this article, we will expose the different problems that we encouter and the solution that we offer.
-
+Creating custom Symfony (2 and 3) *[Form Types](https://symfony.com/doc/current/reference/forms/types.html)* puts the developpers in front of problems regarding the loading of front-end dependencies (or **assets**) such as JavaScript and CSS files. In this article, we will present the problems we frequently encounter and how to fix them with the IdciAssetLoader Bundle. To have a full understanding of this article, you should be comfortable with Symfony 2's **Form Types**
 
 ## Introduction
 
-To picture the previously-mentioned problems, we'll use a simple typical example.  
-Let's imagine we want to create a custom form type, which would be based on the Text type, allowing us to handle a system of *tags*.  
+Let's use a typical example : let's imagine we want to create a custom form type, which would be based on the Text type, allowing us to handle a system of *tags*.  
 We'll use **[Taggle.js](https://jquery.com/)** in order to generate the tags and **[JQuery](https://sean.is/poppin/tags)** to implement an *autocompletion* system.  
-Therefore, we have 3 scripts : one specific to the widget and two dependencies, Taggle and JQuery.
+Therefore, we have :
+
+* one script specific to the widget for DOM manipulation etc.
+* two dependency scripts, Taggle and JQuery
 
 ___
 
-We could be tempted to include the dependencies in the **widget script** (in `<script>` tags), which would not be an issue if we only use **one instance** of it at a time. This effectively becomes problematic when we wish to use multiple ones in a form : **the dependencies are loaded in the DOM as many times as there are instances of the widget**.
+We could be tempted to include the dependencies in the **widget script** (in `<script>` tags), which would not be an issue if we only use **one** instance of it at a time. This effectively becomes problematic when we wish to use multiple ones in the same page : **the dependencies are loaded in the DOM as many times as there are instances of the widget**.
 
 ![rendu avec DOM](/images/blog/asset-loader-demo-1.png)
 
-We could avoid this problem of multiple dependency loading by including the dependencies in the `<head>` tag of the `base.html.twig` file, but this introduces two further problems :
+We could avoid this problem of multiple dependency loading by including the dependencies in the `{% block javascripts %}` of the `base.html.twig` file, but this introduces two further problems :
 
 - The dependencies will be included in every page of the application, even when we don't need them
 - This implies more work for the developpers wanting to implement the widget, because they'd have to include the dependencies themselves in the file.
@@ -93,6 +94,8 @@ Adding assets to our custom form type is pretty simple :
 - We must define our type as a **service** and add a tag named **idci_asset_loader.asset_provider**
 - The dependencies have to be placed in one or more `twig` files, with the other template files
 
+>Please note that you can add assets this way for any service, and not only form types. You only need a class implementing the **AssetProviderInterface** and to register it as a service with the **idci_asset_loader.asset_provider** tag.
+
 Our AbstractType will therefore look like this :
 
 ```php
@@ -144,9 +147,13 @@ class TagType extends AbstractType implements AssetProviderInterface
         // argument passed
         $this->assetCollection->add(new Asset('Form/tags_type_script.html.twig', ['form' => $view]));
 
+        // Option added to define the tag separator
         $view->vars['separator']           = $options['separator'];
+
+        // Option added to format the autocompletion data from the API
         $view->vars['jsTransformFunction'] = $options['jsTransformFunction'];
 
+        // The URL of the Json autocompletion API
         if (isset($options['url'])) {
             $view->vars['url'] = $options['url'];
         }
@@ -154,12 +161,59 @@ class TagType extends AbstractType implements AssetProviderInterface
         return $view->vars;
     }
 
-    // ...
+    /**
+       * {@inheritdoc}
+       */
+      public function configureOptions(OptionsResolver $resolver)
+      {
+          $resolver
+              ->setDefaults(array(
+                  'separator'           => ',',
+                  'jsTransformFunction' => 'function (tags) { return tags; };'
+              ))
+              ->setOptional(array(
+                  'url'
+              ))
+              ->setAllowedTypes(array(
+                  'separator'           => array('string'),
+                  'jsTransformFunction' => array('string'),
+                  'url'                 => array('string')
+              ))
+          ;
+      }
+
+      /**
+       * {@inheritdoc}
+       */
+      public function getParent()
+      {
+          return 'textarea';
+      }
+
+      /**
+       * {@inheritdoc}
+       */
+      public function getBlockPrefix()
+      {
+          return 'extra_form_tags';
+      }
+      /**
+       * {@inheritdoc}
+       *
+       * @deprecated
+       */
+      public function getName()
+      {
+          return $this->getBlockPrefix();
+      }
+  }
+
 }
 ```
 
 Our script uses elements from `view` in order to work, so we pass it as an argument of **the Asset**.  
-In our case, because our script needs dependencies to work properly, we need to load these before the actual widget script. Thus, we include the two elements (dependencies and actual script) in two `twig` files :
+In our case, because our script needs dependencies to work properly, we need to load these before the actual widget script.   
+Thus, we include the two elements (dependencies and actual script) in two `twig` files :
 
  ```twig
 {# app/Resources/views/Form/tags_type_assets.html.twig #}
