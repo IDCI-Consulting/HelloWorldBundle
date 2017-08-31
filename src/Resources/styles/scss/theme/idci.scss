@@ -6,6 +6,10 @@
 @import '../partials/global';
 @import '../partials/media/header';
 
+/** Specific styles **/
+@import './gabriel_bondaz';
+@import './baptiste_bouchereau';
+
 div.row.cv {
   padding-top: 5rem;
 }
@@ -24,7 +28,9 @@ div.row.cv {
   }
 
   .break {
-    page-break-after: always;
+    page-break-before: always;
+    display: block;
+    height: 10px;
   }
 
   section.cv-part {
@@ -63,33 +69,15 @@ div.row.cv {
     top: 0;
     position: absolute;
   }
-}
 
+
+
+}
 
 div.columns.download-cv {
   padding-bottom: 20px;
   padding-top: 20px;
   text-align: center;
-}
-
-.gabriel_bondaz {
-  .skills {
-    li {
-      height: 25px;
-      &:nth-child(2) {
-        height: 75px;
-      }
-      &:nth-child(4) {
-        height: 50px;
-      }
-
-      em {
-        padding-left: 50%;
-        position: relative;
-        bottom: 25px;
-      }
-    }
-  }
 }
 
 section.cv-part {

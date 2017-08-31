@@ -1,0 +1,19 @@
+.gabriel_bondaz {
+  .skills {
+    li {
+      height: 25px;
+      &:nth-child(2) {
+        height: 75px;
+      }
+      &:nth-child(4) {
+        height: 50px;
+      }
+
+      em {
+        padding-left: 50%;
+        position: relative;
+        bottom: 25px;
+      }
+    }
+  }
+}
