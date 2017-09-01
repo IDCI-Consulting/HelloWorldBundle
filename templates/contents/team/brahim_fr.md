@@ -1,5 +1,8 @@
 
-Lorsque j'ai découvert le monde du Web, j'ai su que c'était le coup de foudre.
-J'ai employé tous les moyens nécessaires pour travailler dans ce domaine.
-J'aime ce monde en particulier tout ce qui touche de près ou de loin à l'Open Source.
-Le partage de mes connaissances est ma philosophie et "un code propre et cohérent" est ma devise.
+<blockquote cite="Albert Einstein">
+«Tout le monde est un génie. Mais si vous jugez un poisson sur ses capacités à grimper à un arbre, il passera sa vie à croire qu’il est stupide.» - Albert Einstein
+</blockquote>
+
+Au départ, le monde de l'informatique n'était pas un milieu familié.
+Après des nuits et jours d'apprentissage, je me suis passionné par ce domaine.
+Aujourd'hui, j'aime transposer des idées en programme & partager mes connaissances.
