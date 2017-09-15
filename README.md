@@ -21,7 +21,7 @@ $ docker network create dev
 
 If the `nginx-proxy` is not running:
 ```sh
-$ docker-compose -f docker/proxy-docker-compose.yml up -d
+$ docker-compose -f .docker/proxy-docker-compose.yml up -d
 ```
 
 Then run the remaining containers:
