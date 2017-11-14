@@ -23,7 +23,7 @@
         "symfony/twig-bridge": "~3.2",
         "symfony/validator": "~2.8|3.0.*",
         "symfony/yaml": "^2.7",
-        "mheap/silex-markdown": "dev-master",
+        "mheap/silex-markdown": "~2.0",
         "swiftmailer/swiftmailer": "^5.4",
         "knplabs/knp-snappy": "^0.4.0",
         "endroid/qrcode": "2.*"
