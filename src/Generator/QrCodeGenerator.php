@@ -99,7 +99,7 @@ class QrCodeGenerator
 
     private function mergeDefaultOptions(array $options = array())
     {
-        return array_merge($this->defaultOptions, $options);
+        return array_replace_recursive($this->defaultOptions, $options);
     }
 }
 
