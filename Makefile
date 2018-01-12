@@ -33,6 +33,6 @@ command:
 
 .PHONY: phpunit
 phpunit: ./vendor/phpunit/phpunit/phpunit ./phpunit.xml.dist
-	docker-compose run --rm php bash -c './vendor/phpunit/phpunit/phpunit'
+	docker-compose run --rm php bash -c "./vendor/phpunit/phpunit/phpunit $(options)"
 
 default: bash
