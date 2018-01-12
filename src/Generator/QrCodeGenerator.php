@@ -97,6 +97,13 @@ class QrCodeGenerator
         return $this->generate($url, $writer, $options);
     }
 
+    /**
+     * Merge default options with given options.
+     *
+     * @param array $options
+     *
+     * @return arrau
+     */
     private function mergeDefaultOptions(array $options = array())
     {
         return array_replace_recursive($this->defaultOptions, $options);
