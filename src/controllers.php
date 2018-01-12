@@ -491,48 +491,58 @@ $intlApp
 
 $intlApp
     ->get(
-        '/generate-qrcode/{vcfFileName}',
-        function (Request $request, $_locale, $vcfFileName) use ($app) {
+        '/generate/qrcode.{_format}',
+        function (Request $request, $_locale, $_format) use ($app) {
+            if (!$request->query->has('text')) {
+                throw new \InvalidArgumentException('The query parameter "text" missing.');
+            }
+
+            $options = $request->query->all();
+            $text = $options['text'];
+            unset($options['text']);
+
+            $options['writer'] = $_format;
+            $qrCode = $app['qr_code_generator']->generate($text, $options);
+
+            return new Response(
+                $qrCode->writeString(),
+                200,
+                array('Content-Type' => $qrCode->getContentType())
+            );
+        }
+)
+    ->assert('_format', 'binary|debug|eps|png|svg')
+    ->bind('generate-qrcode')
+;
+
+$intlApp
+    ->get(
+        '/generate/idci/qrcode/{vcfFileName}.{_format}',
+        function (Request $request, $_locale, $vcfFileName, $_format) use ($app) {
 
             $vcfPath = sprintf(dirname(__DIR__).'/templates/vcard/%s.vcf.twig', $vcfFileName);
-            $r = 57;
-            $g = 74;
-            $b = 89;
-            if ($request->query->has('r')) {
-                $r = intval($request->query->get('r'));
-            }
-            if ($request->query->has('g')) {
-                $g = intval($request->query->get('g'));
-            }
-            if ($request->query->has('b')) {
-                $b = intval($request->query->get('b'));
-            }
 
             if (!file_exists($vcfPath)) {
                 throw new NotFoundHttpException(sprintf('VCF file "%s.vcf" not found', $vcfFileName));
             }
 
-            $qrCode = new $app['qrcode'](
-                $app['url_generator']->generate('cv', array(
-                "_locale" => $_locale,
-                "theme"   => "idci",
-                "name"    => $vcfFileName,
-                "_format" => "lnk"
-            ), UrlGeneratorInterface::ABSOLUTE_URL));
-            $qrCode
-                ->setLogoPath(dirname(__DIR__).'/web/images/logo_idci_small.png')
-                ->setLogoWidth(78)
-                ->setForegroundColor(['r' => $r, 'g' => $g, 'b' => $b, 'a' => 0])
-            ;
+            $options = array_merge($request->query->all(), array('writer' => $_format));
+
+            $qrCode = $app['qr_code_generator']->generateIDCI(
+                $vcfFileName,
+                $_locale,
+                $options
+            );
 
             return new Response(
-                $qrCode->writeString(PngWriter::class),
+                $qrCode->writeString(),
                 200,
-                array('Content-Type' => $app['qrcode']->getContentType())
+                array('Content-Type' => $qrCode->getContentType())
             );
         }
     )
-    ->bind('generate-qrcode')
+    ->assert('_format', 'binary|debug|eps|png|svg')
+    ->bind('generate-idci-qrcode')
 ;
 
 $app

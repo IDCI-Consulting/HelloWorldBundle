@@ -8,12 +8,12 @@ use Provider\ContactManagerServiceProvider;
 use Provider\CourseManagerServiceProvider;
 use Provider\MarkdownParserServiceProvider;
 use Provider\I18nRouteGeneratorServiceProvider;
+use Provider\QrCodeGeneratorServiceProvider;
 use Provider\SnappyServiceProvider;
 use Provider\YamlConfigServiceProvider;
 use Provider\FinderServiceProvider;
 use Provider\SitemapManagerServiceProvider;
 use Provider\MetaTagsGeneratorServiceProvider;
-use Provider\QrCodeServiceProvider;
 use Provider\CvManagerServiceProvider;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
@@ -49,6 +49,7 @@ $app->register(new TwigServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
 $app->register(new SessionServiceProvider());
 $app->register(new I18nRouteGeneratorServiceProvider());
+$app->register(new QrCodeGeneratorServiceProvider());
 $app->register(new MarkdownParserServiceProvider());
 $app->register(new SwiftmailerServiceProvider());
 $app->register(new ContactManagerServiceProvider());
@@ -62,14 +63,6 @@ $app->register(new SnappyServiceProvider(), array(
 $app->register(new FinderServiceProvider());
 $app->register(new SitemapManagerServiceProvider());
 $app->register(new MetaTagsGeneratorServiceProvider());
-$app->register(new QrCodeServiceProvider(), array(
-    'qrcode.options' => array(
-        'size' => 200,
-        'padding' => 5,
-        'error_correction_level' => 'high',
-        'foreground_color' => array('r' => 13, 'g' => 176, 'b' => 209)
-    )
-));
 $app->register(new \Provider\MetaTagsGeneratorServiceProvider());
 $app->register(new MonologServiceProvider(), array(
     'monolog.logfile' => $app['config']['logfile'],
