@@ -14,7 +14,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
         require __DIR__.'/../../config/prod.php';
         require __DIR__.'/../controllers.php';
 
-        // Useful for the contact page only (flash bag messages)
+        // Useful for the contact page only (flash bag messages).
         $app['session.test'] = true;
         $app['debug'] = true;
 
@@ -35,7 +35,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
     }
 
     /**
-     * Get the urls to test
+     * Get the urls to test.
      *
      * @return array
      */
@@ -71,7 +71,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
     }
 
     /**
-     * Add the blog article urls to the urls array for a given locale
+     * Add the blog article urls to the urls array for a given locale.
      *
      * @param $urls
      * @param $locale
@@ -88,7 +88,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
     }
 
     /**
-     * Add the cv urls to the urls array, found in the cv templates directory
+     * Add the cv urls to the urls array, found in the cv templates directory.
      *
      * Ie: /en//cv/idci/john_doe_en
      *     /en//cv/idci/john_doe_en.html
@@ -136,10 +136,14 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
             //remove extensions (.vcf.twig);
             $member = substr($member, 0, -9);
 
-            $url = sprintf('/fr/generate-qrcode/%s', $member);
-            array_push($urls, $url);
-            $url = sprintf('/en/generate-qrcode/%s', $member);
-            array_push($urls, $url);
+            $qrCodeUrls = array(
+                '/fr/generate/qrcode/',
+                '/fr/generate/qrcode',
+                sprintf('/fr/generate/qrcode/idci/%s', $member),
+                sprintf('/fr/generate/qrcode/idci/%s', $member),
+            );
+
+            array_merge($urls, $qrCodeUrls);
         }
     }
 }
