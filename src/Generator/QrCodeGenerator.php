@@ -78,13 +78,13 @@ class QrCodeGenerator
      *
      * @return QrCode
      */
-    public function generateIDCI($vcfFileName, $locale, $writer, array $options = array())
+    public function generateIDCI($vcfFileName, $locale, array $options = array())
     {
         $url = $this->urlGenerator->generate('cv', array(
+            "_format" => "lnk",
             "_locale" => $locale,
-            "theme"   => "idci",
             "name"    => $vcfFileName,
-            "_format" => "lnk"
+            "theme"   => "idci",
         ), UrlGeneratorInterface::ABSOLUTE_URL);
 
         $options = array_merge(array(
@@ -94,7 +94,7 @@ class QrCodeGenerator
 
         $options = $this->mergeDefaultOptions($options);
 
-        return $this->generate($url, $writer, $options);
+        return $this->generate($url, $options);
     }
 
     /**
