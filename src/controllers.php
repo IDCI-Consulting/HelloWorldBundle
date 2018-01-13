@@ -512,12 +512,13 @@ $intlApp
         }
 )
     ->assert('_format', 'binary|debug|eps|png|svg')
+    ->value('_format', 'png')
     ->bind('generate-qrcode')
 ;
 
 $intlApp
     ->get(
-        '/generate/idci/qrcode/{vcfFileName}.{_format}',
+        '/generate/qrcode/idci/{vcfFileName}.{_format}',
         function (Request $request, $_locale, $vcfFileName, $_format) use ($app) {
 
             $vcfPath = sprintf(dirname(__DIR__).'/templates/vcard/%s.vcf.twig', $vcfFileName);
@@ -542,7 +543,8 @@ $intlApp
         }
     )
     ->assert('_format', 'binary|debug|eps|png|svg')
-    ->bind('generate-idci-qrcode')
+    ->value('_format', 'png')
+    ->bind('generate-qrcode-idci')
 ;
 
 $app
