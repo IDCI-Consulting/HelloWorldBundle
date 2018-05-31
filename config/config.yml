@@ -133,7 +133,6 @@ blog:
 
             #Various
             - {file: "new-year2017", image: "new-year2017.jpg", title: "Our wishes for 2017", date: "13/01/2017" , author: "Louise Millon", categories: ["Various"]}
-            - {file: "idci-10-years", image: "logo_10_ans_idci.svg", title: "10 years of IDCI-consulting", date: "30/05/2018" , author: "Louise Millon", categories: ["Various"]}
 
             #Symfony2
             - {file: "idci-webpage-screenshot-bundle", image: "symfony2-logo.png", title: "IDCIWebPageScreenshotBundle", date: "11/09/2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}

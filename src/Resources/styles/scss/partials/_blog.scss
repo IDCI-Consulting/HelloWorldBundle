@@ -180,6 +180,27 @@
     margin-left: 32px;
   }
 
+  .speaker {
+    margin-bottom: 2rem;
+
+    h3 {
+      border: none;
+      text-align: center;
+    }
+
+    img {
+      margin: 0 auto;
+      width: 45%;
+    }
+  }
+
+  .ifly {
+      display: block;
+      height: 20rem;
+      margin: 2rem auto;
+      width: 50%;
+  }
+
   .notice {
     border: 1px solid transparent;
     color: #296a88;

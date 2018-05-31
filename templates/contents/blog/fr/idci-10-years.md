@@ -1,62 +1,50 @@
 {% verbatim %}
 
-# IDCI-consulting 10 ans
+# IDCI Consulting fête ses 10 ans !
 
-Brève introduction.
+Pour fêter cet anniversaire symbolique, nous tenions à vous convier à notre événement qui se tiendra le vendredi 8 juin.
 
-## Table ronde et débats
+Ayant tous deux un attrait respectif pour les services informatiques et les nouvelles technologies, Frédéric et Gabriel Bondaz ont fondé IDCI Consulting il y a désormais 10 ans. Depuis, l’équipe accueille régulièrement de nouveaux collaborateurs définitivement passionnés et prêts à être formé tout autant qu’à, dans le futur, former les derniers arrivants. Au centre des intérêts, la culture de l’acquisition de compétences se complète logiquement d’une forte envie de conserver une taille humaine.
 
-A l'occasion des 10 ans de IDCI-consulting nous aurons la chance d'avoir parmis nous **Christophe Batier** et **Alain Mille** qui animeront chacun une conférence:
+Depuis une décennie désormais, l’équipe d’IDCI Consulting s’engage à travailler avec des partenaires en accord avec les valeurs qu’elle tente de porter au quotidien. Le partage et l’ouverture véhiculés par l’open source sont ancrés dans les origines de l’entreprise et sont voués à le rester dans les années à venir.
 
-* 16h30 - 17h00 | **Christophe Batier**: Nom de la conférence
-* 17h10 - 17h50 | **Alain Mille**: Nom de la conférence  
+## Ateliers / Débats
+
+Pour marquer ces 10 ans passés à vos côtés, nous souhaitons vous convier à notre événement, qui débutera par deux conférences suivies de débats libres.
 
 ### Christophe Batier
 
-<span class="text-presentation">
-<span class="image-presentation">
-![Christophe Batier](/images/blog/christophe_batier.jpeg "Christophe Batier")  
-</span>
-Directeur Technique d’**[iCAP](https://icap.univ-lyon1.fr/)**, (service Innovation Conception et Accompagnement pour la Pédagogie) de l’Université Lyon1, **Christophe Batier** est également Président du consortium [Claroline](https://www.claroline.net/).  
-Il participe à plusieurs projets de recherche sur les thématiques suivantes : innovation pour l’enseignement, LMS(Learning Management System), Mooc, 3D et la robotique éducative.  
-</span>
+<div class="speaker" markdown="1" >
+![Christophe Batier](/images/blog/christophe_batier.jpeg "Christophe Batier")
 
-___
-
-Nous vivons une époque où tout s'accélère autour des technologies du numérique.  
-Toujours plus de données…  
-Toujours plus de volume d’information…  
-Toujours plus de vitesse de traitement…  
-Toujours plus de système pour nous restituer ces informations…  
-Cela à forcément un impact sur nos façons de travailler et en aura de plus en plus.  
-**Christophe Batier** vous propose de prendre un peu de hauteur pour comprendre cette mutation.
+<div markdown="1">
+Directeur technique à l’iCap (Innovation, Conception et Accompagnement pour la Pédagogie) à Lyon 1 et président du consortium Claroline, Christophe Batier évoquera __la transition numérique et ses enjeux__. Au travers d’exemples tels que la hausse des données, des volumes d’information ou des vitesses de traitement, il se questionnera avec nous sur l’impact et le futur de cette puissante mutation.
+</div>
+</div>
 
 ### Alain Mille
-
-<span class="text-presentation">
-<span class="image-presentation">
+<div class="speaker" markdown="1" >
 ![Alain Mille](/images/blog/alain_mille.jpg "Alain Mille")
-</span>
-Après une première carrière d’ingénieur en informatique médicale aux Hospices Civils de Lyon (1974-1983), Alain Mille a développé le département informatique de CPE Lyon (1984-1999).  
-Il défend une thèse sur la réutilisation de l’expérience (distribution de l’eau) en 1995, soutient son HDR en 1998 et est recruté comme professeur à l’Université Lyon1 en 2000.  
-Il contribue à la création du laboratoire [LIRIS CNRS](https://liris.cnrs.fr/?set_language=fr) 5205, crée le Centre de Ressources Informatiques de Lyon1, monte la formation initiale à l’informatique en licence et les formations (en présentiel, à distance et en cours du soir) en master dans le domaine de l’IA.  
-Il anime les relations industrielles du [LIRIS CNRS](https://liris.cnrs.fr/?set_language=fr) et assure la responsabilité de l’école doctorale Informatique et Mathématiques pendant quatre ans.  
-Chercheur en intelligence artificielle, il s’intéresse au développement de la théorie de la trace d’interactions modélisée.    
 
-Ce thème de recherche a été décliné dans de nombreux projets industriels et scientifiques et fait l’objet de contributions logicielles ouvertes.  
-Vingt-huit étudiants ont soutenu leur thèse sous sa direction, ses publications sont disponibles sur [sa page LIRIS](http://liris.cnrs.fr/membres?idn=amille).  
-Il a présidé plusieurs conférences dans le domaine de l’IA et du Web.  
-Il s’intéresse actuellement à développer [les communs de la connaissance scientifique](http://coexiscience.fr) et est un animateur engagé de l’association [Universitaires Sans Frontières](http://www.univ-sf.org).
-</span>
-___
+<div markdown="1">
+Alain Mille, chercheur en intelligence artificielle au CNRS et à contributeur au développement du laboratoire LIRIS CNRS 5205, dirigera sa prise de parole vers le sujet du design et la conception « orientée » éthique. À nos côtés, il s’interrogera sur l’adaptation du concept d’éthique à l’ère du numérique. Comment, finalement, créer les conditions d’une éthique partagée tout en amenant la question de la responsabilité, que ce soit celle des scientifiques, des designers ou des usagers.
+</div>
+</div>
 
-Durant sa conférence, **Alain Mille** abordera la question de l'éthique à l'ère du numérique et il répondra ensuite à la question: Comment créer les conditions de l’émergence d’une éthique partagée entre les acteurs des processus techno-scientifiques ?
+Les conférences auront lieu de __16h30 à 18h__ avant que le grand saut ne commence.
 
 ## Le grand saut
 
-## Cocktail
+Pour ce qui est du _grand saut_, nous espérons que la chute libre vous inspire... Quoi de mieux que la vidéo <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">d'iFLY</a> pour donner un avant goût :
 
+<iframe src="https://www.youtube.com/embed/Qp6Bn8x6hK0" class="ifly" frameborder="0" allowfullscreen=""></iframe>
 
-Thank you for reading. Don't hesitate to [contact us](https://idci-consulting.fr/en/contact) for further information.
+Oui, vous pouvez réellement voler ! <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> transforme votre rêve de voler en une réalité. Préparez vous à rester suspendus dans une colonne d’air reproduisant totalement la sensation de la chute libre. Sécurité, amusement et sensations garanties !
+
+## Le cocktail
+
+Remis de nos émotions, un cocktail dînatoire se tiendra de 20h à minuit.
+
+Ne pas hésiter à [nous contacter](https://idci-consulting.fr/fr/contact) pour plus d'informations.
 
 {% endverbatim %}
