@@ -27,7 +27,7 @@ Directeur technique à l’iCap (Innovation, Conception et Accompagnement pour l
 ![Alain Mille](/images/blog/alain_mille.jpg "Alain Mille")
 
 <div markdown="1">
-Alain Mille, chercheur en intelligence artificielle au CNRS et à contributeur au développement du laboratoire LIRIS CNRS 5205, dirigera sa prise de parole vers le sujet du design et la conception « orientée » éthique. À nos côtés, il s’interrogera sur l’adaptation du concept d’éthique à l’ère du numérique. Comment, finalement, créer les conditions d’une éthique partagée tout en amenant la question de la responsabilité, que ce soit celle des scientifiques, des designers ou des usagers.
+Alain Mille, chercheur en intelligence artificielle au CNRS et contributeur au développement du laboratoire LIRIS CNRS 5205, dirigera sa prise de parole vers le sujet du design et la conception « orientée » éthique. À nos côtés, il s’interrogera sur l’adaptation du concept d’éthique à l’ère du numérique. Comment, finalement, créer les conditions d’une éthique partagée tout en amenant la question de la responsabilité, que ce soit celle des scientifiques, des designers ou des usagers.
 </div>
 </div>
 
@@ -35,16 +35,16 @@ Les conférences auront lieu de __16h30 à 18h__ avant que le grand saut ne comm
 
 ## Le grand saut
 
-Pour ce qui est du _grand saut_, nous espérons que la chute libre vous inspire... Quoi de mieux que la vidéo <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">d'iFLY</a> pour donner un avant goût :
+Pour ce qui est du _grand saut_, nous espérons que la chute libre vous inspire... Quoi de mieux que la vidéo <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">d'iFLY</a> pour donner un avant-goût :
 
 <iframe src="https://www.youtube.com/embed/Qp6Bn8x6hK0" class="ifly" frameborder="0" allowfullscreen=""></iframe>
 
-Oui, vous pouvez réellement voler ! <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> transforme votre rêve de voler en une réalité. Préparez vous à rester suspendus dans une colonne d’air reproduisant totalement la sensation de la chute libre. Sécurité, amusement et sensations garanties !
+Oui, vous pouvez réellement voler ! <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> transforme votre rêve de voler en une réalité. Préparez-vous à rester suspendus dans une colonne d’air reproduisant totalement la sensation de la chute libre. Sécurité, amusement et sensations garanties !
 
 ## Le cocktail
 
-Remis de nos émotions, un cocktail dînatoire se tiendra de 20h à minuit.
+Remis de nos émotions, un cocktail dînatoire se tiendra de __20h à minuit__.
 
-Ne pas hésiter à [nous contacter](https://idci-consulting.fr/fr/contact) pour plus d'informations.
+N'hésitez à [nous contacter](https://idci-consulting.fr/fr/contact) pour plus d'informations.
 
 {% endverbatim %}
