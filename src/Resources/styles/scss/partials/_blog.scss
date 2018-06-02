@@ -181,6 +181,9 @@
   }
 
   .speaker {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
     margin-bottom: 2rem;
 
     h3 {
@@ -188,9 +191,13 @@
       text-align: center;
     }
 
-    img {
+    p {
+        text-align: justify;
+    }
+
+    img, & > div {
       margin: 0 auto;
-      width: 45%;
+      width: 50%;
     }
   }
 

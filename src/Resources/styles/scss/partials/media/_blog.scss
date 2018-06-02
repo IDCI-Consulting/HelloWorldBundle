@@ -28,6 +28,16 @@
     }
   }
 
+  .blog-article {
+      .speaker {
+          flex-direction: column;
+
+          & > div {
+            width: 100%;
+          }
+      }
+  }
+
   .articles {
 
     .info {
