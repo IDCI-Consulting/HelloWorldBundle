@@ -18,7 +18,7 @@ Pour marquer ces 10 années passées aux côtés de nos clients et partenaires, 
 ### Christophe Batier
 
 <div class="speaker" markdown="1" >
-![Christophe Batier](/images/blog/christophe_batier.jpeg "Christophe Batier")
+![Christophe Batier](/images/blog/christophe_batier.jpg "Christophe Batier")
 
 <div markdown="1">
 Directeur technique à l’iCap (Innovation, Conception et Accompagnement pour la Pédagogie) à Lyon 1 et président du consortium Claroline, Christophe Batier évoquera __la transition numérique et ses enjeux__. Au travers d’exemples tels que la hausse des données, des volumes d’information ou des vitesses de traitement, il se questionnera avec nous sur l’impact et le futur de cette puissante mutation.
@@ -28,7 +28,7 @@ Directeur technique à l’iCap (Innovation, Conception et Accompagnement pour l
 ### Alain Mille
 
 <div class="speaker" markdown="1" >
-![Alain Mille](/images/blog/alain_mille.jpg "Alain Mille")
+![Alain Mille](/images/blog/alain_mille.png "Alain Mille")
 
 <div markdown="1">
 Alain Mille, chercheur en intelligence artificielle au CNRS et contributeur au développement du laboratoire LIRIS CNRS 5205, dirigera sa prise de parole vers le sujet du design et la conception « orientée » éthique. À nos côtés, il s’interrogera sur __l’adaptation du concept d’éthique à l’ère du numérique__. Comment, finalement, créer les conditions d’une éthique partagée tout en amenant la question de la responsabilité, que ce soit celle des scientifiques, des designers ou des usagers.
