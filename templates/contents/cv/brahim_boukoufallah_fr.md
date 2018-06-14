@@ -18,7 +18,23 @@
 
 ### EXPERIENCES PROFESSIONNELLES
 
-_Depuis Juillet 2014_
+_Depuis 2017_
+
+  - Co-gérant chez IDCI-Consulting | Analyste développeur
+
+_2017-2018_
+
+  - Réalisation & conception d'un [bundle Symfony](https://github.com/IDCI-Consulting/TaskBundle) permettant l'exécution de tâches ordonnancées
+  - Enseignant vacataire à L'université Lyon 1, Licence E-business
+   - Enseignement à la réalisation de sites e-commerce avec le CMS Prestashop
+  - Réalisation & conception d'un [bundle Symfony](https://github.com/IDCI-Consulting/GroupActionBundle) permettant l'exécution d'actions groupées sur des entités.
+  - Réalisation & conception d'un [bundle Symfony](https://github.com/IDCI-Consulting/DocumentManagementBundle) permettant la gestion de documents
+   - Génération de documents dans différents formats (html, pdf ...)
+   - Stockage de documents
+  - Intervenant à la [3W Academy](https://3wa.fr/)
+   - Enseignement des langages de programmation web PHP & MySQL
+
+_2014-2016_
 
   - Salarié chez IDCI-Consulting | Développeur Web & Formateur
 
@@ -32,6 +48,7 @@ _2016_
 _2015_
 
   - Réalisation d'une application de gestion de brevet pour le groupe [Dynergie](http://www.dynergie.eu/)
+   - Conception de l'application
    - Backend avec Symfony2 exposant une API REST
    - Frontend avec AngularJS exploitant l'API sous forme de graphique
   - Réalisation de deux sites au responsive design pour des agences marketing
@@ -50,6 +67,7 @@ _2013_
   - Stage chez IDCI-Consulting : Conception et réalisation d'une plate-forme permettant la gestion de note de frais
    - Framework : Symfony2
 
+<p class="break" markdown="1"></p>
 
 ### PROJETS PERSONNELS
 
@@ -66,31 +84,30 @@ _2014_
 
 _2015_
 
-  - License [METINET](http://iut.univ-lyon1.fr/formation/offre-de-formations/informatique-bourg-en-bresse-/licence-professionnelle-metiers-de-l-informatique-applications-web-parcours-metinet-concepteur-et-gestionnaire-de-sites-internet-metinet--602777.kjsp)
+  - Licence professionnelle [METINET](http://iut.univ-lyon1.fr/formation/offre-de-formations/informatique-bourg-en-bresse-/licence-professionnelle-metiers-de-l-informatique-applications-web-parcours-metinet-concepteur-et-gestionnaire-de-sites-internet-metinet--602777.kjsp)
 
 _2014_
 
   - **BTS SIO** (Service Informatique aux Organisations)
 
-<p class="break" markdown="1"></p>
-
 ### OUTILS INFORMATIQUES
 
   - **Serveur HTTP** _Apache, Nginx_
   - **Configuration Management** _Ansible_
-  - **Languages** _Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script_
+  - **Languages** _PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script, Python_
   - **OS** _Windows, Linux (Debian et Ubuntu)_
-  - **Framework backend** _Symfony2/3, Silex_
-  - **Framework frontend** _AngularJS, jQuery_
+  - **Framework backend** _Symfony2/3/4_
+  - **Framework frontend** _AngularJS, VueJS_
   - **Framework CSS** _Bootstrap, Foundation_
   - **Moteur de template** _Twig, Handlebars_
-  - **CMS** _WordPress_
+  - **CMS** _WordPress, PrestaShop_
   - **Versioning** _Git, Svn_
-  - **Base de données** _Mysql, MongoDB_
+  - **Base de données** _Mysql, MongoDB, ElasticSearch_
   - **Virtualisation** _Docker_
   - **Gestion de projet** _Redmine, Wekan_
-  - **Task runner** _Gulp_
-  - **Autres** _Ajax, Notions de Gimp et Photoshop_
+  - **Task runner** _Gulp, Webpack_
+  - **Outils AMQP** _RabbitMQ_
+  - **Autres** _Ajax, jQuery, Notions de Gimp et Photoshop_
 
 
 ### EXPERIENCES PERSONNELLES

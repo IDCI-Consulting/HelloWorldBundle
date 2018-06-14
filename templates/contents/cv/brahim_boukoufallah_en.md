@@ -17,7 +17,19 @@
 
 ### PROFESSIONAL EXPERIENCES
 
-_Since July 2014_
+_Since 2017_
+
+- Partner at IDCI-CONSULTING | Analyst Developer
+
+_2017-2018_
+
+  - Worked on a [Symfony bundle](https://github.com/IDCI-Consulting/TaskBundle) to run scheduled tasks.
+  - Taught at Lyon 1 University
+   - Gave a HTML / CSS / Prestashop 28-hour course to a e-business classroom
+  - Worked on [Symfony bundle](https://github.com/IDCI-Consulting/GroupActionBundle) execute grouped actions on entities.
+  - Worked on [Symfony bundle](https://github.com/IDCI-Consulting/DocumentManagementBundle) to manage documents
+
+_2014-2016_
 
   - Employee at IDCI-Consulting | Web Developer & Teacher
 
@@ -77,10 +89,10 @@ _2014_
 
   - **Server HTTP** _Apache, Nginx_
   - **Configuration Management** _Ansible_
-  - **Languages** _Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script_
+  - **Languages** _Java, PHP, HTML5, CSS3, Sass, JavaScript, Sql, NoSql, Shell Script, Python_
   - **OS** _Windows, Linux (Debian and Ubuntu)_
-  - **Backend framework** _Symfony2, Silex_
-  - **Frontend framework** _AngularJS, jQuery_
+  - **Backend framework** _Symfony2/3/4_
+  - **Frontend framework** _AngularJS, VueJS_
   - **CSS framework** _Bootstrap, Foundation_
   - **Template engine** _Twig, Handlebars_
   - **CMS** _WordPress, Prestashop_
@@ -90,7 +102,7 @@ _2014_
   - **Project management** _Redmine_
   - **Task runner** _Gulp_
   - **AMQP Tools** _RabbitMQ_
-  - **Others** _Ajax, Gimp and Photoshop notions_
+  - **Others** _Ajax, jQuery, Gimp and Photoshop notions_
 
 
 ### PERSONAL EXPERIENCES
