@@ -95,6 +95,7 @@ blog:
             #Divers
             - {file: "new-year2017", image: "new-year2017.jpg", title: "Nos voeux 2017", date: "13/01/2017" , author: "Louise Millon", categories: ["Divers"]}
             - {file: "idci-10-years", image: "logo_10_ans_idci.svg", title: "10 ans de IDCI-consulting", date: "30/05/2018" , author: "Louise Millon", categories: ["Divers"]}
+            - {file: "idci-10-years-thanks", image: "logo_10_ans_idci.svg", title: "Merci !", date: "28/06/2018" , author: "Louise Millon", categories: ["Divers"]}
 
             #Symfony1
             - {file: "creer-un-projet-symfony-1-x-depuis-la-sandbox-sous-ubuntu", image: "symfony1-logo.jpg", title: "Créer un projet Symfony 1.x depuis la sandbox sous Ubuntu", date: "29/09/2011" , author: "Gabriel Bondaz", categories: ["Symfony1"]}
