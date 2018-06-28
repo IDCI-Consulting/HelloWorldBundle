@@ -21,7 +21,7 @@ RUN mv /root/wkhtmltox/bin/wkhtmltoimage /usr/bin/wkhtmltoimage && chmod +x /usr
  RUN apt-get install zlib1g-dev -y && docker-php-ext-install zip
  RUN apt-get install libxml2-dev -y && docker-php-ext-install soap
  RUN apt-get install libmcrypt-dev -y && docker-php-ext-install mcrypt
- RUN apt-get install libpng12-dev -y && docker-php-ext-install gd
+ RUN apt-get install libpng-dev -y && docker-php-ext-install gd
  RUN apt-get install libxml2-dev -y && docker-php-ext-install xml
  RUN apt-get install libicu-dev -y && docker-php-ext-install intl
 # RUN apt-get install -y libmemcached-dev zlib1g-dev && pecl install memcached && docker-php-ext-enable memcached
