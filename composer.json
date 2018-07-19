@@ -26,7 +26,8 @@
         "mheap/silex-markdown": "~2.0",
         "swiftmailer/swiftmailer": "^5.4",
         "knplabs/knp-snappy": "^0.4.0",
-        "endroid/qrcode": "2.*"
+        "endroid/qrcode": "2.*",
+        "fabschurt/silex-provider-captcha":"^1.0@dev"
     },
     "autoload": {
         "psr-0": { "": "src/" }
