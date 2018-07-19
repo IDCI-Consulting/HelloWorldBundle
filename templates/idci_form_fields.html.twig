@@ -33,8 +33,9 @@
 {% endblock form_errors %}
 
 {% block form_widget_simple %}
+    {% set juro_class = juro_class|default('input__field input__field--juro') %}
     {% set type = type|default('text') %}
-    <input class="input__field input__field--juro" type="{{ type }}" {{ block('widget_attributes') }}
+    <input class="{{ juro_class }}" type="{{ type }}" {{ block('widget_attributes') }}
         {% if value is not empty %}
             value="{{ value }}"
         {% endif %}
@@ -48,7 +49,8 @@
 {% endblock textarea_widget %}
 
 {% block form_row %}
-    <div class="input input--juro">
+    {% set juro_container_class = juro_container_class|default('input input--juro') %}
+    <div class="{{ juro_container_class }}">
         {{ form_widget(form) }}
         {{ form_label(form) }}
         {{ form_errors(form) }}
@@ -80,3 +82,26 @@
         </label>
     {%- endif -%}
 {%- endblock form_label -%}
+
+{% block captcha_row %}
+    <div class="captcha-wrapper">
+        <img src="{{ captcha_url }}"
+             alt=""
+             width="{{ image_width }}"
+             height="{{ image_height }}"
+             style="width:auto; height:auto;"
+             class="captcha-img"
+        />
+        <button type="button"
+             class="captcha-refresh-btn button tiny"
+             title="{{ 'Load a new image'|trans}}"
+             onclick="var img = this.parentNode.querySelector('.captcha-img'); img.setAttribute('src', img.getAttribute('src').replace(/(\?|&amp;){{ cache_busting_param_name }}=\d+/, '$1{{ cache_busting_param_name }}=' + Date.now()));">
+             <i class="fa fa-refresh"></i>
+         </button>
+    </div>
+    {{ block('form_row') }}
+{% endblock captcha_row %}
+
+{%- block captcha_widget -%}{% spaceless %}
+    {{ block('form_widget') }}
+{% endspaceless %}{%- endblock captcha_widget -%}

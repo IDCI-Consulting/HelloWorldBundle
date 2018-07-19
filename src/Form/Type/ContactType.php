@@ -17,6 +17,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Constraints;
+use FabSchurt\Silex\Provider\Captcha\Form\Type\CaptchaType;
+use Symfony\Component\Form\Extension\Core\Type;
 
 class ContactType extends AbstractType
 {
@@ -63,6 +65,7 @@ class ContactType extends AbstractType
                     $notBlankConstraint,
                 )
             ))
+            ->add('captcha', CaptchaType::class)
             ->add('validate', SubmitType::class, array(
                 'label' => 'Send',
             ))

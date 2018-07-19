@@ -1,7 +1,14 @@
 .contact-form {
   padding-bottom: 3rem;
   padding-top: 3rem;
+
+  & .captcha-refresh-btn {
+      display: inline-block;
+      width: auto;
+  }
 }
+
+
 
 
 @media #{$small-only} {

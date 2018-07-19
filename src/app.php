@@ -16,6 +16,8 @@ use Provider\SitemapManagerServiceProvider;
 use Provider\MetaTagsGeneratorServiceProvider;
 use Provider\CvManagerServiceProvider;
 use Silex\Application;
+use FabSchurt\Silex\Provider\Captcha\CaptchaServiceProvider;
+use Silex\Provider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\RoutingServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
@@ -42,6 +44,8 @@ $app->register(
         'locale' => 'en',
     )
 );
+$captchaProvider = new CaptchaServiceProvider();
+$app->register(new Provider\LocaleServiceProvider());
 $app->register(new FormServiceProvider());
 $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
@@ -68,6 +72,10 @@ $app->register(new MonologServiceProvider(), array(
     'monolog.logfile' => $app['config']['logfile'],
     'monolog.level'   => Logger::ERROR
 ));
+$app->register($captchaProvider, array(
+    'captcha.image_quality' => 100,
+));
+$app->mount('', $captchaProvider);
 
 $app['snappy.pdf_options'] = array(
     'encoding'   => 'UTF-8',
