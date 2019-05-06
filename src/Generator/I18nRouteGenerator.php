@@ -1,6 +1,6 @@
 <?php
 
-namespace Generator;
+namespace App\Generator;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGenerator;

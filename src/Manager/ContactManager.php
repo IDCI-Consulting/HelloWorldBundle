@@ -1,6 +1,6 @@
 <?php
 
-namespace Manager;
+namespace App\Manager;
 
 /**
  * ContactManager

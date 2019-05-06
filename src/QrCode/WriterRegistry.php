@@ -1,6 +1,6 @@
 <?php
 
-namespace QrCode;
+namespace App\QrCode;
 
 use Endroid\QrCode\Writer\BinaryWriter;
 use Endroid\QrCode\Writer\DebugWriter;

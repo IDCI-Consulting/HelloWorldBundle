@@ -1,6 +1,6 @@
 <?php
 
-namespace Generator;
+namespace App\Generator;
 
 /**
  * MetaTagsGenerator.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Provider;
+namespace App\Provider;
 
 use Generator\I18nRouteGenerator;
 use Pimple\ServiceProviderInterface;

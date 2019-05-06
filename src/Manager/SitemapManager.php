@@ -1,6 +1,6 @@
 <?php
 
-namespace Manager;
+namespace App\Manager;
 
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Security\Acl\Exception\Exception;
