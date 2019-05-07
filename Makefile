@@ -100,4 +100,4 @@ build-images:
 
 .PHONY: push-images
 push-images:
-	docker push docker-registry.idci-consulting.fr/maier/maier-main/php-fpm:$(source_tag)
+	docker push docker-registry.idci-consulting.fr/idci/website/php-fpm:$(source_tag)
