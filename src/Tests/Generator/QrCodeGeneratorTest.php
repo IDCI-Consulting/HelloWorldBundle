@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace App\Tests;
 
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Endroid\QrCode\QrCode;

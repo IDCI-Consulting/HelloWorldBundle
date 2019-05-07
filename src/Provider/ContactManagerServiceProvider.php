@@ -1,6 +1,6 @@
 <?php
 
-namespace Provider;
+namespace App\Provider;
 
 use Manager\ContactManager;
 use Pimple\ServiceProviderInterface;

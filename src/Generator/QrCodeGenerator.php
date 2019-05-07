@@ -1,6 +1,6 @@
 <?php
 
-namespace Generator;
+namespace App\Generator;
 
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Endroid\QrCode\Factory\QrCodeFactory;

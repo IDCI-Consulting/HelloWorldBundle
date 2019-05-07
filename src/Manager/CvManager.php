@@ -1,6 +1,6 @@
 <?php
 
-namespace Manager;
+namespace App\Manager;
 
 use Knp\Bundle\MarkdownBundle\Parser\MarkdownParser;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;

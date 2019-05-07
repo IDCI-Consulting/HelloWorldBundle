@@ -1,12 +1,6 @@
 <?php
 
-/**
- * Contact Form Type
- * User: brahim
- * Date: 27/05/15
- * Time: 13:52.
- */
-namespace Form\Type;
+namespace App\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
