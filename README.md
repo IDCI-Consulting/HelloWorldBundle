@@ -20,7 +20,7 @@ $ make build-images
 
 If you don't already have a docker web reverse proxy service (ex: traefik), you must start it :
 ```sh
-$ docker stack deploy -c .docker/proxy-docker-compose.yml idci_website_traefik
+$ docker stack deploy -c .docker/proxy-docker-compose.yml web_reverse_proxy
 ```
 
 To deploy the stack to docker swarm
