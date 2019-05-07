@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
   php:
-    image: idci-website:master
+    image: docker-registry.idci-consulting.fr/idci/website/php-fpm:current
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro

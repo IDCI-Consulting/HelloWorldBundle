@@ -18,6 +18,11 @@ To build the docker image:
 $ make build-images
 ```
 
+To deploy the stack to docker swarm
+```sh
+$ docker stack deploy -c docker-compose.yml idci_website
+```
+
 To push the docker images:
 ```sh
 $ make push-images
@@ -48,15 +53,7 @@ $ sudo chmod 775 . -R && sudo chown $USER:www-data . -R
 
 To get access on your web applications, modify the `/etc/hosts` file:
 ```sh
-$ sudo bash -c "echo -e '\n# IDCI-Consulting - Website\n127.0.0.1       idci-website.docker adminer.idci-website.docker' >> /etc/hosts"
-```
-
-##### Run Gulp tasks
-
-To run gulp tasks (to compile sass file for example) run the following (see the Gulpfile.js file to know the different tasks):
-```sh
-$ make gulp task="your_task"
-# example make gulp task="watch"
+$ sudo bash -c "echo -e '\n# IDCI-Consulting - Website\n127.0.0.1       idci.docker adminer.idci.docker' >> /etc/hosts"
 ```
 
 ##### To run a `symfony` command
