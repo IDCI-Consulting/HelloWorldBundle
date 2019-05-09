@@ -16,9 +16,7 @@ class BlogController extends AbstractController
      */
     public function blog(Request $request)
     {
-        return $this->render('blog/blog.html.twig', [
-
-        ]);
+        return $this->render('blog/blog.html.twig');
     }
 
     /**

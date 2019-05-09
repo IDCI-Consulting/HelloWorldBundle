@@ -15,8 +15,7 @@ class TeamController extends AbstractController
      */
     public function team()
     {
-        return $this->render('team/team.html.twig', [
-        ]);
+        return $this->render('team/team.html.twig');
     }
 
     /**
