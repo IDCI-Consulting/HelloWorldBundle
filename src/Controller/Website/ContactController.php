@@ -6,12 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{_locale}", methods="GET")
+ * @Route("/{_locale}")
  */
 class ContactController extends AbstractController
 {
     /**
-     * @Route("/contact", name="contact")
+     * @Route("/contact", name="contact", methods={"GET"})
      */
     public function contact()
     {

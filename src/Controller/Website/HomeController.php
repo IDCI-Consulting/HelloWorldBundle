@@ -7,13 +7,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * @Route("/{_locale}", methods="GET")
+ * @Route("/{_locale}")
  * 
  */
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="home", )
+     * @Route("/", name="home", methods={"GET"})
      * @Method({"GET"})
      */
     public function home()
@@ -22,7 +22,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/activities", name="activities")
+     * @Route("/activities", name="activities", methods={"GET"})
      */
     public function activities()
     {
@@ -30,7 +30,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/mentions", name="legal_mentions")
+     * @Route("/mentions", name="legal_mentions", methods={"GET"})
      */
     public function mentions()
     {
@@ -38,7 +38,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/partners", name="partners")
+     * @Route("/partners", name="partners", methods={"GET"})
      */
     public function partners()
     {
@@ -46,7 +46,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/courses", name="courses")
+     * @Route("/courses", name="courses", methods={"GET"})
      */
     public function courses()
     {
@@ -54,7 +54,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/sitemap", name="sitemap")
+     * @Route("/sitemap", name="sitemap", methods={"GET"})
      */
     public function sitemap()
     {

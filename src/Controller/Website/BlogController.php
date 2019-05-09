@@ -7,12 +7,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * @Route("/{_locale}", methods="GET")
+ * @Route("/{_locale}")
  */
 class BlogController extends AbstractController
 {
     /**
-     * @Route("/blog", name="blog" )
+     * @Route("/blog", name="blog", methods={"GET"})
      */
     public function blog(Request $request)
     {
@@ -20,7 +20,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog/{article}", name="blog_show")
+     * @Route("/blog/{article}", name="blog_show", methods={"GET"})
      */
     public function show($article)
     {

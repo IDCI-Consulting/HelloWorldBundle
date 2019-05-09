@@ -6,12 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{_locale}", methods="GET")
+ * @Route("/{_locale}")
  */
 class TeamController extends AbstractController
 {
     /**
-     * @Route("/team", name="team")
+     * @Route("/team", name="team", methods={"GET"})
      */
     public function team()
     {
@@ -19,7 +19,7 @@ class TeamController extends AbstractController
     }
 
     /**
-     * @Route("/cv/{name}.{_format}", name="vcard")
+     * @Route("/cv/{name}.{_format}", name="vcard", methods={"GET"})
      */
     public function vcard($name, $_format=NULL)
     {
