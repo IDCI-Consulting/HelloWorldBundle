@@ -9,6 +9,9 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - composer:/var/www/.composer
       - ./:/var/www/idci_website
+      - var:/var/www/idci_website/var
+      - ./public/build:/var/www/idci_website/public/build
+      - bundles:/var/www/idci_website/public/bundles
     configs:
       - source: php_config
         target: /usr/local/etc/php/php.ini
@@ -71,6 +74,8 @@ services:
 volumes:
   composer: ~
   data: ~
+  var: ~
+  bundles: ~
 
 configs:
   php_config:
