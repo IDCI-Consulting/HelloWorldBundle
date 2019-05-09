@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Cv{% endblock %}
+
+{% block content %}
+
+{% if format is not null %} 
+
+   {{ format }}
+
+{% else %}
+
+    <a href="{{ path('vcard', {'name': 'frederic_bondaz', '_format': 'pdf'}) }}"> {{ 'Download' | trans  }} </a>
+
+{% endif %}
+
+<br>
+
+{{ app.request.locale }}
+
+{{ name }}
+
+{% endblock %}

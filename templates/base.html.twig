@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ app.translator.locale }}">
+<html lang="{{ app.request.locale }}">
     <head>
         <title>{% block title%}IDCI-Consulting{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         {% block metaTags %}{% endblock %}
-        <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}" />
     </head>
 
     <body>
@@ -17,28 +16,7 @@
 
         {% block stylesheets %}{% endblock %}
         {% block javascripts %}
-            {% if app.debug %}
-                <script src="http://127.0.0.1:35729/livereload.js?ext=Chrome&amp;extver=2.1.0"></script>
-                <script src="{{ asset('js/jquery.js') }}"></script>
-                <script src="{{ asset('js/modernizr.js') }}"></script>
-                <script src="{{ asset('js/foundation.min.js') }}"></script>
-                <script src="{{ asset('js/init/init.js') }}"></script>
-                <script src="{{ asset('js/idciScripts/end.js') }}"></script>
-                <script src="{{ asset('js/idciScripts/flashMessages.js') }}"></script>
-                <script src="{{ asset('js/idciScripts/scrollTo.js') }}"></script>
-                <script src="{{ asset('js/idciScripts/slick.js') }}"></script>
-                <script src="{{ asset('js/idciScripts/tabs.js') }}"></script>
-                <script src="{{ asset('js/formFieldsEffects/classie.js') }}"></script>
-                <script src="{{ asset('js/formFieldsEffects/focusFieldEffect.js') }}"></script>
-                <script src="{{ asset('js/accordionHandler/accordion.js') }}"></script>
-                <script src="{{ asset('js/headerHandler/animateHamburgerMenu.js') }}"></script>
-                <script src="{{ asset('js/headerHandler/navHandler.js') }}"></script>
-                <script src="{{ asset('js/slick.js') }}"></script>
-            {% block devJavascripts %}{% endblock %}
-            {% else %}
-                <script src="{{ asset('js/' ~ getRevFilename('app.min.js') ~ '') }}"></script>
-            {% endif %}
-            <script src="{{ asset('plugins/ace-editor/ace.js') }}" type="text/javascript" charset="utf-8"></script>
+        {% block devJavascripts %}{% endblock %}
         {% endblock %}
     </body>
 </html>
