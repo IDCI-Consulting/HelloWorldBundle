@@ -1,17 +1,20 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Website;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * @Route("/{_locale}")
+ * @Route("/{_locale}", methods="GET")
+ * 
  */
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/", name="home", )
+     * @Method({"GET"})
      */
     public function home()
     {
@@ -31,7 +34,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/mentions", name="mentions")
+     * @Route("/mentions", name="legal_mentions")
      */
     public function mentions()
     {
