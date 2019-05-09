@@ -1,7 +1,0 @@
-<ul class="idci-inline-list">
-    {% for item in menu %}
-        <li {% if active is defined and active == item.route %}class="active"{% endif %}>
-            <a href="{{ path(item.route, {'_locale': app.translator.locale}) }}">{{ item.label|trans }}</a>
-        </li>
-    {% endfor %}
-</ul>
