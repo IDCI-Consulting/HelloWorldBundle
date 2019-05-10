@@ -1,0 +1,108 @@
+body {
+  font-family: Molengo, sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.idci-blue {
+  background: $idci-blue;
+  color: $idci-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $idci-blue;
+  font-family: Oswald, sans-serif;
+}
+
+h1 {
+  height: 100%;
+  text-transform: capitalize;
+
+  &.title {
+    margin: 0;
+    padding-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+h2, h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+p {
+  color: $idci-blue;
+}
+
+.button {
+  background: $idci-light-blue;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $idci-blue;
+  }
+}
+
+i {
+  color: $idci-white;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+section.full-width {
+  text-align: center;
+
+  img, #editor {
+    height: 15rem;
+  }
+
+  .tools-icon {
+    height: 4rem;
+    margin-top: 2rem;
+  }
+
+  em, h3 {
+    color: $idci-light-blue;
+    font-style: normal;
+  }
+
+}
+
+section.contact {
+  background-color: $idci-light-grey;
+}
+
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
+.idci-inline-list {
+  display: inline-block;
+  margin: 0;
+}
+
+a {
+  outline: none;
+}

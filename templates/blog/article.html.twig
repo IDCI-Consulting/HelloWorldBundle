@@ -2,8 +2,15 @@
 
 {% block title %}Article{% endblock %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_blog'
+    } %}
+{% endblock %}
+
 {% block content %}
 
-{{ 'This is the article' | trans }} {{ article }} 
+{% trans %}This is the article{% endtrans %} {{ article }} 
 
 {% endblock %}

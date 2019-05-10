@@ -1,0 +1,117 @@
+## Symfony2
+
+{day1}
+
+
+#### Introduction
+_2 hours_
+
+ - Internet != web
+ - HTTP protocol (RFC2616)
+ - Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony
+ - Why Symfony2 ?
+
+
+#### A good environment and good practices
+_2 hours_
+
+ - Which IDE ?
+ - Use a SCM (SVN, Git, etc.)
+ - Use a bug tracker (Trac, Mantis, Redmine, Github, etc.)
+ - Coding standards
+
+
+#### Introduction to Design pattern
+_2 hours_
+
+ - General presentation
+ - MVC in details
+
+
+#### Structure applications with Symfony2
+_2 hours_
+
+ - The notion of "application" => app/
+ - The notion of "bundles"
+ - My specific coding => src/
+ - Externals libraries => vendor/
+ - The root web => web/
+
+{day2}
+
+
+#### Controller in Symfony2
+_4 hours_
+
+ - Object Request
+ - Object Response
+ - Routing
+ - Annotations
+
+
+#### Views (templating) with Symfony2
+_4 hours_
+
+ - Twig
+ - Template inheritance
+ - Include views
+ - Restore views
+ - Twig filters
+
+ <p class="pdf-break"></p>
+ 
+{day3}
+
+
+#### ORM and DBAL (Database Abstraction Layer)
+_4 hours_
+
+ - PDO
+ - Doctrine
+ - Propel
+
+
+#### Forms
+_4 hours_
+
+ - AbstractType
+ - Fields
+ - Validation
+ - "FormEvents"
+
+{day4}
+
+
+#### Create a service
+_4 hours_
+
+ - Dependency injection
+ - Service container
+
+
+#### Security
+_4 hours_
+
+ - Autorisation
+ - Authentification
+
+{day5}
+
+
+#### Tests
+_4 hours_
+
+ - Units tests with PHPUnit
+ - Functionals tests
+
+
+#### Go further
+_4 hours_
+
+ - Use the configuration
+ - Create Symfony2 commands
+ - Use already existing bundles
+ - FOSUserBundle (Users management)
+ - DoctrineFixtures (Data import)
+ - Create reusable bundles
+ - The HTTP cache (ESI, Varnish, etc.)

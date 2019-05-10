@@ -2,8 +2,15 @@
 
 {% block title %}{{ 'Team' | trans }}{% endblock %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_team'
+    } %}
+{% endblock %}
+
 {% block content %}
 
-<a href="{{ path('vcard', {'name': 'frederic_bondaz'}) }}"> cv frederic_bondaz </a> 
+<a href="{{ url('website_vcard', {'name': 'frederic_bondaz'}) }}"> cv frederic_bondaz </a> 
 
 {% endblock %}

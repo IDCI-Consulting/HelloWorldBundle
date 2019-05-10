@@ -1,5 +1,12 @@
 {% extends "layout.html.twig" %}
 
-{% block title %}{{Training | trans}}{% endblock %}
+{% block title %}{{ 'Training' | trans}}{% endblock %}
 
-{% block content %}{{Training | trans}}{% endblock %}
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_courses'
+    } %}
+{% endblock %}
+
+{% block content %}{{ 'Training' | trans}}{% endblock %}

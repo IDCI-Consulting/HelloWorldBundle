@@ -1,13 +1,173 @@
 {% extends "layout.html.twig" %}
 
 {% block title %}
+    {{ 'Home' | trans }}
+{% endblock %}
 
-{% trans %}Home{% endtrans %}
-
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_home'
+    } %}
 {% endblock %}
 
 {% block content %}
 
-{{ 'Home' | trans }}
+    <section id="{% trans %}presentation{% endtrans %}" class="full-width presentation">
+        <header>
+            <em>{% trans %}We specialize in{% endtrans %}</em>
+            <h2>
+                {% trans %}Web architecture{% endtrans %},
+                {% trans %}PHP{% endtrans %}
+                &
+                {% trans %}
+                Symfony{% endtrans %}
+            </h2>
+            <p>&lt;{% trans %}Engineering{% endtrans %}&gt;</p>
+            <p>&lt;{% trans %}Development{% endtrans %}&gt;</p>
+            <p>&lt;{% trans %}Consulting{% endtrans %}&gt;</p>
+            <p>&lt;{% trans %}Integration{% endtrans %}&gt;</p>
+        </header>
+        <a class="scroll-to" href="#{% trans %}advice{% endtrans %}">
+            <span></span>
+        </a>
+    </section>
+
+    <section id="{% trans %}advice{% endtrans %}" class="full-width advices">
+        <header>
+            <em>{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em>
+            <h2>
+                {% trans %}Consulting{% endtrans %}
+                <img src="{{ asset("build/images/conseil.svg") }}" alt="{% trans %}advice icon{% endtrans %}"/>
+            </h2>
+            <i class="hide-for-medium-up toggle-icon fa fa-angle-down"></i>
+        </header>
+    </section>
+
+    <section id="{% trans %}training{% endtrans %}" class="full-width training">
+        <header>
+            <em>{% transchoice 1 from "messages" %}We do{% endtranschoice %}</em>
+            <h2>
+                {% trans %}Training{% endtrans %}
+                <img src="{{ asset("build/images/formation.svg") }}" alt="{% trans %}training icon{% endtrans %}"/>
+            </h2>
+            <i class="fa fa-angle-down"></i>
+        </header>
+    </section>
+
+    <section id="{% trans %}web-development{% endtrans %}" class="full-width development">
+        <header>
+            <em>{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em>
+            <h2>
+                {% trans %}Web development{% endtrans %}
+                <img src="{{ asset("build/images/icon_dev.svg") }}" alt="{% trans %}web development icon{% endtrans %}"/>
+            </h2>
+            <i class="fa fa-angle-down"></i>
+        </header>
+        <pre id="editor"></pre>
+        {% block experience_scripts %}{% endblock %}
+    </section>
+
+    <section id="{% trans %}philosophy{% endtrans %}" class="full-width philosophy">
+        <header>
+            <em>{% trans %}Our philosophy{% endtrans %}</em>
+            <h2>
+                Open source
+                <img src="{{ asset('build/images/opensource.svg') }}" alt="{% trans %}opensource icon{% endtrans %}"/>
+            </h2>
+            <i class="fa fa-angle-down"></i>
+        </header>
+    </section>
+    
+    <section id="{% trans %}approach{% endtrans %}" class="full-width approach">
+        <header>
+            <h2>
+                {% trans %}Our methodology{% endtrans %}
+            </h2>
+            <i class="fa fa-angle-down"></i>
+        </header>
+        <img src="{{ asset('build/images/agile.svg') }}" alt="{% trans %}agile icon{% endtrans %}"/>
+    </section>
+    
+    <section id="{% trans %}tools{% endtrans %}" class="full-width tools">
+        <header>
+            <h2>
+                {% trans %}Our tools{% endtrans %}
+            </h2>
+            <img class="tools-icon" src="{{ asset('images/icon_outils.svg') }}" alt="{% trans %}tools icon{% endtrans %}"/>
+        </header>
+        {%
+            include 'partials/tools.html.twig'
+            with {
+                'class': 'backend',
+                'title': 'Backend',
+                'images': {
+                    'php': 'https://secure.php.net',
+                    'symfony2': 'http://symfony.com',
+                    'node': 'https://nodejs.org',
+                    'meteor': 'https://www.meteor.com'
+                }
+            }
+        %}
+        {%
+            include 'partials/tools.html.twig'
+            with {
+                'class': 'databases',
+                'title': 'Storage',
+                'images': {
+                    'mysql': 'https://www.mysql.fr/',
+                    'mongodb': 'https://www.mongodb.org/',
+                    'postgresql': 'http://www.postgresql.org/',
+                    'redis': 'http://redis.io/',
+                    'kyototycoon': 'http://fallabs.com/kyototycoon/api/'
+                }
+            }
+        %}
+        {%
+        include 'partials/tools.html.twig'
+        with {
+            'class': 'infrastructure',
+            'title': 'Infrastructure',
+            'images': {
+                'varnish': 'https://www.varnish-cache.org/',
+                'proxmox': 'https://www.proxmox.com/en/',
+                'ansible': 'http://www.ansible.com/home',
+                'elk': 'https://www.elastic.co/fr/products',
+                'docker': 'https://www.docker.com/',
+                'rabbitmq': 'https://www.rabbitmq.com/'
+            }
+        }
+        %}
+        {%
+            include 'partials/tools.html.twig'
+            with {
+                'class': 'frontend',
+                'title': 'Frontend',
+                'images': {
+                    'html5-css3': 'http://www.w3.org/TR/html5/',
+                    'bootstrap': 'http://getbootstrap.com/',
+                    'foundation': 'http://foundation.zurb.com/',
+                    'angular': 'https://angularjs.org/',
+                    'sass': 'http://sass-lang.com/',
+                    'jquery': 'https://jquery.com/',
+                    'vue-js': 'https://vuejs.org/'
+
+                }
+            }
+        %}
+        {%
+        include 'partials/tools.html.twig'
+        with {
+            'class': 'qualite',
+            'title': 'Quality',
+            'images': {
+                'php-unit': 'https://phpunit.de/',
+                'gitlab': 'https://about.gitlab.com/',
+                'redmine': 'http://www.redmine.org/projects/redmine/wiki',
+            }
+        }
+        %}
+    </section>
+
 
 {% endblock %}

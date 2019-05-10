@@ -2,4 +2,11 @@
 
 {% block title %}Contact{% endblock %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_contact'
+    } %}
+{% endblock %}
+
 {% block content %}Contact{% endblock %}

@@ -2,4 +2,38 @@
 
 {% block title %}{{'Partners' | trans}}{% endblock %}
 
-{% block content %}{{'Partners' | trans}}{% endblock %}
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_partners'
+    } %}
+{% endblock %}
+
+{% block content %}
+
+<section id="{% trans %}partner{% endtrans %}" class="full-width partners">
+    <header>
+        <h1>
+            {% trans %}Our partners{% endtrans %}
+        </h1>
+        <i class="fa fa-angle-up"></i>
+    </header>
+
+    <ul class="row partners">
+        {% for partner in partners %}
+            <li>
+                <a href="{{ partner['link'] }}" target="_blank" class="partner">
+                    <div>
+                        <span class="{{ partner['class'] }}"></span>
+                        <div>
+                            <h3>{{ partner['name'] }}</h3>
+                            <p>{{ partner['description'] }}</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% endblock %}
