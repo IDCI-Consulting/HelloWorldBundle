@@ -2,6 +2,7 @@
 
 namespace App\Controller\Website;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -30,7 +31,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/mentions", name="legal_mentions", methods={"GET"})
+     * @Route("/legal_mentions", name="legal_mentions", methods={"GET"})
      */
     public function mentions()
     {
@@ -40,9 +41,21 @@ class HomeController extends AbstractController
     /**
      * @Route("/partners", name="partners", methods={"GET"})
      */
-    public function partners()
+    public function partners(Request $request)
     {
-        return $this->render('home/partners.html.twig');
+        $locale = $request->getLocale();
+        $decodedPartners = array();
+
+        $partners = json_decode(file_get_contents(sprintf('%s/../../Resources/public/partners.json', __DIR__)), true);
+
+        foreach ($partners as $partner) {
+            $partner['description'] = $partner['description'][$locale];
+            $decodedPartners[] = $partner;
+        }
+
+        return $this->render('home/partners.html.twig', [
+            'partners' => $decodedPartners,
+        ]);
     }
 
     /**

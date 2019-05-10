@@ -2,3 +2,14 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+        menu:
+            - {label: 'home', route: 'website_home'}
+            - {label: 'our courses', route: 'website_courses'}
+            - {label: 'the team', route: 'website_team'}
+            - {label: 'our achievements', route: 'website_activities'}
+            - {label: 'our partners', route: 'website_partners'}
+            - {label: 'blog', route: 'website_blog'}
+            - {label: 'contact', route: 'website_contact'}
+        version:
+            3.0
