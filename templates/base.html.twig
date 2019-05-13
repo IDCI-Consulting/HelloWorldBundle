@@ -8,12 +8,9 @@
 
     <body>
         {% block flashMessages %}{% endblock %}
-        <div class="wrapper">
-            {% block header %}{% endblock %}
-            {% block content %}{% endblock %}
-            {% block footer %}{% endblock %}
-        </div>
-
+        {% block header %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
         {% block stylesheets %}{% endblock %}
         {% block javascripts %}
         {% block devJavascripts %}{% endblock %}

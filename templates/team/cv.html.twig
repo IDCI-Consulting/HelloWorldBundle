@@ -2,21 +2,22 @@
 
 {% block title %}Cv{% endblock %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_team'
+    } %}
+{% endblock %}
+
 {% block content %}
 
 {% if format is not null %} 
-
    {{ format }}
-
 {% else %}
-
-    <a href="{{ path('vcard', {'name': 'frederic_bondaz', '_format': 'pdf'}) }}"> {{ 'Download' | trans  }} </a>
-
+    <a href="{{ url('website_vcard', {'name': 'frederic_bondaz', '_format': 'pdf'}) }}"> {{ 'Download' | trans  }} </a>
 {% endif %}
 
 <br>
-
-{{ app.request.locale }}
 
 {{ name }}
 

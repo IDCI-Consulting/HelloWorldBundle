@@ -2,6 +2,13 @@
 
 {% block title %}Blog{% endblock %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_blog'
+    } %}
+{% endblock %}
+
 {% block content %}
 
 Blog

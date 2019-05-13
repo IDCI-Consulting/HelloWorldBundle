@@ -2,4 +2,11 @@
 
 {% block title %}{{ 'Activities' |trans}}{% endblock %}
 
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_activities'
+    } %}
+{% endblock %}
+
 {% block content %}{{ 'Activities' |trans}}{% endblock %}
