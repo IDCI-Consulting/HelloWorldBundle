@@ -2,6 +2,7 @@
 
 namespace App\Controller\Website;
 
+use App\Form\Type\ContactType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -15,11 +16,31 @@ class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="home", methods={"GET"})
-     * @Method({"GET"})
      */
     public function home()
     {
-        return $this->render('home/index.html.twig');
+        $page = $this->render('home/index.html.twig');
+        $asideMenu = [];
+
+        // Get all sections in the DOM with an id
+        preg_match_all('/(?<section><section[ ]*id.*<\/section>)/siU', $page, $matched_sections);
+
+        /*
+         * Retrieve the ids and the text (inside h2 tag which is child of header)
+         */
+        foreach ($matched_sections['section'] as $i => $section) {
+            preg_match_all('/<section[ ]*id="(?<id>.+)".*<h2.*>(?<title>.*)</siU', $section, $matches);
+            foreach ($matches['id'] as $j => $id) {
+                $asideMenu[$id] = $matches['title'][$j];
+            }
+        }
+
+        $form = $this->createForm(ContactType::class);
+
+        return $this->render('home/index.html.twig', [
+            'aside_menu' => $asideMenu,
+            'form' => $form
+        ]);
     }
 
     /**
@@ -61,9 +82,18 @@ class HomeController extends AbstractController
     /**
      * @Route("/courses", name="courses", methods={"GET"})
      */
-    public function courses()
+    public function courses(Request $request)
     {
-        return $this->render('home/courses.html.twig');
+        $locale = $request->getLocale();
+
+        $courses = [];
+        $courses[0] = "html5-css3";
+        $courses[1] = "oop-uml-scm";
+        $courses[2] = "symfony2";
+        $courses[3] = "wordpress";
+        return $this->render('home/courses.html.twig', [
+            'courses' => $courses
+        ]);
     }
 
     /**

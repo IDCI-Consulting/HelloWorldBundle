@@ -13,3 +13,6 @@ twig:
             - {label: 'contact', route: 'website_contact'}
         version:
             3.0
+        locales:
+            - fr
+            - en

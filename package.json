@@ -16,6 +16,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "flag-icon-css": "^3.3.0",
         "foundation-sites": "^6.5.3",
         "jquery": "^3.4.1"
     }

@@ -5,12 +5,9 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
-// any CSS you require will output into a single css file (app.css in this case)
+// any CSS and SCSS you require will output into a single css file (app.css in this case)
 
 import '../css/app.css';
-
-// any SCSS you require will output into a single scss file
-
 import '../scss/main.scss';
 
 // any JS you require will output into a single js file (app.js in this case)
@@ -32,11 +29,15 @@ require('../js/idciScripts/slick');
 require('../js/idciScripts/tabs');
 require('../js/init/init');
 require('../js/polyfills/rem');
+require('../js/Scroll/scrollto');
+require('../js/headMouseTracker/getMousePosition');
+require('../js/headMouseTracker/HeadImage');
+require('../js/headMouseTracker/initImages');
 
-// Images 
+// Output all of the images in the 'build/images' folder 
 
 const imagesContext = require.context('../images', true, /\.(png|jpg|jpeg|gif|ico|svg|webp)$/);
 imagesContext.keys().forEach(imagesContext);
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
-const $ = require('jquery');
+// const $ = require('jquery');

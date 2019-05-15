@@ -1,0 +1,66 @@
+@media (max-width: 1000px) {
+    // Small and medium screen
+
+    footer.idci-footer {
+        height: 35rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        section {
+            width: 100%;
+
+            &.sup-footer {
+                flex-direction: column;
+                width: 100%;
+                align-items: stretch;
+
+                article {
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 1rem;
+
+                   ul, li {
+                       padding-left: 0;
+                       text-align: center;
+                   }
+
+                    &.socials {
+                        padding-left: 0;
+                        text-align: center;
+                        padding-top: 1.5rem;
+                    }
+                }
+            }
+
+            &.sub-footer {
+                padding-top: 1rem;
+                flex-direction: column;
+
+                nav {
+                    width: 100%;
+                    padding-bottom: 2rem;
+                }
+
+                .contact-us-link {
+                    justify-self: center;
+                    align-self: center;
+                    text-align: center;
+                    margin: 0;
+                    width: 50%;
+                }
+            }
+        }
+
+        hr {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .sub-footer {
+        li {
+            font-size: 0.7rem;
+        }
+    }
+}

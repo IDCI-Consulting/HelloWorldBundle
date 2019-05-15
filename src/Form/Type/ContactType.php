@@ -11,7 +11,6 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Constraints;
-use FabSchurt\Silex\Provider\Captcha\Form\Type\CaptchaType;
 use Symfony\Component\Form\Extension\Core\Type;
 
 class ContactType extends AbstractType
@@ -20,49 +19,46 @@ class ContactType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $notBlankConstraint = new Constraints\NotBlank(array(
+        $notBlankConstraint = new Constraints\NotBlank([
             'message' => 'Please complete this field.'
-        ));
+        ]);
 
         $builder
-            ->add('company', TextType::class, array())
-            ->add('website', UrlType::class, array(
-                'constraints' => array(
+            ->add('company', TextType::class)
+            ->add('website', UrlType::class, [
+                'constraints' => [
                     new Constraints\Url()
-                )
-            ))
-            ->add('name', TextType::class, array(
-                'constraints' => array(
+                ]
+            ])
+            ->add('name', TextType::class, [
+                'constraints' => [
                     $notBlankConstraint,
-                )
-            ))
-            ->add('firstname', TextType::class, array(
-                'constraints' => array(
+                ]
+            ])
+            ->add('firstname', TextType::class, [
+                'constraints' => [
                     $notBlankConstraint,
-                )
-            ))
-            ->add('email', EmailType::class, array(
-                'constraints' => array(
+                ]
+            ])
+            ->add('email', EmailType::class, [
+                'constraints' => [
                     $notBlankConstraint,
-                    new Constraints\Email(array(
+                    new Constraints\Email([
                         'message' => 'The email is not valid.'
-                    ))
-                )
-            ))
-            ->add('phonenumber', NumberType::class, array(
-                'constraints' => array(
+                    ])
+                ]
+            ])
+            ->add('phonenumber', NumberType::class, [
+                'constraints' => [
                     $notBlankConstraint,
-                )
-            ))
-            ->add('project', TextareaType::class, array(
-                'constraints' => array(
+                ]
+            ])
+            ->add('project', TextareaType::class, [
+                'constraints' => [
                     $notBlankConstraint,
-                )
-            ))
-            ->add('captcha', CaptchaType::class)
-            ->add('validate', SubmitType::class, array(
-                'label' => 'Send',
-            ))
+                ]
+            ])
+            ->add('submit', SubmitType::class)
         ;
     }
 

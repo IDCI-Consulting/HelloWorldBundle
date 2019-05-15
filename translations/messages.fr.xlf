@@ -479,43 +479,67 @@
       </trans-unit>
       <trans-unit id="nzJhfIj" resname="Siège social">
         <source>Siège social</source>
-        <target>__Siège social</target>
+        <target>Siège social</target>
       </trans-unit>
       <trans-unit id="v6wxT_." resname="presentation">
         <source>presentation</source>
-        <target>__presentation</target>
+        <target>presentation</target>
       </trans-unit>
       <trans-unit id="CmoVNFr" resname="PHP">
         <source>PHP</source>
-        <target>__PHP</target>
+        <target>PHP</target>
       </trans-unit>
       <trans-unit id="Re.xlg4" resname="Symfony">
         <source>Symfony</source>
-        <target>__Symfony</target>
+        <target>Symfony</target>
       </trans-unit>
       <trans-unit id="Asl0R2h" resname="advice">
         <source>advice</source>
-        <target>__advice</target>
+        <target>advice</target>
       </trans-unit>
       <trans-unit id="tAj6kKn" resname="web-development">
         <source>web-development</source>
-        <target>__web-development</target>
+        <target>web-development</target>
       </trans-unit>
       <trans-unit id="IzHrM84" resname="philosophy">
         <source>philosophy</source>
-        <target>__philosophy</target>
+        <target>philosophy</target>
       </trans-unit>
       <trans-unit id="zskRHeN" resname="approach">
         <source>approach</source>
-        <target>__approach</target>
+        <target>approach</target>
       </trans-unit>
       <trans-unit id="_dNdQ3c" resname="tools">
         <source>tools</source>
-        <target>__tools</target>
+        <target>tools</target>
       </trans-unit>
       <trans-unit id="fz_kjKi" resname="partner">
         <source>partner</source>
-        <target>__partner</target>
+        <target>partner</target>
+      </trans-unit>
+      <trans-unit id="N9m.yO9" resname="text.advice">
+        <source>text.advice</source>
+        <target>__text.advice</target>
+      </trans-unit>
+      <trans-unit id="DdPBq43" resname="text.courses">
+        <source>text.courses</source>
+        <target>__text.courses</target>
+      </trans-unit>
+      <trans-unit id="YKFwPfz" resname="text.development">
+        <source>text.development</source>
+        <target>__text.development</target>
+      </trans-unit>
+      <trans-unit id="Z6DS4Nq" resname="Open source">
+        <source>Open source</source>
+        <target>__Open source</target>
+      </trans-unit>
+      <trans-unit id="78Gynr1" resname="text.philosophy">
+        <source>text.philosophy</source>
+        <target>__text.philosophy</target>
+      </trans-unit>
+      <trans-unit id="VEoXUCz" resname="text.methodology">
+        <source>text.methodology</source>
+        <target>__text.methodology</target>
       </trans-unit>
     </body>
   </file>

@@ -1,31 +1,56 @@
-.idci-content .arrow {
+.index-part {
+  text-align: center;
+  align-items: center;
+  background-size: cover;
+  min-height: calc(100vh - 5rem);
+  line-height: 4rem;
+
+  @extend %full-width;
+
+  .header-index-part {
+    em {
+      color: $idci-light-blue;
+      font-style: normal;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: .4375rem;
+      margin: 0 0 2rem;
+      text-transform: uppercase;
+      font-family: Oswald,sans-serif;
+    }
+
+    h2 {
+      letter-spacing: .4rem;
+      font-weight: 400;
+      color: $idci-blue;
+      font-family: Oswald-Bold,sans-serif;
+      font-size: 2.3125rem;
+    }
+
+    p {
+      color: $idci-green;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: .375rem;
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: Oswald,sans-serif;
+    }
+  }
 
   img {
-    height: 100%;
-    margin: 0 .5rem;
-    vertical-align: top;
-    width: 2rem;
+    height: 15rem;
+
+    &.tools-icon {
+      height: 4rem;
+    }
   }
 }
 
-.arrow + h3.trainings {
-  color: $idci-blue;
-  display: inline-block;
-  margin: 0;
-}
+.presentation {
+  background-image: url("../../images/background_presentation.jpg");
 
-.training-content {
-
-  p {
-    margin-bottom: 2rem;
-  }
-}
-
-.courses {
-  margin: 2rem auto;
-}
-
-#presentation {
+  padding-top: 15rem;
 
   .scroll-to {
     border: 2px solid $idci-light-blue;
@@ -38,7 +63,7 @@
     width: 6rem;
 
     span {
-      background: url('/images/slick_arrow.svg') no-repeat;
+      background: url('../../images/slick_arrow.svg') no-repeat;
       background-position: 50%;
       display: inline-block;
       height: 3rem;
@@ -52,41 +77,54 @@
       border-color: $idci-blue;
 
       span {
-        background: url('/images/slick_arrow_dark_blue.svg') no-repeat;
+        background: url('../../images/slick_arrow_dark_blue.svg') no-repeat;
         background-position: 50%;
       }
     }
   }
 }
 
-.acronym {
-
-  p {
-    color: $idci-green;
-    display: inline;
-    font-family: Oswald, sans-serif;
-    font-size: 1.4rem;
-    font-weight: bold;
-    letter-spacing: 0.375rem;
-    text-transform: uppercase;
-
-    span {
-      display: inline-block;
-    }
-  }
+.advices {
+  background-color: $idci-light-grey;
 }
 
-#presentation {
-  align-items: center;
-  background-size: cover;
-  display: flex;
-  min-height: calc(100vh - 6rem);
-  line-height: calc(100vh - 6rem);
-  padding-top: 0;
+.training {
+  background-color: $idci-white;
+}
 
-  > .row {
-    display: inline-block;
-    line-height: normal;
-    vertical-align: middle;
+.development {
+  background-color: $idci-dark-grey;
+}
+
+.philosophy {
+  background-color: $idci-white;
+}
+
+.approach {
+  background-color: $idci-light-grey;
+}
+
+.tools {
+  background-color: $idci-white;
+
+  div.tools-content {
+    display: flex;
+    justify-content: center;
+
+    article {
+      flex: auto;
+      max-width: 15%;
+
+      em {
+        font-size: 1.2rem;
+        color: $idci-light-blue;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .4375rem;
+        margin: 0 0 2rem;
+        font-style: normal;
+        font-family: Oswald,sans-serif;
+      }
+    }
   }
 }

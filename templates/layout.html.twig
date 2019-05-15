@@ -1,7 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block header %}
-    <header class="full-width idci-header">
+    <header class="idci-header">
+        <a class="menu-icon">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+
         <a class="logo" href="{{ url('website_home') }}">
             <img src="{{ asset('build/images/logo_idci.svg') }}" alt="idci logo" title="IDCI Consulting"/>
         </a>
@@ -11,95 +19,131 @@
         </nav>
 
         <div class="langs">
-            <p class="schoose-language">{% trans %}Choose the language{% endtrans %}</p>
+            <p class="choose-language">{% trans %}Choose the language{% endtrans %}</p>
             <ul class="idci-inline-list">
-                {# {% for locale, route in i18n_routes %}
+                {% for locale in locales %}
                     <li{% if app.request.locale == locale %} class="active"{% endif %}>
-                        <a href="{{ route['route'] }}">
-                            <img src="{{ asset('build/images/blank.gif') }}" alt="lang {{ locale }}" class="flag flag-{{ locale }}" />
+                        <a href="{{ url(app.request.get('_route'), app.request.get('_route_params') |merge({'_locale': locale })) }}">
+                            <img src="{{ asset('build/images/' ~ locale ~ '.svg') }}" alt="lang {{ locale }}" class="flag" />
                         </a>
                     </li>
-                {% endfor %} #}
+                {% endfor %}
             </ul>
         </div>
     </header>
 {% endblock %}
 
-{% block content %}{% endblock %}
 
-{% block stylesheets %}<link href="{{ asset('build/app.css') }}" rel="stylesheet" type="text/css"/>{% endblock %}
+{% block content %}
+<main> {% block main_content %}{% endblock %} </main>
+{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('build/app.css') }}" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
+{% endblock %}
 
 {% block footer %}
     {% set backgrounds = [ 'bg_footer.jpg', 'bg_footer2.jpg', 'bg_footer3.jpg'] %}
-    <footer class="idci-footer" style="background: asset('build/images/{{ random(backgrounds) }}') no-repeat; background-size: 100% 100%;">
-        <section class="footer-part address">
-            <h4 class="idci-light-blue">
-                IDCI-Consulting
-            </h4>
-            <p>109 rue Francis de Pressensé</p>
-            <p>69100 Villeurbanne - FRANCE</p>
-            <h5 style="color: #FFF">
-                {% trans %}Siège social{% endtrans %}
-            </h5>
-            <p>82 ruelle du Brief</p>
-            <p>01170 Gex - FRANCE</p>
-        </section>
+    <footer class="idci-footer" style="background-image:url({{ asset('build/images/' ~ random(backgrounds)) }}); background-size: 100% 100%;">
+        <section class="sup-footer">
+            <article class="footer-part address">
+                <h4 class="idci-light-blue">
+                    IDCI-Consulting
+                </h4>
+                <p>109 rue Francis de Pressensé</p>
+                <p>69100 Villeurbanne - FRANCE</p>
+                <h5 style="color: #FFF">
+                    {% trans %}Siège social{% endtrans %}
+                </h5>
+                <p>82 ruelle du Brief</p>
+                <p>01170 Gex - FRANCE</p>
+            </article>
 
-        <section class="footer-part coords">
-            <ul>
-                <li>
-                    <span class="phone"></span>
-                    <a class="phonenumber" href="tel:0663231207">06 63 23 12 07</a>
-                </li>
-                <li>
-                    <span class="mail"></span>
-                    <a class="mail" href="mailto:contact@idci-consulting.fr">contact@idci-consulting.fr</a>
-                </li>
-            </ul>
-        </section>
+            <article class="footer-part coords">
+                <ul>
+                    <li>
+                        <a class="phonenumber" href="tel:0663231207"><i class="fas fa-tablet-alt"></i>06 63 23 12 07</a>
+                    </li>
+                    <li>
+                        <a class="mail" href="mailto:contact@idci-consulting.fr"><i class="fas fa-envelope"></i>contact@idci-consulting.fr</a>
+                    </li>
+                </ul>
+            </article>
 
-        <section class="footer-part socials">
-            <ul class="idci-inline-list">
-                <li>
-                    <a href="https://twitter.com/idciconsulting" target="_blank" title="{%trans%}Follow us on{% endtrans %} Twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/IDCI-Consulting" target="_blank" title="{%trans%}Star us on{% endtrans %} Github">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/idciconsulting" target="_blank" title="{%trans%}Like us on{% endtrans %} Facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://presentation.idci.fr" target="_blank" title="{%trans%}Presentation{% endtrans %}">
-                        <i class="fa fa-play-circle"></i>
-                    </a>
-                </li>
-            </ul>
+            <article class="footer-part socials">
+                <ul class="idci-inline-list">
+                    <li>
+                        <a href="https://twitter.com/idciconsulting" target="_blank" title="{%trans%}Follow us on{% endtrans %} Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IDCI-Consulting" target="_blank" title="{%trans%}Star us on{% endtrans %} Github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/idciconsulting" target="_blank" title="{%trans%}Like us on{% endtrans %} Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://presentation.idci.fr" target="_blank" title="{%trans%}Presentation{% endtrans %}">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                    </li>
+                </ul>
+            </article>
         </section>
-
         <hr />
-
-        <nav class="sub-links">
-            <ul class="footer-menu">
-                <li class="idci-inline-list">
-                    <p>&#169; 2017 - idci v{{ version }}</p>
-                </li>
-                <li class="idci-inline-list">
-                    <a href="{{ url('website_legal_mentions') }}" class="mentions">{% trans %}Legal Mentions{% endtrans %}</a>
-                </li>
-                <li class="idci-inline-list">
-                    <a href="{{ url('website_sitemap') }}" class="maps">{% trans %}Sitemap{% endtrans %}</a>
-                </li>
-            </ul>
-        </nav>
-        {% if app.request.attributes.get("_route") != "website_contact" %}
-            <a class="contact-us-link" id="contact-link" href="{{ url('website_contact') }}">{% trans %}Contact us{% endtrans %}</a>
-        {% endif %}
+        <section class="sub-footer">
+            <nav class="sub-links">
+                <ul class="footer-menu">
+                    <li class="idci-inline-list">
+                       &#169; 2017 - idci v{{ version }}
+                    </li>
+                    <li class="idci-inline-list">
+                        <a href="{{ url('website_legal_mentions') }}" class="mentions">{% trans %}Legal Mentions{% endtrans %}</a>
+                    </li>
+                    <li class="idci-inline-list">
+                        <a href="{{ url('website_sitemap') }}" class="maps">{% trans %}Sitemap{% endtrans %}</a>
+                    </li>
+                </ul>
+            </nav>
+            {% if app.request.attributes.get("_route") != "website_contact" %}
+                <a class="contact-us-link" id="contact-link" href="{{ url('website_contact') }}">{% trans %}Contact us{% endtrans %}</a>
+            {% endif %}
+        </section>
     </footer>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script type="text/javascript">
+    document.getElementById('contact-link').addEventListener("click", ModalContact);
+       
+    function ModalContact(event){
+        event.preventDefault();
+
+        var request = new Request(this.getAttribute('href'));
+        var init = {
+            method: 'GET',
+            dataType: 'html',
+        };
+
+        window.fetch(request, init).then(function(response){
+            return response.text();            
+        }).then(function(text){
+            //console.log(text);
+            Swal.fire({
+                title: 'Contact',
+                html: text,
+            });
+        });
+    }
+    </script>
+
 {% endblock %}

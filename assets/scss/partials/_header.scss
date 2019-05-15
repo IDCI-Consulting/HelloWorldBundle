@@ -1,33 +1,22 @@
 .idci-header {
+  @extend %full-width;
+
   background: $idci-white;
-  border-bottom: .2rem solid $idci-dark-grey;
+  border-bottom: 0.2rem solid $idci-dark-grey;
   height: 5rem;
   position: fixed;
   top: 0;
   z-index: 999;
   display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
-
+  justify-content: space-between;
 
   .logo {
-    height: 5rem;
-    margin: 0;
     flex-grow: 1;
+    display: flex;
 
-    a {
-      display: block;
-      height: inherit;
-      position: relative;
-      width: 100%;
-
-      img {
-        position: absolute;
-        left: 50%;
-        margin-left: -50px;
-        margin-top: -15px;
-        top: 50%;
-      }
+    img {
+      width: 10rem;
+      margin: auto;
     }
   }
 
@@ -35,50 +24,50 @@
     font-family: Oswald, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
+    height: 100%;
+    flex-grow: 3;
+    padding: 0;
+    margin: 0;
 
     ul {
-      line-height: 4.8rem;
+      height: 100%;
 
-      li.active {
+      li {
+        height: 100%;
+        padding: 0.5rem;
+        padding-bottom: 0;
+        font-size: .875rem;
+        letter-spacing: .0625rem;
 
-        a {
-          color: $idci-green;
-          border-bottom: .2rem solid $idci-green;
+        &.active {
+          a {
+            color: $idci-green;
+            border-bottom: 0.2rem solid $idci-green;
+          }
         }
       }
 
       a {
         color: $idci-black;
-        font-size: .6rem;
+        float: left;
+        line-height: 4.2rem;
+        height: 90%;
+        text-decoration: none;
+
         @include transition(all, 0.3s);
 
         &:hover {
           color: $idci-green;
-          border-bottom: .2rem solid $idci-green;
+          border-bottom: 0.2rem solid $idci-green;
         }
-      }
-    }
-  }
-
-  .navbar {
-    display: flex;
-    flex-grow: 2;
-    align-items: stretch;
-  }
-
-  .menu {
-    flex: auto;
-    li {
-      a {
-        height: 100%;
       }
     }
   }
 
   .langs {
     display: block;
-    height: 100%;
-    flex-grow: 1;
+    height: auto;
+    flex-grow: 2;
 
     ul, p {
       display: block;
@@ -96,19 +85,30 @@
 
     ul {
       margin: 0;
+      height: inherit;
 
       li {
+        height: inherit;
         float: left;
         margin-left: 0;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
+
+        a {
+          line-height: 4.7rem;
+          img {
+            width: .8rem;
+            border: 0.3px solid $idci-black;
+          }
+        }
       }
     }
-  }
 
-  .choose-language {
-    font-size: 0.625rem;
-    letter-spacing: 0.0625rem;
-    padding-top: .2rem;
-  }
+    
 
+    .choose-language {
+      font-size: 0.625rem;
+      letter-spacing: 0.0625rem;
+      padding-top: 0.2rem;
+    }
+  }
 }

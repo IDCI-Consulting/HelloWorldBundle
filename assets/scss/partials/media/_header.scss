@@ -1,0 +1,50 @@
+@import 'hamburger';
+
+@media (min-width: 1000px) {
+    // Medium and large screen
+
+    header.idci-header {
+        .menu-icon {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    // Small screen
+
+    header.idci-header {
+        nav.navbar {
+            display: none;
+        }
+
+        .menu-icon {
+            position: absolute;
+            left: 10%;
+            top: 30%;
+        }
+
+        .logo {
+            height: 100%;
+            width: 100%;
+            img {
+                width: 7rem;
+            }
+        }
+
+        .langs {
+            ul {
+                position: absolute;
+                right: 10%;
+                top: 10%;
+                a {
+                    margin: auto;
+                }
+            }
+            p.choose-language {
+                display: none;
+            }
+        }
+    }
+
+}
