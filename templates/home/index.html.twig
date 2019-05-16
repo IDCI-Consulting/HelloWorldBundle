@@ -1,8 +1,5 @@
 {% extends "layout.html.twig" %}
-
-{% block title %}
-    {{ 'Home' | trans }}
-{% endblock %}
+{% trans_default_domain 'home' %}
 
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
@@ -12,14 +9,14 @@
 {% endblock %}
 
 {% block main_content %}
-{% include 'partials/asideMenu.html.twig' %}
 
+    {% include 'partials/asideMenu.html.twig' %}
     <section id="{% trans %}presentation{% endtrans %}" class="index-part presentation">
         <header class="header-index-part">
             <em>{% trans %}We specialize in{% endtrans %}</em>
             <h2>
                 {% trans %}Web architecture{% endtrans %},
-                {% trans %}PHP{% endtrans %}&
+                {% trans %}PHP{% endtrans %} &amp;
                 {% trans %}Symfony{% endtrans %}
             </h2>
             <p>&lt;{% trans %}Engineering{% endtrans %}&gt;</p>
@@ -179,13 +176,11 @@
             </article>
         </div>
     </section>
-
-
 {% endblock %}
 
 {% block javascripts %}
-{{ parent() }}
-    <script> 
+   {{ parent() }}
+    <script>
    
     /*$(document).ready(function() {
         enableScroll();
@@ -201,10 +196,7 @@
         });
         } */
     var $sectionId = document.getElementById(document.getElementsByClassName('scroll-to')[0].getAttribute('href').substr(1));
-    console.log($sectionId);
     var scrollArrow = document.getElementsByClassName('scroll-to')[0].addEventListener("click", () => {
-        console.log($sectionId);
-
         scrollTo(
             50000
         );

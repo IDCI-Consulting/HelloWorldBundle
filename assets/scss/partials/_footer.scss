@@ -98,14 +98,12 @@ footer {
         color: $idci-white;
         font-size: 1.45em;
         margin: 0 15px;
-        @include transition(color, .7s);
-        @include transition(background-color, .7s);
+        transition: color .7s;
+        transition: background-color .7s;
 
         &:hover {
           color: $idci-darker-grey;
           background-color: $idci-white;
-          @include transition(color, .7s);
-          @include transition(background-color, .7s);
         }
       }
     }
@@ -161,7 +159,7 @@ footer {
           display: block;
           margin: 0;
           font-size: 3rem;
-          @include transition(color, .3s);
+          transition: color .3s;
 
           &:hover {
             color: $idci-light-blue;

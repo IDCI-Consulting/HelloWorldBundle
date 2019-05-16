@@ -19,16 +19,19 @@ class ContactController extends AbstractController
     public function contact(Request $request)
     {
         $form = $this->createForm(ContactType::class);
-        
-        $response = new Response();
 
-        $view = 'partials/contactForm.html.twig';
+        if ($request->isXmlHttpRequest()) {
+            $response = new Response();
 
-        $response->setContent($this->render($view, [ 'form' => $form->createView() ]));
-        return $response;
+            $view = 'partials/contactForm.html.twig';
+
+            $response->setContent($this->render($view, [ 'form' => $form->createView() ]));
+            
+            return $response;
+        }
         
-        // return $this->render('contact/contact.html.twig', [
-        //     'form' => $form->createView()
-        // ]);
+        return $this->render('contact/contact.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 }

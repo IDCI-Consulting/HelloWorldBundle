@@ -16,3 +16,8 @@ twig:
         locales:
             - fr
             - en
+        courses:
+            - 'symfony2'
+            - 'oop-uml-scm'
+            - 'html5-css3'
+            - 'wordpress'

@@ -29,27 +29,6 @@
   ** Global Mixins **
   *******************/
  
- @mixin border-radius($radius) {
-   -webkit-border-radius: $radius;
-   -moz-border-radius: $radius;
-   -ms-border-radius: $radius;
-   border-radius: $radius;
- }
- 
- @mixin transition($property, $duration, $mode:ease) {
-   -webkit-transition: $property $duration $mode;
-   -moz-transition: $property $duration $mode;
-   -o-transition: $property $duration $mode;
-   transition: $property $duration $mode;
- }
- 
- @mixin box-shadow($property) {
-   -webkit-box-shadow: $property;
-   -moz-box-shadow: $property;
-   -o-box-shadow: $property;
-   box-shadow: $property;
- }
- 
  @mixin font-face($font-family, $font-url, $font-name, $font-weight: normal) {
    @font-face {
      font-family: $font-family;
@@ -64,8 +43,6 @@
  @mixin vertical-align($position: relative) {
    position: $position;
    top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
    transform: translateY(-50%);
  }
  
@@ -103,8 +80,6 @@
  %vertical-align {
    position: relative;
    top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
    transform: translateY(-50%);
  }
  

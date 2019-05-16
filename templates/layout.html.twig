@@ -33,15 +33,14 @@
     </header>
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
 
-{% block content %}
-<main> {% block main_content %}{% endblock %} </main>
+    <link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
 {% endblock %}
 
-{% block stylesheets %}
-<link href="{{ asset('build/app.css') }}" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
+{% block content %}
+<main>{% block main_content %}{% endblock %}</main>
 {% endblock %}
 
 {% block footer %}
@@ -123,27 +122,6 @@
     {{ parent() }}
 
     <script type="text/javascript">
-    document.getElementById('contact-link').addEventListener("click", ModalContact);
-       
-    function ModalContact(event){
-        event.preventDefault();
-
-        var request = new Request(this.getAttribute('href'));
-        var init = {
-            method: 'GET',
-            dataType: 'html',
-        };
-
-        window.fetch(request, init).then(function(response){
-            return response.text();            
-        }).then(function(text){
-            //console.log(text);
-            Swal.fire({
-                title: 'Contact',
-                html: text,
-            });
-        });
-    }
+        document.getElementById('contact-link').addEventListener("click", setUpModal);
     </script>
-
 {% endblock %}

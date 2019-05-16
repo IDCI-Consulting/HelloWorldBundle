@@ -1,8 +1,6 @@
 {% extends "layout.html.twig" %}
 {% trans_default_domain 'team' %}
 
-{% block title %}{{ 'Team' | trans }}{% endblock %}
-
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
@@ -12,7 +10,7 @@
 
 {% block main_content %}
 
-<header class="title"><h1>{% trans %}Team{% endtrans %}</h1></header>
+<header class="title"><h1>{% trans %}The team{% endtrans %}</h1></header>
 
 <section class="team">
     <article class="member gabriel">

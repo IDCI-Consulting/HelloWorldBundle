@@ -87,7 +87,7 @@ yarn:
 	docker run --rm -i -v `pwd`:/usr/src/app -w /usr/src/app node:9.5.0 yarn $(cmd)
 
 encore:
-	docker run --rm -i -v `pwd`:/usr/src/app -w /usr/src/app node:9.5.0 yarn encore dev $(options)
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:9.5.0 yarn encore dev $(options)
 
 encore-production:
 	docker run --rm -i -v `pwd`:/usr/src/app -w /usr/src/app node:9.5.0 yarn encore production $(options)
