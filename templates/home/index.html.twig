@@ -9,8 +9,6 @@
 {% endblock %}
 
 {% block main_content %}
-
-    {% include 'partials/asideMenu.html.twig' %}
     <section id="{% trans %}presentation{% endtrans %}" class="index-part presentation">
         <header class="header-index-part">
             <em>{% trans %}We specialize in{% endtrans %}</em>
@@ -37,7 +35,7 @@
             </h2>
         </header>
         <img src="{{ asset("build/images/conseil.svg") }}" alt="{% trans %}advice icon{% endtrans %}"/>
-        <article class="index-content">{% trans %}text.advice{% endtrans %}</article>
+        <article class="index-content">{% include 'contents/index/advice_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
 
     <section id="{% trans %}training{% endtrans %}" class="index-part training">
@@ -48,7 +46,7 @@
             </h2>
         </header>
         <img src="{{ asset("build/images/formation.svg") }}" alt="{% trans %}training icon{% endtrans %}"/>
-        <article class="index-content">{% trans %}text.courses{% endtrans %}</article>
+        <article class="index-content">{% include 'contents/index/training_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
 
     <section id="{% trans %}web-development{% endtrans %}" class="index-part development">
@@ -61,7 +59,7 @@
         <img src="{{ asset("build/images/icon_dev.svg") }}" alt="{% trans %}web development icon{% endtrans %}"/>
         <pre id="editor"></pre>
         {% block experience_scripts %}{% endblock %}
-        <article class="index-part">{% trans %}text.development{% endtrans %}</article>
+        <article class="index-content">{% include 'contents/index/development_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
 
     <section id="{% trans %}philosophy{% endtrans %}" class="index-part philosophy">
@@ -72,7 +70,7 @@
             </h2>
         </header>
         <img src="{{ asset('build/images/opensource.svg') }}" alt="{% trans %}opensource icon{% endtrans %}"/>
-        <article class="index-content">{% trans %}text.philosophy{% endtrans %}</article>
+        <article class="index-content">{% include 'contents/index/philosophy_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
     
     <section id="{% trans %}approach{% endtrans %}" class="index-part approach">
@@ -82,7 +80,7 @@
             </h2>
         </header>
         <img src="{{ asset('build/images/agile.svg') }}" alt="{% trans %}agile icon{% endtrans %}"/>
-        <article class="index-content">{% trans %}text.methodology{% endtrans %}</article>
+        <article class="index-content">{% include 'contents/index/approach_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
     
     <section id="{% trans %}tools{% endtrans %}" class="index-part tools">
@@ -94,85 +92,85 @@
         </header>
         <div class="tools-content">
             <article class="tools-part">
-            {%
-                include 'partials/tools.html.twig'
-                with {
-                    'class': 'backend',
-                    'title': 'Backend',
-                    'images': {
-                        'php': 'https://secure.php.net',
-                        'symfony2': 'http://symfony.com',
-                        'node': 'https://nodejs.org',
-                        'meteor': 'https://www.meteor.com'
+                {%
+                    include 'partials/tools.html.twig'
+                    with {
+                        'class': 'backend',
+                        'title': 'Backend',
+                        'images': {
+                            'php': 'https://secure.php.net',
+                            'symfony2': 'http://symfony.com',
+                            'node': 'https://nodejs.org',
+                            'meteor': 'https://www.meteor.com'
+                        }
                     }
-                }
-            %}
+                %}
             </article>
             <article class="tools-part">
-            {%
-                include 'partials/tools.html.twig'
-                with {
-                    'class': 'databases',
-                    'title': 'Storage',
-                    'images': {
-                        'mysql': 'https://www.mysql.fr/',
-                        'mongodb': 'https://www.mongodb.org/',
-                        'postgresql': 'http://www.postgresql.org/',
-                        'redis': 'http://redis.io/',
-                        'kyototycoon': 'http://fallabs.com/kyototycoon/api/'
+                {%
+                    include 'partials/tools.html.twig'
+                    with {
+                        'class': 'databases',
+                        'title': 'Storage',
+                        'images': {
+                            'mysql': 'https://www.mysql.fr/',
+                            'mongodb': 'https://www.mongodb.org/',
+                            'postgresql': 'http://www.postgresql.org/',
+                            'redis': 'http://redis.io/',
+                            'kyototycoon': 'http://fallabs.com/kyototycoon/api/'
+                        }
                     }
-                }
-            %}
+                %}
             </article>
             <article class="tools-part">
-            {%
-            include 'partials/tools.html.twig'
-            with {
-                'class': 'infrastructure',
-                'title': 'Infrastructure',
-                'images': {
-                    'varnish': 'https://www.varnish-cache.org/',
-                    'proxmox': 'https://www.proxmox.com/en/',
-                    'ansible': 'http://www.ansible.com/home',
-                    'elk': 'https://www.elastic.co/fr/products',
-                    'docker': 'https://www.docker.com/',
-                    'rabbitmq': 'https://www.rabbitmq.com/'
-                }
-            }
-            %}
+                {%
+                    include 'partials/tools.html.twig'
+                    with {
+                        'class': 'infrastructure',
+                        'title': 'Infrastructure',
+                        'images': {
+                            'varnish': 'https://www.varnish-cache.org/',
+                            'proxmox': 'https://www.proxmox.com/en/',
+                            'ansible': 'http://www.ansible.com/home',
+                            'elk': 'https://www.elastic.co/fr/products',
+                            'docker': 'https://www.docker.com/',
+                            'rabbitmq': 'https://www.rabbitmq.com/'
+                        }
+                    }
+                %}
             </article>
             <article class="tools-part">
-            {%
-                include 'partials/tools.html.twig'
-                with {
-                    'class': 'frontend',
-                    'title': 'Frontend',
-                    'images': {
-                        'html5-css3': 'http://www.w3.org/TR/html5/',
-                        'bootstrap': 'http://getbootstrap.com/',
-                        'foundation': 'http://foundation.zurb.com/',
-                        'angular': 'https://angularjs.org/',
-                        'sass': 'http://sass-lang.com/',
-                        'jquery': 'https://jquery.com/',
-                        'vue-js': 'https://vuejs.org/'
+                {%
+                    include 'partials/tools.html.twig'
+                    with {
+                        'class': 'frontend',
+                        'title': 'Frontend',
+                        'images': {
+                            'html5-css3': 'http://www.w3.org/TR/html5/',
+                            'bootstrap': 'http://getbootstrap.com/',
+                            'foundation': 'http://foundation.zurb.com/',
+                            'angular': 'https://angularjs.org/',
+                            'sass': 'http://sass-lang.com/',
+                            'jquery': 'https://jquery.com/',
+                            'vue-js': 'https://vuejs.org/'
 
+                        }
                     }
-                }
-            %}
+                %}
             </article>
             <article class="tools-part">
-            {%
-            include 'partials/tools.html.twig'
-            with {
-                'class': 'qualite',
-                'title': 'Quality',
-                'images': {
-                    'php-unit': 'https://phpunit.de/',
-                    'gitlab': 'https://about.gitlab.com/',
-                    'redmine': 'http://www.redmine.org/projects/redmine/wiki',
-                }
-            }
-            %}
+                {%
+                    include 'partials/tools.html.twig'
+                    with {
+                        'class': 'qualite',
+                        'title': 'Quality',
+                        'images': {
+                            'php-unit': 'https://phpunit.de/',
+                            'gitlab': 'https://about.gitlab.com/',
+                            'redmine': 'http://www.redmine.org/projects/redmine/wiki',
+                        }
+                    }
+                %}
             </article>
         </div>
     </section>
@@ -180,33 +178,4 @@
 
 {% block javascripts %}
    {{ parent() }}
-    <script>
-   
-    /*$(document).ready(function() {
-        enableScroll();
-        });
-
-        function enableScroll () {
-        $('.aside-navigation-link, .scroll-to').on('click', function() {
-            var $sectionId = $(this).attr('href');
-
-            $('body, html').animate({
-                scrollTop: $($sectionId).offset().top
-            }, 'slow');
-        });
-        } */
-    var $sectionId = document.getElementById(document.getElementsByClassName('scroll-to')[0].getAttribute('href').substr(1));
-    var scrollArrow = document.getElementsByClassName('scroll-to')[0].addEventListener("click", () => {
-        scrollTo(
-            50000
-        );
-    });
-
-   /* function enableScroll(event) {
-        console.log('çamarche');
-        var $sectionId = document.getElementById(this.getAttribute('href').substr(1));
-        console.log($sectionId);
-        console.log($sectionId.getBoundingClientRect().top);
-    }; */
-    </script>
 {% endblock %}

@@ -23,10 +23,10 @@ class ContactController extends AbstractController
         if ($request->isXmlHttpRequest()) {
             $response = new Response();
 
-            $view = 'partials/contactForm.html.twig';
+            $response->setContent($this->renderView('partials/contactForm.html.twig', [
+                'form' => $form->createView()
+            ]));
 
-            $response->setContent($this->render($view, [ 'form' => $form->createView() ]));
-            
             return $response;
         }
         

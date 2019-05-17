@@ -35,12 +35,14 @@
 
 {% block stylesheets %}
     {{ parent() }}
-
     <link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
 {% endblock %}
 
 {% block content %}
-<main>{% block main_content %}{% endblock %}</main>
+<main>
+    {% include 'partials/asideMenu.html.twig' %}
+    {% block main_content %}{% endblock %}
+</main>
 {% endblock %}
 
 {% block footer %}

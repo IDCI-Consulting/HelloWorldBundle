@@ -11,7 +11,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/{_locale}")
- * 
  */
 class HomeController extends AbstractController
 {
@@ -21,7 +20,7 @@ class HomeController extends AbstractController
     public function home(AsideMenuGenerator $asideMenuGenerator)
     {
         return $this->render('home/index.html.twig', [
-            'aside_menu' => $asideMenuGenerator->generateAsideMenu('home/index.html.twig'),
+            'aside_menu' => $asideMenuGenerator->generateAsideMenu('home/index.html.twig')
         ]);
     }
 
@@ -64,15 +63,10 @@ class HomeController extends AbstractController
     /**
      * @Route("/courses", name="courses", methods={"GET"})
      */
-    public function courses(Request $request)
+    public function courses(AsideMenuGenerator $asideMenuGenerator)
     {
-        $courses = [];
-        $courses[0] = "html5-css3";
-        $courses[1] = "oop-uml-scm";
-        $courses[2] = "symfony2";
-        $courses[3] = "wordpress";
         return $this->render('home/courses.html.twig', [
-            'courses' => $courses
+            'aside_menu' => $asideMenuGenerator->generateAsideMenu('home/courses.html.twig')
         ]);
     }
 

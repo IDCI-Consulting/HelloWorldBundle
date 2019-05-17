@@ -6,8 +6,9 @@ export default function setUpModal(event) {
     
     var init = {
         method: 'GET',
-        dataType: 'text/html',
+        dataType: 'html',
         headers: {
+            'Content-Type': 'text/html',
             'X-Requested-With': 'XMLHttpRequest'
         }
     };
@@ -15,6 +16,7 @@ export default function setUpModal(event) {
     fetchPolyfill(this.getAttribute('href'), init).then(function (response) {
         return response.text();
     }).then(function (text) {
+        console.log(text);
         Swal.fire({
             title: 'Contact',
             html: text,

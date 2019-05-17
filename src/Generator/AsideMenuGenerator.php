@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Generator;
 
@@ -13,10 +13,11 @@ class AsideMenuGenerator
         $this->twig = $twig;
     }
 
-    public function generateAsideMenu(string $templatePath): array
+    public function generateAsideMenu(string $templateName, array $vars = [], string $blockName = 'main_content'): array
     {
-        $template = $this->twig->loadTemplate($templatePath);
-        $page = $template->renderBlock('main_content', []);
+        $vars = array_merge($this->twig->getGlobals(), $vars);
+        
+        $page = $this->twig->loadTemplate($templateName)->renderBlock($blockName, $vars);
 
         $asideMenu = [];
 
