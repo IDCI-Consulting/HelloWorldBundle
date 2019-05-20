@@ -10,6 +10,10 @@
 @media (max-width: 800px) {
     section.index-part {
 
+        img {
+            display: none;
+        }
+        
         em.index-sub-title {
             display: none;
         }
@@ -18,11 +22,17 @@
             display: none;
         }
     
-        .approach {
+        &.training {
+            img.arrow {
+                display: none;
+            }
+        }
+
+        &.approach {
             display: none;
         }
 
-        .tools {
+        &.tools {
             display: none;
         }
     }
