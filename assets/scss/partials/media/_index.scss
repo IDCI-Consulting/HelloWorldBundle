@@ -1,6 +1,29 @@
 @media (max-width: 1000px) {
 
+    // medium Screen
+
     ul.aside-navigation-menu {
         display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    section.index-part {
+
+        em.index-sub-title {
+            display: none;
+        }
+
+        .scroll-to {
+            display: none;
+        }
+    
+        .approach {
+            display: none;
+        }
+
+        .tools {
+            display: none;
+        }
     }
 }

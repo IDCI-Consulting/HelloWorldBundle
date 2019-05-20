@@ -249,4 +249,13 @@ a.tools-sprite {
       background-position: -13px -970px;
     }
   }
+
+  &.oop-uml-scm {
+    background-position: -121px -330px;
+    height: 40px;
+
+    &:hover {
+      background-position: -12px -330px;
+    }
+  }
 }

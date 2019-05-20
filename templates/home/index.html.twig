@@ -11,10 +11,11 @@
 {% block main_content %}
     <section id="{% trans %}presentation{% endtrans %}" class="index-part presentation">
         <header class="header-index-part">
-            <em>{% trans %}We specialize in{% endtrans %}</em>
+            <em>{% trans %}We specialize in{% endtrans %}</em class="index-sub-title">
             <h2>
                 {% trans %}Web architecture{% endtrans %},
-                {% trans %}PHP{% endtrans %} &amp;
+                {% trans %}PHP{% endtrans %}
+                &amp;
                 {% trans %}Symfony{% endtrans %}
             </h2>
             <p>&lt;{% trans %}Engineering{% endtrans %}&gt;</p>
@@ -29,7 +30,7 @@
 
     <section id="{% trans %}advice{% endtrans %}" class="index-part advices">
         <header class="header-index-part">
-            <em>{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em>
+            <em class="index-sub-title">{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em class="index-sub-title">
             <h2>
                 {% trans %}Consulting{% endtrans %}
             </h2>
@@ -40,7 +41,7 @@
 
     <section id="{% trans %}training{% endtrans %}" class="index-part training">
         <header class="header-index-part">
-            <em>{% transchoice 1 from "messages" %}We do{% endtranschoice %}</em>
+            <em class="index-sub-title">{% transchoice 1 from "messages" %}We do{% endtranschoice %}</em class="index-sub-title">
             <h2>
                 {% trans %}Training{% endtrans %}
             </h2>
@@ -51,12 +52,11 @@
 
     <section id="{% trans %}web-development{% endtrans %}" class="index-part development">
         <header class="header-index-part">
-            <em>{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em>
+            <em class="index-sub-title">{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em class="index-sub-title">
             <h2>
                 {% trans %}Web development{% endtrans %}
             </h2>
         </header>
-        <img src="{{ asset("build/images/icon_dev.svg") }}" alt="{% trans %}web development icon{% endtrans %}"/>
         <pre id="editor"></pre>
         {% block experience_scripts %}{% endblock %}
         <article class="index-content">{% include 'contents/index/development_' ~ app.request.locale ~ '.html.twig' %}</article>
@@ -64,7 +64,7 @@
 
     <section id="{% trans %}philosophy{% endtrans %}" class="index-part philosophy">
         <header class="header-index-part">
-            <em>{% trans %}Our philosophy{% endtrans %}</em>
+            <em class="index-sub-title">{% trans %}Our philosophy{% endtrans %}</em class="index-sub-title">
             <h2>
                 {% trans %}Open source{% endtrans %}
             </h2>
@@ -72,7 +72,7 @@
         <img src="{{ asset('build/images/opensource.svg') }}" alt="{% trans %}opensource icon{% endtrans %}"/>
         <article class="index-content">{% include 'contents/index/philosophy_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
-    
+
     <section id="{% trans %}approach{% endtrans %}" class="index-part approach">
         <header class="header-index-part">
             <h2>
@@ -82,7 +82,7 @@
         <img src="{{ asset('build/images/agile.svg') }}" alt="{% trans %}agile icon{% endtrans %}"/>
         <article class="index-content">{% include 'contents/index/approach_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
-    
+
     <section id="{% trans %}tools{% endtrans %}" class="index-part tools">
         <header class="header-index-part">
             <h2>
@@ -177,5 +177,10 @@
 {% endblock %}
 
 {% block javascripts %}
-   {{ parent() }}
+    {{ parent() }}
+    <script>
+        var idci_code_writer = '{{ idci_code_writer|json_encode|escape("js") }}';
+        asideM class="index-sub-title"enuHighlight();
+        showAceEditor(idci_code_writer);
+    </script>
 {% endblock %}

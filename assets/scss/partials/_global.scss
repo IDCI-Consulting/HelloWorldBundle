@@ -2,11 +2,12 @@ body {
   font-family: Molengo, sans-serif;
   font-size: 16px;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 main {
   padding-top: 5rem;
-  min-height: 100vh;
+  //min-height: 100vh;
 }
 
 .wrapper {
@@ -77,7 +78,7 @@ ul {
   margin: 0;
 }
 
-section.full-width {
+section {
   text-align: center;
 
   img, #editor {

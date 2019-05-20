@@ -21,3 +21,40 @@ twig:
             - 'oop-uml-scm'
             - 'html5-css3'
             - 'wordpress'
+        idci_code_writer:
+            files:
+                -
+                    url: https://raw.githubusercontent.com/IDCI-Consulting/GenealogyBundle/master/Controller/ImageController.php
+                    language: 'php'
+                    theme: ambiance
+
+                -
+                    url: https://raw.githubusercontent.com/IDCI-Consulting/GenealogyBundle/master/Repository/ElementRepository.php
+                    language: 'php'
+                    theme: monokai
+
+                -
+                    url: https://raw.githubusercontent.com/IDCI-Consulting/ExtraFormBundle/master/Controller/ApiController.php
+                    language: 'php'
+                    theme: tomorrow_night
+
+                -
+                    url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleScheduleBundle/master/Entity/LocationAwareCalendarEntity.php
+                    language: 'php'
+                    theme: chaos
+
+                -
+                    url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleScheduleBundle/master/Entity/CalendarEntityRelation.php
+                    language: 'php'
+                    theme: twilight
+
+                -
+                    url: https://raw.githubusercontent.com/IDCI-Consulting/SimpleMetadataBundle/master/Resources/views/Form/fields.html.twig
+                    language: 'twig'
+                    theme: cobalt
+
+                -
+                    url: https://raw.githubusercontent.com/IDCI-Consulting/BrowserCapabilities/master/js/codebarReader.js
+                    language: 'javascript'
+                    theme: clouds_midnight
+                    

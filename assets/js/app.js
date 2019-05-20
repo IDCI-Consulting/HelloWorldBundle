@@ -5,3 +5,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // any JS you require will output into a single js file (app.js in this case)
 import setUpModal from './src/set-up-modal';
 window.setUpModal = setUpModal;
+
+import asideMenuHighlight from './src/aside-menu-highlight';
+window.asideMenuHighlight = asideMenuHighlight;
+
+import showAceEditor from './src/editor-show';
+window.showAceEditor = showAceEditor;

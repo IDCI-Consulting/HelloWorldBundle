@@ -2,8 +2,9 @@
   text-align: center;
   align-items: center;
   background-size: cover;
-  min-height: calc(100vh - 5rem);
+  //min-height: calc(100vh - 5rem);
   line-height: 4rem;
+  padding-top: 5rem;
 
   @extend %full-width;
 
@@ -44,13 +45,48 @@
     &.tools-icon {
       height: 4rem;
     }
+
+    &.arrow {
+      height: 100%;
+      margin: 0 .5rem;
+      vertical-align: top;
+      height: 4rem;
+      display: inline-block;
+    }  
+  }
+
+  article.index-content {
+    width: 40%;
+    margin: auto;
+    padding: 5rem;
+    padding-top: 2rem;
+    text-rendering: optimizeLegibility;
+
+    img {
+      height: 4rem;
+      width: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+      line-height: 2rem;
+    }
+
+    h3.trainings {
+      color: $idci-blue;
+      display: inline-block;
+      font-size: 1.6rem;
+      color: $idci-green;
+      box-sizing: border-box;
+    }
   }
 }
 
 .presentation {
   background-image: url("../../images/background_presentation.jpg");
-
-  padding-top: 15rem;
+  height: 100vh;
+  padding-top: 10rem;
 
   .scroll-to {
     border: 2px solid $idci-light-blue;
@@ -106,6 +142,7 @@
 
 .tools {
   background-color: $idci-white;
+  margin-bottom: 5rem;
 
   div.tools-content {
     display: flex;
@@ -127,4 +164,10 @@
       }
     }
   }
+}
+
+#editor {
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
 }

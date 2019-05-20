@@ -4,9 +4,8 @@
 <h3 class="trainings">les différentes formations</h3>
 <img class="arrow" src="{{ asset('build/images/balise_right.svg') }}" alt="{% trans %}right arrow{% endtrans %}"/>
 
-
 <div class="courses">
     {% for course in courses %}
-        <a href="{{ path('website_courses', {'_locale': app.request.locale}) }}#{{ course }}"  class="tools-sprite {{ course }}">{{ course }}</a>
+        <a href="{{ path('website_courses') }}#{{ course }}"  class="tools-sprite {{ course }}">{{ course }}</a>
     {% endfor %}
 </div>
