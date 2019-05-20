@@ -1,3 +1,11 @@
+@media (min-width: 1000px) {
+    section.index-part {
+        img.accordion-image {
+            display: none;
+        }
+    }
+}
+
 @media (max-width: 1000px) {
 
     // medium Screen
@@ -22,6 +30,12 @@
             display: none;
         }
     
+        &.development {
+            pre {
+                display: none;
+            }
+        }
+
         &.training {
             img.arrow {
                 display: none;

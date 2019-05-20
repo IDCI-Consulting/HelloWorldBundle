@@ -15,7 +15,7 @@
             <h2>
                 {% trans %}Web architecture{% endtrans %},
                 {% trans %}PHP{% endtrans %}
-                &amp;
+                &
                 {% trans %}Symfony{% endtrans %}
             </h2>
             <p>&lt;{% trans %}Engineering{% endtrans %}&gt;</p>
@@ -31,45 +31,48 @@
     <section id="{% trans %}advice{% endtrans %}" class="index-part advices">
         <header class="header-index-part">
             <em class="index-sub-title">{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em class="index-sub-title">
+            <img src="{{ asset("build/images/conseil.svg") }}" class="accordion-image" alt="{% trans %}advice accordion-image{% endtrans %}"/>
             <h2>
                 {% trans %}Consulting{% endtrans %}
             </h2>
         </header>
-        <img src="{{ asset("build/images/conseil.svg") }}" alt="{% trans %}advice icon{% endtrans %}"/>
+        <img src="{{ asset("build/images/conseil.svg") }}" class="index-image" alt="{% trans %}advice icon{% endtrans %}"/>
         <article class="index-content">{% include 'contents/index/advice_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
 
     <section id="{% trans %}training{% endtrans %}" class="index-part training">
         <header class="header-index-part">
             <em class="index-sub-title">{% transchoice 1 from "messages" %}We do{% endtranschoice %}</em class="index-sub-title">
+            <img src="{{ asset("build/images/formation.svg") }}" class="accordion-image" alt="{% trans %}training accordion-image{% endtrans %}"/>
             <h2>
                 {% trans %}Training{% endtrans %}
             </h2>
         </header>
-        <img src="{{ asset("build/images/formation.svg") }}" alt="{% trans %}training icon{% endtrans %}"/>
+        <img src="{{ asset("build/images/formation.svg") }}" class="index-image" alt="{% trans %}training icon{% endtrans %}"/>
         <article class="index-content">{% include 'contents/index/training_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
 
     <section id="{% trans %}web-development{% endtrans %}" class="index-part development">
         <header class="header-index-part">
             <em class="index-sub-title">{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em class="index-sub-title">
+            <img src="{{ asset("images/icon_dev.svg") }}" class="accordion-image" alt="{% trans %}web development accordion-image{% endtrans %}"/>
             <h2>
                 {% trans %}Web development{% endtrans %}
             </h2>
         </header>
         <pre id="editor"></pre>
-        {% block experience_scripts %}{% endblock %}
         <article class="index-content">{% include 'contents/index/development_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
 
     <section id="{% trans %}philosophy{% endtrans %}" class="index-part philosophy">
         <header class="header-index-part">
             <em class="index-sub-title">{% trans %}Our philosophy{% endtrans %}</em class="index-sub-title">
+            <img src="{{ asset('build/images/opensource.svg') }}" class="accordion-image" alt="{% trans %}opensource accordion-image{% endtrans %}"/>
             <h2>
                 {% trans %}Open source{% endtrans %}
             </h2>
         </header>
-        <img src="{{ asset('build/images/opensource.svg') }}" alt="{% trans %}opensource icon{% endtrans %}"/>
+        <img src="{{ asset('build/images/opensource.svg') }}" class="index-image" alt="{% trans %}opensource icon{% endtrans %}"/>
         <article class="index-content">{% include 'contents/index/philosophy_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
 
@@ -79,7 +82,7 @@
                 {% trans %}Our methodology{% endtrans %}
             </h2>
         </header>
-        <img src="{{ asset('build/images/agile.svg') }}" alt="{% trans %}agile icon{% endtrans %}"/>
+        <img src="{{ asset('build/images/agile.svg') }}" class="index-image" alt="{% trans %}agile icon{% endtrans %}"/>
         <article class="index-content">{% include 'contents/index/approach_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
 
@@ -88,7 +91,7 @@
             <h2>
                 {% trans %}Our tools{% endtrans %}
             </h2>
-            <img class="tools-icon" src="{{ asset('build/images/icon_outils.svg') }}" alt="{% trans %}tools icon{% endtrans %}"/>
+            <img class="tools-icon" src="{{ asset('build/images/icon_outils.svg') }}" class="index-image" alt="{% trans %}tools icon{% endtrans %}"/>
         </header>
         <div class="tools-content">
             <article class="tools-part">
@@ -180,7 +183,7 @@
     {{ parent() }}
     <script>
         var idci_code_writer = '{{ idci_code_writer|json_encode|escape("js") }}';
-        asideM class="index-sub-title"enuHighlight();
+        asideMenuHighlight();
         showAceEditor(idci_code_writer);
     </script>
 {% endblock %}

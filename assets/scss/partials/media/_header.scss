@@ -14,29 +14,35 @@
     // Small screen
 
     header.idci-header {
+
+        height: 3.5rem;
+
         nav.navbar {
             display: none;
         }
 
         .menu-icon {
-            position: absolute;
-            left: 10%;
-            top: 30%;
+            display: flex;
+            width: 25%;
+            .hamburger {
+                margin-left:2rem;
+                margin: auto;
+                width: 50%;
+                height: 80%;
+            }
         }
 
         .logo {
             height: 100%;
-            width: 100%;
+            width: 50%;
             img {
                 width: 7rem;
             }
         }
 
         .langs {
+            width: 25%;
             ul {
-                position: absolute;
-                right: 10%;
-                top: 10%;
                 a {
                     margin: auto;
                 }
