@@ -9,34 +9,39 @@
   @extend %full-width;
 
   .header-index-part {
-    em {
-      color: $idci-light-blue;
-      font-style: normal;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: .4375rem;
-      margin: 0 0 2rem;
-      text-transform: uppercase;
-      font-family: Oswald,sans-serif;
-    }
+      em {
+        color: $idci-light-blue;
+        font-style: normal;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: .4375rem;
+        margin: 0 0 2rem;
+        text-transform: uppercase;
+        font-family: Oswald,sans-serif;
+      }
 
-    h2 {
-      letter-spacing: .4rem;
-      font-weight: 400;
-      color: $idci-blue;
-      font-family: Oswald-Bold,sans-serif;
-      font-size: 2.3125rem;
-    }
+      h2 {
+        letter-spacing: .4rem;
+        font-weight: 400;
+        color: $idci-blue;
+        font-family: Oswald-Bold,sans-serif;
+        font-size: 2.3125rem;
+      }
 
-    p {
-      color: $idci-green;
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: .375rem;
-      display: inline-block;
-      text-transform: uppercase;
-      font-family: Oswald,sans-serif;
-    }
+      p {
+        color: $idci-green;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: .375rem;
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: Oswald,sans-serif;
+      }
+
+      i.fas {
+        font-size: 2.5rem;
+        color: $idci-black;
+      }
   }
 
   img {
