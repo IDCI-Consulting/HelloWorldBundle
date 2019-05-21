@@ -1,28 +1,28 @@
-image: docker:latest
+# image: docker:latest
 
-# When using dind, it's wise to use the overlayfs driver for
-# improved performance.
-variables:
-  DOCKER_DRIVER: overlay
+# # When using dind, it's wise to use the overlayfs driver for
+# # improved performance.
+# variables:
+#   DOCKER_DRIVER: overlay
 
-services:
-  - docker:dind
+# services:
+#   - docker:dind
 
-# Install docker-compose before scripts
-before_script:
-  - docker info
-  - apk update
-  - apk upgrade
-  - apk add python python-dev py-pip build-base
-  - pip install docker-compose
+# # Install docker-compose before scripts
+# before_script:
+#   - docker info
+#   - apk update
+#   - apk upgrade
+#   - apk add python python-dev py-pip build-base
+#   - pip install docker-compose
 
-build:
-  stage: build
-  script:
-    - docker network create dev # It will depend if you use docker-compose v2 with internal network
-    - docker-compose up -d
-    - make composer-install     # Make sure to not use -it with docker exec commands
-    - make npm-install
-    - make bower-install
-    - make gulp task="prod"
-    - make phpunit
+# build:
+#   stage: build
+#   script:
+#     - docker network create dev # It will depend if you use docker-compose v2 with internal network
+#     - docker-compose up -d
+#     - make composer-install     # Make sure to not use -it with docker exec commands
+#     - make npm-install
+#     - make bower-install
+#     - make gulp task="prod"
+#     - make phpunit
