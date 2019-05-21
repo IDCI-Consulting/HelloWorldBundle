@@ -2,6 +2,12 @@ body {
   font-family: Molengo, sans-serif;
   font-size: 16px;
   height: 100%;
+  scroll-behavior: smooth;
+}
+
+main {
+  padding-top: 5rem;
+  //min-height: 100vh;
 }
 
 .wrapper {
@@ -33,6 +39,10 @@ h1 {
     padding-top: 2rem;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: .4rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
   }
 }
 
@@ -68,7 +78,7 @@ ul {
   margin: 0;
 }
 
-section.full-width {
+section {
   text-align: center;
 
   img, #editor {
@@ -91,13 +101,6 @@ section.contact {
   background-color: $idci-light-grey;
 }
 
-.full-width {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: initial;
-}
-
 .idci-inline-list {
   display: inline-block;
   margin: 0;
@@ -105,4 +108,8 @@ section.contact {
 
 a {
   outline: none;
+}
+
+main {
+  @extend %full-width;
 }

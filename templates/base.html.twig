@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ app.request.locale }}">
     <head>
-        <title>{% block title%}IDCI-Consulting{% endblock %}</title>
+        <title>{% block title%}IDCI-WIP{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         {% block metaTags %}{% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
 
     <body>
@@ -11,9 +14,8 @@
         {% block header %}{% endblock %}
         {% block content %}{% endblock %}
         {% block footer %}{% endblock %}
-        {% block stylesheets %}{% endblock %}
         {% block javascripts %}
-        {% block devJavascripts %}{% endblock %}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </body>
 </html>

@@ -1,0 +1,59 @@
+.content-header {
+    @extend %full-width;
+
+    margin-top: 11rem;
+    text-align: center;
+
+    em {
+        color: $idci-light-blue;
+        font-style: normal;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: .4375rem;
+        margin: 0 0 2rem;
+        text-transform: uppercase;
+        font-family: Oswald,sans-serif;
+    }
+}
+
+.course-choice {
+    @extend %full-width;
+
+    display: flex;
+
+    .course-box {
+        flex: auto;
+        margin: 1rem 3rem;
+        text-align: center;
+        border: .2rem solid $idci-dark-grey;
+
+        a {
+            img {
+                border-bottom: .2rem solid $idci-dark-grey;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.course-title {
+    text-align: center;
+    letter-spacing: .4rem;
+    font-weight: 400;
+    font-size: 2.3125rem;
+
+    a {
+        background-color: $idci-light-blue;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+        :hover {
+            background-color: $idci-blue;
+        }
+    }
+}

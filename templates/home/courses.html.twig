@@ -9,4 +9,30 @@
     } %}
 {% endblock %}
 
-{% block content %}{{ 'Training' | trans}}{% endblock %}
+{% block main_content %}
+    <header class="content-header">
+        <em class="">{% trans %}Choose one of{% endtrans %}</em>
+        <h1 class="title">{% trans %}Our courses{% endtrans %}</h1>
+    </header>
+
+    <section class="course-choice">
+    {% for course in courses %}
+    <article class="course-box">
+        <a href="{{ url('website_courses')}}#{{ course }}">
+            <img src="{{ asset('build/images/' ~ course ~ '.svg') }}" class="course-image" />
+            <p class="course-title"> {{ course }} </p>
+        </a>
+    </article>
+    {% endfor %}
+    </section>
+
+    {% for course in courses %}
+    <section class="course" id="{{ course }}">
+        <h2> {{ course }} </h2>
+        <img src="{{ asset('build/images/' ~ course ~ '.svg') }}" class="course-image" />
+        <a href="" class="course-download">{% trans %}Download{% endtrans %} </a>
+        <a href="{{ url('website_contact') }}'" class="contact-us">{% trans %}Contact us{% endtrans %}</a>
+    </section>
+    {% endfor %}
+
+{% endblock %}

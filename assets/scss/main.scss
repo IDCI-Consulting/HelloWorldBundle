@@ -2,13 +2,30 @@
  *** Settings importation ***
  ****************************/
 
+@import 'reset';
 @import 'settings';
 
 /****************************
  *** Partials importation ***
  ****************************/
 
- @import 'partials/header';
- @import 'partials/footer';
- @import 'partials/global';
- @import 'partials/header';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/global';
+@import 'partials/header';
+@import 'partials/courses';
+@import 'partials/index';
+@import 'partials/asideNavigationMenu';
+@import 'partials/partners';
+@import 'partials/tools';
+@import 'partials/team';
+
+
+/****************************
+ **** Media importation *****
+ ****************************/
+
+ @import 'partials/media/index';
+ @import 'partials/media/hamburger';
+ @import 'partials/media/header';
+ @import 'partials/media/footer'

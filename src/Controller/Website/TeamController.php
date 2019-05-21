@@ -21,7 +21,7 @@ class TeamController extends AbstractController
     /**
      * @Route("/cv/{name}.{_format}", name="vcard", methods={"GET"})
      */
-    public function vcard($name, $_format=NULL)
+    public function vcard($name, $_format = null)
     {
         return $this->render('team/cv.html.twig', [
             'name' => $name,

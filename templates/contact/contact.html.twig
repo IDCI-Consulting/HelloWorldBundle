@@ -9,4 +9,10 @@
     } %}
 {% endblock %}
 
-{% block content %}Contact{% endblock %}
+{% block main_content %}
+
+<header class="title"><h1>{% trans %}Contact{% endtrans %}</h1></header>
+
+{% include 'partials/contactForm.html.twig' %}
+    
+{% endblock %}

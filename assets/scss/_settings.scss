@@ -21,34 +21,13 @@
  $moniteur-color: #C51617;
  $bodysculpt-color: #DA0B13;
  
- $font-url: '/fonts';
+ $font-url: '../fonts';
  $social-sprite-url: url("/images/rs.png");
  
  
  /*******************
   ** Global Mixins **
   *******************/
- 
- @mixin border-radius($radius) {
-   -webkit-border-radius: $radius;
-   -moz-border-radius: $radius;
-   -ms-border-radius: $radius;
-   border-radius: $radius;
- }
- 
- @mixin transition($property, $duration, $mode:ease) {
-   -webkit-transition: $property $duration $mode;
-   -moz-transition: $property $duration $mode;
-   -o-transition: $property $duration $mode;
-   transition: $property $duration $mode;
- }
- 
- @mixin box-shadow($property) {
-   -webkit-box-shadow: $property;
-   -moz-box-shadow: $property;
-   -o-box-shadow: $property;
-   box-shadow: $property;
- }
  
  @mixin font-face($font-family, $font-url, $font-name, $font-weight: normal) {
    @font-face {
@@ -64,8 +43,6 @@
  @mixin vertical-align($position: relative) {
    position: $position;
    top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
    transform: translateY(-50%);
  }
  
@@ -103,11 +80,16 @@
  %vertical-align {
    position: relative;
    top: 50%;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
    transform: translateY(-50%);
  }
  
+ %full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
  @include font-face('Molengo', $font-url, 'Molengo');
  @include font-face('Oswald', $font-url, 'Oswald-Light');
  @include font-face('Oswald-Bold', $font-url, 'Oswald-Bold', 'bold');
