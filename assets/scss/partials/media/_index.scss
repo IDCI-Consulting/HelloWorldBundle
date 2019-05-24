@@ -1,111 +1,190 @@
 @media (min-width: 64em) {
+  // Large screen
 
-    // Large screen
-
-    section.index-part {
-        img.accordion-image {
-            display: none;
-        }
-
-        i.fas {
-            display: none;
-        }
+  section.container {
+    padding-bottom: 2rem;
+    img.accordion-image {
+      display: none;
     }
+
+    i.fas {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: 40em) and (max-width: 64em) {
+  // Medium screen
 
-    // Medium screen
+  ul.aside-navigation-menu {
+    display: none;
+  }
 
-    ul.aside-navigation-menu {
-        display: none;
+  section.container {
+    img.accordion-image {
+      display: none;
     }
 
-    section.index-part {
-        img.accordion-image {
-            display: none;
-        }
-
-        i.fas {
-            display: none;
-        }
+    i.fas {
+      display: none;
     }
+  }
 }
 
 @media (max-width: 40em) {
+  // Small screen
 
-    // Small screen
+  main {
+    padding-top: 4rem;
+  }
 
-    section.index-part {
+  video {
+    display: none;
+  }
 
-        header.header-index-part {
-            display: flex;
+  .parallax-video {
+    display: none;
+  }
 
-            img.accordion-image {
-                width: 4rem;
-                height: 4rem;
-            }
-            
-            em.index-sub-title {
-                display: none;
-            }
-    
-            h2 {
-                font-size: 1.5rem;
-                line-height: 5rem;
-            }
-    
-            i.fas {
-            }
-    
-            .scroll-to {
-                display: none;
-            }
-    
-        }
+  section.container {
+    padding-top: 0;
+    background-color: $idci-white;
 
-        img.index-image {
-            display: none;
-        }
+    header:not(.header-presentation) {
+      display: flex;
+      cursor: pointer;
+      background-color: $idci-white;
+      transition: 0.5s;
 
-        &.presentation {
-            em {
-                font-size: 1rem;
-                margin: 1.75rem 0;
-            }
+      &:checked,
+      &:hover {
+        background-color: $idci-dark-grey;
+      }
 
-            h2 {
-                font-size: 2rem;
-                font-weight: 100;
-            }
+      img.accordion-image {
+        width: 1.5rem;
+        height: 1.5rem;
+        align-self: center;
+        padding-left: 0.5rem;
+        flex: 1;
+      }
 
-            p {
-                font-size: 1rem;
-            }
-        }
-    
-        &.development {
-            pre {
-                display: none;
-            }
-        }
-
-        &.training {
-            img.arrow {
-                display: none;
-            }
-        }
-
-        &.approach {
-            display: none;
-        }
-
-        &.tools {
-            display: none;
-        }
-    }
-
-    ul.aside-navigation-menu {
+      em.sub-title {
         display: none;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 5rem;
+        letter-spacing: 0;
+        text-align: start;
+        padding-left: 1rem;
+        flex: 4;
+      }
+
+      i.fas {
+        align-self: center;
+        flex: 1;
+      }
     }
+
+    header {
+      h2 {
+        font-family: Oswald, sans-serif;
+      }
+    }
+
+    .collapse-checkbox {
+      & + label {
+        i {
+          transition: transform 0.5s;
+        }
+      }
+
+      &:checked {
+        & + label {
+          i {
+            transform: rotate(1.5turn);
+          }
+        }
+      }
+
+      &:checked {
+        & ~ .content {
+          max-height: 800px;
+          padding: 2rem 0 2rem 0;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+
+    article.content {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s ease-out;
+      width: 85%;
+      margin: auto;
+    }
+
+    .scroll-to {
+      display: none;
+    }
+
+    img.index-image {
+      display: none;
+    }
+
+    &.presentation {
+      line-height: 1.4rem;
+      padding: 0 1rem 0 1rem;
+      display: flex;
+      box-sizing: border-box;
+
+      header {
+        margin: auto;
+      }
+
+      em {
+        font-size: 1rem;
+        margin: 1.75rem 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 2rem 0 2rem 0;
+        line-height: 3rem;
+        letter-spacing: 0;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &.development {
+      pre {
+        display: none;
+      }
+    }
+
+    &.training {
+      img.arrow {
+        display: none;
+      }
+    }
+
+    &.approach {
+      display: none;
+    }
+
+    &.tools {
+      display: none;
+    }
+  }
+
+  ul.aside-navigation-menu {
+    display: none;
+  }
 }

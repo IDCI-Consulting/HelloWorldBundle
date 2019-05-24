@@ -17,10 +17,32 @@ twig:
             - fr
             - en
         courses:
-            - 'symfony2'
-            - 'oop-uml-scm'
-            - 'html5-css3'
-            - 'wordpress'
+            - {name: 'symfony2', icon: 'symfony', title: 'Symfony2'}
+            - {name: 'oop-uml-scm', icon: 'git', title: 'OOP - UML - SCM'}
+            - {name: 'html5-css3', icon: 'html5', title: 'HTML5 - CSS3'}
+            - {name: 'wordpress', icon: 'wordpress', title: 'Wordpress'}
+        tools:
+            - {label: 'symfony', url: 'http://symfony.com', title: 'Symfony'}
+            - {label: 'nodejs', url: 'https://nodejs.org', title: 'Node Js'}
+            - {label: 'mysql', url: 'https://www.mysql.fr/', title: 'MySQL'}
+            - {label: 'mongodb', url: 'https://www.mongodb.org/', title: 'MongoDB'}
+            - {label: 'postgresql', url: 'http://www.postgresql.org/', title: 'PostgreSQL'}
+            - {label: 'redis', url: 'http://redis.io/', title: 'Redis'}
+            - {label: 'varnish', url: 'https://www.varnish-cache.org/', title: 'Varnish'}
+            - {label: 'ansible', url: 'http://www.ansible.com/home', title: 'Ansible'}
+            - {label: 'elasticsearch', url: 'https://www.elastic.co/fr/products/elasticsearch', title: 'ElasticSearch'}
+            - {label: 'docker', url: 'https://www.docker.com/', title: 'Docker'}
+            - {label: 'rabbitmq', url: 'https://www.rabbitmq.com/', title: 'RabbitMQ'}
+            - {label: 'html5', url: 'https://www.w3.org/TR/html/', title: 'HTML5'}
+            - {label: 'css3', url: 'https://www.w3.org/TR/css/', title: 'CSS3'}
+            - {label: 'sass', url: 'http://sass-lang.com/', title: 'Sass'}
+            - {label: 'vuejs', url: 'https://vuejs.org/', title: 'Vue Js'}
+          #  - {label: 'nginx', url: 'https://www.nginx.com/', title: 'Nginx'}
+            - {label: 'gitlab', url: 'https://about.gitlab.com/', title: 'GitLab'}
+            - {label: 'redmine', url: 'http://www.redmine.org/projects/redmine/wiki', title: 'Redmine'}
+            - {label: 'reactjs', url: 'https://reactjs.org/', title: 'React Js'}
+            - {label: 'unix_ubuntu', url: 'https://www.ubuntu.com/', title: 'Ubuntu'}
+            - {label: 'prestashop', url: 'https://www.prestashop.com/fr', title: 'Prestashop'}
         idci_code_writer:
             files:
                 -

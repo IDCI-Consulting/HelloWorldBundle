@@ -31,7 +31,6 @@ class AsideMenuGenerator
                 $asideMenu[$id] = trim($matches['title'][$j]);
             }
         }
-
         return $asideMenu;
     }
 }

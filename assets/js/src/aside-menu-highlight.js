@@ -20,7 +20,7 @@ export default function asideMenuHighlight() {
                 if (prev) {
                     prev.classList.remove('active');
                 }
-                el.classList.add('active');
+                el.classList.add('active');    
                 prev = el;
 
                 return false;

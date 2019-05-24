@@ -6,6 +6,8 @@
 
 <div class="courses">
     {% for course in courses %}
-        <a href="{{ path('website_courses') }}#{{ course }}"  class="tools-sprite {{ course }}">{{ course }}</a>
+        <a href="{{ path('website_courses') }}#{{ course.name }}" title="{{ course.title }}" class="courses-icon">
+            {{ file_get_public_contents('build/images/' ~ course.icon ~'.svg') |raw }}
+        </a>
     {% endfor %}
 </div>
