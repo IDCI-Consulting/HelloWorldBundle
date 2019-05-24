@@ -11,6 +11,3 @@ window.asideMenuHighlight = asideMenuHighlight;
 
 import showAceEditor from './src/editor-show';
 window.showAceEditor = showAceEditor;
-
-import contactSuccessModal from './src/contact-success-modal';
-window.contactSuccessModal = contactSuccessModal;
