@@ -339,24 +339,26 @@ video {
 }
 
 .top-box {
-  border-width: 0 0 80px 2800px;
+  border-width: 0 0 80px 1841px;
   border-style: solid;
   z-index: 10;
+  overflow: hidden;
 
   &.switched {
-    border-width: 0 2800px 80px 0px;
+    border-width: 0 1841px 80px 0px;
     border-style: solid;
     z-index: 10;
   }
 }
 
 .bottom-box {
-  border-width: 0 2800px 80px 0;
+  border-width: 0 1841px 80px 0;
   border-style: solid;
   z-index: 10;
+  overflow: hidden;
 
   &.switched {
-    border-width: 80px 2800px 0 0;
+    border-width: 80px 1841px 0 0;
     border-style: solid;
     z-index: 10;
   }
