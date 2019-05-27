@@ -20,6 +20,8 @@ export default function setUpModal(event) {
         Swal.fire({
             title: 'Contact',
             html: text,
+            showConfirmButton: false,
+            showCloseButton: true
         });
     });
 }

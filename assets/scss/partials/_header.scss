@@ -20,6 +20,10 @@
     }
   }
 
+  input {
+    display: none;
+  }
+
   nav {
     font-family: Oswald, sans-serif;
     font-weight: bold;
@@ -36,8 +40,8 @@
         height: 100%;
         padding: 0.5rem;
         padding-bottom: 0;
-        font-size: .875rem;
-        letter-spacing: .0625rem;
+        font-size: 0.875rem;
+        letter-spacing: 0.0625rem;
 
         &.active {
           a {
@@ -69,7 +73,8 @@
     height: auto;
     flex-grow: 2;
 
-    ul, p {
+    ul,
+    p {
       display: block;
       float: left;
       line-height: 4.2rem;
@@ -94,16 +99,22 @@
         margin-right: 0.5rem;
 
         a {
+          width: 100px;
+          height: 100px;
           line-height: 4.7rem;
-          img {
-            width: .8rem;
-            border: 0.3px solid $idci-black;
+
+          &.active {
+            svg {
+              filter: grayscale(0%);
+            }
+          }
+          svg {
+            width: 1rem;
+            filter: grayscale(100%);
           }
         }
       }
     }
-
-    
 
     .choose-language {
       font-size: 0.625rem;

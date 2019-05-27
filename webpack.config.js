@@ -24,7 +24,7 @@ Encore
     .copyFiles({
             from: './assets/images',
             to: 'images/[name].[ext]',
-            pattern: /\.(png|jpg|jpeg|gif|ico|svg|webp)$/
+            pattern: /\.(png|jpg|jpeg|gif|ico|svg|webp|mp4)$/
     })
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.

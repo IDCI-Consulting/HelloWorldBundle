@@ -1,30 +1,47 @@
-.index-part {
+@mixin top-box-color($color) {
+  border-color: transparent transparent $color transparent;
+}
+
+@mixin bottom-box-color($color) {
+  border-color: transparent $color transparent transparent;
+
+  &.switched {
+    border-color: $color transparent transparent transparent;
+  }
+}
+
+.container {
   text-align: center;
   align-items: center;
   background-size: cover;
-  //min-height: calc(100vh - 5rem);
   line-height: 4rem;
+  transition: 1s;
   padding-top: 5rem;
+  background-color: $idci-light-grey;
 
   @extend %full-width;
 
-  .header-index-part {
+  .collapse-checkbox {
+    display: none;
+  }
+
+  header {
     em {
       color: $idci-light-blue;
       font-style: normal;
       font-size: 2rem;
       font-weight: 700;
-      letter-spacing: .4375rem;
+      letter-spacing: 0.4375rem;
       margin: 0 0 2rem;
       text-transform: uppercase;
-      font-family: Oswald,sans-serif;
+      font-family: Oswald, sans-serif;
     }
 
     h2 {
-      letter-spacing: .4rem;
+      letter-spacing: 0.4rem;
       font-weight: 400;
       color: $idci-blue;
-      font-family: Oswald-Bold,sans-serif;
+      font-family: Oswald-Bold, sans-serif;
       font-size: 2.3125rem;
     }
 
@@ -32,10 +49,15 @@
       color: $idci-green;
       font-size: 1.4rem;
       font-weight: 700;
-      letter-spacing: .375rem;
+      letter-spacing: 0.375rem;
       display: inline-block;
       text-transform: uppercase;
-      font-family: Oswald,sans-serif;
+      font-family: Oswald, sans-serif;
+    }
+
+    i.fas {
+      font-size: 2.5rem;
+      color: $idci-black;
     }
   }
 
@@ -48,18 +70,16 @@
 
     &.arrow {
       height: 100%;
-      margin: 0 .5rem;
+      margin: 0 0.5rem;
       vertical-align: top;
       height: 4rem;
       display: inline-block;
-    }  
+    }
   }
 
-  article.index-content {
+  article.content {
     width: 40%;
     margin: auto;
-    padding: 5rem;
-    padding-top: 2rem;
     text-rendering: optimizeLegibility;
 
     img {
@@ -68,13 +88,19 @@
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin-bottom: 1.25rem;
-      line-height: 2rem;
+      line-height: 2.2rem;
+      font-family: Oswald, sans-serif;
+
+      em {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
     }
 
     h3.trainings {
-      color: $idci-blue;
+      font-weight: bold;
       display: inline-block;
       font-size: 1.6rem;
       color: $idci-green;
@@ -85,8 +111,8 @@
 
 .presentation {
   background-image: url("../../images/background_presentation.jpg");
-  height: 100vh;
-  padding-top: 10rem;
+  height: calc(100vh - 15rem);
+  padding-top: 15rem;
 
   .scroll-to {
     border: 2px solid $idci-light-blue;
@@ -99,7 +125,7 @@
     width: 6rem;
 
     span {
-      background: url('../../images/slick_arrow.svg') no-repeat;
+      background: url("../../images/slick_arrow.svg") no-repeat;
       background-position: 50%;
       display: inline-block;
       height: 3rem;
@@ -113,7 +139,7 @@
       border-color: $idci-blue;
 
       span {
-        background: url('../../images/slick_arrow_dark_blue.svg') no-repeat;
+        background: url("../../images/slick_arrow_dark_blue.svg") no-repeat;
         background-position: 50%;
       }
     }
@@ -122,45 +148,162 @@
 
 .advices {
   background-color: $idci-light-grey;
+
+  & + .parallax-video {
+    .bottom-box {
+      @include bottom-box-color($idci-light-grey);
+    }
+    .top-box {
+      @include top-box-color($idci-white);
+    }
+  }
 }
 
 .training {
   background-color: $idci-white;
+
+  & + .parallax-video {
+    .top-box {
+      @include top-box-color($idci-dark-grey);
+    }
+
+    .bottom-box {
+      @include bottom-box-color($idci-white);
+    }
+  }
+
+  .courses {
+    .courses-icon {
+      text-decoration: none;
+      width: 6rem;
+      height: 6rem;
+      margin: 20px 20px 20px 20px;
+      box-sizing: border-box;
+      background-color: transparent;
+      transition: 0.2s;
+
+      svg {
+        margin-top: 1rem;
+        max-width: 5.5rem;
+        max-height: 5.5rem;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: 0.2s;
+      }
+
+      &:hover {
+        svg {
+          filter: grayscale(0%);
+          opacity: 1;
+          transform: rotate(5deg);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
 }
 
 .development {
   background-color: $idci-dark-grey;
+
+  & + .parallax-video {
+    .top-box {
+      @include top-box-color($idci-white);
+    }
+
+    .bottom-box {
+      @include bottom-box-color($idci-dark-grey);
+    }
+  }
 }
 
 .philosophy {
   background-color: $idci-white;
+
+  a {
+    text-decoration: none;
+    color: $idci-green;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    svg {
+      width: 5rem;
+      height: 5rem;
+      margin-top: 1rem;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+    &:hover {
+      svg {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: rotate(10deg);
+        transition: 0.2s;
+      }
+    }
+  }
+
+  & + .parallax-video {
+    .top-box {
+      @include top-box-color($idci-light-grey);
+    }
+
+    .bottom-box {
+      @include bottom-box-color($idci-white);
+    }
+  }
 }
 
 .approach {
   background-color: $idci-light-grey;
+
+  & + .parallax-video {
+    .top-box {
+      @include top-box-color($idci-white);
+    }
+
+    .bottom-box {
+      @include bottom-box-color($idci-light-grey);
+    }
+  }
 }
 
 .tools {
+  padding-bottom: 2rem;
   background-color: $idci-white;
-  margin-bottom: 5rem;
 
-  div.tools-content {
+  ul.content {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 0 auto;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
 
-    article {
-      flex: auto;
-      max-width: 15%;
+    li.tool-part {
+      width: 6rem;
+      height: 6rem;
+      margin: 20px 20px 20px 20px;
+      box-sizing: border-box;
+      background-color: transparent;
+      transition: 0.2s;
 
-      em {
-        font-size: 1.2rem;
-        color: $idci-light-blue;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: .4375rem;
-        margin: 0 0 2rem;
-        font-style: normal;
-        font-family: Oswald,sans-serif;
+      svg {
+        margin-top: 1rem;
+        max-width: 5.5rem;
+        max-height: 5.5rem;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: 0.2s;
+      }
+
+      &:hover {
+        svg {
+          filter: grayscale(0%);
+          opacity: 1;
+          transform: rotate(10deg);
+          transition: 0.2s;
+        }
       }
     }
   }
@@ -168,6 +311,90 @@
 
 #editor {
   width: 50%;
-  margin: auto;
-  margin-top: 2rem;
+  margin: 1rem auto 1rem auto;
+}
+
+.parallax-video {
+  background: none repeat scroll 0 0;
+  min-height: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &.top-advices {
+    justify-content: flex-end;
+    .top-box {
+      @include top-box-color($idci-light-grey);
+    }
+  }
+}
+
+video {
+  filter: brightness(90%);
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -999;
+}
+
+.top-box {
+  border-width: 0 0 80px 1841px;
+  border-style: solid;
+  z-index: 10;
+  overflow: hidden;
+
+  &.switched {
+    border-width: 0 1841px 80px 0px;
+    border-style: solid;
+    z-index: 10;
+  }
+}
+
+.bottom-box {
+  border-width: 0 1841px 80px 0;
+  border-style: solid;
+  z-index: 10;
+  overflow: hidden;
+
+  &.switched {
+    border-width: 80px 1841px 0 0;
+    border-style: solid;
+    z-index: 10;
+  }
+}
+
+.aside-navigation-menu {
+  padding: 2rem;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.courses {
+  .courses-icon  {
+    width: 6rem;
+    height: 6rem;
+    margin: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    transition: 0.2s;
+
+    svg {
+      margin-top: 1rem;
+      max-width: 5.5rem;
+      max-height: 5.5rem;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+
+    &:hover {
+      svg {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: rotate(5deg);
+        transition: 0.2s;
+      }
+    }
+  }
 }

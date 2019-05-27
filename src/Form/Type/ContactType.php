@@ -3,15 +3,15 @@
 namespace App\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\UrlType;
-use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints as Constraints;
-use Symfony\Component\Form\Extension\Core\Type;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ContactType extends AbstractType
 {
@@ -58,7 +58,17 @@ class ContactType extends AbstractType
                     $notBlankConstraint,
                 ]
             ])
-            ->add('submit', SubmitType::class)
+            ->add('captcha', CaptchaType::class, [
+                'label' => 'captcha',
+                'width' => 200,
+                'height' => 70,
+                'length' => 6,
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => [
+                    'class' => 'submit_button'
+                ]
+            ])
         ;
     }
 
