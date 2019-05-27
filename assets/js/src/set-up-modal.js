@@ -16,9 +16,12 @@ export default function setUpModal(event) {
     fetchPolyfill(this.getAttribute('href'), init).then(function (response) {
         return response.text();
     }).then(function (text) {
+        console.log(text);
         Swal.fire({
             title: 'Contact',
             html: text,
+            showConfirmButton: false,
+            showCloseButton: true
         });
     });
 }

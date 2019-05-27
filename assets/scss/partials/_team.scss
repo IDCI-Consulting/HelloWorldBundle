@@ -11,22 +11,20 @@ header.title {
     }
 }
 
-.team {
-    @extend %full-width;
-    
+.team {    
     display: flex;
+    width: 80%;
     padding-top: 2rem;
     text-align: center;
     justify-content: center;
     flex-flow: row wrap;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    margin: auto;
     box-sizing: border-box;
 
     article {
-        width: 10rem;
-        margin-left: 5rem;
-        margin-right: 5rem;
+        width: 260px;
+        margin-left: 3rem;
+        margin-right: 3rem;
         padding-top: 3rem;
 
         img {

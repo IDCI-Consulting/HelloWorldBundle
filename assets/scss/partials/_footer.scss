@@ -90,7 +90,9 @@ footer {
         }
       }
 
-      .contact-us-link {
+      // <a class="btn btn--default"></a>
+      // <a class="btn btn--idci"></a>
+      %btn {
         margin-bottom: 0;
         border: 1px solid $idci-white;
         border-radius: 100px;
@@ -105,6 +107,10 @@ footer {
           color: $idci-darker-grey;
           background-color: $idci-white;
         }
+      }
+
+      .contact-us-link {
+        @extend %btn;
       }
     }
   }

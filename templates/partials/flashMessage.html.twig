@@ -1,0 +1,10 @@
+{% for label, flashes in app.session.flashbag.all %}
+    
+    {% for flash in flashes %}
+    <div class="flash-message-container {{ label }}">
+        <p>{{ flash|trans }}</p>
+        <a href="#" class="close">&times;</a>
+    </div>
+    {% endfor %}
+    
+{% endfor %}
