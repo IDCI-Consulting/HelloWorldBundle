@@ -15,7 +15,7 @@ initialize() {
 	trap "[ -d \"$source_folder/$lock_folder\" ] && rmdir \"$source_folder/$lock_folder\"" EXIT
 
 	if [ $APP_ENV = "prod" ]; then
-		rsync -a /usr/local/share/maier_main/ /var/www/maier_main/public
+		rsync -a /usr/local/share/idci_website/ /var/www/idci_website/public
 		php bin/console cache:clear --no-debug --no-interaction
 	fi
 
@@ -31,7 +31,7 @@ setuser() {
 }
 
 setpermissions() {
-	chown --recursive www-data: /var/www/maier_main/var /var/www/maier_main/public/build /var/www/maier_main/public/bundles
+	chown --recursive www-data: /var/www/idci_website/var /var/www/idci_website/public/build /var/www/idci_website/public/bundles
 }
 
 setuser
