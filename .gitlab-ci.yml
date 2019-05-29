@@ -1,28 +1,31 @@
-# image: docker:latest
+image: docker:git
+services:
+  - docker:dind
 
-# # When using dind, it's wise to use the overlayfs driver for
-# # improved performance.
-# variables:
-#   DOCKER_DRIVER: overlay
+variables:
+  CONTAINER_RELEASE_IMAGE: $CI_REGISTRY/idci/website/php-fpm:$CI_COMMIT_TAG
 
-# services:
-#   - docker:dind
+build-docker-image:
+  stage: build
+  script:
+    - docker login -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CONTAINER_RELEASE_IMAGE $CI_PROJECT_DIR -f .docker/php/Dockerfile
+    - docker push $CONTAINER_RELEASE_IMAGE
+  only:
+    - tags
 
-# # Install docker-compose before scripts
-# before_script:
-#   - docker info
-#   - apk update
-#   - apk upgrade
-#   - apk add python python-dev py-pip build-base
-#   - pip install docker-compose
-
-# build:
-#   stage: build
-#   script:
-#     - docker network create dev # It will depend if you use docker-compose v2 with internal network
-#     - docker-compose up -d
-#     - make composer-install     # Make sure to not use -it with docker exec commands
-#     - make npm-install
-#     - make bower-install
-#     - make gulp task="prod"
-#     - make phpunit
+deploy-to-pre-production:
+  stage: deploy
+  variables:
+    DOCKER_HOST: $DOCKER_PROD_HOST
+    STACK_NAME: idci_website_pp
+  image: docker:latest
+  script:
+    - docker login -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker stack deploy $CI_PROJECT_DIR/docker-compose.yml
+  environment:
+    name: pre-production
+    url: https://pre-prod.idci-consulting.fr/
+  when: manual
+  only:
+    - tags
