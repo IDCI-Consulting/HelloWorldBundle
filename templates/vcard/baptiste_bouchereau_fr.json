@@ -1,0 +1,488 @@
+{
+    "basics": {
+        "name": "Baptiste Bouchereau",
+        "label": "Analyste / Ingénieur",
+        "picture": "",
+        "email": "baptiste.bouchereau@idci-consulting.fr",
+        "phone": "06 62 35 45 36",
+        "website": "",
+        "summary": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "Baptiste Bouchereau",
+                "url": "https://www.linkedin.com/in/baptiste-bouchereau"
+            },
+            {
+                "network": "github",
+                "username": "Ovski4",
+                "url": "https://github.com/ovski4"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "IDCI-Consulting",
+            "position": "Co-gérant / Analyste / Ingénieur",
+            "website": "https://www.idci-consulting.fr/fr/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "",
+            "position": "",
+            "website": "",
+            "startDate": "2016",
+            "endDate": "",
+            "summary": "Formations professionnalisantes sur le framework Symfony",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "",
+            "position": "",
+            "website": "https://github.com/IDCI-Consulting/SvgEditor",
+            "startDate": "2016",
+            "endDate": "",
+            "summary": "Réalisation d'un éditeur SVG en JavaScript pour une opération marketing",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "Carglass",
+            "position": "",
+            "website": "https://www.carglass.fr/",
+            "startDate": "2016",
+            "endDate": "",
+            "summary": "Mission de 7 mois à Carglass, Courbevoie Création de leur nouveau site web ",
+            "highlights": [
+                "Backend en Symfony2",
+                "Participation à la conception et rédaction des spécifications techniques d'interface",
+                "Utilisation du SGBD Oracle avec Doctrine2",
+                "Automatisation des déploiements avec Ansible",
+                "Installation d'un wiki (Dokuwiki) pour améliorer le partage d'informations entre les équipes"
+            ]
+        },
+        {
+            "company": "Université Claude Bernard Lyon 1",
+            "position": "Enseignant vacataire",
+            "website": "https://www.univ-lyon1.fr/",
+            "startDate": "2015",
+            "endDate": "2016",
+            "summary": "Licence E-business",
+            "highlights": [
+                "Module de 28h de cours",
+                "Enseignement à la réalisation de sites e-commerce avec le CMS Prestashop"
+            ]
+        },
+        {
+            "company": "Dynergie",
+            "position": "",
+            "website": "https://www.dynergie.eu/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation d'une application de gestion de brevet",
+            "highlights": [
+                "Conception de l'application",
+                "Réalisation du Backend avec Symfony2 et exposition des brevets via une API REST",
+                "Réalisation du Frontend avec les technologies AngularJS, SASS et les librairies GoogleChart"
+            ]
+        },
+        {
+            "company": "Agences marketing",
+            "position": "",
+            "website": "",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation de deux sites au responsive design",
+            "highlights": [
+                "CMS WordPress",
+                "Création de thèmes sur-mesure et configurable",
+                "Technologies Foundation 5 et Sass"
+            ]
+        },
+        {
+            "company": "Tessi Marketing",
+            "position": "",
+            "website": "https://www.tessicustomermarketing.fr/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Participation au développement de divers bundles Symfony2",
+            "highlights": [
+                "Bundle permettant de générer des codes uniques pour des offres promotionnelles",
+                "Bundle permettant de gérer des étapes de participation à des offres de remboursement"
+            ]
+        },
+        {
+            "company": "IDCI-Consulting",
+            "position": "https://www.idci-consulting.fr/fr/",
+            "website": "",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Amélioration du workflow",
+            "highlights": [
+                "Mise en place d'une plate-forme d'intégration continue avec Gitlab et Gitlab-CI",
+                "Déploiement des applications dockerisées en recette avec Ansible",
+                "Automatisation des environnements de développement avec Docker et docker-compose"
+            ]
+        },
+        {
+            "company": "TheLatest",
+            "position": "Stagiaire",
+            "website": "https://thelatest.com/",
+            "startDate": "2014",
+            "endDate": "",
+            "summary": "Stage de 3 mois dans une start-up, TheLatest, réalisation d'un site d'actualités",
+            "highlights": [
+                "Conception de l'application",
+                "Utlisation de Symfony2 et formation de l'équipe au framework",
+                "Framework CSS Bootstrap"
+            ]
+        },
+        {
+            "company": "Mapyourstories",
+            "position": "",
+            "website": "https://mapyourstories.com/",
+            "startDate": "2014",
+            "endDate": "",
+            "summary": "Développement de Mapyourstories, un prototype permettant la création de plans de métro personnalisables collaborativement et en temps réel",
+            "highlights": [
+                "Framework MeteorJS"
+            ]
+        },
+        {
+            "company": "Université Claude Bernard Lyon 1",
+            "position": "",
+            "website": "https://clarolineconnect.univ-lyon1.fr/",
+            "startDate": "2014",
+            "endDate": "",
+            "summary": "Développement / intégration d'une plateforme de gestion des pads et d'un module d'e-learning claroline-connect",
+            "highlights": [
+                "Développement de plugins pour etherpad-lite en NodeJS",
+                "Création d'un plugin pour la plateforme claroline pour créer et intégrer des pads"
+            ]
+        },
+        {
+            "company": "",
+            "position": "",
+            "website": "https://github.com/IDCI-Consulting/WebPageScreenShotBundle",
+            "startDate": "2013",
+            "endDate": "",
+            "summary": "Développement d'un bundle Symfony2 générant des captures d'écran de pages web en différents formats (.jpg, .gif, etc) et résolutions",
+            "highlights": [
+                "Utilisation de PhantomJS"
+            ]
+        },
+        {
+            "company": "CIRC",
+            "position": "Stagiaire",
+            "website": "",
+            "startDate": "2011",
+            "endDate": "",
+            "summary": "Stage d'un mois au CIRC (Centre International de recherche sur le Cancer)",
+            "highlights": [
+                "Conception et réalisation d'un cahier de laboratoire électronique pour les différentes équipes scientifiques",
+                "CMS WordPress"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Solidarité Sida",
+            "position": "",
+            "website": "http://www.solidarite-sida.org/",
+            "startDate": "2012-07 & 2013-07 & 2015-07",
+            "endDate": "",
+            "summary": "Bénévole durant le festival Solidays à Paris, pour l'association Solidarité Sida",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "organization": "Projet personnel",
+            "position": "",
+            "website": "https://happy-birthday.pro/",
+            "startDate": "2016",
+            "endDate": "",
+            "summary": "Réalisation d'un mini-jeu de grattage pour fêter des anniversaires de manière originale avec CreateJs",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "organization": "Projet personnel",
+            "position": "",
+            "website": "https://learn-vocabulary.com/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation d'une application de révision de vocabulaire de langues étrangères en Symfony2",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "organization": "Projet personnel",
+            "position": "",
+            "website": "http://clemencebouchereau.com/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation du portfolio d'une artiste",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "organization": "Projet personnel",
+            "position": "",
+            "website": "",
+            "startDate": "2014",
+            "endDate": "",
+            "summary": "Réalisation d'un jeu de Quizz mobile avec Cordova",
+            "highlights": [
+                ""
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "CPE Lyon",
+            "area": "Informatique et Réseau de Communication",
+            "studyType": "Diplôme d'Ingénieur",
+            "startDate": "",
+            "endDate": "2015",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        },
+        {
+            "institution": "",
+            "area": "Langue Anglais",
+            "studyType": "Certification CAE",
+            "startDate": "",
+            "endDate": "2015",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        },
+        {
+            "institution": "",
+            "area": "Informatique",
+            "studyType": "Diplôme Universitaire Technologique en Informatique",
+            "startDate": "",
+            "endDate": "2012",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        },
+        {
+            "institution": "",
+            "area": "",
+            "studyType": "Baccalauréat Scientifique",
+            "startDate": "",
+            "endDate": "2009",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "Award",
+            "date": "2014-11-01",
+            "awarder": "Company",
+            "summary": "There is no spoon."
+        }
+    ],
+    "publications": [
+        {
+            "name": "Publication",
+            "publisher": "Company",
+            "releaseDate": "2014-10-01",
+            "website": "http://publication.com",
+            "summary": "Description..."
+        }
+    ],
+    "skills": [
+        {
+            "name": "Serveur HTTP",
+            "level": "",
+            "keywords": [
+                "Apache",
+                "Nginx"
+            ]
+        },
+        {
+            "name": "Cache et reverse proxy",
+            "level": "",
+            "keywords": [
+                "Varnish"
+            ]
+        },
+        {
+            "name": "Configuration Management",
+            "level": "",
+            "keywords": [
+                "Ansible"
+            ]
+        },
+        {
+            "name": "Languages",
+            "level": "",
+            "keywords": [
+                "Java",
+                "PHP",
+                "HTML5",
+                "CSS3",
+                "SASS",
+                "JavaScript",
+                "SQL",
+                "Shell Script"
+            ]
+        },
+        {
+            "name": "OS",
+            "level": "",
+            "keywords": [
+                "Windows",
+                "Linux (Debian & Ubuntu, Archlinux)"
+            ]
+        },
+        {
+            "name": "Frameworks backend",
+            "level": "",
+            "keywords": [
+                "Symfony",
+                "Silex",
+                "MeteorJS"
+            ]
+        },
+        {
+            "name": "Frameworks frontend",
+            "level": "",
+            "keywords": [
+                "Angular",
+                "VueJS",
+                "JQuery",
+                "Webpack"
+            ]
+        },
+        {
+            "name": "Frameworks CSS",
+            "level": "",
+            "keywords": [
+                "Bootstrap",
+                "Foundation"
+            ]
+        },
+        {
+            "name": "Moteur de template",
+            "level": "",
+            "keywords": [
+                "Twig",
+                "Handlebars"
+            ]
+        },
+        {
+            "name": "CMS",
+            "level": "",
+            "keywords": [
+                "WordPress",
+                "Prestashop"
+            ]
+        },
+        {
+            "name": "Versioning",
+            "level": "",
+            "keywords": [
+                "Git",
+                "Svn"
+            ]
+        },
+        {
+            "name": "Base de Données",
+            "level": "",
+            "keywords": [
+                "MySQL",
+                "MongoDB"
+            ]
+        },
+        {
+            "name": "Virtualisation",
+            "level": "",
+            "keywords": [
+                "Docker"
+            ]
+        },
+        {
+            "name": "Gestion de projet",
+            "level": "",
+            "keywords": [
+                "Redmine",
+                "Wekan"
+            ]
+        },
+        {
+            "name": "Task Runner",
+            "level": "",
+            "keywords": [
+                "Gulp"
+            ]
+        },
+        {
+            "name": "Modélisation",
+            "level": "",
+            "keywords": [
+                "UML"
+            ]
+        },
+        {
+            "name": "Autres",
+            "level": "",
+            "keywords": [
+                "Ajax",
+                "Gimp (notions)"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Anglais",
+            "fluency": "Niveau C1"
+        },
+        {
+            "language": "Français",
+            "fluency": "Langue maternelle"
+        }
+    ],
+    "interests": [
+        {
+            "name": "",
+            "keywords": [
+                ""
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "",
+            "reference": ""
+        }
+    ]
+}
