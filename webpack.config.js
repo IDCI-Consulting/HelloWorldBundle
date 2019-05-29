@@ -8,7 +8,7 @@ Encore
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
-    /*
+    /**
      * ENTRY CONFIG
      *
      * Add 1 entry for each "page" of your app
@@ -35,7 +35,7 @@ Encore
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
 
-    /*
+    /**
      * FEATURE CONFIG
      *
      * Enable & configure other features below. For a full
@@ -59,7 +59,7 @@ Encore
     //.enableIntegrityHashes()
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
