@@ -25,11 +25,19 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/activities", name="activities", methods={"GET"})
+     * @Route("/references", name="references", methods={"GET"})
      */
-    public function activities()
+    public function references()
     {
-        return $this->render('home/activities.html.twig');
+        return $this->render('home/references.html.twig');
+    }
+
+    /**
+     * @Route("/offers", name="offers", methods={"GET"})
+     */
+    public function offers()
+    {
+        return $this->render('home/offers.html.twig');
     }
 
     /**
@@ -38,26 +46,6 @@ class HomeController extends AbstractController
     public function mentions()
     {
         return $this->render('home/mentions.html.twig');
-    }
-
-    /**
-     * @Route("/partners", name="partners", methods={"GET"})
-     */
-    public function partners(Request $request)
-    {
-        $locale = $request->getLocale();
-        $decodedPartners = array();
-
-        $partners = json_decode(file_get_contents(sprintf('%s/../../Resources/public/partners.json', __DIR__)), true);
-
-        foreach ($partners as $partner) {
-            $partner['description'] = $partner['description'][$locale];
-            $decodedPartners[] = $partner;
-        }
-
-        return $this->render('home/partners.html.twig', [
-            'partners' => $decodedPartners,
-        ]);
     }
 
     /**

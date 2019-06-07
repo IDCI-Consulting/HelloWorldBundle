@@ -24,9 +24,9 @@ class TeamController extends AbstractController
     /**
      * @Route("/cv/{theme}/{name}.pdf", name="cvpdf", methods={"GET"})
      */
-    public function cvPdf(Request $request, string $name, string $theme, bool $anonymous = false, PdfGenerator $pdfGenerator)
+    public function cvPdf(Request $request, string $name, string $theme, PdfGenerator $pdfGenerator)
     {
-        return $pdfGenerator->generate($request, $name, $theme, $anonymous);
+        return $pdfGenerator->generate($request, $name, $theme, $request->query->get('anonymous', false));
     }
 
     /**

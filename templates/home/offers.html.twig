@@ -1,0 +1,133 @@
+{% extends "layout.html.twig" %}
+
+{% block nav %}
+    {% include 'partials/menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_offers'
+    } %}
+{% endblock %}
+
+{% block main_content %}
+
+    <header class="title">
+        <h1>{% trans %}title.offers{% endtrans %}</h1>
+    </header>
+    <section class="you-are">
+        <div class="enterprise wow fadeInLeftBig">
+            <header>
+                <h2>
+                    {# {% trans %}title.offers.youAreSSII{% endtrans %} #}
+                    {% trans %}<i class="fas fa-arrow-right"></i>Vous êtes une entreprise (PME/Groupe) et vous souhaitez :{% endtrans %}
+                </h2>
+            </header>
+            <article>
+                <ul>
+                    {# {% trans %}text.offers.youAreSSII{% endtrans %} #}
+                    <li>{% trans %}Être
+                        <strong>conseillé sur les choix technologiques</strong>
+                        et dans la conception de votre futur applicatif web{% endtrans %}</li>
+                    <li>{% trans %}<strong>Renforcer</strong>
+                        temporairement votre équipe de développement{% endtrans %}</li>
+                    <li>{% trans %}<strong>Former</strong>
+                        vos collaborateurs{% endtrans %}</li>
+                    <li>{% trans %}Confier votre projet de mise en œuvre et rester concentré sur votre cœur de métier{% endtrans %}</li>
+                </ul>
+            </article>
+        </div>
+        <div class="SSII wow fadeInRightBig">
+            <header>
+                <h2>
+                    {# {% trans %}title.offers.youAreSSII{% endtrans %} #}
+                    {% trans %}<i class="fas fa-arrow-right"></i>Vous êtes une SSII et vous souhaitez :{% endtrans %}
+                </h2>
+            </header>
+            <article>
+                <ul>
+                    {# {% trans %}text.offers.youAreSSII{% endtrans %} #}
+                    <li>{% trans %}<strong>Renforcer vos ressources</strong>
+                        dans le cadre d’un projet{% endtrans %}</li>
+                    <li>{% trans %}<strong>Déléguer ponctuellement un expert</strong>
+                        pour aider votre client à résoudre une problématique technique{% endtrans %}</li>
+                    <li>{% trans %}<strong>Sous-traiter</strong>
+                        tout ou partie d’un contrat de services chez un de vos clients{% endtrans %}</li>
+                    <li>{% trans %}<strong>Former vos collaborateurs</strong>
+                        ou ceux de vos clients sur les dernières technologies{% endtrans %}</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+    <section class="offers">
+        <header>
+            <h1 class="response">
+                {# {% trans %}title.offers.ourOffers{% endtrans %} #}
+                <img src="{{ asset('build/images/logo_idci_small.png') }}"/>Une réponse innovante
+            </h1>
+        </header>
+        <article>
+            {# {% trans %}text.offers.ourOffers{% endtrans %} #}
+            <p>
+                IDCI consulting (SARL) créée en 2007 est un groupement <strong>d’experts sur les technologies web</strong> qui travaillent en permanence sur différentes missions tout en conservant la possibilité de communiquer entre eux et ainsi <strong>partager leurs connaissances</strong>. Individuellement ou en équipe, <strong>nous sommes capables d’apporter une valeur certaine pour votre projet</strong> à n’importe quelle étape de son cycle de vie, sans engagement de votre part et sur une durée minimale de collaboration. Nous intervenons exclusivement en régie.
+            </p>
+            <p class="center">
+                En fonction de la charge et de l’expertise de vos équipes vous pouvez choisir de :
+            </p>
+            <ul>
+                <li>
+                    <strong>Déléguer</strong> tous les aspects techniques à IDCI et <strong>laisser vos équipes 100% concentrées</strong> sur l’implémentation des briques fonctionnelles liées à votre métier.
+                </li>
+                <li>
+                    Avoir recours à une délégation partielle des tâches techniques à IDCI afin de <strong>combler vos besoins ponctuels en ressources et en expertise</strong>.
+                </li>
+                <li>
+                    Vous assurer une <strong>collaboration et un support</strong> jusqu’à la totale maîtrise de votre projet
+                </li>
+            </ul>
+            <p class="center">
+                Cette organisation est la promesse d’un véritable partenariat offrant des avantages pour chaque partie.
+            </p>
+            <hr>
+            <section class="advantages">
+                <div class="client">
+                    <h2>Pour le client :</h2>
+                    <ul>
+                        <li>
+                            Mandater 1 consultant IDCI consulting et bénéficier d’un réseau multi-compétences
+                        </li>
+                        <li>
+                            Bénéficier de moyens techniques et matériels supplémentaires (serveurs, locaux, communication.)
+                        </li>
+                        <li>
+                            S’assurer d’un backup en cas d’urgence
+                        </li>
+                        <li>
+                            D’optimiser les coûts de déplacement en faisant réaliser tout ou partie du mandat dans nos locaux en relation permanente avec le client
+                        </li>
+                        <li>
+                            Avoir un 2e interlocuteur en charge de la relation et de la satisfaction client
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="IDCI">
+                    <h2>Pour IDCI :</h2>
+                    <ul>
+                        <li>
+                            Mutualiser les compétences
+                        </li>
+                        <li>
+                            Maintenir et faire évoluer les connaissances de chacun
+                        </li>
+                        <li>
+                            Travailler en suivant des standards suivis par la communauté et par notre équipe
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

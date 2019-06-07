@@ -3,6 +3,7 @@ import '../scss/main.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'code-prettify/src/prettify.css';
+import 'animate.css'
 
 // Jquery
 const $ = require('jquery');
