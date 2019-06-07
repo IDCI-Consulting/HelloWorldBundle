@@ -22,12 +22,39 @@ header.title {
   margin: auto;
   box-sizing: border-box;
   line-height: 1.6;
+  margin-bottom: 2rem;
 
   article {
     width: 260px;
     margin-left: 3rem;
     margin-right: 3rem;
     padding-top: 3rem;
+
+    .name {
+      color: $idci-light-blue;
+      font-size: 1.7rem;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+
+    .job-position {
+      color: $idci-green;
+      display: block;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      text-transform: uppercase;
+    }
+
+    .member-description {
+      display: inline-block;
+      min-height: 17rem;
+      padding: 1rem 0;
+      text-align: justify;
+    }
+
+    .see-cv {
+      font-family: Oswald, sans-serif;
+    }
 
     img {
       width: 260px;
@@ -72,60 +99,5 @@ header.title {
         }
       }
     }
-  }
-}
-
-h2.name {
-  color: $idci-light-blue;
-  font-size: 1.7rem;
-  letter-spacing: 0;
-  font-weight: 400;
-}
-
-h2 ~ em.job-position {
-  color: $idci-green;
-  display: block;
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  text-transform: uppercase;
-}
-
-.member-description {
-  display: inline-block;
-  min-height: 21rem;
-  padding: 1rem 0;
-  text-align: justify;
-  height: 400px;
-}
-
-.quote {
-  color: $idci-darker-grey;
-  font-style: italic;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.see-vcard {
-  text-align: center;
-  border-radius: 100px;
-  border-color: $idci-light-blue;
-  border: 2px solid;
-  padding: 10px 30px;
-  color: $idci-light-blue;
-  font-size: 1.3em;
-  background-color: $idci-white;
-  transition: 0.5s;
-  margin: 0 auto 1rem auto;
-  text-decoration: none;
-  font-weight: bold;
-
-  text-transform: uppercase;
-  cursor: pointer;
-
-  &:hover {
-    color: $idci-white;
-    transition: 0.5s;
-    background-color: $idci-light-blue-opac;
-    border-color: $idci-light-blue-opac;
   }
 }

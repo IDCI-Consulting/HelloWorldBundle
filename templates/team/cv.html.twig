@@ -1,7 +1,5 @@
 {% extends "layout.html.twig" %}
 
-{% block title %}Cv{% endblock %}
-
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
     'menu': menu,
@@ -9,16 +7,24 @@
     } %}
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('cv_theme_' ~ theme) }}
+{% endblock %}
+
 {% block main_content %}
+    {% include 'team/_cv.html.twig' %}
+{% endblock %}
 
-{% if format is not null %} 
-   {{ format }}
-{% else %}
-    <a href="{{ url('website_vcard', {'name': 'frederic_bondaz', '_format': 'pdf'}) }}"> {{ 'Download' | trans  }} </a>
-{% endif %}
-
-<br>
-
-{{ name }}
-
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        document.querySelectorAll('h2').forEach(function(h2) {
+            h2.id = slugify(h2.innerHTML);
+        })
+        document.querySelectorAll('h3').forEach(function(h3) {
+            h3.id = slugify(h3.innerHTML);
+        })
+        makeSyntaxHighlighting();
+    </script>
 {% endblock %}

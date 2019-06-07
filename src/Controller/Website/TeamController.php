@@ -2,8 +2,11 @@
 
 namespace App\Controller\Website;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Generator\PdfGenerator;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/{_locale}")
@@ -19,13 +22,34 @@ class TeamController extends AbstractController
     }
 
     /**
-     * @Route("/cv/{name}.{_format}", name="vcard", methods={"GET"})
+     * @Route("/cv/{theme}/{name}.pdf", name="cvpdf", methods={"GET"})
      */
-    public function vcard($name, $_format = null)
+    public function cvPdf(Request $request, string $name, string $theme, bool $anonymous = false, PdfGenerator $pdfGenerator)
     {
+        return $pdfGenerator->generate($request, $name, $theme, $anonymous);
+    }
+
+    /**
+     * @Route("/cv/{theme}/{name}.json", name="cvjson", methods={"GET"})
+     */
+    public function cvJson(Request $request, string $name) : JsonResponse
+    {
+        $cvFile = new \SplFileObject(sprintf('../src/Ressources/cv/%s_%s.json', $name, $request->getLocale()), 'r');
+
+        return new JsonResponse(json_decode($cvFile->fread($cvFile->getSize())));
+    }
+
+    /**
+     * @Route("/cv/{theme}/{name}", name="cv", methods={"GET"})
+     */
+    public function cv(Request $request, string $name, string $theme)
+    {
+        $cvFile = new \SplFileObject(sprintf('../src/Ressources/cv/%s_%s.json', $name, $request->getLocale()), 'r');
+
         return $this->render('team/cv.html.twig', [
             'name' => $name,
-            'format' => $_format,
+            'theme' => $theme,
+            'data' => json_decode($cvFile->fread($cvFile->getSize()))
         ]);
     }
 }
