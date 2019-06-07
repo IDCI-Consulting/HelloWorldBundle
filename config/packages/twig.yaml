@@ -79,4 +79,69 @@ twig:
                     url: https://raw.githubusercontent.com/IDCI-Consulting/BrowserCapabilities/master/js/codebarReader.js
                     language: 'javascript'
                     theme: clouds_midnight
-                    
+        blog:
+            fr:
+                categories:
+                    - "Symfony2"
+                    - "Symfony1"
+                    - "Wordpress"
+                    - "Symposium"
+                    - "Tutos et astuces"
+                    - "Divers"
+                articles:
+                # file property will match the url parameter for route named article
+
+                    #Divers
+                    - {file: "new-year2017", image: "new-year2017.jpg", title: "Nos voeux 2017", date: "13-01-2017" , author: "Louise Millon", categories: ["Divers"]}
+                    - {file: "idci-10-years", image: "logo_10_ans_idci.svg", title: "10 ans de IDCI-consulting", date: "30-05-2018" , author: "Louise Millon", categories: ["Divers"]}
+                    #- {file: "idci-10-years-thanks", image: "logo_10_ans_idci.svg", title: "Merci !", date: "28-06-2018" , author: "Louise Millon", categories: ["Divers"]}
+
+                    #Symfony1
+                    - {file: "creer-un-projet-symfony-1-x-depuis-la-sandbox-sous-ubuntu", image: "symfony1-logo.jpg", title: "Créer un projet Symfony 1.x depuis la sandbox sous Ubuntu", date: "29-09-2011" , author: "Gabriel Bondaz", categories: ["Symfony1"]}
+
+                    #Symfony2
+                    - {file: "pager-fanta", image: "symfony2-logo.png", title: "WhiteOctoberPagerfantaBundle : Comment paginer vos listes avec Symfony2 ?", date: "04-02-2013" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+                    - {file: "fos-user-bundle", image: "symfony2-logo.png", title: "FOSUserBundle: Comment gérer les utilisateurs avec Symfony2", date: "26-12-2011" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+                    - {file: "idci-webpage-screenshot-bundle", image: "symfony2-logo.png", title: "IDCIWebPageScreenshotBundle", date: "11-09-2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
+                    - {file: "bundle-composer-broadcast", image: "symfony2-logo.png", title: "Créer un bundle symfony2 réutilisable et le diffuser via composer", date: "15-01-2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
+                    - {file: "type-doctrine2", image: "symfony2-logo.png", title: "Comment créer un nouveau type Doctrine2 avec Symfony2", date: "18-01-2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+                    - {file: "behaviors-doctrine2", image: "symfony2-logo.png", title: "Installer les Behaviors Doctrine2 sous Symfony2", date: "24-08-2011" , author: "Gabriel Bondaz", categories: ["Symfony2"]}
+                    - {file: "phpillow-couchdb", image: "symfony2-logo.png", title: "Installer PHPillow pour couchDB sur Symfony2", date: "19-06-2011" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+                    - {file: "step-bundle-introduction", image: "symfony2-logo.png", title: "Introduction à IDCIStepBundle", date: "03-03-2017", author: "Louise Millon", categories: ["Symfony2"]}
+                    - {file: "asset-loader-bundle", image: "symfony2-logo.png", title: "La gestion des assets avec AssetLoaderBundle", date: "13-07-2017", author: "Emilio Staropoli", categories: ["Symfony2"]}
+
+                    #Symposium
+                    - {file: "symposium", image: "symposium.png", title: "Symposium un outil pour réussir l’organisation de vos événements", date: "22-11-2011" , author: "Frédéric Bondaz", categories: ["Symposium"]}
+
+                    #Tutos et astuces
+                    - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Mettre en place un environnement de développement pour réaliser un site avec PHP et MySQL", date: "21-11-2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
+                    - {file: "google-apps", image: "google-logo.png", title: "Les Google Apps pour votre domaine", date: "17-06-2011" , author: "Gabriel Bondaz", categories: ["Tutos et astuces"]}
+
+                    #Wordpress
+                    - {file: "i18n-wordpress", image: "wordpress-logo.png", title: "Comment internationaliser un thème WordPress", date: "17-07-2013" , author: "Baptiste Bouchereau", categories: ["Wordpress"]}
+                    - {file: "backoffice-wordpress", image: "wordpress-logo.png", title: "Introduction au BackOffice de WordPress", date: "08-01-2012" , author: "Gabriel Bondaz", categories: ["Wordpress"]}
+                    - {file: "install-wordpress", image: "wordpress-logo.png", title: "Installer WordPress", date: "25-11-2011" , author: "Gabriel Bondaz", categories: ["Wordpress"]}
+                    - {file: "presentation-wordpress", image: "wordpress-logo.png", title: "Présentation de WordPress", date: "14-11-2011" , author: "Gabriel Bondaz", categories: ["Wordpress"]}
+            en:
+                categories:
+                    - "Symfony2"
+                    - "Symposium"
+                    - "Tutos and tips"
+                    - "Various"
+                articles:
+                # file property will match the url parameter for route named article
+
+                    #Various
+                    - {file: "new-year2017", image: "new-year2017.jpg", title: "Our wishes for 2017", date: "13-01-2017" , author: "Louise Millon", categories: ["Various"]}
+
+                    #Symfony2
+                    - {file: "idci-webpage-screenshot-bundle", image: "symfony2-logo.png", title: "IDCIWebPageScreenshotBundle", date: "11-09-2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
+                    - {file: "bundle-composer-broadcast", image: "symfony2-logo.png", title: "Create a Symfony2 Bundle reusable and broadcast it via Composer", date: "15-01-2013" , author: "Baptiste Bouchereau", categories: ["Symfony2"]}
+                    - {file: "type-doctrine2", image: "symfony2-logo.png", title: "How to create a new type Doctrine2 with Symfony2", date: "18-01-2012" , author: "Pierre Ferrolliet", categories: ["Symfony2"]}
+                    - {file: "asset-loader-bundle", image: "symfony2-logo.png", title: "Handling asset loading with AssetLoaderBundle", date: "13-07-2017", author: "Emilio Staropoli", categories: ["Symfony2"]}
+
+                    #Symposium
+                    - {file: "symposium", image: "symposium.png", title: "Symposium un outil pour réussir l’organisation de vos événements", date: "22-11-2011" , author: "Frédéric Bondaz", categories: ["Symposium"]}
+
+                    #Tutos and tips
+                    - {file: "environment-php-mysql", image: "mysql-php-logo.png", title: "Implement a workspace of developpment to realize a website with PHP and MySQL", date: "21-11-2011" , author: "Gabriel Bondaz", categories: ["Tutos and tips"]}

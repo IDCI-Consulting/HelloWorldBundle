@@ -1,0 +1,7 @@
+<ul class="menu">
+    {% for item in menu %}
+        <li class="idci-inline-list {% if active is defined and active == item.route %}active{% endif %}">
+            <a href="{{ url(item.route) }}">{{ item.label|trans }}</a>
+        </li>
+    {% endfor %}
+</ul>

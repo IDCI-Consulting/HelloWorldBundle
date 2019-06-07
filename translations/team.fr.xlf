@@ -35,7 +35,7 @@
       </trans-unit>
       <trans-unit id="Z4zgzUi" resname="text.brahim">
         <source>text.brahim</source>
-        <target><![CDATA[<br />Au départ, le monde de l'informatique n'était pas un milieu familié.<br/>Après des nuits et jours d'apprentissage, je me suis passionné par ce domaine.<br />Aujourd'hui, j'aime transposer des idées en programme & partager mes connaissances.<br /><em>«Tout le monde est un génie. Mais si vous jugez un poisson sur ses capacités à grimper à un arbre, il passera sa vie à croire qu’il est stupide.» - Albert Einstein]]></target>
+        <target><![CDATA[Au départ, le monde de l'informatique n'était pas un milieu familié.<br/>Après des nuits et jours d'apprentissage, je me suis passionné par ce domaine.<br />Aujourd'hui, j'aime transposer des idées en programme & partager mes connaissances.<br /><br /><em>«Tout le monde est un génie. Mais si vous jugez un poisson sur ses capacités à grimper à un arbre, il passera sa vie à croire qu’il est stupide.» - Albert Einstein</em>]]></target>
       </trans-unit>
       <trans-unit id="ASooO0b" resname="The team">
         <source>The team</source>

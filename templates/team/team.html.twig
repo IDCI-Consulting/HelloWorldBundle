@@ -18,28 +18,28 @@
         <em class="job-position">{% trans %}Manager{% endtrans %}</em>
         <img src="{{ asset('build/images/sprite_gabriel.png') }}" class="profile-picture front" />
         <p class="member-description">{% trans %}text.gabriel{% endtrans %}</p>
-        <a href="{{ url('website_vcard', {'name': 'gabriel_bondaz'}) }}" class="see-vcard"></a>
+        <a href="{{ url('website_cv', {'name': 'gabriel_bondaz', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
     </article>
     <article class="member frederic">
         <h2 class="name">Frédéric Bondaz</h2>
         <em class="job-position">{% trans %}Manager{% endtrans %}</em>
         <img src="{{ asset('build/images/sprite_frederic.png') }}" />
         <p class="member-description">{% trans %}text.frederic{% endtrans %}</p>
-        <a href="{{ url('website_vcard', {'name': 'frederic_bondaz'}) }}" class="see-vcard"></a>
+        <a href="{{ url('website_cv', {'name': 'frederic_bondaz', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
     </article>
     <article class="member baptiste">
         <h2 class="name">Baptiste Bouchereau</h2>
         <em class="job-position">{% trans %}Manager{% endtrans %}</em>
         <img src="{{ asset('build/images/sprite_baptiste.png') }}" class="profile-picture up" />
         <p class="member-description">{% trans %}text.baptiste{% endtrans %}</p>
-        <a href="{{ url('website_vcard', {'name': 'baptiste_bouchereau'}) }}" class="see-vcard"></a>
+        <a href="{{ url('website_cv', {'name': 'baptiste_bouchereau', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
     </article>
     <article class="member brahim">
         <h2 class="name">Brahim Boukoufallah</h2>
         <em class="job-position">{% trans %}Manager{% endtrans %}</em>
         <img src="{{ asset('build/images/sprite_brahim.png') }}" class="profile-picture down" />
         <p class="member-description">{% trans %}text.brahim{% endtrans %}</p>
-        <a href="{{ url('website_vcard', {'name': 'brahim_boukoufallah'}) }}" class="see-vcard"></a>
+        <a href="{{ url('website_cv', {'name': 'brahim_boukoufallah', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
     </article>
 </section>
 
@@ -47,52 +47,6 @@
 {% block javascripts %}
     {{ parent() }}
     <script>
-
-        function replaceElementClass(element, newClass) {
-            element.classList = newClass;
-        }
-
-        function offset(element) {
-            var rect = element.getBoundingClientRect(), bodyElement = document.body;
-            return {
-                top: rect.top + bodyElement.scrollTop,
-                left: rect.left + bodyElement.scrollLeft,
-            }
-        }
-
-        document.onmousemove = ImageChange;
-
-        function ImageChange(event) {
-
-            var profilePictures = document.querySelectorAll("img.profile-picture").forEach(function(image){
-            
-                imagePosition = offset(image);
-                bodyRect = offset(document.body);
-                imageBorderTop    = imagePosition.top - bodyRect.top;
-                imageBorderLeft   = imagePosition.left - bodyRect.left;
-                imageBorderRight  = imageBorderLeft + image.offsetWidth;
-                imageBorderBottom = imageBorderTop + image.offsetHeight;
-
-                if (event.pageX >= imageBorderLeft && event.pageX <= imageBorderRight && event.pageY <= imageBorderTop) {
-                    replaceElementClass(image, "profile-picture up");
-                } else if (event.pageX < imageBorderLeft && event.pageY < imageBorderTop) {
-                    replaceElementClass(image, "profile-picture upleft");
-                } else if (event.pageX <= imageBorderLeft && event.pageY >= imageBorderTop && event.pageY <= imageBorderBottom) {
-                    replaceElementClass(image, "profile-picture left");
-                } else if (event.pageX < imageBorderLeft && event.pageY > imageBorderBottom) {
-                    replaceElementClass(image, "profile-picture downleft");
-                } else if (event.pageX >= imageBorderLeft && event.pageX <= imageBorderRight && event.pageY >= imageBorderBottom) {
-                    replaceElementClass(image, "profile-picture down");
-                } else if (event.pageX > imageBorderRight && event.pageY > imageBorderBottom) {
-                    replaceElementClass(image, "profile-picture downright");
-                } else if (event.pageX >= imageBorderRight && event.pageY >= imageBorderTop && event.pageY <= imageBorderBottom) {
-                    replaceElementClass(image, "profile-picture right");
-                } else if (event.pageX > imageBorderRight && event.pageY < imageBorderTop) {
-                    replaceElementClass(image, "profile-picture upright");
-                } else {
-                    replaceElementClass(image, "profile-picture front");
-                }
-            });
-        }
+        handleHeadFollowing();
     </script>
 {% endblock %}

@@ -11,6 +11,8 @@
 
 {% block main_content %}
 
-{% trans %}This is the article{% endtrans %} {{ article }} 
+    <section class="blog-article">
+        {{ article|raw }}
+    </section>
 
 {% endblock %}

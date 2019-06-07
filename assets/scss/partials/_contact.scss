@@ -141,29 +141,6 @@ form {
 .form_button {
   display: flex;
   margin-top: 1rem;
-
-  #contact_submit {
-    text-align: center;
-    border-radius: 100px;
-    border-color: $idci-light-blue;
-    border: 2px solid;
-    padding: 10px 30px;
-    color: $idci-light-blue;
-    font-size: 1.3em;
-    background-color: $idci-white;
-    transition: 0.5s;
-    margin: 0 auto 1rem auto;
-
-    text-transform: uppercase;
-    cursor: pointer;
-
-    &:hover {
-      color: $idci-white;
-      transition: 0.5s;
-      background-color: $idci-light-blue-opac;
-      border-color: $idci-light-blue-opac;
-    }
-  }
 }
 
 .form-error-alert {
