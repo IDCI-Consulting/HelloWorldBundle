@@ -1,6 +1,6 @@
 <section class="curriculum-vitae {% if app.request.attributes.get("_route") == "website_cvpdf" %}pdf{% endif %}">
     {% if app.request.attributes.get("_route") == "website_cv" %}
-        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci'}) }}" class="idci-button small-screen">{% trans %}Download{% endtrans %}</a>
+        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': false}) }}" class="idci-button small-screen">{% trans %}Download{% endtrans %}</a>
         <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': true }) }}" class="idci-button small-screen">{% trans %}Download Anonymous CV{% endtrans %}</a>
     {% endif %}
     <header class="cv-part cv-header">
@@ -114,7 +114,7 @@
         </ul>
     </article>
     {% if app.request.attributes.get("_route") == "website_cv" %}
-        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci'}) }}" class="idci-button large-screen">{% trans %}Download{% endtrans %}</a>
+        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': false }) }}" class="idci-button large-screen">{% trans %}Download{% endtrans %}</a>
         <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': true }) }}" class="idci-button large-screen">{% trans %}Download Anonymous CV{% endtrans %}</a>
     {% endif %}
 </section>
