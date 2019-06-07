@@ -11,7 +11,7 @@ namespace App\Generator;
 class MetaTagsGenerator
 {
     /**
-     * Build open graph meta
+     * Generate
      *
      * @param string $title
      * @param string $url
@@ -20,13 +20,13 @@ class MetaTagsGenerator
      *
      * @return array
      */
-    public function buildOpenGraphMeta($title, $url, $type, $imagePath)
+    public function generate(string $title, string $url, string $type, string $imagePath)
     {
-        return array(
-            array('attributeName' => 'property', 'attributeValue' => 'og:title', 'content' => $title),
-            array('attributeName' => 'property', 'attributeValue' => 'og:url',   'content' => $url),
-            array('attributeName' => 'property', 'attributeValue' => 'og:type',  'content' => $type),
-            array('attributeName' => 'property', 'attributeValue' => 'og:image', 'content' => $imagePath),
-        );
+        return [
+            ['attributeName' => 'property', 'attributeValue' => 'og:title', 'content' => $title],
+            ['attributeName' => 'property', 'attributeValue' => 'og:url',   'content' => $url],
+            ['attributeName' => 'property', 'attributeValue' => 'og:type',  'content' => $type],
+            ['attributeName' => 'property', 'attributeValue' => 'og:image', 'content' => $imagePath],
+        ];
     }
 }

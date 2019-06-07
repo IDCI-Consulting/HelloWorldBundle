@@ -5,6 +5,8 @@ namespace App\Manager;
 use Twig\Environment;
 use Symfony\Component\HttpFoundation\Request;
 use Knp\Bundle\MarkdownBundle\MarkdownParserInterface;
+use App\Generator\MetaTagsGenerator;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class BlogManager
 {
@@ -12,10 +14,16 @@ class BlogManager
 
     private $parser;
 
-    public function __construct(Environment $twig, MarkdownParserInterface $parser)
+    private $metaTagsGenerator;
+
+    private $urlGenerator;
+
+    public function __construct(Environment $twig, MarkdownParserInterface $parser, MetaTagsGenerator $metaTagsGenerator, UrlGeneratorInterface $urlGenerator)
     {
         $this->twig = $twig;
         $this->parser = $parser;
+        $this->metaTagsGenerator = $metaTagsGenerator;
+        $this->urlGenerator = $urlGenerator;
     }
 
     public function getLastArticles(Request $request): array
@@ -65,11 +73,30 @@ class BlogManager
         return $articleByCategory;
     }
 
-    public function getArticle(Request $request, string $file)
+    public function getArticleContent(Request $request, string $file): string
     {
-        $article = new \SplFileObject(sprintf('../src/', $name, $locale), 'r');
-        $data = json_decode($cvFile->fread($cvFile->getSize()));
+        return $this->parser->transformMarkdown($this->twig->render(sprintf('blog/%s/%s.md', $request->getLocale(), $file)));
+    }
 
-        return $article;
+    public function getMetaTags(Request $request, string $file): array
+    { 
+        $metaTags = [];
+
+        $articles = $this->twig->getGlobals()['blog'][$request->getLocale()]['articles'];
+
+        foreach ($articles as $key => $article) {
+            if ($article['file'] === $file) {
+                $metaTags = $this->metaTagsGenerator->generate(
+                    $article['title'],
+                    $this->urlGenerator->generate('website_article', [
+                        'file' => $file
+                    ], UrlGeneratorInterface::ABSOLUTE_URL),
+                    'article',
+                    sprintf('%s/build/images/%s', $request->getHttpHost(), $article['image'])
+                );
+            }
+        }
+
+        return $metaTags;
     }
 }

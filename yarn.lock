@@ -1418,6 +1418,10 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
+code-prettify@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/code-prettify/-/code-prettify-0.1.0.tgz#46870cc8c1a50d09bad539b33a983dbd4aa34b1e"
+
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"
@@ -2449,10 +2453,6 @@ form-data@~2.3.2:
 forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
-
-foundation-sites@^6.5.3:
-  version "6.5.3"
-  resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.5.3.tgz#85373aaed72233ca0d16fdfcb034e976cc6943c9"
 
 fragment-cache@^0.2.1:
   version "0.2.1"
