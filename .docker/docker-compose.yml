@@ -3,7 +3,17 @@ version: '3.3'
 services:
 
   php:
-    image: docker-registry.idci-consulting.fr/idci/website/php-fpm:current
+    image: ${CONTAINER_RELEASE_IMAGE}
+    environment:
+      - APP_HOST
+      - APP_ENV
+      - APP_DEBUG
+      - APP_VERSION
+      - DATABASE_NAME
+      - DATABASE_USERNAME
+      - DATABASE_PASSWORD
+      - DEV_USER_ID
+      - DEV_GROUP_ID
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
@@ -16,13 +26,8 @@ services:
       - source: php_config
         target: /usr/local/etc/php/php.ini
     networks:
-      private: ~
+      app: ~
       redis: ~
-    environment:
-      APP_ENV: dev
-      APP_DEBUG: 1
-      DEV_USER_ID: 1000
-      DEV_GROUP_ID: 1000
 
   nginx:
     image: nginx
@@ -32,15 +37,15 @@ services:
       - ./:/var/www/idci_website
     deploy:
       labels:
-        traefik.frontend.rule: "Host:www.idci.docker,idci.docker"
-        traefik.docker.network: "web_reverse_proxy"
+        traefik.frontend.rule: ${TRAEFIK_NGINX_FRONTEND_RULE}
+        traefik.docker.network: "traefik_reverse_proxy"
         traefik.port: "80"
     configs:
       - source: nginx_config
         target: /etc/nginx/conf.d/default.conf
     networks:
-      private: ~
-      web_reverse_proxy: ~
+      app: ~
+      traefik_reverse_proxy: ~
 
   static:
     image: nginx
@@ -50,14 +55,14 @@ services:
       - ./:/var/www/idci_website
     deploy:
       labels:
-        traefik.frontend.rule: "Host:www.idci.docker,idci.docker;PathPrefix:/build/,/bundles/,/favicon.ico;Method:GET"
-        traefik.docker.network: "web_reverse_proxy"
+        traefik.frontend.rule: "${TRAEFIK_NGINX_FRONTEND_RULE};PathPrefix:/build/,/bundles/,/favicon.ico;Method:GET"
+        traefik.docker.network: "traefik_reverse_proxy"
         traefik.port: "80"
     configs:
       - source: static_config
         target: /etc/nginx/conf.d/default.conf
     networks:
-      web_reverse_proxy: ~
+      traefik_reverse_proxy: ~
 
   redis:
     image: redis:4
@@ -88,5 +93,5 @@ configs:
 networks:
   private: ~
   redis: ~
-  web_reverse_proxy:
+  traefik_reverse_proxy:
     external: true

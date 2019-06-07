@@ -1,48 +1,71 @@
-Idci Website
-============
+IDCI - Website
+==============
+
+## Installation
 
 ### Requirements
 
-* docker
-
-#### Installation
-
+If you don't already have a docker web reverse proxy service (ex: traefik), you must start it
 ```sh
-$ git clone http://gitlab.idci-consulting.fr/idci-consulting/idci-website.git
+$ docker stack deploy -c .docker/docker-compose-reverse-proxy.yml traefik
 ```
 
-Go inside the cloned folder and use `Docker` to run all the needed containers
+#### Local DNS Entries
 
-To build the docker image:
+Add the following DNS entries in your host file:
+```
+# IDCI-Consulting - Website
+127.0.0.1    idci.docker
+```
+
+#### Build images
+
+If you need to rebuild docker app images, run the following command :
 ```sh
 $ make build-images
 ```
 
-If you don't already have a docker web reverse proxy service (ex: traefik), you must start it :
+### Start
+
+Load environment vars:
 ```sh
-$ docker stack deploy -c .docker/proxy-docker-compose.yml web_reverse_proxy
+$ source .env.sh
 ```
 
-To deploy the stack to docker swarm
+To run the project docker stack :
 ```sh
-$ docker stack deploy -c docker-compose.yml idci_website
+$ docker stack deploy -c .docker/docker-compose.yml idci_website
 ```
 
-To push the docker images:
+### Stop
+
+To stop the project docker stack :
 ```sh
-$ make push-images
+$ docker stack rm idci_website
 ```
 
-#### Installation of `composer` packages
+### Build assets
 
+To build the assets, run the following commands :
+```sh
+$ make yarn
+$ make encore
+```
+
+### Installing the app
+
+Create the database using the following commannd :
+```sh
+$ make console cmd="d:s:u --dump-sql --force"
+```
+
+To install the app, run the following command :
 ```sh
 $ make composer-install
 ```
 
-If you want to update your librairies:
-```sh
-$ make composer-update
-```
+
+//TODO: Move the following documentation in a dedicated parts
 
 ##### To enable the pre-commit hook, run this command
 
@@ -54,11 +77,6 @@ $ cp vendor/bruli/php-git-hooks/hooks/pre-commit .git/hooks/
 
 ```sh
 $ sudo chmod 775 . -R && sudo chown $USER:www-data . -R
-```
-
-To get access on your web applications, modify the `/etc/hosts` file:
-```sh
-$ sudo bash -c "echo -e '\n# IDCI-Consulting - Website\n127.0.0.1       idci.docker adminer.idci.docker' >> /etc/hosts"
 ```
 
 ##### To run a `symfony` command
@@ -93,13 +111,13 @@ $ make command cmd="your_command"
 ```
 
 Or open a bash on your container
-```sh 
+```sh
 $ make bash
 ```
 
 ##### To run `npm` or `yarn` command
 
-For npm 
+For npm
 ```sh
 $ make npm cmd="your_command"
 # example : make npm cmd="install"

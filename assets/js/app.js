@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 
-// Jquery 
+// Jquery
 
 const $ = require('jquery');
 window.$ = $;
@@ -19,5 +19,5 @@ window.asideMenuHighlight = asideMenuHighlight;
 import showAceEditor from './src/editor-show';
 window.showAceEditor = showAceEditor;
 
-import setUpActivitiesSlick from './src/set-up-activities-slick';
-window.setUpActivitiesSlick = setUpActivitiesSlick;
+//import setUpActivitiesSlick from './src/set-up-activities-slick';
+//window.setUpActivitiesSlick = setUpActivitiesSlick;
