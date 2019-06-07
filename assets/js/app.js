@@ -2,6 +2,7 @@
 import '../scss/main.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'slick-carousel/slick/slick.css';
+import 'code-prettify/src/prettify.css';
 
 // Jquery
 const $ = require('jquery');
@@ -23,8 +24,8 @@ window.showAceEditor = showAceEditor;
 import handleHeadFollowing from './src/handle-head-following'
 window.handleHeadFollowing = handleHeadFollowing;
 
-import makeSyntaxHighlight from './src/make-syntax-highlighting'
-window.makeSyntaxHighlight = makeSyntaxHighlight;
+import makeSyntaxHighlighting from './src/make-syntax-highlighting'
+window.makeSyntaxHighlighting = makeSyntaxHighlighting;
 
 import slugify from './src/slugify'
 window.slugify = slugify;

@@ -18,40 +18,43 @@
 
     <section class="last-articles">
         <input checked="checked" class="collapse-checkbox-accordion" id="last-article-checkbox" type="checkbox"/>
-        <label for="last-article-accordion">
-            <h2>{% trans %}title.blog.lastArticle{% endtrans %}</h2>
-            <i class="fas fa-angle-down"></i>
+        <label for="last-article-checkbox">
+            <header>
+                <h2>{% trans %}title.blog.lastArticle{% endtrans %}</h2>
+                <i class="fas fa-angle-down"></i>
+            </header>
         </label>
-        <div class="slick-arrow left">
-            {{ file_get_public_contents('build/images/slick_arrow.svg')|raw }}
-        </div>
         <div class="carousel-container">
+            <div class="slick-arrow left">
+                {{ file_get_public_contents('build/images/slick_arrow.svg')|raw }}
+            </div>
             <div class="carousel">
                 {% for article in lastArticles %}
-                    <div>
+                    <div class="carousel-content">
                         <article class="last-article-content">
                             <p>
                                 <em>{{ article.date }}</em>
                                 <em>{{ article.author }}</em>
-                                <img src="{{ asset('build/images/' ~ article.image) }}"/>
-                                <div class="summary">
-                                    <h3>{{ article.title }}</h3>
-                                    <p>{{ article.summary|raw }}</p>
-                                    <a href="{{ url('website_article', {'file': article.file }) }}" class="idci-button">{% trans %}button.blog.seeArticle{% endtrans %}</a>
-                                </div>
                             </p>
+                            <img src="{{ asset('build/images/' ~ article.image) }}"/>
+                            <div class="summary">
+                                <h3>{{ article.title }}</h3>
+                                {{ article.summary|raw }}
+                                <a href="{{ url('website_article', {'file': article.file }) }}" class="idci-button">{% trans %}button.blog.seeArticle{% endtrans %}</a>
+                            </div>
+
                         </article>
                     </div>
                 {% endfor %}
             </div>
-        </div>
-        <div class="slick-arrow right">
-            {{ file_get_public_contents('build/images/slick_arrow.svg')|raw }}
+            <div class="slick-arrow right">
+                {{ file_get_public_contents('build/images/slick_arrow.svg')|raw }}
+            </div>
         </div>
     </section>
     <section class="all-articles">
-        <input checked="checked" class="collapse-checkbox date" id="article-by-date-checkbox" type="radio" name="article-sort"/>
-        <input class="collapse-checkbox category" id="article-by-category-checkbox" type="radio" name="article-sort"/>
+        <input checked="checked" class="collapse-checkbox date" id="article-by-date-checkbox" name="article-sort" type="radio"/>
+        <input class="collapse-checkbox category" id="article-by-category-checkbox" name="article-sort" type="radio"/>
         <input class="collapse-checkbox-accordion" id="all-article-checkbox" type="checkbox"/>
         <label for="all-article-checkbox">
             <header>
