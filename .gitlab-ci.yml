@@ -37,11 +37,11 @@ deploy-to-pre-production:
   stage: deploy
   variables:
     DOCKER_HOST: $DOCKER_PROD_HOST
-    STACK_NAME: idci_website_pp
+    SERVICE_NAME: idci_website_pp
   image: docker:latest
   script:
     - docker login -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker stack deploy $CI_PROJECT_DIR/docker-compose.yml
+    - docker stack deploy -c $CI_PROJECT_DIR/.docker/docker-compose.yml ${SERVICE_NAME}
   environment:
     name: pre-production
     url: https://pre-prod.idci-consulting.fr/

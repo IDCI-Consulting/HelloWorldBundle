@@ -1,9 +1,16 @@
 // any CSS and SCSS you require will output into a single css file (app.css in this case)
 import '../scss/main.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+<<<<<<< HEAD
 import 'slick-carousel/slick/slick.css';
 import 'code-prettify/src/prettify.css';
 import 'animate.css';
+=======
+import 'slick-carousel/slick/slick.scss';
+import 'slick-carousel/slick/slick-theme.scss';
+
+// Jquery
+>>>>>>> Rework the docker stack
 
 // Jquery
 const $ = require('jquery');
