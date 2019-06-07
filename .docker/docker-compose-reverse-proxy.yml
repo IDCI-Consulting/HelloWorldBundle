@@ -18,12 +18,14 @@ services:
       - source: traefik_config
         target: /etc/traefik/traefik.toml
     networks:
-      web_reverse_proxy: ~
+      reverse_proxy: ~
 
 configs:
   traefik_config:
     file: ./config/traefik.toml
 
 networks:
-  web_reverse_proxy:
-    external: true
+  reverse_proxy:
+    attachable: true
+    driver: overlay
+
