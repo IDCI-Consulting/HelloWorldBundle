@@ -35,14 +35,14 @@ services:
     deploy:
       labels:
         traefik.frontend.rule: ${TRAEFIK_NGINX_FRONTEND_RULE}
-        traefik.docker.network: "traefik_reverse_proxy"
+        traefik.docker.network: "traefik_reverse-proxy"
         traefik.port: "80"
     configs:
       - source: nginx_config
         target: /etc/nginx/conf.d/default.conf
     networks:
       app: ~
-      traefik_reverse_proxy: ~
+      traefik_reverse-proxy: ~
 
   static:
     image: nginx
@@ -53,13 +53,13 @@ services:
     deploy:
       labels:
         traefik.frontend.rule: "${TRAEFIK_NGINX_FRONTEND_RULE};PathPrefix:/build/,/bundles/,/favicon.ico;Method:GET"
-        traefik.docker.network: "traefik_reverse_proxy"
+        traefik.docker.network: "traefik_reverse-proxy"
         traefik.port: "80"
     configs:
       - source: static_config
         target: /etc/nginx/conf.d/default.conf
     networks:
-      traefik_reverse_proxy: ~
+      traefik_reverse-proxy: ~
 
   redis:
     image: redis:4
@@ -71,7 +71,7 @@ services:
       redis:
         aliases:
           - redis_session
-      traefik_reverse_proxy: ~
+      traefik_reverse-proxy: ~
 
 volumes:
   composer: ~
@@ -90,5 +90,5 @@ configs:
 networks:
   app: ~
   redis: ~
-  traefik_reverse_proxy:
+  traefik_reverse-proxy:
     external: true
