@@ -9,9 +9,6 @@ services:
       - APP_ENV
       - APP_DEBUG
       - APP_VERSION
-      - DATABASE_NAME
-      - DATABASE_USERNAME
-      - DATABASE_PASSWORD
       - DEV_USER_ID
       - DEV_GROUP_ID
     volumes:
