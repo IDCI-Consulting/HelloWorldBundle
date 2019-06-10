@@ -21,6 +21,7 @@ deploy-to-pre-production:
   variables:
     APP_HOST: pre-prod.idci-consulting.fr
     APP_VERSION: $CI_COMMIT_TAG
+    DOCKER_HOST: $DOCKER_PROD_HOST
     SERVICE_NAME: idci_website_pp
     TRAEFIK_NGINX_FRONTEND_RULE: Host:$APP_HOST
   script:
