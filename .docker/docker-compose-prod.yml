@@ -6,7 +6,6 @@ services:
     image: ${CONTAINER_RELEASE_IMAGE}
     environment:
       APP_ENV: prod
-    env_file: idci_website.env
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
