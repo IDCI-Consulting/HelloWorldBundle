@@ -20,7 +20,11 @@
 @import 'partials/team';
 @import 'partials/contact';
 @import 'partials/flash';
+@import 'partials/form';
+@import 'partials/blog';
+@import 'partials/article';
 @import 'partials/activities';
+@import 'partials/offers';
 
 /****************************
  **** Media importation *****
@@ -31,3 +35,7 @@
  @import 'partials/media/header';
  @import 'partials/media/footer';
  @import 'partials/media/contact';
+ @import 'partials/media/article';
+ @import 'partials/media/blog';
+ @import 'partials/media/cv';
+

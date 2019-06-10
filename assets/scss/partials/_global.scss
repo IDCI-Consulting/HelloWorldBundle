@@ -39,14 +39,15 @@ h1 {
     padding-top: 2rem;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .4rem;
+    letter-spacing: 0.4rem;
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 3rem;
   }
 }
 
-h2, h3 {
+h2,
+h3 {
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -81,7 +82,8 @@ ul {
 section {
   text-align: center;
 
-  img, #editor {
+  img,
+  #editor {
     height: 15rem;
   }
 
@@ -90,11 +92,11 @@ section {
     margin-top: 2rem;
   }
 
-  em, h3 {
+  em,
+  h3 {
     color: $idci-light-blue;
     font-style: normal;
   }
-
 }
 
 section.contact {
@@ -112,4 +114,26 @@ a {
 
 main {
   @extend %full-width;
+}
+
+.idci-button {
+  text-align: center;
+  border-radius: 100px;
+  border-color: $idci-light-blue;
+  border: 2px solid;
+  padding: 10px 30px;
+  color: $idci-light-blue;
+  font-size: 1.3em;
+  background-color: $idci-white;
+  transition: 0.5s;
+  margin: 0 auto 1rem auto;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $idci-white;
+    transition: 0.5s;
+    background-color: $idci-light-blue-opac;
+    border-color: $idci-light-blue-opac;
+  }
 }

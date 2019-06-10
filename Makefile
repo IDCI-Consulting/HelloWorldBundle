@@ -5,7 +5,7 @@ stack_name = idci_website
 php_sources         ?= .
 phpcs_ignored_files ?= vendor/*,var/cache/*
 
-source_tag = current
+source_tag = master
 
 php_container_id = $(shell docker ps --filter name="$(stack_name)_php" -q)
 user = $(shell id -u)

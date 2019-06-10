@@ -1,6 +1,7 @@
 {% extends "layout.html.twig" %}
 
-{% block title %}Blog{% endblock %}
+{% block title %}Blog
+{% endblock %}
 
 {% block nav %}
     {% include 'partials/menu.html.twig' with {
@@ -11,6 +12,119 @@
 
 {% block main_content %}
 
-blog
+    <header class="title">
+        <h1>{% trans %}title.blog{% endtrans %}</h1>
+    </header>
 
-{% endblock %}
+    <section class="last-articles">
+        <input checked="checked" class="collapse-checkbox-accordion" id="last-article-checkbox" type="checkbox"/>
+        <label for="last-article-checkbox">
+            <header>
+                <h2>{% trans %}title.blog.lastArticle{% endtrans %}</h2>
+                <i class="fas fa-angle-down"></i>
+            </header>
+        </label>
+        <div class="carousel-container">
+            <div class="slick-arrow left">
+                {{ file_get_public_contents('build/images/slick_arrow.svg')|raw }}
+            </div>
+            <div class="carousel">
+                {% for article in lastArticles %}
+                    <div class="carousel-content">
+                        <article class="last-article-content">
+                            <p>
+                                <em>{{ article.date }}</em>
+                                <em>{{ article.author }}</em>
+                            </p>
+                            <img src="{{ asset('build/images/' ~ article.image) }}"/>
+                            <div class="summary">
+                                <h3>{{ article.title }}</h3>
+                                {{ article.summary|raw }}
+                                <a href="{{ url('website_article', {'file': article.file }) }}" class="idci-button">{% trans %}button.blog.seeArticle{% endtrans %}</a>
+                            </div>
+
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="slick-arrow right">
+                {{ file_get_public_contents('build/images/slick_arrow.svg')|raw }}
+            </div>
+        </div>
+    </section>
+    <section class="all-articles">
+        <input checked="checked" class="collapse-checkbox date" id="article-by-date-checkbox" name="article-sort" type="radio"/>
+        <input class="collapse-checkbox category" id="article-by-category-checkbox" name="article-sort" type="radio"/>
+        <input class="collapse-checkbox-accordion" id="all-article-checkbox" type="checkbox"/>
+        <label for="all-article-checkbox">
+            <header>
+                <h2>{% trans %}blog.title.allArticle{% endtrans %}</h2>
+                <i class="fas fa-angle-down"></i>
+                <ul>
+                    <li>
+                        <label class="label-date" for="article-by-date-checkbox">
+                            <p class="idci-button">{% trans %}blog.button.byDate{% endtrans %}</p>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-category" for="article-by-category-checkbox">
+                            <p class="idci-button">{% trans %}blog.button.byCategory{% endtrans %}</p>
+                        </label>
+                    </li>
+                </header>
+            </label>
+            <article class="articles-by-date">
+                <ul>
+                    {% set date = 0 %}
+                    {% for article in articlesByDate %}
+                        {% if article.date|date("Y") != date %}
+                            <li class="mark">
+                                {{ article.date|date("Y") }}
+                            </li>
+                            {% set date = article.date|date("Y") %}
+                        {% endif %}
+                        <li class="article-content">
+                            <img src="{{ asset('build/images/' ~ article.image) }}"/>
+                            <a href="{{ url('website_article', { 'file': article.file }) }}">
+                                {{ article.title }}
+                                <i>{% trans %}text.blog.addedAt{% endtrans %}
+                                    {{ article.date }}
+                                    {% trans %}text.blog.by{% endtrans %}
+                                    {{ article.author }}</i>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <article class="articles-by-category">
+                <ul>
+                    {% for category, articles in articlesByCategory %}
+                        <li class="mark">
+                            {{ category }}
+                        </li>
+                        {% for article in articles %}
+                            <li class="article-content">
+                                <img src="{{ asset('build/images/' ~ article.image) }}"/>
+                                <a href="{{ url('website_article', { 'file': article.file }) }}">
+                                    {{ article.title }}
+                                    <i>{% trans %}text.blog.addedAt{% endtrans %}
+                                        {{ article.date }}
+                                        {% trans %}text.blog.by{% endtrans %}
+                                        {{ article.author }}</i>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </article>
+        </section>
+
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+            setUpCarousel(false);
+        </script>
+    {% endblock %}
