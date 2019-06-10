@@ -39,6 +39,7 @@ deploy-to-pre-production:
     APP_HOST: pre-prod.idci-consulting.fr
     APP_VERSION: $CI_COMMIT_TAG
     SERVICE_NAME: idci_website_pp
+    TRAEFIK_NGINX_FRONTEND_RULE: Host:$APP_HOST
   image: docker:latest
   script:
     - docker login -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD $CI_REGISTRY
