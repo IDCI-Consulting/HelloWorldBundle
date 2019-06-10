@@ -1,7 +1,7 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
-    debug: '%kernel.debug%'
-    strict_variables: '%kernel.debug%'
+    debug: '%env(bool:APP_DEBUG)%'
+    strict_variables: '%env(bool:APP_DEBUG)%'
     globals:
         menu:
             - {label: 'home', route: 'website_home'}
@@ -12,8 +12,7 @@ twig:
            # - {label: 'our partners', route: 'website_partners'}
             - {label: 'blog', route: 'website_blog'}
             - {label: 'contact', route: 'website_contact'}
-        version:
-            3.0
+        version: '%env(resolve:APP_VERSION)%'
         locales:
             - fr
             - en

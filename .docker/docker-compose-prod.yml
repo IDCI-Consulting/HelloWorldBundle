@@ -9,19 +9,12 @@ services:
       - APP_ENV
       - APP_DEBUG
       - APP_VERSION
-      - DATABASE_NAME
-      - DATABASE_USERNAME
-      - DATABASE_PASSWORD
-      - DEV_USER_ID
-      - DEV_GROUP_ID
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - composer:/var/www/.composer
-      - var:/var/www/idci_website/var
-      - bundles:/var/www/idci_website/public/bundles
-      - ../:/var/www/idci_website
-      - ../public/build:/var/www/idci_website/public/build
+      - app_var:/var/www/idci_website/var
+      - app_public_bundles:/var/www/idci_website/public/bundles
+      - app_public_build:/var/www/idci_website/public/build
     configs:
       - source: php_config
         target: /usr/local/etc/php/php.ini
@@ -34,7 +27,8 @@ services:
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - ../:/var/www/idci_website
+      - app_public_bundles:/var/www/idci_website/public/bundles
+      - app_public_build:/var/www/idci_website/public/build
     deploy:
       labels:
         traefik.frontend.rule: ${TRAEFIK_NGINX_FRONTEND_RULE}
@@ -52,7 +46,8 @@ services:
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - ../:/var/www/idci_website
+      - app_public_bundles:/var/www/idci_website/public/bundles
+      - app_public_build:/var/www/idci_website/public/build
     deploy:
       labels:
         traefik.frontend.rule: "${TRAEFIK_NGINX_FRONTEND_RULE};PathPrefix:/build/,/bundles/,/favicon.ico;Method:GET"
@@ -69,7 +64,7 @@ services:
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - data:/data
+      - redis_data:/data
     networks:
       redis:
         aliases:
@@ -77,10 +72,9 @@ services:
       traefik_reverse_proxy: ~
 
 volumes:
-  composer: ~
-  data: ~
-  var: ~
-  bundles: ~
+  app_var: ~
+  app_bundles: ~
+  redis_data: ~
 
 configs:
   php_config:
@@ -95,3 +89,4 @@ networks:
   redis: ~
   traefik_reverse_proxy:
     external: true
+

@@ -5,10 +5,8 @@ export CONTAINER_RELEASE_IMAGE=docker-registry.idci-consulting.fr/idci/website/p
 
 export APP_ENV="dev"
 export APP_DEBUG=1
+export APP_VERSION=3.0
 export APP_HOST="idci.docker"
-export DATABASE_NAME="idci"
-export DATABASE_USERNAME="idci"
-export DATABASE_PASSWORD="idci"
 export DEV_USER_ID=1000
 export DEV_GROUP_ID=1000
 
