@@ -11,7 +11,7 @@ build-docker-image:
       APP_VERSION: $CI_COMMIT_TAG
   script:
     - docker login -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build --cache-from $CONTAINER_RELEASE_IMAGE:latest -t $CONTAINER_RELEASE_IMAGE:latest -t $CONTAINER_RELEASE_IMAGE::$CI_COMMIT_TAG $CI_PROJECT_DIR -f .docker/php/Dockerfile
+    - docker build --cache-from $CONTAINER_RELEASE_IMAGE:latest -t $CONTAINER_RELEASE_IMAGE:latest -t $CONTAINER_RELEASE_IMAGE:$CI_COMMIT_TAG $CI_PROJECT_DIR -f .docker/php/Dockerfile
     - docker push $CONTAINER_RELEASE_IMAGE:$CI_COMMIT_TAG
   only:
     - tags
