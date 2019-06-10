@@ -73,7 +73,8 @@ services:
 
 volumes:
   app_var: ~
-  app_bundles: ~
+  app_public_bundles: ~
+  app_public_build: ~
   redis_data: ~
 
 configs:
