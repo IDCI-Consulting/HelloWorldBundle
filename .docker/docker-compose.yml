@@ -18,10 +18,10 @@ services:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
       - composer:/var/www/.composer
-      - ./:/var/www/idci_website
       - var:/var/www/idci_website/var
-      - ./public/build:/var/www/idci_website/public/build
       - bundles:/var/www/idci_website/public/bundles
+      - ../:/var/www/idci_website
+      - ../public/build:/var/www/idci_website/public/build
     configs:
       - source: php_config
         target: /usr/local/etc/php/php.ini
@@ -34,35 +34,35 @@ services:
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - ./:/var/www/idci_website
+      - ../:/var/www/idci_website
     deploy:
       labels:
         traefik.frontend.rule: ${TRAEFIK_NGINX_FRONTEND_RULE}
-        traefik.docker.network: "traefik_reverse_proxy"
+        traefik.docker.network: "web_reverse_proxy"
         traefik.port: "80"
     configs:
       - source: nginx_config
         target: /etc/nginx/conf.d/default.conf
     networks:
       app: ~
-      traefik_reverse_proxy: ~
+      web_reverse_proxy: ~
 
   static:
     image: nginx
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - ./:/var/www/idci_website
+      - ../:/var/www/idci_website
     deploy:
       labels:
         traefik.frontend.rule: "${TRAEFIK_NGINX_FRONTEND_RULE};PathPrefix:/build/,/bundles/,/favicon.ico;Method:GET"
-        traefik.docker.network: "traefik_reverse_proxy"
+        traefik.docker.network: "web_reverse_proxy"
         traefik.port: "80"
     configs:
       - source: static_config
         target: /etc/nginx/conf.d/default.conf
     networks:
-      traefik_reverse_proxy: ~
+      web_reverse_proxy: ~
 
   redis:
     image: redis:4
@@ -84,14 +84,14 @@ volumes:
 
 configs:
   php_config:
-    file: ./.docker/config/php.ini
+    file: ./config/php.ini
   nginx_config:
-    file: ./.docker/config/nginx.conf
+    file: ./config/nginx.conf
   static_config:
-    file: ./.docker/config/static.conf
+    file: ./config/static.conf
 
 networks:
-  private: ~
+  app: ~
   redis: ~
-  traefik_reverse_proxy:
+  web_reverse_proxy:
     external: true
