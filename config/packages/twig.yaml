@@ -1,3 +1,6 @@
+parameters:
+    env(APP_VERSION): ~
+
 twig:
     default_path: '%kernel.project_dir%/templates'
     debug: '%env(bool:APP_DEBUG)%'
