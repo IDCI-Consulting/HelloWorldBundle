@@ -24,7 +24,7 @@ class PdfGenerator
     {
         $locale = $request->getLocale();
 
-        $cvFile = new \SplFileObject(sprintf('../src/Ressources/cv/%s_%s.json', $name, $locale), 'r');
+        $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s_%s.json', $name, $locale), 'r');
         $data = json_decode($cvFile->fread($cvFile->getSize()));
 
         $cvStyle = new \SplFileObject(sprintf('../public/build/cv_theme_%s.css', $theme), 'r');
@@ -35,7 +35,10 @@ class PdfGenerator
             <!DOCTYPE html>
             <html lang="%s">
                 <head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+                    <meta name="viewport" content="width=device-width, 
+                                                   initial-scale=1,
+                                                   maximum-scale=1,
+                                                   user-scalable=0" />
                     <style type="text/css">%s</style>
                 </head>
                 <body>%s</body>

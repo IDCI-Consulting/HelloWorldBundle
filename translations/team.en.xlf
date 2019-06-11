@@ -5,29 +5,85 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="qWn4X8z" resname="text.gabriel">
-        <source>text.gabriel</source>
+      <trans-unit id="EjwPbe_" resname="text.team.gabriel">
+        <source>text.team.gabriel</source>
         <target><![CDATA[Attracted by new technologies since very young,<br />I passionate about IT and more specifically Internet and Web thereafter.<br />I made this passion my profession when entering the active life. My curiosity and taste of challenges I have to create the IDCI-Consulting company in end of 2007.<br />The philosophy of "Open Source" make me a satisfied libriste. RFC 2616 has become my "holy book" and the number 42 is often a choice of response to the problems I get asked.]]></target>
       </trans-unit>
-      <trans-unit id="VdYt7jo" resname="text.frederic">
-        <source>text.frederic</source>
+      <trans-unit id="PallEu3" resname="text.team.frederic">
+        <source>text.team.frederic</source>
         <target><![CDATA[Previously from the world of IT services, I am co-founder of IDCI-Consulting since 2007.<br />Today I put my 18 years of experience in the company's development.<br />In addition to the strategic directions that I determine with Baptiste & Gabriel, I manage particularly trade negotiations, finance and HRs to allow the operations team to focus on his heart craft.]]></target>
       </trans-unit>
-      <trans-unit id="Z4zgzUi" resname="text.brahim">
-        <source>text.brahim</source>
+      <trans-unit id="aTDI0bm" resname="text.team.brahim">
+        <source>text.team.brahim</source>
         <target><![CDATA[Even though I fell in the IT world by chance, I stayed by passion.<br />Most of all, I love learning new things every days and use my knowledge to build apps easing everyday life.<br />My desire of freedom lead me to join IDCI-Consulting as a partner in 2015.<br />I hope I will always keep learning as well as discovering new activity fields by diving into the worlds of my clients.]]></target>
       </trans-unit>
-      <trans-unit id="pvX4ylp" resname="text.baptiste">
-        <source>text.baptiste</source>
+      <trans-unit id="J7svU0K" resname="text.team.baptiste">
+        <source>text.team.baptiste</source>
         <target><![CDATA[<blockquote cite="Albert Einstein">«Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.» - Albert Einstein</blockquote><br /><br />Initially, the IT world was not a familiar environment.<br />After nights and days of learning, I was passionate about this area.<br />Today, I like to translate ideas into a program and share my knowledge.]]></target>
       </trans-unit>
-      <trans-unit id="ASooO0b" resname="The team">
-        <source>The team</source>
-        <target>The team</target>
+      <trans-unit id="t1_KFmj" resname="title.team">
+        <source>title.team</source>
+        <target>The Team</target>
       </trans-unit>
-      <trans-unit id="iyCF903" resname="Manager">
-        <source>Manager</source>
+      <trans-unit id="Tet0rtN" resname="label.team.manager">
+        <source>label.team.manager</source>
         <target>Manager</target>
+      </trans-unit>
+      <trans-unit id="dVtq7js" resname="button.team.seeCv">
+        <source>button.team.seeCv</source>
+        <target>See Cv</target>
+      </trans-unit>
+      <trans-unit id="pXDXn61" resname="button.team.download">
+        <source>button.team.download</source>
+        <target>Download</target>
+      </trans-unit>
+      <trans-unit id="LrNvNSF" resname="button.team.anonymous">
+        <source>button.team.anonymous</source>
+        <target>Anonymous format</target>
+      </trans-unit>
+      <trans-unit id="aU2NMCc" resname="title.cv.aboutMe">
+        <source>title.cv.aboutMe</source>
+        <target>About me</target>
+      </trans-unit>
+      <trans-unit id="tj23Dcc" resname="label.cv.email">
+        <source>label.cv.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="FMtf5Zs" resname="label.cv.phone">
+        <source>label.cv.phone</source>
+        <target>Phone</target>
+      </trans-unit>
+      <trans-unit id="aePnIlT" resname="label.cv.languages">
+        <source>label.cv.languages</source>
+        <target>Languages</target>
+      </trans-unit>
+      <trans-unit id="ZKXb_JS" resname="title.cv.professionalExperiences">
+        <source>title.cv.professionalExperiences</source>
+        <target>Professionnal Experiences</target>
+      </trans-unit>
+      <trans-unit id="zoJm_rp" resname="title.cv.personalProjects">
+        <source>title.cv.personalProjects</source>
+        <target>Personal Projects</target>
+      </trans-unit>
+      <trans-unit id="B9fhBu_" resname="title.cv.education">
+        <source>title.cv.education</source>
+        <target>Education</target>
+      </trans-unit>
+      <trans-unit id="Bum5Uuk" resname="title.cv.skills">
+        <source>title.cv.skills</source>
+        <target>Skills</target>
+      </trans-unit>
+      <trans-unit id="WClnU00" resname="in">
+        <source>in</source>
+        <target>in</target>
+      </trans-unit>
+      <trans-unit id="sda5G2f" resname="at">
+        <source>at</source>
+        <target>at</target>
+      </trans-unit>
+      <trans-unit id="u3jwn2S" resname="label.cv.age">
+        <source>label.cv.age</source>
+        <target>Age</target>
       </trans-unit>
     </body>
   </file>

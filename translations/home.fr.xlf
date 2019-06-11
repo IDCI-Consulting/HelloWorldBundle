@@ -5,113 +5,93 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="v6wxT_." resname="presentation">
-        <source>presentation</source>
+      <trans-unit id="Q5B45Pp" resname="title.index.presentation">
+        <source>title.index.presentation</source>
         <target>presentation</target>
       </trans-unit>
-      <trans-unit id="2tSHUKM" resname="We specialize in">
-        <source>We specialize in</source>
+      <trans-unit id="aIJiB2." resname="title.index.sub">
+        <source>title.index.sub</source>
         <target>Nous sommes spécialisés dans</target>
       </trans-unit>
-      <trans-unit id="iaBALmF" resname="Web architecture">
-        <source>Web architecture</source>
-        <target>L'architecture web</target>
+      <trans-unit id="nhvxUn_" resname="title.index">
+        <source>title.index</source>
+        <target><![CDATA[L'architecture web, PHP & Symfony]]></target>
       </trans-unit>
-      <trans-unit id="CmoVNFr" resname="PHP">
-        <source>PHP</source>
-        <target>PHP</target>
-      </trans-unit>
-      <trans-unit id="Re.xlg4" resname="Symfony">
-        <source>Symfony</source>
-        <target>Symfony</target>
-      </trans-unit>
-      <trans-unit id="cpu0jQ_" resname="Engineering">
-        <source>Engineering</source>
+      <trans-unit id="QOaXB2r" resname="label.index.engineering">
+        <source>label.index.engineering</source>
         <target>Ingénierie</target>
       </trans-unit>
-      <trans-unit id="IbanmDI" resname="Development">
-        <source>Development</source>
+      <trans-unit id="jWZrClI" resname="label.index.development">
+        <source>label.index.development</source>
         <target>Développement</target>
       </trans-unit>
-      <trans-unit id="nowJSBw" resname="Consulting">
-        <source>Consulting</source>
+      <trans-unit id="rSl7iKD" resname="label.index.consulting">
+        <source>label.index.consulting</source>
         <target>Conseil</target>
       </trans-unit>
-      <trans-unit id="mkLUCj8" resname="Integration">
-        <source>Integration</source>
-        <target>intégration</target>
+      <trans-unit id="c04k9kU" resname="label.index.integration">
+        <source>label.index.integration</source>
+        <target>Intégration</target>
       </trans-unit>
-      <trans-unit id="Asl0R2h" resname="advice">
-        <source>advice</source>
-        <target>__advice</target>
+      <trans-unit id="vxFwZGL" resname="title.index.advice">
+        <source>title.index.advice</source>
+        <target>advice</target>
       </trans-unit>
-      <trans-unit id="3nKR0xR" resname="advice icon">
-        <source>advice icon</source>
-        <target>__advice icon</target>
+      <trans-unit id="Fzipmez" resname="title.index.sub.2">
+        <source>title.index.sub.2</source>
+        <target>Nous faisons du</target>
       </trans-unit>
-      <trans-unit id="wvt4jH3" resname="training">
-        <source>training</source>
+      <trans-unit id="2P0M78M" resname="title.index.consulting">
+        <source>title.index.consulting</source>
+        <target>Conseil</target>
+      </trans-unit>
+      <trans-unit id="LPTAlY8" resname="title.index.training">
+        <source>title.index.training</source>
         <target>Formation</target>
       </trans-unit>
-      <trans-unit id="NqeY4.O" resname="Training">
-        <source>Training</source>
-        <target>Formation</target>
+      <trans-unit id="T9B4hxp" resname="title.index.web-development">
+        <source>title.index.web-development</source>
+        <target>web-development</target>
       </trans-unit>
-      <trans-unit id="q9gi5Rx" resname="training icon">
-        <source>training icon</source>
-        <target>__training icon</target>
+      <trans-unit id="JbN.kXL" resname="title.index.philosophy">
+        <source>title.index.philosophy</source>
+        <target>philosophy</target>
       </trans-unit>
-      <trans-unit id="tAj6kKn" resname="web-development">
-        <source>web-development</source>
-        <target>Développement-web</target>
+      <trans-unit id="YAwvX5h" resname="title.index.ourPhilosophy">
+        <source>title.index.ourPhilosophy</source>
+        <target>Notre philosopihe</target>
       </trans-unit>
-      <trans-unit id="rHh4URl" resname="Web development">
-        <source>Web development</source>
-        <target>Développement web</target>
+      <trans-unit id="zREjMfD" resname="title.index.opensource">
+        <source>title.index.opensource</source>
+        <target>Opensource</target>
       </trans-unit>
-      <trans-unit id="vnFke6D" resname="web development icon">
-        <source>web development icon</source>
-        <target>__web development icon</target>
+      <trans-unit id="86Ld6KE" resname="title.index.approach">
+        <source>title.index.approach</source>
+        <target>approach</target>
       </trans-unit>
-      <trans-unit id="IzHrM84" resname="philosophy">
-        <source>philosophy</source>
-        <target>philosophie</target>
-      </trans-unit>
-      <trans-unit id="yZdsHKK" resname="Our philosophy">
-        <source>Our philosophy</source>
-        <target>Notre Philosophie</target>
-      </trans-unit>
-      <trans-unit id="Z6DS4Nq" resname="Open source">
-        <source>Open source</source>
-        <target>Open source</target>
-      </trans-unit>
-      <trans-unit id="rVeshJI" resname="opensource icon">
-        <source>opensource icon</source>
-        <target>__opensource icon</target>
-      </trans-unit>
-      <trans-unit id="zskRHeN" resname="approach">
-        <source>approach</source>
-        <target>__approach</target>
-      </trans-unit>
-      <trans-unit id=".NYFYSj" resname="Our methodology">
-        <source>Our methodology</source>
+      <trans-unit id="3hP_bIP" resname="title.index.ourMethodology">
+        <source>title.index.ourMethodology</source>
         <target>Notre méthodologie</target>
       </trans-unit>
-      <trans-unit id="pvAfMI3" resname="agile icon">
-        <source>agile icon</source>
-        <target>__agile icon</target>
+      <trans-unit id="Ex.m8vz" resname="title.index.agile">
+        <source>title.index.agile</source>
+        <target>agile</target>
       </trans-unit>
-      <trans-unit id="_dNdQ3c" resname="tools">
-        <source>tools</source>
-        <target>__tools</target>
+      <trans-unit id=".jZso4f" resname="title.index.tools">
+        <source>title.index.tools</source>
+        <target>tools</target>
       </trans-unit>
-      <trans-unit id="Kt4CcRP" resname="Our tools">
-        <source>Our tools</source>
+      <trans-unit id="Kv5LMNY" resname="title.index.ourTools">
+        <source>title.index.ourTools</source>
         <target>Nos outils</target>
       </trans-unit>
-      <trans-unit id="LLWDoIL" resname="tools icon">
-        <source>tools icon</source>
-        <target>__tools icon</target>
+      <trans-unit id="P47ZrKQ" resname="title.index.sub.3">
+        <source>title.index.sub.3</source>
+        <target>Nous faisons de la</target>
+      </trans-unit>
+      <trans-unit id="fCeDWwE" resname="title.index.web development">
+        <source>title.index.web development</source>
+        <target>Développement Web</target>
       </trans-unit>
     </body>
   </file>

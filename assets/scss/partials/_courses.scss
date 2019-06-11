@@ -1,59 +1,168 @@
 .content-header {
-    @extend %full-width;
+  padding-top: 5rem;
+  text-align: center;
+  transition: .5s;
 
-    margin-top: 11rem;
-    text-align: center;
-
-    em {
-        color: $idci-light-blue;
-        font-style: normal;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: .4375rem;
-        margin: 0 0 2rem;
-        text-transform: uppercase;
-        font-family: Oswald,sans-serif;
-    }
+  em {
+    color: $idci-light-blue;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.4375rem;
+    margin: 0 0 2rem;
+    text-transform: uppercase;
+    font-family: Oswald, sans-serif;
+  }
 }
 
 .course-choice {
-    @extend %full-width;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
 
-    display: flex;
+  .course-box {
+    text-align: center;
+    width: 20%;
+    cursor: pointer;
 
-    .course-box {
-        flex: auto;
-        margin: 1rem 3rem;
-        text-align: center;
-        border: .2rem solid $idci-dark-grey;
-
-        a {
-            img {
-                border-bottom: .2rem solid $idci-dark-grey;
-                width: 100%;
-            }
+    article {
+      outline: 0.2rem solid $idci-dark-grey;
+      transition: .5s;
+      box-sizing: border-box;
+      .choice-content {
+        svg {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          width: 100%;
+          height: 15rem;
         }
+  
+        p {
+          height: 3rem;
+          border-top: 0.2rem solid $idci-dark-grey;
+          font-weight: bold;
+          font-size: 2rem;
+          padding-top: 1rem;
+        }
+      }
     }
+
+  }
 }
 
-.course-title {
-    text-align: center;
-    letter-spacing: .4rem;
-    font-weight: 400;
-    font-size: 2.3125rem;
+.course {
+  display: none;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
 
-    a {
-        background-color: $idci-light-blue;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
+  h2 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 
-        :hover {
-            background-color: $idci-blue;
-        }
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+
+    svg {
+      width: 100%;
+      height: 15rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
+  }
+}
+
+.collapse-checkbox {
+  transition: 0.5s;
+  display: none;
+  &:checked {
+    &.symfony2 {
+      & ~ .course {
+        &.symfony2 {
+          display: flex;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .symfony2 {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: .3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: .3s
+            }
+          }
+        }
+      }
+    }
+
+    &.oop-uml-scm {
+      & ~ .course {
+        &.oop-uml-scm {
+          display: flex;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .oop-uml-scm {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: .3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: .3s
+            }
+          }
+        }
+      }
+    }
+
+    &.html5-css3 {
+      & ~ .course {
+        &.html5-css3 {
+          display: flex;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .html5-css3 {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: .3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: .3s
+            }
+          }
+        }
+      }
+    }
+
+    &.wordpress {
+      & ~ .course {
+        &.wordpress {
+          display: flex;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .wordpress {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: .3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: .3s
+            }
+          }
+        }
+      }
+    }
+  }
 }

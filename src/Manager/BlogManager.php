@@ -18,8 +18,12 @@ class BlogManager
 
     private $urlGenerator;
 
-    public function __construct(Environment $twig, MarkdownParserInterface $parser, MetaTagsGenerator $metaTagsGenerator, UrlGeneratorInterface $urlGenerator)
-    {
+    public function __construct(
+        Environment $twig,
+        MarkdownParserInterface $parser,
+        MetaTagsGenerator $metaTagsGenerator,
+        UrlGeneratorInterface $urlGenerator
+    ) {
         $this->twig = $twig;
         $this->parser = $parser;
         $this->metaTagsGenerator = $metaTagsGenerator;
@@ -29,14 +33,15 @@ class BlogManager
     public function getLastArticles(Request $request): array
     {
         $lastArticles = array_slice($this->getArticleByDate($request), 0, 5, true);
-        foreach ($lastArticles as $key => $article) {
 
+        foreach ($lastArticles as $key => $article) {
             $content = $this->twig->render(sprintf('blog/%s/%s.md', $request->getLocale(), $article['file']));
             preg_match("/^(?!#)(?!!)((.)\W*){160} ((\w+\b)){1}/mU", $content, $matches);
 
             $article['summary'] = $this->parser->transformMarkdown(sprintf('%s ...', $matches[0]));
             $lastArticles[$key] = $article;
         }
+
         return $lastArticles;
     }
 
@@ -75,11 +80,13 @@ class BlogManager
 
     public function getArticleContent(Request $request, string $file): string
     {
-        return $this->parser->transformMarkdown($this->twig->render(sprintf('blog/%s/%s.md', $request->getLocale(), $file)));
+        return $this->parser->transformMarkdown(
+            $this->twig->render(sprintf('blog/%s/%s.md', $request->getLocale(), $file))
+        );
     }
 
     public function getMetaTags(Request $request, string $file): array
-    { 
+    {
         $metaTags = [];
 
         $articles = $this->twig->getGlobals()['blog'][$request->getLocale()]['articles'];

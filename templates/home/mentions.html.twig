@@ -1,13 +1,38 @@
 {% extends "layout.html.twig" %}
-{% trans_default_domain 'offers' %}
+{% trans_default_domain 'mentions' %}
 
 {% block nav %}
-    {% include 'partials/menu.html.twig' with {
+    {% include 'menu.html.twig' with {
     'menu': menu,
-    'active': 'website_legal_mentions'
+    'active': ''
     } %}
 {% endblock %}
 
-{% block title %}Mentions{% endblock %}
+{% block main_content %}
 
-{% block main_content %}Mentions{% endblock %}
+<header class="title">
+    <h1>title.mentions</h1>
+</header>
+
+<section class="mentions">
+    <header>
+        <h2>title.mentions.informations</h2>
+    </header>
+    <p>text.mentions.informations</p>
+</section>
+
+<section class="mentions">
+    <header>
+        <h2>title.mentions.authorRights</h2>
+    </header>
+    <p>text.mentions.authorRights</p>
+</section>
+
+<section class="mentions">
+    <header>
+        <h2>title.mentions.contact</h2>
+    </header>
+    <p>text.mentions.contact</p>
+</section>
+
+{% endblock %}

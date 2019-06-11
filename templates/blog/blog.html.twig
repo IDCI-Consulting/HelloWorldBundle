@@ -1,10 +1,8 @@
 {% extends "layout.html.twig" %}
-
-{% block title %}Blog
-{% endblock %}
+{% trans_default_domain 'blog' %}
 
 {% block nav %}
-    {% include 'partials/menu.html.twig' with {
+    {% include 'menu.html.twig' with {
     'menu': menu,
     'active': 'website_blog'
     } %}
@@ -58,17 +56,17 @@
         <input class="collapse-checkbox-accordion" id="all-article-checkbox" type="checkbox"/>
         <label for="all-article-checkbox">
             <header>
-                <h2>{% trans %}blog.title.allArticle{% endtrans %}</h2>
+                <h2>{% trans %}title.blog.allArticle{% endtrans %}</h2>
                 <i class="fas fa-angle-down"></i>
                 <ul>
                     <li>
                         <label class="label-date" for="article-by-date-checkbox">
-                            <p class="idci-button">{% trans %}blog.button.byDate{% endtrans %}</p>
+                            <p class="idci-button">{% trans %}button.blog.byDate{% endtrans %}</p>
                         </label>
                     </li>
                     <li>
                         <label class="label-category" for="article-by-category-checkbox">
-                            <p class="idci-button">{% trans %}blog.button.byCategory{% endtrans %}</p>
+                            <p class="idci-button">{% trans %}button.blog.byCategory{% endtrans %}</p>
                         </label>
                     </li>
                 </header>
@@ -87,10 +85,10 @@
                             <img src="{{ asset('build/images/' ~ article.image) }}"/>
                             <a href="{{ url('website_article', { 'file': article.file }) }}">
                                 {{ article.title }}
-                                <i>{% trans %}text.blog.addedAt{% endtrans %}
+                                <em>{% trans %}text.blog.addedAt{% endtrans %}
                                     {{ article.date }}
                                     {% trans %}text.blog.by{% endtrans %}
-                                    {{ article.author }}</i>
+                                    {{ article.author }}</em>
                             </a>
                         </li>
                     {% endfor %}

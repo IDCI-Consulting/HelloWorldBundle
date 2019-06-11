@@ -5,6 +5,10 @@ section.last-articles {
   margin: auto;
   flex-flow: row wrap;
 
+  h2 {
+    font-size: 1.7rem;
+  }
+
   .collapse-checkbox-accordion {
     display: none;
   }
@@ -86,6 +90,7 @@ section.all-articles {
 
     h2 {
       width: 100%;
+      font-size: 1.7rem;
     }
     ul {
       display: flex;
@@ -180,7 +185,7 @@ section.all-articles {
         color: $idci-darker-grey;
         text-decoration: none;
 
-        i {
+        em {
           font-style: italic;
           color: $idci-green;
         }

@@ -24,7 +24,7 @@ class ContactController extends AbstractController
         if ($request->isXmlHttpRequest()) {
             $response = new Response();
 
-            $response->setContent($this->renderView('partials/contactForm.html.twig', [
+            $response->setContent($this->renderView('contact/contactForm.html.twig', [
                 'form' => $form->createView()
             ]));
 
@@ -43,7 +43,7 @@ class ContactController extends AbstractController
                     ->setTo(array('contact@idci-consulting.fr'))
                     ->setBody(
                         $this->renderView(
-                            'partials/email.html.twig',
+                            'contact/email.html.twig',
                             [
                                 'company'       => $data['company'],
                                 'name'          => $data['name'],
