@@ -21,3 +21,11 @@ yarn-error.log
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+###> old website ###
+/templates-old 
+/src-old
+/silex_config
+controllers.php
+app.php
+###< old website
