@@ -1,9 +1,8 @@
 {% extends "layout.html.twig" %}
-
-{% block title %}{{ 'Activities' |trans}}{% endblock %}
+{% trans_default_domain 'references' %}
 
 {% block nav %}
-    {% include 'partials/menu.html.twig' with {
+    {% include 'menu.html.twig' with {
     'menu': menu,
     'active': 'website_activities'
     } %}
@@ -11,14 +10,31 @@
 
 {% block main_content %}
 
-<header class="title"><h1>{% trans %}Activities{% endtrans %}</h1></header>
-
-<section class="activities carousel">
-    <article class="activities-content"></article>
-    <article class="activities-content"></article>
-    <article class="activities-content"></article>
-    <article class="activities-content"></article>
-    <article class="activities-content"></article>
-</section>
+    <header class="title">
+        <h1>{% trans %}title.references{% endtrans %}</h1>
+    </header>
+    {% for work in achievements %}
+        <section class="activities">
+            <article class="activities-content">
+                <img src="{{ asset(work.image_path) }}"/>
+                <h2>{% trans %}title.references.project{% endtrans %}</h2>
+                <p>{{ work.content[app.request.locale] }}</p>
+            </article>
+            <article class="activities-skills">
+                <h2>{% trans %}title.references.expertise{% endtrans %}</h2>
+                <ul>
+                    {% for service in work.services %}
+                        <li>{{ file_get_public_contents('build/images/' ~ service ~'.svg') |raw }}</li>
+                    {% endfor %}
+                </ul>
+                <h2>{% trans %}title.references.tools{% endtrans %}</h2>
+                <ul>
+                    {% for tool in work.tools %}
+                        <li>{{ file_get_public_contents('build/images/' ~ tool ~'.svg') |raw }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </section>
+    {% endfor %}
 
 {% endblock %}

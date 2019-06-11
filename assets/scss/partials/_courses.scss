@@ -1,7 +1,11 @@
 .content-header {
   padding-top: 5rem;
   text-align: center;
+<<<<<<< HEAD
   transition: 0.5s;
+=======
+  transition: .5s;
+>>>>>>> Adding all translation in en and fr + few style
 
   em {
     color: $idci-light-blue;
@@ -36,13 +40,18 @@
           width: 100%;
           height: 15rem;
         }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> Adding all translation in en and fr + few style
         p {
           height: 3rem;
           border-top: 0.2rem solid $idci-dark-grey;
           font-weight: bold;
           font-size: 2rem;
           padding-top: 1rem;
+<<<<<<< HEAD
 
           &:nth-child(2) {
             font-size: 1.5rem;
@@ -50,10 +59,17 @@
         }
       }
     }
+=======
+        }
+      }
+    }
+
+>>>>>>> Adding all translation in en and fr + few style
   }
 }
 
 .course {
+<<<<<<< HEAD
   display: flex;
   width: 80%;
   max-height: 0;
@@ -74,6 +90,24 @@
     flex-wrap: wrap;
     width: 25%;
     height: 15rem;
+=======
+  display: none;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+
+  h2 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+>>>>>>> Adding all translation in en and fr + few style
 
     svg {
       width: 100%;
@@ -82,6 +116,7 @@
       padding-bottom: 1rem;
     }
   }
+<<<<<<< HEAD
 
   .course-content {
     width: 70%;
@@ -186,6 +221,39 @@
         i {
           transform: rotate(180deg);
           transition: .5s ease-in-out;
+=======
+}
+
+.collapse-checkbox {
+  transition: 0.5s;
+  display: none;
+  &:checked {
+    &.symfony2 {
+      & ~ .course {
+        &.symfony2 {
+          display: flex;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .symfony2 {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: .3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: .3s
+            }
+          }
+        }
+      }
+    }
+
+    &.oop-uml-scm {
+      & ~ .course {
+        &.oop-uml-scm {
+          display: flex;
+>>>>>>> Adding all translation in en and fr + few style
         }
       }
 
@@ -193,10 +261,17 @@
         .course-box {
           .oop-uml-scm {
             outline: 0.6rem solid $idci-light-blue;
+<<<<<<< HEAD
             transition: 0.3s;
             .course-title {
               border-top: 0.2rem solid $idci-light-blue;
               transition: 0.3s;
+=======
+            transition: .3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: .3s
+>>>>>>> Adding all translation in en and fr + few style
             }
           }
         }
@@ -206,6 +281,7 @@
     &.html5-css3 {
       & ~ .course {
         &.html5-css3 {
+<<<<<<< HEAD
           max-height: 200rem;
           transition: 1s ease-in-out;
         }
@@ -215,6 +291,9 @@
         i {
           transform: rotate(180deg);
           transition: .5s ease-in-out;
+=======
+          display: flex;
+>>>>>>> Adding all translation in en and fr + few style
         }
       }
 
@@ -222,10 +301,17 @@
         .course-box {
           .html5-css3 {
             outline: 0.6rem solid $idci-light-blue;
+<<<<<<< HEAD
             transition: 0.3s;
             .course-title {
               border-top: 0.2rem solid $idci-light-blue;
               transition: 0.3s;
+=======
+            transition: .3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: .3s
+>>>>>>> Adding all translation in en and fr + few style
             }
           }
         }
@@ -235,6 +321,7 @@
     &.wordpress {
       & ~ .course {
         &.wordpress {
+<<<<<<< HEAD
           max-height: 200rem;
           transition: 1s ease-in-out;
         }
@@ -244,6 +331,9 @@
         i {
           transform: rotate(180deg);
           transition: .5s ease-in-out;
+=======
+          display: flex;
+>>>>>>> Adding all translation in en and fr + few style
         }
       }
 
@@ -251,6 +341,7 @@
         .course-box {
           .wordpress {
             outline: 0.6rem solid $idci-light-blue;
+<<<<<<< HEAD
             transition: 0.3s;
             .course-title {
               border-top: 0.2rem solid $idci-light-blue;
@@ -276,6 +367,14 @@
 
         & ~ div.content-#{$i} {
           display: block;
+=======
+            transition: .3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: .3s
+            }
+          }
+>>>>>>> Adding all translation in en and fr + few style
         }
       }
     }

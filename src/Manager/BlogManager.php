@@ -41,6 +41,7 @@ class BlogManager
             $article['summary'] = $this->parser->transformMarkdown(sprintf('%s ...', $matches[0]));
             $lastArticles[$key] = $article;
         }
+
         return $lastArticles;
     }
 
