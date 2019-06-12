@@ -3,6 +3,7 @@ import '../scss/main.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'code-prettify/src/prettify.css';
+import 'animate.css';
 
 // Jquery
 const $ = require('jquery');
@@ -14,6 +15,9 @@ window.setUpModal = setUpModal;
 
 import setUpCarousel from './src/set-up-carousel';
 window.setUpCarousel = setUpCarousel;
+
+import setUpWow from './src/set-up-wow';
+window.setUpWow = setUpWow;
 
 import asideMenuHighlight from './src/aside-menu-highlight';
 window.asideMenuHighlight = asideMenuHighlight;

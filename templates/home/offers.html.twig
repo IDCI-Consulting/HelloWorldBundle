@@ -109,7 +109,7 @@
                     </ul>
                 </div>
                 <hr>
-                <div class="IDCI">
+                <div class="IDCI wow">
                     <h2>Pour IDCI :</h2>
                     <ul>
                         <li>
@@ -130,5 +130,8 @@
 {% endblock %}
 
 {% block javascripts %}
-
+    {{ parent() }}
+    <script>
+        setUpWow();
+    </script>
 {% endblock %}
