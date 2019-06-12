@@ -1,6 +1,8 @@
 {% trans_default_domain 'team' %}
 
-<section class="curriculum-vitae {% if app.request.attributes.get("_route") == "website_cvpdf" %}pdf{% endif %}">
+{% if app.request.attributes.get("_route") != "website_cvpdf" %}
+    <section class="curriculum-vitae">
+{% endif %}
     {% if app.request.attributes.get("_route") == "website_cv" %}
         <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': false}) }}" class="idci-button small-screen">{% trans %}button.team.download{% endtrans %}</a>
         <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': true }) }}" class="idci-button small-screen">{% trans %}button.team.anonymous{% endtrans %}</a>
@@ -121,4 +123,6 @@
         <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': false }) }}" class="idci-button large-screen">{% trans %}button.team.download{% endtrans %}</a>
         <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': true }) }}" class="idci-button large-screen">{% trans %}button.team.anonymous{% endtrans %}</a>
     {% endif %}
-</section>
+{% if app.request.attributes.get("_route") != "website_cvpdf" %}
+    </section>
+{% endif %}

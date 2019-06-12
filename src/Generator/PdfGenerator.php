@@ -41,7 +41,7 @@ class PdfGenerator
                                                    user-scalable=0" />
                     <style type="text/css">%s</style>
                 </head>
-                <body>%s</body>
+                <body class="curriculum-vitae pdf" >%s</body>
             </html>',
             $locale,
             $cssContent,
@@ -61,7 +61,6 @@ class PdfGenerator
             'margin-right' => 0,
             'margin-bottom' => 0,
             'margin-left' => 0,
-        
         ]));
 
         return $response;
