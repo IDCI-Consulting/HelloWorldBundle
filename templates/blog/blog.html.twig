@@ -105,10 +105,10 @@
                                 <img src="{{ asset('build/images/' ~ article.image) }}"/>
                                 <a href="{{ url('website_article', { 'file': article.file }) }}">
                                     {{ article.title }}
-                                    <i>{% trans %}text.blog.addedAt{% endtrans %}
+                                    <em>{% trans %}text.blog.addedAt{% endtrans %}
                                         {{ article.date }}
                                         {% trans %}text.blog.by{% endtrans %}
-                                        {{ article.author }}</i>
+                                        {{ article.author }}</em>
                                 </a>
                             </li>
                         {% endfor %}

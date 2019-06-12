@@ -24,6 +24,16 @@ section.last-articles {
     justify-content: center;
     align-items: center;
 
+    .slick-arrow {
+      &.left {
+        transform: rotate(90deg);
+      }
+
+      &.right {
+        transform: rotate(-90deg);
+      }
+    }
+
     .carousel {
       width: 55%;
       .last-article-content {
