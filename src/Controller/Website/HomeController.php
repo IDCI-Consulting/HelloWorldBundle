@@ -2,11 +2,8 @@
 
 namespace App\Controller\Website;
 
-use App\Form\Type\ContactType;
 use App\Generator\AsideMenuGenerator;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
@@ -46,16 +43,6 @@ class HomeController extends AbstractController
     public function mentions()
     {
         return $this->render('home/mentions.html.twig');
-    }
-
-    /**
-     * @Route("/courses", name="courses", methods={"GET"})
-     */
-    public function courses(AsideMenuGenerator $asideMenuGenerator)
-    {
-        return $this->render('home/courses.html.twig', [
-            'aside_menu' => $asideMenuGenerator->generateAsideMenu('home/courses.html.twig')
-        ]);
     }
 
     /**

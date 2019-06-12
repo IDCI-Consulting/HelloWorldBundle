@@ -1,6 +1,6 @@
 ## html5-css3
 
-{day1}
+#day1
 
 
 ### HTML / CSS
@@ -44,8 +44,7 @@ _3 hours_
 
  <p class="pdf-break"></p>
 
-{day2}
-
+#day2
 
 #### Semantic web and HTML5
 _2 hours_
@@ -73,7 +72,7 @@ _3 hours_
  - Drag & Drop
  - Zoom on some APIs
 
-{day3}
+#day3
 
 
 #### Dive into the API audio and vidéo management with HTML5
@@ -97,7 +96,7 @@ _4 hours_
 
  <p class="pdf-break"></p>
 
-{day4}
+#day4
 
 
 #### Dive into the API communication with HTML5
@@ -127,7 +126,7 @@ _2 hours_
  - Session storage
  - Difference between local / session storage
 
-{day5}
+#day5
 
 
 ### HTML / CSS
