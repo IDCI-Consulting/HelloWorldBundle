@@ -21,6 +21,10 @@
         <source>button.courses.contact</source>
         <target>Contact us</target>
       </trans-unit>
+      <trans-unit id="wrw08XA" resname="button.courses.day">
+        <source>button.courses.day</source>
+        <target>Day</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -9,6 +9,18 @@
         <source>title.references</source>
         <target>Our references</target>
       </trans-unit>
+      <trans-unit id="JVrS1hp" resname="title.references.project">
+        <source>title.references.project</source>
+        <target>The project</target>
+      </trans-unit>
+      <trans-unit id="JXr7Z5f" resname="title.references.expertise">
+        <source>title.references.expertise</source>
+        <target>Expertise</target>
+      </trans-unit>
+      <trans-unit id="fPNoRzl" resname="title.references.tools">
+        <source>title.references.tools</source>
+        <target>Tools</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
