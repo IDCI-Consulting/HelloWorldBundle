@@ -1,6 +1,6 @@
 ## oop-uml-scm
 
-#day1
+{day1}
 
 
 #### Introduction
@@ -33,7 +33,7 @@ _2 hours_
  - Inheritance
  - Polymorphism
 
-#day2
+{day2}
 
 
 #### Visibility
@@ -79,7 +79,7 @@ _2 hours_
  - Observer
  - Strategy
 
-#day3
+{day3}
 
 
 #### Dive into the MVC DP
@@ -124,7 +124,7 @@ _4 hours_
 
 <p class="pdf-break"></p>
 
-#day4
+{day4}
 
 
 #### Bug Tracker

@@ -206,6 +206,8 @@
       & ~ .course {
         &.wordpress {
           display: flex;
+          transition: .5s;
+          opacity: 1;
         }
       }
 

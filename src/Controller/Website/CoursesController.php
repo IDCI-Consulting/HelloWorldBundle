@@ -29,9 +29,6 @@ class CoursesController extends AbstractController
     {
         return $this->render('courses/courses.html.twig', [
             'coursesContent' => $coursesManager->getTabCourses($request),
-            'aside_menu' => $asideMenuGenerator->generateAsideMenu('courses/courses.html.twig', [
-                'coursesContent' => $coursesManager->getTabCourses($request)
-            ])
         ]);
     }
 }
