@@ -65,7 +65,7 @@
                         </label>
                     {% endfor %}
                 </nav>
-                {% for content in coursesContent[key]['content'] %}
+                {% for content in coursesContent[keytranslations/references.fr.xlf]['content'] %}
                     <div class="courses-content content-{{ loop.index }}">
                         {{ content|raw }}
                     </div>
@@ -76,5 +76,5 @@
 {% endblock %}
 
 {% block javascripts %}
-    {{ parent () }}
+    {{ parent() }}
 {% endblock %}
