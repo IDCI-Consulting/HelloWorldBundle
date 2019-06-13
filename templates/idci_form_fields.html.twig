@@ -42,7 +42,7 @@
 {% block form_row %}
     {% if label is same as('captcha') %}
         {% set juro_container_class = juro_container_class|default('input input--juro juro-captcha') %}
-        <div class="captcha-input-container">
+        <div class="captcha-input-container wow {{ random(['fadeInLeft','fadeInRight']) }}" data-wow-duration="1s" data-wow-delay="{{ random(40) / 100 }}s">
             <div class="{{ juro_container_class }}">
                 {{ form_widget(form) }}
                 {{ form_label(form) }}
@@ -68,7 +68,7 @@
         </div>
     {% else %}
         {% set juro_container_class = juro_container_class|default('input input--juro') %}
-        <div class="{{ juro_container_class }}">
+        <div class="{{ juro_container_class }} wow {{ random(['fadeInLeft','fadeInRight']) }}" data-wow-duration="1s" data-wow-delay="{{ random(40) / 100 }}s">
             {{ form_widget(form) }}
             {{ form_label(form) }}
         </div>

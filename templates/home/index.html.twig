@@ -141,7 +141,6 @@
 {% block javascripts %}
     {{ parent() }}
     <script>
-        setUpWow();
         var idci_code_writer = '{{ idci_code_writer|json_encode|escape("js") }}';
         showAceEditor(idci_code_writer);
     </script>
