@@ -149,6 +149,13 @@
         }
       }
 
+      & ~ label.symfony2 {
+        i {
+          transform: rotate(180deg);
+          transition: .5s ease-in-out;
+        }
+      }
+
       & ~ .course-choice {
         .course-box {
           .symfony2 {
@@ -168,6 +175,13 @@
         &.oop-uml-scm {
           max-height: 200rem;
           transition: 1s ease-in-out;
+        }
+      }
+
+      & ~ label.oop-uml-scm {
+        i {
+          transform: rotate(180deg);
+          transition: .5s ease-in-out;
         }
       }
 
@@ -193,6 +207,13 @@
         }
       }
 
+      & ~ label.html5-css3 {
+        i {
+          transform: rotate(180deg);
+          transition: .5s ease-in-out;
+        }
+      }
+
       & ~ .course-choice {
         .course-box {
           .html5-css3 {
@@ -212,6 +233,13 @@
         &.wordpress {
           max-height: 200rem;
           transition: 1s ease-in-out;
+        }
+      }
+
+      & ~ label.wordpress {
+        i {
+          transform: rotate(180deg);
+          transition: .5s ease-in-out;
         }
       }
 
@@ -273,7 +301,7 @@
     i {
       font-size: 2rem;
       color: $idci-black;
-      padding-right: 1rem;
+      margin-right: 1rem;
     }
   }
 }

@@ -59,7 +59,6 @@ footer {
 
         &.socials {
           ul {
-            height: 100%;
             width: 100%;
             padding-left: 2rem;
             text-align: left;
@@ -85,8 +84,6 @@ footer {
         }
       }
 
-      // <a class="btn btn--default"></a>
-      // <a class="btn btn--idci"></a>
       %btn {
         margin-bottom: 0;
         border: 1px solid $idci-white;
