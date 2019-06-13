@@ -1,6 +1,18 @@
 @media (min-width: 64em) {
   // Large screen
 
+  .carousel-container {
+    .slick-arrow {
+      &.left {
+        margin-right: 2rem;
+      }
+
+      &.right {
+        margin-left: 2rem;
+      }
+    }
+  }
+
   .last-articles {
     i {
       display: none;
@@ -84,7 +96,7 @@
       transition: 0.5s ease-out;
       .carousel {
         height: 15rem;
-        width: 70%;
+        width: 75%;
 
         .carousel-content {
           height: 15rem;
@@ -124,6 +136,7 @@
 
     .slick-arrow {
       width: 15%;
+      margin: 0;
     }
   }
 

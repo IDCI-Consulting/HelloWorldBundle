@@ -54,6 +54,13 @@ header.title {
       font-family: Oswald, sans-serif;
     }
 
+    .no-cv {
+      text-align: center;
+      color: $idci-darker-grey;
+      font-size: 1.3em;
+      margin: 0 auto 1rem auto;
+    }
+
     img {
       width: 260px;
       height: 260px;
@@ -99,4 +106,3 @@ header.title {
     }
   }
 }
-

@@ -7,7 +7,7 @@ import 'animate.css';
 
 // Jquery
 const $ = require('jquery');
-global.$ = global.jQuery = $
+global.$ = global.jQuery = $;
 
 // any JS you require will output into a single js file (app.js in this case)
 import setUpModal from './src/set-up-modal';
@@ -25,11 +25,14 @@ window.asideMenuHighlight = asideMenuHighlight;
 import showAceEditor from './src/editor-show';
 window.showAceEditor = showAceEditor;
 
-import handleHeadFollowing from './src/handle-head-following'
+import handleHeadFollowing from './src/handle-head-following';
 window.handleHeadFollowing = handleHeadFollowing;
 
-import makeSyntaxHighlighting from './src/make-syntax-highlighting'
+import handleScroll from './src/handle-scroll';
+window.handleScroll = handleScroll;
+
+import makeSyntaxHighlighting from './src/make-syntax-highlighting';
 window.makeSyntaxHighlighting = makeSyntaxHighlighting;
 
-import slugify from './src/slugify'
+import slugify from './src/slugify';
 window.slugify = slugify;

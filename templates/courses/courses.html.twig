@@ -34,6 +34,13 @@
     </section>
 
     {% for course in courses %}
+        <label for="{{ course.name }}-checkbox" class="accordion-title">
+            <h2>
+                {{ file_get_public_contents('build/images/' ~ course.name ~'.svg') |raw }}
+                <p>{{ course.title }}</p>
+                <i class="fas fa-angle-down"></i>
+            </h2>
+        </label>
         <section class="course {{ course.name }}" id="{{ course.name }}">
             <h2>
                 {{ course.title }}

@@ -26,7 +26,7 @@
             <div class="slick-arrow left">
                 {{ file_get_public_contents('build/images/slick_arrow.svg')|raw }}
             </div>
-            <div class="carousel">
+            <div class="carousel wow fadeInUp">
                 {% for article in lastArticles %}
                     <div class="carousel-content">
                         <article class="last-article-content">
@@ -76,12 +76,12 @@
                     {% set date = 0 %}
                     {% for article in articlesByDate %}
                         {% if article.date|date("Y") != date %}
-                            <li class="mark">
+                            <li class="mark wow zoomIn">
                                 {{ article.date|date("Y") }}
                             </li>
                             {% set date = article.date|date("Y") %}
                         {% endif %}
-                        <li class="article-content">
+                        <li class="article-content wow {{ random(['fadeInLeft','fadeInRight']) }}">
                             <img src="{{ asset('build/images/' ~ article.image) }}"/>
                             <a href="{{ url('website_article', { 'file': article.file }) }}">
                                 {{ article.title }}

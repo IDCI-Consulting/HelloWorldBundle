@@ -81,6 +81,10 @@
         <source>label.cv.age</source>
         <target>Âge</target>
       </trans-unit>
+      <trans-unit id="K6rtVAL" resname="label.team.noCv">
+        <source>label.team.noCv</source>
+        <target>Non disponible</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -1,0 +1,52 @@
+@media (min-width: 64em) {
+  // Large screen
+}
+
+@media (min-width: 40em) and (max-width: 64em) {
+  // Medium screen
+}
+
+@media (max-width: 40em) {
+  // Small screen
+
+  .course-choice {
+    display: none;
+  }
+
+  .accordion-title {
+    display: block;
+  }
+
+  .course {
+    h2 {
+      display: none;
+    }
+
+    aside {
+      width: 100%;
+      height: 3rem;
+      svg {
+        display: none;
+      }
+
+      a:last-child {
+        display: none;
+      }
+    }
+
+    .course-content {
+      width: 100%;
+      margin-top: 2rem; 
+      .button-group {
+        flex-wrap: wrap;
+        label {
+          max-width: 30%;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+}

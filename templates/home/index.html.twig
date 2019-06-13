@@ -9,12 +9,12 @@
 {% endblock %}
 
 {% block main_content %}
-    <video autoplay muted loop>
+    <video autoplay loop muted>
         <source src="{{asset('build/images/typing.mp4')}}" type="video/mp4">
     </video>
     <section id="{% trans %}title.index.presentation{% endtrans %}" class="container presentation">
         <header class="header-presentation">
-            <em>{% trans %}title.index.sub{% endtrans %}</em class="sub-title">
+            <em>{% trans %}title.index.sub{% endtrans %}</em>
             <h2>
                 {% trans %}title.index{% endtrans %}
             </h2>
@@ -31,10 +31,10 @@
         <div class="top-box"></div>
     </div>
     <section id="{% trans %}title.index.advice{% endtrans %}" class="container advices">
-        <input type="checkbox" id="advice-checkbox" class="collapse-checkbox">
+        <input class="collapse-checkbox" id="advice-checkbox" type="checkbox">
         <label for="advice-checkbox">
             <header class="wow fadeInUp">
-                <em class="sub-title">{% trans %}title.index.sub.2{% endtrans %}</em class="sub-title">
+                <em class="sub-title">{% trans %}title.index.sub.2{% endtrans %}</em>
                 <img src="{{ asset("build/images/conseil.svg") }}" class="accordion-image" alt="{% trans %}title.index.advice{% endtrans %} accordion-image"/>
                 <h2>
                     {% trans %}title.index.consulting{% endtrans %}
@@ -50,10 +50,10 @@
         <div class="top-box switched"></div>
     </div>
     <section id="{% trans %}title.index.training{% endtrans %}" class="container training">
-        <input type="checkbox" id="training-checkbox" class="collapse-checkbox">
+        <input class="collapse-checkbox" id="training-checkbox" type="checkbox">
         <label for="training-checkbox">
             <header class="wow fadeInUp">
-                <em class="sub-title">{% trans %}title.index.sub.3{% endtrans %}</em class="sub-title">
+                <em class="sub-title">{% trans %}title.index.sub.3{% endtrans %}</em>
                 <img src="{{ asset("build/images/formation.svg") }}" class="accordion-image" alt="{% trans %}title.index.training{% endtrans %} accordion-image"/>
                 <h2>
                     {% trans %}title.index.training{% endtrans %}
@@ -69,10 +69,10 @@
         <div class="top-box"></div>
     </div>
     <section id="{% trans %}title.index.web-development{% endtrans %}" class="container development">
-        <input type="checkbox" id="development-checkbox" class="collapse-checkbox">
+        <input class="collapse-checkbox" id="development-checkbox" type="checkbox">
         <label for="development-checkbox">
             <header class="wow fadeInUp">
-                <em class="sub-title">{% trans %}title.index.sub.2{% endtrans %}</em class="sub-title">
+                <em class="sub-title">{% trans %}title.index.sub.2{% endtrans %}</em>
                 <img src="{{ asset("build/images/icon_dev.svg") }}" class="accordion-image" alt="{% trans %}title.index.web-development{% endtrans %} accordion-image"/>
                 <h2>
                     {% trans %}title.index.web development{% endtrans %}
@@ -88,10 +88,10 @@
         <div class="top-box switched"></div>
     </div>
     <section id="{% trans %}title.index.philosophy{% endtrans %}" class="container philosophy">
-        <input type="checkbox" id="philosophy-checkbox" class="collapse-checkbox">
+        <input class="collapse-checkbox" id="philosophy-checkbox" type="checkbox">
         <label for="philosophy-checkbox">
             <header class="wow fadeInUp">
-                <em class="sub-title">{% trans %}title.index.ourPhilosophy{% endtrans %}</em class="sub-title">
+                <em class="sub-title">{% trans %}title.index.ourPhilosophy{% endtrans %}</em>
                 <img src="{{ asset('build/images/opensource.svg') }}" class="accordion-image" alt="{% trans %}title.index.opensource{% endtrans %} accordion-image"/>
                 <h2>
                     {% trans %}title.index.opensource{% endtrans %}
@@ -143,5 +143,6 @@
     <script>
         var idci_code_writer = '{{ idci_code_writer|json_encode|escape("js") }}';
         showAceEditor(idci_code_writer);
+        handleScroll();
     </script>
 {% endblock %}

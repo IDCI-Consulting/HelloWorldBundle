@@ -18,21 +18,33 @@
         <em class="job-position">{% trans %}label.team.manager{% endtrans %}</em>
         <img src="{{ asset('build/images/sprite_gabriel.png') }}" class="profile-picture front" />
         <p class="member-description">{% trans %}text.team.gabriel{% endtrans %}</p>
-        <a href="{{ url('website_cv', {'name': 'gabriel_bondaz', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
+        {% if file_exists('src/Resources/cv/gabriel_bondaz_' ~ app.request.locale ~ '.json') %}
+            <a href="{{ url('website_cv', {'name': 'gabriel_bondaz', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
+        {% else %}
+            <p class="no-cv">{% trans %}label.team.noCv{% endtrans %}</p>
+        {% endif %}
     </article>
     <article class="member frederic wow fadeInUp">
         <h2 class="name">Frédéric Bondaz</h2>
         <em class="job-position">{% trans %}label.team.manager{% endtrans %}</em>
         <img src="{{ asset('build/images/sprite_frederic.png') }}" />
         <p class="member-description">{% trans %}text.team.frederic{% endtrans %}</p>
-        <a href="{{ url('website_cv', {'name': 'frederic_bondaz', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
+        {% if file_exists('src/Resources/cv/frederic_bondaz_' ~ app.request.locale ~ '.json') %}
+            <a href="{{ url('website_cv', {'name': 'frederic_bondaz', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
+        {% else %}
+            <p class="no-cv">{% trans %}label.team.noCv{% endtrans %}</p>
+        {% endif %}
     </article>
     <article class="member brahim wow fadeInUp" data-wow-delay="0.6s">
         <h2 class="name">Brahim Boukoufallah</h2>
         <em class="job-position">{% trans %}label.team.manager{% endtrans %}</em>
         <img src="{{ asset('build/images/sprite_brahim.png') }}" class="profile-picture down" />
         <p class="member-description">{% trans %}text.team.brahim{% endtrans %}</p>
-        <a href="{{ url('website_cv', {'name': 'brahim_boukoufallah', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
+        {% if file_exists('src/Resources/cv/brahim_boukoufallah_' ~ app.request.locale ~ '.json') %}
+            <a href="{{ url('website_cv', {'name': 'brahim_boukoufallah', 'theme': 'idci'}) }}" class="idci-button see-cv">{% trans %}button.team.seeCv{% endtrans %}</a>
+        {% else %}
+            <p class="no-cv">{% trans %}label.team.noCv{% endtrans %}</p>
+        {% endif %}
     </article>
 </section>
 

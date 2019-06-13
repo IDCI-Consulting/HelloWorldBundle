@@ -46,7 +46,7 @@ class AppExtension extends AbstractExtension
 
     public function isFileExists($filePath)
     {
-        return file_exists(sprintf('%s/../%s', __DIR__, $filePath));
+        return file_exists(sprintf('%s/../../%s', __DIR__, $filePath));
     }
 
     public function getAge($birthday, $format = 'Y-m-d')
