@@ -1,0 +1,29 @@
+.errors {
+    background: url('../../images/panic.gif') no-repeat;
+    background-size: 100% 100%;
+    height: calc( 100vh - 5rem - 23.02rem); 
+
+    article {
+        background-color: rgba(255, 255, 255, .6);
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Molengo, sans-serif;
+
+        strong {
+            font-size: 5rem;
+            font-weight: bold;
+            color: $idci-light-blue;
+            line-height: 1.6;
+        }
+    
+        p {
+            font-size: 2.5rem;
+            color: $idci-darker-grey;
+        }
+    }
+}

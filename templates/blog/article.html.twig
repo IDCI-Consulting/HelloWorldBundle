@@ -1,4 +1,5 @@
 {% extends "layout.html.twig" %}
+{% trans_default_domain 'blog' %}
 
 {% block metaTags %}
     {% for tag in metaTags %}
@@ -7,7 +8,7 @@
 {% endblock %}
 
 {% block nav %}
-    {% include 'partials/menu.html.twig' with {
+    {% include 'menu.html.twig' with {
     'menu': menu,
     'active': 'website_blog'
     } %}
@@ -42,6 +43,7 @@
             h3.id = slugify(h3.innerHTML);
         })
         makeSyntaxHighlighting();
+        handleScroll();
 
         // ---- Disqus ---- //
 

@@ -1,0 +1,80 @@
+{% extends "layout.html.twig" %}
+{% trans_default_domain 'courses' %}
+
+{% block nav %}
+    {% include 'menu.html.twig' with {
+    'menu': menu,
+    'active': 'website_courses'
+    } %}
+{% endblock %}
+
+{% block main_content %}
+    <header class="content-header">
+        <em>{% trans %}title.course.sub{% endtrans %}</em>
+        <h1 class="title">{% trans %}title.courses{% endtrans %}</h1>
+    </header>
+
+    <input checked="checked" class="collapse-checkbox symfony2" id="symfony2-checkbox" name="courses-choice" type="radio"/>
+    <input class="collapse-checkbox oop-uml-scm" id="oop-uml-scm-checkbox" name="courses-choice" type="radio"/>
+    <input class="collapse-checkbox html5-css3" id="html5-css3-checkbox" name="courses-choice" type="radio"/>
+    <input class="collapse-checkbox wordpress" id="wordpress-checkbox" name="courses-choice" type="radio"/>
+    <section class="course-choice">
+        {% for course in courses %}
+            <label for="{{ course.name }}-checkbox" class="course-box wow zoomIn" data-wow-delay="{{ random(30) / 100 }}s">
+                <article class="{{ course.name }}">
+                    <div class="choice-content">
+                        {{ file_get_public_contents('build/images/' ~ course.name ~'.svg') |raw }}
+                        <p class="course-title">
+                            {{ course.title }}
+                        </p>
+                    </div>
+                </article>
+            </label>
+        {% endfor %}
+    </section>
+
+    {% for course in courses %}
+        <label for="{{ course.name }}-checkbox" class="accordion-title {{ course.name }}">
+            <h2>
+                {{ file_get_public_contents('build/images/' ~ course.name ~'.svg') |raw }}
+                <p>{{ course.title }}</p>
+                <i class="fas fa-angle-down"></i>
+            </h2>
+        </label>
+        <section class="course {{ course.name }}" id="{{ course.name }}">
+            <h2>
+                {{ course.title }}
+            </h2>
+            <aside class="course-title">
+                {{ file_get_public_contents('build/images/' ~ course.name ~'.svg') |raw }}
+                <a href="{{ url('website_coursespdf', {'name': course.name }) }}" class="idci-button">{% trans %}button.courses.download{% endtrans %}
+                </a>
+                <a href="{{ url('website_contact') }}" class="idci-button">{% trans %}button.courses.contact{% endtrans %}</a>
+            </aside>
+            <article class="course-content">
+                {% set key = loop.index0 %}
+                {% for days in coursesContent[key]['day'] %}
+                    <input class="collapse-checkbox day-{{ loop.index }}" id="day{{ loop.index }}-{{ course.name }}-checkbox" type="radio" name="{{ course.name }}-day-choice" {% if loop.index == 1 %}checked="checked"{% endif %}
+                    />
+                {% endfor %}
+                <nav class="button-group">
+                    {% for days in coursesContent[key]['day'] %}
+                        <label class="day-{{ loop.index }}" for="day{{ loop.index }}-{{ course.name }}-checkbox">
+                            <p class="idci-button">{% trans %}button.courses.day{% endtrans %}
+                                {{ loop.index }}</p>
+                        </label>
+                    {% endfor %}
+                </nav>
+                {% for content in coursesContent[key]['content'] %}
+                    <div class="courses-content content-{{ loop.index }}">
+                        {{ content|raw }}
+                    </div>
+                {% endfor %}
+            </article>
+        </section>
+    {% endfor %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

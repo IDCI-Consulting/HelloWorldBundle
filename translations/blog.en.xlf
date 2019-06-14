@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="NO2hNuQ" resname="title.blog">
+        <source>title.blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="CGK0waU" resname="title.blog.lastArticle">
+        <source>title.blog.lastArticle</source>
+        <target>Last articles</target>
+      </trans-unit>
+      <trans-unit id="2HGHTiM" resname="button.blog.seeArticle">
+        <source>button.blog.seeArticle</source>
+        <target>Read article</target>
+      </trans-unit>
+      <trans-unit id="9673n95" resname="title.blog.allArticle">
+        <source>title.blog.allArticle</source>
+        <target>All articles</target>
+      </trans-unit>
+      <trans-unit id="Vr4kKt." resname="button.blog.byDate">
+        <source>button.blog.byDate</source>
+        <target>By Date</target>
+      </trans-unit>
+      <trans-unit id="SiLM9tD" resname="button.blog.byCategory">
+        <source>button.blog.byCategory</source>
+        <target>By Categories</target>
+      </trans-unit>
+      <trans-unit id="eaJzfL0" resname="text.blog.addedAt">
+        <source>text.blog.addedAt</source>
+        <target>added at</target>
+      </trans-unit>
+      <trans-unit id="uDdJg4l" resname="text.blog.by">
+        <source>text.blog.by</source>
+        <target>by</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

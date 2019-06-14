@@ -46,6 +46,16 @@
         }
       }
 
+      &.about-me {
+        ul {
+          li {
+            &:nth-child(2) {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+
       &.skills {
         .skills-list {
           li {

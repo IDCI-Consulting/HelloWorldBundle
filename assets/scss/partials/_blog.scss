@@ -5,6 +5,10 @@ section.last-articles {
   margin: auto;
   flex-flow: row wrap;
 
+  h2 {
+    font-size: 1.7rem;
+  }
+
   .collapse-checkbox-accordion {
     display: none;
   }
@@ -19,6 +23,16 @@ section.last-articles {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .slick-arrow {
+      &.left {
+        transform: rotate(90deg);
+      }
+
+      &.right {
+        transform: rotate(-90deg);
+      }
+    }
 
     .carousel {
       width: 55%;
@@ -86,6 +100,7 @@ section.all-articles {
 
     h2 {
       width: 100%;
+      font-size: 1.7rem;
     }
     ul {
       display: flex;
@@ -180,7 +195,7 @@ section.all-articles {
         color: $idci-darker-grey;
         text-decoration: none;
 
-        i {
+        em {
           font-style: italic;
           color: $idci-green;
         }

@@ -1,5 +1,12 @@
 {% extends "layout.html.twig" %}
 
-{% block title %}Sitemap{% endblock %}
+{% block nav %}
+    {% include 'menu.html.twig' with {
+    'menu': menu,
+    'active': ''
+    } %}
+{% endblock %}
 
-{% block main_content %}Sitemap{% endblock %}
+{% block main_content %}
+    
+{% endblock %}

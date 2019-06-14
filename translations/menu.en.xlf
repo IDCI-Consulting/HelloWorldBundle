@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="52Ggxyh" resname="title.menu.home">
+        <source>title.menu.home</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="inMMH4q" resname="title.menu.offers">
+        <source>title.menu.offers</source>
+        <target>Our services offers</target>
+      </trans-unit>
+      <trans-unit id="ahe808_" resname="title.menu.courses">
+        <source>title.menu.courses</source>
+        <target>Our courses</target>
+      </trans-unit>
+      <trans-unit id="9M.zHwl" resname="title.menu.team">
+        <source>title.menu.team</source>
+        <target>The team</target>
+      </trans-unit>
+      <trans-unit id="RO3IbOc" resname="title.menu.references">
+        <source>title.menu.references</source>
+        <target>Our references</target>
+      </trans-unit>
+      <trans-unit id="60iRq0Q" resname="title.menu.blog">
+        <source>title.menu.blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="89R_YzG" resname="title.menu.contact">
+        <source>title.menu.contact</source>
+        <target>Contact</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

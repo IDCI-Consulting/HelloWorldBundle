@@ -16,6 +16,9 @@
         {% block footer %}{% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            <script>
+                setUpWow();
+            </script>
         {% endblock %}
     </body>
 </html>

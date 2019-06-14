@@ -20,7 +20,7 @@
         </nav>
 
         <div class="langs">
-            <p class="choose-language">{% trans %}Choose the language{% endtrans %}</p>
+            <p class="choose-language">{% trans %}label.layout.languages{% endtrans %}</p>
             <ul class="idci-inline-list">
                 {% for locale in locales %}
                     <li{% if app.request.locale == locale %} class="active"{% endif %}>
@@ -41,7 +41,7 @@
 
 {% block content %}
 <main>
-    {% include 'partials/asideMenu.html.twig' %}
+    {% include 'asideMenu.html.twig' %}
     {% block main_content %}{% endblock %}
 </main>
 {% endblock %}
@@ -57,7 +57,7 @@
                 <p>109 rue Francis de Pressensé</p>
                 <p>69100 Villeurbanne - FRANCE</p>
                 <h5 style="color: #FFF">
-                    {% trans %}Siège social{% endtrans %}
+                    {% trans %}label.layout.headOffice{% endtrans %}
                 </h5>
                 <p>82 ruelle du Brief</p>
                 <p>01170 Gex - FRANCE</p>
@@ -77,22 +77,22 @@
             <article class="footer-part socials">
                 <ul class="idci-inline-list">
                     <li>
-                        <a href="https://twitter.com/idciconsulting" target="_blank" title="{%trans%}Follow us on{% endtrans %} Twitter">
+                        <a href="https://twitter.com/idciconsulting" target="_blank" title="{% trans %}title.layout.twitter{% endtrans %} Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/IDCI-Consulting" target="_blank" title="{%trans%}Star us on{% endtrans %} Github">
+                        <a href="https://github.com/IDCI-Consulting" target="_blank" title="{% trans %}title.layout.github{% endtrans %} Github">
                             <i class="fab fa-github"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/idciconsulting" target="_blank" title="{%trans%}Like us on{% endtrans %} Facebook">
+                        <a href="https://www.facebook.com/idciconsulting" target="_blank" title="{% trans %}title.layout.facebook{% endtrans %} Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="http://presentation.idci.fr" target="_blank" title="{%trans%}Presentation{% endtrans %}">
+                        <a href="http://presentation.idci.fr" target="_blank" title="{% trans %}title.layout.presentation{% endtrans %}">
                             <i class="fas fa-play-circle"></i>
                         </a>
                     </li>
@@ -107,15 +107,15 @@
                        &#169; 2017 - idci {{ version }}
                     </li>
                     <li class="idci-inline-list">
-                        <a href="{{ url('website_legal_mentions') }}" class="mentions">{% trans %}Legal Mentions{% endtrans %}</a>
+                        <a href="{{ url('website_legal_mentions') }}" class="mentions">{% trans %}label.layout.legalMentions{% endtrans %}</a>
                     </li>
                     <li class="idci-inline-list">
-                        <a href="{{ url('website_sitemap') }}" class="maps">{% trans %}Sitemap{% endtrans %}</a>
+                        <a href="{{ url('website_sitemap') }}" class="maps">{% trans %}label.layout.sitemap{% endtrans %}</a>
                     </li>
                 </ul>
             </nav>
             {% if app.request.attributes.get("_route") != "website_contact" %}
-                <a class="contact-us-link" id="contact-link" href="{{ url('website_contact') }}">{% trans %}Contact us{% endtrans %}</a>
+                <a class="contact-us-link" id="contact-link" href="{{ url('website_contact') }}">{% trans %}label.layout.contact{% endtrans %}</a>
             {% endif %}
         </section>
     </footer>

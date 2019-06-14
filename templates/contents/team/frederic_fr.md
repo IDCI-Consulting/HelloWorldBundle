@@ -1,3 +1,0 @@
-
-Issu auparavant du monde des services informatiques, je suis co-fondateur de IDCI consulting depuis 2007.
-Je mets aujourd'hui mes 18 années d'expérience au service du développement de l'entreprise. Outre les orientations stratégiques que je détermine avec Gabriel et Baptiste, je gère en particulier les négociations commerciales, la finance et les HRs pour permettre à l'équipe opérationnelle de se concentrer sur son cœur de métier.

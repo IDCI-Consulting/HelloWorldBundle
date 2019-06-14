@@ -1,0 +1,553 @@
+{
+    "basics": {
+        "name": "Gabriel Bondaz",
+        "birthDate": "1984-07-12",
+        "label": "Ingénieur / Formateur",
+        "picture": "",
+        "email": "gabriel.bondaz@idci-consulting.fr",
+        "phone": "06 63 23 12 07",
+        "website": "",
+        "summary": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "profiles": [
+            {
+                "network": "linkedin",
+                "username": "Gabriel Bondaz",
+                "url": "https://www.linkedin.com/in/gabriel-bondaz"
+            },
+            {
+                "network": "github",
+                "username": "konandrum",
+                "url": "https://github.com/konandrum"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "IDCI-Consulting",
+            "position": "Co-gérant & Ingénieur Recherche et Développement",
+            "website": "https://www.idci-consulting.fr/fr/",
+            "startDate": "2008-09",
+            "endDate": "",
+            "summary": "Création de IDCI-Consulting",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "Université Lyon 1",
+            "position": "Intervenant",
+            "website": "https://www.univ-lyon1.fr/",
+            "startDate": "2008-09",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "",
+            "position": "Formateur WEB",
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "summary": "HTML, Css, Js, PHP, Magento, Wordpress, Prestashop",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "APTA - Clermont Ferrand, ASP, Proximit, iCap, EITE, OPCADIA, etc",
+            "position": "Formateur",
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "summary": "Formateur dans le cadre de formation professionnelles",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "",
+            "position": "Formateur",
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "summary": "Formations PHP, Symfony, Programmation Orienté Objet, UML",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "",
+            "position": "",
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "summary": "Conception et développement de sites web professionnels en PHP: Symfony",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "",
+            "position": "",
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "summary": "Mise en place d'infrastructure serveur",
+            "highlights": [
+                "Firewall, Reverse Proxy, Load Balancer, Cache, DNS, DHCP, Serveur Web, Serveur FTP, Base de données, Virtualisation, Dockerisation"
+            ]
+        },
+        {
+            "company": "",
+            "position": "",
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "summary": "Gestion d'équipe et de projet de développement Web",
+            "highlights": [
+                "Symfony1, Symfony2, Wordpress, Magento"
+            ]
+        },
+        {
+            "company": "Tessi Marketing",
+            "position": "Consultant Web",
+            "website": "https://www.tessicustomermarketing.fr/",
+            "startDate": "2013-06",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+                "Analyse et refonte du nouveau S.I (Projet DIGIFID v2)",
+                "Accompagnement des équipes techniques (8 développeurs)",
+                "Mise en place de la stack DévOps",
+                "Développements WEB PHP (Symfony 2.4/2.8)"
+            ]
+        },
+        {
+            "company": "Inseec Digital Institute",
+            "position": "Intervenant",
+            "website": "https://www.inseec-digital.com/",
+            "startDate": "2016",
+            "endDate": "",
+            "summary": "PHP & MySQL",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "Interforum",
+            "position": "Consultant Web",
+            "website": "https://www.interforum.fr/login_init.do",
+            "startDate": "2016",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "ENS",
+            "position": "",
+            "website": "http://archinfo.universite-lyon.fr/",
+            "startDate": "2014",
+            "endDate": "",
+            "summary": "Développement d'une plateforme de gestions des pads",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "MB Création",
+            "position": "",
+            "website": "https://www.mbcreation.net/",
+            "startDate": "2012",
+            "endDate": "",
+            "summary": "Conseil, développement et formations des équipes sur Symfony2",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "ENS",
+            "position": "Intervenant",
+            "website": "http://archinfo.universite-lyon.fr/",
+            "startDate": "2012",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "Allopneus",
+            "position": "",
+            "website": "https://www.allopneus.com/",
+            "startDate": "2011",
+            "endDate": "",
+            "summary": "Conseil et formation des équipes dans le cadre du changement de version du site web",
+            "highlights": [
+                "Accompagnement des équipes techniques (6 développeurs)",
+                "Développements web php (Symfony 2.0/2.1)"
+            ]
+        },
+        {
+            "company": "Groupe Moniteur",
+            "position": "",
+            "website": "https://www.lemoniteur.fr/",
+            "startDate": "2010",
+            "endDate": "",
+            "summary": "Pilotage du projet de refonte du site web",
+            "highlights": [
+                "Accompagnement des équipes techniques (3 développeurs)",
+                "Développements web php (Symfony 1.4)"
+            ]
+        },
+        {
+            "company": "Ajilon",
+            "position": "",
+            "website": "https://fidroit.fr/professionnels/",
+            "startDate": "2009",
+            "endDate": "",
+            "summary": "Mise en oeuvre d'un site web",
+            "highlights": [
+                "Accompagnement des équipes techniques (4 développeurs)",
+                "Développements web php (Symfony 1.4)"
+            ]
+        },
+        {
+            "company": "Université Lyon 1 service iCap",
+            "position": "Technicien de Recherche et de Formation",
+            "website": "https://icap.univ-lyon1.fr/",
+            "startDate": "2005",
+            "endDate": "2007",
+            "summary": "",
+            "highlights": [
+                "Installation et configuration de salles informatiques multi-systèmes d'exploitations (Windows / Linux)",
+                "Mise en place d'un outil de gestion du parc informatique : GLPI (Gestionnaire Libre de Parc Informatique)",
+                "Développement de plugins pour la plate-forme SPIRAL (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon 1)"
+            ]
+        },
+        {
+            "company": "IN2P3",
+            "position": "Stagiaire",
+            "website": "https://cc.in2p3.fr/",
+            "startDate": "2005",
+            "endDate": "",
+            "summary": "Stage de 16 semaine",
+            "highlights": [
+                "Mise en place d'un protocole informatique pour le transfert d'images médicales au format DICOM depuis un IRM, à destination d'une base SRB",
+                "Projet BIRNy rebaptisé LyNDA (Lyon Neuroimaging Database & Applications)"
+            ]
+        },
+        {
+            "company": "Laboratoire Lagep",
+            "position": "Stagiaire",
+            "website": "https://lagepp.univ-lyon1.fr/",
+            "startDate": "2005",
+            "endDate": "",
+            "summary": "Stage de 10 semaine",
+            "highlights": [
+                "Refonte du site Internet ([www.lagep.cpe.fr] (http://www.lagep.cpe.fr))",
+                "Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Solidarité Sida",
+            "position": "Bénévole",
+            "website": "http://www.solidarite-sida.org/",
+            "startDate": "2004-07 & 2005-07",
+            "endDate": "",
+            "summary": "Bénévole pour l'association Solidarité Sida et sur le festival Solidays à Paris",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "organization": "Université Claude Bernard Lyon 1",
+            "position": "",
+            "website": "https://etu.univ-lyon1.fr/activites/associations-etudiantes/student-club-association-des-bde-de-l-iut-lyon-1-740690.kjsp",
+            "startDate": "2004",
+            "endDate": "2005",
+            "summary": "Elu étudiant au Conseil d'Administration de l'université Lyon 1 et président de l'association Student Club",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "organization": "",
+            "position": "",
+            "website": "",
+            "startDate": "2003",
+            "endDate": "",
+            "summary": "Brevet de Secouriste (AFPS)",
+            "highlights": [
+                ""
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "",
+            "area": "",
+            "studyType": "Master MIAGE",
+            "startDate": "",
+            "endDate": "2008",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        },
+        {
+            "institution": "",
+            "area": "Informatique",
+            "studyType": "Licence professionelle Informatique (Nouvelles Architectures Applicatives)",
+            "startDate": "",
+            "endDate": "2005",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        },
+        {
+            "institution": "",
+            "area": "Informatique",
+            "studyType": "DUT Informatique",
+            "startDate": "",
+            "endDate": "2004",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "",
+            "date": "",
+            "awarder": "",
+            "summary": ""
+        }
+    ],
+    "publications": [
+        {
+            "name": "",
+            "publisher": "",
+            "releaseDate": "",
+            "website": "",
+            "summary": ""
+        }
+    ],
+    "skills": [
+        {
+            "name": "Serveur HTTP",
+            "level": "",
+            "keywords": [
+                "Apache",
+                "Nginx",
+                "lighttpd"
+            ]
+        },
+        {
+            "name": "Réseaux",
+            "level": "",
+            "keywords": [
+                "DNS (bind)",
+                "DHCP",
+                "Reverse proxy et load balancing (pound)",
+                "Firewall (iptables)",
+                "Serveur FTP (vsFTP)"
+            ]
+        },
+        {
+            "name": "Cache et reverse proxy",
+            "level": "",
+            "keywords": [
+                "Varnish"
+            ]
+        },
+        {
+            "name": "Configuration Management",
+            "level": "",
+            "keywords": [
+                "Ansible",
+                "SaltStack"
+            ]
+        },
+        {
+            "name": "Languages",
+            "level": "",
+            "keywords": [
+                "C",
+                "C++",
+                "Java",
+                "Python",
+                "PHP",
+                "HTML",
+                "xHTML",
+                "HTML5",
+                "JavaScript",
+                "SQL",
+                "Pl/Sql",
+                "Prolog",
+                "Shell Script"
+            ]
+        },
+        {
+            "name": "OS",
+            "level": "",
+            "keywords": [
+                "Ms Dos",
+                "Windows",
+                "MacOS",
+                "Linux",
+                "Unix"
+            ]
+        },
+        {
+            "name": "Frameworks PHP",
+            "level": "",
+            "keywords": [
+                "Symfony",
+                "Silex",
+                "Laravel",
+                "Zend framework"
+            ]
+        },
+        {
+            "name": "Frameworks Python",
+            "level": "",
+            "keywords": [
+                "Django",
+                "Pylons project"
+            ]
+        },
+        {
+            "name": "Frameworks CSS",
+            "level": "",
+            "keywords": [
+                "Bootstrap",
+                "Foundation"
+            ]
+        },
+        {
+            "name": "Moteur de template",
+            "level": "",
+            "keywords": [
+                "Twig",
+                "Handlebars"
+            ]
+        },
+        {
+            "name": "CMS",
+            "level": "",
+            "keywords": [
+                "Drupal",
+                "WordPress",
+                "Prestashop",
+                "Magento",
+                "DokuWiki"
+            ]
+        },
+        {
+            "name": "Versioning",
+            "level": "",
+            "keywords": [
+                "Git",
+                "Svn"
+            ]
+        },
+        {
+            "name": "Base de Données",
+            "level": "",
+            "keywords": [
+                "MySQL",
+                "PostgreSQL",
+                "MongoDB",
+                "CouchDB",
+                "ElasticSearch"
+            ]
+        },
+        {
+            "name": "Virtualisation / Conteneurisation",
+            "level": "",
+            "keywords": [
+                "Xen",
+                "OpenVZ",
+                "KMV",
+                "Docker"
+            ]
+        },
+        {
+            "name": "Gestion de projet",
+            "level": "",
+            "keywords": [
+                "Trac",
+                "Redmine",
+                "Mantis"
+            ]
+        },
+        {
+            "name": "Task Runner",
+            "level": "",
+            "keywords": [
+                "Gulp"
+            ]
+        },
+        {
+            "name": "Outils AMQP",
+            "level": "",
+            "keywords": [
+                "RabbitMQ"
+            ]
+        },
+        {
+            "name": "Modélisation",
+            "level": "",
+            "keywords": [
+                "UML"
+            ]
+        },
+        {
+            "name": "Autres",
+            "level": "",
+            "keywords": [
+                "Ajax",
+                "Jquery"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Anglais",
+            "fluency": "Maitrisé"
+        },
+        {
+            "language": "Français",
+            "fluency": "Langue maternelle"
+        }
+    ],
+    "interests": [
+        {
+            "name": "",
+            "keywords": [
+                ""
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "",
+            "reference": ""
+        }
+    ]
+}

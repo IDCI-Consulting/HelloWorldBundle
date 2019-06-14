@@ -34,7 +34,7 @@ class TeamController extends AbstractController
      */
     public function cvJson(Request $request, string $name) : JsonResponse
     {
-        $cvFile = new \SplFileObject(sprintf('../src/Ressources/cv/%s_%s.json', $name, $request->getLocale()), 'r');
+        $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s_%s.json', $name, $request->getLocale()), 'r');
 
         return new JsonResponse(json_decode($cvFile->fread($cvFile->getSize())));
     }
@@ -44,7 +44,7 @@ class TeamController extends AbstractController
      */
     public function cv(Request $request, string $name, string $theme)
     {
-        $cvFile = new \SplFileObject(sprintf('../src/Ressources/cv/%s_%s.json', $name, $request->getLocale()), 'r');
+        $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s_%s.json', $name, $request->getLocale()), 'r');
 
         return $this->render('team/cv.html.twig', [
             'name' => $name,

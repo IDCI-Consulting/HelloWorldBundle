@@ -1,7 +1,11 @@
-<section class="curriculum-vitae {% if app.request.attributes.get("_route") == "website_cvpdf" %}pdf{% endif %}">
+{% trans_default_domain 'team' %}
+
+{% if app.request.attributes.get("_route") != "website_cvpdf" %}
+    <section class="curriculum-vitae">
+{% endif %}
     {% if app.request.attributes.get("_route") == "website_cv" %}
-        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': false}) }}" class="idci-button small-screen">{% trans %}Download{% endtrans %}</a>
-        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': true }) }}" class="idci-button small-screen">{% trans %}Download Anonymous CV{% endtrans %}</a>
+        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': false}) }}" class="idci-button small-screen">{% trans %}button.team.download{% endtrans %}</a>
+        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': true }) }}" class="idci-button small-screen">{% trans %}button.team.anonymous{% endtrans %}</a>
     {% endif %}
     <header class="cv-part cv-header">
         <h3 class="title">Curriculum vitae</h3>
@@ -24,14 +28,16 @@
     {% if anonymous is defined and anonymous == true %}
     {% else %}
         <article class="cv-part about-me">
-            <h3>{% trans %}About me{% endtrans %}</h3>
+            <h3>{% trans %}title.cv.aboutMe{% endtrans %}</h3>
             <ul>
-                <li>{% trans %}Email{% endtrans %}<strong>{{ data.basics.email }}</strong>
+                <li>{% trans %}label.cv.age{% endtrans %}<strong>{{ get_age(data.basics.birthDate) }}</strong>
                 </li>
-                <li>{% trans %}Phone{% endtrans %}<strong>{{ data.basics.phone }}</strong>
+                <li>{% trans %}label.cv.email{% endtrans %}<strong>{{ data.basics.email }}</strong>
+                </li>
+                <li>{% trans %}label.cv.phone{% endtrans %}<strong>{{ data.basics.phone }}</strong>
                 </li>
                 <li>
-                    {% trans %}Languages{% endtrans %}
+                    {% trans %}label.cv.languages{% endtrans %}
                     <ul class="languages-cv">
                         {% for language in data.languages %}
                             <li>
@@ -48,7 +54,7 @@
         </article>
     {% endif %}
     <article class="cv-part professional-experience">
-        <h3>{% trans %}Professional experiences{% endtrans %}</h3>
+        <h3>{% trans %}title.cv.professionalExperiences{% endtrans %}</h3>
         {% set date_stamp = 0 %}
         {% for experience in data.work %}
             {% if date_stamp != experience.startDate %}
@@ -66,7 +72,7 @@
         {% endfor %}
     </article>
     <article class="cv-part volunteer">
-        <h3>{% trans %}Personal Projects{% endtrans %}</h3>
+        <h3>{% trans %}title.cv.personalProjects{% endtrans %}</h3>
         {% set date_stamp = 0 %}
         {% for task in data.volunteer %}
             {% if date_stamp != task.startDate %}
@@ -84,7 +90,7 @@
         {% endfor %}
     </article>
     <article class="cv-part education">
-        <h3>{% trans %}Education{% endtrans %}</h3>
+        <h3>{% trans %}title.cv.education{% endtrans %}</h3>
         {% set date_stamp = 0 %}
         {% for study in data.education %}
             {% if date_stamp != study.endDate %}
@@ -99,7 +105,7 @@
         {% endfor %}
     </article>
     <article class="cv-part skills">
-        <h3>{% trans %}Skills{% endtrans %}</h3>
+        <h3>{% trans %}title.cv.skills{% endtrans %}</h3>
         <ul class="skills-list">
             {% for skill in data.skills %}
                 <li {% if skill.keywords |length > 7 %}class="too-many-skills"{% endif %}>
@@ -114,7 +120,9 @@
         </ul>
     </article>
     {% if app.request.attributes.get("_route") == "website_cv" %}
-        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': false }) }}" class="idci-button large-screen">{% trans %}Download{% endtrans %}</a>
-        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': true }) }}" class="idci-button large-screen">{% trans %}Download Anonymous CV{% endtrans %}</a>
+        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': false }) }}" class="idci-button large-screen">{% trans %}button.team.download{% endtrans %}</a>
+        <a href="{{ url('website_cvpdf', {'name': name, 'theme': 'idci', 'anonymous': true }) }}" class="idci-button large-screen">{% trans %}button.team.anonymous{% endtrans %}</a>
     {% endif %}
-</section>
+{% if app.request.attributes.get("_route") != "website_cvpdf" %}
+    </section>
+{% endif %}

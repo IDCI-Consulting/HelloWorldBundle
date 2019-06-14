@@ -1,10 +1,8 @@
 {% extends "layout.html.twig" %}
-
-{% block title %}Blog
-{% endblock %}
+{% trans_default_domain 'blog' %}
 
 {% block nav %}
-    {% include 'partials/menu.html.twig' with {
+    {% include 'menu.html.twig' with {
     'menu': menu,
     'active': 'website_blog'
     } %}
@@ -28,7 +26,7 @@
             <div class="slick-arrow left">
                 {{ file_get_public_contents('build/images/slick_arrow.svg')|raw }}
             </div>
-            <div class="carousel">
+            <div class="carousel wow fadeInUp">
                 {% for article in lastArticles %}
                     <div class="carousel-content">
                         <article class="last-article-content">
@@ -58,17 +56,17 @@
         <input class="collapse-checkbox-accordion" id="all-article-checkbox" type="checkbox"/>
         <label for="all-article-checkbox">
             <header>
-                <h2>{% trans %}blog.title.allArticle{% endtrans %}</h2>
+                <h2>{% trans %}title.blog.allArticle{% endtrans %}</h2>
                 <i class="fas fa-angle-down"></i>
                 <ul>
                     <li>
                         <label class="label-date" for="article-by-date-checkbox">
-                            <p class="idci-button">{% trans %}blog.button.byDate{% endtrans %}</p>
+                            <p class="idci-button">{% trans %}button.blog.byDate{% endtrans %}</p>
                         </label>
                     </li>
                     <li>
                         <label class="label-category" for="article-by-category-checkbox">
-                            <p class="idci-button">{% trans %}blog.button.byCategory{% endtrans %}</p>
+                            <p class="idci-button">{% trans %}button.blog.byCategory{% endtrans %}</p>
                         </label>
                     </li>
                 </header>
@@ -78,19 +76,19 @@
                     {% set date = 0 %}
                     {% for article in articlesByDate %}
                         {% if article.date|date("Y") != date %}
-                            <li class="mark">
+                            <li class="mark wow zoomIn">
                                 {{ article.date|date("Y") }}
                             </li>
                             {% set date = article.date|date("Y") %}
                         {% endif %}
-                        <li class="article-content">
+                        <li class="article-content wow {{ random(['fadeInLeft','fadeInRight']) }}">
                             <img src="{{ asset('build/images/' ~ article.image) }}"/>
                             <a href="{{ url('website_article', { 'file': article.file }) }}">
                                 {{ article.title }}
-                                <i>{% trans %}text.blog.addedAt{% endtrans %}
+                                <em>{% trans %}text.blog.addedAt{% endtrans %}
                                     {{ article.date }}
                                     {% trans %}text.blog.by{% endtrans %}
-                                    {{ article.author }}</i>
+                                    {{ article.author }}</em>
                             </a>
                         </li>
                     {% endfor %}
@@ -107,10 +105,10 @@
                                 <img src="{{ asset('build/images/' ~ article.image) }}"/>
                                 <a href="{{ url('website_article', { 'file': article.file }) }}">
                                     {{ article.title }}
-                                    <i>{% trans %}text.blog.addedAt{% endtrans %}
+                                    <em>{% trans %}text.blog.addedAt{% endtrans %}
                                         {{ article.date }}
                                         {% trans %}text.blog.by{% endtrans %}
-                                        {{ article.author }}</i>
+                                        {{ article.author }}</em>
                                 </a>
                             </li>
                         {% endfor %}
@@ -118,7 +116,6 @@
                 </ul>
             </article>
         </section>
-
 
     {% endblock %}
 

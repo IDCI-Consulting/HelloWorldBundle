@@ -1,9 +1,8 @@
 {% extends "layout.html.twig" %}
-
-{% block title %}{{'Partners' | trans}}{% endblock %}
+{% trans_default_domain 'partners' %}
 
 {% block nav %}
-    {% include 'partials/menu.html.twig' with {
+    {% include 'menu.html.twig' with {
     'menu': menu,
     'active': 'website_partners'
     } %}
@@ -14,7 +13,7 @@
 <section id="{% trans %}partner{% endtrans %}" class="full-width partners">
     <header>
         <h1>
-            {% trans %}Our partners{% endtrans %}
+            {% trans %}title.partners{% endtrans %}
         </h1>
         <i class="fa fa-angle-up"></i>
     </header>

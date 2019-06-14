@@ -1,59 +1,311 @@
 .content-header {
-    @extend %full-width;
+  padding-top: 5rem;
+  text-align: center;
+  transition: 0.5s;
 
-    margin-top: 11rem;
-    text-align: center;
-
-    em {
-        color: $idci-light-blue;
-        font-style: normal;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: .4375rem;
-        margin: 0 0 2rem;
-        text-transform: uppercase;
-        font-family: Oswald,sans-serif;
-    }
+  em {
+    color: $idci-light-blue;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.4375rem;
+    margin: 0 0 2rem;
+    text-transform: uppercase;
+    font-family: Oswald, sans-serif;
+  }
 }
 
 .course-choice {
-    @extend %full-width;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
 
-    display: flex;
+  .course-box {
+    text-align: center;
+    width: 20%;
+    cursor: pointer;
 
-    .course-box {
-        flex: auto;
-        margin: 1rem 3rem;
-        text-align: center;
-        border: .2rem solid $idci-dark-grey;
-
-        a {
-            img {
-                border-bottom: .2rem solid $idci-dark-grey;
-                width: 100%;
-            }
+    article {
+      outline: 0.2rem solid $idci-dark-grey;
+      transition: 0.5s;
+      box-sizing: border-box;
+      .choice-content {
+        svg {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          width: 100%;
+          height: 15rem;
         }
+
+        p {
+          height: 3rem;
+          border-top: 0.2rem solid $idci-dark-grey;
+          font-weight: bold;
+          font-size: 2rem;
+          padding-top: 1rem;
+
+          &:nth-child(2) {
+            font-size: 1.5rem;
+          }
+        }
+      }
     }
+  }
 }
 
-.course-title {
-    text-align: center;
-    letter-spacing: .4rem;
-    font-weight: 400;
-    font-size: 2.3125rem;
+.course {
+  display: flex;
+  width: 80%;
+  max-height: 0;
+  transition: .5s ease-in-out;
+  overflow: hidden;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    a {
-        background-color: $idci-light-blue;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
+  h2 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
 
-        :hover {
-            background-color: $idci-blue;
-        }
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    height: 15rem;
+
+    svg {
+      width: 100%;
+      height: 15rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
+  }
+
+  .course-content {
+    width: 70%;
+    .button-group {
+      display: flex;
+      justify-content: space-evenly;
+      margin: auto;
+      label {
+        max-width: 20%;
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    .courses-content {
+      display: none;
+      text-align: left;
+      padding-left: 1rem;
+
+      h3 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        color: $idci-green;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: $idci-green;
+      }
+
+      p {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        em {
+          font-style: italic;
+          color: $idci-green;
+        }
+      }
+
+      ul {
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+        li {
+            list-style-image: url('/build/images/balise_right.svg');
+            font-size: 1.2rem;
+            font-family: Molengo, sans-serif;
+            line-height: 1.6;
+        }
+      }
+
+      .pdf-break {
+        page-break-after: always;
+      }
+    }
+  }
+}
+
+.collapse-checkbox {
+  transition: 0.5s;
+  display: none;
+  &:checked {
+    &.symfony2 {
+      & ~ .course {
+        &.symfony2 {
+          max-height: 200rem;
+          transition: 1s ease-in-out;
+        }
+      }
+
+      & ~ label.symfony2 {
+        i {
+          transform: rotate(180deg);
+          transition: .5s ease-in-out;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .symfony2 {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: 0.3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+
+    &.oop-uml-scm {
+      & ~ .course {
+        &.oop-uml-scm {
+          max-height: 200rem;
+          transition: 1s ease-in-out;
+        }
+      }
+
+      & ~ label.oop-uml-scm {
+        i {
+          transform: rotate(180deg);
+          transition: .5s ease-in-out;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .oop-uml-scm {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: 0.3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+
+    &.html5-css3 {
+      & ~ .course {
+        &.html5-css3 {
+          max-height: 200rem;
+          transition: 1s ease-in-out;
+        }
+      }
+
+      & ~ label.html5-css3 {
+        i {
+          transform: rotate(180deg);
+          transition: .5s ease-in-out;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .html5-css3 {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: 0.3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+
+    &.wordpress {
+      & ~ .course {
+        &.wordpress {
+          max-height: 200rem;
+          transition: 1s ease-in-out;
+        }
+      }
+
+      & ~ label.wordpress {
+        i {
+          transform: rotate(180deg);
+          transition: .5s ease-in-out;
+        }
+      }
+
+      & ~ .course-choice {
+        .course-box {
+          .wordpress {
+            outline: 0.6rem solid $idci-light-blue;
+            transition: 0.3s;
+            .course-title {
+              border-top: 0.2rem solid $idci-light-blue;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+
+    @for $i from 1 through 5 {
+      &.day-#{$i} {
+        & ~ nav {
+          label.day-#{$i} {
+            p {
+              color: $idci-white;
+              transition: 0.1s;
+              background-color: $idci-light-blue-opac;
+              border-color: $idci-light-blue-opac;
+            }
+          }
+        }
+
+        & ~ div.content-#{$i} {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.accordion-title {
+  display: none;
+
+  h2 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    svg {
+      height: 4rem;
+      width: 4rem;
+      padding-left: .5rem;
+    }
+
+    p {
+      width: 60%;
+    }
+
+    i {
+      font-size: 2rem;
+      color: $idci-black;
+      margin-right: 1rem;
+    }
+  }
 }

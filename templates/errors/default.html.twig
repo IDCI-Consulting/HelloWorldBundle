@@ -1,0 +1,17 @@
+{% extends "layout.html.twig" %}
+{% trans_default_domain 'errors' %}
+
+{% block nav %}
+    {% include 'menu.html.twig' with {
+    'menu': menu,
+    } %}
+{% endblock %}
+
+{% block main_content %}
+    <section class="errors">
+        <article>
+            <strong>{{ code }}</strong>
+            <p>{% trans %}text.error.default{% endtrans %}</p>
+        </article>
+    </section>
+{% endblock %}

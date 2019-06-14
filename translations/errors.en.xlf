@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="7Kuw147" resname="text.error.500">
+        <source>text.error.500</source>
+        <target>__text.error.500</target>
+      </trans-unit>
+      <trans-unit id="Bb4dv1V" resname="text.error.default">
+        <source>text.error.default</source>
+        <target>__text.error.default</target>
+      </trans-unit>
+      <trans-unit id="yT3Jal8" resname="text.error.404">
+        <source>text.error.404</source>
+        <target>__text.error.404</target>
+      </trans-unit>
+      <trans-unit id="8MNNjKU" resname="text.error.5xx">
+        <source>text.error.5xx</source>
+        <target>__text.error.5xx</target>
+      </trans-unit>
+      <trans-unit id="ujSDSKG" resname="text.error.4xx">
+        <source>text.error.4xx</source>
+        <target>__text.error.4xx</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

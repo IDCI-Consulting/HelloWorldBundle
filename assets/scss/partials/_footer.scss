@@ -5,16 +5,11 @@ footer {
   box-sizing: border-box;
   box-shadow: 0 .1em 1em 0 rgba(0,0,0,.4);
   height: 23rem;
-  left:0;
-  padding-top: 1.2rem;
-  position: relative;
-  width:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   align-content: center;
-  padding: 5rem;
 
   @extend %full-width;
 
@@ -64,7 +59,6 @@ footer {
 
         &.socials {
           ul {
-            height: 100%;
             width: 100%;
             padding-left: 2rem;
             text-align: left;
@@ -90,8 +84,6 @@ footer {
         }
       }
 
-      // <a class="btn btn--default"></a>
-      // <a class="btn btn--idci"></a>
       %btn {
         margin-bottom: 0;
         border: 1px solid $idci-white;

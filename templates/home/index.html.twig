@@ -2,136 +2,133 @@
 {% trans_default_domain 'home' %}
 
 {% block nav %}
-    {% include 'partials/menu.html.twig' with {
+    {% include 'menu.html.twig' with {
     'menu': menu,
     'active': 'website_home'
     } %}
 {% endblock %}
 
 {% block main_content %}
-    <video autoplay muted loop>
+    <video autoplay loop muted>
         <source src="{{asset('build/images/typing.mp4')}}" type="video/mp4">
     </video>
-    <section id="{% trans %}presentation{% endtrans %}" class="container presentation">
+    <section id="{% trans %}title.index.presentation{% endtrans %}" class="container presentation">
         <header class="header-presentation">
-            <em>{% trans %}We specialize in{% endtrans %}</em class="sub-title">
+            <em>{% trans %}title.index.sub{% endtrans %}</em>
             <h2>
-                {% trans %}Web architecture{% endtrans %},
-                {% trans %}PHP{% endtrans %}
-                &
-                {% trans %}Symfony{% endtrans %}
+                {% trans %}title.index{% endtrans %}
             </h2>
-            <p>&lt;{% trans %}Engineering{% endtrans %}&gt;</p>
-            <p>&lt;{% trans %}Development{% endtrans %}&gt;</p>
-            <p>&lt;{% trans %}Consulting{% endtrans %}&gt;</p>
-            <p>&lt;{% trans %}Integration{% endtrans %}&gt;</p>
+            <p>&lt;{% trans %}label.index.engineering{% endtrans %}&gt;</p>
+            <p>&lt;{% trans %}label.index.development{% endtrans %}&gt;</p>
+            <p>&lt;{% trans %}label.index.consulting{% endtrans %}&gt;</p>
+            <p>&lt;{% trans %}label.index.integration{% endtrans %}&gt;</p>
         </header>
-        <a class="scroll-to" href="#{% trans %}advice{% endtrans %}">
+        <a class="scroll-to" href="#{% trans %}title.index.advice{% endtrans %}">
             <span></span>
         </a>
     </section>
     <div class="parallax-video top-advices">
         <div class="top-box"></div>
     </div>
-    <section id="{% trans %}advice{% endtrans %}" class="container advices">
-        <input type="checkbox" id="advice-checkbox" class="collapse-checkbox">
+    <section id="{% trans %}title.index.advice{% endtrans %}" class="container advices">
+        <input class="collapse-checkbox" id="advice-checkbox" type="checkbox">
         <label for="advice-checkbox">
-            <header>
-                <em class="sub-title">{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em class="sub-title">
-                <img src="{{ asset("build/images/conseil.svg") }}" class="accordion-image" alt="{% trans %}advice accordion-image{% endtrans %}"/>
+            <header class="wow fadeInUp">
+                <em class="sub-title">{% trans %}title.index.sub.2{% endtrans %}</em>
+                <img src="{{ asset("build/images/conseil.svg") }}" class="accordion-image" alt="{% trans %}title.index.advice{% endtrans %} accordion-image"/>
                 <h2>
-                    {% trans %}Consulting{% endtrans %}
+                    {% trans %}title.index.consulting{% endtrans %}
                 </h2>
                 <i class="fas fa-angle-down"></i>
             </header>
         </label>
-        <img src="{{ asset("build/images/conseil.svg") }}" class="index-image" alt="{% trans %}advice icon{% endtrans %}"/>
-        <article class="content">{% include 'contents/index/advice_' ~ app.request.locale ~ '.html.twig' %}</article>
+        <img src="{{ asset("build/images/conseil.svg") }}" class="index-image wow fadeInUp" alt="{% trans %}title.index.advice{% endtrans %} icon"/>
+        <article class="content wow fadeInUp">{% include 'contents/index/advice_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
     <div class="parallax-video">
         <div class="bottom-box switched"></div>
         <div class="top-box switched"></div>
     </div>
-    <section id="{% trans %}training{% endtrans %}" class="container training">
-        <input type="checkbox" id="training-checkbox" class="collapse-checkbox">
+    <section id="{% trans %}title.index.training{% endtrans %}" class="container training">
+        <input class="collapse-checkbox" id="training-checkbox" type="checkbox">
         <label for="training-checkbox">
-            <header>
-                <em class="sub-title">{% transchoice 1 from "messages" %}We do{% endtranschoice %}</em class="sub-title">
-                <img src="{{ asset("build/images/formation.svg") }}" class="accordion-image" alt="{% trans %}training accordion-image{% endtrans %}"/>
+            <header class="wow fadeInUp">
+                <em class="sub-title">{% trans %}title.index.sub.3{% endtrans %}</em>
+                <img src="{{ asset("build/images/formation.svg") }}" class="accordion-image" alt="{% trans %}title.index.training{% endtrans %} accordion-image"/>
                 <h2>
-                    {% trans %}Training{% endtrans %}
+                    {% trans %}title.index.training{% endtrans %}
                 </h2>
                 <i class="fas fa-angle-down"></i>
             </header>
         </label>
-        <img src="{{ asset("build/images/formation.svg") }}" class="index-image" alt="{% trans %}training icon{% endtrans %}"/>
-        <article class="content">{% include 'contents/index/training_' ~ app.request.locale ~ '.html.twig' %}</article>
+        <img src="{{ asset("build/images/formation.svg") }}" class="index-image wow fadeInUp" alt="{% trans %}title.index.training{% endtrans %} icon"/>
+        <article class="content wow fadeInUp">{% include 'contents/index/training_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
     <div class="parallax-video">
         <div class="bottom-box"></div>
         <div class="top-box"></div>
     </div>
-    <section id="{% trans %}web-development{% endtrans %}" class="container development">
-        <input type="checkbox" id="development-checkbox" class="collapse-checkbox">
+    <section id="{% trans %}title.index.web-development{% endtrans %}" class="container development">
+        <input class="collapse-checkbox" id="development-checkbox" type="checkbox">
         <label for="development-checkbox">
-            <header>
-                <em class="sub-title">{% transchoice 2 from "messages" %}We do{% endtranschoice %}</em class="sub-title">
-                <img src="{{ asset("build/images/icon_dev.svg") }}" class="accordion-image" alt="{% trans %}web development accordion-image{% endtrans %}"/>
+            <header class="wow fadeInUp">
+                <em class="sub-title">{% trans %}title.index.sub.2{% endtrans %}</em>
+                <img src="{{ asset("build/images/icon_dev.svg") }}" class="accordion-image" alt="{% trans %}title.index.web-development{% endtrans %} accordion-image"/>
                 <h2>
-                    {% trans %}Web development{% endtrans %}
+                    {% trans %}title.index.web development{% endtrans %}
                 </h2>
                 <i class="fas fa-angle-down"></i>
             </header>
         </label>
-        <pre id="editor"></pre>
-        <article class="content">{% include 'contents/index/development_' ~ app.request.locale ~ '.html.twig' %}</article>
+        <pre class="wow fadeInUp" id="editor"></pre>
+        <article class="content wow fadeInUp">{% include 'contents/index/development_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
     <div class="parallax-video">
         <div class="bottom-box switched"></div>
         <div class="top-box switched"></div>
     </div>
-    <section id="{% trans %}philosophy{% endtrans %}" class="container philosophy">
-        <input type="checkbox" id="philosophy-checkbox" class="collapse-checkbox">
+    <section id="{% trans %}title.index.philosophy{% endtrans %}" class="container philosophy">
+        <input class="collapse-checkbox" id="philosophy-checkbox" type="checkbox">
         <label for="philosophy-checkbox">
-            <header>
-                <em class="sub-title">{% trans %}Our philosophy{% endtrans %}</em class="sub-title">
-                <img src="{{ asset('build/images/opensource.svg') }}" class="accordion-image" alt="{% trans %}opensource accordion-image{% endtrans %}"/>
+            <header class="wow fadeInUp">
+                <em class="sub-title">{% trans %}title.index.ourPhilosophy{% endtrans %}</em>
+                <img src="{{ asset('build/images/opensource.svg') }}" class="accordion-image" alt="{% trans %}title.index.opensource{% endtrans %} accordion-image"/>
                 <h2>
-                    {% trans %}Open source{% endtrans %}
+                    {% trans %}title.index.opensource{% endtrans %}
                 </h2>
                 <i class="fas fa-angle-down"></i>
             </header>
         </label>
-        <img src="{{ asset('build/images/opensource.svg') }}" class="index-image" alt="{% trans %}opensource icon{% endtrans %}"/>
-        <article class="content">{% include 'contents/index/philosophy_' ~ app.request.locale ~ '.html.twig' %}</article>
+        <img src="{{ asset('build/images/opensource.svg') }}" class="index-image wow fadeInUp" alt="{% trans %}title.index.opensource{% endtrans %} icon"/>
+        <article class="content wow fadeInUp">{% include 'contents/index/philosophy_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
     <div class="parallax-video">
         <div class="bottom-box"></div>
         <div class="top-box"></div>
     </div>
-    <section id="{% trans %}approach{% endtrans %}" class="container approach">
-        <header>
+    <section id="{% trans %}title.index.approach{% endtrans %}" class="container approach">
+        <header class="wow fadeInUp">
             <h2>
-                {% trans %}Our methodology{% endtrans %}
+                {% trans %}title.index.ourMethodology{% endtrans %}
             </h2>
         </header>
-        <img src="{{ asset('build/images/agile.svg') }}" class="index-image" alt="{% trans %}agile icon{% endtrans %}"/>
-        <article class="content">{% include 'contents/index/approach_' ~ app.request.locale ~ '.html.twig' %}</article>
+        <img src="{{ asset('build/images/agile.svg') }}" class="index-image wow fadeInUp" alt="{% trans %}title.index.agile{% endtrans %} icon"/>
+        <article class="content wow fadeInUp">{% include 'contents/index/approach_' ~ app.request.locale ~ '.html.twig' %}</article>
     </section>
     <div class="parallax-video">
         <div class="bottom-box switched"></div>
         <div class="top-box switched"></div>
     </div>
-    <section id="{% trans %}tools{% endtrans %}" class="container tools">
-        <header>
+    <section id="{% trans %}title.index.tools{% endtrans %}" class="container tools">
+        <header class="wow fadeInUp">
             <h2>
-                {% trans %}Our tools{% endtrans %}
+                {% trans %}title.index.ourTools{% endtrans %}
             </h2>
-            <img class="tools-icon" src="{{ asset('build/images/icon_outils.svg') }}" class="index-image" alt="{% trans %}tools icon{% endtrans %}"/>
+            <img class="tools-icon" src="{{ asset('build/images/icon_outils.svg') }}" class="index-image wow fadeInUp" alt="{% trans %}title.index.tools{% endtrans %} icon"/>
         </header>
         <ul class="content">
             {% for tool in tools|shuffle %}
-                <li class="tool-part">
+                <li class="tool-part wow zoomIn">
                     <a href="{{ tool.url }}" title="{{ tool.title }}" target="_blank">
                         {{ file_get_public_contents('build/images/' ~ tool.label ~'.svg') |raw }}
                     </a>
@@ -146,5 +143,6 @@
     <script>
         var idci_code_writer = '{{ idci_code_writer|json_encode|escape("js") }}';
         showAceEditor(idci_code_writer);
+        handleScroll();
     </script>
 {% endblock %}

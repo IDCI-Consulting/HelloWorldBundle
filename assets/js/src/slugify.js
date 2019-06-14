@@ -1,7 +1,7 @@
 export default function slugify (str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim
     str = str.toLowerCase();
-  
+
     // remove accents, swap ñ for n, etc
     var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
     var to   = "aaaaeeeeiiiioooouuuunc------";
@@ -11,7 +11,9 @@ export default function slugify (str) {
 
     str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
         .replace(/\s+/g, '-') // collapse whitespace and replace by -
-        .replace(/-+/g, '-'); // collapse dashes
+        .replace(/-+/g, '-') // collapse dashes
+        .replace(/^-+/, '')     // Trim - from start of text
+        .replace(/-+$/, '');   // Trim - from end of text
 
     return str;
 }

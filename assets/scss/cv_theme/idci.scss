@@ -17,183 +17,185 @@ $idci-category-blue: #50b1e4;
 $idci-red-opac: #ef5350;
 
 .curriculum-vitae {
-  display: flex;
-  flex-direction: column;
+  &:not(.pdf) {
+    display: flex;
+    flex-direction: column;
+  }
+
   font-family: Molengo, sans-serif;
   width: 100%;
   margin: auto;
   box-sizing: border-box;
-
-  * {
-    page-break-inside: avoid;
-  }
-
   @media (min-width: 64em) {
     max-width: 1000px;
   }
+}
 
-  header {
-    position: relative;
+header.cv-part {
+  position: relative;
 
-    h3.title {
-      text-decoration: none;
-      font-weight: bold;
-      width: 100%;
-      font-size: 2rem;
-    }
+  h3.title {
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    font-size: 2rem;
+  }
 
-    h4 {
-      color: $idci-blue;
-      font-size: 1.3rem;
-      font-weight: bold;
-      text-align: left;
+  h4 {
+    color: $idci-blue;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+    display: inline;
+  }
+
+  ul {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    li {
       display: inline;
-    }
+      padding-left: 0.5rem;
+      a {
+        text-decoration: none;
 
-    ul {
-      display: inline;
-      position: absolute;
-      right: 10px;
-      li {
-        display: inline;
-        padding-left: 0.5rem;
-        a {
-          text-decoration: none;
+        svg {
+          max-width: 3rem;
+          max-height: 3rem;
+          transition: 0.5s;
+          fill: $idci-light-blue;
 
-          svg {
-            max-width: 3rem;
-            max-height: 3rem;
+          &:hover {
+            transform: rotate(25deg);
             transition: 0.5s;
-            fill:$idci-light-blue;
-
-            &:hover {
-              transform: rotate(25deg);
-              transition: 0.5s;
-            }
           }
         }
       }
     }
   }
+}
 
-  .cv-part {
+.cv-part {
+  width: 100%;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0 1rem 3rem 1rem;
+  box-sizing: border-box;
 
-    width: 100%;
-    line-height: 1.6;
-    font-size: 1rem;
-    text-align: left;
-    padding: 0 1rem 3rem 1rem;
-    box-sizing: border-box;
+  h3 {
+    color: $idci-green;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
 
-    h3 {
-      color: $idci-green;
-      text-decoration: underline;
-      font-size: 1.5rem;
-      text-align: center;
-      margin-bottom: 1rem;
-      margin-top: 1rem;
+  i {
+    color: $idci-green;
+    font-style: italic;
+    padding-top: 1rem;
+  }
+
+  p {
+    color: $idci-black;
+  }
+
+  .highlights {
+    li {
+      color: $idci-darker-grey;
+      padding-left: 1rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.about-me {
+  background-color: $idci-dark-grey;
+  padding-bottom: 4rem;
+
+  li {
+    position: relative;
+    strong {
+      color: $idci-light-blue;
+      font-weight: bold;
+      position: absolute;
+      left: 25%;
     }
 
-    i {
-      color: $idci-green;
-      font-style: italic;
-      padding-top: 1rem;
-    }
+    .languages-cv {
+      position: absolute;
+      left: 25%;
+      display: inline;
 
-    p {
-      color: $idci-black;
-    }
-
-    .highlights {
-      li {
-        color: $idci-darker-grey;
-        padding-left: 1rem;
-        font-size: 0.8rem;
+      strong {
+        position: relative;
+        left: 0;
       }
     }
+  }
+}
+
+.volunteer {
+  background-color: $idci-dark-grey;
+}
+
+.skills {
+  background-color: $idci-dark-grey;
+  margin-bottom: 1rem;
+
+  ul {
+    li {
+      position: relative;
+      margin-top: 1rem;
+      strong {
+        display: inline;
+        color: $idci-black;
+        font-weight: bold;
+      }
+
+      p {
+        display: inline;
+        position: absolute;
+        left: 50%;
+      }
+
+      &.too-many-skills {
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+article.cv-part {
+  border: 1px solid $idci-dark-grey;
+}
+
+.pdf {
+  .cv-part {
+    page-break-inside: avoid;
+    border: none;
   }
 
   .about-me {
-    background-color: $idci-dark-grey;
-    padding-bottom: 4rem;
-
-    li {
-      position: relative;
-      strong {
-        color: $idci-light-blue;
-        font-weight: bold;
-        position: absolute;
-        left: 25%;
-      }
-
-      .languages-cv {
-        position: absolute;
-        left: 25%;
-        display: inline;
-
-        strong {
-          position: relative;
-          left: 0;
+    ul {
+      li {
+        padding-left: 0;
+        margin-left: 0;
+        .languages-cv {
+          left: 20.6%;
         }
       }
     }
-  }
-
-  .volunteer {
-    background-color: $idci-dark-grey;
   }
 
   .skills {
-    background-color: $idci-dark-grey;
-    margin-bottom: 1rem;
-
     ul {
       li {
-        position: relative;
-        margin-top: 1rem;
         strong {
-          display: inline;
-          color: $idci-black;
-          font-weight: bold;
-        }
-
-        p {
-          display: inline;
-          position: absolute;
-          left: 50%;
-        }
-
-        &.too-many-skills {
-            padding-bottom: 1.5rem;
-        }
-      }
-    }
-  }
-
-  article {
-    border: 1px solid $idci-dark-grey;
-  }
-
-  &.pdf {
-    .about-me {
-      ul {
-        li {
-          padding-left: 0;
-          margin-left: 0;
-          .languages-cv {
-            left: 20.6%;
-          }
-        }
-      }
-    }
-
-    .skills {
-      ul {
-        li {
-          strong {
-              position: relative;
-              top: 10px;
-          }
+          position: relative;
+          top: 10px;
         }
       }
     }

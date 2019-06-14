@@ -1,0 +1,370 @@
+{
+    "basics": {
+        "name": "Brahim Boukoufallah",
+        "birthDate": "1990-05-06",
+        "label": "Développeur Web Full Stack / Formateur",
+        "picture": "",
+        "email": "brahim.boukoufallah@idci-consulting.fr",
+        "phone": "07 68 65 39 61",
+        "website": "https://brahoum.net/",
+        "summary": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "profiles": [
+            {
+                "network": "linkedin",
+                "username": "Brahin BOUKOUFALLAH",
+                "url": "https://www.linkedin.com/in/brahim-boukoufallah"
+            },
+            {
+                "network": "github",
+                "username": "Brah0um",
+                "url": "https://github.com/Brah0um"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "IDCI-Consulting",
+            "position": "Gerant",
+            "website": "https://www.idci-consulting.fr/fr/",
+            "startDate": "2014-07",
+            "endDate": "",
+            "summary": "Gérant chez IDCI-Consulting",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "Inseec Digital Institute",
+            "position": "Intervenant",
+            "website": "https://www.inseec-digital.com/",
+            "startDate": "2016",
+            "endDate": "",
+            "summary": "Enseignement des langages de programmation web PHP & MySQL",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "3W Academy",
+            "position": "Intervenant",
+            "website": "https://3wa.fr/",
+            "startDate": "2016",
+            "endDate": "",
+            "summary": "Enseignement des langages de programmation web HTML & CSS",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "Dynergie",
+            "position": "",
+            "website": "https://www.dynergie.eu/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation d'une application de gestion de brevet",
+            "highlights": [
+                "Backend avec Symfony exposant une API REST",
+                "Frontend avec AngularJS exploitant l'API sous forme de graphique"
+            ]
+        },
+        {
+            "company": "Agence marketing",
+            "position": "",
+            "website": "",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation de deux sites au responsive design pour des agences marketing",
+            "highlights": [
+                "CMS : WordPress",
+                "Framework : Foundation 5",
+                "Utilisation de PHP, Gulp et Sass",
+                "Création de deux thèmes WordPress personnalisables avec le framework Foundation 5"
+            ]
+        },
+        {
+            "company": "Tessi Marketing",
+            "position": "",
+            "website": "https://www.tessicustomermarketing.fr/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Participation au développement de divers bundles en Symfony",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "company": "IDCI-Consulting",
+            "position": "",
+            "website": "https://www.idci-consulting.fr/fr/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation et intégration de nouveau site web IDCI-Consulting",
+            "highlights": [
+                "Micro-framework: Silex"
+            ]
+        },
+        {
+            "company": "Mapyourstories",
+            "position": "",
+            "website": "https://mapyourstories.com/",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Développement de Mapyourstories, un prototype permettant la création de plans de métro personnalisables collaborativement et en temps réel",
+            "highlights": [
+                "Framework: MeteorJS"
+            ]
+        },
+        {
+            "company": "IDCI-Consulting",
+            "position": "Stagiaire",
+            "website": "https://www.idci-consulting.fr/",
+            "startDate": "2013",
+            "endDate": "",
+            "summary": "Conception et réalisation d'une plate-forme permettant la gestion de note de frais",
+            "highlights": [
+                "Framework: Symfony"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Mosquée Othmane (Villeurbanne)",
+            "position": "Bénévole",
+            "website": "https://www.mosquee-othmane.org/",
+            "startDate": "2014",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "organization": "Projet personnel",
+            "position": "",
+            "website": "",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation d'in générateur de formulaire avec Symfony (API REST)",
+            "highlights": [
+                ""
+            ]
+        },
+        {
+            "organization": "Projet personnel",
+            "position": "",
+            "website": "",
+            "startDate": "2015",
+            "endDate": "",
+            "summary": "Réalisation d'une application gérant des commandes (restauration et bar) avec AngularJS",
+            "highlights": [
+                ""
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Université Claude Bernard Lyon 1",
+            "area": "Développement Web",
+            "studyType": "License METINT",
+            "startDate": "2015",
+            "endDate": "2016",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        },
+        {
+            "institution": "",
+            "area": "Informatique",
+            "studyType": "BTS SIO",
+            "startDate": "2014",
+            "endDate": "2015",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "",
+            "date": "",
+            "awarder": "",
+            "summary": ""
+        }
+    ],
+    "publications": [
+        {
+            "name": "",
+            "publisher": "",
+            "releaseDate": "",
+            "website": "",
+            "summary": ""
+        }
+    ],
+    "skills": [
+        {
+            "name": "Serveur HTTP",
+            "level": "",
+            "keywords": [
+                "Apache",
+                "Nginx"
+            ]
+        },
+        {
+            "name": "Configuration Management",
+            "level": "",
+            "keywords": [
+                "Ansible"
+            ]
+        },
+        {
+            "name": "Languages",
+            "level": "",
+            "keywords": [
+                "Java",
+                "PHP",
+                "HTML5",
+                "CSS3",
+                "Sass",
+                "JavaScript",
+                "SQL",
+                "NoSql",
+                "Shell Script"
+            ]
+        },
+        {
+            "name": "OS",
+            "level": "",
+            "keywords": [
+                "Windows",
+                "Linux (Debian et Ubuntu)"
+            ]
+        },
+        {
+            "name": "Frameworks Backend",
+            "level": "",
+            "keywords": [
+                "Symfony"
+            ]
+        },
+        {
+            "name": "Frameworks Frontend",
+            "level": "",
+            "keywords": [
+                "VueJS"
+            ]
+        },
+        {
+            "name": "Frameworks CSS",
+            "level": "",
+            "keywords": [
+                "Bootstrap",
+                "Foundation"
+            ]
+        },
+        {
+            "name": "Moteur de template",
+            "level": "",
+            "keywords": [
+                "Twig",
+                "Handlebars"
+            ]
+        },
+        {
+            "name": "CMS",
+            "level": "",
+            "keywords": [
+                "WordPress"
+            ]
+        },
+        {
+            "name": "Versioning",
+            "level": "",
+            "keywords": [
+                "Git",
+                "Svn"
+            ]
+        },
+        {
+            "name": "Base de Données",
+            "level": "",
+            "keywords": [
+                "MySQL",
+                "MongoDB"
+            ]
+        },
+        {
+            "name": "Virtualisation",
+            "level": "",
+            "keywords": [
+                "Docker"
+            ]
+        },
+        {
+            "name": "Gestion de projet",
+            "level": "",
+            "keywords": [
+                "Redmine",
+                "Wekan"
+            ]
+        },
+        {
+            "name": "Task Runner",
+            "level": "",
+            "keywords": [
+                "Gulp"
+            ]
+        },
+        {
+            "name": "Outils AMQP",
+            "level": "",
+            "keywords": [
+                "RabbitMQ"
+            ]
+        },
+        {
+            "name": "Autres",
+            "level": "",
+            "keywords": [
+                "Gimp (notions)",
+                "Photoshop (notions)"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Anglais",
+            "fluency": "Maitrisé"
+        },
+        {
+            "language": "Arabe",
+            "fluency": "Langue maternelle"
+        },
+        {
+            "language": "Français",
+            "fluency": "Langue maternelle"
+        }
+    ],
+    "interests": [
+        {
+            "name": "",
+            "keywords": [
+                ""
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "",
+            "reference": ""
+        }
+    ]
+}

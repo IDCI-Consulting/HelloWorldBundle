@@ -25,17 +25,19 @@
 @import 'partials/article';
 @import 'partials/activities';
 @import 'partials/offers';
+@import 'partials/mentions';
+@import 'partials/errors';
 
 /****************************
  **** Media importation *****
  ****************************/
 
- @import 'partials/media/index';
- @import 'partials/media/hamburger';
- @import 'partials/media/header';
- @import 'partials/media/footer';
- @import 'partials/media/contact';
- @import 'partials/media/article';
- @import 'partials/media/blog';
- @import 'partials/media/cv';
-
+@import 'partials/media/index';
+@import 'partials/media/hamburger';
+@import 'partials/media/header';
+@import 'partials/media/footer';
+@import 'partials/media/contact';
+@import 'partials/media/article';
+@import 'partials/media/blog';
+@import 'partials/media/cv';
+@import 'partials/media/courses';

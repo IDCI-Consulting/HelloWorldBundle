@@ -1,3 +1,5 @@
+{% trans_default_domain 'menu' %}
+
 <ul class="menu">
     {% for item in menu %}
         <li class="idci-inline-list {% if active is defined and active == item.route %}active{% endif %}">

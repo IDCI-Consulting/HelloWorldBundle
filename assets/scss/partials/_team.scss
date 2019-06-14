@@ -15,7 +15,6 @@ header.title {
   display: flex;
   width: 80%;
   padding-top: 2rem;
-  padding-bottom: 7rem;
   text-align: center;
   justify-content: center;
   flex-flow: row wrap;
@@ -47,13 +46,20 @@ header.title {
 
     .member-description {
       display: inline-block;
-      min-height: 17rem;
+      min-height: 25rem;
       padding: 1rem 0;
       text-align: justify;
     }
 
     .see-cv {
       font-family: Oswald, sans-serif;
+    }
+
+    .no-cv {
+      text-align: center;
+      color: $idci-darker-grey;
+      font-size: 1.3em;
+      margin: 0 auto 1rem auto;
     }
 
     img {
@@ -101,4 +107,3 @@ header.title {
     }
   }
 }
-

@@ -1,7 +1,8 @@
 {% extends "layout.html.twig" %}
+{% trans_default_domain 'offers' %}
 
 {% block nav %}
-    {% include 'partials/menu.html.twig' with {
+    {% include 'menu.html.twig' with {
     'menu': menu,
     'active': 'website_offers'
     } %}
@@ -17,20 +18,20 @@
             <header>
                 <h2>
                     {# {% trans %}title.offers.youAreSSII{% endtrans %} #}
-                    {% trans %}<i class="fas fa-arrow-right"></i>Vous êtes une entreprise (PME/Groupe) et vous souhaitez :{% endtrans %}
+                    <i class="fas fa-arrow-right"></i>Vous êtes une entreprise (PME/Groupe) et vous souhaitez :
                 </h2>
             </header>
             <article>
                 <ul>
                     {# {% trans %}text.offers.youAreSSII{% endtrans %} #}
-                    <li>{% trans %}Être
+                    <li>Être
                         <strong>conseillé sur les choix technologiques</strong>
-                        et dans la conception de votre futur applicatif web{% endtrans %}</li>
-                    <li>{% trans %}<strong>Renforcer</strong>
-                        temporairement votre équipe de développement{% endtrans %}</li>
-                    <li>{% trans %}<strong>Former</strong>
-                        vos collaborateurs{% endtrans %}</li>
-                    <li>{% trans %}Confier votre projet de mise en œuvre et rester concentré sur votre cœur de métier{% endtrans %}</li>
+                        et dans la conception de votre futur applicatif web</li>
+                    <li><strong>Renforcer</strong>
+                        temporairement votre équipe de développement</li>
+                    <li><strong>Former</strong>
+                        vos collaborateurs</li>
+                    <li>Confier votre projet de mise en œuvre et rester concentré sur votre cœur de métier</li>
                 </ul>
             </article>
         </div>
@@ -38,20 +39,20 @@
             <header>
                 <h2>
                     {# {% trans %}title.offers.youAreSSII{% endtrans %} #}
-                    {% trans %}<i class="fas fa-arrow-right"></i>Vous êtes une SSII et vous souhaitez :{% endtrans %}
+                    <i class="fas fa-arrow-right"></i>Vous êtes une SSII et vous souhaitez :
                 </h2>
             </header>
             <article>
                 <ul>
                     {# {% trans %}text.offers.youAreSSII{% endtrans %} #}
-                    <li>{% trans %}<strong>Renforcer vos ressources</strong>
-                        dans le cadre d’un projet{% endtrans %}</li>
-                    <li>{% trans %}<strong>Déléguer ponctuellement un expert</strong>
-                        pour aider votre client à résoudre une problématique technique{% endtrans %}</li>
-                    <li>{% trans %}<strong>Sous-traiter</strong>
-                        tout ou partie d’un contrat de services chez un de vos clients{% endtrans %}</li>
-                    <li>{% trans %}<strong>Former vos collaborateurs</strong>
-                        ou ceux de vos clients sur les dernières technologies{% endtrans %}</li>
+                    <li><strong>Renforcer vos ressources</strong>
+                        dans le cadre d’un projet</li>
+                    <li><strong>Déléguer ponctuellement un expert</strong>
+                        pour aider votre client à résoudre une problématique technique</li>
+                    <li><strong>Sous-traiter</strong>
+                        tout ou partie d’un contrat de services chez un de vos clients</li>
+                    <li><strong>Former vos collaborateurs</strong>
+                        ou ceux de vos clients sur les dernières technologies</li>
                 </ul>
             </article>
         </div>
@@ -108,7 +109,7 @@
                     </ul>
                 </div>
                 <hr>
-                <div class="IDCI">
+                <div class="IDCI wow">
                     <h2>Pour IDCI :</h2>
                     <ul>
                         <li>
@@ -125,9 +126,5 @@
             </section>
         </article>
     </section>
-
-{% endblock %}
-
-{% block javascripts %}
 
 {% endblock %}
