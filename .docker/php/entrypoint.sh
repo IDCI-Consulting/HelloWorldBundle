@@ -16,8 +16,10 @@ initialize() {
 
 	if [ $APP_ENV = "prod" ]; then
 		rsync -a /usr/local/share/idci_website/ /var/www/idci_website/public
-		php bin/console cache:clear --no-debug --no-interaction
 	fi
+
+	gosu www-data sh -c "rm -fr $source_folder/var/cache/*"
+	gosu www-data sh -c "chown www-data:www-data $source_folder/var"
 
 	rmdir "$source_folder/$lock_folder"
 }
