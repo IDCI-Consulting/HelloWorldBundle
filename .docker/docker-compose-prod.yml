@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
   php:
-    image: ${CONTAINER_RELEASE_IMAGE}
+    image: ${CONTAINER_RELEASE_IMAGE}:${CI_COMMIT_TAG}
     environment:
       APP_ENV: prod
     volumes:
