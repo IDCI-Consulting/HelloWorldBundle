@@ -48,6 +48,7 @@ class AsideMenuGenerator
         $articleAsideMenu = [];
         $article = $this->blogManager->getArticleContent($request, $file);
         preg_match_all('/(?<title><h2>.*<\/h2>|<h3>.*<\/h3>)/', $article, $matched_title);
+        $this->slugifier->addRule('\'','')->addRule('.','');
 
         foreach ($matched_title['title'] as $key => $title) {
             preg_match('/>(?<content>(.*))</', $title, $matched_content);
