@@ -43,6 +43,10 @@
           font-weight: bold;
           font-size: 2rem;
           padding-top: 1rem;
+
+          &:nth-child(2) {
+            font-size: 1.5rem;
+          }
         }
       }
     }

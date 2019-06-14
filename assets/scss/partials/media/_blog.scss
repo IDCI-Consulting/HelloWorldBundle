@@ -28,6 +28,44 @@
 
 @media (min-width: 40em) and (max-width: 64em) {
   // Medium screen
+  section.last-articles {
+    .carousel-container {
+      .carousel {
+        .carousel-content {
+          .last-article-content {
+            margin-left: 2rem;
+            img {
+              height: 10rem;
+              width: 20%;
+            }
+
+            .summary {
+              width: 60%;
+              margin-left: 1rem;
+
+              h3 {
+                font-size: 1rem;
+              }
+
+              p {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.all-articles {
+    header {
+      ul {
+        li {
+          width: 35%;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 40em) {

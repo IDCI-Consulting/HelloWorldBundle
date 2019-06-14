@@ -89,7 +89,7 @@
 
     p {
       font-size: 1.3rem;
-      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
       line-height: 2.2rem;
       font-family: Oswald, sans-serif;
 
@@ -316,7 +316,7 @@
 
 .parallax-video {
   background: none repeat scroll 0 0;
-  min-height: 30rem;
+  height: 30rem;
 
   display: flex;
   flex-direction: column;
@@ -339,26 +339,26 @@ video {
 }
 
 .top-box {
-  border-width: 0 0 80px 1841px;
+  border-width: 0 0 80px 99vw;
   border-style: solid;
   z-index: 10;
   overflow: hidden;
 
   &.switched {
-    border-width: 0 1841px 80px 0px;
+    border-width: 0 99vw 80px 0px;
     border-style: solid;
     z-index: 10;
   }
 }
 
 .bottom-box {
-  border-width: 0 1841px 80px 0;
+  border-width: 0 99vw 80px 0;
   border-style: solid;
   z-index: 10;
   overflow: hidden;
 
   &.switched {
-    border-width: 80px 1841px 0 0;
+    border-width: 80px 99vw 0 0;
     border-style: solid;
     z-index: 10;
   }

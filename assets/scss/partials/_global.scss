@@ -7,7 +7,12 @@ body {
 
 main {
   padding-top: 5rem;
-  //min-height: 100vh;
+  @extend %full-width;
+
+  @media (max-width: 64em) {
+    // Small and medium screen
+    padding-top: 4rem;
+  }
 }
 
 .wrapper {
@@ -110,10 +115,6 @@ section.contact {
 
 a {
   outline: none;
-}
-
-main {
-  @extend %full-width;
 }
 
 .idci-button {

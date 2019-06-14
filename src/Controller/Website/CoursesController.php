@@ -32,3 +32,4 @@ class CoursesController extends AbstractController
         ]);
     }
 }
+
