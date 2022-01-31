@@ -1,4 +1,0 @@
-website_controllers:
-    resource: ../../src/Controller/Website
-    type: annotation
-    name_prefix: website_
