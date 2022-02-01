@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+
+  php:
+    image: docker-registry.idci-consulting.fr/idci-website/php-fpm:dev
+    configs:
+      - source: php_conf
+        target: /usr/local/etc/php/php.ini
+    volumes:
+      - ../:/var/www/app
+      - composer_data:/var/www/.composer
+    networks:
+      - app
+
+  nginx:
+    image: nginx
+    deploy:
+      labels:
+        - "traefik.http.routers.nginx.rule=Host(`idci-website.docker`)"
+        - "traefik.http.routers.nginx-https.rule=Host(`idci-website.docker`)"
+        - "traefik.docker.network=traefik_reverse_proxy"
+        - "traefik.http.services.nginx.loadbalancer.server.port=80"
+        - "traefik.enable=true"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.routers.nginx.entryPoints=web"
+        - "traefik.http.routers.nginx-https.entryPoints=websecure"
+        - "traefik.http.routers.nginx-https.tls=true"
+        - "traefik.http.routers.nginx-https.tls.certresolver=letsencrypt"
+    configs:
+      - source: nginx_conf
+        target: /etc/nginx/conf.d/default.conf
+    volumes:
+      - ../:/var/www/app
+    environment:
+      - NGINX_HOST=idci-website.docker
+    networks:
+      - traefik_reverse_proxy
+      - app
+
+configs:
+  nginx_conf:
+    file: ./conf/nginx/site.conf
+  php_conf:
+    file: ./conf/php/php.ini
+
+volumes:
+  composer_data:
+  app_build_data:
+  app_bundles_data:
+
+networks:
+  traefik_reverse_proxy:
+    external: true
+  app:

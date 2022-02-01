@@ -1,0 +1,1 @@
+ajouter les noms de domaines dans /etc/hosts
