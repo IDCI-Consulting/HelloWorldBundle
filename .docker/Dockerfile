@@ -11,16 +11,16 @@ ADD .docker/entrypoint.sh /entrypoint.sh
 
 WORKDIR /var/www/app
 
-## Copy App files
-COPY composer.json composer.lock symfony.lock .env* package.json webpack.config.js ./
-COPY assets assets/
-COPY bin bin/
-COPY config config/
-COPY migrations migrations/
-COPY public public/
-COPY src src/
-COPY templates templates/
-COPY translations translations/
+# ## Copy App files
+# COPY composer.json composer.lock symfony.lock .env* package.json webpack.config.js ./
+# COPY assets assets/
+# COPY bin bin/
+# COPY config config/
+# COPY migrations migrations/
+# COPY public public/
+# COPY src src/
+# COPY templates templates/
+# COPY translations translations/
 
 ## Create empty var cache and var log directory
 RUN mkdir -p /var/www/app/var/cache /var/www/app/var/log
