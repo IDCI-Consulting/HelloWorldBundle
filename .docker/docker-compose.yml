@@ -46,10 +46,8 @@ configs:
 
 volumes:
   composer_data:
-  app_build_data:
-  app_bundles_data:
 
 networks:
+  app:
   traefik_reverse_proxy:
     external: true
-  app:

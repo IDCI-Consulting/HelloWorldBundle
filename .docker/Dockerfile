@@ -1,26 +1,24 @@
 # Stage 0:
-FROM php:8.1.1-fpm AS base
+FROM php:8.1-fpm AS base
 
 ## Install dependencies
 RUN apt update \
 	&& apt install -y git zip libpq-dev rsync
 
-## Add php.ini configuration and the entrypoint script
-ADD .docker/conf/php/php.ini /usr/local/etc/php/php.ini
+## Add the entrypoint script
 ADD .docker/entrypoint.sh /entrypoint.sh
 
 WORKDIR /var/www/app
 
-# ## Copy App files
-# COPY composer.json composer.lock symfony.lock .env* package.json webpack.config.js ./
+## Copy App files
+COPY composer.json composer.lock symfony.lock .env* package.json ./
 # COPY assets assets/
-# COPY bin bin/
-# COPY config config/
-# COPY migrations migrations/
-# COPY public public/
-# COPY src src/
-# COPY templates templates/
-# COPY translations translations/
+COPY bin bin/
+COPY config config/
+COPY public public/
+COPY src src/
+COPY templates templates/
+COPY translations translations/
 
 ## Create empty var cache and var log directory
 RUN mkdir -p /var/www/app/var/cache /var/www/app/var/log
@@ -57,13 +55,17 @@ RUN . $NVM_DIR/nvm.sh \
 	&& nvm install $NODE_VERSION \
 	&& nvm alias default $NODE_VERSION \
 	&& nvm use default \
+    && npm -v \
+    && npm install \
 	&& npm install --global yarn \
 	&& yarn --version \
-	&& yarn install \
-	&& yarn encore production
+    # && yarn add @symfony/webpack-encore --dev \
+	# && yarn install \
+	# && yarn encore production
 
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+
 
 # Stage 2:
 FROM build as dev
@@ -77,12 +79,13 @@ ENV APP_ENV=dev
 ENV APP_ENV ${APP_ENV}
 
 RUN composer install --no-interaction --optimize-autoloader
-RUN . $NVM_DIR/nvm.sh \
-	&& yarn --version \
-	&& yarn install \
-	&& yarn encore dev
+# RUN . $NVM_DIR/nvm.sh \
+# 	&& yarn --version \
+# 	&& yarn install \
+# 	&& yarn encore dev
 
 CMD ["php-fpm", "-F"]
+
 
 # Stage 3:
 FROM base as prod
@@ -93,11 +96,13 @@ ENV APP_ENV ${APP_ENV}
 COPY --from=build /var/www/app/vendor /var/www/app/vendor
 
 ## Copy built assets and bundles in order to use and share them (entrypoint)
-COPY --from=build /var/www/app/public/build /usr/local/share/public/build/
-COPY --from=build /var/www/app/public/bundles /usr/local/share/public/bundles/
+# COPY --from=build /var/www/app/public/build /usr/local/share/public/build/
+# COPY --from=build /var/www/app/public/bundles /usr/local/share/public/bundles/
 
 ## Define volumes
 VOLUME /var/www/app/var/cache
-VOLUME /var/www/app/public/build
+VOLUME /var/www/app/var/log
+# VOLUME /var/www/app/public/build
+# VOLUME /var/www/app/public/bundles
 
 CMD ["php-fpm", "-F"]
