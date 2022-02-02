@@ -10,10 +10,42 @@ use Symfony\Component\HttpFoundation\Request;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/homepage", methods={"GET"}, name="homepage")
+     * @Route("/", methods={"GET"}, name="homepage")
      */
     public function homepage(Request $request): Response
     {
         return $this->render('home/homepage.html.twig');
+    }
+
+    /**
+     * @Route("/legal-mentions", methods={"GET"}, name="legal-mentions")
+     */
+    public function legalMentions(Request $request): Response
+    {
+        return $this->render('home/legal_mentions.html.twig');
+    }
+
+    /**
+     * @Route("/partners", methods={"GET"}, name="partners")
+     */
+    public function partners(Request $request): Response
+    {
+        return $this->render('home/partners.html.twig');
+    }
+
+    /**
+     * @Route("/activities", methods={"GET"}, name="activities")
+     */
+    public function activities(Request $request): Response
+    {
+        return $this->render('home/activities.html.twig');
+    }
+
+    /**
+     * @Route("/sitemap", methods={"GET"}, name="sitemap")
+     */
+    public function sitemap(Request $request): Response
+    {
+        return $this->render('home/sitemap.html.twig');
     }
 }
