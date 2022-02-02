@@ -1,6 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: annotation
+    name_prefix: web_
 
 kernel:
     resource: ../src/Kernel.php
