@@ -13,6 +13,7 @@ services:
     networks:
       - app
       - redis
+      - mailhog
 
   nginx:
     image: nginx
@@ -65,6 +66,24 @@ services:
     networks:
       - traefik_reverse_proxy
       - redis
+      
+  mailhog:
+    image: mailhog/mailhog
+    deploy:
+      labels:
+        - "traefik.http.routers.mailhog.rule=Host(`mailhog.idci-website.docker`)"
+        - "traefik.http.routers.mailhog-https.rule=Host(`mailhog.idci-website.docker`)"
+        - "traefik.docker.network=traefik_reverse_proxy"
+        - "traefik.http.services.mailhog.loadbalancer.server.port=8025"
+        - "traefik.enable=true"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.routers.mailhog.entryPoints=web"
+        - "traefik.http.routers.mailhog-https.entryPoints=websecure"
+        - "traefik.http.routers.mailhog-https.tls=true"
+        - "traefik.http.routers.mailhog-https.tls.certresolver=letsencrypt"
+    networks:
+      - traefik_reverse_proxy
+      - mailhog
 
 configs:
   nginx_conf:
@@ -79,5 +98,6 @@ volumes:
 networks:
   app:
   redis:
+  mailhog:
   traefik_reverse_proxy:
     external: true
