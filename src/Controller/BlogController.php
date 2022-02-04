@@ -13,9 +13,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends AbstractController
 {
     /**
-     * @Route("/", methods={"GET"}, name="blog")
+     * @Route("/", methods={"GET"}, name="index")
      */
-    public function blog(Request $request): Response
+    public function index(Request $request): Response
     {
         return $this->render('blog/index.html.twig');
     }

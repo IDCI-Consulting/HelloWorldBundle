@@ -13,17 +13,17 @@ use Symfony\Component\Routing\Annotation\Route;
 class TeamController extends AbstractController
 {
     /**
-     * @Route("/", methods={"GET"}, name="team")
+     * @Route("/", methods={"GET"}, name="index")
      */
-    public function team(Request $request): Response
+    public function index(Request $request): Response
     {
         return $this->render('team/index.html.twig');
     }
 
     /**
-     * @Route("/{slug}", methods={"GET"}, name="person")
+     * @Route("/{slug}", methods={"GET"}, name="member")
      */
-    public function person(Request $request, String $slug): Response
+    public function member(Request $request, String $slug): Response
     {
         return $this->render('team/show.html.twig', [
             'slug' => $slug

@@ -13,17 +13,17 @@ use Symfony\Component\Routing\Annotation\Route;
 class CoursesController extends AbstractController
 {
     /**
-     * @Route("/", methods={"GET"}, name="courses")
+     * @Route("/", methods={"GET"}, name="index")
      */
-    public function courses(Request $request): Response
+    public function index(Request $request): Response
     {
         return $this->render('courses/index.html.twig');
     }
 
     /**
-     * @Route("/{slug}", methods={"GET"}, name="course")
+     * @Route("/{slug}", methods={"GET"}, name="show")
      */
-    public function course(Request $request, String $slug): Response
+    public function show(Request $request, String $slug): Response
     {
         return $this->render('courses/show.html.twig', [
             'slug' => $slug

@@ -13,9 +13,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class ContactController extends AbstractController
 {
     /**
-     * @Route("/", methods={"GET", "POST"}, name="contact")
+     * @Route("/", methods={"GET", "POST"}, name="index")
      */
-    public function contact(Request $request): Response
+    public function index(Request $request): Response
     {
         return $this->render('contact/index.html.twig');
     }
