@@ -23,7 +23,7 @@ COPY bin bin/
 COPY config config/
 COPY public public/
 COPY src src/
-# COPY templates templates/
+COPY templates templates/
 # COPY translations translations/
 
 ## Create empty var cache and var log directory
