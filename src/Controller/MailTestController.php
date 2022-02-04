@@ -32,7 +32,8 @@ class MailTestController extends AbstractController
             ->to('joris.viniere@idci-consulting.fr')
             ->subject('Test')
             ->text('Test')
-            ->html('<p>Test</p>');
+            ->html('<p>Test</p>')
+        ;
 
         $mailer->send($email);
 
