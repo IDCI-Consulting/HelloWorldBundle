@@ -40,12 +40,4 @@ class HomeController extends AbstractController
     {
         return $this->render('home/activities.html.twig');
     }
-
-    /**
-     * @Route("/sitemap", methods={"GET"}, name="sitemap")
-     */
-    public function sitemap(Request $request): Response
-    {
-        return $this->render('home/sitemap.html.twig');
-    }
 }
