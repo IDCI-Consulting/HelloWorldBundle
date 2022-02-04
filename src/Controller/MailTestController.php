@@ -35,7 +35,7 @@ class MailTestController extends AbstractController
             ->html('<p>Test</p>')
         ;
 
-        $mailer->send($email);
+        $this->mailer->send($email);
 
         return $this->render('/mail/index.html.twig');
     }
