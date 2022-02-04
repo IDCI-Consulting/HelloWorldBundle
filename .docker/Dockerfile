@@ -3,7 +3,13 @@ FROM php:8.1-fpm AS base
 
 ## Install dependencies
 RUN apt update \
-	&& apt install -y git zip libpq-dev rsync
+	&& apt install -y git zip libpq-dev rsync libicu-dev
+
+## Install php extensions
+RUN docker-php-ext-configure intl && docker-php-ext-install intl
+
+## Install redis dependencies
+RUN pecl install redis && docker-php-ext-enable redis
 
 ## Add the entrypoint script
 ADD .docker/entrypoint.sh /entrypoint.sh
@@ -17,8 +23,8 @@ COPY bin bin/
 COPY config config/
 COPY public public/
 COPY src src/
-COPY templates templates/
-COPY translations translations/
+# COPY templates templates/
+# COPY translations translations/
 
 ## Create empty var cache and var log directory
 RUN mkdir -p /var/www/app/var/cache /var/www/app/var/log

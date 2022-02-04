@@ -12,6 +12,7 @@ services:
       - composer_data:/var/www/.composer
     networks:
       - app
+      - redis
 
   nginx:
     image: nginx
@@ -38,6 +39,33 @@ services:
       - traefik_reverse_proxy
       - app
 
+  redis:
+    image: redis:6
+    volumes:
+      - redis_data:/data
+    networks:
+      - redis
+
+  redis-commander:
+    image: rediscommander/redis-commander
+    deploy:
+      labels:
+        - "traefik.http.routers.redis-commander.rule=Host(`redis-commander.idci-website.docker`)"
+        - "traefik.http.routers.redis-commander-https.rule=Host(`redis-commander.idci-website.docker`)"
+        - "traefik.docker.network=traefik_reverse_proxy"
+        - "traefik.http.services.redis-commander.loadbalancer.server.port=8081"
+        - "traefik.enable=true"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.routers.redis-commander.entryPoints=web"
+        - "traefik.http.routers.redis-commander-https.entryPoints=websecure"
+        - "traefik.http.routers.redis-commander-https.tls=true"
+        - "traefik.http.routers.redis-commander-https.tls.certresolver=letsencrypt"
+    environment:
+      - REDIS_HOSTS=session:redis
+    networks:
+      - traefik_reverse_proxy
+      - redis
+
 configs:
   nginx_conf:
     file: ./conf/nginx/site.conf
@@ -46,8 +74,10 @@ configs:
 
 volumes:
   composer_data:
+  redis_data:
 
 networks:
   app:
+  redis:
   traefik_reverse_proxy:
     external: true
