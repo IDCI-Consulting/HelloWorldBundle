@@ -36,8 +36,8 @@ class ContactController extends AbstractController
                 'Formulaire enregistré !'
             );
 
-            $event = $form->getData();
-            $this->dispatcher->dispatch($event, ContactEvents::CONTACT_FORM_SUBMITTED);
+            // $event = $form->getData();
+            // $this->dispatcher->dispatch($event, ContactEvents::CONTACT_FORM_SUBMITTED);
 
             return $this->redirectToRoute('app_contact_index');
         }

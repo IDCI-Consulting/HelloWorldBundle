@@ -17,8 +17,9 @@ class ContactSubscriber implements EventSubscriberInterface
         ];
     }
 
-    public function sendContactEmail()
+    public function sendContactEmail(ContactEvent $event)
     {
+        dd($event);
         dd('email to send now');
     }
 }
