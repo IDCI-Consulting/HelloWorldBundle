@@ -4,5 +4,5 @@ namespace App\Event;
 
 class ContactEvents
 {
-    public const NEW_CONTACT = 'contact.mailer.send';
+    public const CONTACT_FORM_SUBMITTED = 'app.contact_form.submitted';
 }

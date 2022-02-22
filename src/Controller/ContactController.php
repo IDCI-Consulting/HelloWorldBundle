@@ -35,7 +35,7 @@ class ContactController extends AbstractController
             $this->addFlash('success', 'Formulaire enregistré !');
 
             $event = new ContactEvent($form->getData());
-            $this->dispatcher->dispatch($event, ContactEvents::NEW_CONTACT);
+            $this->dispatcher->dispatch($event, ContactEvents::CONTACT_FORM_SUBMITTED);
 
             return $this->redirectToRoute('app_contact_index');
         }
