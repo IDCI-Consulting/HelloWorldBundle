@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
 
-  php:
+  idci-php:
     image: docker-registry.idci-consulting.fr/idci-website/php-fpm:dev
     configs:
       - source: php_conf
@@ -15,7 +15,7 @@ services:
       - redis
       - mailhog
 
-  nginx:
+  idci-nginx:
     image: nginx
     deploy:
       labels:
@@ -40,14 +40,14 @@ services:
       - traefik_reverse_proxy
       - app
 
-  redis:
+  idci-redis:
     image: redis:6
     volumes:
       - redis_data:/data
     networks:
       - redis
 
-  redis-commander:
+  idci-redis-commander:
     image: rediscommander/redis-commander
     deploy:
       labels:
@@ -67,7 +67,7 @@ services:
       - traefik_reverse_proxy
       - redis
       
-  mailhog:
+  idci-mailhog:
     image: mailhog/mailhog
     deploy:
       labels:

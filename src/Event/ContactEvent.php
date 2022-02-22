@@ -17,4 +17,13 @@ class ContactEvent extends Event
     {
         return $this->formData;
     }
+
+    public function getFormFieldData(String $field)
+    {
+        if(isset($this->formData[$field])) {
+            return $this->formData[$field];
+        }
+
+        return null;
+    }
 }

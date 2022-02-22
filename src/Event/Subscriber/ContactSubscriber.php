@@ -29,7 +29,7 @@ class ContactSubscriber implements EventSubscriberInterface
     public function sendContactEmail(ContactEvent $event)
     {
         $email = (new Email())
-            ->to($event->getFormData()["email"])
+            ->to($event->getFormFieldData("email"))
             ->subject('Vous nous avez contacté !')
             ->text('Nous avons bien reçu votre demande')
             ->html('<p>Nous allons en prendre connaissance et revenir vers vous !</p>')
