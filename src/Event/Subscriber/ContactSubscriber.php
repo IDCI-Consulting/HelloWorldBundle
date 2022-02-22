@@ -20,7 +20,7 @@ class ContactSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            ContactEvents::CONTACT_FORM_SUBMITTED => [
+            ContactEvents::NEW_CONTACT => [
                 ['sendContactEmail', 8],
             ],
         ];
@@ -29,7 +29,6 @@ class ContactSubscriber implements EventSubscriberInterface
     public function sendContactEmail(ContactEvent $event)
     {
         $email = (new Email())
-            ->from('no-reply@idci-consulting.fr')
             ->to($event->getFormData()["email"])
             ->subject('Vous nous avez contacté !')
             ->text('Nous avons bien reçu votre demande')

@@ -32,13 +32,10 @@ class ContactController extends AbstractController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash(
-                'success',
-                'Formulaire enregistré !'
-            );
+            $this->addFlash('success', 'Formulaire enregistré !');
 
             $event = new ContactEvent($form->getData());
-            $this->dispatcher->dispatch($event, ContactEvents::CONTACT_FORM_SUBMITTED);
+            $this->dispatcher->dispatch($event, ContactEvents::NEW_CONTACT);
 
             return $this->redirectToRoute('app_contact_index');
         }
