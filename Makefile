@@ -36,17 +36,17 @@ composer-install:
 	docker exec -t "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer install --no-interaction
 
 # NODE
-# .PHONY: yarn
-# yarn:
-# 	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:15 yarn $(cmd)
+.PHONY: yarn
+yarn:
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:15 yarn $(cmd)
 
-# .PHONY: encore
-# encore:
-# 	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:15 yarn encore dev $(options)
+.PHONY: encore
+encore:
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:15 yarn encore dev $(options)
 
-# .PHONY: encore-production
-# encore-production:
-# 	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:15 yarn encore production $(options)
+.PHONY: encore-production
+encore-production:
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:15 yarn encore production $(options)
 
 # IMAGES
 .PHONY: build-image
