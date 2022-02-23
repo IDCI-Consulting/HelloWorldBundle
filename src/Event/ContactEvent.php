@@ -13,15 +13,14 @@ class ContactEvent extends Event
         $this->formData = $formData;
     }
 
-    public function getFormData(string $field = "default")
+    public function getFormData(string $key = null, string $default = null)
     {
-        if ($field === "default") {
+        if ($key === null) {
             return $this->formData;
-        }
-        else if (isset($this->formData[$field])) {
-            return $this->formData[$field];
+        } else if (isset($this->formData[$key]) && $this->formData[$key] !== null) {
+            return $this->formData[$key];
         }
 
-        return null;
+        return $default;
     }
 }

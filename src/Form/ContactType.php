@@ -16,6 +16,7 @@ class ContactType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'label' => 'name',
+                'required' => false,
             ])
             ->add('lastName', TextType::class, [
                 'label' => 'last_name',
