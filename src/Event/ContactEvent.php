@@ -15,9 +15,9 @@ class ContactEvent extends Event
 
     public function getFormData(string $key = null, string $default = null)
     {
-        if ($key === null) {
+        if (null === $key) {
             return $this->formData;
-        } else if (isset($this->formData[$key]) && $this->formData[$key] !== null) {
+        } elseif (isset($this->formData[$key]) && null !== $this->formData[$key]) {
             return $this->formData[$key];
         }
 
