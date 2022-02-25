@@ -1,10 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 {% block body %}
-    <h1>Erreur de redirection</h1>
 
+    <h1>Erreur de redirection</h1>
     <p>
         Il semblerait que la redirection temporaire n'ai pas fonctionnée.
         <a href="{{ path('app_homepage') }}">Revenir à l'accueil</a>.
     </p>
+
 {% endblock %}

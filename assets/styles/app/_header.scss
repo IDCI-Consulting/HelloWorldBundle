@@ -1,7 +1,22 @@
 header {
-    ul {
-        li {
-            color: $idci-color-light-blue;
+    nav {
+        margin: auto;
+        //margin-top: 1rem;
+        width: 70%;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            text-transform: uppercase;
+
+            li {
+                border: 1px solid $idci-color-light-blue;
+                padding: 1rem 2rem;
+                
+                a {
+                    color: $idci-color-black;
+                }
+            }
         }
     }
 }
