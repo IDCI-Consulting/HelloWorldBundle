@@ -13,11 +13,13 @@ class ContactSubscriber implements EventSubscriberInterface
 {
     private MailerInterface $mailer;
     private Environment $twig;
+    private array $contactRecipientsAddress;
 
-    public function __construct(MailerInterface $mailer, Environment $twig)
+    public function __construct(MailerInterface $mailer, Environment $twig, array $contactRecipientsAddress)
     {
         $this->mailer = $mailer;
         $this->twig = $twig;
+        $this->contactRecipientsAddress = $contactRecipientsAddress;
     }
 
     public static function getSubscribedEvents()
@@ -33,7 +35,7 @@ class ContactSubscriber implements EventSubscriberInterface
     public function notifyIdciByEmail(ContactEvent $event)
     {
         $email = (new Email())
-            ->to($_ENV['MAILER_RECIPIENT_ADDRESS'])
+            ->to(...$this->contactRecipientsAddress)
             ->subject('IDCI Contact')
             ->html(
                 $this->twig->render('emails/idci_email.html.twig')
