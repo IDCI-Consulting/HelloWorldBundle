@@ -13,13 +13,13 @@ class ContactSubscriber implements EventSubscriberInterface
 {
     private MailerInterface $mailer;
     private Environment $twig;
-    private array $contactRecipientsAddress;
+    private array $contactRecipientsAddresses;
 
-    public function __construct(MailerInterface $mailer, Environment $twig, array $contactRecipientsAddress)
+    public function __construct(MailerInterface $mailer, Environment $twig, array $contactRecipientsAddresses)
     {
         $this->mailer = $mailer;
         $this->twig = $twig;
-        $this->contactRecipientsAddress = $contactRecipientsAddress;
+        $this->contactRecipientsAddresses = $contactRecipientsAddresses;
     }
 
     public static function getSubscribedEvents()
@@ -35,10 +35,18 @@ class ContactSubscriber implements EventSubscriberInterface
     public function notifyIdciByEmail(ContactEvent $event)
     {
         $email = (new Email())
-            ->to(...$this->contactRecipientsAddress)
+            ->to(...$this->contactRecipientsAddresses)
             ->subject('IDCI Contact')
             ->html(
-                $this->twig->render('emails/idci_email.html.twig')
+                $this->twig->render(
+                    'emails/idci_email.html.twig',
+                    [
+                        'senderLastName' => $event->getFormData("lastName"),
+                        'senderFirstName' => $event->getFormData("firstName"),
+                        'senderSubject' => $event->getFormData("subject"),
+                        'senderContent' => $event->getFormData("content"),
+                    ]
+                )
             )
         ;
 
@@ -51,7 +59,15 @@ class ContactSubscriber implements EventSubscriberInterface
             ->to($event->getFormData("email"))
             ->subject('IDCI Contact')
             ->html(
-                $this->twig->render('emails/sender_email.html.twig')
+                $this->twig->render(
+                    'emails/sender_email.html.twig', 
+                    [
+                        'senderLastName' => $event->getFormData("lastName"),
+                        'senderFirstName' => $event->getFormData("firstName"),
+                        'senderSubject' => $event->getFormData("subject"),
+                        'senderContent' => $event->getFormData("content"),
+                    ]
+                )
             )
         ;
 

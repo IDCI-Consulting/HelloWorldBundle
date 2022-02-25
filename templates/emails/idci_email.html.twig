@@ -1,3 +1,4 @@
-<h2>Vous avez une nouvelle demande de contact !</h2>
+<h2>Vous avez une nouvelle demande de contact de la part de {{ senderLastName }} {{ senderFirstName }}.</h2>
 
-<p>Voici la demande que vous avez reçu</p>
+<p>Cette demande concerne le sujet : {{ senderSubject }}</p>
+<p>Voici son message : "{{ senderContent }}"</p>

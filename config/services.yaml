@@ -25,4 +25,4 @@ services:
 
     App\Event\Subscriber\ContactSubscriber:
         arguments:
-            $contactRecipientsAddress: '%env(json:MAILER_RECIPIENT_ADDRESS)%'
+            $contactRecipientsAddresses: '%env(json:MAILER_RECIPIENT_ADDRESSES)%'
