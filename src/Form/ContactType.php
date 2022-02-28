@@ -54,7 +54,9 @@ class ContactType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('captcha', CaptchaType::class);
+            ->add('captcha', CaptchaType::class, [
+                'invalid_message' => 'Le captcha n\'a pas été validé, veuillez ressayer'
+            ]);
         ;
 
         $builder
