@@ -31,9 +31,9 @@ class ContactType extends AbstractType
             ])
             ->add('email', EmailType::class, [
                 'label' => 'email',
-                // 'constraints' => [
-                //     new Assert\Email(),
-                // ],
+                'constraints' => [
+                    new Assert\Email(),
+                ],
             ])
             ->add('subject', ChoiceType::class, [
                 'label' => 'subject',
@@ -47,12 +47,12 @@ class ContactType extends AbstractType
             ])
             ->add('content', TextAreaType::class, [
                 'label' => 'content',
-                // 'constraints' => [
-                //     new Assert\Length([
-                //         'min' => 10,
-                //         'max' => 1500,
-                //     ]),
-                // ],
+                'constraints' => [
+                    new Assert\Length([
+                        'min' => 10,
+                        'max' => 1500,
+                    ]),
+                ],
             ])
             ->add('captcha', CaptchaType::class);
         ;
