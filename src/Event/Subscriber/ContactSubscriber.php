@@ -41,9 +41,7 @@ class ContactSubscriber implements EventSubscriberInterface
                 $this->twig->render(
                     'emails/idci_email.html.twig',
                     [
-                        'senderFullName' => $event->getFormData("fullName"),
-                        'senderSubject' => $event->getFormData("subject"),
-                        'senderContent' => $event->getFormData("content"),
+                        'formData' => $event->getFormData(),
                     ]
                 )
             )
@@ -61,9 +59,7 @@ class ContactSubscriber implements EventSubscriberInterface
                 $this->twig->render(
                     'emails/sender_email.html.twig', 
                     [
-                        'senderFullName' => $event->getFormData("fullName"),
-                        'senderSubject' => $event->getFormData("subject"),
-                        'senderContent' => $event->getFormData("content"),
+                        'formData' => $event->getFormData(),
                     ]
                 )
             )

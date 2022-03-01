@@ -17,8 +17,8 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('entreprise', TextType::class, [
-                'label' => 'entreprise',
+            ->add('company', TextType::class, [
+                'label' => 'company',
                 'required' => false,
             ])
             ->add('website', TextType::class, [
@@ -41,17 +41,14 @@ class ContactType extends AbstractType
                     'Développement applicatif' => 'Développement applicatif',
                     'Formations' => 'Formations',
                     'Partenariats' => 'Partenariats',
-                    'Autre' => 'other',
+                    'Autre' => 'Autre',
                 ],
                 'placeholder' => 'Veuillez sélectionner un sujet'
             ])
             ->add('content', TextAreaType::class, [
                 'label' => 'content',
                 'constraints' => [
-                    new Assert\Length([
-                        'min' => 10,
-                        'max' => 1500,
-                    ]),
+                    new Assert\NotBlank(),
                 ],
             ])
             ->add('captcha', CaptchaType::class, [
