@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <h1>Page indisponible</h1>
+    <p>
+        Il semblerait que vous n'ayez pas les permissions pour accèder à cette page, vérifiez que vous souhaitiez bien accèder à cette page.
+        <a href="{{ path('app_homepage') }}">Revenir à l'accueil</a>.
+    </p>
+    
+{% endblock %}
