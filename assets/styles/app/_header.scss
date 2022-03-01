@@ -1,28 +1,53 @@
 header {
-    border: 1px solid $idci-color-grey;
-    
+    border-bottom: 3px solid $idci-color-grey;
+    display: flex;
+    height: 5rem;
+
     nav {
+        height: 100%;
         margin: auto;
-        //margin-top: 1rem;
-        //width: 70%;
+        margin-left: 0;
+        width: 40%;
 
         ul {
             display: flex;
             justify-content: space-around;
+            height: 100%;
             text-transform: uppercase;
 
-            li {                
+            li {
+                height: 100%;
+
                 a {
                     color: $idci-color-black;
+                    display: block;
                     font-size: $idci-font-medium;
+                    font-weight: bold;
+                    height: 105%;
+                    line-height: 5rem;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        border-bottom: 3px solid $idci-color-light-green;
+                        font-size: $idci-font-large;
+                    }
                 }
             }
         }
     }
 
     .header-media {
+        width: 20%;
+
         img {
+            display: block;
+            margin: auto;
+            margin-top: 1rem;
             width: 10rem;
         }
+    }
+
+    .header-locale {
+        width: 20%;
     }
 }
