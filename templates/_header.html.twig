@@ -1,6 +1,22 @@
 {% set current_route = app.request.attributes.get('_route') %}
 
 <header class="">
+    <div class="hamburger-menu">
+        <input type="checkbox" id="show-mobile-menu" class="show-mobile-menu">
+        <label for="show-mobile-menu" class="show-mobile-menu-button fas fa-bars fa-2x">
+        </label>
+        <div class="mobile-menu">
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-list-item {{ app.request.attributes.get('_route') == 'app_homepage' ? 'active' }}"><a href="{{ path('app_homepage') }}">Accueil</a></li>
+                <li class="mobile-menu-list-item {% if current_route == 'app_courses_index' or current_route == 'app_courses_show' %}{{ 'active' }}{% endif %}"><a href="{{ path('app_courses_index') }}">Formations</a></li>
+                <li class="mobile-menu-list-item {{ app.request.attributes.get('_route') == 'app_partners' ? 'active' }}"><a href="{{ path('app_partners') }}">Partneraires</a></li>
+                <li class="mobile-menu-list-item {{ app.request.attributes.get('_route') == 'app_activities' ? 'active' }}"><a href="{{ path('app_activities') }}">Réalisations</a></li>
+                <li class="mobile-menu-list-item {% if current_route == 'app_team_index' or current_route == 'app_team_member' %}{{ 'active' }}{% endif %}"><a href="{{ path('app_team_index') }}">Membres</a></li>
+                <li class="mobile-menu-list-item {% if current_route == 'app_blog_index' or current_route == 'app_blog_show' %}{{ 'active' }}{% endif %}"><a href="{{ path('app_blog_index') }}">Blog</a></li>
+                <li class="mobile-menu-list-item {{ app.request.attributes.get('_route') == 'app_contact_index' ? 'active' }}"><a href="{{ path('app_contact_index') }}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="header-media">
         <img src="{{ asset('build/images/idci-logo.svg') }}">
     </div>

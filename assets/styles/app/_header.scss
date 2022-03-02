@@ -3,12 +3,79 @@ header {
     display: flex;
     height: 5rem;
 
+    .hamburger-menu {
+        display: none;
+        width: 20%;
+
+        @include until($desktop) {
+            display: flex;
+        }
+
+        .show-mobile-menu {
+            display: none;
+
+            &:checked ~ .fa-bars::before {
+                content: '\f00d';
+            }
+
+            &:checked ~ .mobile-menu {
+                display: block;
+                transform: translateX(0);
+            }
+        }
+
+        .show-mobile-menu-button {
+            color: $idci-color-dark-grey;
+            margin: auto;
+        }
+
+        .mobile-menu {
+            background-color: $idci-color-black;
+            border-bottom: 3px solid $idci-color-grey;
+            border-right: 3px solid $idci-color-grey;
+            border-top: 3px solid $idci-color-white;
+            display: none;
+            position: absolute;
+            top: calc(5rem - 3px);
+            width: 12rem;
+            z-index: 100;
+
+            .mobile-menu-list {
+                text-align: center;
+
+                .mobile-menu-list-item {
+                    border-top: 1px solid $idci-color-white;
+                    height: 3rem;
+
+                    &.active {
+                        background: linear-gradient(0deg, $idci-color-light-blue, transparent);
+                    }
+
+                    &:hover {
+                        background: linear-gradient(0deg, $idci-color-light-blue, transparent);
+                    }
+
+                    a {
+                        color: $idci-color-white;
+                        display: block;
+                        height: 100%;
+                        margin-top: 1rem;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
     nav {
         height: 100%;
-        margin: auto;
         margin-left: 0;
         min-width: 30rem;
         width: 40%;
+
+        @include until($desktop) {
+            display: none;
+        }
 
         ul {
             display: flex;
@@ -45,6 +112,10 @@ header {
     .header-media {
         min-width: 15rem;
         width: 20%;
+
+        @include until($desktop) {
+            width: 90%;
+        }
 
         img {
             display: block;
