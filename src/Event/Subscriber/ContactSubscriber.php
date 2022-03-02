@@ -39,9 +39,9 @@ class ContactSubscriber implements EventSubscriberInterface
             ->subject('IDCI Contact')
             ->html(
                 $this->twig->render(
-                    'emails/idci_email.html.twig',
+                    'emails/contact_idci_notification.html.twig',
                     [
-                        'formData' => $event->getFormData(),
+                        'form_data' => $event->getFormData(),
                     ]
                 )
             )
@@ -57,9 +57,9 @@ class ContactSubscriber implements EventSubscriberInterface
             ->subject('IDCI Contact')
             ->html(
                 $this->twig->render(
-                    'emails/sender_email.html.twig', 
+                    'emails/contact_sender_notification.html.twig',
                     [
-                        'formData' => $event->getFormData(),
+                        'form_data' => $event->getFormData(),
                     ]
                 )
             )

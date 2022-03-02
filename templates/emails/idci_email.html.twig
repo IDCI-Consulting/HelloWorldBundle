@@ -1,6 +1,0 @@
-<h2>Vous avez une nouvelle demande de contact de la part de {{ formData.fullName }}.</h2>
-{% if formData.company is not null %}<h3>Entreprise : {{ formData.company }}</h3>{% endif %}
-{% if formData.website is not null %}<h3>Site web : {{ formData.website }}</h3>{% endif %}
-
-<p>Cette demande concerne le sujet : {{ formData.subject }}</p>
-<p>Voici son message : "{{ formData.content }}"</p>
