@@ -10,24 +10,35 @@
                     <span class="fas fa-envelope fa-2x footer-contact-list-item-icon"></span>
                     <a href="" class="footer-contact-list-item-text">contact@idci-consulting.fr</a>
                 </li>
-                <li class="footer-contact-list-item">
-                    <a href="" class="footer-contact-list-item-button">Nous contacter</a>
+                <li class="footer-contact-list-item-button">
+                    <a href="{{ path('app_contact_index') }}">Nous contacter</a>
                 </li>
             </ul>
         </div>
         <div class="column is-3 footer-first-row footer-social">
             <img src="{{ asset('build/images/idci-logo-balise-grayscale.png') }}" class="footer-social-logo">
             <div class="footer-social-media">
-                <i class="fab fa-facebook fa-3x"></i>
-                <i class="fab fa-twitter fa-3x"></i>
-                <i class="fab fa-github fa-3x"></i>
+                <a href="https://www.facebook.com/idciconsulting"><i class="fab fa-facebook fa-3x"></i></a>
+                <a href="https://www.twitter.com/idciconsulting"><i class="fab fa-twitter fa-3x"></i></a>
+                <a href="https://github.com/IDCI-Consulting"><i class="fab fa-github fa-3x"></i></a>
             </div>
         </div>
         <div class="column is-3 footer-first-row footer-address">
-            <p>test</p>
+            <div class="footer-address-text">
+                <h3>IDCI-Consulting</h3>
+                <p>109 rue Francis de Pressensé</p>
+                <p>69100 Villeurbanne - FRANCE</p>
+                <h4>Siège social</h4>
+                <p>82 ruelle du Brief</p>
+                <p>01170 Gex - FRANCE</p>
+            </div>
         </div>
         <div class="column is-9 footer-second-row footer-cgu">
-            <p>test</p>
+            <div class="footer-cgu-links">
+                <a href="{{ path('app_legal-mentions') }}" class="footer-cgu-link-item">Mentions légales</a>
+                <a href="{{ path('app_seo_sitemap') }}" class="footer-cgu-link-item">Sitemap</a>
+            </div>
+            <p class="footer-cgu-website-version">@idci v4.0.0 - 2022</p>
         </div>
     </div>
 </footer>
