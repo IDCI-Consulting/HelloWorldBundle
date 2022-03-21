@@ -1,16 +1,19 @@
 $idci-color-black: #000000;
 $idci-color-light-black: #212121;
-$idci-color-grey: #DEDDD8;
 $idci-color-dark-grey: #595959;
+$idci-color-grey: #6A7A89;
+$idci-color-light-grey: #ebebeb;
 $idci-color-light-blue: #008CBA;
 $idci-color-light-green: #1E9847;
 $idci-color-white: #FFFFFF;
+$idci-color-white-lighter: #F7F7F7;
 
 $idci-primary-font: 'Oswald';
 
 $idci-font-medium: 0.8rem;
 $idci-font-large: 1rem;
 $idci-font-larger: 1.2rem;
+$idci-font-2x: 2rem;
 
 @font-face {
     font-family: $idci-primary-font;
