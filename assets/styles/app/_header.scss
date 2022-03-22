@@ -30,7 +30,7 @@ header {
         }
 
         .mobile-menu {
-            background-color: $idci-color-black;
+            background-color: $idci-color-light-black;
             border-bottom: 3px solid $idci-color-grey;
             border-right: 3px solid $idci-color-grey;
             border-top: 3px solid $idci-color-white;
@@ -59,7 +59,7 @@ header {
                         color: $idci-color-white;
                         display: block;
                         height: 100%;
-                        margin-top: 1rem;
+                        line-height: 3rem;
                         text-transform: uppercase;
                     }
                 }
@@ -97,7 +97,6 @@ header {
 
                     &:hover {
                         border-bottom: 3px solid $idci-color-light-green;
-                        font-size: $idci-font-large;
                     }
 
                     &.active {
