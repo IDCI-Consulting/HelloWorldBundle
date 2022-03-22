@@ -24,4 +24,16 @@ html {
 
 * {
     font-family: $idci-primary-font;
+    
+    &.idci-title-primary {
+        color: $idci-color-light-blue;
+        text-align: center;
+        font-size: $idci-font-3x;
+    }
+
+    &.idci-subtitle-primary {
+        color: $idci-color-grey;
+        text-align: center;
+        font-size: $idci-font-3x;
+    }
 }
