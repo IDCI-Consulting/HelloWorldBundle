@@ -6,6 +6,8 @@
 @import '~bulma/sass/helpers/all';
 @import '~bulma/sass/utilities/all';
 
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 @import 'settings';
 @import 'header';
 @import 'footer';
@@ -14,4 +16,8 @@ html {
     body {
         color: $idci-color-black;
     }
+}
+
+* {
+    font-family: $idci-primary-font;
 }

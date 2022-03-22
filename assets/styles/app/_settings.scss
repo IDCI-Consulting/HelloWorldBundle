@@ -1,4 +1,31 @@
 $idci-color-black: #000000;
+$idci-color-light-black: #212121;
+$idci-color-grey: #DEDDD8;
+$idci-color-dark-grey: #595959;
 $idci-color-light-blue: #008CBA;
 $idci-color-light-green: #1E9847;
 $idci-color-white: #FFFFFF;
+
+$idci-primary-font: 'Oswald';
+
+$idci-font-medium: 0.8rem;
+$idci-font-large: 1rem;
+$idci-font-larger: 1.2rem;
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../../fonts/Oswald-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../../fonts/Oswald-Regular.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../../fonts/Oswald-Light.ttf") format("truetype");
+    font-weight: lighter;
+}
