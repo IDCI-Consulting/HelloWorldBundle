@@ -96,14 +96,9 @@ footer {
                     margin-top: 4rem;
                     width: fit-content;
     
-                    h3 {
+                    .footer-title {
                         color: $idci-color-white;
                         font-size: $idci-font-larger;
-                    }
-    
-                    h4 {
-                        color: $idci-color-white;
-                        font-size: $idci-font-large;
                     }
     
                     p {

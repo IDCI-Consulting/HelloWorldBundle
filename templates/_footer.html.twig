@@ -11,7 +11,7 @@
                     <a href="" class="footer-contact-list-item-text">contact@idci-consulting.fr</a>
                 </li>
                 <li class="footer-contact-list-item-button">
-                    <a href="{{ path('app_contact_index') }}">Nous contacter</a>
+                    <a href="{{ url('app_contact_index') }}">Nous contacter</a>
                 </li>
             </ul>
         </div>
@@ -25,20 +25,20 @@
         </div>
         <div class="column is-3 footer-first-row footer-address">
             <div class="footer-address-text">
-                <h3>IDCI-Consulting</h3>
+                <p class="footer-title">IDCI-Consulting</p>
                 <p>109 rue Francis de Pressensé</p>
                 <p>69100 Villeurbanne - FRANCE</p>
-                <h4>Siège social</h4>
+                <p class="footer-title">Siège social</p>
                 <p>82 ruelle du Brief</p>
                 <p>01170 Gex - FRANCE</p>
             </div>
         </div>
         <div class="column is-9 footer-second-row footer-cgu">
             <div class="footer-cgu-links">
-                <a href="{{ path('app_legal-mentions') }}" class="footer-cgu-link-item">Mentions légales</a>
-                <a href="{{ path('app_seo_sitemap') }}" class="footer-cgu-link-item">Sitemap</a>
+                <a href="{{ url('app_legal-mentions') }}" class="footer-cgu-link-item">Mentions légales</a>
+                <a href="{{ url('app_seo_sitemap') }}" class="footer-cgu-link-item">Sitemap</a>
             </div>
-            <p class="footer-cgu-website-version">@idci v4.0.0 - 2022</p>
+            <p class="footer-cgu-website-version">{{ app_version }}</p>
         </div>
     </div>
 </footer>
