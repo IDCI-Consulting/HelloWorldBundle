@@ -25,8 +25,11 @@ class TeamController extends AbstractController
      */
     public function member(Request $request, String $slug): Response
     {
+        $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s_%s.json', $slug, 'fr'), 'r');
+
         return $this->render('team/show.html.twig', [
-            'slug' => $slug
+            'slug' => $slug,
+            'data' => json_decode($cvFile->fread($cvFile->getSize()))
         ]);
     }
 }

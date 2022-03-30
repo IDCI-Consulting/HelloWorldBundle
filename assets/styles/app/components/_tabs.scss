@@ -1,0 +1,24 @@
+.tabs {
+    li[data-tab="hidden"]{
+        display: none;
+    }
+
+    li.is-active {
+        background-color: $idci-color-light-blue;
+
+        a {
+            color: $idci-color-white;
+        }
+    }
+    
+   .tab {
+
+        &.columns {
+            flex-wrap: wrap;
+
+            .column {
+                height: fit-content;            
+            }
+        }
+    } 
+}

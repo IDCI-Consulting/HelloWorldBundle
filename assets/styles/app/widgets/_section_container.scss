@@ -1,6 +1,33 @@
 .section-container {
+    padding: 4rem;
+    min-height: 100vh;
+    
     > * {
         margin: auto;
         width: 80%;
+    }
+
+    &.section-container-primary {
+        background-color: $idci-color-light-grey;
+    }
+
+    &.section-container-secondary {
+        background-color: $idci-color-white-lighter;
+    }
+
+    &.section-container-90 {
+        > * {
+            margin: auto;
+            min-height: 100vh;
+            width: 90%;
+        }
+    }
+
+    &.section-container-full {
+        > * {
+            margin: auto;
+            min-height: 100vh;
+            width: 100%;
+        }
     }
 }
