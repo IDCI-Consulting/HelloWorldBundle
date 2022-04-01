@@ -16,6 +16,16 @@ framework:
     #fragments: true
     php_errors:
         log: true
+    
+    http_client:
+        default_options:
+            max_redirects: 0
+        scoped_clients:
+            pdf_generator.client:
+                http_version: '1.0'
+                base_uri: 'http://wkhtmltopdf:5555'
+                auth_basic: 'idci:idci#2022'
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', 'User-Agent': 'Symfony idci-website HttpClient/Curl' }
 
 when@test:
     framework:
