@@ -1,7 +1,13 @@
 .section-container {
     padding: 4rem;
     min-height: 100vh;
-    
+    display: flex;
+    align-items: center;
+
+    @include until($desktop) {
+        padding: 2rem;
+    }
+
     > * {
         margin: auto;
         width: 80%;
@@ -17,16 +23,12 @@
 
     &.section-container-90 {
         > * {
-            margin: auto;
-            min-height: 100vh;
             width: 90%;
         }
     }
 
     &.section-container-full {
         > * {
-            margin: auto;
-            min-height: 100vh;
             width: 100%;
         }
     }

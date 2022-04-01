@@ -1,14 +1,27 @@
 .section-presentation {
     margin-bottom: 2rem;
     margin-top: 2rem;
+    //width: 80%;
 
     .section-presentation-title {
         font-weight: bold;
+
+        @include until($tablet) {
+            font-size: $idci-font-1-5x;
+        }
     }
 
     .section-presentation-subtitle {
         font-weight: bold;
         margin-top: 2rem;
+
+        @include until($tablet) {
+            font-size: $idci-font-2x;
+        }
+
+        &.section-presentation-subtitle-alone {
+            margin-top: 0;
+        }
     }
 
     .section-presentation-media {
@@ -33,12 +46,16 @@
         text-align: center;
         width: 50%;
 
+        @include until($tablet) {
+            width: 100%;
+        }
+
         .blue-colored-description-text {
-            color: $idci-color-light-blue;
+            color: $idci-color-blue;
         }
 
         .green-colored-description-text {
-            color: $idci-color-light-green;
+            color: $idci-color-green;
         }
     }
 
@@ -61,14 +78,18 @@
     }
 
     .section-presentation-courses-content {
+        align-items: center;
         display: flex;
         justify-content: center;
+        margin: auto;
         margin-top: 2rem;
-        text-align: center;
+        width: 50%;
 
         .section-presentation-courses-content-element {
             margin-left: 1rem;
             margin-right: 1rem;
+            width: 20%;
+            height: 100%;
         }
     }
 
@@ -78,6 +99,15 @@
         .section-presentation-column {
             .section-presentation-column-title {
                 font-size: $idci-font-1-5x;
+
+                @include until($desktop) {
+                    font-size: $idci-font-medium;
+                }
+
+                @include until($tablet) {
+                    margin-top: 2rem;
+                    font-size: $idci-font-1-5x;
+                }
             }
 
             .section-presentation-column-list {
@@ -85,11 +115,19 @@
                 margin-top: 2rem;
                 width: 70%;
 
+                @include until($desktop) {
+                    width: 60%;
+                }
+
                 .section-presentation-column-media {
                     display: block;
                     margin: auto;
                     margin-top: 1rem;
-                    width: 80%;
+                    max-width: 80%;
+
+                    @include until($tablet) {
+                        width: 30%;
+                    }
                 }
             }
         }

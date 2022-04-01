@@ -2,7 +2,7 @@
 
 {% block main %}
 
-<section class="section-container section-container-primary">
+<section class="section-container section-container-full section-container-primary">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-primary">Nous faisons du</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">Conseil</h3>
@@ -18,7 +18,7 @@
     </section>
 </section>
 
-<section class="section-container section-container-secondary">
+<section class="section-container section-container-full section-container-secondary">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-primary">Nous faisons de la</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">Formation</h3>
@@ -34,14 +34,13 @@
             <img src="{{ asset('build/images/balise_right.svg') }}" class="section-presentation-courses-media">
         </div>
         <div class="section-presentation-courses-content">
-            <img src="https://dummyimage.com/100x50/000/fff" class="section-presentation-courses-content-element">
-            <img src="https://dummyimage.com/100x50/000/fff" class="section-presentation-courses-content-element">
-            <img src="https://dummyimage.com/100x50/000/fff" class="section-presentation-courses-content-element">
+            <img src="{{ asset('build/images/symfony-logo.png') }}" class="section-presentation-courses-content-element">
+            <img src="{{ asset('build/images/css3-html5-logo.png') }}" class="section-presentation-courses-content-element">
         </div>
     </section>
 </section>
 
-<section class="section-container section-container-primary">
+<section class="section-container section-container-full section-container-primary">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-primary">Nous faisons du</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">Développement web</h3>
@@ -59,7 +58,7 @@
     </section>
 </section>
 
-<section class="section-container section-container-secondary">
+<section class="section-container section-container-full section-container-secondary">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-secondary">Notre philosophie</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">Open Source</h3>
@@ -76,9 +75,9 @@
     </section>
 </section>
 
-<section class="section-container section-container-primary">
+<section class="section-container section-container-full section-container-primary">
     <section class="section-presentation">
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">Notre méthodologie</h3>
+        <h3 class="section-presentation-subtitle section-presentation-subtitle-alone idci-subtitle-primary">Notre méthodologie</h3>
         <img src="{{ asset('build/images/agile.svg') }}" class="section-presentation-media">
         <p class="section-presentation-description">
             Nous sommes <span class="blue-colored-description-text">flexibles</span>. Les projets informatiques sont sujets à des changements très fréquents.
@@ -91,7 +90,7 @@
     </section>
 </section>
 
-<section class="section-container section-container-secondary">
+<section class="section-container section-container-full section-container-secondary">
     <section class="section-presentation">
         <h3 class="section-presentation-subtitle idci-subtitle-primary">Nos outils</h3>
         <img src="{{ asset('build/images/icon_outils.svg') }}" class="section-presentation-icon">

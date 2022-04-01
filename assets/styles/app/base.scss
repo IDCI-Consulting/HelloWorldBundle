@@ -26,7 +26,7 @@ html {
     font-family: $idci-primary-font;
 
     &.idci-title-primary {
-        color: $idci-color-light-blue;
+        color: $idci-color-blue;
         text-align: center;
         font-size: $idci-font-2x;
         text-transform: uppercase;
@@ -34,7 +34,7 @@ html {
     }
 
     &.idci-title-secondary {
-        color: $idci-color-light-green;
+        color: $idci-color-green;
         text-align: center;
         font-size: $idci-font-2x;
         text-transform: uppercase;
@@ -50,7 +50,7 @@ html {
     }
 
     &.idci-subtitle-secondary {
-        color: $idci-color-light-green;
+        color: $idci-color-green;
         text-align: center;
         font-size: $idci-font-2-5x;
         text-transform: uppercase;
