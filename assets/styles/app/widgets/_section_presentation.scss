@@ -121,9 +121,14 @@
 
                 .section-presentation-column-media {
                     display: block;
+                    filter: grayscale(1);
                     margin: auto;
                     margin-top: 1rem;
                     max-width: 80%;
+
+                    &:hover {
+                        filter: grayscale(0);
+                    }
 
                     @include until($tablet) {
                         width: 30%;
