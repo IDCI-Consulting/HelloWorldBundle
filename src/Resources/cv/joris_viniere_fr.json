@@ -1,0 +1,239 @@
+{
+    "basics": {
+        "name": "Joris Viniere",
+        "label": "Développeur Web FullStack",
+        "picture": "",
+        "email": "joris.viniere@idci-consulting.fr",
+        "phone": "07 68 48 32 58",
+        "website": "",
+        "summary": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "profiles": [
+            {
+                "network": "linkedin",
+                "username": "Joris Viniere",
+                "url": "https://www.linkedin.com/mwlite/in/joris-viniere-7ba645204"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "Le Saint Laurent, Georges Blanc",
+            "position": "Commis de salle",
+            "website": "",
+            "startDate": "2018-07",
+            "endDate": "2018-08",
+            "summary": "",
+            "highlights": [
+                "Service des plats en salle",
+                "Développer des relations avec les clients",
+                "Maintient d'hygiène de l'établissement"
+            ]
+        },
+        {
+            "company": "Le Saint Laurent, Georges Blanc",
+            "position": "Commis de salle",
+            "website": "",
+            "startDate": "2019-07",
+            "endDate": "2019-08",
+            "summary": "",
+            "highlights": [
+                "Service des plats en salle",
+                "Développer des relations avec les clients",
+                "Maintient d'hygiène de l'établissement"
+            ]
+        },
+        {
+            "company": "Vétisol",
+            "position": "Opérateur de production",
+            "website": "",
+            "startDate": "2020-07",
+            "endDate": "2020-08",
+            "summary": "",
+            "highlights": [
+                "Aide à la préparation et au suivi des machines",
+                "Assistance à la gestion de l'approvisionnement",
+                "Prise de décision sur la technique",
+                "Soutien lors du contrôle qualité des produits"
+            ]
+        },
+        {
+            "company": "IDCI-Consulting",
+            "position": "Stagiaire Développeur Web FullStack",
+            "website": "",
+            "startDate": "2021-04",
+            "endDate": "2021-07",
+            "summary": "",
+            "highlights": [
+                "Apprentissage des technologies utilisées par l'entreprise",
+                "Création d'un site web pour un client",
+                "Apprentissage de la méthode agile"
+            ]
+        },
+        {
+            "company": "IDCI-Consulting",
+            "position": "Alternant Développeur Web FullStack",
+            "website": "",
+            "startDate": "2021-09",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+                "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
+                "Création d'un site web pour un client",
+                "Maintenir et améliorer un site sur demande du client",
+                "Développer des relations avec les clients"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Club de Basket de Feillens",
+            "position": "Bénévole",
+            "website": "http://www.solidarite-sida.org/",
+            "startDate": "2017",
+            "endDate": "",
+            "summary": "Arbitre bénévole pour les matchs du club de Basket de Feillens",
+            "highlights": [
+                ""
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "",
+            "area": "Informatique",
+            "studyType": "DUT Informatique",
+            "startDate": "2019",
+            "endDate": "2021",
+            "gpa": "",
+            "courses": [
+                ""
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "",
+            "date": "",
+            "awarder": "",
+            "summary": ""
+        }
+    ],
+    "publications": [
+        {
+            "name": "",
+            "publisher": "",
+            "releaseDate": "",
+            "website": "",
+            "summary": ""
+        }
+    ],
+    "skills": [
+        {
+            "name": "Languages",
+            "level": "",
+            "keywords": [
+                "HTML5",
+                "CSS3",
+                "PHP",
+                "Javascript",
+                "C++",
+                "Java",
+                "Bash",
+                "SQL"
+            ]
+        },
+        {
+            "name": "OS",
+            "level": "",
+            "keywords": [
+                "Windows",
+                "Linux (Ubuntu)"
+            ]
+        },
+        {
+            "name": "Frameworks",
+            "level": "",
+            "keywords": [
+                "Symfony",
+                "VueJS",
+                "Bootstrap",
+                "Bulma"
+            ]
+        },
+        {
+            "name": "Moteur de template",
+            "level": "",
+            "keywords": [
+                "Twig"
+            ]
+        },
+        {
+            "name": "Versioning",
+            "level": "",
+            "keywords": [
+                "Gitlab"
+            ]
+        },
+        {
+            "name": "Base de Données",
+            "level": "",
+            "keywords": [
+                "MySQL",
+                "PostgreSQL"
+            ]
+        },
+        {
+            "name": "Conteneurisation",
+            "level": "",
+            "keywords": [
+                "Docker"
+            ]
+        },
+        {
+            "name": "Gestion de projet",
+            "level": "",
+            "keywords": [
+                "Redmine"
+            ]
+        },
+
+        {
+            "name": "Modélisation",
+            "level": "",
+            "keywords": [
+                "UML"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Anglais",
+            "fluency": "Maitrisé"
+        },
+        {
+            "language": "Français",
+            "fluency": "Langue maternelle"
+        }
+    ],
+    "interests": [
+        {
+            "name": "",
+            "keywords": [
+                ""
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "",
+            "reference": ""
+        }
+    ]
+}

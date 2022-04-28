@@ -4,8 +4,9 @@
             <p class="column is-12 section-cv-title idci-title-secondary">Curriculum Vitae</p>
             <p class="column is-6 section-cv-label">{{ data.basics.name }} | {{ data.basics.label }}</p>
             <p class="column is-6 section-cv-links">
-                <a href="https://github.com/konandrum"><i class="fab fa-github fa-3x"></i></a>
-                <a href="https://linkedin.com/in/gabriel-bondaz"><i class="fab fa-linkedin fa-3x"></i></a>
+                {% for profile in data.basics.profiles %}
+                    <a href="{{ profile.url }}"><i class="fab fa-{{ profile.network }} fa-3x"></i></a>
+                {% endfor %}
             </p>
         </section>
 
@@ -27,11 +28,11 @@
                     {% set date_stamp = work.startDate %}
                     <p class="section-cv-banner-subtitle">Depuis {{ work.startDate }}</p>
                 {% endif %}
-                <p>{{ work.summary }}</p>
+                <p>{{ work.position }}{% if work.position != "" and work.summary != "" %} | {% endif %}{{ work.summary }}</p>
                 {% if work.highlights|length > 0 %}
                     <ul class="section-cv-banner-highlights">
                         {% for highlight in work.highlights %}
-                            {{ highlight }}
+                            <li class="section-cv-banner-highlights-element">{{ highlight }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
@@ -53,7 +54,7 @@
                     <p class="section-cv-banner-skill-title">{{ skill.name }}</p>
                     <p class="section-cv-banner-skill-keywords">
                         {% for keyword in skill.keywords %}
-                            {{ keyword }}, 
+                            {{ keyword }}{% if loop.last != true %}, {% endif %}
                         {% endfor %}
                     </p>
                 </li>

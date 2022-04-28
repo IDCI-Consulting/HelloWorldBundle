@@ -1,7 +1,4 @@
 {
-    "dflydev/dot-access-data": {
-        "version": "v3.0.1"
-    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -25,12 +22,6 @@
     },
     "gregwar/captcha-bundle": {
         "version": "v2.2.0"
-    },
-    "nette/schema": {
-        "version": "v1.2.2"
-    },
-    "nette/utils": {
-        "version": "v3.2.7"
     },
     "psr/cache": {
         "version": "3.0.0"
