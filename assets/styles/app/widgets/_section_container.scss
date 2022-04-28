@@ -1,8 +1,8 @@
 .section-container {
-    padding: 4rem;
-    min-height: 100vh;
-    display: flex;
     align-items: center;
+    display: flex;
+    min-height: 100vh;
+    padding: 4rem;
 
     @include until($desktop) {
         padding: 2rem;
