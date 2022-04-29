@@ -1,0 +1,82 @@
+.section-cv {
+    .section-cv-title {
+        font-weight: bold;
+        letter-spacing: initial;
+    }
+
+    .section-cv-label {
+        font-weight: bold;
+    }
+
+    .section-cv-links {
+        text-align: right;
+
+        i{
+            color: $idci-color-black;
+        }
+    }
+
+    .section-cv-button {
+        margin-top: 2rem;
+        width: fit-content;
+    }
+
+    .section-cv-banner {
+        border: 2px solid $idci-color-light-grey;
+        padding: 1rem;
+
+        &.section-cv-banner-primary {
+            background-color: $idci-color-light-grey;
+        }
+
+        &.section-cv-banner-secondary {
+            background-color: $idci-color-whitesmoke;
+        }
+        
+        .section-cv-banner-title {
+            letter-spacing: initial;
+            text-decoration: underline;
+        }
+
+        .section-cv-banner-subtitle {
+            color: $idci-color-green;
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        .section-cv-banner-list-item {
+            display: flex;
+            position: relative;
+
+            p {
+                color: $idci-color-blue;
+                left: 25%;
+                position: absolute;
+                width: 50%;
+            }
+        }
+
+        .section-cv-banner-education-date {
+            color: $idci-color-green;
+            font-style: italic;
+            margin-right: 1rem;
+        }
+
+        .section-cv-banner-skills {
+            li {
+                display: flex;
+                margin-top: 0.5rem;
+                width: 100%;
+
+                .section-cv-banner-skill-title {
+                    font-weight: bold;
+                    width: 50%;
+                }
+
+                .section-cv-banner-skill-keywords {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

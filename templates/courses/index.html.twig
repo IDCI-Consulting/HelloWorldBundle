@@ -2,6 +2,185 @@
 
 {% block main %}
 
-<p>courses index</p>
+<section class="section-container">
+    <section class="section-presentation">
+        <h2 class="section-presentation-title idci-title-primary">Choisissez l'une de</h2>
+        <h3 class="section-presentation-subtitle idci-subtitle-primary">nos formations</h3>
+        <div class="columns section-presentation-columns">
+            <div class="column section-presentation-column">
+                <div class="section-card">
+                    <img src="{{ asset('build/images/base/oop-uml-scm.svg') }}" class="section-card-media">
+                    <p class="section-card-description">OOP - UML - SCM</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="section-card">
+                    <img src="{{ asset('build/images/base/html5-css3.svg') }}" class="section-card-media">
+                    <p class="section-card-description">Html5 - CSS3</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="section-card">
+                    <img src="{{ asset('build/images/base/symfony2.svg') }}" class="section-card-media">
+                    <p class="section-card-description">Symfony</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="section-container section-container-full section-container-primary">
+    <section class="section-display">
+        <h2 class="section-display-title idci-title-primary">OOP - UML - SCM</h2>
+        <section class="section-display-content">
+            <aside class="section-display-aside">
+                <img src="{{ asset('build/images/base/oop-uml-scm.svg') }}" class="section-card-media">
+                <div class="section-display-aside-buttons">
+                    <a href="" class="button section-display-aside-button">Télécharger en PDF</a>
+                    <a href="{{ url('app_contact_index') }}" class="button section-display-aside-button">Nous contacter</a>
+                </div>
+            </aside>
+            <article class="section-display-article">
+                <div class="tab">
+                    <div class="tab-item">
+                        <input type="radio" id="formationx_jour1" name="nav-tab" checked>
+                        <label for="formationx_jour1" data-position="1">Jour 1</label>
+                        <div class="tab-pane">
+                            <p class="section-display-article-tab-title idci-title-secondary">Introduction</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">4 heures</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Définition</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Historique</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Objet / classe</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Déclaration</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Champs</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Méthodes</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Instanciation d'objet</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Clonage d'un objet</li>
+                            </ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Méthodes</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">2 heures</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Constructeur, destructeur</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">toString</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Getters & Setters</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Méthode abstraite</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Méthode static</li>
+                            </ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">3 Grands concepts</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">2 heures</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Encapsulation</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Héritage</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Polymorphisme</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-item">
+                        <input type="radio" id="formationx_jour2" name="nav-tab">
+                        <label for="formationx_jour2" data-position="2">Jour 2</label>
+                        <div class="tab-pane">
+                            <p class="section-display-article-tab-title idci-title-secondary">Visibilité</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">1 heure</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">public</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">private</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">protected</li>
+                            </ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Classe abstraiter / Interface</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">1 heure</p>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">UML / Merise</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">2 heures</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">UML</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Base de données</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Merise</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Comparaison monde objet / monde relationnel</li>
+                            </ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Design Pattern</p>
+                            <p class="section-display-article-tab-title idci-title-secondary">Introduction</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">1 heure</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Quand utiliser les DP?</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Quand NE PAS utiliser les DP?</li>
+                            </ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Quelques exemples</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">2 heures</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Factory</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Observer</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Strategy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-item">
+                        <input type="radio" id="formationx_jour3" name="nav-tab">
+                        <label for="formationx_jour3" data-position="3">Jour 3</label>
+                        <div class="tab-pane">
+                            <p class="section-display-article-tab-title idci-title-secondary">Zoom sur le DP MVC</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">2 heures</p>
+                            
+                            <p class="section-display-article-tab-title idci-title-secondary">Zoom sur l'injection de dépendance</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">2 heures</p></ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">SCM</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">4 heures</p></ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Définition</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Qu'est ce qu'est un SCM?</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Pourquoi en utiliser un?</li>
+                            </ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Quelques commandes utiles</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">commit</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">(push)</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">add</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">remove</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">revert / reset?</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">update / pull</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">status</li>
+                            </ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Quel SCM choisir ?</p>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">SVN</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Git</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Mercurial</li>
+                            </ul>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Versionning</p>
+    
+                            <p class="section-display-article-tab-title idci-title-secondary">Branches</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-item">
+                        <input type="radio" id="formationx_jour4" name="nav-tab">
+                        <label for="formationx_jour4" data-position="4">Jour 4</label>
+                        <div class="tab-pane">
+                            <p class="section-display-article-tab-title idci-title-secondary">Bug tracker</p>
+                            <p class="section-display-article-tab-subtitle idci-title-secondary">2 heures</p></ul>
+                            <ul class="section-display-article-tab-list">
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Définition</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Pourquoi en utiliser un?</li>
+                                <li class="section-display-article-tab-element"><img src="{{ asset('build/images/base/balise-right.svg') }}">Redmine / Mantis / GitHub</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </section>
+</section>
 
 {% endblock %}

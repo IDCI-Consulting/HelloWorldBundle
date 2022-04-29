@@ -1,7 +1,11 @@
 header {
-    border-bottom: 3px solid $idci-color-grey;
+    background-color: $idci-color-white;
+    border-bottom: 3px solid $idci-color-light-grey;
     display: flex;
     height: 5rem;
+    justify-content: center;
+    width: 100%;
+    z-index: 100;
 
     .hamburger-menu {
         display: none;
@@ -37,7 +41,7 @@ header {
             display: none;
             position: absolute;
             top: calc(5rem - 3px);
-            width: 12rem;
+            width: 15rem;
             z-index: 100;
 
             .mobile-menu-list {
@@ -48,11 +52,11 @@ header {
                     height: 3rem;
 
                     &.active {
-                        background: linear-gradient(0deg, $idci-color-light-blue, transparent);
+                        background: linear-gradient(0deg, $idci-color-blue, transparent);
                     }
 
                     &:hover {
-                        background: linear-gradient(0deg, $idci-color-light-blue, transparent);
+                        background: linear-gradient(0deg, $idci-color-blue, transparent);
                     }
 
                     a {
@@ -96,12 +100,12 @@ header {
                     transition: 0.2s ease-in-out;
 
                     &:hover {
-                        border-bottom: 3px solid $idci-color-light-green;
+                        border-bottom: 3px solid $idci-color-green;
                     }
 
                     &.active {
-                        border-bottom: 3px solid $idci-color-light-green;
-                        color: $idci-color-light-green;
+                        border-bottom: 3px solid $idci-color-green;
+                        color: $idci-color-green;
                     }
                 }
             }
@@ -110,7 +114,7 @@ header {
 
     .header-media {
         min-width: 15rem;
-        width: 20%;
+        width: 10%;
 
         @include until($desktop) {
             width: 90%;

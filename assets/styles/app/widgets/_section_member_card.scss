@@ -1,0 +1,57 @@
+.section-member-card {
+    flex-basis: 30%;
+    margin-top: 2rem;
+    min-width: 300px;
+
+    @include until($widescreen) {
+        flex-basis: 50%;
+        max-width: 400px;
+    }
+
+    @include until($desktop) {
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .section-member-card-title {
+        font-size: $idci-font-1-5x;
+        letter-spacing: initial;
+
+        @include until($desktop) {
+            margin-top: 2rem;
+        }
+    }
+
+    .section-member-card-subtitle {
+        font-size: $idci-font-larger;
+        letter-spacing: initial;
+        margin-top: 1rem;
+    }
+
+    .section-member-card-media {
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+        width: 90%;
+    }
+
+    .section-member-card-description {
+        margin-top: 1rem;
+        min-height: 250px;
+        text-align: justify;
+
+        @include until($widescreen) {
+            min-height: 200px;
+        }
+
+        @include until($desktop) {
+            min-height: 0;
+        }
+    }
+
+    .section-member-card-button {
+        @include until($desktop) {
+            margin-top: 2rem;
+        }
+    }
+}

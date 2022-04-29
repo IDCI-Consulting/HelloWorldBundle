@@ -1,0 +1,12 @@
+button, a.button{
+    background-color: $idci-color-blue;
+    border: 0;
+    color: $idci-color-white;
+    display: block;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 1rem 2rem;
+}

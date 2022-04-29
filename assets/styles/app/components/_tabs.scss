@@ -1,0 +1,30 @@
+.tab {
+    position: relative;
+    padding-top: 2rem;
+
+    .tab-item {
+        label {
+            position: absolute;
+            top: 0;
+
+            @for $i from 1 through 12 {
+                &[data-position="#{$i}"] {
+                    left: calc(#{$i}rem * 5);
+                }
+            }
+        }
+
+        input[type="radio"], .tab-pane { 
+            display: none;
+        }
+
+        input[type="radio"]:checked ~ .tab-pane {
+            display: block;
+        }
+
+        input[type="radio"]:checked ~ label {
+            background-color: $idci-color-blue;
+            color: $idci-color-white;
+        }
+    }
+}

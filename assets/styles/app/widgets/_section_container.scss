@@ -1,0 +1,35 @@
+.section-container {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    padding: 4rem;
+
+    @include until($desktop) {
+        padding: 2rem;
+    }
+
+    > * {
+        margin: auto;
+        width: 80%;
+    }
+
+    &.section-container-primary {
+        background-color: $idci-color-light-grey;
+    }
+
+    &.section-container-secondary {
+        background-color: $idci-color-whitesmoke;
+    }
+
+    &.section-container-90 {
+        > * {
+            width: 90%;
+        }
+    }
+
+    &.section-container-full {
+        > * {
+            width: 100%;
+        }
+    }
+}
