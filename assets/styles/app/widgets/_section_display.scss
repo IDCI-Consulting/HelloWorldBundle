@@ -1,5 +1,8 @@
 .section-display {
     .section-display-title {
+        color: $idci-color-light-black;
+        font-weight: bolder;
+        letter-spacing: 0.2rem;
         width: 100%;
     }
 
@@ -7,9 +10,18 @@
         display: flex;
         margin-top: 2rem;
 
+        @include until($desktop) {
+            flex-direction: column;
+        }
+
         .section-display-aside {
+            min-width: 300px;
             text-align: center;
             width: 30%;
+
+            @include until($desktop) {
+                margin: auto;
+            }
 
             .section-display-aside-buttons {
                 display: flex;
@@ -18,33 +30,52 @@
     
         .section-display-article {
             margin-left: 4rem;
+            min-width: 600px;
             width: 40%;
 
-            .section-display-article-tab {
+            @include until($desktop) {
+                margin: auto;
+            }
+
+            .tab {
                 margin-top: 4rem;
-                
-                .section-display-article-tab-title {
-                    font-size: $idci-font-1-5x;
-                    letter-spacing: initial;
-                    margin-top: 2rem;
-                    text-align: left;
-                }
 
-                .section-display-article-tab-subtitle {
-                    font-size: $idci-font-larger;
-                    font-style: italic;
-                    letter-spacing: initial;
-                    margin-top: 1rem;
-                    text-align: left;
-                }
+                .tab-item {
+                    label {
+                        border-bottom: 1px solid $idci-color-blue;
+                        font-size: $idci-font-1-5x;
+                        padding: .5rem;
+                    }
 
-                .section-display-article-tab-list {
-                    margin-top: 1rem;
+                    .tab-pane {
+                        .section-display-article-tab-title {
+                            font-size: $idci-font-1-5x;
+                            letter-spacing: initial;
+                            margin-top: 2rem;
+                            text-align: left;
+                        }
+        
+                        .section-display-article-tab-subtitle {
+                            font-size: $idci-font-larger;
+                            font-style: italic;
+                            letter-spacing: initial;
+                            margin-top: 1rem;
+                            text-align: left;
+                        }
+        
+                        .section-display-article-tab-list {
+                            margin-top: 1rem;
+        
+                            .section-display-article-tab-element {
+                                margin-top: 0.5rem;
+                                img {
+                                    margin-right: 1rem;
+                                }
+                            }
+                        }
 
-                    .section-display-article-tab-element {
-                        margin-top: 0.5rem;
-                        img {
-                            margin-right: 1rem;
+                        @include until($desktop) {
+                            margin-left: 4rem;
                         }
                     }
                 }
