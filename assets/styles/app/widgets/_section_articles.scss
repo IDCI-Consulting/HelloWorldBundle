@@ -1,0 +1,41 @@
+.section-articles {
+    .section-articles-title {
+        color: $idci-color-light-black;
+        letter-spacing: inherit;
+    }
+
+    .tab {
+        text-align: center;
+
+        .tab-item {
+            input {
+            }
+
+            label {
+                text-transform: uppercase;
+                padding: 1rem;
+            }
+
+            .tab-pane {
+                margin: auto;
+                margin-top: 4rem;
+                width: 70%;
+                text-align: left;
+
+                .section-articles-list {
+                    .section-articles-list-title {
+                        width: 6rem;
+                        background-color: $idci-color-blue;
+                        color: $idci-color-white;
+                        padding: .5rem 1rem;
+                        text-align: center;
+                    }
+
+                    .section-articles-list-item {
+
+                    }
+                }
+            }
+        }
+    }
+}

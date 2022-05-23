@@ -2,6 +2,55 @@
 
 {% block main %}
 
-blog index
+{% for date_key, date in articles_dates.dates %}
+    {{ date_key }}
+    {% for article in date %}
+        {{ article }}
+    {% endfor %}
+{% endfor %}
+
+<section class="section-container">
+    <section class="section-dynamic-display">
+        <h2 class="section-dynamic-display-title idci-title-primary">Blog</h2>
+        <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">Derniers articles</h3>
+        <div class="columns section-dynamic-display-">
+
+        </div>
+    </section>
+</section>
+
+<section class="section-container section-container-70 section-container-primary">
+    <section class="section-articles">
+        <h2 class="section-articles-title idci-title-primary">Tous les articles</h2>
+        <div class="tab">
+            <div class="tab-item">
+                <input type="radio" id="articles_by_dates" name="nav-tab" checked>
+                <label class="label-first" for="articles_by_dates" data-position="1">Par dates</label>
+                <div class="tab-pane">
+                    {% for date_key, date in articles_dates.dates %}
+                    <div class="section-articles-list">
+                        <h2 class="section-articles-list-title">{{ date_key }}</h2>
+                        <ul>
+                            {% for article in date %}
+                            <div class="section-articles-list-item">
+                                <li><a href="">{{ article }}</a></li>
+                            </div>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-item">
+                <input type="radio" id="articles_by_categories" name="nav-tab">
+                <label for="articles_by_categories" data-position="2">Par catégories</label>
+                <div class="tab-pane">
+                    <p>test 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
 
 {% endblock %}
