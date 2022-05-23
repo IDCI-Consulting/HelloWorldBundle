@@ -24,15 +24,32 @@
 
                 .section-articles-list {
                     .section-articles-list-title {
-                        width: 6rem;
                         background-color: $idci-color-blue;
                         color: $idci-color-white;
+                        margin-bottom: 2rem;
+                        margin-top: 2rem;
                         padding: .5rem 1rem;
                         text-align: center;
+                        width: 6rem;
                     }
 
                     .section-articles-list-item {
+                        align-items: center;
+                        display: flex;
+                        padding: .5rem;
 
+                        .section-articles-list-item-media {
+                            width: 5rem;
+                            margin-right: 2rem;
+                        }
+
+                        .section-articles-list-item-link {
+                            width: 100%;
+                        }
+
+                        .section-articles-list-item-infos {
+                            width: 100%;
+                        }
                     }
                 }
             }

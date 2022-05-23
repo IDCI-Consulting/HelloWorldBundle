@@ -4,8 +4,8 @@
 
 {% for date_key, date in articles_dates.dates %}
     {{ date_key }}
-    {% for article in date %}
-        {{ article }}
+    {% for article_key, article in date %}
+        {{ article_key }}
     {% endfor %}
 {% endfor %}
 
@@ -31,10 +31,12 @@
                     <div class="section-articles-list">
                         <h2 class="section-articles-list-title">{{ date_key }}</h2>
                         <ul>
-                            {% for article in date %}
-                            <div class="section-articles-list-item">
-                                <li><a href="">{{ article }}</a></li>
-                            </div>
+                            {% for article_key, article in date %}
+                            <li class="section-articles-list-item">
+                                <img src="{{ asset('build/images/' ~ article[0] ~ '') }}" class="section-articles-list-item-media">
+                                <a href="{{ url('app_blog_article', {'slug': article_key}) }}" class="section-articles-list-item-link">{{ article_key }}</a>
+                                <span class="section-articles-list-item-infos">ajouté le {{ article[1] }} par {{ article[2] }}</span>
+                            </li>
                             {% endfor %}
                         </ul>
                     </div>

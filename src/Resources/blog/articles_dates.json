@@ -1,31 +1,23 @@
 {
     "dates": {
-        "2018": [
-            "idci-10-years"
-        ],
-        "2017": [
-            "step-bundle-introduction",
-            "new-year-2017"
-        ],
-        "2013": [
-            "idci-wbepage-screenshot-bundle",
-            "international-wordpress",
-            "bundle-composer-broadcast"
-        ],
-        "2012": [
-            "type-doctrine2",
-            "backoffice-wordpress"
-        ],
-        "2011": [
-            "fos-user-bundle",
-            "install-wordpress",
-            "symposium",
-            "environment-php-mysql",
-            "presentation-wordpress",
-            "create-symfony1-project-from-sandbox-with-ubuntu",
-            "behaviors-doctrine2",
-            "phpillow-couchbd",
-            "google-apps"
-        ]
+        "2018": {
+            "idci-10-years": [
+                "logo/idci-logo.svg",
+                "30/05/2018",
+                "Louise Millon"
+            ]
+        },
+        "2017": {
+            "step-bundle-introduction": [
+                "base/symfony2.svg",
+                "03/03/2017",
+                "Louise Millon"
+            ],
+            "new-year-2017": [
+                "base/symfony2.svg",
+                "13/01/2017",
+                "Louise Millon"
+            ]
+        }
     }
 }
