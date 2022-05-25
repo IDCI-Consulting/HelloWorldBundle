@@ -12,6 +12,7 @@
         "symfony/console": "6.0.*",
         "symfony/dotenv": "6.0.*",
         "symfony/event-dispatcher": "6.0.*",
+        "symfony/finder": "6.0.*",
         "symfony/flex": "^2",
         "symfony/form": "6.0.*",
         "symfony/framework-bundle": "6.0.*",
@@ -20,7 +21,9 @@
         "symfony/twig-bundle": "6.0.*",
         "symfony/validator": "6.0.*",
         "symfony/webpack-encore-bundle": "^1.14",
-        "symfony/yaml": "6.0.*"
+        "symfony/yaml": "6.0.*",
+        "twig/extra-bundle": "^3.4",
+        "twig/string-extra": "^3.4"
     },
     "config": {
         "allow-plugins": {

@@ -1,0 +1,116 @@
+{
+    "name": "OOP - UML - SCM",
+    "media": "base/oop-uml-scm.svg",
+    "days": [
+        {
+            "label":"Jour 1",
+            "items": [
+                {
+                    "title": "Introduction",
+                    "duration": 240,
+                    "description": "<ul><li>Définition</li><li>Historique</li><li>Objet / classe</li><li>Déclaration</li><li>Champs</li><li>Méthodes</li><li>Instanciation d'objet</li><li>Clonage d'un objet</li></ul>"
+                },
+                {
+                    "title": "Méthodes",
+                    "duration": 120,
+                    "description": "<ul><li>Constructeur, destructeur</li><li>toString</li><li>Getters & Setters</li><li>Méthode abstraite</li><li>Méthode static</li></ul>"
+                },
+                {
+                    "title": "Introduction",
+                    "duration": 120,
+                    "description": "<ul><li>Encapsulation</li><li>Héritage</li><li>Polymorphisme</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Jour 2",
+            "items": [
+                {
+                    "title": "Visibilité",
+                    "duration": 60,
+                    "description": "<ul><li>public</li><li>private</li><li>protected</li></ul>"
+                },
+                {
+                    "title": "Classe abstraite / Interface",
+                    "duration": 60,
+                    "description": ""
+                },
+                {
+                    "title": "UML / Merise",
+                    "duration": 60,
+                    "description": "<ul><li>UML</li><li>Base de données</li><li>Merise</li><li>Comparaison monde objet / monde relationnel</li></ul>"
+                },
+                {
+                    "title": "Design pattern",
+                    "duration": 0,
+                    "description": ""
+                },
+                {
+                    "title": "Introduction",
+                    "duration": 60,
+                    "description": "<ul><li>Quand utiliser les DP ?</li><li>Quand NE PAS utiliser les DP ?</li></ul>"
+                },
+                {
+                    "title": "Quelques exemples",
+                    "duration": 120,
+                    "description": "<ul><li>Factory</li><li>Observer</li><li>Strategy</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Jour 3",
+            "items": [
+                {
+                    "title": "ZOOM SUR LE DP MVC",
+                    "duration": 120,
+                    "description": ""
+                },
+                {
+                    "title": "ZOOM SUR L'INJECTION DE DÉPENDANCE",
+                    "duration": 120,
+                    "description": ""
+                },
+                {
+                    "title": "SCM",
+                    "duration": 240,
+                    "description": ""
+                },
+                {
+                    "title": "Définition",
+                    "duration": 0,
+                    "description": "<ul><li>Qu'est ce qu'est un SCM ?</li><li>Pourquoi en utiliser un ?</li></ul>"
+                },
+                {
+                    "title": "Quelques commandes utiles",
+                    "duration": 0,
+                    "description": "<ul><li>commit</li><li>push</li><li>add</li><li>remove</li><li>revert / reset ?</li><li>update / pull</li><li>status</li></ul>"
+                },
+                {
+                    "title": "Quel SCM choisir ?",
+                    "duration": 0,
+                    "description": "<ul><li>SVN</li><li>Git</li><li>Mercurial</li></ul>"
+                },
+                {
+                    "title": "Versionning",
+                    "duration": 0,
+                    "description": ""
+                },
+                {
+                    "title": "Branches",
+                    "duration": 0,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "label":"Jour 4",
+            "items": [
+                {
+                    "title": "Bug tracker",
+                    "duration": 120,
+                    "description": "<ul><li>Définition</li><li>Pourquoi en utiliser un ?</li><li>Redmine / Mantis / GitHub</li></ul>"
+                }
+            ]
+        }
+    ]
+}
