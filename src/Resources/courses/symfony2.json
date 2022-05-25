@@ -1,0 +1,91 @@
+{
+    "name": "Symfony2",
+    "media": "base/symfony2.svg",
+    "days": [
+        {
+            "label":"Jour 1",
+            "items": [
+                {
+                    "title": "Introduction",
+                    "duration": 120,
+                    "description": "<ul><li>Internet != Le WEB</li><li>Protocole HTTP (RFC2616)</li><li>Quelques frameworks PHP : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony</li><li>Pourquoi Symfony2 ?</li></ul>"
+                },
+                {
+                    "title": "UN BON ENVIRONNEMENT ET DE BONNES PRATIQUES",
+                    "duration": 120,
+                    "description": "<ul><li>Quel IDE</li><li>Utiliser un SCM (SVN, Git, ...)</li><li>Utiliser un bug tracker (Trac, Mantis, Redmine, Github, ...)</li><li>Les conventions de codage</li></ul>"
+                },
+                {
+                    "title": "INTRODUCTION AUX DESIGN PATTERN",
+                    "duration": 120,
+                    "description": "<ul><li>Présentation générale</li><li>Le MVC en détail</li></ul>"
+                },
+                {
+                    "title": "LA STRUCTURE DES APPLICATIONS AVEC SYMFONY2",
+                    "duration": 120,
+                    "description": "<ul><li>La notion \"d'application\" => App/</li><li>La notion de \"bundles\"</li><li>Mon code spécifique => src/</li><li>Les librairies externes => vendor/</li><li>La racine web => web/</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Jour 2",
+            "items": [
+                {
+                    "title": "LE CONTROLLER DANS SYMFONY2",
+                    "duration": 240,
+                    "description": "<ul><li>Object Request</li><li>Object Response</li><li>Le routing</li><li>Les annotations</li></ul>"
+                },
+                {
+                    "title": "LES VUES (TEMPLATING) AVEC SYMFONY2",
+                    "duration": 240,
+                    "description": "<ul><li>Twig</li>Héritage de template<li></li><li>Inclure des vues</li><li>Rendre des vues</li><li>Filtres twig</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Jour 3",
+            "items": [
+                {
+                    "title": "ORM ET DBAL (DATABASE ABSTRACTION LAYER)",
+                    "duration": 240,
+                    "description": "<ul><li>PDO</li><li>Doctrine</li><li>Propel</li></ul>"
+                },
+                {
+                    "title": "LES FORMS (FORMULAIRES)",
+                    "duration": 240,
+                    "description": "<ul><li>AbstractType</li>Les champs<li></li><li>La validation</li><li>Les \"form events\"</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Jour 4",
+            "items": [
+                {
+                    "title": "Créer un service",
+                    "duration": 240,
+                    "description": "<ul><li>Injection de dépendance</li><li>Conteneur de service</li></ul>"
+                },
+                {
+                    "title": "La sécurité",
+                    "duration": 240,
+                    "description": "<ul><li>Autorisation</li><li>Authentification</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Jour 5",
+            "items": [
+                {
+                    "title": "Les tests",
+                    "duration": 240,
+                    "description": "<ul><li>Les tests unitaires avec PHPUnit</li><li>Les tests fonctionnels</li></ul>"
+                },
+                {
+                    "title": "Aller plus loin",
+                    "duration": 240,
+                    "description": "<ul><li>Utiliser la configuration</li><li>Créer des commandes Symfony2</li><li>Utiliser des bundles existants</li><li>FOSUserBundle (Gestion des utilisateurs)</li><li>DoctrineFixtures (L'import de données)</li><li>Créer des bundles réutilisables</li><li>Le cache HTTP (ESI, varnish, ...)</li></ul>"
+                }
+            ]
+        }
+    ]
+}

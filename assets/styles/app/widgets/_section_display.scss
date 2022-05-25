@@ -63,12 +63,14 @@
                             text-align: left;
                         }
         
-                        .section-display-article-tab-list {
+                        ul {
                             margin-top: 1rem;
         
-                            .section-display-article-tab-element {
+                            li {
                                 margin-top: 0.5rem;
-                                img {
+
+                                &::before {
+                                    content:url(../../../images/base/balise-right.svg);
                                     margin-right: 1rem;
                                 }
                             }
