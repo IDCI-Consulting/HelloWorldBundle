@@ -30,3 +30,8 @@ services:
     App\Event\Subscriber\ContactSubscriber:
         arguments:
             $contactRecipientsAddresses: '%env(json:MAILER_RECIPIENT_ADDRESSES)%'
+    
+    # twig
+    App\Twig\AppExtension:
+        arguments:
+            $publicDir: '%kernel.project_dir%/public'

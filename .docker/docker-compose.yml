@@ -14,6 +14,7 @@ services:
       - app
       - redis
       - mailhog
+      - wkhtmltopdf
 
   nginx:
     image: nginx
@@ -71,19 +72,41 @@ services:
     image: mailhog/mailhog
     deploy:
       labels:
-        - "traefik.http.routers.idci-mailhog.rule=Host(`mailhog.idci-website.docker`)"
-        - "traefik.http.routers.idci-mailhog-https.rule=Host(`mailhog.idci-website.docker`)"
-        - "traefik.docker.network=traefik_reverse_proxy"
-        - "traefik.http.services.idci-mailhog.loadbalancer.server.port=8025"
         - "traefik.enable=true"
+        - "traefik.docker.network=traefik_reverse_proxy"
         - "traefik.docker.lbswarm=true"
+        - "traefik.http.services.idci-mailhog.loadbalancer.server.port=8025"
         - "traefik.http.routers.idci-mailhog.entryPoints=web"
+        - "traefik.http.routers.idci-mailhog.rule=Host(`mailhog.idci-website.docker`)"
         - "traefik.http.routers.idci-mailhog-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-mailhog-https.rule=Host(`mailhog.idci-website.docker`)"
         - "traefik.http.routers.idci-mailhog-https.tls=true"
         - "traefik.http.routers.idci-mailhog-https.tls.certresolver=letsencrypt"
     networks:
       - traefik_reverse_proxy
       - mailhog
+
+  wkhtmltopdf:
+    image: traumfewo/docker-wkhtmltopdf-aas:latest
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik_reverse_proxy"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.services.idci-wkhtmltopdf.loadbalancer.server.port=5555"
+        - "traefik.http.routers.idci-wkhtmltopdf-commander.entryPoints=web"
+        - "traefik.http.routers.idci-wkhtmltopdf.rule=Host(`wkhtmltopdf.idci-website.docker`)"
+        - "traefik.http.routers.idci-wkhtmltopdf-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-wkhtmltopdf-https.rule=Host(`wkhtmltopdf.idci-website.docker`)"
+        - "traefik.http.routers.idci-wkhtmltopdf-https.tls=true"
+        - "traefik.http.routers.idci-wkhtmltopdf-https.tls.certresolver=letsencrypt"
+    environment:
+      - USER=idci
+      - PASS=idci#2022
+      - PAYLOAD_LIMIT=1mb
+    networks:
+      wkhtmltopdf: ~
+      traefik_reverse_proxy: ~ 
 
 configs:
   nginx_conf:
@@ -99,5 +122,6 @@ networks:
   app:
   redis:
   mailhog:
+  wkhtmltopdf:
   traefik_reverse_proxy:
     external: true
