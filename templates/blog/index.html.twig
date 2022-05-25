@@ -2,19 +2,72 @@
 
 {% block main %}
 
-{% for date_key, date in articles_dates.dates %}
-    {{ date_key }}
-    {% for article_key, article in date %}
-        {{ article_key }}
-    {% endfor %}
-{% endfor %}
-
 <section class="section-container">
     <section class="section-dynamic-display">
         <h2 class="section-dynamic-display-title idci-title-primary">Blog</h2>
         <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">Derniers articles</h3>
         <div class="columns section-dynamic-display-">
-
+            <section class="carousel" aria-label="Gallery">
+            <ol class="carousel__viewport">
+                <li id="carousel__slide1"
+                    tabindex="0"
+                    class="carousel__slide">
+                <div class="carousel__snapper">
+                    <a href="#carousel__slide4"
+                    class="carousel__prev">Go to last slide</a>
+                    <a href="#carousel__slide2"
+                    class="carousel__next">Go to next slide</a>
+                </div>
+                </li>
+                <li id="carousel__slide2"
+                    tabindex="0"
+                    class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide1"
+                    class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide3"
+                    class="carousel__next">Go to next slide</a>
+                </li>
+                <li id="carousel__slide3"
+                    tabindex="0"
+                    class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide2"
+                    class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide4"
+                    class="carousel__next">Go to next slide</a>
+                </li>
+                <li id="carousel__slide4"
+                    tabindex="0"
+                    class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide3"
+                    class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide1"
+                    class="carousel__next">Go to first slide</a>
+                </li>
+            </ol>
+            <aside class="carousel__navigation">
+                <ol class="carousel__navigation-list">
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide1"
+                    class="carousel__navigation-button">Go to slide 1</a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide2"
+                    class="carousel__navigation-button">Go to slide 2</a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide3"
+                    class="carousel__navigation-button">Go to slide 3</a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide4"
+                    class="carousel__navigation-button">Go to slide 4</a>
+                </li>
+                </ol>
+            </aside>
+            </section>
         </div>
     </section>
 </section>
@@ -27,15 +80,15 @@
                 <input type="radio" id="articles_by_dates" name="nav-tab" checked>
                 <label class="label-first" for="articles_by_dates" data-position="1">Par dates</label>
                 <div class="tab-pane">
-                    {% for date_key, date in articles_dates.dates %}
+                    {% for date_label, date in articles %}
                     <div class="section-articles-list">
-                        <h2 class="section-articles-list-title">{{ date_key }}</h2>
+                        <h2 class="section-articles-list-title">{{ date_label }}</h2>
                         <ul>
-                            {% for article_key, article in date %}
+                            {% for article in date %}
                             <li class="section-articles-list-item">
-                                <img src="{{ asset('build/images/' ~ article[0] ~ '') }}" class="section-articles-list-item-media">
-                                <a href="{{ url('app_blog_article', {'slug': article_key}) }}" class="section-articles-list-item-link">{{ article_key }}</a>
-                                <span class="section-articles-list-item-infos">ajouté le {{ article[1] }} par {{ article[2] }}</span>
+                                <img src="{{ asset('build/images/' ~ article.media ~ '') }}" class="section-articles-list-item-media">
+                                <a href="{{ url('app_blog_article', {'slug': article.id}) }}" class="section-articles-list-item-link">{{ article.name }}</a>
+                                <span class="section-articles-list-item-infos">ajouté le {{ article.parutionDate }} par {{ article.author }}</span>
                             </li>
                             {% endfor %}
                         </ul>

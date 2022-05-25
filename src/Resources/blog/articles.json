@@ -1,0 +1,30 @@
+{
+    "2018": [
+        {
+            "id": "idci-10-years",
+            "name": "Les 10 ans de IDCI",
+            "media": "logo/idci-logo.svg",
+            "parutionDate": "30/05/2018",
+            "author": "Louise Millon",
+            "category": "IDCI"
+        }
+    ],
+    "2017": [
+        {
+            "id": "step-bundle-introduction",
+            "name": "Introduction à IDCIStepBundle",
+            "media": "base/symfony2.svg",
+            "parutionDate": "03/03/2017",
+            "author": "Louise Millon",
+            "category": "Symfony"
+        },
+        {
+            "id": "new-year-2017",
+            "name": "Nos voeux 2017",
+            "media": "base/symfony2.svg",
+            "parutionDate": "13/01/2017",
+            "author": "Louise Millon",
+            "category": "Symfony"
+        }
+    ]
+}

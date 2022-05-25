@@ -17,13 +17,10 @@ class BlogController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        $articlesDatesString = file_get_contents('../src/Resources/blog/articles_dates.json');
-        $articlesDates = json_decode($articlesDatesString, true);
-
-        //dd($articlesDates);
+        $articles = json_decode(file_get_contents('../src/Resources/blog/articles.json'), true);
 
         return $this->render('blog/index.html.twig', [
-            'articles_dates' => $articlesDates
+            'articles' => $articles
         ]);
     }
 
