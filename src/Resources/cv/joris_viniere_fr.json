@@ -1,12 +1,13 @@
 {
-    "basics": {
-        "name": "Joris Viniere",
-        "label": "Développeur Web FullStack",
-        "picture": "",
+    "identity": {
+        "firstName": "Joris",
+        "lastName": "Vinière",
+        "age": 20,
+        "job": "Développeur Web FullStack",
+        "media": "",
         "email": "joris.viniere@idci-consulting.fr",
         "phone": "07 68 48 32 58",
         "website": "",
-        "summary": "",
         "location": {
             "address": "",
             "postalCode": "",
@@ -14,49 +15,50 @@
             "countryCode": "",
             "region": ""
         },
-        "profiles": [
+        "socialNetworks": [
             {
-                "network": "linkedin",
+                "name": "linkedin",
                 "username": "Joris Viniere",
                 "url": "https://www.linkedin.com/mwlite/in/joris-viniere-7ba645204"
             }
         ]
     },
-    "work": [
+    "professionalExperiences": [
         {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "position": "Commis de salle",
+            "company": "IDCI-Consulting",
+            "role": "Alternant Développeur Web FullStack",
+            "startDate": "2021-09-15T00:00:00Z",
+            "endDate": "2022-09-13T00:00:00Z",
             "website": "",
-            "startDate": "2018-07",
-            "endDate": "2018-08",
-            "summary": "",
-            "highlights": [
-                "Service des plats en salle",
-                "Développer des relations avec les clients",
-                "Maintient d'hygiène de l'établissement"
+            "tools": "",
+            "tasks": [
+                "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
+                "Création d'un site web pour un client",
+                "Maintenir et améliorer un site sur demande du client",
+                "Développer des relations avec les clients"
             ]
         },
         {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "position": "Commis de salle",
+            "company": "IDCI-Consulting",
+            "role": "Stagiaire Développeur Web FullStack",
+            "startDate": "2021-04-15T00:00:00Z",
+            "endDate": "2021-06-31T00:00:00Z",
             "website": "",
-            "startDate": "2019-07",
-            "endDate": "2019-08",
-            "summary": "",
-            "highlights": [
-                "Service des plats en salle",
-                "Développer des relations avec les clients",
-                "Maintient d'hygiène de l'établissement"
+            "tools": "",
+            "tasks": [
+                "Apprentissage des technologies utilisées par l'entreprise",
+                "Création d'un site web pour un client",
+                "Apprentissage de la méthode agile"
             ]
         },
         {
             "company": "Vétisol",
-            "position": "Opérateur de production",
+            "role": "Opérateur de production",
+            "startDate": "2020-07-01T00:00:00Z",
+            "endDate": "2020-08-07T00:00:00Z",
             "website": "",
-            "startDate": "2020-07",
-            "endDate": "2020-08",
-            "summary": "",
-            "highlights": [
+            "tools": "",
+            "tasks": [
                 "Aide à la préparation et au suivi des machines",
                 "Assistance à la gestion de l'approvisionnement",
                 "Prise de décision sur la technique",
@@ -64,176 +66,153 @@
             ]
         },
         {
-            "company": "IDCI-Consulting",
-            "position": "Stagiaire Développeur Web FullStack",
+            "company": "Le Saint Laurent, Georges Blanc",
+            "role": "Commis de salle",
+            "startDate": "2019-07-01T00:00:00Z",
+            "endDate": "2019-08-10T00:00:00Z",
             "website": "",
-            "startDate": "2021-04",
-            "endDate": "2021-07",
-            "summary": "",
-            "highlights": [
-                "Apprentissage des technologies utilisées par l'entreprise",
-                "Création d'un site web pour un client",
-                "Apprentissage de la méthode agile"
+            "tools": "",
+            "tasks": [
+                "Service des plats en salle",
+                "Développer des relations avec les clients",
+                "Maintient d'hygiène de l'établissement"
             ]
         },
         {
-            "company": "IDCI-Consulting",
-            "position": "Alternant Développeur Web FullStack",
+            "company": "Le Saint Laurent, Georges Blanc",
+            "role": "Commis de salle",
+            "startDate": "2018-07-01T00:00:00Z",
+            "endDate": "2018-08-10T00:00:00Z",
             "website": "",
-            "startDate": "2021-09",
-            "endDate": "",
-            "summary": "",
-            "highlights": [
-                "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
-                "Création d'un site web pour un client",
-                "Maintenir et améliorer un site sur demande du client",
-                "Développer des relations avec les clients"
+            "tools": "",
+            "tasks": [
+                "Service des plats en salle",
+                "Développer des relations avec les clients",
+                "Maintient d'hygiène de l'établissement"
             ]
         }
     ],
-    "volunteer": [
+    "personalExperiences": [
         {
             "organization": "Club de Basket de Feillens",
-            "position": "Bénévole",
-            "website": "http://www.solidarite-sida.org/",
-            "startDate": "2017",
-            "endDate": "",
-            "summary": "Arbitre bénévole pour les matchs du club de Basket de Feillens",
-            "highlights": [
-                ""
-            ]
+            "role": "Bénévole",
+            "website": "",
+            "startDate": "2017-09-01T00:00:00Z",
+            "endDate": "2018-07-01T00:00:00Z",
+            "description": "Arbitre bénévole pour les matchs du club de Basket de Feillens"
         }
     ],
     "education": [
         {
-            "institution": "",
-            "area": "Informatique",
-            "studyType": "DUT Informatique",
-            "startDate": "2019",
-            "endDate": "2021",
-            "gpa": "",
-            "courses": [
-                ""
+            "domain": "Informatique",
+            "certificate": "DUT Informatique",
+            "location": "Bourg-en-Bresse",
+            "startDate": "2019-09-01T00:00:00Z",
+            "endDate": "2021-07-01T00:00:00Z"
+        },
+        {
+            "domain": "Informatique",
+            "certificate": "Licence Professionnelle Informatique",
+            "location": "Bourg-en-Bresse",
+            "startDate": "2021-09-21T00:00:00Z",
+            "endDate": "2022-09-13T00:00:00Z"
+        }
+    ],
+    "expertises": [
+        {
+            "name": "IT",
+            "skills": [
+                {
+                    "name": "Langages informatique",
+                    "level": "",
+                    "keywords": [
+                        "HTML5",
+                        "CSS3",
+                        "PHP",
+                        "Javascript",
+                        "C++",
+                        "Java",
+                        "Bash",
+                        "SQL"
+                    ]
+                },
+                {
+                    "name": "OS",
+                    "level": "",
+                    "keywords": [
+                        "Windows",
+                        "Linux (Ubuntu)"
+                    ]
+                },
+                {
+                    "name": "Frameworks",
+                    "level": "",
+                    "keywords": [
+                        "Symfony",
+                        "VueJS",
+                        "Bootstrap",
+                        "Bulma"
+                    ]
+                },
+                {
+                    "name": "Moteur de template",
+                    "level": "",
+                    "keywords": [
+                        "Twig"
+                    ]
+                },
+                {
+                    "name": "Versioning",
+                    "level": "",
+                    "keywords": [
+                        "Gitlab"
+                    ]
+                },
+                {
+                    "name": "Base de Données",
+                    "level": "",
+                    "keywords": [
+                        "MySQL",
+                        "PostgreSQL"
+                    ]
+                },
+                {
+                    "name": "Conteneurisation",
+                    "level": "",
+                    "keywords": [
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": "Gestion de projet",
+                    "level": "",
+                    "keywords": [
+                        "Redmine"
+                    ]
+                },
+                {
+                    "name": "Modélisation",
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "languages",
+            "skills": [
+                {
+                    "name": "Anglais",
+                    "level": "B2"
+                }
             ]
         }
     ],
-    "awards": [
+    "hobbies": [
         {
-            "title": "",
-            "date": "",
-            "awarder": "",
-            "summary": ""
-        }
-    ],
-    "publications": [
-        {
-            "name": "",
-            "publisher": "",
-            "releaseDate": "",
-            "website": "",
-            "summary": ""
-        }
-    ],
-    "skills": [
-        {
-            "name": "Languages",
-            "level": "",
-            "keywords": [
-                "HTML5",
-                "CSS3",
-                "PHP",
-                "Javascript",
-                "C++",
-                "Java",
-                "Bash",
-                "SQL"
-            ]
-        },
-        {
-            "name": "OS",
-            "level": "",
-            "keywords": [
-                "Windows",
-                "Linux (Ubuntu)"
-            ]
-        },
-        {
-            "name": "Frameworks",
-            "level": "",
-            "keywords": [
-                "Symfony",
-                "VueJS",
-                "Bootstrap",
-                "Bulma"
-            ]
-        },
-        {
-            "name": "Moteur de template",
-            "level": "",
-            "keywords": [
-                "Twig"
-            ]
-        },
-        {
-            "name": "Versioning",
-            "level": "",
-            "keywords": [
-                "Gitlab"
-            ]
-        },
-        {
-            "name": "Base de Données",
-            "level": "",
-            "keywords": [
-                "MySQL",
-                "PostgreSQL"
-            ]
-        },
-        {
-            "name": "Conteneurisation",
-            "level": "",
-            "keywords": [
-                "Docker"
-            ]
-        },
-        {
-            "name": "Gestion de projet",
-            "level": "",
-            "keywords": [
-                "Redmine"
-            ]
-        },
-
-        {
-            "name": "Modélisation",
-            "level": "",
-            "keywords": [
-                "UML"
-            ]
-        }
-    ],
-    "languages": [
-        {
-            "language": "Anglais",
-            "fluency": "Maitrisé"
-        },
-        {
-            "language": "Français",
-            "fluency": "Langue maternelle"
-        }
-    ],
-    "interests": [
-        {
-            "name": "",
-            "keywords": [
-                ""
-            ]
-        }
-    ],
-    "references": [
-        {
-            "name": "",
-            "reference": ""
+            "name": "Piano",
+            "description": "Je pratique cet instrument en auto-didacte..."
         }
     ]
 }
