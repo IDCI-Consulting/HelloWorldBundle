@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class ContactType extends AbstractType
@@ -18,46 +19,61 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('company', TextType::class, [
-                'label' => 'company',
+                'label' => 'contact.company',
+                'translation_domain' => 'contact',
                 'required' => false,
             ])
             ->add('website', TextType::class, [
-                'label' => 'website',
+                'label' => 'contact.website',
+                'translation_domain' => 'contact',
                 'required' => false,
             ])
             ->add('fullName', TextType::class, [
-                'label' => 'full_name',
+                'label' => 'contact.full_name',
+                'translation_domain' => 'contact',
                 'required' => false,
             ])
             ->add('email', EmailType::class, [
-                'label' => 'email',
+                'label' => 'contact.email',
+                'translation_domain' => 'contact',
                 'constraints' => [
                     new Assert\Email(),
                 ],
             ])
             ->add('subject', ChoiceType::class, [
-                'label' => 'subject',
+                'label' => 'contact.subject',
+                'translation_domain' => 'contact',
                 'choices' => [
-                    'Développement applicatif' => 'Développement applicatif',
-                    'Formations' => 'Formations',
-                    'Partenariats' => 'Partenariats',
-                    'Autre' => 'Autre',
+                    'contact.placeholder.choice_1' => 'Développement applicatif',
+                    'contact.placeholder.choice_2' => 'Formations',
+                    'contact.placeholder.choice_3' => 'Partenariats',
+                    'contact.placeholder.choice_4' => 'Autre',
                 ],
-                'placeholder' => 'Veuillez sélectionner un sujet'
+                'placeholder' => 'contact.placeholder.label'
             ])
             ->add('content', TextAreaType::class, [
-                'label' => 'content',
+                'label' => 'contact.content',
+                'translation_domain' => 'contact',
                 'constraints' => [
                     new Assert\NotBlank(),
                 ],
             ])
             ->add('captcha', CaptchaType::class, [
                 'invalid_message' => 'La saisie n\'est pas correcte'
-            ]);
+            ])
         ;
 
         $builder
-            ->add('submit', SubmitType::class)
+            ->add('submit', SubmitType::class, [
+                'label' => 'button.submit'
+            ])
         ;
+    }
+
+    public function setDefaultOptions(OptionsResolver $resolver)
+    {    
+        $resolver->setDefaults([
+            'translation_domain' => 'contact'
+        ]);
     }
 }

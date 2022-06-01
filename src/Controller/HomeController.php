@@ -24,20 +24,4 @@ class HomeController extends AbstractController
     {
         return $this->render('home/legal_mentions.html.twig');
     }
-
-    /**
-     * @Route("/partners", methods={"GET"}, name="partners")
-     */
-    public function partners(Request $request): Response
-    {
-        return $this->render('home/partners.html.twig');
-    }
-
-    /**
-     * @Route("/activities", methods={"GET"}, name="activities")
-     */
-    public function activities(Request $request): Response
-    {
-        return $this->render('home/activities.html.twig');
-    }
 }

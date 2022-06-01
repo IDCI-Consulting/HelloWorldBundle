@@ -26,7 +26,7 @@ COPY config config/
 COPY public public/
 COPY src src/
 COPY templates templates/
-# COPY translations translations/
+COPY translations translations/
 
 ## Create empty var cache and var log directory
 RUN mkdir -p /var/www/app/var/cache /var/www/app/var/log

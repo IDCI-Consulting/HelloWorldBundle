@@ -1,0 +1,14 @@
+contact:
+  title: Formulaire de contact
+  company: Entreprise
+  website: Site web
+  full_name: Nom complet
+  email: Email
+  subject: Sujet
+  content: Contenu
+  placeholder:
+    label: Veuillez sélectionner un sujet
+    choice_1: Développement applicatif
+    choice_2: Formations
+    choice_3: Partenariats
+    choice_4: Autre
