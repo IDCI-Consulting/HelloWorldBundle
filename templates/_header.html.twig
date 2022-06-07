@@ -1,6 +1,7 @@
 {% set current_route = app.request.attributes.get('_route') %}
+{% set current_route_slug = app.request.attributes.get('slug') %}
 
-<header class="">
+<header class="header">
     <div class="hamburger-menu">
         <input type="checkbox" id="show-mobile-menu" class="show-mobile-menu">
         <label for="show-mobile-menu" class="show-mobile-menu-button fas fa-bars fa-2x">
@@ -27,5 +28,8 @@
             <li class="header-links-list-item"><a href="{{ url('app_contact_index') }}" class="{{ app.request.attributes.get('_route') == 'app_contact_index' ? 'active' }}">{% trans from "layout" %}header.contact{% endtrans %}</a></li>
         </ul>
     </nav>
-    <div class="header-locale"></div>
+    <div class="header-locale">
+        <a class="" href="{{ path(current_route, {_locale: 'fr', slug: current_route_slug}) }}"><img src="{{ asset('build/images/base/french-flag.png') }}"></a>
+        <a class="" href="{{ path(current_route, {_locale: 'en', slug: current_route_slug}) }}"><img src="{{ asset('build/images/base/english-flag.png') }}"></a>
+    </div>
 </header>

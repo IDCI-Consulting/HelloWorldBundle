@@ -51,7 +51,7 @@
                             {% for item in day.items %}
                                 <p class="section-display-article-tab-title idci-title-secondary">{{ item.title }}</p>
                                 {% if 0 != item.duration %}
-                                <p class="section-display-article-tab-subtitle idci-title-secondary">Durée : {{ item.duration / 60 }} heure{% if item.duration > 60 %}s{% endif %}</p>
+                                <p class="section-display-article-tab-subtitle idci-title-secondary">{% trans from "courses" %}courses.duration{% endtrans %} : {{ item.duration / 60 }} {% trans from "courses" %}courses.hour{% endtrans %}{% if item.duration > 60 %}s{% endif %}</p>
                                 {% endif %}
                                 <ul class="section-display-article-tab-list">
                                     {{ item.description|raw }}

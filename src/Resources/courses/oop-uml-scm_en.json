@@ -1,0 +1,121 @@
+{
+    "name": "OOP - UML - SCM",
+    "media": "base/oop-uml-scm.svg",
+    "days": [
+        {
+            "label":"Day 1",
+            "items": [
+                {
+                    "title": "Introduction",
+                    "duration": 240,
+                    "description": "<ul><li>Definition</li><li>History</li><li>Object / class</li><li>Declaration</li><li>Fields</li><li>Methods</li><li>Object instanciation</li><li>Object cloning</li></ul>"
+                },
+                {
+                    "title": "Methods",
+                    "duration": 120,
+                    "description": "<ul><li>Builder, destroyer</li><li>toString</li><li>Getters & Setters</li><li>Abstract method</li><li>Static method</li></ul>"
+                },
+                {
+                    "title": "3 big concepts",
+                    "duration": 120,
+                    "description": "<ul><li>Encapsulation</li><li>Inheritance</li><li>Polymorphism</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Day 2",
+            "items": [
+                {
+                    "title": "Visibility",
+                    "duration": 60,
+                    "description": "<ul><li>public</li><li>private</li><li>protected</li></ul>"
+                },
+                {
+                    "title": "Abstract class / Interface",
+                    "duration": 60,
+                    "description": ""
+                },
+                {
+                    "title": "UML / Merise",
+                    "duration": 60,
+                    "description": "<ul><li>UML</li><li>Database</li><li>Merise</li><li>Comparison object world / relationnal world</li></ul>"
+                },
+                {
+                    "title": "Design patterns (DP)",
+                    "duration": 0,
+                    "description": ""
+                },
+                {
+                    "title": "Introduction",
+                    "duration": 60,
+                    "description": ""
+                },
+                {
+                    "title": "Use",
+                    "duration": 60,
+                    "description": "<ul><li>When use DP ?</li><li>When NOT TO use DP ?</li></ul>"
+                },
+                {
+                    "title": "Some examples",
+                    "duration": 120,
+                    "description": "<ul><li>Factory</li><li>Observer</li><li>Strategy</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Day 3",
+            "items": [
+                {
+                    "title": "DIVE INTO THE MVC DP",
+                    "duration": 120,
+                    "description": ""
+                },
+                {
+                    "title": "DIVE INTO THE DEPENDENCY INJECTION",
+                    "duration": 120,
+                    "description": ""
+                },
+                {
+                    "title": "SCM",
+                    "duration": 240,
+                    "description": ""
+                },
+                {
+                    "title": "Definition",
+                    "duration": 0,
+                    "description": "<ul><li>What is a SCM ?</li><li>Why use one ?</li></ul>"
+                },
+                {
+                    "title": "SOME USEFUL COMMANDS",
+                    "duration": 0,
+                    "description": "<ul><li>commit</li><li>push</li><li>add</li><li>remove</li><li>revert / reset ?</li><li>update / pull</li><li>status</li></ul>"
+                },
+                {
+                    "title": "WHICH SCM TO CHOOSE ?",
+                    "duration": 0,
+                    "description": "<ul><li>SVN</li><li>Git</li><li>Mercurial</li></ul>"
+                },
+                {
+                    "title": "Versionning",
+                    "duration": 0,
+                    "description": ""
+                },
+                {
+                    "title": "Branches",
+                    "duration": 0,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "label":"Day 4",
+            "items": [
+                {
+                    "title": "Bug tracker",
+                    "duration": 120,
+                    "description": "<ul><li>Définition</li><li>Why use one ?</li><li>Redmine / Mantis / GitHub</li></ul>"
+                }
+            ]
+        }
+    ]
+}
