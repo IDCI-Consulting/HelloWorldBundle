@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+
+<section class="section-container section-container-full">
+    <section class="section-presentation section-offers">
+        <p class="section-presentation-title idci-title-primary">{% trans from "offers" %}offers.title{% endtrans %}</p>
+        <p class="section-presentation-subtitle section-offers-subtitle idci-subtitle-primary">{% trans from "offers" %}offers.part_1.title{% endtrans %}</p>
+        <p class="section-presentation-description section-offers-description">
+            {% trans from "offers" %}offers.part_1.description{% endtrans %}
+        </p>
+        <p class="section-presentation-subtitle section-offers-subtitle idci-subtitle-primary">{% trans from "offers" %}offers.part_2.title{% endtrans %}</p>
+        <p class="section-presentation-description section-offers-description">
+            {% trans from "offers" %}offers.part_2.description{% endtrans %}
+        </p>
+    </section>
+</section>
+
+{% endblock %}
