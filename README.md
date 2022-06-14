@@ -2,7 +2,7 @@
 
 ## Services
 
-IDCI-Website deployment scripts to manage Symfony applications installation.
+IDCI-Website project based on Symfony6.
 
 ## Requirements
 
