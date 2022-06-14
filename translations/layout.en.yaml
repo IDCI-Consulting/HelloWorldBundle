@@ -1,0 +1,10 @@
+header:
+  homepage: Home
+  courses: Courses
+  members: Members
+  blog: Blog
+  contact: Contact
+
+footer:
+  head_office: Head office
+  legal_mentions: Legal mentions

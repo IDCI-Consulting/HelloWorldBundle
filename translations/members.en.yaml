@@ -1,0 +1,27 @@
+members:
+  title: L'equipe
+  check_cv: Voir le CV
+
+gabriel:
+  subtitle: Manager
+  description: Attracted by new technologies since very young, I passionate about IT and more specifically Internet and Web thereafter. I made this passion my profession when entering the active life. My curiosity and taste of challenges I have to create the IDCI-Consulting company in end of 2007. The philosophy of "Open Source" make me a satisfied libriste. RFC 2616 has become my "holy book" and the number 42 is often a choice of response to the problems I get asked.
+
+frederic:
+  subtitle: Manager
+  description: Previously from the world of IT services, I am co-founder of IDCI-Consulting since 2007. Today I put my 18 years of experience in the company's development. In addition to the strategic directions that I determine with Baptiste & Gabriel, I manage particularly trade negotiations, finance and HRs to allow the operations team to focus on his heart craft.
+
+benjamin:
+  subtitle: Developer
+  description: 
+
+swan:
+  subtitle: Developer
+  description: 
+
+vincent:
+  subtitle: Developer
+  description: 
+
+joris:
+  subtitle: Developer
+  description: 

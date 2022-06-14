@@ -129,6 +129,24 @@ header {
     }
 
     .header-locale {
+        column-gap: 1rem;
+        display: flex;
+        justify-content: center;
+        margin: auto 0;
+        text-align: center;
         width: 20%;
+
+        @include until($desktop) {
+            margin-right: 1rem;
+        }
+
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+
+            img {
+                width: 2rem;
+            }
+        }
     }
 }
