@@ -1,0 +1,4 @@
+error:
+  not_found_page: Page introuvable
+  description:  La page à laquelle vous souhaitez accèder n'a pas l'air d'exister. Vérifiez s'il n'y a aucune erreur dans l'URL.
+                <a href="{{ path('app_homepage') }}">Revenir à l'accueil</a>.
