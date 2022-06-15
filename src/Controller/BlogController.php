@@ -19,6 +19,8 @@ class BlogController extends AbstractController
     {
         $articles = json_decode(file_get_contents('../src/Resources/blog/articles.json'), true);
 
+        //dd($articles);
+
         $articlesByCategory = [];
 
         foreach ($articles as $articleTab) {
@@ -31,7 +33,9 @@ class BlogController extends AbstractController
 
         foreach ($articles as $articleTab) {
             foreach ($articleTab as $article) {
-                $articlesByCategory[$article["category"]] = $article;
+                $articleObject = (object)$article;
+                $articlesByCategory[$article["category"]] = [$articleObject];
+                dump($articlesByCategory);
             }
         }
 
