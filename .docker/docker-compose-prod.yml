@@ -26,23 +26,24 @@ services:
         # HTTP
         # Routers
         - "traefik.http.routers.idci-nginx.entryPoints=web"
-        - "traefik.http.routers.idci-nginx.rule=Host(`idci-consulting.fr`, `www.idci-consulting.fr`)"
-        - "traefik.http.routers.idci-nginx.middlewares=idci-redirect-http-https@docker"
+#        - "traefik.http.routers.idci-nginx.rule=Host(`idci-consulting.fr`, `www.idci-consulting.fr`)"
+        - "traefik.http.routers.idci-nginx.rule=Host(`preprod.idci-consulting.fr`)"
+#        - "traefik.http.routers.idci-nginx.middlewares=idci-redirect-http-https@docker"
         # Middlewares: http => https
-        - "traefik.http.middlewares.idci-redirect-http-https.redirectscheme.scheme=https"
-        - "traefik.http.middlewares.idci-redirect-http-https.redirectscheme.permanent=true"
+#        - "traefik.http.middlewares.idci-redirect-http-https.redirectscheme.scheme=https"
+#        - "traefik.http.middlewares.idci-redirect-http-https.redirectscheme.permanent=true"
 
         # HTTPS
         # Routers
-        - "traefik.http.routers.idci-nginx-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-nginx-https.rule=Host(`idci-consulting.fr`, `www.idci-consulting.fr`)"
-        - "traefik.http.routers.idci-nginx-https.tls=true"
-        - "traefik.http.routers.idci-nginx-https.tls.certresolver=letsencrypt"
-        - "traefik.http.routers.idci-nginx-https.middlewares=idci-redirect-https-www@docker"
+#        - "traefik.http.routers.idci-nginx-https.entryPoints=websecure"
+#        - "traefik.http.routers.idci-nginx-https.rule=Host(`idci-consulting.fr`, `www.idci-consulting.fr`)"
+#        - "traefik.http.routers.idci-nginx-https.tls=true"
+#        - "traefik.http.routers.idci-nginx-https.tls.certresolver=letsencrypt"
+#        - "traefik.http.routers.idci-nginx-https.middlewares=idci-redirect-https-www@docker"
         # Middlewares: without www => www
-        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.regex=^https://(www.)?(.*)"
-        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.replacement=https://www.$${2}"
-        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.permanent=true"
+#        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.regex=^https://(www.)?(.*)"
+#        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.replacement=https://www.$${2}"
+#        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.permanent=true"
     configs:
       - source: nginx_conf
         target: /etc/nginx/conf.d/default.conf
