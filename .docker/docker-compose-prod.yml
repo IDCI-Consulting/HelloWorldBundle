@@ -1,0 +1,89 @@
+version: '3.8'
+
+services:
+
+  php:
+    image: docker-registry.idci-consulting.fr/idci-website/php-fpm:latest
+    configs:
+      - source: php_conf
+        target: /usr/local/etc/php/php.ini
+    volumes:
+      - assets_data:/var/www/app/public/build
+    networks:
+      - app
+      - redis
+      - wkhtmltopdf
+
+  nginx:
+    image: nginx
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik_reverse_proxy"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.services.idci-nginx.loadbalancer.server.port=80"
+
+        # HTTP
+        # Routers
+        - "traefik.http.routers.idci-nginx.entryPoints=web"
+#        - "traefik.http.routers.idci-nginx.rule=Host(`idci-consulting.fr`, `www.idci-consulting.fr`)"
+        - "traefik.http.routers.idci-nginx.rule=Host(`preprod.idci-consulting.fr`)"
+#        - "traefik.http.routers.idci-nginx.middlewares=idci-redirect-http-https@docker"
+        # Middlewares: http => https
+#        - "traefik.http.middlewares.idci-redirect-http-https.redirectscheme.scheme=https"
+#        - "traefik.http.middlewares.idci-redirect-http-https.redirectscheme.permanent=true"
+
+        # HTTPS
+        # Routers
+#        - "traefik.http.routers.idci-nginx-https.entryPoints=websecure"
+#        - "traefik.http.routers.idci-nginx-https.rule=Host(`idci-consulting.fr`, `www.idci-consulting.fr`)"
+#        - "traefik.http.routers.idci-nginx-https.tls=true"
+#        - "traefik.http.routers.idci-nginx-https.tls.certresolver=letsencrypt"
+#        - "traefik.http.routers.idci-nginx-https.middlewares=idci-redirect-https-www@docker"
+        # Middlewares: without www => www
+#        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.regex=^https://(www.)?(.*)"
+#        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.replacement=https://www.$${2}"
+#        - "traefik.http.middlewares.idci-redirect-https-www.redirectregex.permanent=true"
+    configs:
+      - source: nginx_conf
+        target: /etc/nginx/conf.d/default.conf
+    environment:
+      - NGINX_HOST=idci-consulting.fr
+    volumes:
+      - assets_data:/var/www/app/public/build
+    networks:
+      - traefik_reverse_proxy
+      - app
+
+  redis:
+    image: redis:6
+    volumes:
+      - redis_data:/data
+    networks:
+      - redis
+
+  wkhtmltopdf:
+    image: traumfewo/docker-wkhtmltopdf-aas:latest
+    environment:
+      - USER=idci
+      - PASS=idci#2022
+      - PAYLOAD_LIMIT=1mb
+    networks:
+      wkhtmltopdf: ~
+
+configs:
+  nginx_conf:
+    file: ./conf/nginx/site.conf
+  php_conf:
+    file: ./conf/php/php.ini
+
+volumes:
+  assets_data:
+  redis_data:
+
+networks:
+  app:
+  redis:
+  wkhtmltopdf:
+  traefik_reverse_proxy:
+    external: true
