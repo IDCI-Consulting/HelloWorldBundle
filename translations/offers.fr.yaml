@@ -4,17 +4,21 @@ offers:
     title: Votre problématique
     description:  <span class="section-offers-description-choice">Vous êtes une entreprise (PME/Groupe) et vous souhaitez :</span>
                   <br/><br/>
-                  - Être conseillé sur les choix technologiques et dans la conception de votre futur applicatif web<br/>
-                  - Renforcer temporairement votre équipe de développement<br/>
-                  - Former vos collaborateurs<br/>
-                  - Confier votre projet de mise en œuvre et rester concentré sur votre cœur de métier
+                  <ul>
+                    <li>Être conseillé sur les choix technologiques et dans la conception de votre futur applicatif web<br/></li>
+                    <li>Renforcer temporairement votre équipe de développement<br/></li>
+                    <li>Former vos collaborateurs<br/></li>
+                    <li>Confier votre projet de mise en œuvre et rester concentré sur votre cœur de métier</li>
+                  </ul>
                   <br/><br/>
                   <span class="section-offers-description-choice">Vous êtes une SSII et vous souhaitez :</span>
                   <br/><br/>
-                  - Renforcer vos ressources dans le cadre d’un projet<br/>
-                  - Déléguer ponctuellement un expert pour aider votre client à résoudre une problématique technique<br/>
-                  - Sous-traiter tout ou partie d’un contrat de services chez un de vos clients<br/>
-                  - Former vos collaborateurs ou ceux de vos clients sur les dernières technologies
+                  <ul>
+                    <li>Renforcer vos ressources dans le cadre d’un projet<br/></li>
+                    <li>Déléguer ponctuellement un expert pour aider votre client à résoudre une problématique technique<br/></li>
+                    <li>Sous-traiter tout ou partie d’un contrat de services chez un de vos clients<br/></li>
+                    <li>Former vos collaborateurs ou ceux de vos clients sur les dernières technologies</li>
+                  </ul>
   part_2:
     title: Une réponse innovante
     description:  'IDCI consulting (SARL) créée en 2007 est un groupement d’experts sur les technologies web
@@ -26,23 +30,29 @@ offers:
                   <br/><br/>
                   En fonction de la charge et de l’expertise de vos équipes vous pouvez choisir de :
                   <br/><br/>
-                  - Déléguer tous les aspects techniques à IDCI et laisser vos équipes 100% concentrées sur l’implémentation des briques fonctionnelles liées à votre métier.<br/>
-                  - Avoir recours à une délégation partielle des tâches techniques à IDCI afin de combler vos besoins ponctuels en ressources et en expertise.<br/>
-                  - Vous assurer une collaboration et un support jusqu’à la totale maîtrise de votre projet
+                  <ul>
+                    <li>Déléguer tous les aspects techniques à IDCI et laisser vos équipes 100% concentrées sur l’implémentation des briques fonctionnelles liées à votre métier.<br/></li>
+                    <li>Avoir recours à une délégation partielle des tâches techniques à IDCI afin de combler vos besoins ponctuels en ressources et en expertise.<br/></li>
+                    <li>Vous assurer une collaboration et un support jusqu’à la totale maîtrise de votre projet</li>
+                  </ul>
                   <br/><br/>
                   Cette organisation est la promesse d’un véritable partenariat offrant des avantages pour
                   chaque partie.
                   <br/><br/>
                   <span class="section-offers-description-choice bold-text">Pour le client :</span>
                   <br/><br/>
-                  - Mandater 1 consultant IDCI consulting et bénéficier d’un réseau multi-compétences<br/>
-                  - Bénéficier de moyens techniques et matériels supplémentaires (serveurs, locaux, communication.)<br/>
-                  - S’assurer d’un backup en cas d’urgence<br/>
-                  - D’optimiser les coûts de déplacement en faisant réaliser tout ou partie du mandat dans nos locaux en relation permanente avec le client<br/>
-                  - Avoir un 2e interlocuteur en charge de la relation et de la satisfaction client
+                  <ul>
+                    <li>Mandater 1 consultant IDCI consulting et bénéficier d’un réseau multi-compétences<br/></li>
+                    <li>Bénéficier de moyens techniques et matériels supplémentaires (serveurs, locaux, communication.)<br/></li>
+                    <li>S’assurer d’un backup en cas d’urgence<br/></li>
+                    <li>D’optimiser les coûts de déplacement en faisant réaliser tout ou partie du mandat dans nos locaux en relation permanente avec le client<br/></li>
+                    <li>Avoir un 2e interlocuteur en charge de la relation et de la satisfaction client</li>
+                  </ul>
                   <br/><br/>
                   <span class="section-offers-description-choice bold-text">Pour IDCI :</span>
                   <br/><br/>
-                  - Mutualiser les compétences<br/>
-                  - Maintenir et faire évoluer les connaissances de chacun<br/>
-                  - Travailler en suivant des standards suivis par la communauté et par notre équipe'
+                  <ul>
+                    <li>Mutualiser les compétences<br/></li>
+                    <li>Maintenir et faire évoluer les connaissances de chacun<br/></li>
+                    <li>Travailler en suivant des standards suivis par la communauté et par notre équipe</li>
+                  </ul>'

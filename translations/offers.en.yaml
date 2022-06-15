@@ -4,17 +4,21 @@ offers:
     title: Your problematic
     description:  <span class="section-offers-description-choice">You are a company (SME/Group) and you want to :</span>
                   <br/><br/>
-                  - Be advised on technological choices and on your future web application conception<br/>
-                  - Offer temporary reinforcements to your development team<br/>
-                  - Train your collaborators<br/>
-                  - Leave us your project execution and stay focus on your core business
+                  <ul>
+                    <li>Be advised on technological choices and on your future web application conception<br/></li>
+                    <li>Offer temporary reinforcements to your development team<br/></li>
+                    <li>Train your collaborators<br/></li>
+                    <li>Leave us your project execution and stay focus on your core business</li>
+                  </ul>
                   <br/><br/>
                   <span class="section-offers-description-choice">You are a Software firm and you want :</span>
                   <br/><br/>
-                  - Reinforce your resources in the context of a project<br/>
-                  - Delegate punctually to an expert to help your client in order to solve his technical issue<br/>
-                  - Subcontract an entire services contract from your client, or just a part of it.<br/>
-                  - Train your collaborators, or your client's ones, on the new technologies.
+                  <ul>
+                    <li>Reinforce your resources in the context of a project<br/></li>
+                    <li>Delegate punctually to an expert to help your client in order to solve his technical issue<br/></li>
+                    <li>Subcontract an entire services contract from your client, or just a part of it.<br/></li>
+                    <li>Train your collaborators, or your client's ones, on the new technologies.</li>
+                  </ul>
   part_2:
     title: An innovantive answer
     description:  'IDCI consulting (LLC), created in 2007, is a group of experts on the web technologies
@@ -24,22 +28,28 @@ offers:
                   <br/><br/>
                   Depending of the task and expertise of your teams, you can choose to :
                   <br/><br/>
-                  - Delegate every technical aspects to IDCI and let your teams keep 100% of their focus on your core business functionnal components implementation.<br/>
-                  - Resort to a partial delegation of technical tasks to IDCI in order to fill your punctual needs of resources and expertise.<br/>
-                  - Assure yourself a collaboration and a support until you totally master your project
+                  <ul>
+                    <li>Delegate every technical aspects to IDCI and let your teams keep 100% of their focus on your core business functionnal components implementation.<br/></li>
+                    <li>Resort to a partial delegation of technical tasks to IDCI in order to fill your punctual needs of resources and expertise.<br/></li>
+                    <li>Assure yourself a collaboration and a support until you totally master your project</li>
+                  </ul>
                   <br/><br/>
                   This organization is the promise of a real partnership offering benefits to both sides.
                   <br/><br/>
                   <span class="section-offers-description-choice bold-text">For the client :</span>
                   <br/><br/>
-                  - Commission an IDCI Consulting consultant et benefit from a multi-skills network<br/>
-                  - Benefit from technical ways and extra material (servers, sites, communication.)<br/>
-                  - Insure yourself a back in emergency cases<br/>
-                  - Optimize moving costs by realizing all, or just a part, of the commission in our sites, on permanent communication with the client<br/>
-                  - Get a second interlocutor in charge of the relation and satisfaction of the client
+                  <ul>
+                    <li>Commission an IDCI Consulting consultant et benefit from a multi-skills network<br/></li>
+                    <li>Benefit from technical ways and extra material (servers, sites, communication.)<br/></li>
+                    <li>Insure yourself a back in emergency cases<br/></li>
+                    <li>Optimize moving costs by realizing all, or just a part, of the commission in our sites, on permanent communication with the client<br/></li>
+                    <li>Get a second interlocutor in charge of the relation and satisfaction of the client</li>
+                  </ul>
                   <br/><br/>
                   <span class="section-offers-description-choice bold-text">For IDCI :</span>
                   <br/><br/>
-                  - Mutualize the skills<br/>
-                  - Maintain and evolve each members knowledges<br/>
-                  - Work following standards established by the community and our team'
+                  <ul>
+                    <li>Mutualize the skills<br/></li>
+                    <li>Maintain and evolve each members knowledges<br/></li>
+                    <li>Work following standards established by the community and our team'</li>
+                  </ul>
