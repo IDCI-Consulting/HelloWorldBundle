@@ -33,9 +33,14 @@ class TeamController extends AbstractController
     /**
      * @Route("/{slug}.{_format}", methods={"GET"}, name="member", requirements={"_format"="json|html|pdf"}, defaults={"_format": "html"})
      */
-    public function member(Request $request, string $slug, string $_format): Response
-    {
-        $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s_%s.json', $slug, 'fr'), 'r');
+    public function member(Request $request, string $slug, string $_format, string $_locale): Response
+    {      
+        try {
+            $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s_%s.json', $slug, $_locale), 'r');
+        } catch(\Exception $e) {
+            return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
+        }
+
         $rawJson = $cvFile->fread($cvFile->getSize());
         $cvJson = json_decode($rawJson, true);
 

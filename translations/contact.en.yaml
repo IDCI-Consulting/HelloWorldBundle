@@ -1,0 +1,14 @@
+contact:
+  title: Contact form
+  company: Company
+  website: Website
+  full_name: Full name
+  email: Email
+  subject: Subject
+  content: Content
+  placeholder:
+    label: Please choose a subject
+    choice_1: Applicative development
+    choice_2: Courses
+    choice_3: Partnerships
+    choice_4: Other

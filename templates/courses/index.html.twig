@@ -4,8 +4,8 @@
 
 <section class="section-container">
     <section class="section-presentation">
-        <h2 class="section-presentation-title idci-title-primary">Choisissez l'une de</h2>
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">nos formations</h3>
+        <h2 class="section-presentation-title idci-title-primary">{% trans from "courses" %}courses.title{% endtrans %}</h2>
+        <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "courses" %}courses.subtitle{% endtrans %}</h3>
         <div class="columns section-presentation-columns">
             <div class="column section-presentation-column">
                 <div class="section-card">
@@ -37,8 +37,8 @@
             <aside class="section-display-aside">
                 <img src="{{ asset('build/images/' ~ course.media ~ '') }}" class="section-card-media">
                 <div class="section-display-aside-buttons">
-                    <a href="" class="button section-display-aside-button">Télécharger en PDF</a>
-                    <a href="{{ url('app_contact_index') }}" class="button section-display-aside-button">Nous contacter</a>
+                    <a href="" class="button section-display-aside-button">{% trans %}button.pdf_download{% endtrans %}</a>
+                    <a href="{{ url('app_contact_index') }}" class="button section-display-aside-button">{% trans %}button.contact_us{% endtrans %}</a>
                 </div>
             </aside>
             <article class="section-display-article">
@@ -51,7 +51,7 @@
                             {% for item in day.items %}
                                 <p class="section-display-article-tab-title idci-title-secondary">{{ item.title }}</p>
                                 {% if 0 != item.duration %}
-                                <p class="section-display-article-tab-subtitle idci-title-secondary">Durée : {{ item.duration / 60 }} heure{% if item.duration > 60 %}s{% endif %}</p>
+                                <p class="section-display-article-tab-subtitle idci-title-secondary">{% trans from "courses" %}courses.duration{% endtrans %} : {{ item.duration / 60 }} {% trans from "courses" %}courses.hour{% endtrans %}{% if item.duration > 60 %}s{% endif %}</p>
                                 {% endif %}
                                 <ul class="section-display-article-tab-list">
                                     {{ item.description|raw }}

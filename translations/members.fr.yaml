@@ -1,0 +1,27 @@
+members:
+  title: L'equipe
+  check_cv: Voir le CV
+
+gabriel:
+  subtitle: Gérant
+  description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
+
+frederic:
+  subtitle: Gérant
+  description: Issu auparavant du monde des services informatiques, je suis co-fondateur de IDCI consulting depuis 2007. Je mets aujourd'hui mes 18 années d'expérience au service du développement de l'entreprise. Outre les orientations stratégiques que je détermine avec Gabriel et Baptiste, je gère en particulier les négociations commerciales, la finance et les HRs pour permettre à l'équipe opérationnelle de se concentrer sur son cœur de métier.
+
+benjamin:
+  subtitle: Développeur
+  description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
+
+swan:
+  subtitle: Développeur
+  description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
+
+vincent:
+  subtitle: Développeur
+  description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
+
+joris:
+  subtitle: Développeur
+  description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
