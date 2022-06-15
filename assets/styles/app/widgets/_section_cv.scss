@@ -62,6 +62,14 @@
             margin-right: 1rem;
         }
 
+        .section-cv-banner-skills-title {
+            color: $idci-color-grey;
+            font-size: $idci-font-larger;
+            font-style: normal;
+            text-align: center;
+            text-decoration: underline;
+        }
+
         .section-cv-banner-skills {
             li {
                 display: flex;
@@ -73,7 +81,7 @@
                     width: 50%;
                 }
 
-                .section-cv-banner-skill-keywords {
+                .section-cv-banner-skill-details {
                     width: 50%;
                 }
             }
