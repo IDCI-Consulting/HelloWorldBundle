@@ -13,7 +13,7 @@
         <section class="section-cv-banner section-cv-banner-primary">
             <p class="section-cv-banner-title idci-title-secondary">A propos de moi</p>
             <ul class="section-cv-banner-list">
-                <li class="section-cv-banner-list-item">Âge<p>{{ data.identity.age }}</p></li>
+                <li class="section-cv-banner-list-item">Âge<p>{{ 'now'|date("Y") - data.identity.birthDate|date("Y") }}</p></li>
                 <li class="section-cv-banner-list-item">Email<p>{{ data.identity.email }}</p></li>
                 <li class="section-cv-banner-list-item">Tél<p>{{ data.identity.phone }}</p></li>
             </ul>

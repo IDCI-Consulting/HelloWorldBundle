@@ -2,7 +2,7 @@
     "identity": {
         "firstName": "Joris",
         "lastName": "Vinière",
-        "age": 20,
+        "birthDate": "2001-12-25T00:00:00Z",
         "job": "Développeur Web FullStack",
         "media": "",
         "email": "joris.viniere@idci-consulting.fr",
@@ -18,7 +18,6 @@
         "socialNetworks": [
             {
                 "name": "linkedin",
-                "username": "Joris Viniere",
                 "url": "https://www.linkedin.com/mwlite/in/joris-viniere-7ba645204"
             }
         ]
@@ -30,7 +29,7 @@
             "startDate": "2021-09-15T00:00:00Z",
             "endDate": "2022-09-13T00:00:00Z",
             "website": "",
-            "tools": "",
+            "tools": [],
             "tasks": [
                 "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
                 "Création d'un site web pour un client",
@@ -44,7 +43,7 @@
             "startDate": "2021-04-15T00:00:00Z",
             "endDate": "2021-06-31T00:00:00Z",
             "website": "",
-            "tools": "",
+            "tools": [],
             "tasks": [
                 "Apprentissage des technologies utilisées par l'entreprise",
                 "Création d'un site web pour un client",
@@ -57,7 +56,7 @@
             "startDate": "2020-07-01T00:00:00Z",
             "endDate": "2020-08-07T00:00:00Z",
             "website": "",
-            "tools": "",
+            "tools": [],
             "tasks": [
                 "Aide à la préparation et au suivi des machines",
                 "Assistance à la gestion de l'approvisionnement",
@@ -71,7 +70,7 @@
             "startDate": "2019-07-01T00:00:00Z",
             "endDate": "2019-08-10T00:00:00Z",
             "website": "",
-            "tools": "",
+            "tools": [],
             "tasks": [
                 "Service des plats en salle",
                 "Développer des relations avec les clients",
@@ -84,7 +83,7 @@
             "startDate": "2018-07-01T00:00:00Z",
             "endDate": "2018-08-10T00:00:00Z",
             "website": "",
-            "tools": "",
+            "tools": [],
             "tasks": [
                 "Service des plats en salle",
                 "Développer des relations avec les clients",
