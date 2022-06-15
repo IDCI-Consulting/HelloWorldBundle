@@ -19,30 +19,25 @@ class BlogController extends AbstractController
     {
         $articles = json_decode(file_get_contents('../src/Resources/blog/articles.json'), true);
 
-        //dd($articles);
-
-        $articlesByCategory = [];
+        $articlesByCategories = [];
 
         foreach ($articles as $articleTab) {
             foreach ($articleTab as $article) {
-                if (!in_array($article["category"], $articlesByCategory)) {
-                    $articlesByCategory[$article["category"]] = [];
+                if (!in_array($article["category"], $articlesByCategories)) {
+                    $articlesByCategories[$article["category"]] = [];
                 }
             }
         }
 
         foreach ($articles as $articleTab) {
             foreach ($articleTab as $article) {
-                $articleObject = (object)$article;
-                $articlesByCategory[$article["category"]] = [$articleObject];
-                dump($articlesByCategory);
+                $articlesByCategories[$article["category"]][] = $article;
             }
         }
 
-        //dd($articlesByCategory);
-
         return $this->render('blog/index.html.twig', [
-            'articles' => $articles
+            'articles' => $articles,
+            'articles_by_categories' => $articlesByCategories
         ]);
     }
 

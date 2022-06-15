@@ -5,7 +5,7 @@
 <section class="section-container">
     <section class="section-dynamic-display">
         <h2 class="section-dynamic-display-title idci-title-primary">Blog</h2>
-        <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">Derniers articles</h3>
+        <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">{% trans from "blog" %}blog.carousel_title{% endtrans %}</h3>
         <div class="columns section-dynamic-display-">
             <div class="pic-ctn">
                 <div class="columns pic">
@@ -24,11 +24,11 @@
 
 <section class="section-container section-container-70 section-container-primary">
     <section class="section-articles">
-        <h2 class="section-articles-title idci-title-primary">Tous les articles</h2>
+        <h2 class="section-articles-title idci-title-primary">{% trans from "blog" %}blog.all_articles_title{% endtrans %}</h2>
         <div class="tab">
             <div class="tab-item">
                 <input type="radio" id="articles_by_dates" name="nav-tab" checked>
-                <label class="label-first" for="articles_by_dates" data-position="1">Par dates</label>
+                <label for="articles_by_dates" data-position="1">{% trans from "blog" %}blog.by_dates{% endtrans %}</label>
                 <div class="tab-pane">
                     {% for date_label, date in articles %}
                     <div class="section-articles-list">
@@ -38,7 +38,7 @@
                             <li class="section-articles-list-item">
                                 <img src="{{ asset('build/images/' ~ article.media ~ '') }}" class="section-articles-list-item-media">
                                 <a href="{{ url('app_blog_article', {'slug': article.id}) }}" class="section-articles-list-item-link">{{ article.name }}</a>
-                                <span class="section-articles-list-item-infos">ajouté le {{ article.parutionDate }} par {{ article.author }}</span>
+                                <span class="section-articles-list-item-infos">{% trans from "blog" %}blog.uploaded_the{% endtrans %} {{ article.parutionDate }} {% trans from "blog" %}blog.by{% endtrans %} {{ article.author }}</span>
                             </li>
                             {% endfor %}
                         </ul>
@@ -49,9 +49,22 @@
 
             <div class="tab-item">
                 <input type="radio" id="articles_by_categories" name="nav-tab">
-                <label for="articles_by_categories" data-position="2">Par catégories</label>
+                <label class="label-second" for="articles_by_categories" data-position="2">{% trans from "blog" %}blog.by_categories{% endtrans %}</label>
                 <div class="tab-pane">
-                    <p>test 2</p>
+                    {% for category_label, category in articles_by_categories %}
+                    <div class="section-articles-list">
+                        <h2 class="section-articles-list-title">{{ category_label }}</h2>
+                        <ul>
+                            {% for article in category %}
+                            <li class="section-articles-list-item">
+                                <img src="{{ asset('build/images/' ~ article.media ~ '') }}" class="section-articles-list-item-media">
+                                <a href="{{ url('app_blog_article', {'slug': article.id}) }}" class="section-articles-list-item-link">{{ article.name }}</a>
+                                <span class="section-articles-list-item-infos">{% trans from "blog" %}blog.uploaded_the{% endtrans %} {{ article.parutionDate }} {% trans from "blog" %}blog.by{% endtrans %} {{ article.author }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

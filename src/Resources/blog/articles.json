@@ -21,10 +21,10 @@
         {
             "id": "new-year-2017",
             "name": "Nos voeux 2017",
-            "media": "base/symfony2.svg",
+            "media": "logo/idci-logo.svg",
             "parutionDate": "13/01/2017",
             "author": "Louise Millon",
-            "category": "Symfony"
+            "category": "IDCI"
         }
     ]
 }
