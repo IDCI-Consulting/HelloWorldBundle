@@ -1,0 +1,222 @@
+{
+    "identity": {
+        "firstName": "Swan",
+        "lastName": "Frere",
+        "birthDate": "2002-05-03T00:00:00Z",
+        "job": "Développeur Web FullStack",
+        "media": "",
+        "email": "swan.frere@idci-consulting.fr",
+        "phone": "06 14 23 16 84",
+        "website": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://fr.linkedin.com/in/swan-frere-b29bb4233"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": "Alternant Développeur Web FullStack",
+            "startDate": "2021-09-03T00:00:00Z",
+            "endDate": "2024-06-31T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": [
+                "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
+                "Création d'un site web pour un client",
+                "Maintenir et améliorer un site sur demande du client",
+                "Développer des relations avec les clients"
+            ]
+        },
+        {
+            "company": "IDCI-Consulting",
+            "role": "Stagiaire Développeur Web FullStack",
+            "startDate": "2021-04-15T00:00:00Z",
+            "endDate": "2021-06-31T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": [
+                "Apprentissage des technologies utilisées par l'entreprise",
+                "Création d'un site web pour un client",
+                "Apprentissage de la méthode agile"
+            ]
+        },
+        {
+            "company": "Intermarché",
+            "role": "Employé polyvalent",
+            "startDate": "2020-08-01T00:00:00Z",
+            "endDate": "2020-08-31T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": [
+                "Préparation de plats frais",
+                "Poissonnerie",
+                "Mise en rayon"
+            ]
+        },
+        {
+            "company": "Guillot Cobreda",
+            "role": "Opérateur sur chaîne",
+            "startDate": "2020-07-01T00:00:00Z",
+            "endDate": "2020-07-31T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": [
+                "Abattage de poulets",
+                "Préparation de commande",
+                "Maintient d'hygiène de l'établissement"
+            ]
+        }
+    ],
+    "personalExperiences": [
+        {
+            "organization": "Club de handball de Bourg-en-Bresse",
+            "role": "Bénévole",
+            "website": "",
+            "startDate": "2017-09-01T00:00:00Z",
+            "endDate": "2020-06-31T00:00:00Z",
+            "description": "Arbitre bénévole pour les matchs du club de handball de Boug-en-Bresse"
+        },
+        {
+            "organization": "Cours particuliers",
+            "role": "Bénévole",
+            "website": "",
+            "startDate": "2020-09-01T00:00:00Z",
+            "endDate": "2021-06-31T00:00:00Z",
+            "description": "Cours particuliers d'allemand à des élèves de lycée"
+        }
+    ],
+    "education": [
+        {
+            "domain": "Informatique",
+            "certificate": "DUT Informatique",
+            "location": "Bourg-en-Bresse",
+            "startDate": "2019-09-01T00:00:00Z",
+            "endDate": "2021-07-01T00:00:00Z"
+        },
+        {
+            "domain": "Informatique",
+            "certificate": "Diplôme d'Ingénieur Informatique par Apprentissage",
+            "location": "Telecom Nancy - Villers-lès-Nancy",
+            "startDate": "2021-09-21T00:00:00Z",
+            "endDate": "2024-06-31T00:00:00Z"
+        }
+    ],
+    "expertises": [
+        {
+            "name": "IT",
+            "skills": [
+                {
+                    "name": "Langages informatique",
+                    "level": "",
+                    "keywords": [
+                        "HTML5",
+                        "CSS3",
+                        "PHP",
+                        "Javascript",
+                        "C",
+                        "C++",
+                        "Java",
+                        "Bash",
+                        "SQL",
+                        "Python"
+                    ]
+                },
+                {
+                    "name": "OS",
+                    "level": "",
+                    "keywords": [
+                        "Windows",
+                        "Linux (Ubuntu)"
+                    ]
+                },
+                {
+                    "name": "Frameworks",
+                    "level": "",
+                    "keywords": [
+                        "Symfony",
+                        "Bootstrap",
+                        "Django"
+                    ]
+                },
+                {
+                    "name": "Moteur de template",
+                    "level": "",
+                    "keywords": [
+                        "Twig"
+                    ]
+                },
+                {
+                    "name": "Versioning",
+                    "level": "",
+                    "keywords": [
+                        "Git"
+                    ]
+                },
+                {
+                    "name": "Base de Données",
+                    "level": "",
+                    "keywords": [
+                        "MySQL",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "Neo4j"
+                    ]
+                },
+                {
+                    "name": "Conteneurisation",
+                    "level": "",
+                    "keywords": [
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": "Gestion de projet",
+                    "level": "",
+                    "keywords": [
+                        "Redmine"
+                    ]
+                },
+                {
+                    "name": "Modélisation",
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "languages",
+            "skills": [
+                {
+                    "name": "Anglais",
+                    "level": "B2"
+                },
+                {
+                    "name": "Allemand",
+                    "level": "B1"
+                }
+            ]
+        }
+    ],
+    "hobbies": [
+        {
+            "name": "Badminton",
+            "description": "Pratique depuis 10 ans en loisirs"
+        },
+        {
+            "name": "Handball",
+            "description": "Pratique depuis 10 ans en compétition"
+        }
+    ]
+}
