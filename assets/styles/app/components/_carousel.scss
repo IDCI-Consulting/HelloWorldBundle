@@ -57,3 +57,38 @@ div:nth-child(4) {
 div:nth-child(5) {
   animation-delay: 8s;
 }
+
+.carousel-article {
+  .carousel-article-header {
+    display: flex;
+  
+    p {
+      color: $idci-color-blue;
+      margin-left: 2rem;
+    }
+  }
+
+  .carousel-article-title {
+    color: $idci-color-dark-grey;
+    font-size: $idci-font-1-5x;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+
+  .carousel-article-description {
+    margin: 1rem 0;
+  }
+
+  .carousel-article-button {
+    background-color: $idci-color-blue;
+    color: $idci-color-white;
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+}

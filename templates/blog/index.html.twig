@@ -8,16 +8,23 @@
         <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">{% trans from "blog" %}blog.carousel_title{% endtrans %}</h3>
         <div class="columns section-dynamic-display-">
             <div class="pic-ctn">
-                <div class="columns pic">
-                    <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3">
-                    <div class="column is-6">
-                        <p>Title</p>
-                        <p>Description</p>
+            {% for date_label, date in articles %}
+                {% for article in date %}
+                    <div class="columns pic">
+                        <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3">
+                        <div class="column is-6 carousel-article">
+                            <div class="carousel-article-header">
+                                <p>{{ article.parutionDate }}</p>
+                                <p>{{ article.author }}</p>
+                            </div>
+                            <p class="carousel-article-title">{{ article.name }}</p>
+                            <p class="carousel-article-description">{{ article.description }}</p>
+                            <a href="{{ url('app_blog_article', {'slug': article.id}) }}" class="carousel-article-button">{% trans from "blog" %}blog.read_article{% endtrans %}</a>
+                        </div>
                     </div>
-                </div>
-                <div class="pic">test</div>
-                <div class="pic">test</div>
-              </div>
+                {% endfor %}
+            {% endfor %}
+            </div>
         </div>
     </section>
 </section>
