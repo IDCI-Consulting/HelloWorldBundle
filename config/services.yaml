@@ -35,3 +35,10 @@ services:
     App\Twig\AppExtension:
         arguments:
             $publicDir: '%kernel.project_dir%/public'
+
+    # event listener
+    App\EventListener\HeaderVersionListener:
+        arguments:
+            $appVersion: '%env(APP_VERSION)%'
+        tags:
+            - { name: kernel.event_listener, event: kernel.response }
