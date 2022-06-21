@@ -27,6 +27,7 @@ start-production:
   environment:
     name: production
     url: https://www.idci-consulting.fr/
+    on_stop: stop-production
   when: manual
   only:
     - tags
@@ -41,6 +42,7 @@ stop-production:
   environment:
     name: production
     url: https://www.idci-consulting.fr/
+    action: stop
   when: manual
   only:
     - tags
@@ -57,7 +59,7 @@ update-production:
   environment:
     name: production
     url: https://www.idci-consulting.fr/
+    on_stop: stop-production
   when: manual
   only:
     - tags
-
