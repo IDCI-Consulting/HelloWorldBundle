@@ -1,7 +1,7 @@
 <section class="section-container">
     <section class="section-cv">
         <section class="columns is-multiline is-centered">
-            <p class="column is-12 section-cv-title idci-title-secondary">Curriculum Vitae</p>
+            <p class="column is-12 section-cv-title idci-title-secondary">{% trans from "cv" %}cv.title{% endtrans %}</p>
             <p class="column is-6 section-cv-label">{{ data.identity.firstName }} {{ data.identity.lastName }} | {{ data.identity.job }}</p>
             <p class="column is-6 section-cv-links">
                 {% for socialNetwork in data.identity.socialNetworks %}
@@ -11,7 +11,7 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-primary">
-            <p class="section-cv-banner-title idci-title-secondary">A propos de moi</p>
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.about_me{% endtrans %}</p>
             <ul class="section-cv-banner-list">
                 <li class="section-cv-banner-list-item">Âge<p>{{ 'now'|date("Y") - data.identity.birthDate|date("Y") }}</p></li>
                 <li class="section-cv-banner-list-item">Email<p>{{ data.identity.email }}</p></li>
@@ -20,7 +20,7 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-secondary">
-            <p class="section-cv-banner-title idci-title-secondary">Expériences professionnelles</p>
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.professional_experiences{% endtrans %}</p>
             {% for professionalExperience in data.professionalExperiences %}
                 <p class="section-cv-banner-subtitle">
                     {% if "" == professionalExperience.endDate %}
@@ -41,14 +41,14 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-primary">
-            <p class="section-cv-banner-title idci-title-secondary">Formations</p>
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.courses{% endtrans %}</p>
             {% for education in data.education %}
                 <p><span class="section-cv-banner-education-date">{{ education.endDate|date("Y") }}</span>{{ education.certificate }}</p>
             {% endfor %}
         </section>
 
         <section class="section-cv-banner section-cv-banner-secondary">
-            <p class="section-cv-banner-title idci-title-secondary">Compétences</p>
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.skills{% endtrans %}</p>
             {% for expertise in data.expertises %}
             <p class="section-cv-banner-subtitle section-cv-banner-skills-title">{{ expertise.name }}</p>
             <ul class="section-cv-banner-skills">
@@ -71,7 +71,7 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-primary">
-            <p class="section-cv-banner-title idci-title-secondary">Expériences personnelles</p>
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.personal_experiences{% endtrans %}</p>
             {% for personalExperience in data.personalExperiences %}
                 <p class="section-cv-banner-subtitle">
                 {% if "" == personalExperience.endDate %}
@@ -86,7 +86,7 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-secondary">
-            <p class="section-cv-banner-title idci-title-secondary">Hobbies</p>
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.hobbies{% endtrans %}</p>
             {% for hobby in data.hobbies %}
                 <p class="section-cv-banner-subtitle">{{ hobby.name }}</p>
                 <p>{{ hobby.description }}</p>
