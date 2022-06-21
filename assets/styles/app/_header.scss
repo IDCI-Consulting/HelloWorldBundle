@@ -143,6 +143,11 @@ header {
         a {
             text-transform: uppercase;
             text-decoration: none;
+            filter: grayscale(1);
+
+            &.active {
+                filter: grayscale(0);
+            }
 
             img {
                 width: 2rem;
