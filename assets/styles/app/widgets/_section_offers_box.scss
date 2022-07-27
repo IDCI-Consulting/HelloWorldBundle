@@ -1,0 +1,85 @@
+.section-offers-box {
+    width: 100%;
+
+    @include until($desktop) {
+        margin-top: 2rem;
+    }
+
+    .section-offers-box-title {
+        font-size: $idci-font-2x;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+
+        &.section-offers-box-title-secondary {
+            font-size: $idci-font-2-5x;
+            font-weight: 900;
+            letter-spacing: inherit;
+        }
+    }
+
+    .section-offers-box-description {
+        background-color: $idci-color-white;
+        font-size: $idci-font-larger;
+        margin-top: 2rem;
+        min-height: 290px;
+        padding: 1.5rem;
+
+        @include until($desktop) {
+            margin-top: 2rem;
+            min-height: 0;
+        }
+
+        &.section-offers-box-description-bigger {
+            min-height: 500px;
+            text-align: center;
+
+            @include until($desktop) {
+                min-height: 0;
+            }
+        }
+
+        li {
+            margin-top: 1rem;
+        }
+    }
+
+    .section-offers-box-description-secondary {
+        font-size: $idci-font-larger;
+        margin: auto;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .section-offers-box-button {
+        background-color: $idci-color-blue;
+        color: $idci-color-white;
+        display: block;
+        margin-top: 2rem;
+        padding: 1.5rem;
+        text-align: right;
+        text-transform: uppercase;
+        width: 100%;
+
+        i {
+            margin-left: 1rem;
+        }
+    }
+
+    &.section-offers-box-primary {
+        span {
+            color: $idci-color-blue;
+        }
+    }
+
+    &.section-offers-box-secondary {
+        span {
+            color: $idci-color-green;
+        }
+
+        .section-offers-box-button {
+            background-color: $idci-color-green;
+        }
+    }
+}
