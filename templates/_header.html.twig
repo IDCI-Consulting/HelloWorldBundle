@@ -31,7 +31,7 @@
         </ul>
     </nav>
     <div class="header-locale">
-        <a {% if app.request.locale == 'fr' %}class="active"{% endif %} href="{{ path(current_route, {_locale: 'fr', slug: current_route_slug}) }}"><img src="{{ asset('build/images/base/french-flag.png') }}"></a>
-        <a {% if app.request.locale == 'en' %}class="active"{% endif %} href="{{ path(current_route, {_locale: 'en', slug: current_route_slug}) }}"><img src="{{ asset('build/images/base/english-flag.png') }}"></a>
+        <a{% if app.request.locale == 'fr' %} class="active"{% endif %} href="{{ path(current_route, {_locale: 'fr', slug: current_route_slug}) }}"><img src="{{ asset('build/images/base/french-flag.png') }}"></a>
+        <a{% if app.request.locale == 'en' %} class="active"{% endif %} href="{{ path(current_route, {_locale: 'en', slug: current_route_slug}) }}"><img src="{{ asset('build/images/base/english-flag.png') }}"></a>
     </div>
 </header>
