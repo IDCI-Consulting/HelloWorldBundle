@@ -6,7 +6,9 @@
     <section class="section-dynamic-display">
         <h2 class="section-dynamic-display-title idci-title-primary">Blog</h2>
         <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">{% trans from "blog" %}blog.carousel_title{% endtrans %}</h3>
-        <div class="columns section-dynamic-display-">
+
+
+        <div class="columns">
             <div class="pic-ctn">
             {% set article_count = 0 %}
             {% if article_count < 3 %}
@@ -32,6 +34,34 @@
             {% endif %}
             </div>
         </div>
+
+
+        <div class="carousel-single-item">
+            {% set article_count = 0 %}
+            {% if article_count < 3 %}
+                {% for date_label, date in articles %}
+                    {% for article in date %}
+                        {% if article_count < 3 %}
+                            <div class="columns">
+                                <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3 is-offset-2">
+                                <div class="column is-6 is-centered carousel-article">
+                                    <div class="carousel-article-header">
+                                        <p>{{ article.parutionDate }}</p>
+                                        <p>{{ article.author }}</p>
+                                    </div>
+                                    <p class="carousel-article-title">{{ article.name }}</p>
+                                    <p class="carousel-article-description">{{ article.description }}</p>
+                                    <a href="{{ url('app_blog_article', {'slug': article.id}) }}" class="carousel-article-button">{% trans from "blog" %}blog.read_article{% endtrans %}</a>
+                                </div>
+                            </div>
+                            {% set article_count = article_count + 1 %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+        </div>
+
+
     </section>
 </section>
 

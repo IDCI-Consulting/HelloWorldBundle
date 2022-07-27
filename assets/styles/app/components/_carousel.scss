@@ -1,10 +1,10 @@
 .pic-ctn {
   width: 100vw;
   height: 200px;
-}
 
-.pic {
-  width: 100%;
+  .pic {
+    width: 100%;
+  }
 }
 
 @keyframes display {
@@ -38,14 +38,14 @@
   width: 100vw;
   height: 300px;
   margin-top: 15vh;
-}
 
-.pic-ctn > div {
-  position: absolute;
-  top: 0;
-  left: 15%;
-  opacity: 0;
-  animation: display 15s infinite;
+  > div {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    opacity: 0;
+    animation: display 15s infinite;
+  }
 }
 
 div:nth-child(2) {
