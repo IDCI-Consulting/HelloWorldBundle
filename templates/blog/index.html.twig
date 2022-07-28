@@ -1,6 +1,6 @@
 {% extends 'layout.html.twig' %}
 
-{% block main %}
+{% block main %} 
 
 <section class="section-container">
     <section class="section-dynamic-display">
@@ -14,7 +14,7 @@
             {% if article_count < 3 %}
                 {% for date_label, date in articles %}
                     {% for article in date %}
-                        {% if article_count < 3 %}
+                        {% if article_count < 2 %}
                             <div class="columns pic">
                                 <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3">
                                 <div class="column is-6 carousel-article">
