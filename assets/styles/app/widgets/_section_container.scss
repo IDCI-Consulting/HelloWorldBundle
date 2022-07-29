@@ -3,6 +3,7 @@
     display: flex;
     min-height: 100vh;
     padding: 4rem;
+    position: relative;
 
     @include until($desktop) {
         padding: 2rem;

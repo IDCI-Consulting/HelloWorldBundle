@@ -1,9 +1,7 @@
 .background-video {
+    bottom: 0;
+    max-width: none;
     position: fixed;
-    top: 0;
-    z-index: -10;
-}
-
-main {
-    //filter: opacity(0);
+    right: 0;
+    z-index: 0;
 }
