@@ -26,7 +26,35 @@ html {
     font-weight: bold;
 }
 
+.transparent-box {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 80px solid $idci-color-light-grey;
+    border-left: 100vw solid transparent;
+    border-top: 80px solid $idci-color-light-grey;
+    height: 30rem;
+    position: relative;
+
+    @include until($tablet) {
+        display: none;
+    }
+
+    &.even {
+        border-left: none;
+        border-right: 100vw solid transparent;
+    }
+
+    &.top-secondary {
+        border-top: 80px solid $idci-color-whitesmoke;
+    }
+
+    &.bottom-secondary {
+        border-bottom: 80px solid $idci-color-whitesmoke;
+    }
+}
+
 * {
+    scroll-behavior: smooth !important;
+
     font-family: $idci-primary-font;
 
     &.idci-title-primary {
