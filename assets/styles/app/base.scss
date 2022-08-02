@@ -34,6 +34,10 @@ html {
     height: 30rem;
     position: relative;
 
+    @include until($tablet) {
+        display: none;
+    }
+
     &.even {
         border-left: none;
         border-right: 100vw solid transparent;
