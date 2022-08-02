@@ -8,22 +8,22 @@
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": "<ul><li>Internet != The WEB</li><li>HTTP Protocol (RFC2616)</li><li>Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony</li><li>Why Symfony2 ?</li></ul>"
+                    "description": "<li>Internet != The WEB</li><li>HTTP Protocol (RFC2616)</li><li>Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony</li><li>Why Symfony2 ?</li>"
                 },
                 {
                     "title": "A GOOD ENVIRONMENT AND GOOD PRACTICES",
                     "duration": 120,
-                    "description": "<ul><li>Which IDE ?</li><li>Use a SCM (SVN, Git, etc.)</li><li>Use a bug tracker (Trac, Mantis, Redmine, Github, etc.)</li><li>Coding standards</li></ul>"
+                    "description": "<li>Which IDE ?</li><li>Use a SCM (SVN, Git, etc.)</li><li>Use a bug tracker (Trac, Mantis, Redmine, Github, etc.)</li><li>Coding standards</li>"
                 },
                 {
                     "title": "INTRODUCTION AUX DESIGN PATTERN",
                     "duration": 120,
-                    "description": "<ul><li>General presentation</li><li>MVC in details</li></ul>"
+                    "description": "<li>General presentation</li><li>MVC in details</li>"
                 },
                 {
                     "title": "STRUCTURE APPLICATIONS WITH SYMFONY2",
                     "duration": 120,
-                    "description": "<ul><li>The notion of \"application\" => app/</li><li>The notions of \"bundles\"</li><li>My specific coding => src/</li><li>Externals libraries => vendor/</li><li>The root web => web/</li></ul>"
+                    "description": "<li>The notion of \"application\" => app/</li><li>The notions of \"bundles\"</li><li>My specific coding => src/</li><li>Externals libraries => vendor/</li><li>The root web => web/</li>"
                 }
             ]
         },
@@ -33,12 +33,12 @@
                 {
                     "title": "LE CONTROLLER DANS SYMFONY2",
                     "duration": 240,
-                    "description": "<ul><li>Object Request</li><li>Object Response</li><li>Routing</li><li>Annotations</li></ul>"
+                    "description": "<li>Object Request</li><li>Object Response</li><li>Routing</li><li>Annotations</li>"
                 },
                 {
                     "title": "LES VUES (TEMPLATING) AVEC SYMFONY2",
                     "duration": 240,
-                    "description": "<ul><li>Twig</li><li>Template Inheritance</li><li>Include views</li><li>Restore views</li><li>Twig filters</li></ul>"
+                    "description": "<li>Twig</li><li>Template Inheritance</li><li>Include views</li><li>Restore views</li><li>Twig filters</li>"
                 }
             ]
         },
@@ -48,12 +48,12 @@
                 {
                     "title": "ORM AND DBAL (DATABASE ABSTRACTION LAYER)",
                     "duration": 240,
-                    "description": "<ul><li>PDO</li><li>Doctrine</li><li>Propel</li></ul>"
+                    "description": "<li>PDO</li><li>Doctrine</li><li>Propel</li>"
                 },
                 {
                     "title": "FORMS",
                     "duration": 240,
-                    "description": "<ul><li>AbstractType</li><li>Fields</li><li>Validation</li><li>\"Form events\"</li></ul>"
+                    "description": "<li>AbstractType</li><li>Fields</li><li>Validation</li><li>\"Form events\"</li>"
                 }
             ]
         },
@@ -63,12 +63,12 @@
                 {
                     "title": "CREATE A SERVICE",
                     "duration": 240,
-                    "description": "<ul><li>Dependency injection</li><li>Service container</li></ul>"
+                    "description": "<li>Dependency injection</li><li>Service container</li>"
                 },
                 {
                     "title": "SECURITY",
                     "duration": 240,
-                    "description": "<ul><li>Autorisation</li><li>Authentication</li></ul>"
+                    "description": "<li>Autorisation</li><li>Authentication</li>"
                 }
             ]
         },
@@ -78,12 +78,12 @@
                 {
                     "title": "Tests",
                     "duration": 240,
-                    "description": "<ul><li>Units tests with PHPUnit</li><li>Functionals tests</li></ul>"
+                    "description": "<li>Units tests with PHPUnit</li><li>Functionals tests</li>"
                 },
                 {
                     "title": "GO FURTHER",
                     "duration": 240,
-                    "description": "<ul><li>Use the configuration</li><li>Create Symfony2 commands</li><li>Use already existing bundles</li><li>FOSUserBundle (Users management)</li><li>DoctrineFixtures (Data import)</li><li>Create reusable bundles</li><li>The HTTP cache (ESI, Varnish, etc.)</li></ul>"
+                    "description": "<li>Use the configuration</li><li>Create Symfony2 commands</li><li>Use already existing bundles</li><li>FOSUserBundle (Users management)</li><li>DoctrineFixtures (Data import)</li><li>Create reusable bundles</li><li>The HTTP cache (ESI, Varnish, etc.)</li>"
                 }
             ]
         }

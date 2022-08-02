@@ -8,17 +8,17 @@
                 {
                     "title": "Introduction",
                     "duration": 240,
-                    "description": "<ul><li>Définition</li><li>Historique</li><li>Objet / classe</li><li>Déclaration</li><li>Champs</li><li>Méthodes</li><li>Instanciation d'objet</li><li>Clonage d'un objet</li></ul>"
+                    "description": "<li>Définition</li><li>Historique</li><li>Objet / classe</li><li>Déclaration</li><li>Champs</li><li>Méthodes</li><li>Instanciation d'objet</li><li>Clonage d'un objet</li>"
                 },
                 {
                     "title": "Méthodes",
                     "duration": 120,
-                    "description": "<ul><li>Constructeur, destructeur</li><li>toString</li><li>Getters & Setters</li><li>Méthode abstraite</li><li>Méthode static</li></ul>"
+                    "description": "<li>Constructeur, destructeur</li><li>toString</li><li>Getters & Setters</li><li>Méthode abstraite</li><li>Méthode static</li>"
                 },
                 {
                     "title": "3 grands concepts",
                     "duration": 120,
-                    "description": "<ul><li>Encapsulation</li><li>Héritage</li><li>Polymorphisme</li></ul>"
+                    "description": "<li>Encapsulation</li><li>Héritage</li><li>Polymorphisme</li>"
                 }
             ]
         },
@@ -28,7 +28,7 @@
                 {
                     "title": "Visibilité",
                     "duration": 60,
-                    "description": "<ul><li>public</li><li>private</li><li>protected</li></ul>"
+                    "description": "<li>public</li><li>private</li><li>protected</li>"
                 },
                 {
                     "title": "Classe abstraite / Interface",
@@ -38,7 +38,7 @@
                 {
                     "title": "UML / Merise",
                     "duration": 60,
-                    "description": "<ul><li>UML</li><li>Base de données</li><li>Merise</li><li>Comparaison monde objet / monde relationnel</li></ul>"
+                    "description": "<li>UML</li><li>Base de données</li><li>Merise</li><li>Comparaison monde objet / monde relationnel</li>"
                 },
                 {
                     "title": "Design pattern",
@@ -48,12 +48,12 @@
                 {
                     "title": "Introduction",
                     "duration": 60,
-                    "description": "<ul><li>Quand utiliser les DP ?</li><li>Quand NE PAS utiliser les DP ?</li></ul>"
+                    "description": "<li>Quand utiliser les DP ?</li><li>Quand NE PAS utiliser les DP ?</li>"
                 },
                 {
                     "title": "Quelques exemples",
                     "duration": 120,
-                    "description": "<ul><li>Factory</li><li>Observer</li><li>Strategy</li></ul>"
+                    "description": "<li>Factory</li><li>Observer</li><li>Strategy</li>"
                 }
             ]
         },
@@ -78,17 +78,17 @@
                 {
                     "title": "Définition",
                     "duration": 0,
-                    "description": "<ul><li>Qu'est ce qu'est un SCM ?</li><li>Pourquoi en utiliser un ?</li></ul>"
+                    "description": "<li>Qu'est ce qu'est un SCM ?</li><li>Pourquoi en utiliser un ?</li>"
                 },
                 {
                     "title": "Quelques commandes utiles",
                     "duration": 0,
-                    "description": "<ul><li>commit</li><li>push</li><li>add</li><li>remove</li><li>revert / reset ?</li><li>update / pull</li><li>status</li></ul>"
+                    "description": "<li>commit</li><li>push</li><li>add</li><li>remove</li><li>revert / reset ?</li><li>update / pull</li><li>status</li>"
                 },
                 {
                     "title": "Quel SCM choisir ?",
                     "duration": 0,
-                    "description": "<ul><li>SVN</li><li>Git</li><li>Mercurial</li></ul>"
+                    "description": "<li>SVN</li><li>Git</li><li>Mercurial</li>"
                 },
                 {
                     "title": "Versionning",
@@ -108,7 +108,7 @@
                 {
                     "title": "Bug tracker",
                     "duration": 120,
-                    "description": "<ul><li>Définition</li><li>Pourquoi en utiliser un ?</li><li>Redmine / Mantis / GitHub</li></ul>"
+                    "description": "<li>Définition</li><li>Pourquoi en utiliser un ?</li><li>Redmine / Mantis / GitHub</li>"
                 }
             ]
         }

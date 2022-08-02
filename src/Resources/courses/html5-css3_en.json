@@ -13,12 +13,12 @@
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": "<ul><li>Web functionnement</li><li>W3C : norms usefulness</li></ul>"
+                    "description": "<li>Web functionnement</li><li>W3C : norms usefulness</li>"
                 },
                 {
                     "title": "HTML5 / CSS3 : Why do everybody talk about them",
                     "duration": 120,
-                    "description": "<ul><li>Why use HTML and CSS ? How to use them ? And HTML5 and CSS3 in all of this ?</li><li>Tags optimisation for search engines(SEO)</li><li>What about the compatibility between browsers ?</li><li>HTML future ?</li></ul>"
+                    "description": "<li>Why use HTML and CSS ? How to use them ? And HTML5 and CSS3 in all of this ?</li><li>Tags optimisation for search engines(SEO)</li><li>What about the compatibility between browsers ?</li><li>HTML future ?</li>"
                 },
                 {
                     "title": "HTML5",
@@ -28,12 +28,12 @@
                 {
                     "title": "Use HTML5 today",
                     "duration": 60,
-                    "description": "<ul><li>Know when to use HTML5</li><li>Use HTML5 with browsers that doesnt support it</li></ul>"
+                    "description": "<li>Know when to use HTML5</li><li>Use HTML5 with browsers that doesnt support it</li>"
                 },
                 {
                     "title": "HTML5 markups",
                     "duration": 180,
-                    "description": "<ul><li>Page structure : disappearance \"in line\" and \"block\" notions</li><li>Doctype in HTML5</li><li>New elements : section, article, aside, nav, etc</li><li>Some additional tags</li><li>Dates and time</li><li>The obsolete elements : center, font, frame, acronym, etc</li></ul>"
+                    "description": "<li>Page structure : disappearance \"in line\" and \"block\" notions</li><li>Doctype in HTML5</li><li>New elements : section, article, aside, nav, etc</li><li>Some additional tags</li><li>Dates and time</li><li>The obsolete elements : center, font, frame, acronym, etc</li>"
                 }
             ]
         },
@@ -43,17 +43,17 @@
                 {
                     "title": "WEB semantic and HTML5",
                     "duration": 120,
-                    "description": "<ul><li>Semantic elements : Give meaning to its content</li><li>Micro data</li></ul>"
+                    "description": "<li>Semantic elements : Give meaning to its content</li><li>Micro data</li>"
                 },
                 {
                     "title": "HTML5 forms",
                     "duration": 180,
-                    "description": "<ul><li>Form tag;</li><li>Create and use forms in HTML5</li><li>Management of dates, emails...</li><li>Forms validations in HTML5</li><li>Auto focus</li></ul>"
+                    "description": "<li>Form tag;</li><li>Create and use forms in HTML5</li><li>Management of dates, emails...</li><li>Forms validations in HTML5</li><li>Auto focus</li>"
                 },
                 {
                     "title": "VUE D'ENSEMBLE DES APIS JAVASCRIPT POUR HTML 5",
                     "duration": 180,
-                    "description": "<ul><li>HTML5 APIs</li><li>Files management</li><li>Offline websites</li><li>Drag & Drop</li><li>Zoom on few APIs</li></ul>"
+                    "description": "<li>HTML5 APIs</li><li>Files management</li><li>Offline websites</li><li>Drag & Drop</li><li>Zoom on few APIs</li>"
                 }
             ]
         },
@@ -63,12 +63,12 @@
                 {
                     "title": "Zoom on video and audio management API in HTML5",
                     "duration": 240,
-                    "description": "<ul><li>The audio and video elements</li><li>The containers</li><li>Control the video and audio with the HTML5 API</li><li>Support et formats (codecs WebM, MP4, H.264, MP3, AAC, etc)</li><li>Manage many audio and vidéos sources</li><li>Streaming</li><li>Add subtitles to a HTML5 video</li></ul>"
+                    "description": "<li>The audio and video elements</li><li>The containers</li><li>Control the video and audio with the HTML5 API</li><li>Support et formats (codecs WebM, MP4, H.264, MP3, AAC, etc)</li><li>Manage many audio and vidéos sources</li><li>Streaming</li><li>Add subtitles to a HTML5 video</li>"
                 },
                 {
                     "title": "Zoom on drawing API in HTML5",
                     "duration": 240,
-                    "description": "<ul><li>Draw in JavaScript</li><li>Canvas vs SVG</li><li>Context</li><li>Accessibility</li></ul>"
+                    "description": "<li>Draw in JavaScript</li><li>Canvas vs SVG</li><li>Context</li><li>Accessibility</li>"
                 }
             ]
         },
@@ -78,17 +78,17 @@
                 {
                     "title": "Zoom on communication API in HTML5",
                     "duration": 240,
-                    "description": "<ul><li>Events</li><li>Sending messages between files</li><li>Sending messages by channel</li><li>Serve push</li><li>Web Sockets</li><li>Node.js presentation</li><li>Web Workers for the multi-tasks</li></ul>"
+                    "description": "<li>Events</li><li>Sending messages between files</li><li>Sending messages by channel</li><li>Serve push</li><li>Web Sockets</li><li>Node.js presentation</li><li>Web Workers for the multi-tasks</li>"
                 },
                 {
                     "title": "Zoom on geo-location API in HTML5",
                     "duration": 120,
-                    "description": "<ul><li>Overview</li><li>User's private life</li><li>Geolocate your users on Google Maps</li></ul>"
+                    "description": "<li>Overview</li><li>User's private life</li><li>Geolocate your users on Google Maps</li>"
                 },
                 {
                     "title": "Zoom on storage API with HTML 5",
                     "duration": 120,
-                    "description": "<ul><li>API storage</li><li>Local storage</li><li>Session storage</li><li>Difference between local / session storage</li></ul>"
+                    "description": "<li>API storage</li><li>Local storage</li><li>Session storage</li><li>Difference between local / session storage</li>"
                 }
             ]
         },
@@ -98,17 +98,17 @@
                 {
                     "title": "Zoom on storage API with HTML 5",
                     "duration": 120,
-                    "description": "<ul><li>Overview : do without pictures, avoid tricks</li><li>CSS3 selectors</li><li>Rounded corners</li><li>Drop shadows</li><li>Opacity</li><li>Text effects</li><li>Layout and positionning</li><li>Other novelties</li></ul>"
+                    "description": "<li>Overview : do without pictures, avoid tricks</li><li>CSS3 selectors</li><li>Rounded corners</li><li>Drop shadows</li><li>Opacity</li><li>Text effects</li><li>Layout and positionning</li><li>Other novelties</li>"
                 },
                 {
                     "title": "CSS3 : Layout and positionning",
                     "duration": 180,
-                    "description": "<ul><li>Overview : clarify the code, avoid multiplication of nested</li><li>Presentation level</li><li>Layout by design pattern</li><li>Layout by multi-colons</li><li>Layout by horizontals or verticals boxes</li><li>Understand the colors in CSS3</li><li>Positionning by grid</li><li>Elements rotation</li></ul>"
+                    "description": "<li>Overview : clarify the code, avoid multiplication of nested</li><li>Presentation level</li><li>Layout by design pattern</li><li>Layout by multi-colons</li><li>Layout by horizontals or verticals boxes</li><li>Understand the colors in CSS3</li><li>Positionning by grid</li><li>Elements rotation</li>"
                 },
                 {
                     "title": "CSS3 : ANIMATION",
                     "duration": 120,
-                    "description": "<ul><li>Transformations (2D and 3D)</li><li>Transitions</li></ul>"
+                    "description": "<li>Transformations (2D and 3D)</li><li>Transitions</li>"
                 }
             ]
         }

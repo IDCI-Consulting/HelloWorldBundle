@@ -13,12 +13,12 @@
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": "<ul><li>Fonctionnement du web</li><li>W3C : de l'utilité des normes</li></ul>"
+                    "description": "<li>Fonctionnement du web</li><li>W3C : de l'utilité des normes</li>"
                 },
                 {
                     "title": "HTML5 / CSS3 : POURQUOI ILS FONT TANT PARLER D'EUX",
                     "duration": 120,
-                    "description": "<ul><li>Pourquoi utiliser le HTML et le CSS ? Comment les utiliser ? Et le HTML5 / CSS3 dans tout ça ?</li><li>Optimisation des balises pour les moteurs de recherche (SEO)</li><li>Quid de la compatibilité entre navigateurs ?</li><li>L'avenir du HTML ?</li></ul>"
+                    "description": "<li>Pourquoi utiliser le HTML et le CSS ? Comment les utiliser ? Et le HTML5 / CSS3 dans tout ça ?</li><li>Optimisation des balises pour les moteurs de recherche (SEO)</li><li>Quid de la compatibilité entre navigateurs ?</li><li>L'avenir du HTML ?</li>"
                 },
                 {
                     "title": "HTML5",
@@ -28,12 +28,12 @@
                 {
                     "title": "UTILISER LE HTML5 AUJOURD'HUI",
                     "duration": 60,
-                    "description": "<ul><li>Savoir quand choisir le HTML 5</li><li>Utiliser le HTML5 avec des navigateurs qui ne le supportent pas</li></ul>"
+                    "description": "<li>Savoir quand choisir le HTML 5</li><li>Utiliser le HTML5 avec des navigateurs qui ne le supportent pas</li>"
                 },
                 {
                     "title": "BALISAGE HTML5",
                     "duration": 180,
-                    "description": "<ul><li>Structure d'une page : disparition des notions \"en ligne\" et \"bloc\"</li><li>Doctype en HTML5</li><li>Les nouveaux éléments : section, article, aside, nav, etc</li><li>Quelques balises supplémentaires</li><li>Dates et temps</li><li>Les éléments obsolètes : center, font, frame, acronym, etc</li></ul>"
+                    "description": "<li>Structure d'une page : disparition des notions \"en ligne\" et \"bloc\"</li><li>Doctype en HTML5</li><li>Les nouveaux éléments : section, article, aside, nav, etc</li><li>Quelques balises supplémentaires</li><li>Dates et temps</li><li>Les éléments obsolètes : center, font, frame, acronym, etc</li>"
                 }
             ]
         },
@@ -43,17 +43,17 @@
                 {
                     "title": "WEB SÉMANTIQUE ET HTML5",
                     "duration": 120,
-                    "description": "<ul><li>Elements sémantiques : donner du sens à ses contenus</li><li>Les micro données</li></ul>"
+                    "description": "<li>Elements sémantiques : donner du sens à ses contenus</li><li>Les micro données</li>"
                 },
                 {
                     "title": "FORMULAIRES HTML 5",
                     "duration": 180,
-                    "description": "<ul><li>Balise form;</li><li>Créer et utiliser des formulaires en HTML 5</li><li>Gestion des dates, des emails, ..</li><li>Les validations de formulaire en HTML5</li><li>Auto focus</li></ul>"
+                    "description": "<li>Balise form;</li><li>Créer et utiliser des formulaires en HTML 5</li><li>Gestion des dates, des emails, ..</li><li>Les validations de formulaire en HTML5</li><li>Auto focus</li>"
                 },
                 {
                     "title": "VUE D'ENSEMBLE DES APIS JAVASCRIPT POUR HTML 5",
                     "duration": 180,
-                    "description": "<ul><li>Les APIs HTML 5</li><li>Gestion des fichiers</li><li>Site web hors ligne</li><li>Drag & Drop</li><li>Zoom sur quelques APIs</li></ul>"
+                    "description": "<li>Les APIs HTML 5</li><li>Gestion des fichiers</li><li>Site web hors ligne</li><li>Drag & Drop</li><li>Zoom sur quelques APIs</li>"
                 }
             ]
         },
@@ -63,12 +63,12 @@
                 {
                     "title": "ZOOM SUR L'API DE GESTION AUDIO ET VIDÉO EN HTML 5",
                     "duration": 240,
-                    "description": "<ul><li>Les éléments audio et video</li><li>Les conteneurs</li><li>Contrôler la vidéo et l'audio avec l'API HTML5</li><li>Support et formats (codecs WebM, MP4, H.264, MP3, AAC, etc)</li><li>Gérer plusieurs sources vidéos/audios</li><li>Streaming</li><li>Ajouter des sous-titres à une vidéo HTML5</li></ul>"
+                    "description": "<li>Les éléments audio et video</li><li>Les conteneurs</li><li>Contrôler la vidéo et l'audio avec l'API HTML5</li><li>Support et formats (codecs WebM, MP4, H.264, MP3, AAC, etc)</li><li>Gérer plusieurs sources vidéos/audios</li><li>Streaming</li><li>Ajouter des sous-titres à une vidéo HTML5</li>"
                 },
                 {
                     "title": "ZOOM SUR L'API DE DESSIN EN HTML 5",
                     "duration": 240,
-                    "description": "<ul><li>Dessiner en JavaScript</li><li>Canvas vs SVG</li><li>Contexte</li><li>Accessibilité</li></ul>"
+                    "description": "<li>Dessiner en JavaScript</li><li>Canvas vs SVG</li><li>Contexte</li><li>Accessibilité</li>"
                 }
             ]
         },
@@ -78,17 +78,17 @@
                 {
                     "title": "ZOOM SUR L'API DE COMMUNICATION EN HTML 5",
                     "duration": 240,
-                    "description": "<ul><li>Les événements</li><li>Envoi de messages entre documents</li><li>Envoi de messages par canaux</li><li>Le push serveur</li><li>Web Sockets</li><li>Présentation de node.js</li><li>Les Web Workers pour le multi-tâches</li></ul>"
+                    "description": "<li>Les événements</li><li>Envoi de messages entre documents</li><li>Envoi de messages par canaux</li><li>Le push serveur</li><li>Web Sockets</li><li>Présentation de node.js</li><li>Les Web Workers pour le multi-tâches</li>"
                 },
                 {
                     "title": "ZOOM SUR L'API DE GÉO-LOCALISATION AVEC HTML 5",
                     "duration": 120,
-                    "description": "<ul><li>Vue d'ensemble</li><li>La vie privée de l'utilisateur</li><li>Géolocaliser ses utilisateurs sur Google Maps</li></ul>"
+                    "description": "<li>Vue d'ensemble</li><li>La vie privée de l'utilisateur</li><li>Géolocaliser ses utilisateurs sur Google Maps</li>"
                 },
                 {
                     "title": "ZOOM SUR L'API DE STORAGE AVEC HTML 5",
                     "duration": 120,
-                    "description": "<ul><li>API storage</li><li>Storage local</li><li>Storage en session</li><li>Différence entre le storage local / session</li></ul>"
+                    "description": "<li>API storage</li><li>Storage local</li><li>Storage en session</li><li>Différence entre le storage local / session</li>"
                 }
             ]
         },
@@ -98,17 +98,17 @@
                 {
                     "title": "ZOOM SUR L'API DE STORAGE AVEC HTML 5",
                     "duration": 120,
-                    "description": "<ul><li>Vue d'ensemble : se passer d'images, éviter les astuces</li><li>Selecteurs CSS3</li><li>Coins arrondis</li><li>Ombres portés</li><li>Transparence</li><li>Effets de texte</li><li>Mise en page et positionnement</li><li>Autres nouveautés</li></ul>"
+                    "description": "<li>Vue d'ensemble : se passer d'images, éviter les astuces</li><li>Selecteurs CSS3</li><li>Coins arrondis</li><li>Ombres portés</li><li>Transparence</li><li>Effets de texte</li><li>Mise en page et positionnement</li><li>Autres nouveautés</li>"
                 },
                 {
                     "title": "CSS3 : MISE EN PAGE ET POSITIONNEMENT",
                     "duration": 180,
-                    "description": "<ul><li>Vue d'ensemble : clarifier le code, éviter la multiplication de imbriquées</li><li>Niveau de présentation</li><li>Mise en page par patron</li><li>Mise en page multi-colonnes</li><li>Mise en page par boite horizontales ou verticales</li><li>Comprendre les couleurs en CSS3</li><li>Positionnement par grille</li><li>Rotation d'éléments</li></ul>"
+                    "description": "<li>Vue d'ensemble : clarifier le code, éviter la multiplication de imbriquées</li><li>Niveau de présentation</li><li>Mise en page par patron</li><li>Mise en page multi-colonnes</li><li>Mise en page par boite horizontales ou verticales</li><li>Comprendre les couleurs en CSS3</li><li>Positionnement par grille</li><li>Rotation d'éléments</li>"
                 },
                 {
                     "title": "CSS3 : ANIMATION",
                     "duration": 120,
-                    "description": "<ul><li>Transformations (2D et 3D)</li><li>Transitions</li></ul>"
+                    "description": "<li>Transformations (2D et 3D)</li><li>Transitions</li>"
                 }
             ]
         }

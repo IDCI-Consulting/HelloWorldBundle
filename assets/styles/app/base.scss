@@ -26,6 +26,13 @@ html {
     font-weight: bold;
 }
 
+iframe {
+    &.streetmap {
+        height: 300px;
+        width: 100%;
+    }
+}
+
 * {
     font-family: $idci-primary-font;
 
