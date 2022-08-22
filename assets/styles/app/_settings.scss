@@ -1,4 +1,40 @@
 $idci-color-black: #000000;
-$idci-color-light-blue: #008CBA;
-$idci-color-light-green: #1E9847;
+$idci-color-light-black: #212121;
+$idci-color-dark-grey: #595959;
+$idci-color-grey: #BBB;
+$idci-color-light-grey: #EEE;
+$idci-color-dark-blue: #296a88;
+$idci-color-blue: #008CBA;
+$idci-color-light-blue: #dff0fd;
+$idci-color-green: #1E9847;
 $idci-color-white: #FFFFFF;
+$idci-color-whitesmoke: #F5F5F5;
+
+$idci-primary-font: 'Oswald';
+
+$idci-font-medium: 0.8rem;
+$idci-font-large: 1rem;
+$idci-font-larger: 1.2rem;
+$idci-font-1-5x: 1.5rem;
+$idci-font-2x: 2rem;
+$idci-font-2-5x: 2.5rem;
+$idci-font-3x: 3rem;
+$idci-font-4x: 4rem;
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../../fonts/Oswald-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../../fonts/Oswald-Regular.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../../fonts/Oswald-Light.ttf") format("truetype");
+    font-weight: lighter;
+}

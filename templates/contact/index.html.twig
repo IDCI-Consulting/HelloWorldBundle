@@ -2,10 +2,17 @@
 
 {% block main %}
 
-    <div class="card">
-        <header class="card-header">
-        <p class="card-header-title">Contact Index</p>
-        </header>
+<section class="section-container">
+    <section class="section-form">
+        <h2 class="section-form-title">{% trans from "contact" %}contact.title{% endtrans %}</h2>
+        {{ form(form) }}
+    </section>
+</section>
+
+<section class="section-container">
+    <div>
+        <iframe width="100%" height="300px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/idci_777667?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
     </div>
+</section>
 
 {% endblock %}

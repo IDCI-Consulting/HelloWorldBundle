@@ -3,10 +3,12 @@ FROM php:8.1-fpm AS base
 
 ## Install dependencies
 RUN apt update \
-	&& apt install -y git zip libpq-dev rsync libicu-dev
+	&& apt install -y git zip libpq-dev rsync libicu-dev zlib1g-dev libfreetype6-dev libjpeg62-turbo-dev
 
 ## Install php extensions
-RUN docker-php-ext-configure intl && docker-php-ext-install intl
+RUN docker-php-ext-configure intl && docker-php-ext-install intl \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd
 
 ## Install redis dependencies
 RUN pecl install redis && docker-php-ext-enable redis
@@ -24,7 +26,7 @@ COPY config config/
 COPY public public/
 COPY src src/
 COPY templates templates/
-# COPY translations translations/
+COPY translations translations/
 
 ## Create empty var cache and var log directory
 RUN mkdir -p /var/www/app/var/cache /var/www/app/var/log
@@ -102,13 +104,11 @@ ENV APP_ENV ${APP_ENV}
 COPY --from=build /var/www/app/vendor /var/www/app/vendor
 
 ## Copy built assets and bundles in order to use and share them (entrypoint)
-# COPY --from=build /var/www/app/public/build /usr/local/share/public/build/
-# COPY --from=build /var/www/app/public/bundles /usr/local/share/public/bundles/
+COPY --from=build /var/www/app/public/build /usr/local/share/public/build/
 
 ## Define volumes
 VOLUME /var/www/app/var/cache
 VOLUME /var/www/app/var/log
-# VOLUME /var/www/app/public/build
-# VOLUME /var/www/app/public/bundles
+VOLUME /var/www/app/public/build
 
 CMD ["php-fpm", "-F"]

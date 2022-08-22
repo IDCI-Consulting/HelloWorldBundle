@@ -1,0 +1,11 @@
+header:
+  homepage: Accueil
+  courses: Formations
+  offers: Offres
+  members: Membres
+  blog: Blog
+  contact: Contact
+
+footer:
+  head_office: Siège social
+  legal_mentions: Mentions légales

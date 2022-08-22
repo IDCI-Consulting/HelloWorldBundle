@@ -1,0 +1,96 @@
+<section class="section-container">
+    <section class="section-cv">
+        <section class="columns is-multiline is-centered">
+            <p class="column is-12 section-cv-title idci-title-secondary">{% trans from "cv" %}cv.title{% endtrans %}</p>
+            <p class="column is-6 section-cv-label">{{ data.identity.firstName }} {{ data.identity.lastName }} | {{ data.identity.job }}</p>
+            <p class="column is-6 section-cv-links">
+                {% for socialNetwork in data.identity.socialNetworks %}
+                    <a href="{{ socialNetwork.url }}"><i class="fab fa-{{ socialNetwork.name }} fa-3x"></i></a>
+                {% endfor %}
+            </p>
+        </section>
+
+        <section class="section-cv-banner section-cv-banner-primary">
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.about_me{% endtrans %}</p>
+            <ul class="section-cv-banner-list">
+                <li class="section-cv-banner-list-item">Âge<p>{{ 'now'|date("Y") - data.identity.birthDate|date("Y") }}</p></li>
+                <li class="section-cv-banner-list-item">Email<p>{{ data.identity.email }}</p></li>
+                <li class="section-cv-banner-list-item">Tél<p>{{ data.identity.phone }}</p></li>
+            </ul>
+        </section>
+
+        <section class="section-cv-banner section-cv-banner-secondary">
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.professional_experiences{% endtrans %}</p>
+            {% for professionalExperience in data.professionalExperiences %}
+                <p class="section-cv-banner-subtitle">
+                    {% if "" == professionalExperience.endDate %}
+                    Depuis {{ professionalExperience.startDate|date("F Y") }}
+                    {% else %}
+                    De {{ professionalExperience.startDate|date("F Y") }} à {{ professionalExperience.endDate|date("F Y") }}
+                    {% endif %}
+                </p>
+                <p>{{ professionalExperience.role }}</p>
+                {% if professionalExperience.tasks|length > 0 %}
+                    <ul class="section-cv-banner-highlights">
+                        {% for task in professionalExperience.tasks %}
+                            <li class="section-cv-banner-highlights-element">{{ task }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </section>
+
+        <section class="section-cv-banner section-cv-banner-primary">
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.courses{% endtrans %}</p>
+            {% for education in data.education %}
+                <p><span class="section-cv-banner-education-date">{{ education.endDate|date("Y") }}</span>{{ education.certificate }}</p>
+            {% endfor %}
+        </section>
+
+        <section class="section-cv-banner section-cv-banner-secondary">
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.skills{% endtrans %}</p>
+            {% for expertise in data.expertises %}
+            <p class="section-cv-banner-subtitle section-cv-banner-skills-title">{{ expertise.name }}</p>
+            <ul class="section-cv-banner-skills">
+                {% for skill in expertise.skills %}
+                <li>
+                    <p class="section-cv-banner-skill-title">{{ skill.name }}</p>
+                    <p class="section-cv-banner-skill-details">
+                        {% if skill.keywords is defined %}
+                            {% for keyword in skill.keywords %}
+                                {{ keyword }}{% if loop.last != true %}, {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            {{ skill.level }}
+                        {% endif %}
+                    </p>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </section>
+
+        <section class="section-cv-banner section-cv-banner-primary">
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.personal_experiences{% endtrans %}</p>
+            {% for personalExperience in data.personalExperiences %}
+                <p class="section-cv-banner-subtitle">
+                {% if "" == personalExperience.endDate %}
+                Depuis {{ personalExperience.startDate|date("F Y") }}
+                {% else %}
+                De {{ personalExperience.startDate|date("F Y") }} à {{ personalExperience.endDate|date("F Y") }}
+                {% endif %}
+                </p>
+                <p>{{ personalExperience.role }} | {{ personalExperience.organization }}</p>
+                <p>{{ personalExperience.description }}</p>
+            {% endfor %}
+        </section>
+
+        <section class="section-cv-banner section-cv-banner-secondary">
+            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.hobbies{% endtrans %}</p>
+            {% for hobby in data.hobbies %}
+                <p class="section-cv-banner-subtitle">{{ hobby.name }}</p>
+                <p>{{ hobby.description }}</p>
+            {% endfor %}
+        </section>
+    </section>
+</section>

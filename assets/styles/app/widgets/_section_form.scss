@@ -1,0 +1,50 @@
+.section-form {
+    width: 35%;
+
+    .section-form-title {
+        color: $idci-color-grey;
+        font-size: $idci-font-2x;
+        text-align: center;
+    }
+
+    form {
+        div {
+            div {
+                display: block;
+                margin-top: 1rem;
+
+                label {
+                    width: 100%;
+                    text-transform: uppercase;
+                    color: $idci-color-grey;
+                }
+
+                input {
+                    background-color: $idci-color-white;
+                    border: 1px solid $idci-color-light-grey;
+                    padding: 1rem;
+                    width: 100%;
+                }
+
+                textarea {
+                    background-color: $idci-color-white;
+                    border: 1px solid $idci-color-light-grey;
+                    padding: 0.5rem;
+                    width: 100%;
+                }
+
+                select {
+                    background-color: $idci-color-white;
+                    border: 1px solid $idci-color-light-grey;
+                    margin-left: 1rem;
+                    padding: 0.5rem;
+                }
+
+                img {
+                    display: block;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

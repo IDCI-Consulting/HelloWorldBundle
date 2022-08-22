@@ -1,7 +1,158 @@
 header {
-    ul {
-        li {
-            color: $idci-color-light-blue;
+    background-color: $idci-color-white;
+    border-bottom: 3px solid $idci-color-light-grey;
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    .hamburger-menu {
+        display: none;
+        width: 20%;
+
+        @include until($desktop) {
+            display: flex;
+        }
+
+        .show-mobile-menu {
+            display: none;
+
+            &:checked ~ .fa-bars::before {
+                content: '\f00d';
+            }
+
+            &:checked ~ .mobile-menu {
+                display: block;
+                transform: translateX(0);
+            }
+        }
+
+        .show-mobile-menu-button {
+            color: $idci-color-dark-grey;
+            margin: auto;
+        }
+
+        .mobile-menu {
+            background-color: $idci-color-light-black;
+            border-bottom: 3px solid $idci-color-grey;
+            border-right: 3px solid $idci-color-grey;
+            border-top: 3px solid $idci-color-white;
+            display: none;
+            position: absolute;
+            top: calc(5rem - 3px);
+            width: 15rem;
+            z-index: 100;
+
+            .mobile-menu-list {
+                text-align: center;
+
+                .mobile-menu-list-item {
+                    border-top: 1px solid $idci-color-white;
+                    height: 3rem;
+
+                    &.active {
+                        background: linear-gradient(0deg, $idci-color-blue, transparent);
+                    }
+
+                    &:hover {
+                        background: linear-gradient(0deg, $idci-color-blue, transparent);
+                    }
+
+                    a {
+                        color: $idci-color-white;
+                        display: block;
+                        height: 100%;
+                        line-height: 3rem;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    nav {
+        height: 100%;
+        margin-left: 0;
+        min-width: 30rem;
+        width: 40%;
+
+        @include until($desktop) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            height: 100%;
+            text-transform: uppercase;
+
+            li {
+                height: 100%;
+
+                a {
+                    color: $idci-color-black;
+                    display: block;
+                    font-size: $idci-font-medium;
+                    font-weight: bold;
+                    height: 105%;
+                    line-height: 5rem;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        border-bottom: 3px solid $idci-color-green;
+                    }
+
+                    &.active {
+                        border-bottom: 3px solid $idci-color-green;
+                        color: $idci-color-green;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-media {
+        min-width: 15rem;
+        width: 10%;
+
+        @include until($desktop) {
+            width: 90%;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            margin-top: 1rem;
+            width: 10rem;
+        }
+    }
+
+    .header-locale {
+        column-gap: 1rem;
+        display: flex;
+        justify-content: center;
+        margin: auto 0;
+        text-align: center;
+        width: 20%;
+
+        @include until($desktop) {
+            margin-right: 1rem;
+        }
+
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            filter: grayscale(1);
+
+            &.active {
+                filter: grayscale(0);
+            }
+
+            img {
+                width: 2rem;
+            }
         }
     }
 }

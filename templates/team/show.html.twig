@@ -1,1 +1,5 @@
-team show, member : {{ slug }}
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    {{ include('team/_cv.html.twig') }}
+{% endblock %}

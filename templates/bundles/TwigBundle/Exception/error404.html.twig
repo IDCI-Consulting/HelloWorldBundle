@@ -2,10 +2,9 @@
 
 {% block body %}
 
-    <h1>Page introuvable</h1>
+    <h1>{% trans from "error_pages" %}error.not_found_page{% endtrans %}</h1>
     <p>
-        La page à laquelle vous souhaitez accèder n'a pas l'air d'exister. Vérifiez s'il n'y a aucune erreur dans l'URL.
-        <a href="{{ path('app_homepage') }}">Revenir à l'accueil</a>.
+        {% trans from "error_pages" %}error.description{% endtrans %}
     </p>
     
 {% endblock %}

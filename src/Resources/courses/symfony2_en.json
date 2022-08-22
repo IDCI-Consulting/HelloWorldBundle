@@ -1,0 +1,91 @@
+{
+    "name": "Symfony2",
+    "media": "base/symfony2.svg",
+    "days": [
+        {
+            "label":"Day 1",
+            "items": [
+                {
+                    "title": "Introduction",
+                    "duration": 120,
+                    "description": "<ul><li>Internet != The WEB</li><li>HTTP Protocol (RFC2616)</li><li>Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony</li><li>Why Symfony2 ?</li></ul>"
+                },
+                {
+                    "title": "A GOOD ENVIRONMENT AND GOOD PRACTICES",
+                    "duration": 120,
+                    "description": "<ul><li>Which IDE ?</li><li>Use a SCM (SVN, Git, etc.)</li><li>Use a bug tracker (Trac, Mantis, Redmine, Github, etc.)</li><li>Coding standards</li></ul>"
+                },
+                {
+                    "title": "INTRODUCTION AUX DESIGN PATTERN",
+                    "duration": 120,
+                    "description": "<ul><li>General presentation</li><li>MVC in details</li></ul>"
+                },
+                {
+                    "title": "STRUCTURE APPLICATIONS WITH SYMFONY2",
+                    "duration": 120,
+                    "description": "<ul><li>The notion of \"application\" => app/</li><li>The notions of \"bundles\"</li><li>My specific coding => src/</li><li>Externals libraries => vendor/</li><li>The root web => web/</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Day 2",
+            "items": [
+                {
+                    "title": "LE CONTROLLER DANS SYMFONY2",
+                    "duration": 240,
+                    "description": "<ul><li>Object Request</li><li>Object Response</li><li>Routing</li><li>Annotations</li></ul>"
+                },
+                {
+                    "title": "LES VUES (TEMPLATING) AVEC SYMFONY2",
+                    "duration": 240,
+                    "description": "<ul><li>Twig</li><li>Template Inheritance</li><li>Include views</li><li>Restore views</li><li>Twig filters</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Day 3",
+            "items": [
+                {
+                    "title": "ORM AND DBAL (DATABASE ABSTRACTION LAYER)",
+                    "duration": 240,
+                    "description": "<ul><li>PDO</li><li>Doctrine</li><li>Propel</li></ul>"
+                },
+                {
+                    "title": "FORMS",
+                    "duration": 240,
+                    "description": "<ul><li>AbstractType</li><li>Fields</li><li>Validation</li><li>\"Form events\"</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Day 4",
+            "items": [
+                {
+                    "title": "CREATE A SERVICE",
+                    "duration": 240,
+                    "description": "<ul><li>Dependency injection</li><li>Service container</li></ul>"
+                },
+                {
+                    "title": "SECURITY",
+                    "duration": 240,
+                    "description": "<ul><li>Autorisation</li><li>Authentication</li></ul>"
+                }
+            ]
+        },
+        {
+            "label":"Day 5",
+            "items": [
+                {
+                    "title": "Tests",
+                    "duration": 240,
+                    "description": "<ul><li>Units tests with PHPUnit</li><li>Functionals tests</li></ul>"
+                },
+                {
+                    "title": "GO FURTHER",
+                    "duration": 240,
+                    "description": "<ul><li>Use the configuration</li><li>Create Symfony2 commands</li><li>Use already existing bundles</li><li>FOSUserBundle (Users management)</li><li>DoctrineFixtures (Data import)</li><li>Create reusable bundles</li><li>The HTTP cache (ESI, Varnish, etc.)</li></ul>"
+                }
+            ]
+        }
+    ]
+}
