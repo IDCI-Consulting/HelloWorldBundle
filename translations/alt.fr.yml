@@ -1,0 +1,49 @@
+conseil: Icône conseil
+formation: Icône formation
+opensource: Icône opensource
+agile: Icône méthodologie
+icon-outils: Icône outils
+
+idci-logo: Logo IDCI
+idci-logo-balise-grayscale: Flèche logo IDCI en noir et blanc
+balise-left: Flèche IDCI gauche
+balise-right: Flèche IDCI droite
+english-flag: Drapeau anglai
+french-flag: Drapeau français
+
+angularjs-logo: Logo AngularJS
+ansible-logo: Logo Ansible
+bootstrap-logo: Logo Bootstrap
+css3-html5-logo: Logo CSS3 & HTML5
+docker-logo: Logo Docker
+foundation-logo: Logo Foundation
+gitlab-logo: Logo Gitlab
+jquery-logo: Logo JQuery
+kibana-logo: Logo Kibana
+kyototycoon-logo: Logo KyotoTycoon
+meteor-logo: Logo Meteor
+mongodb-logo: Logo MongoDB
+mysql-logo: Logo Mysql
+nodejs-logo: Logo NodeJS
+proxmox-logo: Logo Proxmox
+php-logo: Logo PHP
+phpunit-logo: Logo PHPUnit
+postgresql-logo: Logo PostgreSQL
+rabbitmq-logo: Logo RabbitMQ
+redis-logo: Logo Redis
+redmine-logo: Logo Redmine
+sass-logo: Logo Sass
+symfony-logo: Logo Symfony
+varnish-logo: Logo Varnish
+vuejs-logo: Logo VueJS
+
+oop-uml-scm: Logo OOP UML & SCM
+html5-css3: Logo HTML5 & CCS3
+symfony2: Logo Symfony2
+
+benjamin-sprite: Illustration pour CV Benjamin
+frederic-sprite: Illustration pour CV Frédéric
+gabriel-sprite: Illustration pour CV Gabriel
+joris-sprite: Illustration pour CV Joris
+swan-sprite: Illustration pour CV Swan
+vincent-sprite: Illustration pour CV Vincent
