@@ -5,6 +5,7 @@
     <h1>{% trans from "error_pages" %}error.not_found_page{% endtrans %}</h1>
     <p>
         {% trans from "error_pages" %}error.description{% endtrans %}
+        <a href="{{ path('app_homepage') }}">{% trans from "error_pages" %}error.homepage{% endtrans %}</a>
     </p>
     
 {% endblock %}

@@ -1,4 +1,4 @@
 error:
   not_found_page: Page not found
-  description:  The page you try to access seems unexistant. Check for an error in the URL.
-                <a href="{{ path('app_homepage') }}">Back to homepage</a>.
+  description: The page you try to access seems unexistant. Check for an error in the URL.
+  homepage: Back to homepage.
