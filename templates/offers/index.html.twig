@@ -3,15 +3,77 @@
 {% block main %}
 
 <section class="section-container section-container-full">
-    <section class="section-presentation section-offers">
-        <p class="section-presentation-title idci-title-primary">{% trans from "offers" %}offers.title{% endtrans %}</p>
-        <p class="section-presentation-subtitle section-offers-subtitle idci-subtitle-primary">{% trans from "offers" %}offers.part_1.title{% endtrans %}</p>
-        <div class="section-presentation-description section-offers-description">
-            {% trans from "offers" %}offers.part_1.description{% endtrans %}
+    <section class="section-presentation section-choices">
+        <p class="section-choices-title idci-title-primary">{% trans from "offers" %}offers.section_1.title{% endtrans %}</p>
+        <div class="section-choices-items">
+            <div class="section-offers-box section-offers-box-primary">
+                <p class="section-offers-box-title">{% trans from "offers" %}offers.section_1.box_1.title{% endtrans %}</p>
+                <ul class="section-offers-box-description">
+                    {% trans from "offers" %}offers.section_1.box_1.description{% endtrans %}
+                </ul>
+                <a href="{{ url('app_contact_index') }}" class="section-offers-box-button">{% trans %}button.contact_us{% endtrans %}<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="section-offers-box section-offers-box-secondary">
+                <p class="section-offers-box-title">{% trans from "offers" %}offers.section_1.box_2.title{% endtrans %}</p>
+                <ul class="section-offers-box-description">
+                    {% trans from "offers" %}offers.section_1.box_2.description{% endtrans %}
+                </ul>
+                <a href="{{ url('app_contact_index') }}" class="section-offers-box-button">{% trans %}button.contact_us{% endtrans %}<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
         </div>
-        <p class="section-presentation-subtitle section-offers-subtitle idci-subtitle-primary">{% trans from "offers" %}offers.part_2.title{% endtrans %}</p>
-        <div class="section-presentation-description section-offers-description">
-            {% trans from "offers" %}offers.part_2.description{% endtrans %}
+    </section>
+</section>
+
+<section class="section-container section-container-full">
+    <section class="section-display-stack">
+        <div class="section-display-stack-colored-box"></div>
+        <div class="section-display-stack-description">
+            <p class="section-display-stack-description-title">{% trans from "offers" %}offers.section_2.title{% endtrans %}</p>
+            <p class="section-display-stack-description-content">
+                {% trans from "offers" %}offers.section_2.description{% endtrans %}
+            </p>
+        </div>
+        <img src="https://via.placeholder.com/1100x500" class="section-display-stack-media">
+    </section>
+</section>
+
+<section class="section-container section-container-full">
+    <section class="section-presentation section-choices">
+        <p class="section-choices-title section-choices-title-secondary idci-title-primary">{% trans from "offers" %}offers.section_3.title{% endtrans %}</p>
+        <p class="section-choices-subtitle section-choices-subtitle-secondary idci-subtitle-primary">{% trans from "offers" %}offers.section_3.subtitle{% endtrans %}</p>
+        <div class="section-choices-items">
+            <div class="section-offers-box section-offers-box-primary">
+                <p class="section-offers-box-title"><span class="colored">01</span></p>
+                <p class="section-offers-box-description-secondary">{% trans from "offers" %}offers.section_3.box_1.description{% endtrans %}</p>
+            </div>
+            <div class="section-offers-box section-offers-box-primary">
+                <p class="section-offers-box-title"><span class="colored">02</span></p>
+                <p class="section-offers-box-description-secondary">{% trans from "offers" %}offers.section_3.box_2.description{% endtrans %}</p>
+            </div>
+            <div class="section-offers-box section-offers-box-primary">
+                <p class="section-offers-box-title"><span class="colored">03</span></p>
+                <p class="section-offers-box-description-secondary">{% trans from "offers" %}offers.section_3.box_3.description{% endtrans %}</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="section-container section-container-full">
+    <section class="section-presentation section-choices">
+        <p class="section-choices-title section-choices-title-secondary idci-title-primary">{% trans from "offers" %}offers.section_4.title{% endtrans %}</p>
+        <div class="section-choices-items">
+            <div class="section-offers-box">
+                <p class="section-offers-box-title section-offers-box-title-secondary idci-title-secondary">{% trans from "offers" %}offers.section_4.box_1.title{% endtrans %}</p>
+                <ul class="section-offers-box-description section-offers-box-description-bigger">
+                    {% trans from "offers" %}offers.section_4.box_1.description{% endtrans %}
+                </ul>
+            </div>
+            <div class="section-offers-box">
+                <p class="section-offers-box-title section-offers-box-title-secondary idci-title-secondary">{% trans from "offers" %}offers.section_4.box_2.title{% endtrans %}</p>
+                <ul class="section-offers-box-description section-offers-box-description-bigger">
+                    {% trans from "offers" %}offers.section_4.box_2.description{% endtrans %}
+                </ul>
+            </div>
         </div>
     </section>
 </section>

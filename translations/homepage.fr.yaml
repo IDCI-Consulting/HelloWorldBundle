@@ -1,3 +1,8 @@
+specialization:
+  title: Nous sommes spécialisés dans
+  subtitle: L'architecture web, PHP & Symfony
+  paragraph_1: '&lt;Ingénierie &gt; &lt;Développement&gt; &lt;Conseil&gt; &lt;Intégration&gt;'
+
 consulting:
   title: Nous faisons du
   subtitle: Conseil
@@ -8,9 +13,7 @@ consulting:
 courses:
   title: Nous faisons de la
   subtitle: Formation
-  paragraph_1: <span class="blue-colored-description-text">Fort de nos 14 ans d'expériences,</span> nous proposons 
-            <span class="blue-colored-description-text">plusieurs formations</span> allant du HTML5/CSS3 au développement d'applications complexes 
-            PHP avec le framework Symfony2.
+  paragraph_1: <span class="blue-colored-description-text">Fort de nos 14 ans d'expériences,</span> nous proposons <span class="blue-colored-description-text">plusieurs formations</span> allant du HTML5/CSS3 au développement d'applications complexes PHP avec le framework Symfony2.
   paragraph_2: Les différentes formations
 
 web_development:

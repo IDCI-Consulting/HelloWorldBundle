@@ -3,7 +3,7 @@
         "firstName": "Swan",
         "lastName": "Frere",
         "birthDate": "2002-05-03T00:00:00Z",
-        "job": "Développeur Web FullStack",
+        "job": "Fullstack Web Developer",
         "media": "",
         "email": "swan.frere@idci-consulting.fr",
         "phone": "06 14 23 16 84",
@@ -25,86 +25,86 @@
     "professionalExperiences": [
         {
             "company": "IDCI-Consulting",
-            "role": "Alternant Développeur Web FullStack",
+            "role": "Trainne Fullstack Web Developer",
             "startDate": "2021-09-03T00:00:00Z",
             "endDate": "2024-06-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
-                "Création d'un site web pour un client",
-                "Maintenir et améliorer un site sur demande du client",
-                "Développer des relations avec les clients"
+                "Deepening knowledge of the technologies used by the company",
+                "Creation of a website for a client",
+                "Maintain and improve a site at the client's request",
+                "Developing relationships with customers"
             ]
         },
         {
             "company": "IDCI-Consulting",
-            "role": "Stagiaire Développeur Web FullStack",
+            "role": "Trainne Fullstack Web Developer",
             "startDate": "2021-04-15T00:00:00Z",
             "endDate": "2021-06-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Apprentissage des technologies utilisées par l'entreprise",
-                "Création d'un site web pour un client",
-                "Apprentissage de la méthode agile"
+                "Learning about the technologies used by the company",
+                "Creation of a website for a client",
+                "Learning the agile methodology"
             ]
         },
         {
             "company": "Intermarché",
-            "role": "Employé polyvalent",
+            "role": "Multi-purpose employee",
             "startDate": "2020-08-01T00:00:00Z",
             "endDate": "2020-08-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Préparation de plats frais",
-                "Poissonnerie",
-                "Mise en rayon"
+                "Preparation of fresh dishes",
+                "Fishmonger's",
+                "Shelving"
             ]
         },
         {
             "company": "Guillot Cobreda",
-            "role": "Opérateur sur chaîne",
+            "role": "Line operator",
             "startDate": "2020-07-01T00:00:00Z",
             "endDate": "2020-07-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Abattage de poulets",
-                "Préparation de commande",
-                "Maintient d'hygiène de l'établissement"
+                "Slaughter of chickens",
+                "Order preparation",
+                "Maintaining the hygiene of the establishment"
             ]
         }
     ],
     "personalExperiences": [
         {
-            "organization": "Club de handball de Bourg-en-Bresse",
-            "role": "Bénévole",
+            "organization": "Bourg-en-Bresse Handball Club",
+            "role": "Volunteer",
             "website": "",
             "startDate": "2017-09-01T00:00:00Z",
             "endDate": "2020-06-31T00:00:00Z",
-            "description": "Arbitre bénévole pour les matchs du club de handball de Boug-en-Bresse"
+            "description": "Volunteer referee for the matches of the Boug-en-Bresse handball club"
         },
         {
-            "organization": "Cours particuliers",
-            "role": "Bénévole",
+            "organization": "Private lessons",
+            "role": "Volunteer",
             "website": "",
             "startDate": "2020-09-01T00:00:00Z",
             "endDate": "2021-06-31T00:00:00Z",
-            "description": "Cours particuliers d'allemand à des élèves de lycée"
+            "description": "Private German lessons for high school students"
         }
     ],
     "education": [
         {
-            "domain": "Informatique",
+            "domain": "IT",
             "certificate": "DUT Informatique",
             "location": "Bourg-en-Bresse",
             "startDate": "2019-09-01T00:00:00Z",
             "endDate": "2021-07-01T00:00:00Z"
         },
         {
-            "domain": "Informatique",
+            "domain": "IT",
             "certificate": "Diplôme d'Ingénieur Informatique par Apprentissage",
             "location": "Telecom Nancy - Villers-lès-Nancy",
             "startDate": "2021-09-21T00:00:00Z",
@@ -116,7 +116,7 @@
             "name": "IT",
             "skills": [
                 {
-                    "name": "Langages informatique",
+                    "name": "Computer languages",
                     "level": "",
                     "keywords": [
                         "HTML5",
@@ -149,7 +149,7 @@
                     ]
                 },
                 {
-                    "name": "Moteur de template",
+                    "name": "Templates engine",
                     "level": "",
                     "keywords": [
                         "Twig"
@@ -163,7 +163,7 @@
                     ]
                 },
                 {
-                    "name": "Base de Données",
+                    "name": "Databases",
                     "level": "",
                     "keywords": [
                         "MySQL",
@@ -173,21 +173,21 @@
                     ]
                 },
                 {
-                    "name": "Conteneurisation",
+                    "name": "Containerization",
                     "level": "",
                     "keywords": [
                         "Docker"
                     ]
                 },
                 {
-                    "name": "Gestion de projet",
+                    "name": "Project management",
                     "level": "",
                     "keywords": [
                         "Redmine"
                     ]
                 },
                 {
-                    "name": "Modélisation",
+                    "name": "Schematization",
                     "level": "",
                     "keywords": [
                         "UML"
@@ -199,15 +199,15 @@
             "name": "languages",
             "skills": [
                 {
-                    "name": "Français",
-                    "level": "Natif"
+                    "name": "French",
+                    "level": "Native"
                 },
                 {
-                    "name": "Anglais",
+                    "name": "English",
                     "level": "B2"
                 },
                 {
-                    "name": "Allemand",
+                    "name": "German",
                     "level": "B1"
                 }
             ]
@@ -216,11 +216,11 @@
     "hobbies": [
         {
             "name": "Badminton",
-            "description": "Pratique depuis 10 ans en loisirs"
+            "description": "10 years of recreational practice"
         },
         {
             "name": "Handball",
-            "description": "Pratique depuis 10 ans en compétition"
+            "description": "10 years of competition practice"
         }
     ]
 }

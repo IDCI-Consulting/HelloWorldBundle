@@ -4,6 +4,7 @@ header {
     display: flex;
     height: 5rem;
     justify-content: center;
+    position: fixed;
     width: 100%;
     z-index: 100;
 
@@ -143,6 +144,11 @@ header {
         a {
             text-transform: uppercase;
             text-decoration: none;
+            filter: grayscale(1);
+
+            &.active {
+                filter: grayscale(0);
+            }
 
             img {
                 width: 2rem;

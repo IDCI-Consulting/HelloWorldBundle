@@ -3,6 +3,7 @@
     display: flex;
     min-height: 100vh;
     padding: 4rem;
+    position: relative;
 
     @include until($desktop) {
         padding: 2rem;
@@ -31,5 +32,9 @@
         > * {
             width: 100%;
         }
+    }
+
+    &.section-container-media-primary {
+        background-image: url(../../../images/base/background_presentation.jpg);
     }
 }
