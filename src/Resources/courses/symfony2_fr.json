@@ -1,4 +1,5 @@
 {
+    "id": "symfony2",
     "name": "Symfony2",
     "media": "base/symfony2.svg",
     "days": [
