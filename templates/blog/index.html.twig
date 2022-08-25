@@ -8,14 +8,14 @@
         <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">{% trans from "blog" %}blog.carousel_title{% endtrans %}</h3>
 
 
-        {# <div class="columns">
-            <div class="pic-ctn">
+        <div class="columns is-mobile">
+            <div class="pic-ctn keyframes">
             {% set article_count = 0 %}
             {% if article_count < 3 %}
                 {% for date_label, date in articles %}
                     {% for article in date %}
                         {% if article_count < 2 %}
-                            <div class="columns pic">
+                            <div class="columns is-mobile pic">
                                 <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3">
                                 <div class="column is-6 carousel-article">
                                     <div class="carousel-article-header">
@@ -33,10 +33,10 @@
                 {% endfor %}
             {% endif %}
             </div>
-        </div> #}
+        </div>
 
 
-        <div class="carousel-single-item">
+        {# <div class="carousel-single-item">
             {% set article_count = 0 %}
             {% if article_count < 3 %}
                 {% for date_label, date in articles %}
@@ -59,7 +59,7 @@
                     {% endfor %}
                 {% endfor %}
             {% endif %}
-        </div>
+        </div> #}
 
 
     </section>
