@@ -1,30 +1,22 @@
-export default function asideMenuHighlight() {
-    var prev; //keep track of previous selected link
-    var isVisible= function(el){
-        el = document.querySelector(el)
-        if(!el || el.length === 0){
-            return false
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    let navboxLinks = document.getElementById('navbox').querySelectorAll('ul li');
+    let linksScrolls = [];
+    let linkStart = 0;
+    let currentLink;
 
-        var docViewTop = window.scrollY;
-        var docViewBottom = docViewTop + window.innerHeight;
-
-        var elemTop = el.offsetTop;
-        var elemBottom = elemTop + el.offsetHeight - 20;
-        return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
-    };
-
-    document.addEventListener('scroll', function(){
-        document.querySelectorAll('.navbox a').forEach(el => {
-            if (isVisible(el.getAttribute('href'))) {
-                if (prev) {
-                    prev.classList.remove('active');
-                }
-                el.classList.add('active');    
-                prev = el;
-
-                return false;
-            }
-        });
+    navboxLinks.forEach((element, index) => {
+        linksScrolls[index] = linkStart;
+        linkStart += 1300;
     });
-};
+
+    window.addEventListener('scroll', function scroll() {
+        for (const key in linksScrolls) {
+            navboxLinks[key].classList.remove('active');
+            if(this.scrollY > linksScrolls[key]) {
+                currentLink = key;
+            }
+        }
+        
+        navboxLinks[currentLink].classList.add('active');
+    });
+});
