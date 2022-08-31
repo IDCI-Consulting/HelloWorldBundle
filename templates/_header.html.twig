@@ -1,5 +1,7 @@
-{% set current_route = app.request.attributes.get('_route') %}
-{% set current_route_slug = app.request.attributes.get('slug') %}
+{% if app.request.attributes.get('_route') is not null %}
+    {% set current_route = app.request.attributes.get('_route') %}
+    {% set current_route_slug = app.request.attributes.get('slug') %}
+{% endif %}
 
 <header class="header">
     <div class="hamburger-menu">
@@ -8,12 +10,12 @@
         </label>
         <div class="mobile-menu">
             <ul class="mobile-menu-list">
-                <li class="mobile-menu-list-item {{ app.request.attributes.get('_route') == 'app_homepage' ? 'active' }}"><a href="{{ url('app_homepage') }}">{% trans from "layout" %}header.homepage{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {% if current_route == 'app_courses_index' or current_route == 'app_courses_show' %}{{ 'active' }}{% endif %}"><a href="{{ url('app_courses_index') }}">{% trans from "layout" %}header.courses{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {% if current_route == 'app_offers_index' %}{{ 'active' }}{% endif %}"><a href="{{ url('app_offers_index') }}">{% trans from "layout" %}header.offers{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {% if current_route == 'app_team_index' or current_route == 'app_team_member' %}{{ 'active' }}{% endif %}"><a href="{{ url('app_team_index') }}">{% trans from "layout" %}header.members{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {% if current_route == 'app_blog_index' or current_route == 'app_blog_show' %}{{ 'active' }}{% endif %}"><a href="{{ url('app_blog_index') }}">{% trans from "layout" %}header.blog{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {{ app.request.attributes.get('_route') == 'app_contact_index' ? 'active' }}"><a href="{{ url('app_contact_index') }}">{% trans from "layout" %}header.contact{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if current_route is defined %}{% if current_route == 'app_homepage' %}{{ 'active' }}{% endif %}{% endif %}"><a href="{{ url('app_homepage') }}">{% trans from "layout" %}header.homepage{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if current_route is defined %}{% if current_route == 'app_courses_index' or current_route == 'app_courses_show' %}{{ 'active' }}{% endif %}{% endif %}"><a href="{{ url('app_courses_index') }}">{% trans from "layout" %}header.courses{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if current_route is defined %}{% if current_route == 'app_offers_index' %}{{ 'active' }}{% endif %}{% endif %}"><a href="{{ url('app_offers_index') }}">{% trans from "layout" %}header.offers{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if current_route is defined %}{% if current_route == 'app_team_index' or current_route == 'app_team_member' %}{{ 'active' }}{% endif %}{% endif %}"><a href="{{ url('app_team_index') }}">{% trans from "layout" %}header.members{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if current_route is defined %}{% if current_route == 'app_blog_index' or current_route == 'app_blog_show' %}{{ 'active' }}{% endif %}{% endif %}"><a href="{{ url('app_blog_index') }}">{% trans from "layout" %}header.blog{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if current_route is defined %}{% if current_route == 'app_contact_index' %}{{ 'active' }}{% endif %}{% endif %}"><a href="{{ url('app_contact_index') }}">{% trans from "layout" %}header.contact{% endtrans %}</a></li>
             </ul>
         </div>
     </div>
@@ -22,16 +24,16 @@
     </div>
     <nav class="header-links">
         <ul class="header-links-list">
-            <li class="header-links-list-item"><a href="{{ url('app_homepage') }}" class="{{ app.request.attributes.get('_route') == 'app_homepage' ? 'active' }}">{% trans from "layout" %}header.homepage{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_courses_index') }}" class="{% if current_route == 'app_courses_index' or current_route == 'app_courses_show' %}{{ 'active' }}{% endif %}">{% trans from "layout" %}header.courses{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_offers_index') }}" class="{% if current_route == 'app_offers_index' %}{{ 'active' }}{% endif %}">{% trans from "layout" %}header.offers{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_team_index') }}" class="{% if current_route == 'app_team_index' or current_route == 'app_team_member' %}{{ 'active' }}{% endif %}">{% trans from "layout" %}header.members{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_blog_index') }}" class="{% if current_route == 'app_blog_index' or current_route == 'app_blog_show' %}{{ 'active' }}{% endif %}">{% trans from "layout" %}header.blog{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_contact_index') }}" class="{{ app.request.attributes.get('_route') == 'app_contact_index' ? 'active' }}">{% trans from "layout" %}header.contact{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_homepage') }}" class="{% if current_route is defined %}{% if current_route == 'app_homepage' %}{{ 'active' }}{% endif %}{% endif %}">{% trans from "layout" %}header.homepage{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_courses_index') }}" class="{% if current_route is defined %}{% if current_route == 'app_courses_index' or current_route == 'app_courses_show' %}{{ 'active' }}{% endif %}{% endif %}">{% trans from "layout" %}header.courses{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_offers_index') }}" class="{% if current_route is defined %}{% if current_route == 'app_offers_index' %}{{ 'active' }}{% endif %}{% endif %}">{% trans from "layout" %}header.offers{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_team_index') }}" class="{% if current_route is defined %}{% if current_route == 'app_team_index' or current_route == 'app_team_member' %}{{ 'active' }}{% endif %}{% endif %}">{% trans from "layout" %}header.members{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_blog_index') }}" class="{% if current_route is defined %}{% if current_route == 'app_blog_index' or current_route == 'app_blog_show' %}{{ 'active' }}{% endif %}{% endif %}">{% trans from "layout" %}header.blog{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_contact_index') }}" class="{% if current_route is defined %}{% if current_route == 'app_contact_index' %}{{ 'active' }}{% endif %}{% endif %}">{% trans from "layout" %}header.contact{% endtrans %}</a></li>
         </ul>
     </nav>
     <div class="header-locale">
-        <a{% if app.request.locale == 'fr' %} class="active"{% endif %} href="{{ path(current_route, {_locale: 'fr', slug: current_route_slug}) }}"><img src="{{ asset('build/images/base/french-flag.png') }}"></a>
-        <a{% if app.request.locale == 'en' %} class="active"{% endif %} href="{{ path(current_route, {_locale: 'en', slug: current_route_slug}) }}"><img src="{{ asset('build/images/base/english-flag.png') }}"></a>
+        <a{% if app.request.locale == 'fr' %} class="active"{% endif %} href="{% if current_route is defined %}{{ path(current_route, {_locale: 'fr', slug: current_route_slug}) }}{% endif %}"><img src="{{ asset('build/images/base/french-flag.png') }}"></a>
+        <a{% if app.request.locale == 'en' %} class="active"{% endif %} href="{% if current_route is defined %}{{ path(current_route, {_locale: 'en', slug: current_route_slug}) }}{% endif %}"><img src="{{ asset('build/images/base/english-flag.png') }}"></a>
     </div>
 </header>

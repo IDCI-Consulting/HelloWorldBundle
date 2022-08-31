@@ -37,4 +37,9 @@
     &.section-container-media-primary {
         background-image: url(../../../images/base/background_presentation.jpg);
     }
+
+    &.section-error-page-background {
+        background-image: url(../../../images/base/labyrinth.gif);
+        background-size: cover;
+    }
 }
