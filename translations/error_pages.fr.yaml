@@ -7,7 +7,7 @@ error:
 
   404:
     not_found_page: Page introuvable
-    description: La resource demandée ne semble pas être accessible
+    description: La ressource demandée ne semble pas être accessible
     want_to_know_more: '<p>Si vous voulez en savoir plus : <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc2616#section-10.4">RFC 2616</a></p>'
 
   500:
