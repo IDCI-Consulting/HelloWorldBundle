@@ -15,9 +15,9 @@ class BlogController extends AbstractController
     /**
      * @Route("/", methods={"GET"}, name="index")
      */
-    public function index(Request $request): Response
+    public function index(Request $request, string $_locale): Response
     {
-        $articles = json_decode(file_get_contents('../src/Resources/blog/articles.json'), true);
+        $articles = json_decode(file_get_contents(sprintf('../src/Resources/blog/articles_%s.json', $_locale)), true);
 
         $articlesByCategories = [];
 

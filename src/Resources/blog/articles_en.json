@@ -1,0 +1,33 @@
+{
+    "2018": [
+        {
+            "id": "idci-10-years",
+            "name": "IDCI 10 years",
+            "media": "logo/idci-logo.svg",
+            "parutionDate": "30/05/2018",
+            "author": "Louise Millon",
+            "category": "IDCI",
+            "description": "To celebrate this symbolic birthday, we welcome our customers and partners to our event which will be held on Friday, June 8 2018. Frédéric and Gabriel Bondaz ..."
+        }
+    ],
+    "2017": [
+        {
+            "id": "step-bundle-introduction",
+            "name": "Introduction to IDCIStepBundle",
+            "media": "base/symfony2.svg",
+            "parutionDate": "03/03/2017",
+            "author": "Louise Millon",
+            "category": "Symfony",
+            "description": "Following the need of a client, we wondered how to respond to the problem of creating an interactive workflow. It should be easy to make ..."
+        },
+        {
+            "id": "new-year-2017",
+            "name": "Our wishes 2017",
+            "media": "logo/idci-logo.svg",
+            "parutionDate": "13/01/2017",
+            "author": "Louise Millon",
+            "category": "IDCI",
+            "description": "The IDCI team wishes you a very happy new year. We wish you to keep explorating your ideas and your creativity. Try new things and ..."
+        }
+    ]
+}
