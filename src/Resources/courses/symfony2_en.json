@@ -8,7 +8,7 @@
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": "<ul><li>Internet != Le WEB</li><li>HTTP Protocol (RFC2616)</li><li>Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony</li><li>Why Symfony2 ?</li></ul>"
+                    "description": "<ul><li>Internet != The WEB</li><li>HTTP Protocol (RFC2616)</li><li>Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony</li><li>Why Symfony2 ?</li></ul>"
                 },
                 {
                     "title": "A GOOD ENVIRONMENT AND GOOD PRACTICES",

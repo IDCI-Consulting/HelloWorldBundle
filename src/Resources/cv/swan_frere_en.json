@@ -1,12 +1,12 @@
 {
     "identity": {
-        "firstName": "Joris",
-        "lastName": "Vinière",
-        "birthDate": "2001-12-25T00:00:00Z",
-        "job": "Développeur Web FullStack",
+        "firstName": "Swan",
+        "lastName": "Frere",
+        "birthDate": "2002-05-03T00:00:00Z",
+        "job": "Fullstack Web Developer",
         "media": "",
-        "email": "joris.viniere@idci-consulting.fr",
-        "phone": "07 68 48 32 58",
+        "email": "swan.frere@idci-consulting.fr",
+        "phone": "06 14 23 16 84",
         "website": "",
         "location": {
             "address": "",
@@ -18,103 +18,97 @@
         "socialNetworks": [
             {
                 "name": "linkedin",
-                "url": "https://www.linkedin.com/mwlite/in/joris-viniere-7ba645204"
+                "url": "https://fr.linkedin.com/in/swan-frere-b29bb4233"
             }
         ]
     },
     "professionalExperiences": [
         {
             "company": "IDCI-Consulting",
-            "role": "Alternant Développeur Web FullStack",
-            "startDate": "2021-09-15T00:00:00Z",
-            "endDate": "2022-09-13T00:00:00Z",
+            "role": "Trainne Fullstack Web Developer",
+            "startDate": "2021-09-03T00:00:00Z",
+            "endDate": "2024-06-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
-                "Création d'un site web pour un client",
-                "Maintenir et améliorer un site sur demande du client",
-                "Développer des relations avec les clients"
+                "Deepening knowledge of the technologies used by the company",
+                "Creation of a website for a client",
+                "Maintain and improve a site at the client's request",
+                "Developing relationships with customers"
             ]
         },
         {
             "company": "IDCI-Consulting",
-            "role": "Stagiaire Développeur Web FullStack",
+            "role": "Trainne Fullstack Web Developer",
             "startDate": "2021-04-15T00:00:00Z",
             "endDate": "2021-06-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Apprentissage des technologies utilisées par l'entreprise",
-                "Création d'un site web pour un client",
-                "Apprentissage de la méthode agile"
+                "Learning about the technologies used by the company",
+                "Creation of a website for a client",
+                "Learning the agile methodology"
             ]
         },
         {
-            "company": "Vétisol",
-            "role": "Opérateur de production",
+            "company": "Intermarché",
+            "role": "Multi-purpose employee",
+            "startDate": "2020-08-01T00:00:00Z",
+            "endDate": "2020-08-31T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": [
+                "Preparation of fresh dishes",
+                "Fishmonger's",
+                "Shelving"
+            ]
+        },
+        {
+            "company": "Guillot Cobreda",
+            "role": "Line operator",
             "startDate": "2020-07-01T00:00:00Z",
-            "endDate": "2020-08-07T00:00:00Z",
+            "endDate": "2020-07-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Aide à la préparation et au suivi des machines",
-                "Assistance à la gestion de l'approvisionnement",
-                "Prise de décision sur la technique",
-                "Soutien lors du contrôle qualité des produits"
-            ]
-        },
-        {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "role": "Commis de salle",
-            "startDate": "2019-07-01T00:00:00Z",
-            "endDate": "2019-08-10T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": [
-                "Service des plats en salle",
-                "Développer des relations avec les clients",
-                "Maintient d'hygiène de l'établissement"
-            ]
-        },
-        {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "role": "Commis de salle",
-            "startDate": "2018-07-01T00:00:00Z",
-            "endDate": "2018-08-10T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": [
-                "Service des plats en salle",
-                "Développer des relations avec les clients",
-                "Maintient d'hygiène de l'établissement"
+                "Slaughter of chickens",
+                "Order preparation",
+                "Maintaining the hygiene of the establishment"
             ]
         }
     ],
     "personalExperiences": [
         {
-            "organization": "Club de Basket de Feillens",
-            "role": "Bénévole",
+            "organization": "Bourg-en-Bresse Handball Club",
+            "role": "Volunteer",
             "website": "",
             "startDate": "2017-09-01T00:00:00Z",
-            "endDate": "2018-07-01T00:00:00Z",
-            "description": "Arbitre bénévole pour les matchs du club de Basket de Feillens"
+            "endDate": "2020-06-31T00:00:00Z",
+            "description": "Volunteer referee for the matches of the Boug-en-Bresse handball club"
+        },
+        {
+            "organization": "Private lessons",
+            "role": "Volunteer",
+            "website": "",
+            "startDate": "2020-09-01T00:00:00Z",
+            "endDate": "2021-06-31T00:00:00Z",
+            "description": "Private German lessons for high school students"
         }
     ],
     "education": [
         {
-            "domain": "Informatique",
+            "domain": "IT",
             "certificate": "DUT Informatique",
             "location": "Bourg-en-Bresse",
             "startDate": "2019-09-01T00:00:00Z",
             "endDate": "2021-07-01T00:00:00Z"
         },
         {
-            "domain": "Informatique",
-            "certificate": "Licence Professionnelle Informatique",
-            "location": "Bourg-en-Bresse",
+            "domain": "IT",
+            "certificate": "Diplôme d'Ingénieur Informatique par Apprentissage",
+            "location": "Telecom Nancy - Villers-lès-Nancy",
             "startDate": "2021-09-21T00:00:00Z",
-            "endDate": "2022-09-13T00:00:00Z"
+            "endDate": "2024-06-31T00:00:00Z"
         }
     ],
     "expertises": [
@@ -122,17 +116,19 @@
             "name": "IT",
             "skills": [
                 {
-                    "name": "Langages informatique",
+                    "name": "Computer languages",
                     "level": "",
                     "keywords": [
                         "HTML5",
                         "CSS3",
                         "PHP",
                         "Javascript",
+                        "C",
                         "C++",
                         "Java",
                         "Bash",
-                        "SQL"
+                        "SQL",
+                        "Python"
                     ]
                 },
                 {
@@ -148,13 +144,12 @@
                     "level": "",
                     "keywords": [
                         "Symfony",
-                        "VueJS",
                         "Bootstrap",
-                        "Bulma"
+                        "Django"
                     ]
                 },
                 {
-                    "name": "Moteur de template",
+                    "name": "Templates engine",
                     "level": "",
                     "keywords": [
                         "Twig"
@@ -164,33 +159,35 @@
                     "name": "Versioning",
                     "level": "",
                     "keywords": [
-                        "Gitlab"
+                        "Git"
                     ]
                 },
                 {
-                    "name": "Base de Données",
+                    "name": "Databases",
                     "level": "",
                     "keywords": [
                         "MySQL",
-                        "PostgreSQL"
+                        "PostgreSQL",
+                        "MongoDB",
+                        "Neo4j"
                     ]
                 },
                 {
-                    "name": "Conteneurisation",
+                    "name": "Containerization",
                     "level": "",
                     "keywords": [
                         "Docker"
                     ]
                 },
                 {
-                    "name": "Gestion de projet",
+                    "name": "Project management",
                     "level": "",
                     "keywords": [
                         "Redmine"
                     ]
                 },
                 {
-                    "name": "Modélisation",
+                    "name": "Schematization",
                     "level": "",
                     "keywords": [
                         "UML"
@@ -202,16 +199,28 @@
             "name": "languages",
             "skills": [
                 {
-                    "name": "Anglais",
+                    "name": "French",
+                    "level": "Native"
+                },
+                {
+                    "name": "English",
                     "level": "B2"
+                },
+                {
+                    "name": "German",
+                    "level": "B1"
                 }
             ]
         }
     ],
     "hobbies": [
         {
-            "name": "Piano",
-            "description": "Je pratique cet instrument en auto-didacte..."
+            "name": "Badminton",
+            "description": "10 years of recreational practice"
+        },
+        {
+            "name": "Handball",
+            "description": "10 years of competition practice"
         }
     ]
 }

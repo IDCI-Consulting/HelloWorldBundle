@@ -104,13 +104,11 @@ ENV APP_ENV ${APP_ENV}
 COPY --from=build /var/www/app/vendor /var/www/app/vendor
 
 ## Copy built assets and bundles in order to use and share them (entrypoint)
-# COPY --from=build /var/www/app/public/build /usr/local/share/public/build/
-# COPY --from=build /var/www/app/public/bundles /usr/local/share/public/bundles/
+COPY --from=build /var/www/app/public/build /usr/local/share/public/build/
 
 ## Define volumes
 VOLUME /var/www/app/var/cache
 VOLUME /var/www/app/var/log
-# VOLUME /var/www/app/public/build
-# VOLUME /var/www/app/public/bundles
+VOLUME /var/www/app/public/build
 
 CMD ["php-fpm", "-F"]

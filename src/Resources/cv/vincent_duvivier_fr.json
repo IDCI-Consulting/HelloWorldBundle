@@ -1,12 +1,12 @@
 {
     "identity": {
-        "firstName": "Joris",
-        "lastName": "Vinière",
-        "birthDate": "2001-12-25T00:00:00Z",
+        "firstName": "Vincent",
+        "lastName": "Duvivier",
+        "birthDate": "2001-01-11T00:00:00Z",
         "job": "Développeur Web FullStack",
         "media": "",
-        "email": "joris.viniere@idci-consulting.fr",
-        "phone": "07 68 48 32 58",
+        "email": "vincent.duvivier@idci-consulting.fr",
+        "phone": "",
         "website": "",
         "location": {
             "address": "",
@@ -18,7 +18,7 @@
         "socialNetworks": [
             {
                 "name": "linkedin",
-                "url": "https://www.linkedin.com/mwlite/in/joris-viniere-7ba645204"
+                "url": "https://fr.linkedin.com/in/vincent-duvivier-5b16321a5"
             }
         ]
     },
@@ -26,95 +26,65 @@
         {
             "company": "IDCI-Consulting",
             "role": "Alternant Développeur Web FullStack",
-            "startDate": "2021-09-15T00:00:00Z",
-            "endDate": "2022-09-13T00:00:00Z",
+            "startDate": "2022-02-07T00:00:00Z",
+            "endDate": "2025-08-30T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
-                "Création d'un site web pour un client",
-                "Maintenir et améliorer un site sur demande du client",
-                "Développer des relations avec les clients"
+                "Montée en compétences au sein de l'entreprise",
+                "Maintenance et réalisation de sites web répondant aux demandes clients"
             ]
         },
         {
             "company": "IDCI-Consulting",
             "role": "Stagiaire Développeur Web FullStack",
-            "startDate": "2021-04-15T00:00:00Z",
-            "endDate": "2021-06-31T00:00:00Z",
+            "startDate": "2021-08-08T00:00:00Z",
+            "endDate": "2022-01-28T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Apprentissage des technologies utilisées par l'entreprise",
-                "Création d'un site web pour un client",
-                "Apprentissage de la méthode agile"
+                "Découverte des technologies utilisées par IDCI-Consulting",
+                "Réalisation de sites web répondant aux demandes clients"
             ]
         },
         {
-            "company": "Vétisol",
-            "role": "Opérateur de production",
-            "startDate": "2020-07-01T00:00:00Z",
-            "endDate": "2020-08-07T00:00:00Z",
+            "company": "Intermarché",
+            "role": "",
+            "startDate": "2021-06-20T00:00:00Z",
+            "endDate": "2021-07-29T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Aide à la préparation et au suivi des machines",
-                "Assistance à la gestion de l'approvisionnement",
-                "Prise de décision sur la technique",
-                "Soutien lors du contrôle qualité des produits"
-            ]
-        },
-        {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "role": "Commis de salle",
-            "startDate": "2019-07-01T00:00:00Z",
-            "endDate": "2019-08-10T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": [
-                "Service des plats en salle",
-                "Développer des relations avec les clients",
-                "Maintient d'hygiène de l'établissement"
-            ]
-        },
-        {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "role": "Commis de salle",
-            "startDate": "2018-07-01T00:00:00Z",
-            "endDate": "2018-08-10T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": [
-                "Service des plats en salle",
-                "Développer des relations avec les clients",
-                "Maintient d'hygiène de l'établissement"
+                "Préparation de pains",
+                "Mise en rayon de produits",
+                "Réponses aux demandes client"
             ]
         }
     ],
     "personalExperiences": [
         {
-            "organization": "Club de Basket de Feillens",
+            "organization": "ZUPdeCo",
             "role": "Bénévole",
             "website": "",
-            "startDate": "2017-09-01T00:00:00Z",
-            "endDate": "2018-07-01T00:00:00Z",
-            "description": "Arbitre bénévole pour les matchs du club de Basket de Feillens"
+            "startDate": "2020-09-07T00:00:00Z",
+            "endDate": "2021-05-07T00:00:00Z",
+            "description": "Aide aux devoirs pour enfant élèves en ZEP"
         }
     ],
     "education": [
         {
             "domain": "Informatique",
             "certificate": "DUT Informatique",
-            "location": "Bourg-en-Bresse",
-            "startDate": "2019-09-01T00:00:00Z",
-            "endDate": "2021-07-01T00:00:00Z"
+            "location": "Lyon",
+            "startDate": "2020-02-01T00:00:00Z",
+            "endDate": "2022-01-28T00:00:00Z"
         },
         {
             "domain": "Informatique",
-            "certificate": "Licence Professionnelle Informatique",
-            "location": "Bourg-en-Bresse",
-            "startDate": "2021-09-21T00:00:00Z",
-            "endDate": "2022-09-13T00:00:00Z"
+            "certificate": "Ingénieur Polytech",
+            "location": "Lyon",
+            "startDate": "2022-09-04T00:00:00Z",
+            "endDate": "2025-09-01T00:00:00Z"
         }
     ],
     "expertises": [
@@ -129,9 +99,13 @@
                         "CSS3",
                         "PHP",
                         "Javascript",
+                        "Ruby",
+                        "C",
                         "C++",
                         "Java",
+                        "Python",
                         "Bash",
+                        "ZSH",
                         "SQL"
                     ]
                 },
@@ -140,7 +114,7 @@
                     "level": "",
                     "keywords": [
                         "Windows",
-                        "Linux (Ubuntu)"
+                        "Linux (Debian, Arch, Fedora)"
                     ]
                 },
                 {
@@ -148,29 +122,24 @@
                     "level": "",
                     "keywords": [
                         "Symfony",
-                        "VueJS",
                         "Bootstrap",
-                        "Bulma"
-                    ]
-                },
-                {
-                    "name": "Moteur de template",
-                    "level": "",
-                    "keywords": [
-                        "Twig"
+                        "Rails"
                     ]
                 },
                 {
                     "name": "Versioning",
                     "level": "",
                     "keywords": [
-                        "Gitlab"
+                        "Git",
+                        "Gitlab",
+                        "GitHub"
                     ]
                 },
                 {
                     "name": "Base de Données",
                     "level": "",
                     "keywords": [
+                    	"ORACLE",
                         "MySQL",
                         "PostgreSQL"
                     ]
@@ -186,7 +155,8 @@
                     "name": "Gestion de projet",
                     "level": "",
                     "keywords": [
-                        "Redmine"
+                        "Redmine",
+                        "Kanboard"
                     ]
                 },
                 {
@@ -202,16 +172,24 @@
             "name": "languages",
             "skills": [
                 {
+                    "name": "Français",
+                    "level": "Natif"
+                },
+                {
                     "name": "Anglais",
-                    "level": "B2"
+                    "level": "C1"
+                },
+                {
+                    "name": "Allemand",
+                    "level": "B1"
                 }
             ]
         }
     ],
     "hobbies": [
         {
-            "name": "Piano",
-            "description": "Je pratique cet instrument en auto-didacte..."
+            "name": "Cinéma",
+            "description": ""
         }
     ]
 }

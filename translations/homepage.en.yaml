@@ -1,3 +1,8 @@
+specialization:
+  title: We specialize in
+  subtitle: Web architecture, PHP & Symfony
+  paragraph_1: '&lt;Engineering&gt; &lt;Development&gt; &lt;Consulting&gt; &lt;Integration&gt;'
+
 consulting:
   title: We do
   subtitle: Consulting
@@ -17,7 +22,6 @@ web_development:
   paragraph_1: IDCI is a web development expert company, specialized on <span class="blue-colored-description-text">PHP frameworks (Symfony2, Silex, Zend framework...).</span>
   paragraph_2: We also develop our skills on the <span class="blue-colored-description-text">NodeJS framework</span>, and we are always enthusiastic at the idea to discover some <span class="blue-colored-description-text">new upcoming technologies</span>.
   paragraph_3: We do not forget frontend technologies, and we quickly adopt the new <span class="blue-colored-description-text">Javascript frameworks like Angular, Vuejs...</span>
-
 
 open_source:
   title: Our philosophy

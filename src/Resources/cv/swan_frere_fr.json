@@ -1,12 +1,12 @@
 {
     "identity": {
-        "firstName": "Joris",
-        "lastName": "Vinière",
-        "birthDate": "2001-12-25T00:00:00Z",
+        "firstName": "Swan",
+        "lastName": "Frere",
+        "birthDate": "2002-05-03T00:00:00Z",
         "job": "Développeur Web FullStack",
         "media": "",
-        "email": "joris.viniere@idci-consulting.fr",
-        "phone": "07 68 48 32 58",
+        "email": "swan.frere@idci-consulting.fr",
+        "phone": "06 14 23 16 84",
         "website": "",
         "location": {
             "address": "",
@@ -18,7 +18,7 @@
         "socialNetworks": [
             {
                 "name": "linkedin",
-                "url": "https://www.linkedin.com/mwlite/in/joris-viniere-7ba645204"
+                "url": "https://fr.linkedin.com/in/swan-frere-b29bb4233"
             }
         ]
     },
@@ -26,8 +26,8 @@
         {
             "company": "IDCI-Consulting",
             "role": "Alternant Développeur Web FullStack",
-            "startDate": "2021-09-15T00:00:00Z",
-            "endDate": "2022-09-13T00:00:00Z",
+            "startDate": "2021-09-03T00:00:00Z",
+            "endDate": "2024-06-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
@@ -51,54 +51,48 @@
             ]
         },
         {
-            "company": "Vétisol",
-            "role": "Opérateur de production",
+            "company": "Intermarché",
+            "role": "Employé polyvalent",
+            "startDate": "2020-08-01T00:00:00Z",
+            "endDate": "2020-08-31T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": [
+                "Préparation de plats frais",
+                "Poissonnerie",
+                "Mise en rayon"
+            ]
+        },
+        {
+            "company": "Guillot Cobreda",
+            "role": "Opérateur sur chaîne",
             "startDate": "2020-07-01T00:00:00Z",
-            "endDate": "2020-08-07T00:00:00Z",
+            "endDate": "2020-07-31T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": [
-                "Aide à la préparation et au suivi des machines",
-                "Assistance à la gestion de l'approvisionnement",
-                "Prise de décision sur la technique",
-                "Soutien lors du contrôle qualité des produits"
-            ]
-        },
-        {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "role": "Commis de salle",
-            "startDate": "2019-07-01T00:00:00Z",
-            "endDate": "2019-08-10T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": [
-                "Service des plats en salle",
-                "Développer des relations avec les clients",
-                "Maintient d'hygiène de l'établissement"
-            ]
-        },
-        {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "role": "Commis de salle",
-            "startDate": "2018-07-01T00:00:00Z",
-            "endDate": "2018-08-10T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": [
-                "Service des plats en salle",
-                "Développer des relations avec les clients",
+                "Abattage de poulets",
+                "Préparation de commande",
                 "Maintient d'hygiène de l'établissement"
             ]
         }
     ],
     "personalExperiences": [
         {
-            "organization": "Club de Basket de Feillens",
+            "organization": "Club de handball de Bourg-en-Bresse",
             "role": "Bénévole",
             "website": "",
             "startDate": "2017-09-01T00:00:00Z",
-            "endDate": "2018-07-01T00:00:00Z",
-            "description": "Arbitre bénévole pour les matchs du club de Basket de Feillens"
+            "endDate": "2020-06-31T00:00:00Z",
+            "description": "Arbitre bénévole pour les matchs du club de handball de Boug-en-Bresse"
+        },
+        {
+            "organization": "Cours particuliers",
+            "role": "Bénévole",
+            "website": "",
+            "startDate": "2020-09-01T00:00:00Z",
+            "endDate": "2021-06-31T00:00:00Z",
+            "description": "Cours particuliers d'allemand à des élèves de lycée"
         }
     ],
     "education": [
@@ -111,10 +105,10 @@
         },
         {
             "domain": "Informatique",
-            "certificate": "Licence Professionnelle Informatique",
-            "location": "Bourg-en-Bresse",
+            "certificate": "Diplôme d'Ingénieur Informatique par Apprentissage",
+            "location": "Telecom Nancy - Villers-lès-Nancy",
             "startDate": "2021-09-21T00:00:00Z",
-            "endDate": "2022-09-13T00:00:00Z"
+            "endDate": "2024-06-31T00:00:00Z"
         }
     ],
     "expertises": [
@@ -129,10 +123,12 @@
                         "CSS3",
                         "PHP",
                         "Javascript",
+                        "C",
                         "C++",
                         "Java",
                         "Bash",
-                        "SQL"
+                        "SQL",
+                        "Python"
                     ]
                 },
                 {
@@ -148,9 +144,8 @@
                     "level": "",
                     "keywords": [
                         "Symfony",
-                        "VueJS",
                         "Bootstrap",
-                        "Bulma"
+                        "Django"
                     ]
                 },
                 {
@@ -164,7 +159,7 @@
                     "name": "Versioning",
                     "level": "",
                     "keywords": [
-                        "Gitlab"
+                        "Git"
                     ]
                 },
                 {
@@ -172,7 +167,9 @@
                     "level": "",
                     "keywords": [
                         "MySQL",
-                        "PostgreSQL"
+                        "PostgreSQL",
+                        "MongoDB",
+                        "Neo4j"
                     ]
                 },
                 {
@@ -202,16 +199,28 @@
             "name": "languages",
             "skills": [
                 {
+                    "name": "Français",
+                    "level": "Natif"
+                },
+                {
                     "name": "Anglais",
                     "level": "B2"
+                },
+                {
+                    "name": "Allemand",
+                    "level": "B1"
                 }
             ]
         }
     ],
     "hobbies": [
         {
-            "name": "Piano",
-            "description": "Je pratique cet instrument en auto-didacte..."
+            "name": "Badminton",
+            "description": "Pratique depuis 10 ans en loisirs"
+        },
+        {
+            "name": "Handball",
+            "description": "Pratique depuis 10 ans en compétition"
         }
     ]
 }

@@ -3,3 +3,12 @@ courses:
   subtitle: our courses
   hour: hour
   duration: Duration
+  introduction:
+    part_1:
+      title: Your problematic
+      paragraph_1: You are a company (SME/Group) and you want to train your collaborators.
+      paragraph_2: You are an SN and you want to subcontract a training service with your customers.
+      paragraph_3: You are a training organization and you want to acquire the consulting / high-qualified trainer to lead a session.
+    part_2:
+      title: Nos formations
+      paragraph_1: Our team bases its added value on the perpetual quest of new knowledges. So, share it when we mastered them is a real pleasure and it allow our consultants to vary their missions and to add a pedagogic branch to their background. We offer 'standards' trainings plans but we can also answer to your more specifics needs upon request.

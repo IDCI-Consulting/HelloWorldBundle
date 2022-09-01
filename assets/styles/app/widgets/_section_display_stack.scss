@@ -1,0 +1,78 @@
+.section-display-stack {
+    position: absolute;
+    height: 10%;
+
+    @include until($widescreen) {
+        display: flex;
+        flex-direction: column-reverse;
+        position: inherit;
+    }
+
+    .section-display-stack-media {
+        display: block;
+        margin: auto;
+        margin-right: 0;
+        position: relative;
+        right: 6rem;
+        top: -60rem;
+        z-index: 0;
+
+        @include until($widescreen) {
+            margin: auto;
+            position: inherit;
+        }
+    }
+
+    .section-display-stack-colored-box {
+        background-color: $idci-color-blue;
+        height: 400px;
+        position: relative;
+        width: 45%;
+        z-index: 50;
+
+        @include until($widescreen) {
+            display: none;
+        }
+    }
+
+    .section-display-stack-description {
+        background-color: $idci-color-white;
+        height: 390px;
+        left: 5rem;
+        padding: 1.5rem;
+        padding-top: 1rem;
+        position: relative;
+        top: -30rem;
+        width: 45%;
+        z-index: 100;
+
+        @include until($widescreen) {
+            left: 0;
+            margin: auto;
+            top: -15rem;
+            width: 80%;
+        }
+
+        @include until($tablet) {
+            height: auto;
+            top: 2rem;
+            width: 100%;
+        }
+
+        .section-display-stack-description-title {
+            border-bottom: 2px solid $idci-color-blue;
+            font-size: $idci-font-1-5x;
+            padding: 1rem;
+            text-transform: uppercase;
+        }
+
+        .section-display-stack-description-content {
+            font-size: $idci-font-larger;
+            margin-top: 2rem;
+        }
+    }
+
+    .colored {
+        color: $idci-color-blue;
+    }
+}

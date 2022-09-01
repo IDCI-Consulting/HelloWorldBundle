@@ -2,7 +2,28 @@
 
 {% block main %}
 
-<section class="section-container">
+<section class="section-container section-container-primary">
+    <section class="section-introduction">
+        <h2 class="section-introduction-title idci-title-primary">{% trans from "courses" %}courses.introduction.part_1.title{% endtrans %}</h2>
+        <ul class="section-introduction-description">
+            <li>
+                {% trans from "courses" %}courses.introduction.part_1.paragraph_1{% endtrans %}
+            </li>
+            <li>
+                {% trans from "courses" %}courses.introduction.part_1.paragraph_2{% endtrans %}
+            </li>
+            <li> 
+                {% trans from "courses" %}courses.introduction.part_1.paragraph_3{% endtrans %}
+            </li>
+        </ul>
+        <h2 class="section-introduction-title idci-title-primary">{% trans from "courses" %}courses.introduction.part_2.title{% endtrans %}</h2>
+        <p class="section-introduction-description">
+            {% trans from "courses" %}courses.introduction.part_2.paragraph_1{% endtrans %}
+        </p>
+    </section>
+</section>
+
+<section class="section-container section-container-secondary">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-primary">{% trans from "courses" %}courses.title{% endtrans %}</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "courses" %}courses.subtitle{% endtrans %}</h3>

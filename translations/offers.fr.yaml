@@ -1,0 +1,49 @@
+offers:
+  section_1:
+    title: Nos offres de services
+    box_1:
+      title: 'Vous êtes <br/><span class="colored">une entreprise</span> (PME/Groupe)<br/> et vous souhaitez :'
+      description:    <li>Être conseillé sur les <span class="colored">choix technologiques</span> et dans la <span class="colored">conception de votre futur applicatif web</span></li>
+                      <li>Renforcer temporairement votre <span class="colored">équipe de développement</span></li>
+                      <li>Former vos <span class="colored">collaborateurs</span></li>
+                      <li><span class="colored">Confier votre projet</span> de mise en œuvre et rester concentré sur votre cœur de métier</li>
+    box_2:
+      title: 'Vous êtes <br/><span class="colored">une SSI</span><br/> et vous souhaitez :'
+      description:    <li><span class="colored">Renforcer vos ressources</span> dans le cadre d’un projet</li>
+                      <li><span class="colored">Déléguer ponctuellement un expert</span> pour aider votre client à résoudre une problématique technique</li>
+                      <li><span class="colored">Sous-traiter tout ou partie d’un contrat de services</span> chez un de vos clients</li>
+                      <li><span class="colored">Former vos collaborateurs ou ceux de vos clients</span> sur les dernières technologies</li>
+
+  section_2:
+    title: Une réponse innovante
+    description:  IDCI consulting (SARL) créée en 2007 est un <span class="colored">groupement d’experts sur les technologies web</span>
+                  qui travaillent en permanence sur différentes missions tout en conservant la possibilité de
+                  communiquer entre eux et ainsi partager leurs connaissances. <span class="colored">Individuellement ou en équipe,</span>
+                  nous sommes capables d’apporter une valeur certaine pour votre projet à n’importe quelle
+                  étape de son cycle de vie, sans engagement de votre part et sur une durée minimale de
+                  collaboration. Nous intervenons exclusivement en régie.
+
+  section_3:
+    title: En fonction de la charge et de l'expertise vos équipes
+    subtitle: vous pouvez choisir...
+    box_1: 
+      description: Déléguer tous les aspects techniques à IDCI et laisser vos équipes 100% concentrées sur l’implémentation des briques fonctionnelles liées à votre métier.
+    box_2:
+      description: Avoir recours à une délégation partielle des tâches techniques à IDCI afin de combler vos besoins ponctuels en ressources et en expertise.
+    box_3:
+      description: Vous assurer une collaboration et un support jusqu’à la totale maîtrise de votre projet
+
+  section_4:
+    title: 'Cette organisation est la promesse d’un véritable partenariat offrant des avantages pour chaque partie :'
+    box_1:
+      title: Pour vous
+      description:  '<li>Mandater 1 consultant IDCI consulting et <span class="colored">bénéficier d’un réseau multi-compétence</span></li>
+                    <li><span class="colored">Bénéficier de moyens techniques et matériels supplémentaires</span> (serveurs, locaux, communication.)</li>
+                    <li><span class="colored">S’assurer d’un backup</span> en cas d’urgence</li>
+                    <li><span class="colored">D’optimiser les coûts de déplacement</span> en faisant réaliser tout ou partie du mandat dans nos locaux en relation permanente avec le client</li>
+                    <li>Avoir un 2e interlocuteur en charge de la relation et de la <span class="colored">satisfaction client</span></li>'
+    box_2:
+      title: Pour nous
+      description:  <li><span class="colored">Mutualiser</span> les compétences</li>
+                    <li><span class="colored">Maintenir et faire évoluer les connaissances</span> de chacun</li>
+                    <li><span class="colored">Travailler en suivant des standards</span> suivis par la communauté et par notre équipe</li>
