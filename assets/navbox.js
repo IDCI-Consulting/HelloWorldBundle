@@ -1,18 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     let navboxLinks = document.getElementById('navbox').querySelectorAll('ul li');
-    let linksScrolls = [];
-    let linkStart = 0;
+    let sections = document.getElementsByClassName('section-container');
+    let sectionsStarts = [];
     let currentLink;
 
-    navboxLinks.forEach((element, index) => {
-        linksScrolls[index] = linkStart;
-        linkStart += 1300;
+    Array.from(sections).forEach((element, index) => {
+        sectionsStarts[index] = element.getBoundingClientRect()['y'] - document.body.getBoundingClientRect()['y'];
     });
 
     window.addEventListener('scroll', function scroll() {
-        for (const key in linksScrolls) {
+        for (const key in sectionsStarts) {
             navboxLinks[key].classList.remove('active');
-            if(this.scrollY > linksScrolls[key]) {
+            if (this.scrollY >= sectionsStarts[key]) {
                 currentLink = key;
             }
         }
