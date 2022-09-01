@@ -15,23 +15,17 @@ class BlogController extends AbstractController
     /**
      * @Route("/", methods={"GET"}, name="index")
      */
-    public function index(Request $request, string $_locale): Response
+    public function index(Request $request): Response
     {
-        $articles = json_decode(file_get_contents(sprintf('../src/Resources/blog/articles_%s.json', $_locale)), true);
+        $posts = json_decode(file_get_contents('../src/Resources/blog/posts.json'), true);
 
         $articlesByCategories = [];
 
-        foreach ($articles as $articleTab) {
+        foreach ($posts as $articleTab) {
             foreach ($articleTab as $article) {
                 if (!in_array($article["category"], $articlesByCategories)) {
-                    $articlesByCategories[$article["category"]] = [];
+                    $articlesByCategories[$article["category"]][] = $article;
                 }
-            }
-        }
-
-        foreach ($articles as $articleTab) {
-            foreach ($articleTab as $article) {
-                $articlesByCategories[$article["category"]][] = $article;
             }
         }
 

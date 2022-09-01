@@ -2,7 +2,10 @@
     "2018": [
         {
             "id": "idci-10-years",
-            "name": "IDCI 10 years",
+            "name": {
+                "fr": "10 ans d'IDCI",
+                "en": "IDCI 10 years"
+            },
             "media": "logo/idci-logo.svg",
             "parutionDate": "30/05/2018",
             "author": "Louise Millon",
