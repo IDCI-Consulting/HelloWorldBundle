@@ -1,7 +1,7 @@
 .pic-ctn {
-  width: 100vw;
   height: 200px;
   margin-top: 5rem;
+  width: 100vw;
 
   .pic {
     width: 100%;
@@ -13,43 +13,10 @@
     height: 300px;
   
     > div {
-      position: absolute;
-      top: 0;
       left: 15%;
       opacity: 0;
-      animation: display 10s infinite;
-    }
-
-    @keyframes display {
-      0% {
-        transform: translateX(200px);
-        opacity: 0;
-      }
-      10% {
-        transform: translateX(0);
-        opacity: 1;
-        z-index: 100;
-      }
-      30% {
-        transform: translateX(0);
-        opacity: 1;
-        z-index: 100;
-      }
-      40% {
-        transform: translateX(-200px);
-        opacity: 0;
-        z-index: -100;
-      }
-      100% {
-        transform: translateX(-200px);
-        opacity: 0;
-      }
-    }
-    
-    @for $i from 2 through 10 {
-      div:nth-child(#{$i}) {
-        animation-delay: calc((#{$i}s - 1s) * 5);
-      }
+      position: absolute;
+      top: 0;
     }
   }
 }

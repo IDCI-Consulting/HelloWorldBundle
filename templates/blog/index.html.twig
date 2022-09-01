@@ -7,61 +7,66 @@
         <h2 class="section-dynamic-display-title idci-title-primary">Blog</h2>
         <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">{% trans from "blog" %}blog.carousel_title{% endtrans %}</h3>
 
-
         <div class="columns is-mobile">
             <div class="pic-ctn keyframes">
             {% set article_count = 0 %}
-            {% if article_count < 3 %}
-                {% for date_label, date in articles %}
-                    {% for article in date %}
-                        {% if article_count < 2 %}
-                            <div class="columns is-mobile pic">
-                                <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3 carousel-article-media">
-                                <div class="column is-6 carousel-article">
-                                    <div class="carousel-article-header">
-                                        <p>{{ article.parutionDate }}</p>
-                                        <p>{{ article.author }}</p>
-                                    </div>
-                                    <p class="carousel-article-title">{{ article.name }}</p>
-                                    <p class="carousel-article-description">{{ article.description }}</p>
-                                    <a href="{{ url('app_blog_article', {'slug': article.id}) }}" class="carousel-article-button">{% trans from "blog" %}blog.read_article{% endtrans %}</a>
+            {% set max_article_count = 5 %}
+            {% for date_label, date in articles %}
+                {% for article in date %}
+                    {% if article_count < max_article_count %}
+                        <div class="columns is-mobile pic">
+                            <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3 carousel-article-media">
+                            <div class="column is-6 carousel-article">
+                                <div class="carousel-article-header">
+                                    <p>{{ article.parutionDate }}</p>
+                                    <p>{{ article.author }}</p>
                                 </div>
+                                <p class="carousel-article-title">{{ article.name }}</p>
+                                <p class="carousel-article-description">{{ article.description }}</p>
+                                <a href="{{ url('app_blog_article', {'slug': article.id}) }}" class="carousel-article-button">{% trans from "blog" %}blog.read_article{% endtrans %}</a>
                             </div>
-                            {% set article_count = article_count + 1 %}
-                        {% endif %}
-                    {% endfor %}
+                        </div>
+                        {% set article_count = article_count + 1 %}
+                    {% endif %}
                 {% endfor %}
-            {% endif %}
+            {% endfor %}
             </div>
         </div>
 
+        <style>
+            .keyframes > div {
+                animation: display calc({{ article_count }}s * 5) infinite;
+            }
 
-        {# <div class="carousel-single-item">
-            {% set article_count = 0 %}
-            {% if article_count < 3 %}
-                {% for date_label, date in articles %}
-                    {% for article in date %}
-                        {% if article_count < 3 %}
-                            <div class="columns">
-                                <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3 is-offset-2">
-                                <div class="column is-6 is-centered carousel-article">
-                                    <div class="carousel-article-header">
-                                        <p>{{ article.parutionDate }}</p>
-                                        <p>{{ article.author }}</p>
-                                    </div>
-                                    <p class="carousel-article-title">{{ article.name }}</p>
-                                    <p class="carousel-article-description">{{ article.description }}</p>
-                                    <a href="{{ url('app_blog_article', {'slug': article.id}) }}" class="carousel-article-button">{% trans from "blog" %}blog.read_article{% endtrans %}</a>
-                                </div>
-                            </div>
-                            {% set article_count = article_count + 1 %}
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-            {% endif %}
-        </div> #}
+            {% set one_second = 100 / (article_count * 5) %}
 
+            @keyframes display {
+                0% {
+                    transform: translateX(200px);
+                    opacity: 0;
+                }
+                {{ one_second }}%, {{ one_second * 4 }}% {
+                    transform: translateX(0);
+                    opacity: 1;
+                    z-index: 100;
+                }
+                {{ one_second * 5 }}% {
+                    transform: translateX(-200px);
+                    opacity: 0;
+                    z-index: -100;
+                }
+                100% {
+                    transform: translateX(-200px);
+                    opacity: 0;
+                }
+            }
 
+            {% for i in 2..(article_count + 2) %}
+                .keyframes div:nth-child({{ i }}) {
+                    animation-delay: calc(({{ i }}s - 1s) * 5);
+                }
+            {% endfor %}
+        </style>
     </section>
 </section>
 
