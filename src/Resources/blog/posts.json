@@ -6,7 +6,7 @@
             "en": "IDCI 10 years"
         },
         "media": "logo/idci-logo.svg",
-        "publicationDate": "30-05-2018",
+        "publicationDate": "30/05/2018",
         "author": "Louise Millon",
         "category": "IDCI",
         "description": {
@@ -21,7 +21,7 @@
             "en": "Introduction to IDCIStepBundle"
         },
         "media": "base/symfony2.svg",
-        "publicationDate": "03-03-2017",
+        "publicationDate": "03/03/2017",
         "author": "Louise Millon",
         "category": "Symfony",
         "description": {
@@ -36,7 +36,7 @@
             "en": "Our wishes 2017"
         },
         "media": "logo/idci-logo.svg",
-        "publicationDate": "13-01-2017",
+        "publicationDate": "13/01/2017",
         "author": "Louise Millon",
         "category": "IDCI",
         "description": {

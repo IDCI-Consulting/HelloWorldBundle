@@ -12,24 +12,24 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class BlogController extends AbstractController
 {
-    // private string $postsPath;
+    private string $postsConfigPath;
 
-    // public function __construct(string $postsPath)
-    // {
-    //     $this->postsPath = $postsPath;
-    // }
+    public function __construct(string $postsConfigPath)
+    {
+        $this->postsConfigPath = $postsConfigPath;
+    }
 
     /**
      * @Route("/", methods={"GET"}, name="index")
      */
     public function index(Request $request): Response
     {
-        $posts = json_decode(file_get_contents('../src/Resources/blog/posts.json'), true);
+        $posts = json_decode(file_get_contents($this->postsConfigPath), true);
         $postsByYears = [];
         $postsByCategories = [];
 
         foreach ($posts as $post) {
-            $postYear = date("Y",strtotime($post['publicationDate']));
+            $postYear = \DateTime::createFromFormat('d/m/Y', $post['publicationDate'])->format('Y');
             $postsByYears[$postYear][] = $post;
             $postsByCategories[$post['category']][] = $post;
         }
