@@ -1,36 +1,47 @@
-{
-    "2018": [
-        {
-            "id": "idci-10-years",
-            "name": {
-                "fr": "10 ans d'IDCI",
-                "en": "IDCI 10 years"
-            },
-            "media": "logo/idci-logo.svg",
-            "parutionDate": "30/05/2018",
-            "author": "Louise Millon",
-            "category": "IDCI",
-            "description": "To celebrate this symbolic birthday, we welcome our customers and partners to our event which will be held on Friday, June 8 2018. Frédéric and Gabriel Bondaz ..."
-        }
-    ],
-    "2017": [
-        {
-            "id": "step-bundle-introduction",
-            "name": "Introduction to IDCIStepBundle",
-            "media": "base/symfony2.svg",
-            "parutionDate": "03/03/2017",
-            "author": "Louise Millon",
-            "category": "Symfony",
-            "description": "Following the need of a client, we wondered how to respond to the problem of creating an interactive workflow. It should be easy to make ..."
+[
+    {
+        "id": "idci-10-years",
+        "name": {
+            "fr": "10 ans d'IDCI",
+            "en": "IDCI 10 years"
         },
-        {
-            "id": "new-year-2017",
-            "name": "Our wishes 2017",
-            "media": "logo/idci-logo.svg",
-            "parutionDate": "13/01/2017",
-            "author": "Louise Millon",
-            "category": "IDCI",
-            "description": "The IDCI team wishes you a very happy new year. We wish you to keep explorating your ideas and your creativity. Try new things and ..."
+        "media": "logo/idci-logo.svg",
+        "publicationDate": "30-05-2018",
+        "author": "Louise Millon",
+        "category": "IDCI",
+        "description": {
+            "fr": "Pour fêter cet anniversaire symbolique, nous recevons nos clients et partenaires à notre événement qui se tiendra le vendredi 8 juin 2018. Frédéric et Gabriel Bondaz ...",
+            "en": "To celebrate this symbolic birthday, we welcome our customers and partners to our event which will be held on Friday, June 8 2018. Frédéric and Gabriel Bondaz ..."
         }
-    ]
-}
+    },
+    {
+        "id": "step-bundle-introduction",
+        "name": {
+            "fr": "Introduction à IDCIStepBundle",
+            "en": "Introduction to IDCIStepBundle"
+        },
+        "media": "base/symfony2.svg",
+        "publicationDate": "03-03-2017",
+        "author": "Louise Millon",
+        "category": "Symfony",
+        "description": {
+            "fr": "Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une création de workflow interactif. Il fallait pouvoir réaliser facilement ...",
+            "en": "Following the need of a client, we wondered how to respond to the problem of creating an interactive workflow. It should be easy to make ..."
+        }
+    },
+    {
+        "id": "new-year-2017",
+        "name": {
+            "fr": "Nos voeux 2017",
+            "en": "Our wishes 2017"
+        },
+        "media": "logo/idci-logo.svg",
+        "publicationDate": "13-01-2017",
+        "author": "Louise Millon",
+        "category": "IDCI",
+        "description": {
+            "fr": "L'équipe d'IDCI vous souhaite une très bonne année. Nous vous souhaitons de continuer à explorer vos idées et votre créativité. Tester de nouvelles choses et ...",
+            "en": "The IDCI team wishes you a very happy new year. We wish you to keep explorating your ideas and your creativity. Try new things and ..."
+        }
+    }
+]

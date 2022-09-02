@@ -31,6 +31,10 @@ services:
         arguments:
             $contactRecipientsAddresses: '%env(json:MAILER_RECIPIENT_ADDRESSES)%'
     
+    # App\Controller\BlogController:
+    #     arguments:
+    #         $postsPath: '%env(json:BLOG_POSTS_PATH)%'
+    
     # twig
     App\Twig\AppExtension:
         arguments:

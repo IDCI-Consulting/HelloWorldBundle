@@ -1,8 +1,8 @@
 blog:
-  carousel_title: Last articles
-  all_articles_title: All the articles
-  by_dates: By dates
+  carousel_title: Last posts
+  all_posts_title: All the posts
+  by_years: By years
   by_categories: By categories
   uploaded_the: Uploaded the
   by: by
-  read_article: Read the article
+  read_post: Read the post
