@@ -1,5 +1,5 @@
-.section-articles {
-    .section-articles-title {
+.section-posts {
+    .section-posts-title {
         color: $idci-color-light-black;
         letter-spacing: inherit;
     }
@@ -26,8 +26,8 @@
                 width: 70%;
                 text-align: left;
 
-                .section-articles-list {
-                    .section-articles-list-title {
+                .section-posts-list {
+                    .section-posts-list-title {
                         background-color: $idci-color-blue;
                         color: $idci-color-white;
                         margin-bottom: 2rem;
@@ -37,23 +37,33 @@
                         width: 6rem;
                     }
 
-                    .section-articles-list-item {
+                    .section-posts-list-item {
                         align-items: center;
                         display: flex;
                         padding: .5rem;
                         min-height: 5rem;
 
-                        .section-articles-list-item-media {
+                        .section-posts-list-item-media {
                             width: 5rem;
                             margin-right: 2rem;
                         }
 
-                        .section-articles-list-item-link {
+                        .section-posts-list-item-link {
                             width: 100%;
                         }
 
-                        .section-articles-list-item-infos {
+                        .section-posts-list-item-infos {
+                            display: flex;
+                            justify-content: space-between;
                             width: 100%;
+
+                            @include until($tablet) {
+                                flex-direction: column;
+                            }
+
+                            span {
+                                font-size: $idci-font-medium;
+                            }
                         }
                     }
                 }
