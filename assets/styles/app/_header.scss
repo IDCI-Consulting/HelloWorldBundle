@@ -114,7 +114,7 @@ header {
     }
 
     .header-media {
-        min-width: 15rem;
+        min-width: 12rem;
         width: 10%;
 
         @include until($desktop) {
