@@ -1,6 +1,6 @@
 {
     "name": "Symfony2",
-    "media": "base/symfony2.svg",
+    "media": "symfony2.svg",
     "days": [
         {
             "label":"Jour 1",

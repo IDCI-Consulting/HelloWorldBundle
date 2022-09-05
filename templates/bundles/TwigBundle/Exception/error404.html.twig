@@ -2,11 +2,23 @@
 
 {% block title %}ERREUR 404{% endblock %}
 
-{% block body %}
+{% block main %}
 
-    <h1>{% trans from "error_pages" %}error.not_found_page{% endtrans %}</h1>
-    <p>
-        {% trans from "error_pages" %}error.description{% endtrans %}
-    </p>
+<section class="section-container section-container-primary section-error-page-background">
+    <section class="error-page">
+        <h1 class="error-page-title idci-title-primary">{% trans from "error_pages" %}error.404.not_found_page{% endtrans %}</h1>
+        <p class="error-page-description">
+            {% trans from "error_pages" %}error.404.description{% endtrans %}
+        </p>
+        <div class="error-page-redirection">
+            <a href="{{ path('app_homepage') }}" class="error-page-redirection-button">{% trans from "error_pages" %}error.homepage{% endtrans %}</a>
+        </div>
+        <div class="error-page-infos">
+            <p>{% trans from "error_pages" %}error.label{% endtrans %} : <span class="red-info">404</span></p>
+            <p>{% trans from "error_pages" %}error.404.want_to_know_more{% endtrans %}</p>
+            <p>{% trans from "error_pages" %}error.contact_us_course{% endtrans %} <a href="{{ url('app_contact_index') }}">{% trans from "error_pages" %}error.contact_us{% endtrans %}</a> {% trans from "error_pages" %}error.contact_us_course_2{% endtrans %}</p>
+        </div>
+    </section>
+</section>
     
 {% endblock %}

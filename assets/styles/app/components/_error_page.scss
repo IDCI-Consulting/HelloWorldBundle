@@ -1,0 +1,52 @@
+.error-page {
+    .error-page-infos {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+
+        @include until($tablet) {
+            
+        }
+        
+        a {
+            color: $idci-color-blue;
+        }
+
+        .red-info {
+            color: $idci-color-red;
+            font-weight: bold;
+        }
+    }
+
+    .error-page-title {
+        font-size: $idci-font-4x;
+        margin-bottom: 4rem;
+
+        @include until($tablet) {
+            font-size: $idci-font-1-5x;
+        }
+    }
+
+    .error-page-description {
+        font-size: $idci-font-1-5x;
+        color: $idci-color-dark-grey;
+        text-align: center;
+
+        @include until($tablet) {
+            font-size: $idci-font-medium;
+        }
+    }
+
+    .error-page-redirection {
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        .error-page-redirection-button {
+            text-decoration: none;
+            padding: 1rem;
+            color: $idci-color-green;
+            border: 2px solid $idci-color-green;
+        }
+    }
+}
