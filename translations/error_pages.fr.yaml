@@ -1,4 +1,16 @@
 error:
-  not_found_page: Page introuvable
-  description:  La page à laquelle vous souhaitez accèder n'a pas l'air d'exister. Vérifiez s'il n'y a aucune erreur dans l'URL.
-                <a href="{{ path('app_homepage') }}">Revenir à l'accueil</a>.
+  label: Erreur
+  homepage: Revenir à l'accueil
+  contact_us: Contactez nous
+  contact_us_course: La RFC 2616 n'a pas su étancher votre soif de connaissance ?
+  contact_us_course_2: pour une formation !
+
+  404:
+    not_found_page: Page introuvable
+    description: La ressource demandée ne semble pas être accessible
+    want_to_know_more: '<p>Si vous voulez en savoir plus : <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc2616#section-10.4">RFC 2616</a></p>'
+
+  500:
+    server_error: Erreur serveur
+    description: Le serveur a échoué à répondre à la requête
+    want_to_know_more: '<p>Si vous voulez en savoir plus : <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc2616#section-10.5">RFC 2616</a></p>'
