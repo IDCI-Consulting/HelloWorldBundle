@@ -8,22 +8,41 @@
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": "<li>Internet != The WEB</li><li>HTTP Protocol (RFC2616)</li><li>Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony</li><li>Why Symfony2 ?</li>"
+                    "description": [
+                        "Internet != The WEB",
+                        "HTTP Protocol (RFC2616)",
+                        "Some PHP frameworks : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony",
+                        "Why Symfony2 ?"
+                    ]
                 },
                 {
                     "title": "A GOOD ENVIRONMENT AND GOOD PRACTICES",
                     "duration": 120,
-                    "description": "<li>Which IDE ?</li><li>Use a SCM (SVN, Git, etc.)</li><li>Use a bug tracker (Trac, Mantis, Redmine, Github, etc.)</li><li>Coding standards</li>"
+                    "description": [
+                        "Which IDE ?",
+                        "Use a SCM (SVN, Git, etc.)",
+                        "Use a bug tracker (Trac, Mantis, Redmine, Github, etc.)",
+                        "Coding standards"
+                    ]
                 },
                 {
                     "title": "INTRODUCTION AUX DESIGN PATTERN",
                     "duration": 120,
-                    "description": "<li>General presentation</li><li>MVC in details</li>"
+                    "description": [
+                        "General presentation",
+                        "MVC in details"
+                    ]
                 },
                 {
                     "title": "STRUCTURE APPLICATIONS WITH SYMFONY2",
                     "duration": 120,
-                    "description": "<li>The notion of \"application\" => app/</li><li>The notions of \"bundles\"</li><li>My specific coding => src/</li><li>Externals libraries => vendor/</li><li>The root web => web/</li>"
+                    "description": [
+                        "The notion of \"application\" => app/",
+                        "The notions of \"bundles\"",
+                        "My specific coding => src/",
+                        "Externals libraries => vendor/",
+                        "The root web => web/"
+                    ]
                 }
             ]
         },
@@ -33,12 +52,23 @@
                 {
                     "title": "LE CONTROLLER DANS SYMFONY2",
                     "duration": 240,
-                    "description": "<li>Object Request</li><li>Object Response</li><li>Routing</li><li>Annotations</li>"
+                    "description": [
+                        "Object Request",
+                        "Object Response",
+                        "Routing",
+                        "Annotations"
+                    ]
                 },
                 {
                     "title": "LES VUES (TEMPLATING) AVEC SYMFONY2",
                     "duration": 240,
-                    "description": "<li>Twig</li><li>Template Inheritance</li><li>Include views</li><li>Restore views</li><li>Twig filters</li>"
+                    "description": [
+                        "Twig",
+                        "Template Inheritance",
+                        "Include views",
+                        "Restore views",
+                        "Twig filters"
+                    ]
                 }
             ]
         },
@@ -48,12 +78,21 @@
                 {
                     "title": "ORM AND DBAL (DATABASE ABSTRACTION LAYER)",
                     "duration": 240,
-                    "description": "<li>PDO</li><li>Doctrine</li><li>Propel</li>"
+                    "description": [
+                        "PDO",
+                        "Doctrine",
+                        "Propel"
+                    ]
                 },
                 {
                     "title": "FORMS",
                     "duration": 240,
-                    "description": "<li>AbstractType</li><li>Fields</li><li>Validation</li><li>\"Form events\"</li>"
+                    "description": [
+                        "AbstractType",
+                        "Fields",
+                        "Validation",
+                        "Form events"
+                    ]
                 }
             ]
         },
@@ -63,12 +102,18 @@
                 {
                     "title": "CREATE A SERVICE",
                     "duration": 240,
-                    "description": "<li>Dependency injection</li><li>Service container</li>"
+                    "description": [
+                        "Dependency injection",
+                        "Service container"
+                    ]
                 },
                 {
                     "title": "SECURITY",
                     "duration": 240,
-                    "description": "<li>Autorisation</li><li>Authentication</li>"
+                    "description": [
+                        "Autorisation",
+                        "Authentication"
+                    ]
                 }
             ]
         },
@@ -78,12 +123,23 @@
                 {
                     "title": "Tests",
                     "duration": 240,
-                    "description": "<li>Units tests with PHPUnit</li><li>Functionals tests</li>"
+                    "description": [
+                        "Units tests with PHPUnit",
+                        "Functionals tests"
+                    ]
                 },
                 {
                     "title": "GO FURTHER",
                     "duration": 240,
-                    "description": "<li>Use the configuration</li><li>Create Symfony2 commands</li><li>Use already existing bundles</li><li>FOSUserBundle (Users management)</li><li>DoctrineFixtures (Data import)</li><li>Create reusable bundles</li><li>The HTTP cache (ESI, Varnish, etc.)</li>"
+                    "description": [
+                        "Use the configuration",
+                        "Create Symfony2 commands",
+                        "Use already existing bundles",
+                        "FOSUserBundle (Users management)",
+                        "DoctrineFixtures (Data import)",
+                        "Create reusable bundles",
+                        "The HTTP cache (ESI, Varnish, etc.)"
+                    ]
                 }
             ]
         }

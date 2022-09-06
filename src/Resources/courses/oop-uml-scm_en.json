@@ -8,17 +8,36 @@
                 {
                     "title": "Introduction",
                     "duration": 240,
-                    "description": "<li>Definition</li><li>History</li><li>Object / class</li><li>Declaration</li><li>Fields</li><li>Methods</li><li>Object instanciation</li><li>Object cloning</li>"
+                    "description": [
+                        "Definition",
+                        "History",
+                        "Object / class",
+                        "Declaration",
+                        "Fields",
+                        "Methods",
+                        "Object instanciation",
+                        "Object cloning"
+                    ]
                 },
                 {
                     "title": "Methods",
                     "duration": 120,
-                    "description": "<li>Builder, destroyer</li><li>toString</li><li>Getters & Setters</li><li>Abstract method</li><li>Static method</li>"
+                    "description": [
+                        "Builder, destroyer",
+                        "toString",
+                        "Getters & Setters",
+                        "Abstract method",
+                        "Static method"
+                    ]
                 },
                 {
                     "title": "3 big concepts",
                     "duration": 120,
-                    "description": "<li>Encapsulation</li><li>Inheritance</li><li>Polymorphism</li>"
+                    "description": [
+                        "Encapsulation",
+                        "Inheritance",
+                        "Polymorphism"
+                    ]
                 }
             ]
         },
@@ -28,37 +47,53 @@
                 {
                     "title": "Visibility",
                     "duration": 60,
-                    "description": "<li>public</li><li>private</li><li>protected</li>"
+                    "description": [
+                        "public",
+                        "private",
+                        "protected"
+                    ]
                 },
                 {
                     "title": "Abstract class / Interface",
                     "duration": 60,
-                    "description": ""
+                    "description": []
                 },
                 {
                     "title": "UML / Merise",
                     "duration": 60,
-                    "description": "<li>UML</li><li>Database</li><li>Merise</li><li>Comparison object world / relationnal world</li>"
+                    "description": [
+                        "UML",
+                        "Database",
+                        "Merise",
+                        "Comparison object world / relationnal world"
+                    ]
                 },
                 {
                     "title": "Design patterns (DP)",
                     "duration": 0,
-                    "description": ""
+                    "description": []
                 },
                 {
                     "title": "Introduction",
                     "duration": 60,
-                    "description": ""
+                    "description": []
                 },
                 {
                     "title": "Use",
                     "duration": 60,
-                    "description": "<li>When use DP ?</li><li>When NOT TO use DP ?</li>"
+                    "description": [
+                        "When use DP ?",
+                        "When NOT TO use DP ?"
+                    ]
                 },
                 {
                     "title": "Some examples",
                     "duration": 120,
-                    "description": "<li>Factory</li><li>Observer</li><li>Strategy</li>"
+                    "description": [
+                        "Factory",
+                        "Observer",
+                        "Strategy"
+                    ]
                 }
             ]
         },
@@ -68,42 +103,57 @@
                 {
                     "title": "DIVE INTO THE MVC DP",
                     "duration": 120,
-                    "description": ""
+                    "description": []
                 },
                 {
                     "title": "DIVE INTO THE DEPENDENCY INJECTION",
                     "duration": 120,
-                    "description": ""
+                    "description": []
                 },
                 {
                     "title": "SCM",
                     "duration": 240,
-                    "description": ""
+                    "description": []
                 },
                 {
                     "title": "Definition",
                     "duration": 0,
-                    "description": "<li>What is a SCM ?</li><li>Why use one ?</li>"
+                    "description": [
+                        "What is a SCM ?",
+                        "Why use one ?"
+                    ]
                 },
                 {
                     "title": "SOME USEFUL COMMANDS",
                     "duration": 0,
-                    "description": "<li>commit</li><li>push</li><li>add</li><li>remove</li><li>revert / reset ?</li><li>update / pull</li><li>status</li>"
+                    "description": [
+                        "commit",
+                        "push",
+                        "add",
+                        "remove",
+                        "revert / reset ?",
+                        "update / pull",
+                        "status"
+                    ]
                 },
                 {
                     "title": "WHICH SCM TO CHOOSE ?",
                     "duration": 0,
-                    "description": "<li>SVN</li><li>Git</li><li>Mercurial</li>"
+                    "description": [
+                        "SVN",
+                        "Git",
+                        "Mercurial"
+                    ]
                 },
                 {
                     "title": "Versionning",
                     "duration": 0,
-                    "description": ""
+                    "description": []
                 },
                 {
                     "title": "Branches",
                     "duration": 0,
-                    "description": ""
+                    "description": []
                 }
             ]
         },
@@ -113,7 +163,11 @@
                 {
                     "title": "Bug tracker",
                     "duration": 120,
-                    "description": "<li>Définition</li><li>Why use one ?</li><li>Redmine / Mantis / GitHub</li>"
+                    "description": [
+                        "Definition",
+                        "Why use one ?",
+                        "Redmine / Mantis / GitHub"
+                    ]
                 }
             ]
         }
