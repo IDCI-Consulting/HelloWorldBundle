@@ -2,24 +2,31 @@
 
 {% block main %}
 
-<section class="section-container section-container-primary">
-    <section class="section-introduction">
-        <h2 class="section-introduction-title idci-title-primary">{% trans from "courses" %}courses.introduction.part_1.title{% endtrans %}</h2>
-        <ul class="section-introduction-description">
-            <li>
-                {% trans from "courses" %}courses.introduction.part_1.paragraph_1{% endtrans %}
-            </li>
-            <li>
-                {% trans from "courses" %}courses.introduction.part_1.paragraph_2{% endtrans %}
-            </li>
-            <li> 
-                {% trans from "courses" %}courses.introduction.part_1.paragraph_3{% endtrans %}
-            </li>
-        </ul>
-        <h2 class="section-introduction-title idci-title-primary">{% trans from "courses" %}courses.introduction.part_2.title{% endtrans %}</h2>
-        <p class="section-introduction-description">
-            {% trans from "courses" %}courses.introduction.part_2.paragraph_1{% endtrans %}
-        </p>
+<section class="section-container section-container-full">
+    <section class="section-presentation section-choices">
+        <p class="section-choices-title idci-title-primary">{% trans from "courses" %}courses.introduction.title{% endtrans %}</p>
+        <div class="section-choices-items">
+            <div class="section-offers-box section-offers-box-secondary">
+                <p class="section-offers-box-title">{% trans from "courses" %}courses.introduction.part_1.title{% endtrans %}</p>
+                <ul class="section-offers-box-description">
+                    <li>
+                        {% trans from "courses" %}courses.introduction.part_1.paragraph_1{% endtrans %}
+                    </li>
+                    <li>
+                        {% trans from "courses" %}courses.introduction.part_1.paragraph_2{% endtrans %}
+                    </li>
+                    <li>
+                        {% trans from "courses" %}courses.introduction.part_1.paragraph_3{% endtrans %}
+                    </li>
+                </ul>
+            </div>
+            <div class="section-offers-box section-offers-box-primary">
+                <p class="section-offers-box-title">{% trans from "courses" %}courses.introduction.part_2.title{% endtrans %}</p>
+                <ul class="section-offers-box-description">
+                    {% trans from "courses" %}courses.introduction.part_2.paragraph_1{% endtrans %}
+                </ul>
+            </div>
+        </div>
     </section>
 </section>
 

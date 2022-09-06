@@ -18,8 +18,8 @@
         z-index: 0;
 
         @include until($widescreen) {
-            margin: auto;
-            position: inherit;
+            top: 4rem;
+            right: 0;
         }
     }
 
@@ -55,7 +55,7 @@
 
         @include until($tablet) {
             height: auto;
-            top: 2rem;
+            top: 6rem;
             width: 100%;
         }
 
