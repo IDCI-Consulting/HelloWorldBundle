@@ -1,0 +1,41 @@
+.navbox {
+    position: fixed;
+    right: 2rem;
+    top: 5rem;
+    z-index: 10;
+
+    @include until($desktop) {
+        display: none;
+    }
+
+    ul {
+        li {
+            column-gap: 1rem;
+            display: flex;
+            margin: auto;
+            justify-content: right;
+            
+            a {
+                color: $idci-color-dark-grey;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            i {
+                align-self: center;
+                color: $idci-color-dark-grey;
+            }
+
+            &.active {
+                a {
+                    color: $idci-color-blue;
+                }
+
+                i::before {
+                    color: $idci-color-blue;
+                    content: '\f192'
+                }
+            }
+        }
+    }
+}
