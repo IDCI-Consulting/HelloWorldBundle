@@ -7,7 +7,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
-class HomeController extends AbstractController
+/**
+ * @Route("/{_locale}", requirements={"_locale": "fr|en"})
+ */
+class PageController extends AbstractController
 {
     /**
      * @Route("/", methods={"GET"}, name="homepage")
@@ -18,10 +21,18 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/legal-mentions", methods={"GET"}, name="legal-mentions")
+     * @Route("/legal-mentions", methods={"GET"}, name="legal_mentions")
      */
     public function legalMentions(Request $request): Response
     {
         return $this->render('home/legal_mentions.html.twig');
+    }
+
+    /**
+     * @Route("/offers", methods={"GET"}, name="offers")
+     */
+    public function offers(Request $request): Response
+    {
+        return $this->render('offers/index.html.twig');
     }
 }

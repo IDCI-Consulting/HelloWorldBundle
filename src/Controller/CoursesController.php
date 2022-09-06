@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/courses", name="courses_")
+ * @Route("/{_locale}/courses", requirements={"_locale": "fr|en"}, name="courses_")
  */
 class CoursesController extends AbstractController
 {

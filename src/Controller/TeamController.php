@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 /**
- * @Route("/team", name="team_")
+ * @Route("/{_locale}/team", requirements={"_locale": "fr|en"}, name="team_")
  */
 class TeamController extends AbstractController
 {
@@ -23,9 +23,9 @@ class TeamController extends AbstractController
     }
 
     /**
-     * @Route("/", methods={"GET"}, name="index"),
+     * @Route("/", methods={"GET"}, name="list"),
      */
-    public function index(Request $request): Response
+    public function list(Request $request): Response
     {
         return $this->render('team/index.html.twig');
     }

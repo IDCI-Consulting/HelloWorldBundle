@@ -1,7 +1,7 @@
-{% extends 'layout.html.twig' %}
+User-agent: *
 
-{% block main %}
-
-seo robots.txt
-
-{% endblock %}
+{% if allow_robots is same as(true) %}
+Allow: /
+{% else %}
+Disallow: /
+{% endif %}
