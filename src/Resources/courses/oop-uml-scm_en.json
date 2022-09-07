@@ -8,7 +8,7 @@
                 {
                     "title": "Introduction",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Definition",
                         "History",
                         "Object / class",
@@ -22,7 +22,7 @@
                 {
                     "title": "Methods",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Builder, destroyer",
                         "toString",
                         "Getters & Setters",
@@ -33,7 +33,7 @@
                 {
                     "title": "3 big concepts",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Encapsulation",
                         "Inheritance",
                         "Polymorphism"
@@ -47,7 +47,7 @@
                 {
                     "title": "Visibility",
                     "duration": 60,
-                    "description": [
+                    "concepts": [
                         "public",
                         "private",
                         "protected"
@@ -56,12 +56,12 @@
                 {
                     "title": "Abstract class / Interface",
                     "duration": 60,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "UML / Merise",
                     "duration": 60,
-                    "description": [
+                    "concepts": [
                         "UML",
                         "Database",
                         "Merise",
@@ -71,17 +71,17 @@
                 {
                     "title": "Design patterns (DP)",
                     "duration": 0,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "Introduction",
                     "duration": 60,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "Use",
                     "duration": 60,
-                    "description": [
+                    "concepts": [
                         "When use DP ?",
                         "When NOT TO use DP ?"
                     ]
@@ -89,7 +89,7 @@
                 {
                     "title": "Some examples",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Factory",
                         "Observer",
                         "Strategy"
@@ -103,22 +103,22 @@
                 {
                     "title": "DIVE INTO THE MVC DP",
                     "duration": 120,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "DIVE INTO THE DEPENDENCY INJECTION",
                     "duration": 120,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "SCM",
                     "duration": 240,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "Definition",
                     "duration": 0,
-                    "description": [
+                    "concepts": [
                         "What is a SCM ?",
                         "Why use one ?"
                     ]
@@ -126,7 +126,7 @@
                 {
                     "title": "SOME USEFUL COMMANDS",
                     "duration": 0,
-                    "description": [
+                    "concepts": [
                         "commit",
                         "push",
                         "add",
@@ -139,7 +139,7 @@
                 {
                     "title": "WHICH SCM TO CHOOSE ?",
                     "duration": 0,
-                    "description": [
+                    "concepts": [
                         "SVN",
                         "Git",
                         "Mercurial"
@@ -148,12 +148,12 @@
                 {
                     "title": "Versionning",
                     "duration": 0,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "Branches",
                     "duration": 0,
-                    "description": []
+                    "concepts": []
                 }
             ]
         },
@@ -163,7 +163,7 @@
                 {
                     "title": "Bug tracker",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Definition",
                         "Why use one ?",
                         "Redmine / Mantis / GitHub"

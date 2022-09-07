@@ -8,12 +8,12 @@
                 {
                     "title": "HTML / CSS",
                     "duration": 0,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Fonctionnement du web",
                         "W3C : de l'utilité des normes"
                     ]
@@ -21,7 +21,7 @@
                 {
                     "title": "HTML5 / CSS3 : POURQUOI ILS FONT TANT PARLER D'EUX",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Pourquoi utiliser le HTML et le CSS ? Comment les utiliser ? Et le HTML5 / CSS3 dans tout ça ?",
                         "Optimisation des balises pour les moteurs de recherche (SEO)",
                         "Quid de la compatibilité entre navigateurs ?",
@@ -31,12 +31,12 @@
                 {
                     "title": "HTML5",
                     "duration": 0,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "UTILISER LE HTML5 AUJOURD'HUI",
                     "duration": 60,
-                    "description": [
+                    "concepts": [
                         "Savoir quand choisir le HTML 5",
                         "Utiliser le HTML5 avec des navigateurs qui ne le supportent pas"
                     ]
@@ -44,7 +44,7 @@
                 {
                     "title": "BALISAGE HTML5",
                     "duration": 180,
-                    "description": [
+                    "concepts": [
                         "Structure d'une page : disparition des notions \"en ligne\" et \"bloc\"",
                         "Doctype en HTML5",
                         "Les nouveaux éléments : section, article, aside, nav, etc",
@@ -61,7 +61,7 @@
                 {
                     "title": "WEB SÉMANTIQUE ET HTML5",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Elements sémantiques : donner du sens à ses contenus",
                         "Les micro données"
                     ]
@@ -69,7 +69,7 @@
                 {
                     "title": "FORMULAIRES HTML 5",
                     "duration": 180,
-                    "description": [
+                    "concepts": [
                         "Balise form",
                         "Créer et utiliser des formulaires en HTML 5",
                         "Gestion des dates, des emails, ..",
@@ -80,7 +80,7 @@
                 {
                     "title": "VUE D'ENSEMBLE DES APIS JAVASCRIPT POUR HTML 5",
                     "duration": 180,
-                    "description": [
+                    "concepts": [
                         "Les APIs HTML 5",
                         "Gestion des fichiers",
                         "Site web hors ligne",
@@ -96,7 +96,7 @@
                 {
                     "title": "ZOOM SUR L'API DE GESTION AUDIO ET VIDÉO EN HTML 5",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Les éléments audio et video",
                         "Les conteneurs",
                         "Contrôler la vidéo et l'audio avec l'API HTML5",
@@ -109,7 +109,7 @@
                 {
                     "title": "ZOOM SUR L'API DE DESSIN EN HTML 5",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Dessiner en JavaScript",
                         "Canvas vs SVG",
                         "Contexte",
@@ -124,7 +124,7 @@
                 {
                     "title": "ZOOM SUR L'API DE COMMUNICATION EN HTML 5",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Les événements",
                         "Envoi de messages entre documents",
                         "Envoi de messages par canaux",
@@ -137,7 +137,7 @@
                 {
                     "title": "ZOOM SUR L'API DE GÉO-LOCALISATION AVEC HTML 5",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Vue d'ensemble",
                         "La vie privée de l'utilisateur",
                         "Géolocaliser ses utilisateurs sur Google Maps"
@@ -146,7 +146,7 @@
                 {
                     "title": "ZOOM SUR L'API DE STORAGE AVEC HTML 5",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "API storage",
                         "Storage local",
                         "Storage en session",
@@ -161,7 +161,7 @@
                 {
                     "title": "ZOOM SUR L'API DE STORAGE AVEC HTML 5",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Vue d'ensemble : se passer d'images, éviter les astuces",
                         "Selecteurs CSS3",
                         "Coins arrondis",
@@ -175,7 +175,7 @@
                 {
                     "title": "CSS3 : MISE EN PAGE ET POSITIONNEMENT",
                     "duration": 180,
-                    "description": [
+                    "concepts": [
                         "Vue d'ensemble : clarifier le code, éviter la multiplication de imbriquées",
                         "Niveau de présentation",
                         "Mise en page par patron",
@@ -189,7 +189,7 @@
                 {
                     "title": "CSS3 : ANIMATION",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Transformations (2D et 3D)",
                         "Transitions"
                     ]

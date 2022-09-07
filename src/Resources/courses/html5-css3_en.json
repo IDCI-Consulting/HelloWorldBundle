@@ -8,12 +8,12 @@
                 {
                     "title": "HTML / CSS",
                     "duration": 0,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Web functionnement",
                         "W3C : norms usefulness"
                     ]
@@ -21,7 +21,7 @@
                 {
                     "title": "HTML5 / CSS3 : Why do everybody talk about them",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Why use HTML and CSS ? How to use them ? And HTML5 and CSS3 in all of this ?",
                         "Tags optimisation for search engines(SEO)",
                         "What about the compatibility between browsers ?",
@@ -31,12 +31,12 @@
                 {
                     "title": "HTML5",
                     "duration": 0,
-                    "description": []
+                    "concepts": []
                 },
                 {
                     "title": "Use HTML5 today",
                     "duration": 60,
-                    "description": [
+                    "concepts": [
                         "Know when to use HTML5",
                         "Use HTML5 with browsers that doesnt support it"
                     ]
@@ -44,7 +44,7 @@
                 {
                     "title": "HTML5 markups",
                     "duration": 180,
-                    "description": [
+                    "concepts": [
                         "Page structure : disappearance \"in line\" and \"block\" notions",
                         "Doctype in HTML5",
                         "New elements : section, article, aside, nav, etc",
@@ -61,7 +61,7 @@
                 {
                     "title": "WEB semantic and HTML5",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Semantic elements : give meaning to your content",
                         "Micro data"
                     ]
@@ -69,7 +69,7 @@
                 {
                     "title": "HTML5 forms",
                     "duration": 180,
-                    "description": [
+                    "concepts": [
                         "Form tag",
                         "Create and use HTML5 forms",
                         "Dates, emails, management, etc.",
@@ -80,7 +80,7 @@
                 {
                     "title": "PANORAMIC VIEWS OF JAVASCRIPT APIS FOR HTML5",
                     "duration": 180,
-                    "description": [
+                    "concepts": [
                         "HTML5 APIs",
                         "Files management",
                         "Offline websites",
@@ -96,7 +96,7 @@
                 {
                     "title": "Zoom on video and audio management API in HTML5",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "The audio and video elements",
                         "The containers",
                         "Control the video and audio with the HTML5 API",
@@ -109,7 +109,7 @@
                 {
                     "title": "Zoom on drawing API in HTML5",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Draw in JavaScript",
                         "Canvas vs SVG",
                         "Context",
@@ -124,7 +124,7 @@
                 {
                     "title": "Zoom on communication API in HTML5",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Events",
                         "Sending messages between files",
                         "Sending messages by channel",
@@ -137,7 +137,7 @@
                 {
                     "title": "Zoom on geo-location API in HTML5",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Overview",
                         "User's private life",
                         "Geolocate your users on Google Maps"
@@ -146,7 +146,7 @@
                 {
                     "title": "Zoom on storage API with HTML 5",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "API storage",
                         "Local storage",
                         "Session storage",
@@ -161,7 +161,7 @@
                 {
                     "title": "Zoom on storage API with HTML 5",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Overview : do without pictures, avoid tricks",
                         "CSS3 selectors",
                         "Rounded corners",
@@ -175,7 +175,7 @@
                 {
                     "title": "CSS3 : Layout and positionning",
                     "duration": 180,
-                    "description": [
+                    "concepts": [
                         "Overview : clarify the code, avoid multiplication of nested",
                         "Presentation level",
                         "Layout by design pattern",
@@ -189,7 +189,7 @@
                 {
                     "title": "CSS3 : ANIMATION",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Transformations (2D and 3D)",
                         "Transitions"
                     ]

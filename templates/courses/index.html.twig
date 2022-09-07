@@ -77,8 +77,8 @@
                                 <p class="section-display-article-tab-subtitle idci-title-secondary">{% trans from "courses" %}courses.duration{% endtrans %} : {{ item.duration / 60 }} {% trans from "courses" %}courses.hour{% endtrans %}{% if item.duration > 60 %}s{% endif %}</p>
                                 {% endif %}
                                 <ul class="section-display-article-tab-list">
-                                {% for description in item.description %}
-                                    <li>{{ description }}</li>
+                                {% for concept in item.concepts %}
+                                    <li>{{ concept }}</li>
                                 {% endfor %}
                                 </ul>
                             {% endfor %}

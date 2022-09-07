@@ -8,7 +8,7 @@
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Internet != Le WEB",
                         "Protocole HTTP (RFC2616)",
                         "Quelques frameworks PHP : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony",
@@ -18,7 +18,7 @@
                 {
                     "title": "UN BON ENVIRONNEMENT ET DE BONNES PRATIQUES",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Quel IDE",
                         "Utiliser un SCM (SVN, Git, ...)",
                         "Utiliser un bug tracker (Trac, Mantis, Redmine, Github, ...)",
@@ -28,7 +28,7 @@
                 {
                     "title": "INTRODUCTION AUX DESIGN PATTERN",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "Présentation générale",
                         "Le MVC en détail"
                     ]
@@ -36,7 +36,7 @@
                 {
                     "title": "LA STRUCTURE DES APPLICATIONS AVEC SYMFONY2",
                     "duration": 120,
-                    "description": [
+                    "concepts": [
                         "La notion \"d'application\" => app/",
                         "La notion de \"bundles\"",
                         "Mon code spécifique => src/",
@@ -52,7 +52,7 @@
                 {
                     "title": "LE CONTROLLER DANS SYMFONY2",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Object Request",
                         "Object Response",
                         "Le routing",
@@ -62,7 +62,7 @@
                 {
                     "title": "LES VUES (TEMPLATING) AVEC SYMFONY2",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Twig",
                         "Héritage de template",
                         "Inclure des vues",
@@ -78,7 +78,7 @@
                 {
                     "title": "ORM ET DBAL (DATABASE ABSTRACTION LAYER)",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "PDO",
                         "Doctrine",
                         "Propel"
@@ -87,7 +87,7 @@
                 {
                     "title": "LES FORMS (FORMULAIRES)",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "AbstractType",
                         "Les champs",
                         "La validation",
@@ -102,7 +102,7 @@
                 {
                     "title": "Créer un service",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Injection de dépendance",
                         "Conteneur de service"
                     ]
@@ -110,7 +110,7 @@
                 {
                     "title": "La sécurité",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Autorisation",
                         "Authentification"
                     ]
@@ -123,7 +123,7 @@
                 {
                     "title": "Les tests",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Les tests unitaires avec PHPUnit",
                         "Les tests fonctionnels"
                     ]
@@ -131,7 +131,7 @@
                 {
                     "title": "Aller plus loin",
                     "duration": 240,
-                    "description": [
+                    "concepts": [
                         "Utiliser la configuration",
                         "Créer des commandes Symfony2",
                         "Utiliser des bundles existants",
