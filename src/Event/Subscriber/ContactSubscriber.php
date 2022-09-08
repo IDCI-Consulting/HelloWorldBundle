@@ -34,6 +34,7 @@ class ContactSubscriber implements EventSubscriberInterface
 
     public function notifyIdciByEmail(ContactEvent $event)
     {
+        dd($this->contactRecipientsAddresses);
         $email = (new Email())
             ->to(...$this->contactRecipientsAddresses)
             ->subject('IDCI Contact')

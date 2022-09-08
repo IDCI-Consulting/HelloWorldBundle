@@ -1,0 +1,144 @@
+$idci-color-black: #000000;
+$idci-color-light-black: #212121;
+$idci-color-light-grey: #EEE;
+$idci-color-blue: #008CBA;
+$idci-color-light-blue: #dff0fd;
+$idci-color-green: #1E9847;
+$idci-color-white-lighter: #F7F7F7;
+
+$idci-primary-font: 'Oswald';
+
+$idci-font-small: 0.6rem;
+$idci-font-medium: 0.8rem;
+$idci-font-larger: 1.2rem;
+$idci-font-1-5x: 1.5rem;
+$idci-font-2x: 2rem;
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../fonts/Oswald-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../fonts/Oswald-Regular.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: $idci-primary-font;
+    src: url("../fonts/Oswald-Light.ttf") format("truetype");
+    font-weight: lighter;
+}
+
+html {
+    body {
+        color: $idci-color-black;
+        background-color: $idci-color-white-lighter;
+    }
+}
+
+* {
+    font-family: $idci-primary-font;
+    font-size: $idci-font-small;
+
+    &.idci-title-primary {
+        color: $idci-color-blue;
+        text-align: center;
+        font-size: $idci-font-2x;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-title-secondary {
+        color: $idci-color-green;
+        text-align: center;
+        font-size: $idci-font-2x;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-subtitle-primary {
+        color: $idci-color-light-black;
+        text-align: center;
+        font-size: $idci-font-2x;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-subtitle-secondary {
+        color: $idci-color-green;
+        text-align: center;
+        font-size: $idci-font-2x;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+}
+
+.section-display {
+    .section-display-title {
+        color: $idci-color-light-black;
+        font-weight: bolder;
+        letter-spacing: 0.2rem;
+        width: 100%;
+    }
+
+    .section-display-content {
+        display: flex;
+        margin-top: 2rem;
+
+        .section-display-aside {
+            min-width: 300px;
+            text-align: center;
+            width: 30%;
+
+            .section-display-aside-buttons {
+                display: flex;
+            }
+        }
+    
+        .section-display-article {
+            margin-left: 4rem;
+            min-width: 600px;
+            width: 40%;
+
+            .tab {
+                margin-top: 4rem;
+
+                .tab-item {
+                    .tab-item-title {
+                        border-bottom: 1px solid $idci-color-blue;
+                        font-size: $idci-font-1-5x;
+                        padding: .5rem;
+                    }
+
+                    .tab-pane {
+                        .section-display-article-tab-title {
+                            font-size: $idci-font-1-5x;
+                            letter-spacing: initial;
+                            margin-top: 2rem;
+                            text-align: left;
+                        }
+        
+                        .section-display-article-tab-subtitle {
+                            font-size: $idci-font-larger;
+                            font-style: italic;
+                            letter-spacing: initial;
+                            margin-top: 1rem;
+                            text-align: left;
+                        }
+        
+                        ul {
+                            margin-top: 1rem;
+        
+                            li {
+                                margin-top: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
