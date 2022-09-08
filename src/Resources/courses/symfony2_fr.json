@@ -1,7 +1,7 @@
 {
     "id": "symfony2",
     "name": "Symfony2",
-    "media": "base/symfony2.svg",
+    "media": "symfony2.svg",
     "days": [
         {
             "label":"Jour 1",
@@ -9,22 +9,41 @@
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": "<ul><li>Internet != Le WEB</li><li>Protocole HTTP (RFC2616)</li><li>Quelques frameworks PHP : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony</li><li>Pourquoi Symfony2 ?</li></ul>"
+                    "concepts": [
+                        "Internet != Le WEB",
+                        "Protocole HTTP (RFC2616)",
+                        "Quelques frameworks PHP : CodeIgniter, FuelPHP, Zend, CakePHP, Symfony",
+                        "Pourquoi Symfony2 ?"
+                    ]
                 },
                 {
                     "title": "UN BON ENVIRONNEMENT ET DE BONNES PRATIQUES",
                     "duration": 120,
-                    "description": "<ul><li>Quel IDE</li><li>Utiliser un SCM (SVN, Git, ...)</li><li>Utiliser un bug tracker (Trac, Mantis, Redmine, Github, ...)</li><li>Les conventions de codage</li></ul>"
+                    "concepts": [
+                        "Quel IDE",
+                        "Utiliser un SCM (SVN, Git, ...)",
+                        "Utiliser un bug tracker (Trac, Mantis, Redmine, Github, ...)",
+                        "Les conventions de codage"
+                    ]
                 },
                 {
                     "title": "INTRODUCTION AUX DESIGN PATTERN",
                     "duration": 120,
-                    "description": "<ul><li>Présentation générale</li><li>Le MVC en détail</li></ul>"
+                    "concepts": [
+                        "Présentation générale",
+                        "Le MVC en détail"
+                    ]
                 },
                 {
                     "title": "LA STRUCTURE DES APPLICATIONS AVEC SYMFONY2",
                     "duration": 120,
-                    "description": "<ul><li>La notion \"d'application\" => App/</li><li>La notion de \"bundles\"</li><li>Mon code spécifique => src/</li><li>Les librairies externes => vendor/</li><li>La racine web => web/</li></ul>"
+                    "concepts": [
+                        "La notion \"d'application\" => app/",
+                        "La notion de \"bundles\"",
+                        "Mon code spécifique => src/",
+                        "Les librairies externes => vendor/",
+                        "La racine web => web/"
+                    ]
                 }
             ]
         },
@@ -34,12 +53,23 @@
                 {
                     "title": "LE CONTROLLER DANS SYMFONY2",
                     "duration": 240,
-                    "description": "<ul><li>Object Request</li><li>Object Response</li><li>Le routing</li><li>Les annotations</li></ul>"
+                    "concepts": [
+                        "Object Request",
+                        "Object Response",
+                        "Le routing",
+                        "Les annotations"
+                    ]
                 },
                 {
                     "title": "LES VUES (TEMPLATING) AVEC SYMFONY2",
                     "duration": 240,
-                    "description": "<ul><li>Twig</li>Héritage de template<li></li><li>Inclure des vues</li><li>Rendre des vues</li><li>Filtres twig</li></ul>"
+                    "concepts": [
+                        "Twig",
+                        "Héritage de template",
+                        "Inclure des vues",
+                        "Rendre des vues",
+                        "Filtres twig"
+                    ]
                 }
             ]
         },
@@ -49,12 +79,21 @@
                 {
                     "title": "ORM ET DBAL (DATABASE ABSTRACTION LAYER)",
                     "duration": 240,
-                    "description": "<ul><li>PDO</li><li>Doctrine</li><li>Propel</li></ul>"
+                    "concepts": [
+                        "PDO",
+                        "Doctrine",
+                        "Propel"
+                    ]
                 },
                 {
                     "title": "LES FORMS (FORMULAIRES)",
                     "duration": 240,
-                    "description": "<ul><li>AbstractType</li>Les champs<li></li><li>La validation</li><li>Les \"form events\"</li></ul>"
+                    "concepts": [
+                        "AbstractType",
+                        "Les champs",
+                        "La validation",
+                        "Les form events"
+                    ]
                 }
             ]
         },
@@ -64,12 +103,18 @@
                 {
                     "title": "Créer un service",
                     "duration": 240,
-                    "description": "<ul><li>Injection de dépendance</li><li>Conteneur de service</li></ul>"
+                    "concepts": [
+                        "Injection de dépendance",
+                        "Conteneur de service"
+                    ]
                 },
                 {
                     "title": "La sécurité",
                     "duration": 240,
-                    "description": "<ul><li>Autorisation</li><li>Authentification</li></ul>"
+                    "concepts": [
+                        "Autorisation",
+                        "Authentification"
+                    ]
                 }
             ]
         },
@@ -79,12 +124,23 @@
                 {
                     "title": "Les tests",
                     "duration": 240,
-                    "description": "<ul><li>Les tests unitaires avec PHPUnit</li><li>Les tests fonctionnels</li></ul>"
+                    "concepts": [
+                        "Les tests unitaires avec PHPUnit",
+                        "Les tests fonctionnels"
+                    ]
                 },
                 {
                     "title": "Aller plus loin",
                     "duration": 240,
-                    "description": "<ul><li>Utiliser la configuration</li><li>Créer des commandes Symfony2</li><li>Utiliser des bundles existants</li><li>FOSUserBundle (Gestion des utilisateurs)</li><li>DoctrineFixtures (L'import de données)</li><li>Créer des bundles réutilisables</li><li>Le cache HTTP (ESI, varnish, ...)</li></ul>"
+                    "concepts": [
+                        "Utiliser la configuration",
+                        "Créer des commandes Symfony2",
+                        "Utiliser des bundles existants",
+                        "FOSUserBundle (Gestion des utilisateurs)",
+                        "DoctrineFixtures (L'import de données)",
+                        "Créer des bundles réutilisables",
+                        "Le cache HTTP (ESI, varnish, ...)"
+                    ]
                 }
             ]
         }

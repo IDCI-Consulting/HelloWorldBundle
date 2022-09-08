@@ -1,7 +1,7 @@
 {
     "id": "html5-css3",
     "name": "HTML5 - CC3",
-    "media": "base/html5-css3.svg",
+    "media": "html5-css3.svg",
     "days": [
         {
             "label":"Day 1",
@@ -9,107 +9,191 @@
                 {
                     "title": "HTML / CSS",
                     "duration": 0,
-                    "description": ""
+                    "concepts": []
                 },
                 {
                     "title": "Introduction",
                     "duration": 120,
-                    "description": "<ul><li>Web functionnement</li><li>W3C : norms usefulness</li></ul>"
+                    "concepts": [
+                        "Web functionnement",
+                        "W3C : norms usefulness"
+                    ]
                 },
                 {
                     "title": "HTML5 / CSS3 : Why do everybody talk about them",
                     "duration": 120,
-                    "description": "<ul><li>Why use HTML and CSS ? How to use them ? And HTML5 and CSS3 in all of this ?</li><li>Tags optimisation for search engines(SEO)</li><li>What about the compatibility between browsers ?</li><li>HTML future ?</li></ul>"
+                    "concepts": [
+                        "Why use HTML and CSS ? How to use them ? And HTML5 and CSS3 in all of this ?",
+                        "Tags optimisation for search engines(SEO)",
+                        "What about the compatibility between browsers ?",
+                        "HTML future ?"
+                    ]
                 },
                 {
                     "title": "HTML5",
                     "duration": 0,
-                    "description": ""
+                    "concepts": []
                 },
                 {
                     "title": "Use HTML5 today",
                     "duration": 60,
-                    "description": "<ul><li>Know when to use HTML5</li><li>Use HTML5 with browsers that doesnt support it</li></ul>"
+                    "concepts": [
+                        "Know when to use HTML5",
+                        "Use HTML5 with browsers that doesnt support it"
+                    ]
                 },
                 {
                     "title": "HTML5 markups",
                     "duration": 180,
-                    "description": "<ul><li>Page structure : disappearance \"in line\" and \"block\" notions</li><li>Doctype in HTML5</li><li>New elements : section, article, aside, nav, etc</li><li>Some additional tags</li><li>Dates and time</li><li>The obsolete elements : center, font, frame, acronym, etc</li></ul>"
+                    "concepts": [
+                        "Page structure : disappearance \"in line\" and \"block\" notions",
+                        "Doctype in HTML5",
+                        "New elements : section, article, aside, nav, etc",
+                        "Some additional tags",
+                        "Dates and time",
+                        "The obsolete elements : center, font, frame, acronym, etc"
+                    ]
                 }
             ]
         },
         {
-            "label":"Jour 2",
+            "label":"Day 2",
             "items": [
                 {
                     "title": "WEB semantic and HTML5",
                     "duration": 120,
-                    "description": "<ul><li>Semantic elements : Give meaning to its content</li><li>Micro data</li></ul>"
+                    "concepts": [
+                        "Semantic elements : give meaning to your content",
+                        "Micro data"
+                    ]
                 },
                 {
                     "title": "HTML5 forms",
                     "duration": 180,
-                    "description": "<ul><li>Form tag;</li><li>Create and use forms in HTML5</li><li>Management of dates, emails...</li><li>Forms validations in HTML5</li><li>Auto focus</li></ul>"
+                    "concepts": [
+                        "Form tag",
+                        "Create and use HTML5 forms",
+                        "Dates, emails, management, etc.",
+                        "HTML5 forms validations",
+                        "Auto focus"
+                    ]
                 },
                 {
-                    "title": "VUE D'ENSEMBLE DES APIS JAVASCRIPT POUR HTML 5",
+                    "title": "PANORAMIC VIEWS OF JAVASCRIPT APIS FOR HTML5",
                     "duration": 180,
-                    "description": "<ul><li>HTML5 APIs</li><li>Files management</li><li>Offline websites</li><li>Drag & Drop</li><li>Zoom on few APIs</li></ul>"
+                    "concepts": [
+                        "HTML5 APIs",
+                        "Files management",
+                        "Offline websites",
+                        "Drag & Drop",
+                        "Zoom on some APIs"
+                    ]
                 }
             ]
         },
         {
-            "label":"Jour 3",
+            "label":"Day 3",
             "items": [
                 {
                     "title": "Zoom on video and audio management API in HTML5",
                     "duration": 240,
-                    "description": "<ul><li>The audio and video elements</li><li>The containers</li><li>Control the video and audio with the HTML5 API</li><li>Support et formats (codecs WebM, MP4, H.264, MP3, AAC, etc)</li><li>Manage many audio and vidéos sources</li><li>Streaming</li><li>Add subtitles to a HTML5 video</li></ul>"
+                    "concepts": [
+                        "The audio and video elements",
+                        "The containers",
+                        "Control the video and audio with the HTML5 API",
+                        "Support and formats (codecs WebM, MP4, H.264, MP3, AAC, etc)",
+                        "Manage many audio and videos sources",
+                        "Streaming",
+                        "Add subtitles to a HTML5 video"
+                    ]
                 },
                 {
                     "title": "Zoom on drawing API in HTML5",
                     "duration": 240,
-                    "description": "<ul><li>Draw in JavaScript</li><li>Canvas vs SVG</li><li>Context</li><li>Accessibility</li></ul>"
+                    "concepts": [
+                        "Draw in JavaScript",
+                        "Canvas vs SVG",
+                        "Context",
+                        "Accessibility"
+                    ]
                 }
             ]
         },
         {
-            "label":"Jour 4",
+            "label":"Day 4",
             "items": [
                 {
                     "title": "Zoom on communication API in HTML5",
                     "duration": 240,
-                    "description": "<ul><li>Events</li><li>Sending messages between files</li><li>Sending messages by channel</li><li>Serve push</li><li>Web Sockets</li><li>Node.js presentation</li><li>Web Workers for the multi-tasks</li></ul>"
+                    "concepts": [
+                        "Events",
+                        "Sending messages between files",
+                        "Sending messages by channel",
+                        "Serve push",
+                        "Web Sockets",
+                        "Node.js presentation",
+                        "Web Workers for the multi-tasks"
+                    ]
                 },
                 {
                     "title": "Zoom on geo-location API in HTML5",
                     "duration": 120,
-                    "description": "<ul><li>Overview</li><li>User's private life</li><li>Geolocate your users on Google Maps</li></ul>"
+                    "concepts": [
+                        "Overview",
+                        "User's private life",
+                        "Geolocate your users on Google Maps"
+                    ]
                 },
                 {
                     "title": "Zoom on storage API with HTML 5",
                     "duration": 120,
-                    "description": "<ul><li>API storage</li><li>Local storage</li><li>Session storage</li><li>Difference between local / session storage</li></ul>"
+                    "concepts": [
+                        "API storage",
+                        "Local storage",
+                        "Session storage",
+                        "Difference between local / session storage"
+                    ]
                 }
             ]
         },
         {
-            "label":"Jour 5",
+            "label":"Day 5",
             "items": [
                 {
                     "title": "Zoom on storage API with HTML 5",
                     "duration": 120,
-                    "description": "<ul><li>Overview : do without pictures, avoid tricks</li><li>CSS3 selectors</li><li>Rounded corners</li><li>Drop shadows</li><li>Opacity</li><li>Text effects</li><li>Layout and positionning</li><li>Other novelties</li></ul>"
+                    "concepts": [
+                        "Overview : do without pictures, avoid tricks",
+                        "CSS3 selectors",
+                        "Rounded corners",
+                        "Drop shadows",
+                        "Opacity",
+                        "Text effects",
+                        "Layout and positionning",
+                        "Other novelties"
+                    ]
                 },
                 {
                     "title": "CSS3 : Layout and positionning",
                     "duration": 180,
-                    "description": "<ul><li>Overview : clarify the code, avoid multiplication of nested</li><li>Presentation level</li><li>Layout by design pattern</li><li>Layout by multi-colons</li><li>Layout by horizontals or verticals boxes</li><li>Understand the colors in CSS3</li><li>Positionning by grid</li><li>Elements rotation</li></ul>"
+                    "concepts": [
+                        "Overview : clarify the code, avoid multiplication of nested",
+                        "Presentation level",
+                        "Layout by design pattern",
+                        "Layout by multi-colons",
+                        "Layout by horizontals or verticals boxes",
+                        "Understand the colors in CSS3",
+                        "Positionning by grid",
+                        "Elements rotation"
+                    ]
                 },
                 {
                     "title": "CSS3 : ANIMATION",
                     "duration": 120,
-                    "description": "<ul><li>Transformations (2D and 3D)</li><li>Transitions</li></ul>"
+                    "concepts": [
+                        "Transformations (2D and 3D)",
+                        "Transitions"
+                    ]
                 }
             ]
         }

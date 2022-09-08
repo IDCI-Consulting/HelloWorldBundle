@@ -15,16 +15,20 @@
         }
 
         .section-display-aside {
-            min-width: 300px;
             text-align: center;
             width: 30%;
 
             @include until($desktop) {
                 margin: auto;
+                width: 100%;
             }
 
             .section-display-aside-buttons {
                 display: flex;
+
+                @include until($desktop) {
+                    flex-direction: column;
+                }
             }
         }
     
