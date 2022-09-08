@@ -1,5 +1,7 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}Notre équipe{% endblock %}
+
 {% block main %}
 
 <section class="section-container section-container-full">
@@ -10,7 +12,7 @@
             <div class="section-member-card">
                 <p class="section-member-card-title idci-title-primary">Gabriel Bondaz</p>
                 <p class="section-member-card-subtitle idci-subtitle-secondary">{% trans from "members" %}gabriel.subtitle{% endtrans %}</p>
-                <img src="{{ asset('build/images/members/gabriel-sprite.png') }}" class="section-member-card-media">
+                <img src="{{ asset('build/images/members/gabriel-sprite.png') }}" alt="{% trans from "alt" %}gabriel-sprite{% endtrans %}" class="section-member-card-media">
                 <p class="section-member-card-description">{% trans from "members" %}gabriel.description{% endtrans %}</p>
                 <a href="{{ url('app_team_member', {'slug' : 'gabriel_bondaz'}) }}" class="button section-member-card-button">{% trans from "members" %}members.check_cv{% endtrans %}</a>
             </div>
@@ -18,14 +20,14 @@
             <div class="section-member-card">
                 <p class="section-member-card-title idci-title-primary">Fréderic Bondaz</p>
                 <p class="section-member-card-subtitle idci-subtitle-secondary">{% trans from "members" %}frederic.subtitle{% endtrans %}</p>
-                <img src="{{ asset('build/images/members/frederic-sprite.png') }}" class="section-member-card-media">
+                <img src="{{ asset('build/images/members/frederic-sprite.png') }}" alt="{% trans from "alt" %}frederic-sprite{% endtrans %}" class="section-member-card-media">
                 <p class="section-member-card-description">{% trans from "members" %}frederic.description{% endtrans %}</p>
             </div>
 
             <div class="section-member-card">
                 <p class="section-member-card-title idci-title-primary">Benjamin Boudier</p>
                 <p class="section-member-card-subtitle idci-subtitle-secondary">{% trans from "members" %}benjamin.subtitle{% endtrans %}</p>
-                <img src="{{ asset('build/images/members/benjamin-sprite.png') }}" class="section-member-card-media">
+                <img src="{{ asset('build/images/members/benjamin-sprite.png') }}" alt="{% trans from "alt" %}benjamin-sprite{% endtrans %}" class="section-member-card-media">
                 <p class="section-member-card-description">{% trans from "members" %}benjamin.description{% endtrans %}</p>
                 <a href="{{ url('app_team_member', {'slug' : 'benjamin_boudier'}) }}" class="button section-member-card-button">{% trans from "members" %}members.check_cv{% endtrans %}</a>
             </div>
@@ -33,7 +35,7 @@
             <div class="section-member-card">
                 <p class="section-member-card-title idci-title-primary">Swan Frere</p>
                 <p class="section-member-card-subtitle idci-subtitle-secondary">{% trans from "members" %}swan.subtitle{% endtrans %}</p>
-                <img src="{{ asset('build/images/members/swan-sprite.png') }}" class="section-member-card-media">
+                <img src="{{ asset('build/images/members/swan-sprite.png') }}" alt="{% trans from "alt" %}swan-sprite{% endtrans %}" class="section-member-card-media">
                 <p class="section-member-card-description">{% trans from "members" %}swan.description{% endtrans %}</p>
                 <a href="{{ url('app_team_member', {'slug' : 'swan_frere'}) }}" class="button section-member-card-button">{% trans from "members" %}members.check_cv{% endtrans %}</a>
             </div>
@@ -41,7 +43,7 @@
             <div class="section-member-card">
                 <p class="section-member-card-title idci-title-primary">Vincent Duvivier</p>
                 <p class="section-member-card-subtitle idci-subtitle-secondary">{% trans from "members" %}vincent.subtitle{% endtrans %}</p>
-                <img src="{{ asset('build/images/members/vincent-sprite.png') }}" class="section-member-card-media">
+                <img src="{{ asset('build/images/members/vincent-sprite.png') }}" alt="{% trans from "alt" %}vincent-sprite{% endtrans %}" class="section-member-card-media">
                 <p class="section-member-card-description">{% trans from "members" %}vincent.description{% endtrans %}</p>
                 <a href="{{ url('app_team_member', {'slug' : 'vincent_duvivier'}) }}" class="button section-member-card-button">{% trans from "members" %}members.check_cv{% endtrans %}</a>
             </div>
@@ -49,7 +51,7 @@
             <div class="section-member-card">
                 <p class="section-member-card-title idci-title-primary">Joris Viniere</p>
                 <p class="section-member-card-subtitle idci-subtitle-secondary">{% trans from "members" %}joris.subtitle{% endtrans %}</p>
-                <img src="{{ asset('build/images/members/joris-sprite.png') }}" class="section-member-card-media">
+                <img src="{{ asset('build/images/members/joris-sprite.png') }}" alt="{% trans from "alt" %}joris-sprite{% endtrans %}" class="section-member-card-media">
                 <p class="section-member-card-description">{% trans from "members" %}joris.description{% endtrans %}</p>
                 <a href="{{ url('app_team_member', {'slug' : 'joris_viniere'}) }}" class="button section-member-card-button">{% trans from "members" %}members.check_cv{% endtrans %}</a>
             </div>

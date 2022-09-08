@@ -2,6 +2,127 @@
 
 {% block main %}
 
-blog index
+{% set locale = app.request.locale %}
+
+<section class="section-container">
+    <section class="section-dynamic-display">
+        <h2 class="section-dynamic-display-title idci-title-primary">Blog</h2>
+        <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">{% trans from "blog" %}blog.carousel_title{% endtrans %}</h3>
+
+        <div class="columns is-mobile">
+            <div class="pic-ctn keyframes">
+            {% set post_count = 0 %}
+            {% set max_post_count = 3 %}
+            {% for years in posts_by_years %}
+                {% for posts in years %}
+                    {% if post_count < max_post_count %}
+                        <div class="columns is-mobile pic">
+                            <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3 carousel-post-media">
+                            <div class="column is-6 carousel-post">
+                                <div class="carousel-post-header">
+                                    <p>{{ posts.publicationDate }}</p>
+                                    <p>{{ posts.author }}</p>
+                                </div>
+                                <p class="carousel-post-title">{{ posts.name[locale] }}</p>
+                                <p class="carousel-post-description">{{ posts.description[locale] }}</p>
+                                <a href="{{ url('app_blog_post', {'slug': posts.id}) }}" class="carousel-post-button">{% trans from "blog" %}blog.read_post{% endtrans %}</a>
+                            </div>
+                        </div>
+                        {% set post_count = post_count + 1 %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </div>
+        </div>
+
+        <style>
+            .keyframes > div {
+                animation: display calc({{ post_count }}s * 5) infinite;
+            }
+
+            {% set one_second = 100 / (post_count * 5) %}
+
+            @keyframes display {
+                0% {
+                    transform: translateX(0px);
+                    opacity: 0;
+                }
+                {{ one_second }}%, {{ one_second * 4 }}% {
+                    transform: translateX(0);
+                    opacity: 1;
+                    z-index: 100;
+                }
+                {{ one_second * 5 }}% {
+                    transform: translateX(-200px);
+                    opacity: 0;
+                    z-index: -100;
+                }
+                100% {
+                    transform: translateX(-200px);
+                    opacity: 0;
+                }
+            }
+
+            {% for i in 2..(post_count + 2) %}
+                .keyframes div:nth-child({{ i }}) {
+                    animation-delay: calc(({{ i }}s - 1s) * 5);
+                }
+            {% endfor %}
+        </style>
+    </section>
+</section>
+
+<section class="section-container section-container-full section-container-primary">
+    <section class="section-posts">
+        <h2 class="section-posts-title idci-title-primary">{% trans from "blog" %}blog.all_posts_title{% endtrans %}</h2>
+        <div class="tab">
+            <div class="tab-item">
+                <input type="radio" id="posts_by_years" name="nav-tab" checked>
+                <label for="posts_by_years" data-position="1">{% trans from "blog" %}blog.by_years{% endtrans %}</label>
+                <div class="tab-pane">
+                    {% for year_label, year in posts_by_years %}
+                    <div class="section-posts-list">
+                        <h2 class="section-posts-list-title">{{ year_label }}</h2>
+                        <ul>
+                            {% for post in year %}
+                            <li class="section-posts-list-item">
+                                <img src="{{ asset('build/images/' ~ post.media ~ '') }}" class="section-posts-list-item-media">
+                                <div class="section-posts-list-item-infos">
+                                    <a href="{{ url('app_blog_post', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
+                                    <span>{% trans from "blog" %}blog.uploaded_the{% endtrans %} {{ post.publicationDate }} {% trans from "blog" %}blog.by{% endtrans %} {{ post.author }}</span>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-item">
+                <input type="radio" id="posts_by_categories" name="nav-tab">
+                <label class="label-second" for="posts_by_categories" data-position="2">{% trans from "blog" %}blog.by_categories{% endtrans %}</label>
+                <div class="tab-pane">
+                    {% for category_label, category in posts_by_categories %}
+                    <div class="section-posts-list">
+                        <h2 class="section-posts-list-title">{{ category_label }}</h2>
+                        <ul>
+                            {% for post in category %}
+                            <li class="section-posts-list-item">
+                                <img src="{{ asset('build/images/' ~ post.media ~ '') }}" class="section-posts-list-item-media">
+                                <div class="section-posts-list-item-infos">
+                                    <a href="{{ url('app_blog_post', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
+                                    <span class="section-posts-list-item-infos">{% trans from "blog" %}blog.uploaded_the{% endtrans %} {{ post.publicationDate }} {% trans from "blog" %}blog.by{% endtrans %} {{ post.author }}</span>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
 
 {% endblock %}

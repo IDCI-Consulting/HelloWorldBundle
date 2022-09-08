@@ -6,7 +6,7 @@ header {
     justify-content: center;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 200;
 
     .hamburger-menu {
         display: none;
@@ -43,7 +43,7 @@ header {
             position: absolute;
             top: calc(5rem - 3px);
             width: 15rem;
-            z-index: 100;
+            z-index: 200;
 
             .mobile-menu-list {
                 text-align: center;

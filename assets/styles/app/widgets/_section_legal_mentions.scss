@@ -1,0 +1,23 @@
+.section-legal-mentions {
+    .section-legal-mentions-title {
+        color: $idci-color-dark-grey;
+        font-size: $idci-font-3x;
+        letter-spacing: normal;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+        text-transform: none;
+    }
+
+    .section-legal-mentions-subtitle {
+        color: $idci-color-dark-grey;
+        font-size: $idci-font-1-5x;
+        letter-spacing: normal;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .section-legal-mentions-description {
+        color: $idci-color-dark-grey;
+        text-align: justify;
+    }
+}

@@ -1,7 +1,25 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}Mentions légales du site IDCI{% endblock %}
+
 {% block main %}
 
-legal mentions page
+<section class="section-container section-container-60 section-container-secondary">
+    <section class="section-legal-mentions">
+        <h2 class="section-legal-mentions-title idci-title-primary">{% trans from "legal_mentions" %}title{% endtrans %}</h2>
+        <h3 class="section-legal-mentions-subtitle idci-subtitle-primary">{% trans from "legal_mentions" %}section_1.title{% endtrans %}</h3>
+        <p class="section-legal-mentions-description">
+            {% trans from "legal_mentions" %}section_1.paragraph{% endtrans %}
+        </p>
+        <h3 class="section-legal-mentions-subtitle idci-subtitle-primary">{% trans from "legal_mentions" %}section_2.title{% endtrans %}</h3>
+        <p class="section-legal-mentions-description">
+            {% trans from "legal_mentions" %}section_2.paragraph{% endtrans %}
+        </p>
+        <h3 class="section-legal-mentions-subtitle idci-subtitle-primary">{% trans from "legal_mentions" %}section_3.title{% endtrans %}</h3>
+        <p class="section-legal-mentions-description">
+            {% trans from "legal_mentions" %}section_3.paragraph{% endtrans %}
+        </p>
+    </section>
+</section>
 
 {% endblock %}

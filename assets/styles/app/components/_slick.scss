@@ -1,0 +1,8 @@
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+
+.carousel-single-item {
+    .columns {
+        display: flex !important;
+    }
+}

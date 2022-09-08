@@ -22,6 +22,12 @@
         background-color: $idci-color-whitesmoke;
     }
 
+    &.section-container-60 {
+        > * {
+            width: 60%;
+        }
+    }
+
     &.section-container-90 {
         > * {
             width: 90%;
@@ -31,6 +37,10 @@
     &.section-container-full {
         > * {
             width: 100%;
+        }
+
+        @include until($desktop) {
+            padding: 0 !important;
         }
     }
 

@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="header-media">
-        <a href="{{ url('app_homepage') }}"><img src="{{ asset('build/images/logo/idci-logo.svg') }}"></a>
+        <a href="{{ url('app_homepage') }}"><img src="{{ asset('build/images/logo/idci-logo.svg') }}" alt="{% trans from "alt" %}idci-logo{% endtrans %}"></a>
     </div>
     <nav class="header-links">
         <ul class="header-links-list">
@@ -33,7 +33,7 @@
         </ul>
     </nav>
     <div class="header-locale">
-        <a{% if app.request.locale == 'fr' %} class="active"{% endif %} href="{{ path(current_route|default('app_homepage'), {_locale: 'fr', slug: current_route_slug|default(null)}) }}"><img src="{{ asset('build/images/base/french-flag.png') }}"></a>
-        <a{% if app.request.locale == 'en' %} class="active"{% endif %} href="{{ path(current_route|default('app_homepage'), {_locale: 'en', slug: current_route_slug|default(null)}) }}"><img src="{{ asset('build/images/base/english-flag.png') }}"></a>
+        <a{% if app.request.locale == 'fr' %} class="active"{% endif %} href="{{ path(current_route|default('app_homepage'), {_locale: 'fr', slug: current_route_slug|default(null)}) }}"><img src="{{ asset('build/images/base/french-flag.png') }}" alt="{% trans from "alt" %}french-flag{% endtrans %}"></a>
+        <a{% if app.request.locale == 'en' %} class="active"{% endif %} href="{{ path(current_route|default('app_homepage'), {_locale: 'en', slug: current_route_slug|default(null)}) }}"><img src="{{ asset('build/images/base/english-flag.png') }}" alt="{% trans from "alt" %}english-flag{% endtrans %}"></a>
     </div>
 </header>
