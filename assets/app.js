@@ -12,3 +12,7 @@ require('./navbox');
 
 const $ = require('jquery');
 window.$ = global.$ = global.jQuery = $;
+
+require('slick-carousel');
+
+require('./slick');

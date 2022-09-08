@@ -12,12 +12,32 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class BlogController extends AbstractController
 {
+    private string $postsConfigPath;
+
+    public function __construct(string $postsConfigPath)
+    {
+        $this->postsConfigPath = $postsConfigPath;
+    }
+
     /**
      * @Route("/", methods={"GET"}, name="index")
      */
     public function index(Request $request): Response
     {
-        return $this->render('blog/index.html.twig');
+        $posts = json_decode(file_get_contents($this->postsConfigPath), true);
+        $postsByYears = [];
+        $postsByCategories = [];
+
+        foreach ($posts as $post) {
+            $postYear = \DateTime::createFromFormat('d/m/Y', $post['publicationDate'])->format('Y');
+            $postsByYears[$postYear][] = $post;
+            $postsByCategories[$post['category']][] = $post;
+        }
+
+        return $this->render('blog/index.html.twig', [
+            'posts_by_years' => $postsByYears,
+            'posts_by_categories' => $postsByCategories
+        ]);
     }
 
     /**

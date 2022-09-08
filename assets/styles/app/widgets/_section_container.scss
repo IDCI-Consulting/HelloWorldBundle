@@ -38,6 +38,10 @@
         > * {
             width: 100%;
         }
+
+        @include until($desktop) {
+            padding: 0 !important;
+        }
     }
 
     &.section-container-media-primary {
