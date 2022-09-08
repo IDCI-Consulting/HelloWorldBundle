@@ -42,8 +42,7 @@ class SeoController extends AbstractController
             $this->renderView('seo/sitemap.xml.twig', [
                 'urls' => $urls,
                 'hostname' => $hostname
-                ]
-            )
+            ])
         );
         $response->headers->set('Content-Type', 'text/xml');
 
