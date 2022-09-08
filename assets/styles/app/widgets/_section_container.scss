@@ -22,6 +22,12 @@
         background-color: $idci-color-whitesmoke;
     }
 
+    &.section-container-60 {
+        > * {
+            width: 60%;
+        }
+    }
+
     &.section-container-90 {
         > * {
             width: 90%;
