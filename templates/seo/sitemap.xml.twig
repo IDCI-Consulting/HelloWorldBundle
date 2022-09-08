@@ -1,29 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    {% for url in urls %}
-        <url>
-            <loc>
-                {% if url.loc|replace({hostname:''}) == url.loc %}
-                    {{hostname}}{{url.loc}}
-                {% else %}
-                    {{url.loc}}
-                {% endif %}
-            </loc>
-            {% if url.localized_locs is defined %}
-                {% for localized_loc in url.localized_locs %}
-                    <xhtml:link rel="alternate" hreflang="{{ localized_loc.locale }}" href="{{ localized_loc.route }}" />
-                {% endfor %}
-            {% endif %}
-
-            {% if url.lastmod is defined %}
-                <lastmod>{{url.lastmod}}</lastmod>
-            {% endif %}
-            {% if url.changefreq is defined %}
-                <changefreq>{{url.changefreq}}</changefreq>
-            {% endif %}
-            {% if url.priority is defined %}
-                <priority>{{url.priority}}</priority>
-            {% endif %}
-        </url>
-    {% endfor %}
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/legal-mentions</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/offers</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/contact</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/blog</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/blog/post/idci-10-years</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/blog/post/step-bundle-introduction</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/blog/post/new-year-2017</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/courses</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/courses/html5-css3</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/courses/oop-uml-scm</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/courses/symfony2</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/team</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/team/gabriel_bondaz</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/team/benjamin_boudier</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/team/swan_frere</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/team/vincent_duvivier</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.idci-consulting.fr/fr/team/joris_viniere</loc>
+        <lastmod>08/09/2022</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
 </urlset>

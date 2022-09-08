@@ -21,9 +21,9 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/article/{slug}", methods={"GET"}, name="article")
+     * @Route("/post/{slug}", methods={"GET"}, name="post")
      */
-    public function article(Request $request, String $slug): Response
+    public function post(Request $request, String $slug): Response
     {
         return $this->render('blog/show.html.twig', [
             'slug' => $slug
