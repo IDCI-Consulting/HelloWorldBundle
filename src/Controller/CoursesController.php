@@ -64,13 +64,6 @@ class CoursesController extends AbstractController
             return new JsonResponse($courseJson);
         }
 
-        // if ('html' === $_format) {
-        //     return $this->render('courses/show.html.twig', [
-        //         'slug' => $slug,
-        //         'data' => $courseJson,
-        //     ]);
-        // }
-
         $response = $this->httpClient->request('POST', '/', [
             'body' => json_encode([
                 'contents' => base64_encode($this->renderView('courses/pdf.html.twig', [
@@ -78,8 +71,6 @@ class CoursesController extends AbstractController
                 ])),
             ]),
         ]);
-
-        //dd($response);
 
         $response = new Response($response->getContent());
         $disposition = HeaderUtils::makeDisposition(

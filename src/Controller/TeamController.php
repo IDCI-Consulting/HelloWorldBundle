@@ -63,8 +63,6 @@ class TeamController extends AbstractController
             ]),
         ]);
 
-        dd($response);
-
         $response = new Response($response->getContent());
         $disposition = HeaderUtils::makeDisposition(
             HeaderUtils::DISPOSITION_ATTACHMENT,
