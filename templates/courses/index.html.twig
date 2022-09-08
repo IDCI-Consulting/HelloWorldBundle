@@ -58,7 +58,7 @@
             <aside class="section-display-aside">
                 <img src="{{ asset('build/images/' ~ course.media ~ '') }}" class="section-card-media">
                 <div class="section-display-aside-buttons">
-                    <a href="" class="button section-display-aside-button">{% trans %}button.pdf_download{% endtrans %}</a>
+                    <a href="{{ url('app_courses_show', {'slug' : course.id}) }}" class="button section-display-aside-button">{% trans %}button.pdf_download{% endtrans %}</a>
                     <a href="{{ url('app_contact_index') }}" class="button section-display-aside-button">{% trans %}button.contact_us{% endtrans %}</a>
                 </div>
             </aside>

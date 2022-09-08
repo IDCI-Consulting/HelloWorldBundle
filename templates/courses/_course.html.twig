@@ -1,0 +1,27 @@
+<section class="section-container section-container-full section-container-primary">
+    <section class="section-display">
+        <h2 class="section-display-title idci-title-primary">{{ course.name }}</h2>
+        <section class="section-display-content">
+            <article class="section-display-article">
+                <div class="tab">
+                    {% for day in course.days %}
+                    <div class="tab-item">
+                        <p class="tab-item-title">{{ day.label }}</p>
+                        <div class="tab-pane">
+                            {% for item in day.items %}
+                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title }}</p>
+                                {% if 0 != item.duration %}
+                                <p class="section-display-article-tab-subtitle idci-title-secondary">{% trans from "courses" %}courses.duration{% endtrans %} : {{ item.duration / 60 }} {% trans from "courses" %}courses.hour{% endtrans %}{% if item.duration > 60 %}s{% endif %}</p>
+                                {% endif %}
+                                <ul class="section-display-article-tab-list">
+                                    {{ item.description|raw }}
+                                </ul>
+                            {% endfor %}
+                        </div>
+                    </div> 
+                    {% endfor %}
+                </div>
+            </article>
+        </section>
+    </section>
+</section>
