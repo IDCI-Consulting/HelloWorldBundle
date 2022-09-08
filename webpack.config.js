@@ -76,7 +76,7 @@ Encore
     // .autoProvidejQuery()
     .copyFiles({
         from: './assets/images',
-        pattern: /\.(png|jpg|jpeg|ico|svg|mp4)$/,
+        pattern: /\.(png|jpg|jpeg|ico|svg|mp4|gif)$/,
         // to path is relative to the build directory
         to: 'images/[path][name].[ext]'
     })

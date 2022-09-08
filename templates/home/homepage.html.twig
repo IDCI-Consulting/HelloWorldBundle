@@ -2,11 +2,23 @@
 
 {% block main %}
 
+<div class="navbox" id="navbox">
+    <ul>
+        <li><a href="#{% trans from "homepage" %}specialization.anchor{% endtrans %}">{% trans from "homepage" %}specialization.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+        <li><a href="#{% trans from "homepage" %}consulting.anchor{% endtrans %}">{% trans from "homepage" %}consulting.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+        <li><a href="#{% trans from "homepage" %}courses.anchor{% endtrans %}">{% trans from "homepage" %}courses.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+        <li><a href="#{% trans from "homepage" %}web_development.anchor{% endtrans %}">{% trans from "homepage" %}web_development.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+        <li><a href="#{% trans from "homepage" %}open_source.anchor{% endtrans %}">{% trans from "homepage" %}open_source.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+        <li><a href="#{% trans from "homepage" %}methodology.anchor{% endtrans %}">{% trans from "homepage" %}methodology.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+        <li><a href="#{% trans from "homepage" %}tools.anchor{% endtrans %}">{% trans from "homepage" %}tools.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+    </ul>
+</div>
+
 <video class="background-video" autoplay loop muted>
     <source src="{{ asset('build/images/base/typing.mp4') }}" type="video/mp4">
 </video>
 
-<section class="section-container section-container-full section-container-secondary section-container-media-primary">
+<section class="section-container section-container-full section-container-secondary section-container-media-primary" id="{% trans from "homepage" %}specialization.anchor{% endtrans %}">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-primary">{% trans from "homepage" %}specialization.title{% endtrans %}</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}specialization.subtitle{% endtrans %}</h3>
@@ -19,7 +31,7 @@
 
 <div class="transparent-box"></div>
 
-<section class="section-container section-container-full section-container-primary" id="conseil">
+<section class="section-container section-container-full section-container-primary" id="{% trans from "homepage" %}consulting.anchor{% endtrans %}">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-primary">{% trans from "homepage" %}consulting.title{% endtrans %}</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}consulting.subtitle{% endtrans %}</h3>
@@ -36,7 +48,7 @@
 
 <div class="transparent-box even bottom-secondary"></div>
 
-<section class="section-container section-container-full section-container-secondary">
+<section class="section-container section-container-full section-container-secondary" id="{% trans from "homepage" %}courses.anchor{% endtrans %}">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-primary">{% trans from "homepage" %}courses.title{% endtrans %}</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}courses.subtitle{% endtrans %}</h3>
@@ -58,7 +70,7 @@
 
 <div class="transparent-box top-secondary"></div>
 
-<section class="section-container section-container-full section-container-primary">
+<section class="section-container section-container-full section-container-primary" id="{% trans from "homepage" %}web_development.anchor{% endtrans %}">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-primary">{% trans from "homepage" %}web_development.title{% endtrans %}</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}web_development.subtitle{% endtrans %}</h3>
@@ -75,7 +87,7 @@
 
 <div class="transparent-box even bottom-secondary"></div>
 
-<section class="section-container section-container-full section-container-secondary">
+<section class="section-container section-container-full section-container-secondary" id="{% trans from "homepage" %}open_source.anchor{% endtrans %}">
     <section class="section-presentation">
         <h2 class="section-presentation-title idci-title-secondary">{% trans from "homepage" %}open_source.title{% endtrans %}</h2>
         <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}open_source.subtitle{% endtrans %}</h3>
@@ -92,7 +104,7 @@
 
 <div class="transparent-box top-secondary"></div>
 
-<section class="section-container section-container-full section-container-primary">
+<section class="section-container section-container-full section-container-primary" id="{% trans from "homepage" %}methodology.anchor{% endtrans %}">
     <section class="section-presentation">
         <h3 class="section-presentation-subtitle section-presentation-subtitle-alone idci-subtitle-primary">{% trans from "homepage" %}methodology.subtitle{% endtrans %}</h3>
         <img src="{{ asset('build/images/base/agile.svg') }}" class="section-presentation-media">
@@ -108,7 +120,7 @@
 
 <div class="transparent-box even bottom-secondary"></div>
 
-<section class="section-container section-container-full section-container-secondary">
+<section class="section-container section-container-full section-container-secondary" id="{% trans from "homepage" %}tools.anchor{% endtrans %}">
     <section class="section-presentation">
         <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}tools.subtitle{% endtrans %}</h3>
         <img src="{{ asset('build/images/base/icon-outils.svg') }}" class="section-presentation-icon">
