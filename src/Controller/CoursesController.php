@@ -21,9 +21,9 @@ class CoursesController extends AbstractController
     }
 
     /**
-     * @Route("/", methods={"GET"}, name="index")
+     * @Route("/", methods={"GET"}, name="list")
      */
-    public function index(Request $request, string $_locale): Response
+    public function list(Request $request, string $_locale): Response
     {
         $finder = new Finder();
         $finder->files()->in($this->coursesPath);
@@ -36,7 +36,7 @@ class CoursesController extends AbstractController
             }
         }
 
-        return $this->render('courses/index.html.twig', [
+        return $this->render('courses/list.html.twig', [
             'courses' => $courses
         ]);
     }

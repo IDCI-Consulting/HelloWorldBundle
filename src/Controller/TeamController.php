@@ -27,7 +27,7 @@ class TeamController extends AbstractController
      */
     public function list(Request $request): Response
     {
-        return $this->render('team/index.html.twig');
+        return $this->render('team/list.html.twig');
     }
 
     /**

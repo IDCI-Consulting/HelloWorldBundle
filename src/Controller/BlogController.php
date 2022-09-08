@@ -13,11 +13,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends AbstractController
 {
     /**
-     * @Route("/", methods={"GET"}, name="index")
+     * @Route("/", methods={"GET"}, name="list")
      */
-    public function index(Request $request): Response
+    public function list(Request $request): Response
     {
-        return $this->render('blog/index.html.twig');
+        return $this->render('blog/list.html.twig');
     }
 
     /**

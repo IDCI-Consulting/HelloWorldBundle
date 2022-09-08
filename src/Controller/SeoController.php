@@ -17,7 +17,53 @@ class SeoController extends AbstractController
      */
     public function sitemap(Request $request): Response
     {
-        return $this->render('seo/sitemap.xml.twig');
+        $hostname = $request->getHost();
+        $availableLanguages = [];
+        $urls = [];
+        $routes = $this->container->get('router')->getRouteCollection();
+
+        foreach ($routes as $key => $route) {
+            $urls[] = [
+                'loc' => $this->generateUrl($key)
+            ];
+        }
+
+
+        
+        // $urls[] = [
+        //     'loc' => $this->generateUrl('app_homepage'),
+        //     'priority' => 1
+        // ];
+        // $urls[] = [
+        //     'loc' => $this->generateUrl('app_courses_list')
+        // ];
+
+        $response = new Response(
+            $this->renderView('seo/sitemap.xml.twig', [
+                'urls' => $urls,
+                'hostname' => $hostname
+                ]
+            )
+        );
+        $response->headers->set('Content-Type', 'text/xml');
+
+        return $response;
+
+        // foreach ($app['i18n_route_generator.languages'] as $locale => $language) {
+        //     $availableLanguages[] = $locale;
+        // }
+
+        // $locale = $request->getPreferredLanguage($availableLanguages);
+
+        // $app['sitemap_manager']->addConfiguration('_locale', $locale);
+
+        // if (($key = array_search($locale, $availableLanguages)) !== false) {
+        //     unset($availableLanguages[$key]);
+        // }
+
+        // $app['sitemap_manager']->addConfiguration('other_langs', $availableLanguages);
+
+        // $urls = $app['sitemap_manager']->build();
     }
 
     /**

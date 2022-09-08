@@ -17,7 +17,7 @@ class PageController extends AbstractController
      */
     public function homepage(Request $request): Response
     {
-        return $this->render('home/homepage.html.twig');
+        return $this->render('page/homepage.html.twig');
     }
 
     /**
@@ -25,7 +25,7 @@ class PageController extends AbstractController
      */
     public function legalMentions(Request $request): Response
     {
-        return $this->render('home/legal_mentions.html.twig');
+        return $this->render('page/legal_mentions.html.twig');
     }
 
     /**
@@ -33,6 +33,6 @@ class PageController extends AbstractController
      */
     public function offers(Request $request): Response
     {
-        return $this->render('offers/index.html.twig');
+        return $this->render('page/offers.html.twig');
     }
 }
