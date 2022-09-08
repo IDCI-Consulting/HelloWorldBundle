@@ -1,14 +1,9 @@
 .section-member-card {
     flex-basis: 30%;
     margin-top: 2rem;
-    min-width: 300px;
+    min-width: 250px;
 
-    @include until($widescreen) {
-        flex-basis: 50%;
-        max-width: 400px;
-    }
-
-    @include until($desktop) {
+    @include until($tablet) {
         flex-basis: 100%;
         max-width: none;
     }
