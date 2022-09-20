@@ -30,48 +30,28 @@
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
+    {% for post in posts %}
     <url>
-        <loc>https://www.idci-consulting.fr/fr/blog/post/idci-10-years</loc>
+        <loc>https://www.idci-consulting.fr/fr/blog/post/{{ post }}</loc>
         <lastmod>08/09/2022</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
-    <url>
-        <loc>https://www.idci-consulting.fr/fr/blog/post/step-bundle-introduction</loc>
-        <lastmod>08/09/2022</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1</priority>
-    </url>
-    <url>
-        <loc>https://www.idci-consulting.fr/fr/blog/post/new-year-2017</loc>
-        <lastmod>08/09/2022</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1</priority>
-    </url>
+    {% endfor %}
     <url>
         <loc>https://www.idci-consulting.fr/fr/courses</loc>
         <lastmod>08/09/2022</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
+    {% for course in courses %}
     <url>
-        <loc>https://www.idci-consulting.fr/fr/courses/html5-css3</loc>
+        <loc>https://www.idci-consulting.fr/fr/courses/{{ course }}</loc>
         <lastmod>08/09/2022</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
-    <url>
-        <loc>https://www.idci-consulting.fr/fr/courses/oop-uml-scm</loc>
-        <lastmod>08/09/2022</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1</priority>
-    </url>
-    <url>
-        <loc>https://www.idci-consulting.fr/fr/courses/symfony2</loc>
-        <lastmod>08/09/2022</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1</priority>
-    </url>
+    {% endfor %}
     <url>
         <loc>https://www.idci-consulting.fr/fr/team</loc>
         <lastmod>08/09/2022</lastmod>

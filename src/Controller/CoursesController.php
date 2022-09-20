@@ -80,9 +80,5 @@ class CoursesController extends AbstractController
         $response->headers->set('Content-Disposition', $disposition);
 
         return $response;
-
-        return $this->render('courses/show.html.twig', [
-            'slug' => $slug
-        ]);
     }
 }
