@@ -1,0 +1,283 @@
+{
+    "identity": {
+        "firstName": "Benjamin",
+        "lastName": "BOUDIER",
+        "birthDate": "1998-09-11T00:00:00Z",
+        "job": {
+            "fr": "Développeur Web FullStack",
+            "en": "FullStack Web Developer"
+        },
+        "media": "",
+        "email": "benjamin.boudier@idci-consulting.fr",
+        "phone": "07 52 67 33 35",
+        "website": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://fr.linkedin.com/in/benjamin-boudier-61a901142"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Développeur Web FullStack",
+                "en": "FullStack Web Developer"
+            },
+            "startDate": "2018-09-17T00:00:00Z",
+            "endDate": null,
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Création d'une plateforme e-commerce pour le groupe MAIER sous la forme de microservices avec le framework Symfony 4",
+                    "Conseils & accompagnement des clients dans la mise en oeuvre des besoins exprimés grâce à l'utilisation d'outil de ticketing",
+                    "Accompagnement des équipes en tant que chef de projet (maître de stage et maître d'apprentissage)"
+                ],
+                "en": [
+                    "Creation of an e-commerce platform for the MAIER group in the form of microservices with the Symfony 4 framework",
+                    "Advice and support for customers in the implementation of their needs through the use of ticketing tools",
+                    "Accompanying teams as a project leader (internship and apprenticeship supervisor)"
+                ]
+            }
+        },
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Stagiaire Développeur Web FullStack",
+                "en": "Intern FullStack Web Developer"
+            },
+            "startDate": "2018-04-01T00:00:00Z",
+            "endDate": "2018-07-04T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Mise en place d'une stack technique pour le développement sous Symfony avec docker",
+                    "Dockerisation d'une application sous Prestashop 1.5",
+                    "Mise en place d'un bundle Symfony 3 pour faciliter la gestion et réservation de logement"
+                ],
+                "en": [
+                    "Implementation of a technical stack for development under Symfony with docker",
+                    "Dockerization of an application under Prestashop 1.5",
+                    "Implementation of a Symfony 3 bundle to facilitate the management and reservation of accommodation"
+                ]
+            }
+        }
+    ],
+    "personalExperiences": [],
+    "education": [
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "DUT Informatique",
+            "location": "Lyon 1",
+            "startDate": "2016-09-02T00:00:00Z",
+            "endDate": "2018-07-04T00:00:00Z"
+        },
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Licence Professionnelle Informatique - METINET",
+            "location": "Bourg-en-Bresse",
+            "startDate": "2018-08-28T00:00:00Z",
+            "endDate": "2019-09-16T00:00:00Z"
+        }
+    ],
+    "expertises": [
+        {
+            "name": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Langages informatique",
+                        "en": "Computer languages"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "HTML5",
+                        "CSS3",
+                        "PHP 5/7/8",
+                        "Javascript/ECMAScript",
+                        "Bash / Shell",
+                        "SQL",
+                        "C / C++",
+                        "Python",
+                        "Java / Kotlin",
+                        "Delphi Pascal"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "OS",
+                        "en": "OS"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Linux (Debian, Ubuntu)",
+                        "Windows"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks",
+                        "en": "Frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Symfony 3/4/5",
+                        "ExpressJS",
+                        "VueJS / Angular 1.6",
+                        "Bootstrap / Bulma / Foundation / Semantic UI / Knacss"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Moteur de template",
+                        "en": "Templates engine"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Twig",
+                        "Blade",
+                        "Smarty",
+                        "Mustache"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Versioning",
+                        "en": "Versioning"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "GitLab",
+                        "GitHub",
+                        "Git"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Base de Données",
+                        "en": "Databases"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "MySQL",
+                        "MariaDB",
+                        "MongoDB",
+                        "PostgreSQL",
+                        "Oracle Database",
+                        "SQLite",
+                        "Elasticsearch",
+                        "Redis"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Conteneurisation",
+                        "en": "Containerization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Gestion de projet",
+                        "en": "Project management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Redmine",
+                        "Jira"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Modélisation",
+                        "en": "Schematization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "fr": "langues",
+                "en": "languages"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Français",
+                        "en": "French"
+                    },
+                    "level": {
+                        "fr": "Natif",
+                        "en": "Native"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Anglais",
+                        "en": "English"
+                    },
+                    "level": {
+                        "fr": "B2",
+                        "en": "B2"
+                    }
+                }
+            ]
+        }
+    ],
+    "hobbies": {
+        "fr": [
+            {
+                "name": "Internet",
+                "description": "Discuter/jouer entre amis ou me reposer devant une série, un anime ou encore un stream"
+            },
+            {
+                "name": "Sport",
+                "description": "Musculation + running/velo afin d'entretenir ma santé (6j/7)"
+            },
+            {
+                "name": "Randonnée",
+                "description": "Promenade matinale hebdomadaire avec mon chien"
+            }
+        ],
+        "en": [
+            {
+                "name": "Internet",
+                "description": "Chatting/playing with friends or relaxing in front of a series, anime or stream"
+            },
+            {
+                "name": "Sport",
+                "description": "Weightlifting + running/biking to maintain my health (6 days a week)"
+            },
+            {
+                "name": "Walking",
+                "description": "Weekly morning walk with my dog"
+            }
+        ]
+    }
+}

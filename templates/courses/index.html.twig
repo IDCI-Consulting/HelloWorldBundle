@@ -4,6 +4,8 @@
 
 {% block main %}
 
+{% set locale = app.request.locale %}
+
 <section class="section-container section-container-90">
     <section class="section-presentation section-choices">
         <p class="section-choices-title idci-title-primary">{% trans from "courses" %}courses.introduction.title{% endtrans %}</p>
@@ -77,18 +79,20 @@
                 <div class="tab">
                     {% for day in course.days %}
                     <div class="tab-item">
-                        <input type="radio" id="{{ (course.name ~ '-' ~ day.label)|slug }}" name="{{ course.name|slug }}-nav-tab" {% if 1 == loop.index %}checked{% endif %}>
-                        <label for="{{ (course.name ~ '-' ~ day.label)|slug }}" data-position="{{ loop.index }}">{{ day.label }}</label>
+                        <input type="radio" id="{{ (course.name ~ '-' ~ day.label[locale])|slug }}" name="{{ course.name|slug }}-nav-tab" {% if 1 == loop.index %}checked{% endif %}>
+                        <label for="{{ (course.name ~ '-' ~ day.label[locale])|slug }}" data-position="{{ loop.index }}">{{ day.label[locale] }}</label>
                         <div class="tab-pane">
                             {% for item in day.items %}
-                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title }}</p>
+                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title[locale] }}</p>
                                 {% if 0 != item.duration %}
                                 <p class="section-display-article-tab-subtitle idci-title-secondary">{% trans from "courses" %}courses.duration{% endtrans %} : {{ item.duration / 60 }} {% trans from "courses" %}courses.hour{% endtrans %}{% if item.duration > 60 %}s{% endif %}</p>
                                 {% endif %}
                                 <ul class="section-display-article-tab-list">
-                                {% for concept in item.concepts %}
-                                    <li>{{ concept }}</li>
-                                {% endfor %}
+                                {% if item.concepts is not empty %}
+                                    {% for concept in item.concepts[locale] %}
+                                        <li>{{ concept }}</li>
+                                    {% endfor %}
+                                {% endif %}
                                 </ul>
                             {% endfor %}
                         </div>

@@ -36,7 +36,7 @@ class TeamController extends AbstractController
     public function member(Request $request, string $slug, string $_format, string $_locale): Response
     {      
         try {
-            $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s_%s.json', $slug, $_locale), 'r');
+            $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s.json', $slug), 'r');
         } catch(\Exception $e) {
             return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
         }
