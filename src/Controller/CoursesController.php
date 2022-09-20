@@ -33,12 +33,9 @@ class CoursesController extends AbstractController
         $finder = new Finder();
         $finder->files()->in($this->coursesPath);
         $courses = [];
-        //$pattern = sprintf('/%s.json$/', $_locale);
 
         foreach ($finder as $file) {
-            // if (1 == preg_match($pattern, $file->getFileName())) {
-                $courses[] = json_decode(file_get_contents($file->getPathName()), true);
-            // }
+            $courses[] = json_decode(file_get_contents($file->getPathName()), true);
         }
 
         return $this->render('courses/index.html.twig', [
@@ -49,7 +46,7 @@ class CoursesController extends AbstractController
     /**
      * @Route("/{slug}.{_format}", methods={"GET"}, name="show", requirements={"_format"="json|pdf"}, defaults={"_format": "pdf"})
      */
-    public function show(Request $request, String $slug, string $_format, string $_locale): Response
+    public function show(Request $request, String $slug, string $_format): Response
     {
         try {
             $courseFile = new \SplFileObject(sprintf('../src/Resources/courses/%s.json', $slug), 'r');

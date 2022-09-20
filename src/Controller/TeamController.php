@@ -33,7 +33,7 @@ class TeamController extends AbstractController
     /**
      * @Route("/{slug}.{_format}", methods={"GET"}, name="member", requirements={"_format"="json|html|pdf"}, defaults={"_format": "html"})
      */
-    public function member(Request $request, string $slug, string $_format, string $_locale): Response
+    public function member(Request $request, string $slug, string $_format): Response
     {      
         try {
             $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s.json', $slug), 'r');
