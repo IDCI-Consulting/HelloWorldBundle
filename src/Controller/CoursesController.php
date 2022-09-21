@@ -16,22 +16,22 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  */
 class CoursesController extends AbstractController
 {
-    private string $coursesConfigPath;
+    private string $coursesDirectoryPath;
     private $httpClient;
 
-    public function __construct(string $coursesConfigPath, HttpClientInterface $pdfGeneratorClient)
+    public function __construct(string $coursesDirectoryPath, HttpClientInterface $pdfGeneratorClient)
     {
-        $this->coursesConfigPath = $coursesConfigPath;
+        $this->coursesDirectoryPath = $coursesDirectoryPath;
         $this->httpClient = $pdfGeneratorClient;
     }
 
     /**
      * @Route("/", methods={"GET"}, name="index")
      */
-    public function index(Request $request, string $_locale): Response
+    public function index(Request $request): Response
     {
         $finder = new Finder();
-        $finder->files()->in($this->coursesConfigPath);
+        $finder->files()->in($this->coursesDirectoryPath);
         $courses = [];
 
         foreach ($finder as $file) {
@@ -48,14 +48,7 @@ class CoursesController extends AbstractController
      */
     public function show(Request $request, String $slug, string $_format): Response
     {
-        try {
-            $courseFile = new \SplFileObject(sprintf($this->coursesConfigPath . '%s.json', $slug), 'r');
-        } catch(\Exception $e) {
-            return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
-        }
-
-        $rawJson = $courseFile->fread($courseFile->getSize());
-        $courseJson = json_decode($rawJson, true);
+        $courseJson = json_decode(file_get_contents(sprintf($this->coursesDirectoryPath . '%s.json', $slug)), true);
 
         if ('json' === $_format) {
             return new JsonResponse($courseJson);

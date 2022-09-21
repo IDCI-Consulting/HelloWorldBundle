@@ -29,15 +29,15 @@ services:
     
     App\Controller\BlogController:
         arguments:
-            $postsConfigPath: '%kernel.project_dir%/src/Resources/blog/posts.json'
+            $blogPostsFilePath: '%kernel.project_dir%/src/Resources/blog/posts.json'
     
     App\Controller\CoursesController:
         arguments:
-            $coursesConfigPath: '%kernel.project_dir%/src/Resources/courses/'
+            $coursesDirectoryPath: '%kernel.project_dir%/src/Resources/courses/'
 
     App\Controller\TeamController:
         arguments:
-            $teamConfigPath: '%kernel.project_dir%/src/Resources/cv/'
+            $cvDirectoryPath: '%kernel.project_dir%/src/Resources/cv/'
 
     # twig
     App\Twig\AppExtension:

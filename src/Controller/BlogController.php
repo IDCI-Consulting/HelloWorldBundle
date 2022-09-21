@@ -12,11 +12,11 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class BlogController extends AbstractController
 {
-    private string $postsConfigPath;
+    private string $blogPostsFilePath;
 
-    public function __construct(string $postsConfigPath)
+    public function __construct(string $blogPostsFilePath)
     {
-        $this->postsConfigPath = $postsConfigPath;
+        $this->blogPostsFilePath = $blogPostsFilePath;
     }
 
     /**
@@ -24,7 +24,7 @@ class BlogController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        $posts = json_decode(file_get_contents($this->postsConfigPath), true);
+        $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
         $postsByYears = [];
         $postsByCategories = [];
 

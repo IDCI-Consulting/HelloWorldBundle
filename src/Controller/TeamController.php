@@ -15,12 +15,12 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  */
 class TeamController extends AbstractController
 {
-    private string $teamConfigPath;
+    private string $cvDirectoryPath;
     private $httpClient;
 
-    public function __construct(string $teamConfigPath, HttpClientInterface $pdfGeneratorClient)
+    public function __construct(string $cvDirectoryPath, HttpClientInterface $pdfGeneratorClient)
     {
-        $this->teamConfigPath = $teamConfigPath;
+        $this->cvDirectoryPath = $cvDirectoryPath;
         $this->httpClient = $pdfGeneratorClient;
     }
 
@@ -36,15 +36,8 @@ class TeamController extends AbstractController
      * @Route("/{slug}.{_format}", methods={"GET"}, name="member", requirements={"_format"="json|html|pdf"}, defaults={"_format": "html"})
      */
     public function member(Request $request, string $slug, string $_format): Response
-    {      
-        try {
-            $cvFile = new \SplFileObject(sprintf($this->teamConfigPath . '%s.json', $slug), 'r');
-        } catch(\Exception $e) {
-            return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
-        }
-
-        $rawJson = $cvFile->fread($cvFile->getSize());
-        $cvJson = json_decode($rawJson, true);
+    {
+        $cvJson = json_decode(file_get_contents(sprintf($this->cvDirectoryPath . '%s.json', $slug)), true);
 
         if ('json' === $_format) {
             return new JsonResponse($cvJson);

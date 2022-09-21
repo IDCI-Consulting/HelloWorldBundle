@@ -3,106 +3,105 @@
 {% block title %}Présentation de nos formations{% endblock %}
 
 {% block main %}
+    {% set locale = app.request.locale %}
 
-{% set locale = app.request.locale %}
-
-<section class="section-container section-container-90">
-    <section class="section-presentation section-choices">
-        <p class="section-choices-title idci-title-primary">{% trans from "courses" %}courses.introduction.title{% endtrans %}</p>
-        <div class="section-choices-items">
-            <div class="section-offers-box section-offers-box-secondary">
-                <p class="section-offers-box-title">{% trans from "courses" %}courses.introduction.part_1.title{% endtrans %}</p>
-                <ul class="section-offers-box-description">
-                    <li>
-                        {% trans from "courses" %}courses.introduction.part_1.paragraph_1{% endtrans %}
-                    </li>
-                    <li>
-                        {% trans from "courses" %}courses.introduction.part_1.paragraph_2{% endtrans %}
-                    </li>
-                    <li>
-                        {% trans from "courses" %}courses.introduction.part_1.paragraph_3{% endtrans %}
-                    </li>
-                </ul>
-                <a href="{{ url('app_contact_index') }}" class="section-offers-box-button">{% trans %}button.contact_us{% endtrans %}<i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="section-offers-box section-offers-box-primary">
-                <p class="section-offers-box-title">{% trans from "courses" %}courses.introduction.part_2.title{% endtrans %}</p>
-                <ul class="section-offers-box-description">
-                    {% trans from "courses" %}courses.introduction.part_2.paragraph_1{% endtrans %}
-                </ul>
-                <a href="{{ url('app_contact_index') }}" class="section-offers-box-button">{% trans %}button.contact_us{% endtrans %}<i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-</section>
-
-<section class="section-container section-container-secondary">
-    <section class="section-presentation">
-        <h2 class="section-presentation-title idci-title-primary">{% trans from "courses" %}courses.title{% endtrans %}</h2>
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "courses" %}courses.subtitle{% endtrans %}</h3>
-        <div class="columns section-presentation-columns">
-            <div class="column section-presentation-column">
-                <div class="section-card">
-                    <img src="{{ asset('build/images/base/oop-uml-scm.svg') }}" alt="{% trans from "alt" %}oop-uml-scm{% endtrans %}" class="section-card-media">
-                    <p class="section-card-description">OOP - UML - SCM</p>
+    <section class="section-container section-container-90">
+        <section class="section-presentation section-choices">
+            <p class="section-choices-title idci-title-primary">{% trans from "courses" %}courses.introduction.title{% endtrans %}</p>
+            <div class="section-choices-items">
+                <div class="section-offers-box section-offers-box-secondary">
+                    <p class="section-offers-box-title">{% trans from "courses" %}courses.introduction.part_1.title{% endtrans %}</p>
+                    <ul class="section-offers-box-description">
+                        <li>
+                            {% trans from "courses" %}courses.introduction.part_1.paragraph_1{% endtrans %}
+                        </li>
+                        <li>
+                            {% trans from "courses" %}courses.introduction.part_1.paragraph_2{% endtrans %}
+                        </li>
+                        <li>
+                            {% trans from "courses" %}courses.introduction.part_1.paragraph_3{% endtrans %}
+                        </li>
+                    </ul>
+                    <a href="{{ url('app_contact_index') }}" class="section-offers-box-button">{% trans %}button.contact_us{% endtrans %}<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="section-offers-box section-offers-box-primary">
+                    <p class="section-offers-box-title">{% trans from "courses" %}courses.introduction.part_2.title{% endtrans %}</p>
+                    <ul class="section-offers-box-description">
+                        {% trans from "courses" %}courses.introduction.part_2.paragraph_1{% endtrans %}
+                    </ul>
+                    <a href="{{ url('app_contact_index') }}" class="section-offers-box-button">{% trans %}button.contact_us{% endtrans %}<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="column">
-                <div class="section-card">
-                    <img src="{{ asset('build/images/base/html5-css3.svg') }}" alt="{% trans from "alt" %}html5-css3{% endtrans %}" class="section-card-media">
-                    <p class="section-card-description">Html5 - CSS3</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="section-card">
-                    <img src="{{ asset('build/images/base/symfony2.svg') }}"  class="section-card-media">
-                    <p class="section-card-description">Symfony</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</section>
-
-{% for course in courses %}
-<section class="section-container section-container-full section-container-{% if 0 == loop.index % 2 %}secondary{% else %}primary{% endif %}">
-    <section class="section-display">
-        <h2 class="section-display-title idci-title-primary">{{ course.name }}</h2>
-        <section class="section-display-content">
-            <aside class="section-display-aside">
-                <img src="{{ asset('build/images/base/' ~ course.media ~ '') }}" class="section-card-media">
-                <div class="section-display-aside-buttons">
-                    <a href="{{ url('app_courses_show', {'slug' : course.id}) }}" class="button section-display-aside-button">{% trans %}button.pdf_download{% endtrans %}</a>
-                    <a href="{{ url('app_contact_index') }}" class="button section-display-aside-button">{% trans %}button.contact_us{% endtrans %}</a>
-                </div>
-            </aside>
-            <article class="section-display-article">
-                <div class="tab">
-                    {% for day in course.days %}
-                    <div class="tab-item">
-                        <input type="radio" id="{{ (course.name ~ '-' ~ day.label[locale])|slug }}" name="{{ course.name|slug }}-nav-tab" {% if 1 == loop.index %}checked{% endif %}>
-                        <label for="{{ (course.name ~ '-' ~ day.label[locale])|slug }}" data-position="{{ loop.index }}">{{ day.label[locale] }}</label>
-                        <div class="tab-pane">
-                            {% for item in day.items %}
-                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title[locale] }}</p>
-                                {% if 0 != item.duration %}
-                                <p class="section-display-article-tab-subtitle idci-title-secondary">{% trans from "courses" %}courses.duration{% endtrans %} : {{ item.duration / 60 }} {% trans from "courses" %}courses.hour{% endtrans %}{% if item.duration > 60 %}s{% endif %}</p>
-                                {% endif %}
-                                <ul class="section-display-article-tab-list">
-                                {% if item.concepts is not empty %}
-                                    {% for concept in item.concepts[locale] %}
-                                        <li>{{ concept }}</li>
-                                    {% endfor %}
-                                {% endif %}
-                                </ul>
-                            {% endfor %}
-                        </div>
-                    </div> 
-                    {% endfor %}
-                </div>
-            </article>
         </section>
     </section>
-</section>
-{% endfor %}
+
+    <section class="section-container section-container-secondary">
+        <section class="section-presentation">
+            <h2 class="section-presentation-title idci-title-primary">{% trans from "courses" %}courses.title{% endtrans %}</h2>
+            <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "courses" %}courses.subtitle{% endtrans %}</h3>
+            <div class="columns section-presentation-columns">
+                <div class="column section-presentation-column">
+                    <div class="section-card">
+                        <img src="{{ asset('build/images/base/oop-uml-scm.svg') }}" alt="{% trans from "alt" %}oop-uml-scm{% endtrans %}" class="section-card-media">
+                        <p class="section-card-description">OOP - UML - SCM</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="section-card">
+                        <img src="{{ asset('build/images/base/html5-css3.svg') }}" alt="{% trans from "alt" %}html5-css3{% endtrans %}" class="section-card-media">
+                        <p class="section-card-description">Html5 - CSS3</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="section-card">
+                        <img src="{{ asset('build/images/base/symfony2.svg') }}"  class="section-card-media">
+                        <p class="section-card-description">Symfony</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    {% for course in courses %}
+    <section class="section-container section-container-full section-container-{% if 0 == loop.index % 2 %}secondary{% else %}primary{% endif %}">
+        <section class="section-display">
+            <h2 class="section-display-title idci-title-primary">{{ course.name }}</h2>
+            <section class="section-display-content">
+                <aside class="section-display-aside">
+                    <img src="{{ asset('build/images/base/' ~ course.media ~ '') }}" class="section-card-media">
+                    <div class="section-display-aside-buttons">
+                        <a href="{{ url('app_courses_show', {'slug' : course.id}) }}" class="button section-display-aside-button">{% trans %}button.pdf_download{% endtrans %}</a>
+                        <a href="{{ url('app_contact_index') }}" class="button section-display-aside-button">{% trans %}button.contact_us{% endtrans %}</a>
+                    </div>
+                </aside>
+                <article class="section-display-article">
+                    <div class="tab">
+                        {% for day in course.days %}
+                        <div class="tab-item">
+                            <input type="radio" id="{{ (course.name ~ '-' ~ day.label[locale])|slug }}" name="{{ course.name|slug }}-nav-tab" {% if 1 == loop.index %}checked{% endif %}>
+                            <label for="{{ (course.name ~ '-' ~ day.label[locale])|slug }}" data-position="{{ loop.index }}">{{ day.label[locale] }}</label>
+                            <div class="tab-pane">
+                                {% for item in day.items %}
+                                    <p class="section-display-article-tab-title idci-title-secondary">{{ item.title[locale] }}</p>
+                                    {% if 0 != item.duration %}
+                                    <p class="section-display-article-tab-subtitle idci-title-secondary">{% trans from "courses" %}courses.duration{% endtrans %} : {{ item.duration / 60 }} {% trans from "courses" %}courses.hour{% endtrans %}{% if item.duration > 60 %}s{% endif %}</p>
+                                    {% endif %}
+                                    <ul class="section-display-article-tab-list">
+                                    {% if item.concepts is not empty %}
+                                        {% for concept in item.concepts[locale] %}
+                                            <li>{{ concept }}</li>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </ul>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </article>
+            </section>
+        </section>
+    </section>
+    {% endfor %}
 
 {% endblock %}
