@@ -51,10 +51,6 @@ class SeoController extends AbstractController
             $cvs[pathinfo($file, PATHINFO_FILENAME)] = $file;
         }
 
-        // dd($posts);
-        // dd($courses);
-        // dd($cvs);
-
         $response = new Response($this->renderView('seo/sitemap.xml.twig', [
             'posts' => $posts,
             'courses' => $courses,
