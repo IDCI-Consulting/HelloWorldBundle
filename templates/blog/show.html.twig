@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-
-blog show, post : {{ slug }}
-
+    {% apply markdown_to_html %}
+        {{ post|raw }}
+    {% endapply %}
 {% endblock %}
