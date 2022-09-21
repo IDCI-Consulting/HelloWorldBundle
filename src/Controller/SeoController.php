@@ -64,9 +64,9 @@ class SeoController extends AbstractController
     /**
      * @Route("/robots.txt", methods={"GET"}, name="robots")
      */
-    public function robotsTxt(Request $request): Response
+    public function robots(Request $request): Response
     {
-        $response = $this->render('seo/robots_txt.html.twig');
+        $response = $this->render('seo/robots.txt.twig');
         $response->headers->set('Content-Type', 'text/plain');
 
         return $response;
