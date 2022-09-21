@@ -1,11 +1,9 @@
 specialization:
-  anchor: architecture-web
   title: Nous sommes spécialisés dans
   subtitle: L'architecture web, PHP & Symfony
   paragraph_1: '&lt;Ingénierie &gt; &lt;Développement&gt; &lt;Conseil&gt; &lt;Intégration&gt;'
 
 consulting:
-  anchor: conseil
   title: Nous faisons du
   subtitle: Conseil
   paragraph_1: IDCI-Consulting reste à la <span class="blue-colored-description-text">pointe technologique</span> grâce à une veille effectuée régulièrement.
@@ -13,14 +11,12 @@ consulting:
   paragraph_3: "Nous intervenons sur les différentes étapes de vos projets informatiques: <span class=\"blue-colored-description-text\">définition de vos objectifs, solutions techniques, architectures de site, déploiement et optimisation de vos projets...</span>"
 
 courses:
-  anchor: formation
   title: Nous faisons de la
   subtitle: Formation
   paragraph_1: <span class="blue-colored-description-text">Fort de nos 14 ans d'expériences,</span> nous proposons <span class="blue-colored-description-text">plusieurs formations</span> allant du HTML5/CSS3 au développement d'applications complexes PHP avec le framework Symfony2.
   paragraph_2: Les différentes formations
 
 web_development:
-  anchor: developpement-web
   title: Nous faisons du
   subtitle: Développement web
   paragraph_1: IDCI est une société experte dans le développement web, spécialisé sur <span class="blue-colored-description-text">les frameworks PHP (Symfony2, Silex, Zend framework...).</span>
@@ -28,7 +24,6 @@ web_development:
   paragraph_3: Nous n'oublions pas les technologies frontend, et adoptons rapidement les nouveaux <span class="blue-colored-description-text">frameworks javascript tels que Angular, Vuejs...</span>
 
 open_source:
-  anchor: open-source
   title: Notre philosophie
   subtitle: Open source
   paragraph_1: <span class="green-colored-description-text">Le partage et l'ouverture</span> aux autres sont ancrés dans la philosophie de l'entreprise.
@@ -36,14 +31,12 @@ open_source:
   paragraph_3: Nous publions et maintenons du code source accessible sur <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text">notre plate-forme Github.</a>
 
 methodology:
-  anchor: notre-methodologie
   subtitle: Notre méthodologie
   paragraph_1: Nous sommes <span class="blue-colored-description-text">flexibles</span>. Les projets informatiques sont sujets à des changements très fréquents.
   paragraph_2: Notre experience nous a montré que les méthodes agiles sont source de belles réussites, et nous nous efforçons de les mettre en application quand cela nous semble nécessaire.
   paragraph_3: Pour autant, nous ne cherchons pas à dicter ces méthodes dans le cas ou elles ne conviendraient pas mais restons flexibles en toute circonstance.
 
 tools:
-  anchor: nos-outils
   subtitle: Nos outils
   column_1: Stockage
   column_2: Qualité

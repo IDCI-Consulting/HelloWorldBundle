@@ -25,7 +25,7 @@
                                 </div>
                                 <p class="carousel-post-title">{{ posts.name[locale] }}</p>
                                 <p class="carousel-post-description">{{ posts.description[locale] }}</p>
-                                <a href="{{ url('app_blog_article', {'slug': posts.id}) }}" class="carousel-post-button">{% trans from "blog" %}blog.read_post{% endtrans %}</a>
+                                <a href="{{ url('app_blog_post', {'slug': posts.id}) }}" class="carousel-post-button">{% trans from "blog" %}blog.read_post{% endtrans %}</a>
                             </div>
                         </div>
                         {% set post_count = post_count + 1 %}
@@ -88,7 +88,7 @@
                             <li class="section-posts-list-item">
                                 <img src="{{ asset('build/images/' ~ post.media ~ '') }}" class="section-posts-list-item-media">
                                 <div class="section-posts-list-item-infos">
-                                    <a href="{{ url('app_blog_article', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
+                                    <a href="{{ url('app_blog_post', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
                                     <span>{% trans from "blog" %}blog.uploaded_the{% endtrans %} {{ post.publicationDate }} {% trans from "blog" %}blog.by{% endtrans %} {{ post.author }}</span>
                                 </div>
                             </li>
@@ -111,7 +111,7 @@
                             <li class="section-posts-list-item">
                                 <img src="{{ asset('build/images/' ~ post.media ~ '') }}" class="section-posts-list-item-media">
                                 <div class="section-posts-list-item-infos">
-                                    <a href="{{ url('app_blog_article', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
+                                    <a href="{{ url('app_blog_post', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
                                     <span class="section-posts-list-item-infos">{% trans from "blog" %}blog.uploaded_the{% endtrans %} {{ post.publicationDate }} {% trans from "blog" %}blog.by{% endtrans %} {{ post.author }}</span>
                                 </div>
                             </li>

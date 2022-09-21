@@ -11,10 +11,10 @@
         <div class="mobile-menu">
             <ul class="mobile-menu-list">
                 <li class="mobile-menu-list-item {% if 'app_homepage' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_homepage') }}">{% trans from "layout" %}header.homepage{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {% if 'app_courses_index' == current_route|default('') or 'app_courses_show' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_courses_index') }}">{% trans from "layout" %}header.courses{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {% if 'app_offers_index' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_offers_index') }}">{% trans from "layout" %}header.offers{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {% if 'app_team_index' == current_route|default('') or 'app_team_member' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_team_index') }}">{% trans from "layout" %}header.members{% endtrans %}</a></li>
-                <li class="mobile-menu-list-item {% if 'app_blog_index' == current_route|default('') or 'app_blog_show' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_blog_index') }}">{% trans from "layout" %}header.blog{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if 'app_courses_list' == current_route|default('') or 'app_courses_show' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_courses_list') }}">{% trans from "layout" %}header.courses{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if 'app_offers' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_offers') }}">{% trans from "layout" %}header.offers{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if 'app_team_list' == current_route|default('') or 'app_team_member' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_team_list') }}">{% trans from "layout" %}header.members{% endtrans %}</a></li>
+                <li class="mobile-menu-list-item {% if 'app_blog_list' == current_route|default('') or 'app_blog_show' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_blog_list') }}">{% trans from "layout" %}header.blog{% endtrans %}</a></li>
                 <li class="mobile-menu-list-item {% if 'app_contact_index' == current_route|default('') %}active{% endif %}"><a href="{{ url('app_contact_index') }}">{% trans from "layout" %}header.contact{% endtrans %}</a></li>
             </ul>
         </div>
@@ -25,10 +25,10 @@
     <nav class="header-links">
         <ul class="header-links-list">
             <li class="header-links-list-item"><a href="{{ url('app_homepage') }}" class="{% if 'app_homepage' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.homepage{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_courses_index') }}" class="{% if 'app_courses_index' == current_route|default('') or 'app_courses_show' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.courses{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_offers_index') }}" class="{% if 'app_offers_index' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.offers{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_team_index') }}" class="{% if 'app_team_index' == current_route|default('') or 'app_team_member' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.members{% endtrans %}</a></li>
-            <li class="header-links-list-item"><a href="{{ url('app_blog_index') }}" class="{% if 'app_blog_index' == current_route|default('') or 'app_blog_show' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.blog{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_courses_list') }}" class="{% if 'app_courses_list' == current_route|default('') or 'app_courses_show' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.courses{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_offers') }}" class="{% if 'app_offers' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.offers{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_team_list') }}" class="{% if 'app_team_list' == current_route|default('') or 'app_team_member' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.members{% endtrans %}</a></li>
+            <li class="header-links-list-item"><a href="{{ url('app_blog_list') }}" class="{% if 'app_blog_list' == current_route|default('') or 'app_blog_show' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.blog{% endtrans %}</a></li>
             <li class="header-links-list-item"><a href="{{ url('app_contact_index') }}" class="{% if 'app_contact_index' == current_route|default('') %}active{% endif %}">{% trans from "layout" %}header.contact{% endtrans %}</a></li>
         </ul>
     </nav>

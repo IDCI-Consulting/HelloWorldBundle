@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/blog", name="blog_")
+ * @Route("/{_locale}/blog", requirements={"_locale": "fr|en"}, name="blog_")
  */
 class BlogController extends AbstractController
 {
@@ -20,9 +20,9 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/", methods={"GET"}, name="index")
+     * @Route("/", methods={"GET"}, name="list")
      */
-    public function index(Request $request): Response
+    public function list(Request $request): Response
     {
         $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
         $postsByYears = [];
@@ -34,16 +34,16 @@ class BlogController extends AbstractController
             $postsByCategories[$post['category']][] = $post;
         }
 
-        return $this->render('blog/index.html.twig', [
+        return $this->render('blog/list.html.twig', [
             'posts_by_years' => $postsByYears,
             'posts_by_categories' => $postsByCategories
         ]);
     }
 
     /**
-     * @Route("/article/{slug}", methods={"GET"}, name="article")
+     * @Route("/post/{slug}", methods={"GET"}, name="post")
      */
-    public function article(Request $request, String $slug): Response
+    public function post(Request $request, String $slug): Response
     {
         return $this->render('blog/show.html.twig', [
             'slug' => $slug

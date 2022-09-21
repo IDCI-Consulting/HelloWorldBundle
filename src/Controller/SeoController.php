@@ -2,29 +2,73 @@
 
 namespace App\Controller;
 
+use Symfony\Component\Finder\Finder;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/seo", name="seo_")
+ * @Route("/", name="seo_")
  */
 class SeoController extends AbstractController
 {
-    /**
-     * @Route("/sitemap", methods={"GET"}, name="sitemap")
-     */
-    public function sitemap(Request $request): Response
+    private string $blogPostsFilePath;
+    private string $coursesDirectoryPath;
+    private string $cvDirectoryPath;
+
+    public function __construct(string $blogPostsFilePath, string $coursesDirectoryPath, string $cvDirectoryPath)
     {
-        return $this->render('seo/sitemap.html.twig');
+        $this->blogPostsFilePath = $blogPostsFilePath;
+        $this->coursesDirectoryPath = $coursesDirectoryPath;
+        $this->cvDirectoryPath = $cvDirectoryPath;
     }
 
     /**
-     * @Route("/robots.txt", methods={"GET"}, name="robots.txt")
+     * @Route("/sitemap.xml", methods={"GET"}, name="sitemap")
      */
-    public function robotsTxt(Request $request, String $slug): Response
+    public function sitemap(Request $request): Response
     {
-        return $this->render('seo/robots_txt.html.twig');
+        $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
+        foreach ($posts as $key => $post) {
+            $posts[$post['id']] = $posts[$key];
+            unset($posts[$key]);
+        }
+
+        $coursesFinder = new Finder();
+        $coursesFinder->files()->in($this->coursesDirectoryPath);
+        $courses = [];
+
+        foreach ($coursesFinder as $key => $file) {
+            $courses[pathinfo($file, PATHINFO_FILENAME)] = $file;
+        }
+
+        $cvsFinder = new Finder();
+        $cvsFinder->files()->in($this->cvDirectoryPath);
+        $cvs = [];
+
+        foreach ($cvsFinder as $key => $file) {
+            $cvs[pathinfo($file, PATHINFO_FILENAME)] = $file;
+        }
+
+        $response = new Response($this->renderView('seo/sitemap.xml.twig', [
+            'posts' => $posts,
+            'courses' => $courses,
+            'cvs' => $cvs
+        ]));
+        $response->headers->set('Content-Type', 'text/xml');
+
+        return $response;
+    }
+
+    /**
+     * @Route("/robots.txt", methods={"GET"}, name="robots")
+     */
+    public function robots(Request $request): Response
+    {
+        $response = $this->render('seo/robots.txt.twig');
+        $response->headers->set('Content-Type', 'text/plain');
+
+        return $response;
     }
 }

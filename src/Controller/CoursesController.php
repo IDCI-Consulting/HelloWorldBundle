@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 /**
- * @Route("/courses", name="courses_")
+ * @Route("/{_locale}/courses", requirements={"_locale": "fr|en"}, name="courses_")
  */
 class CoursesController extends AbstractController
 {
@@ -26,7 +26,7 @@ class CoursesController extends AbstractController
     }
 
     /**
-     * @Route("/", methods={"GET"}, name="index")
+     * @Route("/", methods={"GET"}, name="list")
      */
     public function index(Request $request): Response
     {
@@ -38,7 +38,7 @@ class CoursesController extends AbstractController
             $courses[] = json_decode(file_get_contents($file->getPathName()), true);
         }
 
-        return $this->render('courses/index.html.twig', [
+        return $this->render('courses/list.html.twig', [
             'courses' => $courses
         ]);
     }
@@ -70,9 +70,5 @@ class CoursesController extends AbstractController
         $response->headers->set('Content-Disposition', $disposition);
 
         return $response;
-
-        return $this->render('courses/show.html.twig', [
-            'slug' => $slug
-        ]);
     }
 }
