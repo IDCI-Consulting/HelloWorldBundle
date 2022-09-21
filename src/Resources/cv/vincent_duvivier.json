@@ -1,0 +1,295 @@
+{
+    "identity": {
+        "firstName": "Vincent",
+        "lastName": "Duvivier",
+        "birthDate": "2001-01-11T00:00:00Z",
+        "job": {
+            "fr": "Développeur Web FullStack",
+            "en": "FullStack Web Developer"
+        },
+        "media": "",
+        "email": "vincent.duvivier@idci-consulting.fr",
+        "phone": "",
+        "website": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://fr.linkedin.com/in/vincent-duvivier-5b16321a5"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Alternant Développeur Web FullStack",
+                "en": "Apprentice FullStack Web Developer"
+            },
+            "startDate": "2022-02-07T00:00:00Z",
+            "endDate": "2025-08-30T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Montée en compétences au sein de l'entreprise",
+                    "Maintenance et réalisation de sites web répondant aux demandes clients"
+                ],
+                "en": [
+                    "Increase in skills within the company",
+                    "Maintenance and realization of web sites answering the customers requests"
+                ]
+            }
+        },
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Stagiaire Développeur Web FullStack",
+                "en": "FullStack Web Developer Intern"
+            },
+            "startDate": "2021-08-08T00:00:00Z",
+            "endDate": "2022-01-28T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Découverte des technologies utilisées par IDCI-Consulting",
+                    "Réalisation de sites web répondant aux demandes clients"
+                ],
+                "en": [
+                    "Discovery of the technologies used by IDCI-Consulting",
+                    "Realization of web sites answering the customers requests"
+                ]
+            }
+        },
+        {
+            "company": "Intermarché",
+            "role": {},
+            "startDate": "2021-06-20T00:00:00Z",
+            "endDate": "2021-07-29T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Préparation de pains",
+                    "Mise en rayon de produits",
+                    "Réponses aux demandes client"
+                ],
+                "en": [
+                    "Preparation of breads",
+                    "Shelving of products",
+                    "Responses to customer requests"
+                ]
+            }
+        }
+    ],
+    "personalExperiences": [
+        {
+            "organization": {
+                "fr": "ZUPdeCo",
+                "en": "ZUPdeCo"
+            },
+            "role": {
+                "fr": "Bénévole",
+                "en": "Volunteer"
+            },
+            "website": "",
+            "startDate": "2020-09-07T00:00:00Z",
+            "endDate": "2021-05-07T00:00:00Z",
+            "description": {
+                "fr": "Aide aux devoirs pour enfant élèves en ZEP",
+                "en": "Homework help for children in ZEP"
+            }
+        }
+        
+    ],
+    "education": [
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "DUT Informatique",
+            "location": "Lyon",
+            "startDate": "2020-02-01T00:00:00Z",
+            "endDate": "2022-01-28T00:00:00Z"
+        },
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Ingénieur Polytech",
+            "location": "Lyon",
+            "startDate": "2022-09-04T00:00:00Z",
+            "endDate": "2025-09-01T00:00:00Z"
+        }
+    ],
+    "expertises": [
+        {
+            "name": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Langages informatique",
+                        "en": "Computer languages"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "HTML5",
+                        "CSS3",
+                        "PHP",
+                        "Javascript",
+                        "Ruby",
+                        "C",
+                        "C++",
+                        "Java",
+                        "Python",
+                        "Bash",
+                        "ZSH",
+                        "SQL"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "OS",
+                        "en": "OS"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Windows",
+                        "Linux (Debian, Arch, Fedora)"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks",
+                        "en": "Frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Symfony",
+                        "Bootstrap",
+                        "Rails"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Versioning",
+                        "en": "Versioning"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Git",
+                        "Gitlab",
+                        "GitHub"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Base de Données",
+                        "en": "Databases"
+                    },
+                    "level": "",
+                    "keywords": [
+                    	"ORACLE",
+                        "MySQL",
+                        "PostgreSQL"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Conteneurisation",
+                        "en": "Containerization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Gestion de projet",
+                        "en": "Project management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Redmine",
+                        "Kanboard"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Modélisation",
+                        "en": "Schematization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "fr": "langues",
+                "en": "languages"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Français",
+                        "en": "French"
+                    },
+                    "level": {
+                        "fr": "Natif",
+                        "en": "Native"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Anglais",
+                        "en": "English"
+                    },
+                    "level": {
+                        "fr": "C1",
+                        "en": "C1"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Allemand",
+                        "en": "German"
+                    },
+                    "level": {
+                        "fr": "B1",
+                        "en": "B1"
+                    }
+                }
+            ]
+        }
+    ],
+    "hobbies": {
+        "fr": [
+            {
+                "name": "Cinéma",
+                "description": ""
+            }
+        ],
+        "en": [
+            {
+                "name": "Cinema",
+                "description": ""
+            }
+        ]
+    }
+}
