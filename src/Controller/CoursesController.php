@@ -48,16 +48,16 @@ class CoursesController extends AbstractController
      */
     public function show(Request $request, String $slug, string $_format): Response
     {
-        $courseJson = json_decode(file_get_contents(sprintf($this->coursesDirectoryPath . '%s.json', $slug)), true);
+        $course = json_decode(file_get_contents(sprintf($this->coursesDirectoryPath . '%s.json', $slug)), true);
 
         if ('json' === $_format) {
-            return new JsonResponse($courseJson);
+            return new JsonResponse($course);
         }
 
         $response = $this->httpClient->request('POST', '/', [
             'body' => json_encode([
                 'contents' => base64_encode($this->renderView('courses/pdf.html.twig', [
-                    'course' => $courseJson,
+                    'course' => $course,
                 ])),
             ]),
         ]);

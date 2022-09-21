@@ -37,23 +37,23 @@ class TeamController extends AbstractController
      */
     public function member(Request $request, string $slug, string $_format): Response
     {
-        $cvJson = json_decode(file_get_contents(sprintf($this->cvDirectoryPath . '%s.json', $slug)), true);
+        $cv = json_decode(file_get_contents(sprintf($this->cvDirectoryPath . '%s.json', $slug)), true);
 
         if ('json' === $_format) {
-            return new JsonResponse($cvJson);
+            return new JsonResponse($cv);
         }
 
         if ('html' === $_format) {
             return $this->render('team/show.html.twig', [
                 'slug' => $slug,
-                'data' => $cvJson,
+                'data' => $cv,
             ]);
         }
 
         $response = $this->httpClient->request('POST', '/', [
             'body' => json_encode([
                 'contents' => base64_encode($this->renderView('team/pdf.html.twig', [
-                    'data' => $cvJson,
+                    'data' => $cv,
                 ])),
             ]),
         ]);
