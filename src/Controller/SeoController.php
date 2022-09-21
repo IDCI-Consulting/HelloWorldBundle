@@ -13,15 +13,15 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class SeoController extends AbstractController
 {
-    private string $postsConfigPath;
-    private string $coursesConfigPath;
-    private string $teamConfigPath;
+    private string $blogPostsFilePath;
+    private string $coursesDirectoryPath;
+    private string $cvDirectoryPath;
 
-    public function __construct(string $postsConfigPath, string $coursesConfigPath, string $teamConfigPath)
+    public function __construct(string $blogPostsFilePath, string $coursesDirectoryPath, string $cvDirectoryPath)
     {
-        $this->postsConfigPath = $postsConfigPath;
-        $this->coursesConfigPath = $coursesConfigPath;
-        $this->teamConfigPath = $teamConfigPath;
+        $this->blogPostsFilePath = $blogPostsFilePath;
+        $this->coursesDirectoryPath = $coursesDirectoryPath;
+        $this->cvDirectoryPath = $cvDirectoryPath;
     }
 
     /**
@@ -29,40 +29,36 @@ class SeoController extends AbstractController
      */
     public function sitemap(Request $request): Response
     {
-        $posts = json_decode(file_get_contents($this->postsConfigPath), true);
-        $postsID = [];
-        foreach ($posts as $post) {
-            $postsID[] = $post['id'];
+        $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
+        foreach ($posts as $key => $post) {
+            $posts[$post['id']] = $posts[$key];
+            unset($posts[$key]);
         }
 
         $coursesFinder = new Finder();
-        $coursesFinder->files()->in($this->coursesConfigPath);
+        $coursesFinder->files()->in($this->coursesDirectoryPath);
         $courses = [];
-        $coursesID = [];
-        $pattern = sprintf('/%s.json$/', 'fr');
 
         foreach ($coursesFinder as $key => $file) {
-            if (1 == preg_match($pattern, $file->getFileName())) {
-                $courses[$key] = json_decode(file_get_contents($file->getPathName()), true);
-                $coursesID[] = $courses[$key]['id'];
-            }
+            $courses[pathinfo($file, PATHINFO_FILENAME)] = $file;
         }
 
-        // $cvsFinder = new Finder();
-        // $cvsFinder->files()->in($this->teamConfigPath);
-        // $cvs = [];
-        // $cvsID = [];
+        $cvsFinder = new Finder();
+        $cvsFinder->files()->in($this->cvDirectoryPath);
+        $cvs = [];
 
-        // foreach ($cvsFinder as $key => $file) {
-        //     if (1 == preg_match($pattern, $file->getFileName())) {
-        //         $cvs[$key] = json_decode(file_get_contents($file->getPathName()), true);
-        //         $cvsID[] = $cvs[$key]['id'];
-        //     }
-        // }
+        foreach ($cvsFinder as $key => $file) {
+            $cvs[pathinfo($file, PATHINFO_FILENAME)] = $file;
+        }
+
+        // dd($posts);
+        // dd($courses);
+        // dd($cvs);
 
         $response = new Response($this->renderView('seo/sitemap.xml.twig', [
-            'posts' => $postsID,
-            'courses' => $coursesID
+            'posts' => $posts,
+            'courses' => $courses,
+            'cvs' => $cvs
         ]));
         $response->headers->set('Content-Type', 'text/xml');
 

@@ -1,6 +1,11 @@
 .section-form {
     width: 35%;
 
+    @include until($tablet
+    ) {
+        width: 80%;
+    }
+
     .section-form-title {
         color: $idci-color-grey;
         font-size: $idci-font-2x;
@@ -37,8 +42,8 @@
                 select {
                     background-color: $idci-color-white;
                     border: 1px solid $idci-color-light-grey;
-                    margin-left: 1rem;
                     padding: 0.5rem;
+                    width: 100%;
                 }
 
                 img {

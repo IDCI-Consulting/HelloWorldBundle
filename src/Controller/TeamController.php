@@ -15,10 +15,12 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  */
 class TeamController extends AbstractController
 {
+    private string $cvDirectoryPath;
     private $httpClient;
 
-    public function __construct(HttpClientInterface $pdfGeneratorClient)
+    public function __construct(string $cvDirectoryPath, HttpClientInterface $pdfGeneratorClient)
     {
+        $this->cvDirectoryPath = $cvDirectoryPath;
         $this->httpClient = $pdfGeneratorClient;
     }
 
@@ -33,32 +35,25 @@ class TeamController extends AbstractController
     /**
      * @Route("/{slug}.{_format}", methods={"GET"}, name="member", requirements={"_format"="json|html|pdf"}, defaults={"_format": "html"})
      */
-    public function member(Request $request, string $slug, string $_format, string $_locale): Response
-    {      
-        try {
-            $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s_%s.json', $slug, $_locale), 'r');
-        } catch(\Exception $e) {
-            return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
-        }
-
-        $rawJson = $cvFile->fread($cvFile->getSize());
-        $cvJson = json_decode($rawJson, true);
+    public function member(Request $request, string $slug, string $_format): Response
+    {
+        $cv = json_decode(file_get_contents(sprintf($this->cvDirectoryPath . '%s.json', $slug)), true);
 
         if ('json' === $_format) {
-            return new JsonResponse($cvJson);
+            return new JsonResponse($cv);
         }
 
         if ('html' === $_format) {
             return $this->render('team/show.html.twig', [
                 'slug' => $slug,
-                'data' => $cvJson,
+                'data' => $cv,
             ]);
         }
 
         $response = $this->httpClient->request('POST', '/', [
             'body' => json_encode([
                 'contents' => base64_encode($this->renderView('team/pdf.html.twig', [
-                    'data' => $cvJson,
+                    'data' => $cv,
                 ])),
             ]),
         ]);

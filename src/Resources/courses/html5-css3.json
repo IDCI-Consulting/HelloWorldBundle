@@ -1,0 +1,396 @@
+{
+    "id": "html5-css3",
+    "name": "HTML5 - CSS3",
+    "media": "html5-css3.svg",
+    "days": [
+        {
+            "label": {
+                "fr": "Jour 1", 
+                "en": "Day 1"
+            },
+            "items": [
+                {
+                    "title": {
+                        "fr": "HTML / CSS",
+                        "en": "HTML / CSS"
+                    },
+                    "duration": 0,
+                    "concepts": {}
+                },
+                {
+                    "title": {
+                        "fr": "Introduction",
+                        "en": "Introduction"
+                    },
+                    "duration": 120,
+                    "concepts": {
+                        "fr": [
+                            "Fonctionnement du web",
+                            "W3C : de l'utilité des normes"
+                        ],
+                        "en": [
+                            "Web functionnement",
+                            "W3C : norms usefulness"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "HTML5 / CSS3 : POURQUOI ILS FONT TANT PARLER D'EUX",
+                        "en": "HTML5 / CSS3 : Why do everybody talk about them"
+                    },
+                    "duration": 120,
+                    "concepts": {
+                        "fr": [
+                            "Pourquoi utiliser le HTML et le CSS ? Comment les utiliser ? Et le HTML5 / CSS3 dans tout ça ?",
+                            "Optimisation des balises pour les moteurs de recherche (SEO)",
+                            "Quid de la compatibilité entre navigateurs ?",
+                            "L'avenir du HTML ?"
+                        ],
+                        "en": [
+                            "Why use HTML and CSS ? How to use them ? And HTML5 and CSS3 in all of this ?",
+                            "Tags optimisation for search engines(SEO)",
+                            "What about the compatibility between browsers ?",
+                            "HTML future ?"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "HTML5",
+                        "en": "HTML5 "
+                    },
+                    "duration": 0,
+                    "concepts": {}
+                },
+                {
+                    "title": {
+                        "fr": "UTILISER LE HTML5 AUJOURD'HUI",
+                        "en": "Use HTML5 today"
+                    },
+                    "duration": 60,
+                    "concepts": {
+                        "fr": [
+                            "Savoir quand choisir le HTML 5",
+                            "Utiliser le HTML5 avec des navigateurs qui ne le supportent pas"
+                        ],
+                        "en": [
+                            "Know when to use HTML5",
+                            "Use HTML5 with browsers that doesnt support it"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "BALISAGE HTML5",
+                        "en": "HTML5 markups"
+                    },
+                    "duration": 180,
+                    "concepts": {
+                        "fr": [
+                            "Structure d'une page : disparition des notions \"en ligne\" et \"bloc\"",
+                            "Doctype en HTML5",
+                            "Les nouveaux éléments : section, article, aside, nav, etc",
+                            "Quelques balises supplémentaires",
+                            "Dates et temps",
+                            "Les éléments obsolètes : center, font, frame, acronym, etc"
+                        ],
+                        "en": [
+                            "Page structure : disappearance \"in line\" and \"block\" notions",
+                            "Doctype in HTML5",
+                            "New elements : section, article, aside, nav, etc",
+                            "Some additional tags",
+                            "Dates and time",
+                            "The obsolete elements : center, font, frame, acronym, etc"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": {
+                "fr": "Jour 2",
+                "en": "Day 2"
+            },
+            "items": [
+                {
+                    "title": {
+                        "fr": "WEB SÉMANTIQUE ET HTML5",
+                        "en": "WEB semantic and HTML5"
+                    },
+                    "duration": 120,
+                    "concepts": {
+                        "fr": [
+                            "Elements sémantiques : donner du sens à ses contenus",
+                            "Les micro données"
+                        ],
+                        "en": [
+                            "Semantic elements : give meaning to your content",
+                            "Micro data"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "FORMULAIRES HTML 5",
+                        "en": "HTML5 forms"
+                    },
+                    "duration": 180,
+                    "concepts": {
+                        "fr": [
+                            "Balise form",
+                            "Créer et utiliser des formulaires en HTML 5",
+                            "Gestion des dates, des emails, ..",
+                            "Les validations de formulaire en HTML5",
+                            "Auto focus"
+                        ],
+                        "en": [
+                            "Form tag",
+                            "Create and use HTML5 forms",
+                            "Dates, emails, management, etc.",
+                            "HTML5 forms validations",
+                            "Auto focus"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "VUE D'ENSEMBLE DES APIS JAVASCRIPT POUR HTML 5",
+                        "en": "PANORAMIC VIEWS OF JAVASCRIPT APIS FOR HTML5"
+                    },
+                    "duration": 180,
+                    "concepts": {
+                        "fr": [
+                            "Les APIs HTML 5",
+                            "Gestion des fichiers",
+                            "Site web hors ligne",
+                            "Drag & Drop",
+                            "Zoom sur quelques APIs"
+                        ],
+                        "en": [
+                            "HTML5 APIs",
+                            "Files management",
+                            "Offline websites",
+                            "Drag & Drop",
+                            "Zoom on some APIs"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": {
+                "fr": "Jour 3",
+                "en": "Day 3"
+            },
+            "items": [
+                {
+                    "title": {
+                        "fr": "ZOOM SUR L'API DE GESTION AUDIO ET VIDÉO EN HTML 5",
+                        "en": "Zoom on video and audio management API in HTML5"
+                    },
+                    "duration": 240,
+                    "concepts": {
+                        "fr": [
+                            "Les éléments audio et video",
+                            "Les conteneurs",
+                            "Contrôler la vidéo et l'audio avec l'API HTML5",
+                            "Support et formats (codecs WebM, MP4, H.264, MP3, AAC, etc)",
+                            "Gérer plusieurs sources vidéos/audios",
+                            "Streaming",
+                            "Ajouter des sous-titres à une vidéo HTML5"
+                        ],
+                        "en": [
+                            "The audio and video elements",
+                            "The containers",
+                            "Control the video and audio with the HTML5 API",
+                            "Support and formats (codecs WebM, MP4, H.264, MP3, AAC, etc)",
+                            "Manage many audio and videos sources",
+                            "Streaming",
+                            "Add subtitles to a HTML5 video"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "ZOOM SUR L'API DE DESSIN EN HTML 5",
+                        "en": "Zoom on drawing API in HTML5"
+                    },
+                    "duration": 240,
+                    "concepts": {
+                        "fr": [
+                            "Dessiner en JavaScript",
+                            "Canvas vs SVG",
+                            "Contexte",
+                            "Accessibilité"
+                        ],
+                        "en": [
+                            "Draw in JavaScript",
+                            "Canvas vs SVG",
+                            "Context",
+                            "Accessibility"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": {
+                "fr": "Jour 4",
+                "en": "Day 4"
+            },
+            "items": [
+                {
+                    "title": {
+                        "fr": "ZOOM SUR L'API DE COMMUNICATION EN HTML 5",
+                        "en": "Zoom on communication API in HTML5"
+                    },
+                    "duration": 240,
+                    "concepts": {
+                        "fr": [
+                            "Les événements",
+                            "Envoi de messages entre documents",
+                            "Envoi de messages par canaux",
+                            "Le push serveur",
+                            "Web Sockets",
+                            "Présentation de node.js",
+                            "Les Web Workers pour le multi-tâches"
+                        ],
+                        "en": [
+                            "Events",
+                            "Sending messages between files",
+                            "Sending messages by channel",
+                            "Serve push",
+                            "Web Sockets",
+                            "Node.js presentation",
+                            "Web Workers for the multi-tasks"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "ZOOM SUR L'API DE GÉO-LOCALISATION AVEC HTML 5",
+                        "en": "Zoom on geo-location API in HTML5"
+                    },
+                    "duration": 120,
+                    "concepts": {
+                        "fr": [
+                            "Vue d'ensemble",
+                            "La vie privée de l'utilisateur",
+                            "Géolocaliser ses utilisateurs sur Google Maps"
+                        ],
+                        "en": [
+                            "Overview",
+                            "User's private life",
+                            "Geolocate your users on Google Maps"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "ZOOM SUR L'API DE STORAGE AVEC HTML 5",
+                        "en": "Zoom on storage API with HTML 5"
+                    },
+                    "duration": 120,
+                    "concepts": {
+                        "fr": [
+                            "API storage",
+                            "Storage local",
+                            "Storage en session",
+                            "Différence entre le storage local / session"
+                        ],
+                        "en": [
+                            "API storage",
+                            "Local storage",
+                            "Session storage",
+                            "Difference between local / session storage"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": {
+                "fr": "Jour 5",
+                "en": "Day 5"
+            },
+            "items": [
+                {
+                    "title": {
+                        "fr": "ZOOM SUR L'API DE STORAGE AVEC HTML 5",
+                        "en": "Zoom on storage API with HTML 5"
+                    },
+                    "duration": 120,
+                    "concepts": {
+                        "fr": [
+                            "Vue d'ensemble : se passer d'images, éviter les astuces",
+                            "Selecteurs CSS3",
+                            "Coins arrondis",
+                            "Ombres portés",
+                            "Transparence",
+                            "Effets de texte",
+                            "Mise en page et positionnement",
+                            "Autres nouveautés"
+                        ],
+                        "en": [
+                            "Overview : do without pictures, avoid tricks",
+                            "CSS3 selectors",
+                            "Rounded corners",
+                            "Drop shadows",
+                            "Opacity",
+                            "Text effects",
+                            "Layout and positionning",
+                            "Other novelties"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "CSS3 : MISE EN PAGE ET POSITIONNEMENT",
+                        "en": "CSS3 : Layout and positionning"
+                    },
+                    "duration": 180,
+                    "concepts": {
+                        "fr": [
+                            "Vue d'ensemble : clarifier le code, éviter la multiplication de imbriquées",
+                            "Niveau de présentation",
+                            "Mise en page par patron",
+                            "Mise en page multi-colonnes",
+                            "Mise en page par boite horizontales ou verticales",
+                            "Comprendre les couleurs en CSS3",
+                            "Positionnement par grille",
+                            "Rotation d'éléments"
+                        ],
+                        "en": [
+                            "Overview : clarify the code, avoid multiplication of nested",
+                            "Presentation level",
+                            "Layout by design pattern",
+                            "Layout by multi-colons",
+                            "Layout by horizontals or verticals boxes",
+                            "Understand the colors in CSS3",
+                            "Positionning by grid",
+                            "Elements rotation"
+                        ]
+                    }
+                },
+                {
+                    "title": {
+                        "fr": "CSS3 : ANIMATION",
+                        "en": "CSS3 : ANIMATION"
+                    },
+                    "duration": 120,
+                    "concepts": {
+                        "fr": [
+                            "Transformations (2D et 3D)",
+                            "Transitions"
+                        ],
+                        "en": [
+                            "Transformations (2D and 3D)",
+                            "Transitions"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

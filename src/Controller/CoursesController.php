@@ -16,29 +16,26 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  */
 class CoursesController extends AbstractController
 {
-    private string $coursesPath;
+    private string $coursesDirectoryPath;
     private $httpClient;
 
-    public function __construct(string $coursesPath, HttpClientInterface $pdfGeneratorClient)
+    public function __construct(string $coursesDirectoryPath, HttpClientInterface $pdfGeneratorClient)
     {
-        $this->coursesPath = $coursesPath;
+        $this->coursesDirectoryPath = $coursesDirectoryPath;
         $this->httpClient = $pdfGeneratorClient;
     }
 
     /**
      * @Route("/", methods={"GET"}, name="list")
      */
-    public function list(Request $request, string $_locale): Response
+    public function index(Request $request): Response
     {
         $finder = new Finder();
-        $finder->files()->in($this->coursesPath);
+        $finder->files()->in($this->coursesDirectoryPath);
         $courses = [];
-        $pattern = sprintf('/%s.json$/', $_locale);
 
         foreach ($finder as $file) {
-            if (1 == preg_match($pattern, $file->getFileName())) {
-                $courses[] = json_decode(file_get_contents($file->getPathName()), true);
-            }
+            $courses[] = json_decode(file_get_contents($file->getPathName()), true);
         }
 
         return $this->render('courses/list.html.twig', [
@@ -49,25 +46,18 @@ class CoursesController extends AbstractController
     /**
      * @Route("/{slug}.{_format}", methods={"GET"}, name="show", requirements={"_format"="json|pdf"}, defaults={"_format": "pdf"})
      */
-    public function show(Request $request, String $slug, string $_format, string $_locale): Response
+    public function show(Request $request, String $slug, string $_format): Response
     {
-        try {
-            $courseFile = new \SplFileObject(sprintf('../src/Resources/courses/%s_%s.json', $slug, $_locale), 'r');
-        } catch(\Exception $e) {
-            return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
-        }
-
-        $rawJson = $courseFile->fread($courseFile->getSize());
-        $courseJson = json_decode($rawJson, true);
+        $course = json_decode(file_get_contents(sprintf($this->coursesDirectoryPath . '%s.json', $slug)), true);
 
         if ('json' === $_format) {
-            return new JsonResponse($courseJson);
+            return new JsonResponse($course);
         }
 
         $response = $this->httpClient->request('POST', '/', [
             'body' => json_encode([
                 'contents' => base64_encode($this->renderView('courses/pdf.html.twig', [
-                    'course' => $courseJson,
+                    'course' => $course,
                 ])),
             ]),
         ]);

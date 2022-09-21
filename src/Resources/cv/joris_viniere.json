@@ -1,0 +1,344 @@
+{
+    "identity": {
+        "firstName": "Joris",
+        "lastName": "Vinière",
+        "birthDate": "2001-12-25T00:00:00Z",
+        "job": {
+            "fr": "Développeur Web FullStack",
+            "en": "FullStack Web Developer"
+        },
+        "media": "",
+        "email": "joris.viniere@idci-consulting.fr",
+        "phone": "07 68 48 32 58",
+        "website": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/mwlite/in/joris-viniere-7ba645204"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Alternant Développeur Web FullStack",
+                "en": "Apprentice FullStack Web Developer"
+            },
+            "startDate": "2021-09-15T00:00:00Z",
+            "endDate": "2022-09-13T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
+                    "Creation of a website for a client",
+                    "Maintenir et améliorer un site sur demande du client",
+                    "Développer des relations avec les clients"
+                ],
+                "en": [
+                    "Deepening of knowledge on the technologies used by the company",
+                    "Création d'un site web pour un client",
+                    "Maintain and improve a site as requested by the client",
+                    "Develop relationships with customers"
+                ]
+            }
+        },
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Stagiaire Développeur Web FullStack",
+                "en": "Intern FullStack Web Developer"
+            },
+            "startDate": "2021-04-15T00:00:00Z",
+            "endDate": "2021-06-31T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Apprentissage des technologies utilisées par l'entreprise",
+                    "Création d'un site web pour un client",
+                    "Apprentissage de la méthode agile"
+                ],
+                "en": [
+                    "Learning the technologies used by the company",
+                    "Creation of a website for a client",
+                    "Learning the agile method"
+                ]
+            }
+        },
+        {
+            "company": "Vétisol",
+            "role": {
+                "fr": "Opérateur de production",
+                "en": "Production operator"
+            },
+            "startDate": "2020-07-01T00:00:00Z",
+            "endDate": "2020-08-07T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Aide à la préparation et au suivi des machines",
+                    "Assistance à la gestion de l'approvisionnement",
+                    "Prise de décision sur la technique",
+                    "Soutien lors du contrôle qualité des produits"
+                ],
+                "en": [
+                    "Assistance in the preparation and monitoring of machines",
+                    "Supply management support",
+                    "Technical decision making",
+                    "Support during product quality control"
+                ]
+            }
+        },
+        {
+            "company": "Le Saint Laurent, Georges Blanc",
+            "role": {
+                "fr": "Commis de salle",
+                "en": "Room clerk"
+            },
+            "startDate": "2019-07-01T00:00:00Z",
+            "endDate": "2019-08-10T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Service des plats en salle",
+                    "Développer des relations avec les clients",
+                    "Maintient d'hygiène de l'établissement"
+                ],
+                "en": [
+                    "Serve dishes in room",
+                    "Develop relationships with customers",
+                    "Maintaining the hygiene of the establishment"
+                ]
+            }
+        },
+        {
+            "company": "Le Saint Laurent, Georges Blanc",
+            "role": {
+                "fr": "Commis de salle",
+                "en": "Room clerk"
+            },
+            "startDate": "2018-07-01T00:00:00Z",
+            "endDate": "2018-08-10T00:00:00Z",
+            "website": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Service des plats en salle",
+                    "Développer des relations avec les clients",
+                    "Maintient d'hygiène de l'établissement"
+                ],
+                "en": [
+                    "Serve dishes in room",
+                    "Develop relationships with customers",
+                    "Maintaining the hygiene of the establishment"
+                ]
+            }
+        }
+    ],
+    "personalExperiences": [
+        {
+            "organization": {
+                "fr": "Club de Basket de Feillens",
+                "en": "Feillens Basketball Club"
+            },
+            "role": {
+                "fr": "Bénévole",
+                "en": "Volunteer"
+            },
+            "website": "",
+            "startDate": "2017-09-01T00:00:00Z",
+            "endDate": "2020-06-31T00:00:00Z",
+            "description": {
+                "fr": "Arbitre bénévole pour les matchs du club de Basket de Feillens",
+                "en": "Volunteer referee for the matches of the Feillens basketball club"
+            }
+        }
+    ],
+    "education": [
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "DUT Informatique",
+            "location": "Bourg-en-Bresse",
+            "startDate": "2019-09-01T00:00:00Z",
+            "endDate": "2021-07-01T00:00:00Z"
+        },
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Licence Professionnelle Informatique",
+            "location": "Bourg-en-Bresse",
+            "startDate": "2021-09-21T00:00:00Z",
+            "endDate": "2022-09-13T00:00:00Z"
+        }
+    ],
+    "expertises": [
+        {
+            "name": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Langages informatique",
+                        "en": "Computer languages"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "HTML5",
+                        "CSS3",
+                        "PHP",
+                        "Javascript",
+                        "C++",
+                        "Java",
+                        "Bash",
+                        "SQL"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "OS",
+                        "en": "OS"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Windows",
+                        "Linux (Ubuntu)"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks",
+                        "en": "Frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Symfony",
+                        "VueJS",
+                        "Bootstrap",
+                        "Bulma"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Moteur de template",
+                        "en": "Templates engine"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Twig"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Versioning",
+                        "en": "Versioning"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Gitlab"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Base de Données",
+                        "en": "Databases"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "MySQL",
+                        "PostgreSQL"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Conteneurisation",
+                        "en": "Containerization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Gestion de projet",
+                        "en": "Project management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Redmine"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Modélisation",
+                        "en": "Schematization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "fr": "langues",
+                "en": "languages"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Français",
+                        "en": "French"
+                    },
+                    "level": {
+                        "fr": "Natif",
+                        "en": "Native"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Anglais",
+                        "en": "English"
+                    },
+                    "level": {
+                        "fr": "B2",
+                        "en": "B2"
+                    }
+                }
+            ]
+        }
+    ],
+    "hobbies": {
+        "fr": [
+            {
+                "name": "Piano",
+                "description": "Je pratique cet instrument en auto-didacte"
+            }
+        ],
+        "en": [
+            {
+                "name": "Piano",
+                "description": "I practice this instrument as a self-taught"
+            }
+        ]
+    }
+}
