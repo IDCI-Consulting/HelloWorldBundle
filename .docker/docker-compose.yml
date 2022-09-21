@@ -20,14 +20,14 @@ services:
     image: nginx
     deploy:
       labels:
-        - "traefik.http.routers.idci-nginx.rule=Host(`idci-website.docker`)"
-        - "traefik.http.routers.idci-nginx-https.rule=Host(`idci-website.docker`)"
-        - "traefik.docker.network=traefik_reverse_proxy"
-        - "traefik.http.services.idci-nginx.loadbalancer.server.port=80"
         - "traefik.enable=true"
+        - "traefik.docker.network=traefik_reverse_proxy"
         - "traefik.docker.lbswarm=true"
+        - "traefik.http.services.idci-nginx.loadbalancer.server.port=80"
         - "traefik.http.routers.idci-nginx.entryPoints=web"
+        - "traefik.http.routers.idci-nginx.rule=Host(`idci-website.docker`)"
         - "traefik.http.routers.idci-nginx-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-nginx-https.rule=Host(`idci-website.docker`)"
         - "traefik.http.routers.idci-nginx-https.tls=true"
         - "traefik.http.routers.idci-nginx-https.tls.certresolver=letsencrypt"
     configs:
@@ -52,14 +52,14 @@ services:
     image: rediscommander/redis-commander
     deploy:
       labels:
-        - "traefik.http.routers.idci-redis-commander.rule=Host(`redis-commander.idci-website.docker`)"
-        - "traefik.http.routers.idci-redis-commander-https.rule=Host(`redis-commander.idci-website.docker`)"
-        - "traefik.docker.network=traefik_reverse_proxy"
-        - "traefik.http.services.idci-redis-commander.loadbalancer.server.port=8081"
         - "traefik.enable=true"
+        - "traefik.docker.network=traefik_reverse_proxy"
         - "traefik.docker.lbswarm=true"
+        - "traefik.http.services.idci-redis-commander.loadbalancer.server.port=8081"
         - "traefik.http.routers.idci-redis-commander.entryPoints=web"
+        - "traefik.http.routers.idci-redis-commander.rule=Host(`redis-commander.idci-website.docker`)"
         - "traefik.http.routers.idci-redis-commander-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-redis-commander-https.rule=Host(`redis-commander.idci-website.docker`)"
         - "traefik.http.routers.idci-redis-commander-https.tls=true"
         - "traefik.http.routers.idci-redis-commander-https.tls.certresolver=letsencrypt"
     environment:
