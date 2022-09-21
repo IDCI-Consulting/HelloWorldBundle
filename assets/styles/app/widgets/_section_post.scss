@@ -1,0 +1,203 @@
+.section-post {
+    margin: auto;
+    margin-bottom: 4rem;
+
+    @include until($tablet) {
+        width: 100% !important;
+    }
+
+    h1 {
+        color: $idci-color-blue;
+        text-align: center;
+        font-size: $idci-font-2-5x;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+    }
+
+    h2 {
+        border-bottom: 2px dotted $idci-color-blue;
+        color: $idci-color-blue;
+        font-size: $idci-font-2x;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+
+    h3 {
+        border-bottom: 2px dotted $idci-color-green;
+        color: $idci-color-green;
+        font-size: $idci-font-1-5x;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    iframe {
+        display: block;
+        height: 20rem;
+        margin: auto;
+        margin-top: 2rem;
+        width: 50%;
+
+        @include until($tablet) {
+            width: 100%;
+        }
+    }
+
+    pre {
+        background-color: $idci-color-light-grey;
+        border: 2px solid $idci-color-grey;
+        border-radius: 5px;
+        margin-top: 2rem;
+    }
+
+    .section-post-speaker {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin-top: 2rem;
+
+        .section-post-speaker-description {
+            width: 50%;
+            text-align: justify;
+
+            @include until($tablet) {
+                margin: auto;
+                width: 100%;
+            }
+        }
+
+        .section-post-speaker-media {
+            width: 20%;
+
+            @include until($tablet) {
+                margin: auto;
+                text-align: center;
+                width: 70%;
+            }
+        }
+
+        @include until($tablet) {
+            flex-direction: column;
+        }
+    }
+
+    .section-post-media {
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .section-post-notice {
+        background-color: $idci-color-light-blue;
+        color: $idci-color-dark-blue;
+        border-radius: 15px;
+        padding: 1rem;
+        min-height: 60px;
+
+        &::before {
+            content: "-";
+            display: inline-block;
+            height: 35px;
+            left: -25px;
+            position: relative;
+            text-indent: -9999px;
+            top: -25px;
+            width: 40px;
+        }      
+
+        &.info {
+            &::before {
+                background: url(../../../images/blog/information-icon.svg) top left no-repeat;
+                background-size: 35px;
+            }
+        }
+
+        &.question {
+            background-color: $idci-color-light-grey;
+
+            &::before {
+              background: url(../../../images/blog/question-icon.svg) no-repeat;
+              background-size: 35px;
+            }      
+        }
+
+        &.warning {
+            background-color: $idci-color-yellow;
+
+            &::before {
+              background: url(../../../images/blog/exclamation-icon.svg) no-repeat;
+              background-size: 40px;
+            }
+        }
+    }
+
+    .section-post-list {
+        li {
+            display: flex;
+            //flex-wrap: wrap;
+            margin-left: 1rem;
+    
+            &::before {
+                content: "○";
+                display : block;
+                margin-right: 1rem;
+            }
+
+            ul {
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .section-post-table {
+        @include until($tablet) {
+            overflow-x: auto;
+        }
+
+        table {
+            border: 1px solid $idci-color-grey;
+
+            @include until($tablet) {
+                min-width: 50rem;
+            }
+    
+            thead {
+                background-color: $idci-color-light-grey;
+                
+                tr {
+                    th {
+                        padding: .5rem 1rem;
+                    }
+                }
+            }
+    
+            tbody {
+                tr {
+                    th {
+                        padding: .5rem 1rem;
+                        vertical-align: middle;
+                    }
+    
+                    td {
+                        padding: .5rem 1rem;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
