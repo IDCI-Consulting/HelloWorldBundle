@@ -23,10 +23,6 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    App\Controller\CoursesController:
-        arguments:
-            $coursesPath: '%kernel.project_dir%/src/Resources/courses/'
-
     App\Event\Subscriber\ContactSubscriber:
         arguments:
             $contactRecipientsAddresses: '%env(json:MAILER_RECIPIENT_ADDRESSES)%'
@@ -35,6 +31,14 @@ services:
         arguments:
             $postsConfigPath: '%kernel.project_dir%/src/Resources/blog/posts.json'
     
+    App\Controller\CoursesController:
+        arguments:
+            $coursesConfigPath: '%kernel.project_dir%/src/Resources/courses/'
+
+    App\Controller\TeamController:
+        arguments:
+            $teamConfigPath: '%kernel.project_dir%/src/Resources/cv/'
+
     # twig
     App\Twig\AppExtension:
         arguments:

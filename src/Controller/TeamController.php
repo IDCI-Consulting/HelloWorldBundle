@@ -15,10 +15,12 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  */
 class TeamController extends AbstractController
 {
+    private string $teamConfigPath;
     private $httpClient;
 
-    public function __construct(HttpClientInterface $pdfGeneratorClient)
+    public function __construct(string $teamConfigPath, HttpClientInterface $pdfGeneratorClient)
     {
+        $this->teamConfigPath = $teamConfigPath;
         $this->httpClient = $pdfGeneratorClient;
     }
 
@@ -36,7 +38,7 @@ class TeamController extends AbstractController
     public function member(Request $request, string $slug, string $_format): Response
     {      
         try {
-            $cvFile = new \SplFileObject(sprintf('../src/Resources/cv/%s.json', $slug), 'r');
+            $cvFile = new \SplFileObject(sprintf($this->teamConfigPath . '%s.json', $slug), 'r');
         } catch(\Exception $e) {
             return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
         }

@@ -16,12 +16,12 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  */
 class CoursesController extends AbstractController
 {
-    private string $coursesPath;
+    private string $coursesConfigPath;
     private $httpClient;
 
-    public function __construct(string $coursesPath, HttpClientInterface $pdfGeneratorClient)
+    public function __construct(string $coursesConfigPath, HttpClientInterface $pdfGeneratorClient)
     {
-        $this->coursesPath = $coursesPath;
+        $this->coursesConfigPath = $coursesConfigPath;
         $this->httpClient = $pdfGeneratorClient;
     }
 
@@ -31,7 +31,7 @@ class CoursesController extends AbstractController
     public function index(Request $request, string $_locale): Response
     {
         $finder = new Finder();
-        $finder->files()->in($this->coursesPath);
+        $finder->files()->in($this->coursesConfigPath);
         $courses = [];
 
         foreach ($finder as $file) {
@@ -49,7 +49,7 @@ class CoursesController extends AbstractController
     public function show(Request $request, String $slug, string $_format): Response
     {
         try {
-            $courseFile = new \SplFileObject(sprintf('../src/Resources/courses/%s.json', $slug), 'r');
+            $courseFile = new \SplFileObject(sprintf($this->coursesConfigPath . '%s.json', $slug), 'r');
         } catch(\Exception $e) {
             return $this->render('bundles/TwigBundle/Exception/error404.html.twig');
         }
