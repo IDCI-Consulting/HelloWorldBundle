@@ -8,6 +8,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "gregwar/captcha-bundle": "^2.2",
+        "league/commonmark": "^2.3",
         "sensio/framework-extra-bundle": "^6.2",
         "symfony/console": "6.0.*",
         "symfony/dotenv": "6.0.*",
@@ -26,6 +27,7 @@
         "symfony/yaml": "6.0.*",
         "twig/cssinliner-extra": "^3.3",
         "twig/extra-bundle": "^3.3",
+        "twig/markdown-extra": "^3.4",
         "twig/string-extra": "^3.4",
         "twig/twig": "^2.12|^3.0"
     },
