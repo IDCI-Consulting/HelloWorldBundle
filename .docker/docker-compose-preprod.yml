@@ -20,16 +20,9 @@ services:
     image: nginx
     deploy:
       labels:
-        - "traefik.enable=true"
-        - "traefik.docker.network=traefik_reverse_proxy"
-        - "traefik.docker.lbswarm=true"
-        - "traefik.http.services.idci-nginx.loadbalancer.server.port=80"
-        - "traefik.http.routers.idci-nginx.entryPoints=web"
-        - "traefik.http.routers.idci-nginx.rule=Host(`preprod.idci-consulting.fr`, `www.preprod.idci-consulting.fr`)"
-        - "traefik.http.routers.idci-nginx-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-nginx-https.rule=Host(`preprod.idci-consulting.fr`, `www.preprod.idci-consulting.fr`)"
-        - "traefik.http.routers.idci-nginx-https.tls=true"
-        # - "traefik.http.routers.idci-nginx-https.tls.certresolver=letsencrypt"
+        traefik.frontend.rule: "Host: preprod.idci-consulting.fr"
+        traefik.docker.network: "traefik_reverse-proxy"
+        traefik.port: "80"
     configs:
       - source: nginx_conf
         target: /etc/nginx/conf.d/default.conf
