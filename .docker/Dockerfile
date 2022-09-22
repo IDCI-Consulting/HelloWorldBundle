@@ -67,7 +67,6 @@ RUN . $NVM_DIR/nvm.sh \
     && npm install \
 	&& npm install --global yarn \
 	&& yarn --version \
-    && yarn add @symfony/webpack-encore --dev \
     && yarn install \
     && yarn encore production
 
