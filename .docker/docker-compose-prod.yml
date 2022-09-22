@@ -51,8 +51,8 @@ services:
   wkhtmltopdf:
     image: traumfewo/docker-wkhtmltopdf-aas:latest
     environment:
-      - USER=idci-2022-prod-user
-      - PASS=idci:2022!prod
+      - USER=wkuser
+      - PASS=ethi4ZooVee2
       - PAYLOAD_LIMIT=1mb
     networks:
       wkhtmltopdf: ~
