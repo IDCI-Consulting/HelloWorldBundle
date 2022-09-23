@@ -16,7 +16,22 @@ build-docker-image:
   only:
     - tags
 
-start-production:
+deploy-to-preprod:
+  stage: deploy
+  variables:
+    DOCKER_HOST: ${DOCKER_PROD_HOST}
+  image: docker:latest
+  script:
+    - docker login -u ${DOCKER_REGISTRY_LOGIN} -p ${DOCKER_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - docker stack deploy -c ${CI_PROJECT_DIR}/.docker/docker-compose-preprod.yml ${STACK_NAME}_preprod
+  environment:
+    name: pre-production
+    url: https://www.preprod.idci-consulting.fr/
+  when: manual
+  only:
+    - tags
+
+deploy-to-prod:
   stage: deploy
   variables:
     DOCKER_HOST: ${DOCKER_PROD_HOST}
@@ -27,39 +42,6 @@ start-production:
   environment:
     name: production
     url: https://www.idci-consulting.fr/
-    on_stop: stop-production
-  when: manual
-  only:
-    - tags
-
-stop-production:
-  stage: deploy
-  variables:
-    DOCKER_HOST: ${DOCKER_PROD_HOST}
-  image: docker:latest
-  script:
-    - docker stack rm ${STACK_NAME}
-  environment:
-    name: production
-    url: https://www.idci-consulting.fr/
-    action: stop
-  when: manual
-  only:
-    - tags
-
-update-production:
-  stage: deploy
-  variables:
-    DOCKER_HOST: ${DOCKER_PROD_HOST}
-  image: docker:latest
-  script:
-    - docker login -u ${DOCKER_REGISTRY_LOGIN} -p ${DOCKER_REGISTRY_PASSWORD} ${CI_REGISTRY}
-    - docker image pull ${CONTAINER_RELEASE_IMAGE}:${CI_COMMIT_TAG}
-    - docker service update --force ${STACK_NAME}_php --image ${CONTAINER_RELEASE_IMAGE}:${CI_COMMIT_TAG}
-  environment:
-    name: production
-    url: https://www.idci-consulting.fr/
-    on_stop: stop-production
   when: manual
   only:
     - tags
