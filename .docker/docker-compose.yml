@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   php:
-    image: docker-registry.idci-consulting.fr/idci-website/php-fpm:dev
+    image: docker-registry.idci-consulting.fr/idci-consulting/website/php-fpm:dev
     configs:
       - source: php_conf
         target: /usr/local/etc/php/php.ini
@@ -23,13 +23,13 @@ services:
         - "traefik.enable=true"
         - "traefik.docker.network=traefik_reverse_proxy"
         - "traefik.docker.lbswarm=true"
-        - "traefik.http.services.idci-nginx.loadbalancer.server.port=80"
-        - "traefik.http.routers.idci-nginx.entryPoints=web"
-        - "traefik.http.routers.idci-nginx.rule=Host(`idci-website.docker`)"
-        - "traefik.http.routers.idci-nginx-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-nginx-https.rule=Host(`idci-website.docker`)"
-        - "traefik.http.routers.idci-nginx-https.tls=true"
-        - "traefik.http.routers.idci-nginx-https.tls.certresolver=letsencrypt"
+        - "traefik.http.services.idci-website-nginx.loadbalancer.server.port=80"
+        - "traefik.http.routers.idci-website-nginx.entryPoints=web"
+        - "traefik.http.routers.idci-website-nginx.rule=Host(`idci-website.docker`)"
+        - "traefik.http.routers.idci-website-nginx-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-website-nginx-https.rule=Host(`idci-website.docker`)"
+        - "traefik.http.routers.idci-website-nginx-https.tls=true"
+        - "traefik.http.routers.idci-website-nginx-https.tls.certresolver=letsencrypt"
     configs:
       - source: nginx_conf
         target: /etc/nginx/conf.d/default.conf
@@ -55,19 +55,19 @@ services:
         - "traefik.enable=true"
         - "traefik.docker.network=traefik_reverse_proxy"
         - "traefik.docker.lbswarm=true"
-        - "traefik.http.services.idci-redis-commander.loadbalancer.server.port=8081"
-        - "traefik.http.routers.idci-redis-commander.entryPoints=web"
-        - "traefik.http.routers.idci-redis-commander.rule=Host(`redis-commander.idci-website.docker`)"
-        - "traefik.http.routers.idci-redis-commander-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-redis-commander-https.rule=Host(`redis-commander.idci-website.docker`)"
-        - "traefik.http.routers.idci-redis-commander-https.tls=true"
-        - "traefik.http.routers.idci-redis-commander-https.tls.certresolver=letsencrypt"
+        - "traefik.http.services.idci-website-redis-commander.loadbalancer.server.port=8081"
+        - "traefik.http.routers.idci-website-redis-commander.entryPoints=web"
+        - "traefik.http.routers.idci-website-redis-commander.rule=Host(`redis-commander.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-redis-commander-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-website-redis-commander-https.rule=Host(`redis-commander.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-redis-commander-https.tls=true"
+        - "traefik.http.routers.idci-website-redis-commander-https.tls.certresolver=letsencrypt"
     environment:
       - REDIS_HOSTS=session:redis
     networks:
       - traefik_reverse_proxy
       - redis
-      
+
   mailhog:
     image: mailhog/mailhog
     deploy:
@@ -75,13 +75,13 @@ services:
         - "traefik.enable=true"
         - "traefik.docker.network=traefik_reverse_proxy"
         - "traefik.docker.lbswarm=true"
-        - "traefik.http.services.idci-mailhog.loadbalancer.server.port=8025"
-        - "traefik.http.routers.idci-mailhog.entryPoints=web"
-        - "traefik.http.routers.idci-mailhog.rule=Host(`mailhog.idci-website.docker`)"
-        - "traefik.http.routers.idci-mailhog-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-mailhog-https.rule=Host(`mailhog.idci-website.docker`)"
-        - "traefik.http.routers.idci-mailhog-https.tls=true"
-        - "traefik.http.routers.idci-mailhog-https.tls.certresolver=letsencrypt"
+        - "traefik.http.services.idci-website-mailhog.loadbalancer.server.port=8025"
+        - "traefik.http.routers.idci-website-mailhog.entryPoints=web"
+        - "traefik.http.routers.idci-website-mailhog.rule=Host(`mailhog.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-mailhog-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-website-mailhog-https.rule=Host(`mailhog.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-mailhog-https.tls=true"
+        - "traefik.http.routers.idci-website-mailhog-https.tls.certresolver=letsencrypt"
     networks:
       - traefik_reverse_proxy
       - mailhog
@@ -93,20 +93,20 @@ services:
         - "traefik.enable=true"
         - "traefik.docker.network=traefik_reverse_proxy"
         - "traefik.docker.lbswarm=true"
-        - "traefik.http.services.idci-wkhtmltopdf.loadbalancer.server.port=5555"
-        - "traefik.http.routers.idci-wkhtmltopdf-commander.entryPoints=web"
-        - "traefik.http.routers.idci-wkhtmltopdf.rule=Host(`wkhtmltopdf.idci-website.docker`)"
-        - "traefik.http.routers.idci-wkhtmltopdf-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-wkhtmltopdf-https.rule=Host(`wkhtmltopdf.idci-website.docker`)"
-        - "traefik.http.routers.idci-wkhtmltopdf-https.tls=true"
-        - "traefik.http.routers.idci-wkhtmltopdf-https.tls.certresolver=letsencrypt"
+        - "traefik.http.services.idci-website-wkhtmltopdf.loadbalancer.server.port=5555"
+        - "traefik.http.routers.idci-website-wkhtmltopdf-commander.entryPoints=web"
+        - "traefik.http.routers.idci-website-wkhtmltopdf.rule=Host(`wkhtmltopdf.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-wkhtmltopdf-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-website-wkhtmltopdf-https.rule=Host(`wkhtmltopdf.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-wkhtmltopdf-https.tls=true"
+        - "traefik.http.routers.idci-website-wkhtmltopdf-https.tls.certresolver=letsencrypt"
     environment:
       - USER=idci
       - PASS=idci#2022
       - PAYLOAD_LIMIT=1mb
     networks:
       wkhtmltopdf: ~
-      traefik_reverse_proxy: ~ 
+      traefik_reverse_proxy: ~
 
 configs:
   nginx_conf:

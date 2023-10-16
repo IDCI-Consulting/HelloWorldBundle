@@ -1,5 +1,5 @@
 # Stage 0:
-FROM php:8.1-fpm AS base
+FROM php:8.2-fpm AS base
 
 ## Install dependencies
 RUN apt update \
@@ -8,7 +8,8 @@ RUN apt update \
 ## Install php extensions
 RUN docker-php-ext-configure intl && docker-php-ext-install intl \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-install opcache
 
 ## Install redis dependencies
 RUN pecl install redis && docker-php-ext-enable redis

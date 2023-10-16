@@ -31,16 +31,19 @@ Once traefik run, you can check your browser at 127.0.0.1:8080
 ```
 # IDCI-Website
 127.0.0.1       idci-website.docker
+127.0.0.1       redis-commander.idci-website.docker
+127.0.0.1       mailhog.idci-website.docker
+127.0.0.1       wkhtmltopdf.idci-website.docker
 ```
 
 2. Git clone this repository
 ```sh
-$ git clone git@old-gitlab.idci-consulting.fr:idci-consulting/idci-website.git
+$ git clone git@gitlab.idci-consulting.fr:idci-consulting/website.git
 ```
 
 3. Go to the projet directory
 ```sh
-$ cd idci-website
+$ cd website
 ```
 
 4. If you need to rebuild docker app images, run the following command :
