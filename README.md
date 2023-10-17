@@ -75,9 +75,14 @@ $ make encore
 
 ## For the developers
 
+You'll need to change permissions to modify files :
+```sh
+sudo chown -R $USER:www-data . && chmod 775 -R . && find ./ -type f -exec chmod 664 {} \;
+```
+
 If you use a volume in your docker-compose, you need to update composer after the build-image :
 ```sh
-$ make composer-update
+$ make composer-install
 ```
 
 If you want the assets to be built everytime you save a .scss or .js file, you can use :

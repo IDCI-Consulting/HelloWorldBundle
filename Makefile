@@ -29,11 +29,11 @@ cs-fix:
 
 .PHONY: composer-update
 composer-update:
-	docker exec -u $(user) -t "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer update
+	docker exec -u $(user) -it "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer update
 
 .PHONY: composer-install
 composer-install:
-	docker exec -u $(user) -t "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer install --no-interaction
+	docker exec -u $(user) -it "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer install
 
 # NODE
 .PHONY: yarn
