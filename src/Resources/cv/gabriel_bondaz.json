@@ -1,0 +1,785 @@
+{
+    "identity": {
+        "firstName": "Gabriel",
+        "lastName": "Bondaz",
+        "birthDate": "1984-01",
+        "job": {
+            "fr": "Co-gérant & Ingénieur Recherche et Développement",
+            "en": "Managing director & Research and Development Engineer"
+        },
+        "media": "",
+        "email": "gabriel.bondaz@idci-consulting.fr",
+        "phone": "06 63 23 12 07",
+        "website": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/gabriel-bondaz"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/konandrum"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Co-gérant & Ingénieur Recherche et Développement",
+                "en": "Co-manager & Research and Development Engineer"
+            },
+            "website": "https://www.idci-consulting.fr/fr/",
+            "startDate": "2008-09",
+            "endDate": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Création de l'entreprise",
+                    "Conception et maintenance de sites web pour des clients",
+                    "Gestion d'équipe",
+                    "Formateur"
+                ],
+                "en": [
+                    "Company creation",
+                    "Website conception and maintainance for customers",
+                    "Team management",
+                    "Course instructor"
+                ]
+            }
+        },
+        {
+            "company": "Université Lyon 1",
+            "role": {
+                "fr": "Intervenant",
+                "en": "Speaker"
+            },
+            "website": "https://www.univ-lyon1.fr/",
+            "startDate": "2008-09",
+            "endDate": "",
+            "tools": [],
+            "tasks": {
+                "fr": "",
+                "en": ""
+            }
+        },
+        {
+            "company": "",
+            "role": {
+                "fr": "Formateur WEB",
+                "en": "Web instructor"
+            },
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "tools": ["HTML", "Css", "Js", "PHP", "Magento", "Wordpress", "Prestashop"],
+            "tasks": {
+                "fr": "",
+                "en": ""
+            }
+        },
+        {
+            "company": "APTA - Clermont Ferrand, ASP, Proximit, iCap, EITE, OPCADIA, etc",
+            "role": {
+                "fr": "Formateur",
+                "en": "Instructor"
+            },
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "tools": [],
+            "tasks": {
+                "fr": "",
+                "en": ""
+            }
+        },
+        {
+            "company": "",
+            "role": {
+                "fr": "Formateur",
+                "en": "Instructor"
+            },
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "tools": ["PHP", "Symfony", "Programmation Orientée Objet", "UML"],
+            "tasks": {
+                "fr": "",
+                "en": ""
+            }
+        },
+        {
+            "company": "",
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "tools": ["Symfony (1/2/3)"],
+            "tasks": {
+                "fr": [
+                    "Conception de sites web"
+                ],
+                "en": [
+                    "Website conception"
+                ]
+            }
+        },
+        {
+            "company": "",
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "tools": ["Firewall, Reverse Proxy, Load Balancer, Cache, DNS, DHCP, Serveur Web, Serveur FTP, Base de données, Virtualisation, Dockerisation"],
+            "tasks": {
+                "fr": [
+                    "Mise en place d'infrastructure serveur"
+                ],
+                "en": [
+                    "Server infrastructure implementation"
+                ]
+            }
+        },
+        {
+            "company": "",
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "",
+            "startDate": "2008-09",
+            "endDate": "",
+            "tools": ["symfony 1/2", "Wordpress", "Magento"],
+            "tasks": {
+                "fr": [
+                    "Gestion d'équipe et de projet de développement Web"
+                ],
+                "en": [
+                    "Team and web development project management"
+                ]
+            }
+        },
+        {
+            "company": "Tessi Marketing",
+            "role": {
+                "fr": "Consultant Web",
+                "en": "Web consultant"
+            },
+            "website": "https://www.tessicustomermarketing.fr/",
+            "startDate": "2013-06",
+            "endDate": "",
+            "tools": ["Symphony 2.4/2.8"],
+            "tasks": {
+                "fr": [
+                    "Analyse et refonte du nouveau S.I (Projet DIGIFID v2)",
+                    "Accompagnement des équipes techniques (8 développeurs)",
+                    "Mise en place de la stack DévOps",
+                    "Développements WEB PHP"
+                ],
+                "en": [
+                    "Analyse and redesign of new informatique system (Project DIGIFID v2)",
+                    "Technic team support (8 developpers)",
+                    "Stack DevOps implementation",
+                    "Web development in PHP"
+                ]
+            }
+        },
+        {
+            "company": "Inseec Digital Institute",
+            "role": {
+                "fr": "Intervenant",
+                "en": "Speaker"
+            },
+            "website": "https://www.inseec-digital.com/",
+            "startDate": "2016-09",
+            "endDate": "",
+            "tools": ["PHP", "MySQL"],
+            "tasks": {
+                "fr": "",
+                "en": ""
+            }
+        },
+        {
+            "company": "Interforum",
+            "role": {
+                "fr": "Consultant Web",
+                "en": "Web consultant"
+            },
+            "website": "https://www.interforum.fr/login_init.do",
+            "startDate": "2016-09",
+            "endDate": "",
+            "tools": [],
+            "tasks": {
+                "fr": "",
+                "en": ""
+            }
+        },
+        {
+            "company": "ENS",
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "http://archinfo.universite-lyon.fr/",
+            "startDate": "2014-09",
+            "endDate": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Développement d'une plateforme de gestion des pads"
+                ],
+                "en": [
+                    "Conception of a pads management plateform"
+                ]
+            }
+        },
+        {
+            "company": "MB Création",
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "https://www.mbcreation.net/",
+            "startDate": "2012-09",
+            "endDate": "",
+            "tools": ["Symfony 2"],
+            "tasks": {
+                "fr": [
+                    "Conseil, développement et formations des équipes"
+                ],
+                "en": [
+                    "Support, development and training of teams"
+                ]
+            }
+        },
+        {
+            "company": "ENS",
+            "role": {
+                "fr": "Intervenant",
+                "en": "Speaker"
+            },
+            "website": "http://archinfo.universite-lyon.fr/",
+            "startDate": "2012-09",
+            "endDate": "",
+            "tools": [],
+            "tasks": {
+                "fr": "",
+                "en": ""
+            }
+        },
+        {
+            "company": "Allopneus",
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "https://www.allopneus.com/",
+            "startDate": "2011-03",
+            "endDate": "",
+            "tools": ["Symfony 2.0/2.1"],
+            "tasks": {
+                "fr": [
+                    "Accompagnement des équipes techniques pour une évolution du site web (6 développeurs)",
+                    "Développements web php"
+                ],
+                "en": [
+                    "Support technic teams for a website upgdrade (6 developers)",
+                    "Web developments with php"
+                ]
+            }
+        },
+        {
+            "company": "Groupe Moniteur",
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "https://www.lemoniteur.fr/",
+            "startDate": "2010-05",
+            "endDate": "",
+            "tools": ["Symfony 1.4"],
+            "tasks": {
+                "fr": [
+                    "Pilotage du projet de refonte du site web",
+                    "Accompagnement des équipes techniques (3 développeurs)",
+                    "Développements web php"
+                ],
+                "en": [
+                    "Website redesign project leading",
+                    "Technic team support (3 developers)",
+                    "Web development in PHP"
+                ]
+            }
+        },
+        {
+            "company": "Ajilon",
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "https://fidroit.fr/professionnels/",
+            "startDate": "2009-02",
+            "endDate": "",
+            "tools": ["Symphony 1.4"],
+            "tasks": {
+                "fr": [
+                    "Accompagnement des équipes techniques (4 développeurs)",
+                    "Développements web php"
+                ],
+                "en": [
+                    "Technic team support (4 developers)",
+                    "Web developments in PHP"
+                ]
+            }
+        },
+        {
+            "company": "Université Lyon 1 service iCap",
+            "role": {
+                "fr": "Technicien de Recherche et de Formation",
+                "en": "Research and Training engineer"
+            },
+            "website": "https://icap.univ-lyon1.fr/",
+            "startDate": "2005-09",
+            "endDate": "2007-07",
+            "tools": ["Windows/Linux"],
+            "tasks": {
+                "fr": [
+                    "Installation et configuration de salles informatiques multi-systèmes d'exploitations",
+                    "Mise en place d'un outil de gestion du parc informatique : GLPI (Gestionnaire Libre de Parc Informatique)",
+                    "Développement de plugins pour la plate-forme SPIRAL (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon 1)"
+                ],
+                "en": [
+                    "Installation and configuration of multi operating system IT rooms",
+                    "Implementation of a computer park management software",
+                    "Plugins development for SPIRAL plateform"
+                ]
+            }
+        },
+        {
+            "company": "IN2P3",
+            "role": {
+                "fr": "Stagiaire",
+                "en": "Trainee"
+            },
+            "website": "https://cc.in2p3.fr/",
+            "startDate": "2005-11",
+            "endDate": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Mise en place d'un protocole informatique pour le transfert d'images médicales au format DICOM depuis un IRM, à destination d'une base SRB",
+                    "Projet BIRNy rebaptisé LyNDA (Lyon Neuroimaging Database & Applications)"
+                ],
+                "en": [
+                    "Implementation of a transfer protocol for medical images in format DICOM from a MRI scan, to a SRB base",
+                    "Project BIRNy rename LyNDA (Lyon Neuroimaging Database & Applications"
+                ]
+            }
+        },
+        {
+            "company": "Laboratoire Lagep",
+            "role": {
+                "fr": "Stagiaire",
+                "en": "Trainee"
+            },
+            "website": "https://lagepp.univ-lyon1.fr/",
+            "startDate": "2005-06",
+            "endDate": "",
+            "tools": [],
+            "tasks": {
+                "fr": [
+                    "Refonte du site Internet ([www.lagep.cpe.fr] (http://www.lagep.cpe.fr))",
+                    "Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour"
+                ],
+                "en": [
+                    "Website redesign ([www.lagep.cpe.fr] (http://www.lagep.cpe.fr))",
+                    "Implementing web server under Linux Debian, and creation of update tools"
+                ]
+            }
+        }
+    ],
+    "personalExperiences": [
+        {
+            "organization": {
+                "fr": "Solidarité Sida",
+                "en": "AIDS Solidarity"
+            },
+            "role": {
+                "fr": "Bénévole",
+                "en": "Managing director & Research and Development Engineer"
+            },
+            "website": "http://www.solidarite-sida.org/",
+            "startDate": "2004-07",
+            "endDate": "2005-07",
+            "description": {
+                "fr": "Bénévole pour l'association Solidarité Sida et sur le festival Solidays à Paris",
+                "en": "Volonteer for the association during Solidays' festival in Paris"
+            }
+        },
+        {
+            "organization": {
+                "fr": "Université Claude Bernard Lyon 1",
+                "en": "Lyon 1 Claude Bernard Faculty"
+            },
+            "role": {
+                "fr": "Etudiant élu au conseil d'administration et président de l'association Student Club",
+                "en": "Administration counselor and president of Student club association"
+            },
+            "website": "https://etu.univ-lyon1.fr/activites/associations-etudiantes/student-club-association-des-bde-de-l-iut-lyon-1-740690.kjsp",
+            "startDate": "2004-09",
+            "endDate": "2005-07",
+            "description": {
+                "fr": "",
+                "en": ""
+            }
+        },
+        {
+            "organization": {
+                "fr": "",
+                "en": ""
+            },
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "",
+            "startDate": "2003-01",
+            "endDate": "",
+            "description": {
+                "fr": "Brevet de Secouriste (AFPS)",
+                "en": "Rescue Certificate"
+            }
+        }
+    ],
+    "education": [
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Master Miage",
+            "location": "",
+            "startDate": "",
+            "endDate": "2008-07"
+        },
+        {   
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Licence professionelle Informatique (Nouvelles Architectures Applicatives)",
+            "location": "",
+            "startDate": "",
+            "endDate": "2005-07"
+        },
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "DUT Informatique",
+            "location": "",
+            "startDate": "",
+            "endDate": "2004-07"
+        }
+    ],
+    "expertises": [
+        {
+            "name": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Serveur HTTP",
+                        "en": "HTTP server"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Apache",
+                        "Nginx",
+                        "lighttpd"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Réseaux",
+                        "en": "Network"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "DNS (bind)",
+                        "DHCP",
+                        "Reverse proxy et load balancing (pound)",
+                        "Firewall (iptables)",
+                        "Serveur FTP (vsFTP)"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Cache et reverse proxy",
+                        "en": "Cache et reverse proxy"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Varnish"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Configuration Management",
+                        "en": "Configuration Management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Ansible",
+                        "SaltStack"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Langages informatiques",
+                        "en": "Development Languages"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "C",
+                        "C++",
+                        "Java",
+                        "Python",
+                        "PHP",
+                        "HTML",
+                        "xHTML",
+                        "HTML5",
+                        "JavaScript",
+                        "SQL",
+                        "Pl/Sql",
+                        "Prolog",
+                        "Shell Script"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Système d'exploitation",
+                        "en": "Operating system"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Ms Dos",
+                        "Windows",
+                        "MacOS",
+                        "Linux",
+                        "Unix"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks PHP",
+                        "en": "PHP frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Symfony",
+                        "Silex",
+                        "Laravel",
+                        "Zend framework"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks Python",
+                        "en": "Python frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Django",
+                        "Pylons project"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks CSS",
+                        "en": "CSS frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Bootstrap",
+                        "Foundation"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Moteur de template",
+                        "en": "Templates engine"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Twig",
+                        "Handlebars"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "CMS",
+                        "en": "CSS frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Drupal",
+                        "WordPress",
+                        "Prestashop",
+                        "Magento",
+                        "DokuWiki"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Versioning",
+                        "en": "Versioning"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Git",
+                        "Svn"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Base de Données",
+                        "en": "Database"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "MySQL",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "CouchDB",
+                        "ElasticSearch"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Virtualisation / Conteneurisation",
+                        "en": "Virtualization / Containerisation"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Xen",
+                        "OpenVZ",
+                        "KMV",
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Gestion de projet",
+                        "en": "Project management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Trac",
+                        "Redmine",
+                        "Mantis"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Task Runner",
+                        "en": "Task Runner"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Gulp"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Outils AMQP",
+                        "en": "AMQP tools"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "RabbitMQ"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Modélisation",
+                        "en": "Modelling"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Autres",
+                        "en": "Others"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Ajax",
+                        "Jquery"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "fr": "Langues",
+                "en": "Languages"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Français",
+                        "en": "French"
+                    },
+                    "level": {
+                        "fr": "Langue maternelle",
+                        "en": "Mothertong"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Anglais",
+                        "en": "English"
+                    },
+                    "level": {
+                        "fr": "Maîtrisé",
+                        "en": "Fluent"
+                    }
+                }
+            ]
+        }
+    ],
+    "hobbies": {
+        "fr": [
+            {
+                "name": "",
+                "description": ""
+            }
+        ],
+        "en": [
+            {
+                "name": "",
+                "description": ""
+            }
+        ]
+    }
+}
