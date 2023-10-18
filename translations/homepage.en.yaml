@@ -1,40 +1,40 @@
 specialization:
-  title: We specialize in
+  title: We are specialize in
   subtitle: Web architecture, PHP & Symfony
   paragraph_1: '&lt;Engineering&gt; &lt;Development&gt; &lt;Consulting&gt; &lt;Integration&gt;'
 
 consulting:
-  title: We do
+  title: We are doing
   subtitle: Consulting
-  paragraph_1: IDCI-Consulting stay on the <span class="blue-colored-description-text">cutting edge of technology</span> thank's to a recurrent technology watch.
-  paragraph_2: We form ourselves everyday looking for technological excellence.
-  paragraph_3: "We take action on the different steps of your informatic projects: <span class=\"blue-colored-description-text\">define your goals, technical solutions, website structures, deployement and optimizations of your projects...</span>"
+  paragraph_1: Thanks to a constant technological watch, <span class="blue-colored-description-text">IDCI-Consulting renews and develop its knowlegdes</span>.
+  paragraph_2: We train ourselves everyday looking for excellence.
+  paragraph_3: "We take action on the different steps of your informatic projects :</br><span class=\"blue-colored-description-text\">define your goals, technical solutions, website structures, deployement and optimization...</span>"
 
 courses:
-  title: We do
+  title: We are doing
   subtitle: Courses
-  paragraph_1: <span class="blue-colored-description-text">Strong of our 14 experience years,</span> we propose <span class="blue-colored-description-text">multiple courses</span> ranging from HTML5/CSS3 to complex PHP applications development with the Symfony2 framework.
+  paragraph_1: <span class="blue-colored-description-text">Strong of our %cie_age% experience years,</span> we offer <span class="blue-colored-description-text">multiple courses</span> ranging from HTML5/CSS3 to complex PHP applications development with the Symfony framework.
   paragraph_2: The different courses
 
 web_development:
-  title: We do
+  title: We are doing
   subtitle: Web development
-  paragraph_1: IDCI is a web development expert company, specialized on <span class="blue-colored-description-text">PHP frameworks (Symfony2, Silex, Zend framework...).</span>
-  paragraph_2: We also develop our skills on the <span class="blue-colored-description-text">NodeJS framework</span>, and we are always enthusiastic at the idea to discover some <span class="blue-colored-description-text">new upcoming technologies</span>.
-  paragraph_3: We do not forget frontend technologies, and we quickly adopt the new <span class="blue-colored-description-text">Javascript frameworks like Angular, Vuejs...</span>
+  paragraph_1: IDCI is a web development expert company, specialized on <span class="blue-colored-description-text">PHP frameworks (Symfony from 1 to 6, Behat...).</span>
+  paragraph_2: Moreover, we also develop our skills on the <span class="blue-colored-description-text">NodeJS framework</span>, and we are always enthusiastic at the idea to discover some <span class="blue-colored-description-text">new upcoming technologies</span>.
+  paragraph_3: Of course, we do not forget frontend technologies, and we quickly adopt the new <span class="blue-colored-description-text">Javascript frameworks like Angular, Vuejs...</span>
 
 open_source:
   title: Our philosophy
   subtitle: Open source
   paragraph_1: <span class="green-colored-description-text">Sharing and openness</span> to others are anchored in the philosophy of our company.
   paragraph_2: For each of our projects, we contribute as soon as possible to <span class="green-colored-description-text">the development of open-source tools </span> that we use everyday, so everyone can keep growing and prospering, whether it be our clients or open-source community members.
-  paragraph_3: We publish and maintain available source code on <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text">our Github platform.</a>
+  paragraph_3: We publish and maintain available source code on <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">our Github platform.</a>
 
 methodology:
   subtitle: Our methodology
-  paragraph_1: We are <span class="blue-colored-description-text">flexibles</span>. Informatic project are subject to very frequent changes.
-  paragraph_2: Our experience showed us that the Agile methods are source of great success, and we make an effort to apply those methods when it seems necessary to us.
-  paragraph_3: For all that, we do not impose those methods in the case where they wouldn't suit but we stay flexibles in all circumstances.
+  paragraph_1: We are <span class="blue-colored-description-text">flexibles</span>. Informatic projects are subject to very frequent changes.
+  paragraph_2: Our experience showed us that Agile methods are source of great success, and we put effort appling it toward all the projects given to us.
+  paragraph_3: For all that, we care integrating your process to ensure the synergy between our team, and yours.
 
 tools:
   subtitle: Our tools

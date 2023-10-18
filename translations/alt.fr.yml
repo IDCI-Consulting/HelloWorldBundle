@@ -14,23 +14,27 @@ slick_arrow_down: Flèche bas
 
 angularjs-logo: Logo AngularJS
 ansible-logo: Logo Ansible
+behat-logo: Logo Behat
 bootstrap-logo: Logo Bootstrap
 css3-html5-logo: Logo CSS3 & HTML5
 docker-logo: Logo Docker
+dockerswarm-logo: Logo Docker Swarm
+elasticsearch-logo: Logo Elasticsearch
 foundation-logo: Logo Foundation
 gitlab-logo: Logo Gitlab
+jenkins-logo: Logo Jenkins
 jquery-logo: Logo JQuery
 kibana-logo: Logo Kibana
-kyototycoon-logo: Logo KyotoTycoon
-meteor-logo: Logo Meteor
+mariadb-logo: Logo MariaDB
+minio-logo: Logo Minio
 mongodb-logo: Logo MongoDB
 mysql-logo: Logo Mysql
 nodejs-logo: Logo NodeJS
-proxmox-logo: Logo Proxmox
 php-logo: Logo PHP
 phpunit-logo: Logo PHPUnit
 postgresql-logo: Logo PostgreSQL
 rabbitmq-logo: Logo RabbitMQ
+react: Logo React
 redis-logo: Logo Redis
 redmine-logo: Logo Redmine
 sass-logo: Logo Sass
