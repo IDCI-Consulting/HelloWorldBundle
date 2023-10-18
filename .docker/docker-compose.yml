@@ -25,9 +25,9 @@ services:
         - "traefik.docker.lbswarm=true"
         - "traefik.http.services.idci-website-nginx.loadbalancer.server.port=80"
         - "traefik.http.routers.idci-website-nginx.entryPoints=web"
-        - "traefik.http.routers.idci-website-nginx.rule=Host(`idci-website.docker`)"
+        - "traefik.http.routers.idci-website-nginx.rule=Host(`idci-consulting.docker`) || Host(`www.idci-consulting.docker`)"
         - "traefik.http.routers.idci-website-nginx-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-website-nginx-https.rule=Host(`idci-website.docker`)"
+        - "traefik.http.routers.idci-website-nginx-https.rule=Host(`idci-consulting.docker`) || Host(`www.idci-consulting.docker`)"
         - "traefik.http.routers.idci-website-nginx-https.tls=true"
         - "traefik.http.routers.idci-website-nginx-https.tls.certresolver=letsencrypt"
     configs:
@@ -36,7 +36,7 @@ services:
     volumes:
       - ../:/var/www/app
     environment:
-      - NGINX_HOST=idci-website.docker
+      - NGINX_HOST=idci-consulting.docker
     networks:
       - traefik_reverse_proxy
       - app
@@ -57,9 +57,9 @@ services:
         - "traefik.docker.lbswarm=true"
         - "traefik.http.services.idci-website-redis-commander.loadbalancer.server.port=8081"
         - "traefik.http.routers.idci-website-redis-commander.entryPoints=web"
-        - "traefik.http.routers.idci-website-redis-commander.rule=Host(`redis-commander.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-redis-commander.rule=Host(`redis-commander.idci-consulting.docker`)"
         - "traefik.http.routers.idci-website-redis-commander-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-website-redis-commander-https.rule=Host(`redis-commander.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-redis-commander-https.rule=Host(`redis-commander.idci-consulting.docker`)"
         - "traefik.http.routers.idci-website-redis-commander-https.tls=true"
         - "traefik.http.routers.idci-website-redis-commander-https.tls.certresolver=letsencrypt"
     environment:
@@ -77,9 +77,9 @@ services:
         - "traefik.docker.lbswarm=true"
         - "traefik.http.services.idci-website-mailhog.loadbalancer.server.port=8025"
         - "traefik.http.routers.idci-website-mailhog.entryPoints=web"
-        - "traefik.http.routers.idci-website-mailhog.rule=Host(`mailhog.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-mailhog.rule=Host(`mailhog.idci-consulting.docker`)"
         - "traefik.http.routers.idci-website-mailhog-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-website-mailhog-https.rule=Host(`mailhog.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-mailhog-https.rule=Host(`mailhog.idci-consulting.docker`)"
         - "traefik.http.routers.idci-website-mailhog-https.tls=true"
         - "traefik.http.routers.idci-website-mailhog-https.tls.certresolver=letsencrypt"
     networks:
@@ -95,9 +95,9 @@ services:
         - "traefik.docker.lbswarm=true"
         - "traefik.http.services.idci-website-wkhtmltopdf.loadbalancer.server.port=5555"
         - "traefik.http.routers.idci-website-wkhtmltopdf-commander.entryPoints=web"
-        - "traefik.http.routers.idci-website-wkhtmltopdf.rule=Host(`wkhtmltopdf.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-wkhtmltopdf.rule=Host(`wkhtmltopdf.idci-consulting.docker`)"
         - "traefik.http.routers.idci-website-wkhtmltopdf-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-website-wkhtmltopdf-https.rule=Host(`wkhtmltopdf.idci-website.docker`)"
+        - "traefik.http.routers.idci-website-wkhtmltopdf-https.rule=Host(`wkhtmltopdf.idci-consulting.docker`)"
         - "traefik.http.routers.idci-website-wkhtmltopdf-https.tls=true"
         - "traefik.http.routers.idci-website-wkhtmltopdf-https.tls.certresolver=letsencrypt"
     environment:

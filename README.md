@@ -30,10 +30,10 @@ Once traefik run, you can check your browser at 127.0.0.1:8080
 1. Add the following DNS entries in your host file:
 ```
 # IDCI-Website
-127.0.0.1       idci-website.docker
-127.0.0.1       redis-commander.idci-website.docker
-127.0.0.1       mailhog.idci-website.docker
-127.0.0.1       wkhtmltopdf.idci-website.docker
+127.0.0.1       idci-consulting.docker
+127.0.0.1       redis-commander.idci-consulting.docker
+127.0.0.1       mailhog.idci-consulting.docker
+127.0.0.1       wkhtmltopdf.idci-consulting.docker
 ```
 
 2. Git clone this repository
