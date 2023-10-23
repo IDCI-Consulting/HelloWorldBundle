@@ -6,35 +6,35 @@ specialization:
 consulting:
   title: Nous faisons du
   subtitle: Conseil
-  paragraph_1: IDCI-Consulting reste à la <span class="blue-colored-description-text">pointe technologique</span> grâce à une veille effectuée régulièrement.
-  paragraph_2: Nous nous formons tous les jours à la recherche de l'excellence technique.
-  paragraph_3: "Nous intervenons sur les différentes étapes de vos projets informatiques: <span class=\"blue-colored-description-text\">définition de vos objectifs, solutions techniques, architectures de site, déploiement et optimisation de vos projets...</span>"
+  paragraph_1: Grâce à une veille technologique régulière, <span class="blue-colored-description-text">IDCI-Consulting renouvelle et enrichit ses connaissances techniques</span>.
+  paragraph_2: Nous nous formons tous les jours à la recherche de l'excellence.
+  paragraph_3: "Nous intervenons sur les différentes étapes de vos projets informatiques :</br><span class=\"blue-colored-description-text\">définition de vos objectifs, solutions techniques, architectures de site, déploiement et optimisation...</span>"
 
 courses:
   title: Nous faisons de la
   subtitle: Formation
-  paragraph_1: <span class="blue-colored-description-text">Fort de nos 14 ans d'expériences,</span> nous proposons <span class="blue-colored-description-text">plusieurs formations</span> allant du HTML5/CSS3 au développement d'applications complexes PHP avec le framework Symfony2.
+  paragraph_1: <span class="blue-colored-description-text">Forts de nos %cie_age% ans d'expériences,</span> nous proposons <span class="blue-colored-description-text">plusieurs formations</span> allant du HTML5/CSS3 au développement d'applications complexes PHP avec le framework Symfony.
   paragraph_2: Les différentes formations
 
 web_development:
   title: Nous faisons du
   subtitle: Développement web
-  paragraph_1: IDCI est une société experte dans le développement web, spécialisé sur <span class="blue-colored-description-text">les frameworks PHP (Symfony2, Silex, Zend framework...).</span>
-  paragraph_2: Nous développons également nos compétences sur le <span class="blue-colored-description-text">framework NodeJS</span>, et sommes toujours enthousiastes à l'idée de découvrir de <span class="blue-colored-description-text">nouvelles technologies</span> prometteuses.
-  paragraph_3: Nous n'oublions pas les technologies frontend, et adoptons rapidement les nouveaux <span class="blue-colored-description-text">frameworks javascript tels que Angular, Vuejs...</span>
+  paragraph_1: IDCI dispose d'une expertise dans le développement web, spécialisée sur <span class="blue-colored-description-text">les frameworks PHP (Symfony de 1 à 6, Behat...).</span>
+  paragraph_2: Plus encore, nous travaillons également avec le <span class="blue-colored-description-text">framework NodeJS</span>, et sommes toujours enthousiastes à l'idée de découvrir de <span class="blue-colored-description-text">nouvelles technologies</span> prometteuses.
+  paragraph_3: Bien sûr, nous n'oublions pas le frontend, et adoptons rapidement les nouveaux <span class="blue-colored-description-text">frameworks javascript tels qu'Angular, Vuejs...</span>
 
 open_source:
   title: Notre philosophie
   subtitle: Open source
   paragraph_1: <span class="green-colored-description-text">Le partage et l'ouverture</span> aux autres sont ancrés dans la philosophie de l'entreprise.
-  paragraph_2: Pour chacun de nos projets, nous contribuons dès que possible au <span class="green-colored-description-text">développement des outils open-source</span> que nous utilisons tous les jours, pour que chacun puisse continuer à grandir et prospérer, que ce soit nos clients ou les membres de la communauté open-source.
-  paragraph_3: Nous publions et maintenons du code source accessible sur <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text">notre plate-forme Github.</a>
+  paragraph_2: Pour chacun de nos projets, nous contribuons dès que possible au <span class="green-colored-description-text">développement des outils open-source</span> que nous utilisons tous les jours, pour que chacun puisse s'épanouir et prospérer, que ce soit nos clients ou les membres de la communauté open-source.
+  paragraph_3: Nous publions et maintenons du code source accessible sur <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">notre plate-forme Github.</a>
 
 methodology:
   subtitle: Notre méthodologie
-  paragraph_1: Nous sommes <span class="blue-colored-description-text">flexibles</span>. Les projets informatiques sont sujets à des changements très fréquents.
-  paragraph_2: Notre experience nous a montré que les méthodes agiles sont source de belles réussites, et nous nous efforçons de les mettre en application quand cela nous semble nécessaire.
-  paragraph_3: Pour autant, nous ne cherchons pas à dicter ces méthodes dans le cas ou elles ne conviendraient pas mais restons flexibles en toute circonstance.
+  paragraph_1: Nous sommes <span class="blue-colored-description-text">flexibles</span>.</br>Les projets informatiques sont sujets à des changements très fréquents.
+  paragraph_2: Notre experience nous a prouvé que les méthodes agiles sont sources de belles réussites, et nous nous efforçons de les appliquer dans les projets qui nous sont confiés.
+  paragraph_3: Néanmoins, nous avons à cœur de nous intégrer au mieux à vos processus afin de garantir la synergie entre notre équipe, et la vôtre.
 
 tools:
   subtitle: Nos outils
