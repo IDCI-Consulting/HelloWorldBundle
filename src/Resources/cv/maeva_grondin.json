@@ -1,27 +1,27 @@
 {
     "identity": {
-        "firstName": "Vincent",
-        "lastName": "Duvivier",
-        "birthDate": "2001-01-11T00:00:00Z",
+        "firstName": "Maëva",
+        "lastName": "Grondin",
+        "birthDate": "1998-05-18T00:00:00Z",
         "job": {
-            "fr": "Développeur Web FullStack",
+            "fr": "Développeuse Web FullStack",
             "en": "FullStack Web Developer"
         },
         "media": "",
-        "email": "vincent.duvivier@idci-consulting.fr",
+        "email": "maeva.grondin@idci-consulting.fr",
         "phone": "",
         "website": "",
         "location": {
             "address": "",
-            "postalCode": "",
-            "city": "",
-            "countryCode": "",
+            "postalCode": "69100",
+            "city": "Villeurbanne",
+            "countryCode": "France",
             "region": ""
         },
         "socialNetworks": [
             {
                 "name": "linkedin",
-                "url": "https://fr.linkedin.com/in/vincent-duvivier-5b16321a5"
+                "url": "https://fr.linkedin.com/in/ma%C3%ABva-grondin-532260191"
             }
         ]
     },
@@ -29,65 +29,69 @@
         {
             "company": "IDCI-Consulting",
             "role": {
-                "fr": "Alternant Développeur Web FullStack",
+                "fr": "Alternante Développeuse Web FullStack",
                 "en": "Apprentice FullStack Web Developer"
             },
-            "startDate": "2022-02-07T00:00:00Z",
-            "endDate": "2025-08-30T00:00:00Z",
+            "startDate": "2023-10-09T00:00:00Z",
+            "endDate": "2024-10-08T00:00:00Z",
             "website": "",
-            "tools": [],
+            "tools": ["Symfony","Docker","Git","Gitlab"],
             "tasks": {
                 "fr": [
-                    "Montée en compétences au sein de l'entreprise",
-                    "Maintenance et réalisation de sites web répondant aux demandes clients"
+                    "Découverte des technologies utilisées par l'entreprise",
+                    "Maintenance et amélioration d'un site sur demande du client"
                 ],
                 "en": [
-                    "Increase in skills within the company",
-                    "Maintenance and realization of web sites answering the customers requests"
+                    "Learn technologies used by the company",
+                    "Maintain and improve a site as requested by the client"
                 ]
             }
         },
         {
-            "company": "IDCI-Consulting",
+            "company": "Cargo Ground Freight",
             "role": {
-                "fr": "Stagiaire Développeur Web FullStack",
-                "en": "FullStack Web Developer Intern"
+                "fr": "Assistante administrative dans le fret aérien",
+                "en": "Administrative assistant for airfreight"
             },
-            "startDate": "2021-08-08T00:00:00Z",
-            "endDate": "2022-01-28T00:00:00Z",
+            "startDate": "2021-05-21T00:00:00Z",
+            "endDate": "2023-10-06T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": {
                 "fr": [
-                    "Découverte des technologies utilisées par IDCI-Consulting",
-                    "Réalisation de sites web répondant aux demandes clients"
+                    "Gestion de la relation client",
+                    "Accueil physique et téléphonique",
+                    "Démarches auprès des douanes",
+                    "Manutention et conduite de chariot élévateur"
                 ],
                 "en": [
-                    "Discovery of the technologies used by IDCI-Consulting",
-                    "Realization of web sites answering the customers requests"
+                    "Manage customer relationship",
+                    "Physical and phone reception",
+                    "Customs procedures",
+                    "Handling and forklift driving"
                 ]
             }
         },
         {
-            "company": "Intermarché",
+            "company": "B&B Hotel",
             "role": {
-                "fr": "Employé polyvalent",
-                "en": "Supermaket worker"
+                "fr": "Réceptionniste",
+                "en": "Receptionist"
             },
-            "startDate": "2021-06-20T00:00:00Z",
-            "endDate": "2021-07-29T00:00:00Z",
+            "startDate": "2019-10-24T00:00:00Z",
+            "endDate": "2021-05-20T00:00:00Z",
             "website": "",
             "tools": [],
             "tasks": {
                 "fr": [
-                    "Préparation de pains",
-                    "Mise en rayon de produits",
-                    "Réponses aux demandes client"
+                    "Accueil physique et téléphonique",
+                    "Service du petit déjeuner",
+                    "Nettoyage des parties communes et des chambres"
                 ],
                 "en": [
-                    "Preparation of breads",
-                    "Shelving of products",
-                    "Responses to customer requests"
+                    "Physical and phone reception",
+                    "Breakfast service",
+                    "Cleaning of common rooms and rooms"
                 ]
             }
         }
@@ -95,22 +99,21 @@
     "personalExperiences": [
         {
             "organization": {
-                "fr": "ZUPdeCo",
-                "en": "ZUPdeCo"
+                "fr": "Les Editions Lunaires",
+                "en": "Les Editions Lunaires"
             },
             "role": {
-                "fr": "Bénévole",
-                "en": "Volunteer"
+                "fr": "Auto-entrepeneuse",
+                "en": "Entrepreneur"
             },
             "website": "",
-            "startDate": "2020-09-07T00:00:00Z",
-            "endDate": "2021-05-07T00:00:00Z",
+            "startDate": "2020-02-01T00:00:00Z",
+            "endDate": "",
             "description": {
-                "fr": "Aide aux devoirs pour enfant élèves en ZEP",
-                "en": "Homework help for children in ZEP"
+                "fr": "Développement d'un site de vente en ligne de livre, écrivain, éditeur",
+                "en": "Development of a website for book selling, writer, editor"
             }
         }
-        
     ],
     "education": [
         {
@@ -118,20 +121,20 @@
                 "fr": "Informatique",
                 "en": "IT"
             },
-            "certificate": "DUT Informatique",
-            "location": "Lyon",
-            "startDate": "2020-02-01T00:00:00Z",
-            "endDate": "2022-01-28T00:00:00Z"
+            "certificate": "Certificat de développeur web",
+            "location": "Villeurbanne",
+            "startDate": "2023-10-09T00:00:00Z",
+            "endDate": "2024-10-08T00:00:00Z"
         },
         {
             "domain": {
-                "fr": "Informatique",
-                "en": "IT"
+                "fr": "Tourisme",
+                "en": "Tourism"
             },
-            "certificate": "Ingénieur Polytech",
-            "location": "Lyon",
-            "startDate": "2022-09-04T00:00:00Z",
-            "endDate": "2025-09-01T00:00:00Z"
+            "certificate": "BTS Tourime",
+            "location": "Nîmes",
+            "startDate": "2017-09-21T00:00:00Z",
+            "endDate": "2019-06-30T00:00:00Z"
         }
     ],
     "expertises": [
@@ -151,14 +154,7 @@
                         "HTML5",
                         "CSS3",
                         "PHP",
-                        "Javascript",
-                        "Ruby",
-                        "C",
-                        "C++",
-                        "Java",
-                        "Python",
                         "Bash",
-                        "ZSH",
                         "SQL"
                     ]
                 },
@@ -170,7 +166,7 @@
                     "level": "",
                     "keywords": [
                         "Windows",
-                        "Linux (Debian, Arch, Fedora)"
+                        "Linux (Ubuntu)"
                     ]
                 },
                 {
@@ -180,9 +176,17 @@
                     },
                     "level": "",
                     "keywords": [
-                        "Symfony",
-                        "Bootstrap",
-                        "Rails"
+                        "Symfony"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Moteur de template",
+                        "en": "Templates engine"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Twig"
                     ]
                 },
                 {
@@ -192,9 +196,7 @@
                     },
                     "level": "",
                     "keywords": [
-                        "Git",
-                        "Gitlab",
-                        "GitHub"
+                        "Gitlab"
                     ]
                 },
                 {
@@ -204,9 +206,7 @@
                     },
                     "level": "",
                     "keywords": [
-                    	"ORACLE",
-                        "MySQL",
-                        "PostgreSQL"
+                        "MySQL"
                     ]
                 },
                 {
@@ -226,18 +226,7 @@
                     },
                     "level": "",
                     "keywords": [
-                        "Redmine",
-                        "Kanboard"
-                    ]
-                },
-                {
-                    "name": {
-                        "fr": "Modélisation",
-                        "en": "Schematization"
-                    },
-                    "level": "",
-                    "keywords": [
-                        "UML"
+                        "Redmine"
                     ]
                 }
             ]
@@ -254,8 +243,8 @@
                         "en": "French"
                     },
                     "level": {
-                        "fr": "Natif",
-                        "en": "Native"
+                        "fr": "Langue maternelle",
+                        "en": "Mothertong"
                     }
                 },
                 {
@@ -264,18 +253,8 @@
                         "en": "English"
                     },
                     "level": {
-                        "fr": "C1",
-                        "en": "C1"
-                    }
-                },
-                {
-                    "name": {
-                        "fr": "Allemand",
-                        "en": "German"
-                    },
-                    "level": {
-                        "fr": "B1",
-                        "en": "B1"
+                        "fr": "B2",
+                        "en": "B2"
                     }
                 }
             ]
@@ -284,14 +263,30 @@
     "hobbies": {
         "fr": [
             {
-                "name": "Cinéma",
-                "description": ""
+                "name": "Ecriture",
+                "description": "J'écris des romans de science-fiction et fantastique."
+            },
+            {
+                "name": "Violon",
+                "description": "Je débute."
+            },
+            {
+                "name": "Plongée sous-marine",
+                "description": "J'ai le niveau 1."
             }
         ],
         "en": [
             {
-                "name": "Cinema",
-                "description": ""
+                "name": "Writing",
+                "description": "I write sy-fy and fantastic books."
+            },
+            {
+                "name": "Violin",
+                "description": "I'm a beginner."
+            },
+            {
+                "name": "Scuba diving",
+                "description": "I currently have got the first level."
             }
         ]
     }

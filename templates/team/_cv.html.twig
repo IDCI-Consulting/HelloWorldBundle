@@ -26,9 +26,9 @@
             {% for professionalExperience in data.professionalExperiences %}
                 <p class="section-cv-banner-subtitle">
                     {% if "" == professionalExperience.endDate %}
-                    Depuis {{ professionalExperience.startDate|date("F Y") }}
+                    {% trans from "cv" %}cv.since{% endtrans %} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                     {% else %}
-                    De {{ professionalExperience.startDate|date("F Y") }} à {{ professionalExperience.endDate|date("F Y") }}
+                    {% trans from "cv" %}cv.from{% endtrans %} {{ professionalExperience.startDate|date("F Y") }} {% trans from "cv" %}cv.to{% endtrans %} {{ professionalExperience.endDate|date("F Y") }}
                     {% endif %}
                 </p>
                 <p>{{ professionalExperience.role[locale] }}</p>
@@ -77,9 +77,9 @@
             {% for personalExperience in data.personalExperiences %}
                 <p class="section-cv-banner-subtitle">
                 {% if "" == personalExperience.endDate %}
-                Depuis {{ personalExperience.startDate|date("F Y") }}
+                {% trans from "cv" %}cv.since{% endtrans %} {{ personalExperience.startDate|date("F Y") }}
                 {% else %}
-                De {{ personalExperience.startDate|date("F Y") }} à {{ personalExperience.endDate|date("F Y") }}
+                {% trans from "cv" %}cv.from{% endtrans %} {{ personalExperience.startDate|date("F Y") }} {% trans from "cv" %}cv.to{% endtrans %} {{ personalExperience.endDate|date("F Y") }}
                 {% endif %}
                 </p>
                 <p>{{ personalExperience.role[locale] }} | {{ personalExperience.organization[locale] }}</p>
