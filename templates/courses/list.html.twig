@@ -5,7 +5,11 @@
 {% block main %}
     {% set locale = app.request.locale %}
 
-    <section class="section-container section-container-90">
+    <video class="background-video" autoplay loop muted>
+        <source src="{{ asset('build/images/base/hello_world.mp4') }}" type="video/mp4">
+    </video>
+
+    <section class="section-container section-container-90 section-container-primary">
         <section class="section-presentation section-choices">
             <p class="section-choices-title idci-title-primary">{% trans from "courses" %}courses.introduction.title{% endtrans %}</p>
             <div class="section-choices-items">
@@ -35,6 +39,8 @@
         </section>
     </section>
 
+    <div class="transparent-box even bottom-secondary"></div>
+
     <section class="section-container section-container-secondary">
         <section class="section-presentation">
             <h2 class="section-presentation-title idci-title-primary">{% trans from "courses" %}courses.title{% endtrans %}</h2>
@@ -61,6 +67,8 @@
             </div>
         </section>
     </section>
+
+    <div class="transparent-box top-secondary"></div>
 
     {% for course in courses %}
     <section class="section-container section-container-full section-container-{% if 0 == loop.index % 2 %}secondary{% else %}primary{% endif %}">
