@@ -92,7 +92,10 @@ class ContactType extends AbstractType
 
         $builder
             ->add('submit', SubmitType::class, [
-                'label' => 'button.submit'
+                'label' => 'button.submit',
+                'attr' => [
+                    'class' => 'button',
+                ]
             ])
         ;
     }
