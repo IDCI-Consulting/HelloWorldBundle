@@ -19,22 +19,46 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('company', TextType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                ],
                 'label' => 'contact.company',
+                'label_attr' => [
+                    'class' => 'text-label',
+                ],
                 'translation_domain' => 'contact',
                 'required' => false,
             ])
             ->add('website', TextType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                ],
                 'label' => 'contact.website',
+                'label_attr' => [
+                    'class' => 'text-label',
+                ],
                 'translation_domain' => 'contact',
                 'required' => false,
             ])
             ->add('fullName', TextType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                ],
                 'label' => 'contact.full_name',
+                'label_attr' => [
+                    'class' => 'text-label',
+                ],
                 'translation_domain' => 'contact',
                 'required' => false,
             ])
             ->add('email', EmailType::class, [
+                'attr' => [
+                    'autocomplete' => 'off',
+                ],
                 'label' => 'contact.email',
+                'label_attr' => [
+                    'class' => 'text-label',
+                ],
                 'translation_domain' => 'contact',
                 'constraints' => [
                     new Assert\Email(),
@@ -53,6 +77,9 @@ class ContactType extends AbstractType
             ])
             ->add('content', TextAreaType::class, [
                 'label' => 'contact.content',
+                'label_attr' => [
+                    'class' => 'text-label',
+                ],
                 'translation_domain' => 'contact',
                 'constraints' => [
                     new Assert\NotBlank(),
