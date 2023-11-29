@@ -1,12 +1,13 @@
-button, a.button{
+.button, a.button {
     background-color: $idci-color-blue;
     border: 0;
-    color: $idci-color-white;
+    color: $idci-color-whitesmoke;
     display: block;
-    margin: auto;
+    margin: 1rem auto;
     text-transform: uppercase;
-}
 
-button {
-    padding: 1rem 2rem;
+    &:hover {
+        box-shadow: 3px 3px 6px $idci-color-light-black;
+        color: $idci-color-white;
+    }
 }

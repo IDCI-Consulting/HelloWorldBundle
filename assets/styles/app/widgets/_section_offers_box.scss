@@ -52,21 +52,6 @@
         padding: 1rem;
     }
 
-    .section-offers-box-button {
-        background-color: $idci-color-blue;
-        color: $idci-color-white;
-        display: block;
-        margin-top: 2rem;
-        padding: 1.5rem;
-        text-align: right;
-        text-transform: uppercase;
-        width: 100%;
-
-        i {
-            margin-left: 1rem;
-        }
-    }
-
     &.section-offers-box-primary {
         span {
             color: $idci-color-blue;
@@ -76,10 +61,6 @@
     &.section-offers-box-secondary {
         span {
             color: $idci-color-green;
-        }
-
-        .section-offers-box-button {
-            background-color: $idci-color-green;
         }
     }
 }

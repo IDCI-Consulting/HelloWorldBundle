@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\HeaderUtils;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -37,6 +38,13 @@ class TeamController extends AbstractController
      */
     public function member(Request $request, string $slug, string $_format): Response
     {
+        $filesystem = new Filesystem();
+        $jsonFilePath = sprintf('%s%s.json', $this->cvDirectoryPath, $slug);
+
+        if (!$filesystem->exists($jsonFilePath)) {
+            throw $this->createNotFoundException(sprintf('The member \'%s\' does\'t exists', $slug));
+        }
+
         $cv = json_decode(file_get_contents(sprintf($this->cvDirectoryPath . '%s.json', $slug)), true);
 
         if ('json' === $_format) {
