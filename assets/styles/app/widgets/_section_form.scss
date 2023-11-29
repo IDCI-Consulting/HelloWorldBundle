@@ -18,7 +18,6 @@
             div {
                 display: block;
                 margin: 1rem auto;
-                max-height: 8rem;
                 position: relative;
 
                 .text-label {
@@ -70,6 +69,20 @@
                     display: block;
                     margin-bottom: 1rem;
                     min-height: 4rem;
+                }
+
+                #contact_captcha {
+                    + label {
+                        padding: 0.2rem 0.2rem 0.2rem 0.7rem;
+                        position: absolute;
+                        top: 6.2rem;
+                    }
+
+                    &:focus {
+                        + label {
+                            top: 5.1rem;
+                        }
+                    }
                 }
 
                 input, textarea {
