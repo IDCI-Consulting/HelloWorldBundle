@@ -49,20 +49,26 @@
             <div class="columns section-presentation-columns">
                 <div class="column section-presentation-column">
                     <div class="section-card">
-                        <img src="{{ asset('build/images/base/oop-uml-scm.svg') }}" alt="{% trans from "alt" %}oop-uml-scm{% endtrans %}" class="section-card-media">
-                        <p class="section-card-description">OOP - UML - SCM</p>
+                        <a href="#oop-uml-scm" class="section-card-link">
+                            <img src="{{ asset('build/images/base/oop-uml-scm.svg') }}" alt="{% trans from "alt" %}oop-uml-scm{% endtrans %}" class="section-card-media">
+                            <p class="section-card-description">OOP - UML - SCM</p>
+                        </a>
                     </div>
                 </div>
                 <div class="column">
                     <div class="section-card">
-                        <img src="{{ asset('build/images/base/html5-css3.svg') }}" alt="{% trans from "alt" %}html5-css3{% endtrans %}" class="section-card-media">
-                        <p class="section-card-description">Html5 - CSS3</p>
+                        <a href="#html5-css3" class="section-card-link">
+                            <img src="{{ asset('build/images/base/html5-css3.svg') }}" alt="{% trans from "alt" %}html5-css3{% endtrans %}" class="section-card-media">
+                            <p class="section-card-description">Html5 - CSS3</p>
+                        </a>
                     </div>
                 </div>
                 <div class="column">
                     <div class="section-card">
+                    <a href="#symfony2" class="section-card-link">
                         <img src="{{ asset('build/images/base/symfony2.svg') }}"  class="section-card-media">
                         <p class="section-card-description">Symfony</p>
+                    </a>
                     </div>
                 </div>
             </div>
@@ -72,7 +78,7 @@
     <div class="transparent-box top-secondary"></div>
 
     {% for course in courses %}
-    <section class="section-container section-container-full section-container-{% if 0 == loop.index % 2 %}secondary{% else %}primary{% endif %}">
+    <section class="section-container section-container-full section-container-{% if 0 == loop.index % 2 %}secondary{% else %}primary{% endif %}" id={{ course.id }}>
         <section class="section-display">
             <h2 class="section-display-title idci-title-primary">{{ course.name }}</h2>
             <section class="section-display-content">
