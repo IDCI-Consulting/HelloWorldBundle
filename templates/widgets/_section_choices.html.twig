@@ -1,11 +1,19 @@
 <div class="section-container section-container-90 section-container-primary">
     <section class="section-presentation section-choices">
-        <h1 class="section-choices-title idci-title-primary">{{ page_title }}</h1>
+        {% if page_title is defined and page_title is not null and page_title is not empty %}
+            <h1 class="section-choices-title idci-title-primary">{{ page_title }}</h1>
+        {% endif %}
+        {% if title is defined and title is not null and title is not empty %}
+            <h2 class="section-choices-title section-choices-title-secondary idci-title-primary">{{ title }}</h2>
+        {% endif %}
+        {% if subtitle is defined and subtitle is not null and subtitle is not empty %}
+            <h3 class="section-choices-subtitle section-choices-subtitle-secondary idci-subtitle-primary">{{ subtitle }}</h3>
+        {% endif %}
         <div class="section-choices-items">
             {% for box in boxes %}
                 <section class="section-offers-box section-offers-box-{{ box.color|default('primary') }}">
                     <h2 class="section-offers-box-title">{{ box.title|raw }}</h2>
-                    <ul class="section-offers-box-description">
+                    <ul class="section-offers-box-description{% if box.secondary is defined and box.secondary is same as true %}-secondary{% endif %}">
                         {% for paragraph in box.paragraphs %}
                             <li>
                                 {{ paragraph|raw }}
@@ -15,8 +23,10 @@
                 </section>
             {% endfor %}
         </div>
-        <a href="{{ url('app_contact_index') }}" class="button">
-            {% trans %}button.contact_us{% endtrans %}<i class="fa-solid fa-arrow-right"></i>
-        </a>
+        {% if contact_button is defined and contact_button is same as true %}
+            <a href="{{ url('app_contact_index') }}" class="button">
+                {% trans %}button.contact_us{% endtrans %} <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        {% endif %}
     </section>
 </div>

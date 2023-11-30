@@ -3,91 +3,92 @@
 {% block title %}Présentation de nos offres{% endblock %}
 
 {% block main %}
+    {% trans_default_domain 'offers' %}
 
+    <video class="background-video" autoplay loop muted>
+        <source src="{{ asset('build/images/base/network.mp4') }}" type="video/mp4">
+    </video>
 
-<video class="background-video" autoplay loop muted>
-    <source src="{{ asset('build/images/base/network.mp4') }}" type="video/mp4">
-</video>
+    {% include 'widgets/_section_choices.html.twig' with {
+        'page_title': ('offers.section_1.title')|trans,
+        'boxes': [
+            {
+                'title': ('offers.section_1.box_1.title')|trans,
+                'paragraphs': [
+                    ('offers.section_1.box_1.description')|trans
+                ]
+            },
+            {
+                'title': ('offers.section_1.box_2.title')|trans,
+                'paragraphs': [
+                    ('offers.section_1.box_2.description')|trans
+                ],
+                'color': 'secondary'
+            },
+        ],
+        'contact_button': true
+    } %}
 
-<section class="section-container section-container-90 section-container-primary">
-    <section class="section-presentation section-choices">
-        <p class="section-choices-title idci-title-primary">{% trans from "offers" %}offers.section_1.title{% endtrans %}</p>
-        <div class="section-choices-items">
-            <div class="section-offers-box section-offers-box-primary">
-                <p class="section-offers-box-title">{% trans from "offers" %}offers.section_1.box_1.title{% endtrans %}</p>
-                <ul class="section-offers-box-description">
-                    {% trans from "offers" %}offers.section_1.box_1.description{% endtrans %}
-                </ul>
-            </div>
-            <div class="section-offers-box section-offers-box-secondary">
-                <p class="section-offers-box-title">{% trans from "offers" %}offers.section_1.box_2.title{% endtrans %}</p>
-                <ul class="section-offers-box-description">
-                    {% trans from "offers" %}offers.section_1.box_2.description{% endtrans %}
-                </ul>
-            </div>
-        </div>
-        <a href="{{ url('app_contact_index') }}" class="button">{% trans %}button.contact_us{% endtrans %} <i class="fa-solid fa-arrow-right"></i></a>
-    </section>
-</section>
+    <div class="transparent-box"></div>
 
-<div class="transparent-box"></div>
+    {% include 'widgets/_section_display_stack.html.twig' with {
+        'title': 'offers.section_2.title'|trans,
+        'paragraphs': [
+            'offers.section_2.description'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/working-on-computer.jpg'),
+            'alt': 'working-on-computer'|trans({}, 'alt')
+        }
+    } %}
 
-<section class="section-container section-container-90 section-container-primary">
-    <section class="section-display-stack">
-        <div class="section-display-stack-colored-box"></div>
-        <div class="section-display-stack-description">
-            <p class="section-display-stack-description-title">{% trans from "offers" %}offers.section_2.title{% endtrans %}</p>
-            <p class="section-display-stack-description-content">
-                {% trans from "offers" %}offers.section_2.description{% endtrans %}
-            </p>
-        </div>
-        <img src="{{ asset('build/images/base/working-on-computer.jpg') }}" class="section-display-stack-media">
-    </section>
-</section>
+    <div class="transparent-box even"></div>
 
-<div class="transparent-box even"></div>
+    {% include 'widgets/_section_choices.html.twig' with {
+        'title': ('offers.section_3.title')|trans,
+        'subtitle': ('offers.section_3.subtitle')|trans,
+        'boxes': [
+            {
+                'title': '<span class="colored">01</span>',
+                'paragraphs': [
+                    ('offers.section_3.box_1.description')|trans
+                ],
+                'secondary': true
+            },
+            {
+                'title': '<span class="colored">02</span>',
+                'paragraphs': [
+                    ('offers.section_3.box_2.description')|trans
+                ],
+                'secondary': true
+            },
+            {
+                'title': '<span class="colored">03</span>',
+                'paragraphs': [
+                    ('offers.section_3.box_3.description')|trans
+                ],
+                'secondary': true
+            }
+        ]
+    } %}
 
-<section class="section-container section-container-90 section-container-primary">
-    <section class="section-presentation section-choices">
-        <p class="section-choices-title section-choices-title-secondary idci-title-primary">{% trans from "offers" %}offers.section_3.title{% endtrans %}</p>
-        <p class="section-choices-subtitle section-choices-subtitle-secondary idci-subtitle-primary">{% trans from "offers" %}offers.section_3.subtitle{% endtrans %}</p>
-        <div class="section-choices-items">
-            <div class="section-offers-box section-offers-box-primary">
-                <p class="section-offers-box-title"><span class="colored">01</span></p>
-                <p class="section-offers-box-description-secondary">{% trans from "offers" %}offers.section_3.box_1.description{% endtrans %}</p>
-            </div>
-            <div class="section-offers-box section-offers-box-primary">
-                <p class="section-offers-box-title"><span class="colored">02</span></p>
-                <p class="section-offers-box-description-secondary">{% trans from "offers" %}offers.section_3.box_2.description{% endtrans %}</p>
-            </div>
-            <div class="section-offers-box section-offers-box-primary">
-                <p class="section-offers-box-title"><span class="colored">03</span></p>
-                <p class="section-offers-box-description-secondary">{% trans from "offers" %}offers.section_3.box_3.description{% endtrans %}</p>
-            </div>
-        </div>
-    </section>
-</section>
+    <div class="transparent-box"></div>
 
-<div class="transparent-box"></div>
-
-<section class="section-container section-container-90 section-container-primary">
-    <section class="section-presentation section-choices">
-        <p class="section-choices-title section-choices-title-secondary idci-title-primary">{% trans from "offers" %}offers.section_4.title{% endtrans %}</p>
-        <div class="section-choices-items">
-            <div class="section-offers-box">
-                <p class="section-offers-box-title section-offers-box-title-secondary idci-title-secondary">{% trans from "offers" %}offers.section_4.box_1.title{% endtrans %}</p>
-                <ul class="section-offers-box-description section-offers-box-description-bigger">
-                    {% trans from "offers" %}offers.section_4.box_1.description{% endtrans %}
-                </ul>
-            </div>
-            <div class="section-offers-box">
-                <p class="section-offers-box-title section-offers-box-title-secondary idci-title-secondary">{% trans from "offers" %}offers.section_4.box_2.title{% endtrans %}</p>
-                <ul class="section-offers-box-description section-offers-box-description-bigger">
-                    {% trans from "offers" %}offers.section_4.box_2.description{% endtrans %}
-                </ul>
-            </div>
-        </div>
-    </section>
-</section>
-
+    {% include 'widgets/_section_choices.html.twig' with {
+        'title': ('offers.section_4.title')|trans,
+        'boxes': [
+            {
+                'title': 'offers.section_4.box_1.title'|trans,
+                'paragraphs': [
+                    ('offers.section_4.box_1.description')|trans
+                ]
+            },
+            {
+                'title': 'offers.section_4.box_2.title'|trans,
+                'paragraphs': [
+                    ('offers.section_4.box_2.description')|trans
+                ]
+            }
+        ]
+    } %}
 {% endblock %}
