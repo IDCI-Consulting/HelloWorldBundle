@@ -1,9 +1,10 @@
 {% set locale = app.request.locale %}
+{% trans_default_domain 'cv' %}
 
 <section class="section-container">
     <section class="section-cv">
         <section class="columns is-multiline is-centered">
-            <p class="column is-12 section-cv-title idci-title-secondary">{% trans from "cv" %}cv.title{% endtrans %}</p>
+            <h1 class="column is-12 section-cv-title idci-title-secondary">{{ 'cv.title'|trans }}</h1>
             <p class="column is-6 section-cv-label">{{ data.identity.firstName }} {{ data.identity.lastName }} | {{ data.identity.job[locale] }}</p>
             <p class="column is-6 section-cv-links">
                 {% for socialNetwork in data.identity.socialNetworks %}
@@ -13,22 +14,22 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-primary">
-            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.about_me{% endtrans %}</p>
+            <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.about_me'|trans }}</h2>
             <ul class="section-cv-banner-list">
-                <li class="section-cv-banner-list-item">Âge<p>{{ 'now'|date("Y") - data.identity.birthDate|date("Y") }}</p></li>
-                <li class="section-cv-banner-list-item">Email<p>{{ data.identity.email }}</p></li>
-                <li class="section-cv-banner-list-item">Tél<p>{{ data.identity.phone }}</p></li>
+                <li class="section-cv-banner-list-item">{{ 'cv.age'|trans }}<p>{{ 'now'|date("Y") - data.identity.birthDate|date("Y") }}</p></li>
+                <li class="section-cv-banner-list-item">{{ 'cv.email'|trans }}<p>{{ data.identity.email }}</p></li>
+                <li class="section-cv-banner-list-item">{{ 'cv.phone'|trans }}<p>{{ data.identity.phone }}</p></li>
             </ul>
         </section>
 
         <section class="section-cv-banner section-cv-banner-secondary">
-            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.professional_experiences{% endtrans %}</p>
+            <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.professional_experiences'|trans }}</h2>
             {% for professionalExperience in data.professionalExperiences %}
                 <p class="section-cv-banner-subtitle">
                     {% if "" == professionalExperience.endDate %}
-                    {% trans from "cv" %}cv.since{% endtrans %} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                    {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                     {% else %}
-                    {% trans from "cv" %}cv.from{% endtrans %} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {% trans from "cv" %}cv.to{% endtrans %} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                    {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                     {% endif %}
                 </p>
                 <p>{{ professionalExperience.role[locale] }}</p>
@@ -43,14 +44,14 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-primary">
-            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.courses{% endtrans %}</p>
+            <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.courses'|trans }}</h2>
             {% for education in data.education %}
                 <p><span class="section-cv-banner-education-date">{{ education.endDate|date("Y") }}</span>{{ education.certificate }}</p>
             {% endfor %}
         </section>
 
         <section class="section-cv-banner section-cv-banner-secondary">
-            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.skills{% endtrans %}</p>
+            <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.skills'|trans }}</h2>
             {% for expertise in data.expertises %}
             <p class="section-cv-banner-subtitle section-cv-banner-skills-title">{{ expertise.name[locale] }}</p>
             <ul class="section-cv-banner-skills">
@@ -73,13 +74,13 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-primary">
-            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.personal_experiences{% endtrans %}</p>
+            <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.personal_experiences'|trans }}</h2>
             {% for personalExperience in data.personalExperiences %}
                 <p class="section-cv-banner-subtitle">
                 {% if "" == personalExperience.endDate %}
-                {% trans from "cv" %}cv.since{% endtrans %} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                 {% else %}
-                {% trans from "cv" %}cv.from{% endtrans %} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {% trans from "cv" %}cv.to{% endtrans %} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                 {% endif %}
                 </p>
                 <p>{{ personalExperience.role[locale] }} | {{ personalExperience.organization[locale] }}</p>
@@ -88,7 +89,7 @@
         </section>
 
         <section class="section-cv-banner section-cv-banner-secondary">
-            <p class="section-cv-banner-title idci-title-secondary">{% trans from "cv" %}cv.hobbies{% endtrans %}</p>
+            <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.hobbies'|trans }}</h2>
             {% for hobby in data.hobbies[locale] %}
                 <p class="section-cv-banner-subtitle">{{ hobby.name }}</p>
                 <p>{{ hobby.description }}</p>

@@ -4,29 +4,36 @@ members:
   introduction: L’humain est l’ADN d’IDCI consulting. S’appuyant sur la synergie et les spécialités de chacun, notre équipe travaille avant tout dans une optique d’amélioration continue de la qualité et des méthodologies. <br/><br/> Plus qu’un simple prestataire technique qui va réaliser votre projet, nous sommes impliqués de sa conception à sa maintenance en passant par son infrastructure et vous accompagnons sur le long terme pour le faire évoluer et atteindre toujours de meilleures performances. <br/><br/> Le taux journalier de nos consultants varie en fonction de leur niveau de compétences et de leur expérience. Ils sont indiqués sur chaque CV. Le TJM est diminué de 20% lorsque le consultant travaille dans nos locaux.
 
 gabriel:
+  name: Gabriel Bondaz
   subtitle: Gérant
   description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
 
 frederic:
+  name: Frédéric Bondaz
   subtitle: Gérant
   description: Issu auparavant du monde des services informatiques, je suis co-fondateur de IDCI consulting depuis 2007. Je mets aujourd'hui mes 18 années d'expérience au service du développement de l'entreprise. Outre les orientations stratégiques que je détermine avec Gabriel et Baptiste, je gère en particulier les négociations commerciales, la finance et les HRs pour permettre à l'équipe opérationnelle de se concentrer sur son cœur de métier.
 
 benjamin:
+  name: Benjamin Boudier
   subtitle: Développeur
   description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
 
 swan:
+  name: Swan Frère
   subtitle: Développeur
   description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
 
 vincent:
+  name: Vincent Duvivier
   subtitle: Développeur
   description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
 
 joris:
+  name: Joris Vinière
   subtitle: Développeur
   description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
 
 maeva:
+  name: Maëva Grondin
   subtitle: Développeuse
   description: Formée en autodidacte, et attirée par la programmation depuis le lycée, je me professionnalise aujourd'hui.
