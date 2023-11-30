@@ -1,0 +1,42 @@
+<section class="section-container section-container-full section-container-{% if 0 == loop.index % 2 %}secondary{% else %}primary{% endif %}"{% if id is defined and id is not null and id is not empty %} id="{{ id }}"{% endif %}>
+    <section class="section-display">
+        <h2 class="section-display-title idci-title-primary">{{ title }}</h2>
+        <section class="section-display-content">
+            <aside class="section-display-aside">
+                <img src="{{ asset('build/images/base/' ~ media.src ~ '') }}" class="section-card-media" alt={{ media.alt }}>
+                {% if buttons is defined and buttons is not null and buttons is not empty %}
+                    <div class="section-display-aside-buttons">
+                        {% for button in buttons %}
+                            <a href={{ button.href }} class="button">{{ button.label }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </aside>
+            <article class="section-display-article">
+                <div class="tab">
+                    {% for tab in tabs %}
+                    <div class="tab-item">
+                        <input type="radio" id="{{ (title ~ '-' ~ tab.label[locale])|slug }}" name="{{ title|slug }}-nav-tab" {% if 1 == loop.index %}checked{% endif %}>
+                        <label for="{{ (title ~ '-' ~ tab.label[locale])|slug }}" data-position="{{ loop.index }}">{{ tab.label[locale] }}</label>
+                        <div class="tab-pane">
+                            {% for item in tab.items %}
+                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title[locale] }}</p>
+                                {% if 0 != item.duration %}
+                                <p class="section-display-article-tab-subtitle idci-title-secondary">{{ duration }} : {{ item.duration / 60 }} {{ hour }}{% if item.duration > 60 %}s{% endif %}</p>
+                                {% endif %}
+                                <ul class="section-display-article-tab-list">
+                                {% if item.concepts is not empty %}
+                                    {% for concept in item.concepts[locale] %}
+                                        <li>{{ concept }}</li>
+                                    {% endfor %}
+                                {% endif %}
+                                </ul>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </article>
+        </section>
+    </section>
+</section>

@@ -1,0 +1,22 @@
+<div class="section-container section-container-90 section-container-primary">
+    <section class="section-presentation section-choices">
+        <h1 class="section-choices-title idci-title-primary">{{ page_title }}</h1>
+        <div class="section-choices-items">
+            {% for box in boxes %}
+                <section class="section-offers-box section-offers-box-{{ box.color|default('primary') }}">
+                    <h2 class="section-offers-box-title">{{ box.title|raw }}</h2>
+                    <ul class="section-offers-box-description">
+                        {% for paragraph in box.paragraphs %}
+                            <li>
+                                {{ paragraph|raw }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endfor %}
+        </div>
+        <a href="{{ url('app_contact_index') }}" class="button">
+            {% trans %}button.contact_us{% endtrans %}<i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </section>
+</div>

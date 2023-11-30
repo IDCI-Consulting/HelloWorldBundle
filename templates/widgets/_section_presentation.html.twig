@@ -1,0 +1,44 @@
+<section class="section-presentation">
+    {% if title is defined and title is not null and title is not empty %}
+        <h2 class="section-presentation-title idci-title-primary">{{ title }}</h2>
+    {% endif %}
+    <h3 class="section-presentation-subtitle idci-subtitle-primary">{{ subtitle }}</h3>
+    {% if media is defined and media is not null and media is not empty %}
+        <img src={{ media.src }} alt={{ media.alt }} class="section-presentation-media">
+    {% endif %}
+    {% if paragraphs is defined and paragraphs is not null and paragraphs is not empty %}
+        {% for paragraph in paragraphs %}
+            <p class="section-presentation-description {% if tags is defined and tags is same as true %}section-presentation-tags{% endif %}">
+                {{ paragraph|raw }}
+            </p>
+        {% endfor %}
+    {% endif %}
+    {% if cards is defined and cards is not null and cards is not empty %}
+        <div class="columns section-presentation-columns">
+            {% for card in cards %}
+                <div class="column section-presentation-column">
+                    <div class="section-card">
+                        <a href={{ card.href }} class="section-card-link">
+                            <img src="{{ card.media.src }}" alt={{ card.media.alt }} class="section-card-media">
+                            <p class="section-card-description">{{ card.description }}</p>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if courses is defined and courses is same as true %}
+        <div class="section-presentation-courses">
+            <img src="{{ asset('build/images/base/balise-left.svg') }}" alt="{% trans from "alt" %}balise-left{% endtrans %}" class="section-presentation-courses-media">
+            <p class="idci-subtitle-primary section-presentation-courses-title">{% trans from "homepage" %}courses.paragraph_2{% endtrans %}</p>
+            <img src="{{ asset('build/images/base/balise-right.svg') }}" alt="{% trans from "alt" %}balise-right{% endtrans %}" class="section-presentation-courses-media">
+        </div>
+        <div class="section-presentation-courses-content">
+            <img src="{{ asset('build/images/logo/symfony-logo.png') }}" alt="{% trans from "alt" %}symfony-logo{% endtrans %}" class="section-presentation-courses-content-element">
+            <img src="{{ asset('build/images/logo/css3-html5-logo.png') }}" alt="{% trans from "alt" %}css3-html5-logo{% endtrans %}" class="section-presentation-courses-content-element">
+        </div>
+    {% endif %}
+    {% if button is defined and button is not null and button is not empty %}
+        <a href={{ button.href }} class="section-presentation-scroll"><img src="{{ asset('build/images/base/slick_arrow_down.svg') }}" alt="{% trans from "alt" %}slick_arrow_down{% endtrans %}"></a>
+    {% endif %}
+</section>
