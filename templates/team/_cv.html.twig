@@ -27,9 +27,9 @@
             {% for professionalExperience in data.professionalExperiences %}
                 <p class="section-cv-banner-subtitle">
                     {% if "" == professionalExperience.endDate %}
-                    {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                        {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                     {% else %}
-                    {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                        {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                     {% endif %}
                 </p>
                 <p>{{ professionalExperience.role[locale] }}</p>
@@ -53,23 +53,23 @@
         <section class="section-cv-banner section-cv-banner-secondary">
             <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.skills'|trans }}</h2>
             {% for expertise in data.expertises %}
-            <p class="section-cv-banner-subtitle section-cv-banner-skills-title">{{ expertise.name[locale] }}</p>
-            <ul class="section-cv-banner-skills">
-                {% for skill in expertise.skills %}
-                <li>
-                    <p class="section-cv-banner-skill-title">{{ skill.name[locale] }}</p>
-                    <p class="section-cv-banner-skill-details">
-                        {% if skill.keywords is defined %}
-                            {% for keyword in skill.keywords %}
-                                {{ keyword }}{% if loop.last != true %}, {% endif %}
-                            {% endfor %}
-                        {% else %}
-                            {{ skill.level[locale] }}
-                        {% endif %}
-                    </p>
-                </li>
-                {% endfor %}
-            </ul>
+                <p class="section-cv-banner-subtitle section-cv-banner-skills-title">{{ expertise.name[locale] }}</p>
+                <ul class="section-cv-banner-skills">
+                    {% for skill in expertise.skills %}
+                    <li>
+                        <p class="section-cv-banner-skill-title">{{ skill.name[locale] }}</p>
+                        <p class="section-cv-banner-skill-details">
+                            {% if skill.keywords is defined %}
+                                {% for keyword in skill.keywords %}
+                                    {{ keyword }}{% if loop.last != true %}, {% endif %}
+                                {% endfor %}
+                            {% else %}
+                                {{ skill.level[locale] }}
+                            {% endif %}
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ul>
             {% endfor %}
         </section>
 
@@ -78,9 +78,9 @@
             {% for personalExperience in data.personalExperiences %}
                 <p class="section-cv-banner-subtitle">
                 {% if "" == personalExperience.endDate %}
-                {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                    {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                 {% else %}
-                {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                    {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
                 {% endif %}
                 </p>
                 <p>{{ personalExperience.role[locale] }} | {{ personalExperience.organization[locale] }}</p>

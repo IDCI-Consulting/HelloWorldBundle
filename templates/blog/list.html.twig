@@ -2,75 +2,16 @@
 
 {% block main %}
 
-{% set locale = app.request.locale %}
+    {% set locale = app.request.locale %}
+    {% trans_default_domain 'blog' %}
 
-<section class="section-container">
-    <section class="section-dynamic-display">
-        <h2 class="section-dynamic-display-title idci-title-primary">Blog</h2>
-        <h3 class="section-dynamic-display-subtitle idci-subtitle-primary">{% trans from "blog" %}blog.carousel_title{% endtrans %}</h3>
-
-        <div class="columns is-mobile">
-            <div class="pic-ctn keyframes">
-            {% set post_count = 0 %}
-            {% set max_post_count = 3 %}
-            {% for years in posts_by_years %}
-                {% for posts in years %}
-                    {% if post_count < max_post_count %}
-                        <div class="columns is-mobile pic">
-                            <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3 carousel-post-media">
-                            <div class="column is-6 carousel-post">
-                                <div class="carousel-post-header">
-                                    <p>{{ posts.publicationDate }}</p>
-                                    <p>{{ posts.author }}</p>
-                                </div>
-                                <p class="carousel-post-title">{{ posts.name[locale] }}</p>
-                                <p class="carousel-post-description">{{ posts.description[locale] }}</p>
-                                <a href="{{ url('app_blog_post', {'slug': posts.id}) }}" class="button carousel-post-button">{% trans from "blog" %}blog.read_post{% endtrans %}</a>
-                            </div>
-                        </div>
-                        {% set post_count = post_count + 1 %}
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
-            </div>
-        </div>
-
-        <style>
-            .keyframes > div {
-                animation: display calc({{ post_count }}s * 5) infinite;
-            }
-
-            {% set one_second = 100 / (post_count * 5) %}
-
-            @keyframes display {
-                0% {
-                    transform: translateX(0px);
-                    opacity: 0;
-                }
-                {{ one_second }}%, {{ one_second * 4 }}% {
-                    transform: translateX(0);
-                    opacity: 1;
-                    z-index: 100;
-                }
-                {{ one_second * 5 }}% {
-                    transform: translateX(-200px);
-                    opacity: 0;
-                    z-index: -100;
-                }
-                100% {
-                    transform: translateX(-200px);
-                    opacity: 0;
-                }
-            }
-
-            {% for i in 2..(post_count + 2) %}
-                .keyframes div:nth-child({{ i }}) {
-                    animation-delay: calc(({{ i }}s - 1s) * 5);
-                }
-            {% endfor %}
-        </style>
-    </section>
-</section>
+    {% include 'widgets/_section_dynamic_display.html.twig' with {
+        'page_title': 'Blog',
+        'section_title': 'blog.carousel_title'|trans,
+        'max_slide': 3,
+        'slides': posts,
+        'href': 'app_blog_post'
+    } %}
 
 <section class="section-container section-container-full section-container-primary">
     <section class="section-posts">
