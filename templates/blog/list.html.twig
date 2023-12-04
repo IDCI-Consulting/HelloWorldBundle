@@ -13,57 +13,21 @@
         'href': 'app_blog_post'
     } %}
 
-<section class="section-container section-container-full section-container-primary">
-    <section class="section-posts">
-        <h2 class="section-posts-title idci-title-primary">{% trans from "blog" %}blog.all_posts_title{% endtrans %}</h2>
-        <div class="tab">
-            <div class="tab-item">
-                <input type="radio" id="posts_by_years" name="nav-tab" checked>
-                <label for="posts_by_years" data-position="1">{% trans from "blog" %}blog.by_years{% endtrans %}</label>
-                <div class="tab-pane">
-                    {% for year_label, year in posts_by_years %}
-                    <div class="section-posts-list">
-                        <h2 class="section-posts-list-title">{{ year_label }}</h2>
-                        <ul>
-                            {% for post in year %}
-                            <li class="section-posts-list-item">
-                                <img src="{{ asset('build/images/' ~ post.media ~ '') }}" class="section-posts-list-item-media">
-                                <div class="section-posts-list-item-infos">
-                                    <a href="{{ url('app_blog_post', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
-                                    <span>{% trans from "blog" %}blog.uploaded_the{% endtrans %} {{ post.publicationDate }} {% trans from "blog" %}blog.by{% endtrans %} {{ post.author }}</span>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="tab-item">
-                <input type="radio" id="posts_by_categories" name="nav-tab">
-                <label class="label-second" for="posts_by_categories" data-position="2">{% trans from "blog" %}blog.by_categories{% endtrans %}</label>
-                <div class="tab-pane">
-                    {% for category_label, category in posts_by_categories %}
-                    <div class="section-posts-list">
-                        <h2 class="section-posts-list-title">{{ category_label }}</h2>
-                        <ul>
-                            {% for post in category %}
-                            <li class="section-posts-list-item">
-                                <img src="{{ asset('build/images/' ~ post.media ~ '') }}" class="section-posts-list-item-media">
-                                <div class="section-posts-list-item-infos">
-                                    <a href="{{ url('app_blog_post', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
-                                    <span class="section-posts-list-item-infos">{% trans from "blog" %}blog.uploaded_the{% endtrans %} {{ post.publicationDate }} {% trans from "blog" %}blog.by{% endtrans %} {{ post.author }}</span>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
-</section>
+    {% include 'widgets/_section_posts.html.twig' with {
+        'title': 'blog.all_posts_title'|trans,
+        'tabs': [
+            {
+                'label': 'blog.by_years'|trans,
+                'id': 'posts_by_years',
+                'items': posts_by_years
+            },
+            {
+                'label': 'blog.by_categories'|trans,
+                'id': 'posts_by_categories',
+                'items': posts_by_categories
+            }
+        ],
+        'trans_domain': 'blog'
+    } %}
 
 {% endblock %}

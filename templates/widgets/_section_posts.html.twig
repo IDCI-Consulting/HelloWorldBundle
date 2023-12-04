@@ -1,0 +1,31 @@
+<section class="section-container section-container-full section-container-primary">
+    <section class="section-posts">
+        <h2 class="section-posts-title idci-title-primary">{{ title }}</h2>
+        <div class="tab">
+            {% for tab in tabs %}
+                <div class="tab-item">
+                    <input type="radio" id={{ tab.id }} name="nav-tab" checked>
+                    <label for={{ tab.id }} data-position={{ loop.index }}>{{ tab.label }}</label>
+                    <div class="tab-pane">
+                        {% for item_label, item in tab.items %}
+                            <div class="section-posts-list">
+                                <h3 class="section-posts-list-title">{{ item_label }}</h3>
+                                <ul>
+                                    {% for post in item %}
+                                        <li class="section-posts-list-item">
+                                            <img src="{{ asset('build/images/' ~ post.media ~ '') }}" class="section-posts-list-item-media">
+                                            <div class="section-posts-list-item-infos">
+                                                <a href="{{ url('app_blog_post', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[locale] }}</a>
+                                                <span>{{ 'blog.uploaded_the'|trans({}, trans_domain) }} {{ post.publicationDate }} {{ 'blog.by'|trans({}, trans_domain) }} {{ post.author }}</span>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</section>
