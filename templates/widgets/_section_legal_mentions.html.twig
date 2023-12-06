@@ -1,0 +1,11 @@
+<section class="section-container section-container-60 section-container-secondary">
+    <section class="section-legal-mentions">
+        <h2 class="section-legal-mentions-title idci-title-primary">{{ title }}</h2>
+        {% for section in sections %}
+            <h3 class="section-legal-mentions-subtitle idci-subtitle-primary">{{ section.title }}</h3>
+            <p class="section-legal-mentions-description">
+                {{ section.paragraphs|raw }}
+            </p>
+        {% endfor %}
+    </section>
+</section>
