@@ -1,9 +1,10 @@
-version: '3.8'
+---
+version: '3.9'
 
 services:
 
   php:
-    image: docker-registry.idci-consulting.fr/idci-website/php-fpm:latest
+    image: gitlab-registry.idci-consulting.fr/idci-consulting/website/php-fpm:latest
     configs:
       - source: php_conf
         target: /usr/local/etc/php/php.ini
@@ -20,9 +21,24 @@ services:
     image: nginx
     deploy:
       labels:
-        traefik.frontend.rule: "Host: preprod.idci-consulting.fr"
-        traefik.docker.network: "traefik_reverse-proxy"
-        traefik.port: "80"
+        - "traefik.enable=true"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.docker.network=traefik"
+
+        # traefik v2
+        - "traefik.http.services.idci-website-preprod.loadbalancer.server.port=80"
+        # HTTP Routers
+        - "traefik.http.routers.to-idci-website-preprod-nginx.entryPoints=web"
+        - "traefik.http.routers.to-idci-website-preprod-nginx.rule=Host(`preprod.idci-consulting.fr`)"
+        - "traefik.http.routers.to-idci-website-preprod-nginx.middlewares=idci-website-preprod-nginx-http-to-https@docker"
+        # HTTP Middlewares: http => https
+        - "traefik.http.middlewares.idci-website-preprod-nginx-http-to-https.redirectscheme.scheme=https"
+        - "traefik.http.middlewares.idci-website-preprod-nginx-http-to-https.redirectscheme.permanent=true"
+        # HTTPS Routers
+        - "traefik.http.routers.to-idci-website-preprod-nginx-https.entryPoints=websecured"
+        - "traefik.http.routers.to-idci-website-preprod-nginx-https.rule=Host(`preprod.idci-consulting.fr`)"
+        - "traefik.http.routers.to-idci-website-preprod-nginx-https.tls=true"
+        - "traefik.http.routers.to-idci-website-preprod-nginx-https.tls.certresolver=letsencrypt"
     configs:
       - source: nginx_conf
         target: /etc/nginx/conf.d/default.conf
@@ -31,8 +47,8 @@ services:
     environment:
       - NGINX_HOST=preprod.idci-consulting.fr
     networks:
-      - traefik_reverse-proxy
       - app
+      - traefik
 
   redis:
     image: redis:6
@@ -66,5 +82,5 @@ networks:
   app:
   redis:
   wkhtmltopdf:
-  traefik_reverse-proxy:
+  traefik:
     external: true

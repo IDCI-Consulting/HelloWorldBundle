@@ -1,9 +1,10 @@
-version: '3.8'
+---
+version: '3.9'
 
 services:
 
   php:
-    image: docker-registry.idci-consulting.fr/idci-website/php-fpm:latest
+    image: gitlab-registry.idci-consulting.fr/idci-consulting/website/php-fpm:latest
     configs:
       - source: php_conf
         target: /usr/local/etc/php/php.ini
@@ -21,25 +22,33 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.docker.network=traefik_reverse_proxy"
         - "traefik.docker.lbswarm=true"
-        - "traefik.http.services.idci-nginx.loadbalancer.server.port=80"
-        - "traefik.http.routers.idci-nginx.entryPoints=web"
-        - "traefik.http.routers.idci-nginx.rule=Host(`idci-consulting.fr`, `www.idci-consulting.fr`)"
-        - "traefik.http.routers.idci-nginx-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-nginx-https.rule=Host(`idci-consulting.fr`, `www.idci-consulting.fr`)"
-        - "traefik.http.routers.idci-nginx-https.tls=true"
-        - "traefik.http.routers.idci-nginx-https.tls.certresolver=letsencrypt"
+        - "traefik.docker.network=traefik"
+
+        # traefik v2
+        - "traefik.http.services.idci-website-prod.loadbalancer.server.port=80"
+        # HTTP Routers
+        - "traefik.http.routers.to-idci-website-prod-nginx.entryPoints=web"
+        - "traefik.http.routers.to-idci-website-prod-nginx.rule=Host(`www.idci-consulting.fr`)"
+        - "traefik.http.routers.to-idci-website-prod-nginx.middlewares=idci-website-prod-nginx-http-to-https@docker"
+        # HTTP Middlewares: http => https
+        - "traefik.http.middlewares.idci-website-prod-nginx-http-to-https.redirectscheme.scheme=https"
+        - "traefik.http.middlewares.idci-website-prod-nginx-http-to-https.redirectscheme.permanent=true"
+        # HTTPS Routers
+        - "traefik.http.routers.to-idci-website-prod-nginx-https.entryPoints=websecured"
+        - "traefik.http.routers.to-idci-website-prod-nginx-https.rule=Host(`www.idci-consulting.fr`)"
+        - "traefik.http.routers.to-idci-website-prod-nginx-https.tls=true"
+        - "traefik.http.routers.to-idci-website-prod-nginx-https.tls.certresolver=letsencrypt"
     configs:
       - source: nginx_conf
         target: /etc/nginx/conf.d/default.conf
     volumes:
       - assets_data:/var/www/app/public/build
     environment:
-      - NGINX_HOST=idci-website.fr
+      - NGINX_HOST=www.idci-consulting.fr
     networks:
-      - traefik_reverse_proxy
       - app
+      - traefik
 
   redis:
     image: redis:6
@@ -63,7 +72,7 @@ configs:
   php_conf:
     file: ./conf/php/php.ini
   app_env:
-    file: ./conf/app/.env.prod-preprod
+    file: ./conf/app/.env.prod-prod
 
 volumes:
   assets_data:
@@ -73,5 +82,5 @@ networks:
   app:
   redis:
   wkhtmltopdf:
-  traefik_reverse_proxy:
+  traefik:
     external: true
