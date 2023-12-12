@@ -9,8 +9,7 @@ stages:
 
 variables:
   STACK_NAME: idci_website
-#  FPM_RELEASE_IMAGE: ${CI_REGISTRY_IMAGE}/php
-  FPM_RELEASE_IMAGE: gitlab.idci-consulting.fr/idci-consulting/website/php
+  FPM_RELEASE_IMAGE: ${CI_REGISTRY_IMAGE}/php
 
 build-docker-image:
   stage: build
