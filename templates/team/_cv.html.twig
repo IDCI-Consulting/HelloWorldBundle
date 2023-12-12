@@ -1,11 +1,10 @@
-{% set locale = app.request.locale %}
 {% trans_default_domain 'cv' %}
 
 <section class="section-container">
     <section class="section-cv">
         <section class="columns is-multiline is-centered">
             <h1 class="column is-12 section-cv-title idci-title-secondary">{{ 'cv.title'|trans }}</h1>
-            <p class="column is-6 section-cv-label">{{ data.identity.firstName }} {{ data.identity.lastName }} | {{ data.identity.job[locale] }}</p>
+            <p class="column is-6 section-cv-label">{{ data.identity.firstName }} {{ data.identity.lastName }} | {{ data.identity.job[app.request.locale] }}</p>
             <p class="column is-6 section-cv-links">
                 {% for socialNetwork in data.identity.socialNetworks %}
                     <a href="{{ socialNetwork.url }}"><i class="fab fa-{{ socialNetwork.name }} fa-3x"></i></a>
@@ -27,15 +26,15 @@
             {% for professionalExperience in data.professionalExperiences %}
                 <p class="section-cv-banner-subtitle">
                     {% if "" == professionalExperience.endDate %}
-                        {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                        {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }}
                     {% else %}
-                        {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                        {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }}
                     {% endif %}
                 </p>
-                <p>{{ professionalExperience.role[locale] }}</p>
-                {% if professionalExperience.tasks[locale]|length > 0 %}
+                <p>{{ professionalExperience.role[app.request.locale] }}</p>
+                {% if professionalExperience.tasks[app.request.locale]|length > 0 %}
                     <ul class="section-cv-banner-highlights">
-                        {% for task in professionalExperience.tasks[locale] %}
+                        {% for task in professionalExperience.tasks[app.request.locale] %}
                             <li class="section-cv-banner-highlights-element">{{ task }}</li>
                         {% endfor %}
                     </ul>
@@ -53,18 +52,18 @@
         <section class="section-cv-banner section-cv-banner-secondary">
             <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.skills'|trans }}</h2>
             {% for expertise in data.expertises %}
-                <p class="section-cv-banner-subtitle section-cv-banner-skills-title">{{ expertise.name[locale] }}</p>
+                <p class="section-cv-banner-subtitle section-cv-banner-skills-title">{{ expertise.name[app.request.locale] }}</p>
                 <ul class="section-cv-banner-skills">
                     {% for skill in expertise.skills %}
                     <li>
-                        <p class="section-cv-banner-skill-title">{{ skill.name[locale] }}</p>
+                        <p class="section-cv-banner-skill-title">{{ skill.name[app.request.locale] }}</p>
                         <p class="section-cv-banner-skill-details">
                             {% if skill.keywords is defined %}
                                 {% for keyword in skill.keywords %}
                                     {{ keyword }}{% if loop.last != true %}, {% endif %}
                                 {% endfor %}
                             {% else %}
-                                {{ skill.level[locale] }}
+                                {{ skill.level[app.request.locale] }}
                             {% endif %}
                         </p>
                     </li>
@@ -78,19 +77,19 @@
             {% for personalExperience in data.personalExperiences %}
                 <p class="section-cv-banner-subtitle">
                 {% if "" == personalExperience.endDate %}
-                    {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                    {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }}
                 {% else %}
-                    {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=locale) }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=locale) }}
+                    {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }}
                 {% endif %}
                 </p>
-                <p>{{ personalExperience.role[locale] }} | {{ personalExperience.organization[locale] }}</p>
-                <p>{{ personalExperience.description[locale] }}</p>
+                <p>{{ personalExperience.role[app.request.locale] }} | {{ personalExperience.organization[app.request.locale] }}</p>
+                <p>{{ personalExperience.description[app.request.locale] }}</p>
             {% endfor %}
         </section>
 
         <section class="section-cv-banner section-cv-banner-secondary">
             <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.hobbies'|trans }}</h2>
-            {% for hobby in data.hobbies[locale] %}
+            {% for hobby in data.hobbies[app.request.locale] %}
                 <p class="section-cv-banner-subtitle">{{ hobby.name }}</p>
                 <p>{{ hobby.description }}</p>
             {% endfor %}

@@ -15,8 +15,8 @@
                                 <p>{{ slide.publicationDate }}</p>
                                 <p>{{ slide.author }}</p>
                             </div>
-                            <h3 class="carousel-post-title">{{ slide.name[locale] }}</h3>
-                            <p class="carousel-post-description">{{ slide.description[locale] }}</p>
+                            <h3 class="carousel-post-title">{{ slide.name[app.request.locale] }}</h3>
+                            <p class="carousel-post-description">{{ slide.description[app.request.locale] }}</p>
                             <a href="{{ url(href, {'slug': slide.id}) }}" class="button carousel-post-button">{{ 'blog.read_post'|trans({}, 'blog') }}</a>
                         </div>
                     </div>

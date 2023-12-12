@@ -16,17 +16,17 @@
                 <div class="tab">
                     {% for tab in tabs %}
                     <div class="tab-item">
-                        <input type="radio" id="{{ (title ~ '-' ~ tab.label[locale])|slug }}" name="{{ title|slug }}-nav-tab" {% if 1 == loop.index %}checked{% endif %}>
-                        <label for="{{ (title ~ '-' ~ tab.label[locale])|slug }}" data-position="{{ loop.index }}">{{ tab.label[locale] }}</label>
+                        <input type="radio" id="{{ (title ~ '-' ~ tab.label[app.request.locale])|slug }}" name="{{ title|slug }}-nav-tab" {% if 1 == loop.index %}checked{% endif %}>
+                        <label for="{{ (title ~ '-' ~ tab.label[app.request.locale])|slug }}" data-position="{{ loop.index }}">{{ tab.label[app.request.locale] }}</label>
                         <div class="tab-pane">
                             {% for item in tab.items %}
-                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title[locale] }}</p>
+                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title[app.request.locale] }}</p>
                                 {% if 0 != item.duration %}
                                 <p class="section-display-article-tab-subtitle idci-title-secondary">{{ duration }} : {{ item.duration / 60 }} {{ hour }}{% if item.duration > 60 %}s{% endif %}</p>
                                 {% endif %}
                                 <ul class="section-display-article-tab-list">
                                 {% if item.concepts is not empty %}
-                                    {% for concept in item.concepts[locale] %}
+                                    {% for concept in item.concepts[app.request.locale] %}
                                         <li>{{ concept }}</li>
                                     {% endfor %}
                                 {% endif %}

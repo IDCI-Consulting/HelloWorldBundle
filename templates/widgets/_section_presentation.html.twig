@@ -27,18 +27,4 @@
             {% endfor %}
         </div>
     {% endif %}
-    {% if courses is defined and courses is same as true %}
-        <div class="section-presentation-courses">
-            <img src="{{ asset('build/images/base/balise-left.svg') }}" alt="{% trans from "alt" %}balise-left{% endtrans %}" class="section-presentation-courses-media">
-            <p class="idci-subtitle-primary section-presentation-courses-title">{% trans from "homepage" %}courses.paragraph_2{% endtrans %}</p>
-            <img src="{{ asset('build/images/base/balise-right.svg') }}" alt="{% trans from "alt" %}balise-right{% endtrans %}" class="section-presentation-courses-media">
-        </div>
-        <div class="section-presentation-courses-content">
-            <img src="{{ asset('build/images/logo/symfony-logo.png') }}" alt="{% trans from "alt" %}symfony-logo{% endtrans %}" class="section-presentation-courses-content-element">
-            <img src="{{ asset('build/images/logo/css3-html5-logo.png') }}" alt="{% trans from "alt" %}css3-html5-logo{% endtrans %}" class="section-presentation-courses-content-element">
-        </div>
-    {% endif %}
-    {% if button is defined and button is not null and button is not empty %}
-        <a href={{ button.href }} class="section-presentation-scroll"><img src="{{ asset('build/images/base/slick_arrow_down.svg') }}" alt="{% trans from "alt" %}slick_arrow_down{% endtrans %}"></a>
-    {% endif %}
 </section>

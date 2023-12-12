@@ -1,8 +1,6 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-
-    {% set locale = app.request.locale %}
     {% trans_default_domain 'blog' %}
 
     {% include 'widgets/_section_dynamic_display.html.twig' with {
@@ -26,8 +24,6 @@
                 'id': 'posts_by_categories',
                 'items': posts_by_categories
             }
-        ],
-        'trans_domain': 'blog'
+        ]
     } %}
-
 {% endblock %}

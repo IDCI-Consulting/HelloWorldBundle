@@ -7,11 +7,11 @@
         <div class="section-members-list">
             {% for member in members %}
                 <div class="section-member-card">
-                    <h2 class="section-member-card-title idci-title-primary">{{ (member ~ '.name')|trans }}</h2>
-                    <h3 class="section-member-card-subtitle idci-subtitle-secondary">{{ (member ~ '.subtitle')|trans }}</h3>
-                    <img src="{{ asset('build/images/members/' ~ member ~ '-sprite.png') }}" alt="{{ (member ~ '-sprite')|trans({}, 'alt') }}" class="section-member-card-media">
-                    <p class="section-member-card-description">{{ (member ~ '.description')|trans }}</p>
-                    <a href="{{ url('app_team_member', {'slug' : '' ~ (member ~ '.name')|trans|lower|slug('_')}) }}" class="button section-member-card-button">{{ ('members.check_cv')|trans }}</a>
+                    <h2 class="section-member-card-title idci-title-primary">{{ member }}</h2>
+                    <h3 class="section-member-card-subtitle idci-subtitle-secondary">{{ (member|lower|split(' ')|first ~ '.subtitle')|trans }}</h3>
+                    <img src="{{ asset('build/images/members/' ~ member|lower|split(' ')|first ~ '-sprite.png') }}" alt="{{ (member|lower|split(' ')|first ~ '-sprite')|trans({}, 'alt') }}" class="section-member-card-media">
+                    <p class="section-member-card-description">{{ (member|lower|split(' ')|first ~ '.description')|trans }}</p>
+                    <a href="{{ url('app_team_member', {'slug' : (member)|lower|slug('_')}) }}" class="button section-member-card-button">{{ ('members.check_cv')|trans }}</a>
                 </div>
             {% endfor %}
         </div>
