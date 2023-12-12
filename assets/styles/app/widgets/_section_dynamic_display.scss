@@ -9,4 +9,29 @@
         font-size: $idci-font-2x;
         margin-top: 5rem;
     }
+
+    .pic-ctn {
+        align-items: center;
+        display: flex;
+        width: 100%;
+
+        .slide-arrow {
+            background-color: transparent;
+            border: none;
+            width: 10rem;
+
+            &:hover {
+                background-color: $idci-color-white;
+                border-radius: 15%;
+                box-shadow: 1px 1px 2px $idci-color-dark-grey;
+                cursor: pointer;
+                transition-duration: 800ms;
+                width: 12rem;
+            }
+
+            .slide-arrow-media {
+                width: 2rem;
+            }
+        }
+    }
 }

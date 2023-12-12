@@ -1,0 +1,14 @@
+<section class="section-container section-container-90 section-container-primary">
+    <section class="section-display-stack">
+        <div class="section-display-stack-colored-box"></div>
+        <div class="section-display-stack-description">
+            <h2 class="section-display-stack-description-title">{{ title }}</h2>
+            {% for paragraph in paragraphs %}
+                <p class="section-display-stack-description-content">
+                    {{ paragraph|raw }}
+                </p>
+            {% endfor %}
+        </div>
+        <img class="section-display-stack-media" src="{{ media.src }}" alt="{{ media.alt }}">
+    </section>
+</section>

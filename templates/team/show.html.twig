@@ -5,6 +5,6 @@
 {% block main %}
     {{ include('team/_cv.html.twig') }}
     <div class="info-box">
-        <a href="{{ url('app_team_member', {'slug' : slug, '_format': 'pdf'}) }}" class="button">{% trans %}button.pdf_download{% endtrans %}</a>
+        <a href="{{ url('app_team_member', {'slug' : slug, '_format': 'pdf'}) }}" class="button">{{ 'button.pdf_download'|trans }}</a>
     </div>
 {% endblock %}

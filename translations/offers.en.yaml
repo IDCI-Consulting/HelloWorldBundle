@@ -35,14 +35,14 @@ offers:
   section_4:
     title: 'This organization is the promise of a real partnership offering benefits to both sides :'
     box_1:
-      title: For you
+      title: <span class="colored">For you</span>
       description:  '<li>Commission an IDCI Consulting consultant and <span class="colored">benefit from a multi-skills network</span></li>
                     <li><span class="colored">Benefit from technical ways and extra material</span> (servers, sites, communication.)</li>
                     <li><span class="colored">Insure yourself a backup</span> in emergency cases</li>
                     <li><span class="colored">Optimize moving costs</span> by realizing all, or just a part, of the commission in our sites, on permanent communication with the client</li>
                     <li>Get a second interlocutor in charge of the relation and the <span class="colored">satisfaction of the client</span></li>'
     box_2:
-      title: For us
+      title: <span class="colored">For us</span>
       description:  <li><span class="colored">Mutualize</span> the skills</li>
                     <li><span class="colored">Maintain and evolve knowledges</span> of each members</li>
                     <li><span class="colored">Work following standards</span> established by the community and our team</li>

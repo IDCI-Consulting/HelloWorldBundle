@@ -36,14 +36,14 @@ offers:
   section_4:
     title: 'Cette organisation est la promesse d’un véritable partenariat offrant des avantages pour chaque partie :'
     box_1:
-      title: Pour vous
+      title: <span class="colored">Pour vous</span>
       description:  '<li>Mandater 1 consultant IDCI consulting et <span class="colored">bénéficier d’un réseau multi-compétence</span></li>
                     <li><span class="colored">Bénéficier de moyens techniques et matériels supplémentaires</span> (serveurs, locaux, communication.)</li>
                     <li><span class="colored">S’assurer d’un backup</span> en cas d’urgence</li>
                     <li><span class="colored">D’optimiser les coûts de déplacement</span> en faisant réaliser tout ou partie du mandat dans nos locaux en relation permanente avec le client</li>
                     <li>Avoir un 2e interlocuteur en charge de la relation et de la <span class="colored">satisfaction client</span></li>'
     box_2:
-      title: Pour nous
+      title: <span class="colored">Pour nous</span>
       description:  <li><span class="colored">Mutualiser</span> les compétences</li>
                     <li><span class="colored">Maintenir et faire évoluer les connaissances</span> de chacun</li>
                     <li><span class="colored">Travailler en suivant des standards</span> suivis par la communauté et par notre équipe</li>

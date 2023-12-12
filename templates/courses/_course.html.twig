@@ -1,5 +1,3 @@
-{% set locale = app.request.locale %}
-
 <section class="section-container section-container-full section-container-primary">
     <section class="section-display">
         <h2 class="section-display-title idci-title-primary">{{ course.name }}</h2>
@@ -8,16 +6,16 @@
                 <div class="tab">
                     {% for day in course.days %}
                     <div class="tab-item">
-                        <p class="tab-item-title">{{ day.label[locale] }}</p>
+                        <p class="tab-item-title">{{ day.label[app.request.locale] }}</p>
                         <div class="tab-pane">
                             {% for item in day.items %}
-                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title[locale] }}</p>
+                                <p class="section-display-article-tab-title idci-title-secondary">{{ item.title[app.request.locale] }}</p>
                                 {% if 0 != item.duration %}
-                                <p class="section-display-article-tab-subtitle idci-title-secondary">{% trans from "courses" %}courses.duration{% endtrans %} : {{ item.duration / 60 }} {% trans from "courses" %}courses.hour{% endtrans %}{% if item.duration > 60 %}s{% endif %}</p>
+                                <p class="section-display-article-tab-subtitle idci-title-secondary">{{ 'courses.duration'|trans({}, 'courses') }} : {{ item.duration / 60 }} {{ courses.hour|trans({}, 'courses') }}{% if item.duration > 60 %}s{% endif %}</p>
                                 {% endif %}
                                 <ul class="section-display-article-tab-list">
                                 {% if item.concepts is not empty %}
-                                    {% for concept in item.concepts[locale] %}
+                                    {% for concept in item.concepts[app.request.locale] %}
                                         <li>{{ concept }}</li>
                                     {% endfor %}
                                 {% endif %}

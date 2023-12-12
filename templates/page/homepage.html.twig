@@ -3,212 +3,216 @@
 {% block title %}IDCI Consulting - Création d'applications web - Formations - Conseil{% endblock %}
 
 {% block main %}
-<div class="navbox" id="navbox">
-    <ul>
-        <li class="active"><a href="#specialization">{% trans from "homepage" %}specialization.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-        <li><a href="#consulting">{% trans from "homepage" %}consulting.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-        <li><a href="#courses">{% trans from "homepage" %}courses.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-        <li><a href="#web-development">{% trans from "homepage" %}web_development.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-        <li><a href="#open-source">{% trans from "homepage" %}open_source.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-        <li><a href="#methodology">{% trans from "homepage" %}methodology.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-        <li><a href="#tools">{% trans from "homepage" %}tools.subtitle{% endtrans %}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-    </ul>
-</div>
+    {% trans_default_domain 'homepage' %}
 
-<video class="background-video" autoplay loop muted>
-    <source src="{{ asset('build/images/base/typing.mp4') }}" type="video/mp4">
-</video>
+    <div class="navbox" id="navbox">
+        <ul>
+            <li class="active"><a href="#specialization"> {{ 'specialization.subtitle'|trans }} </a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li><a href="#consulting">{{ 'consulting.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li><a href="#courses">{{ 'courses.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li><a href="#web-development">{{ 'web_development.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li><a href="#open-source">{{ 'open_source.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li><a href="#methodology">{{ 'methodology.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li><a href="#tools">{{ 'tools.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+        </ul>
+    </div>
 
-<section class="section-container section-container-90 section-container-secondary section-container-media-primary" id="specialization">
-    <section class="section-presentation">
-        <h2 class="section-presentation-title idci-title-primary">{% trans from "homepage" %}specialization.title{% endtrans %}</h2>
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}specialization.subtitle{% endtrans %}</h3>
-        <p class="section-presentation-description section-presentation-tags">
-            {% trans from "homepage" %} specialization.paragraph_1 {% endtrans %}
-        </p>
-        <a href="#consulting" class="section-presentation-scroll"><img src="{{ asset('build/images/base/slick_arrow_down.svg') }}" alt="{% trans from "alt" %}slick_arrow_down{% endtrans %}"></a>
+    <video class="background-video" autoplay loop muted>
+        <source src="{{ asset('build/images/base/typing.mp4') }}" type="video/mp4">
+    </video>
+
+    <section class="section-container section-container-90 section-container-secondary section-container-media-primary" id="specialization">
+        {% include 'widgets/_section_presentation.html.twig' with {
+            'title': 'specialization.title'|trans,
+            'subtitle': 'specialization.subtitle'|trans,
+            'paragraphs': [
+                'specialization.paragraph_1'|trans
+            ],
+            'button': {
+                'href': '#consulting'
+            },
+            'tags': true
+        } %}
     </section>
-</section>
 
-<div class="transparent-box"></div>
+    <div class="transparent-box"></div>
 
-<section class="section-container section-container-90 section-container-primary" id="consulting">
-    <section class="section-presentation">
-        <h2 class="section-presentation-title idci-title-primary">{% trans from "homepage" %}consulting.title{% endtrans %}</h2>
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}consulting.subtitle{% endtrans %}</h3>
-        <img src="{{ asset('build/images/base/conseil.svg') }}" alt="{% trans from "alt" %}conseil{% endtrans %}" class="section-presentation-media">
-        <p class="section-presentation-description">
-            {% trans from "homepage" %}consulting.paragraph_1{% endtrans %}
-            <br><br>
-            {% trans from "homepage" %}consulting.paragraph_2{% endtrans %}
-            <br><br>
-            {% trans from "homepage" %}consulting.paragraph_3{% endtrans %}
-        </p>
+    <section class="section-container section-container-90 section-container-primary" id="consulting">
+        {% include 'widgets/_section_presentation.html.twig' with {
+            'title': 'consulting.title'|trans,
+            'subtitle': 'consulting.subtitle'|trans,
+            'paragraphs': [
+                'consulting.paragraph_1'|trans,
+                'consulting.paragraph_2'|trans,
+                'consulting.paragraph_3'|trans
+            ],
+            'media': {
+                'src': asset('build/images/base/conseil.svg'),
+                'alt': 'conseil'|trans({}, 'alt')
+            }
+        } %}
     </section>
-</section>
 
-<div class="transparent-box even bottom-secondary"></div>
+    <div class="transparent-box even bottom-secondary"></div>
 
-<section class="section-container section-container-90 section-container-secondary" id="courses">
-    <section class="section-presentation">
-        <h2 class="section-presentation-title idci-title-primary">{% trans from "homepage" %}courses.title{% endtrans %}</h2>
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}courses.subtitle{% endtrans %}</h3>
-        <img src="{{ asset('build/images/base/formation.svg') }}" alt="{% trans from "alt" %}formation{% endtrans %}" class="section-presentation-media">
-        <p class="section-presentation-description">
-            {% set cie_age = 'now'|date("Y") - 2008 %}
-            {% trans with {'%cie_age%': cie_age} from "homepage" %}courses.paragraph_1{% endtrans %}
-        </p>
-        <div class="section-presentation-courses">
-            <img src="{{ asset('build/images/base/balise-left.svg') }}" alt="{% trans from "alt" %}balise-left{% endtrans %}" class="section-presentation-courses-media">
-            <p class="idci-subtitle-primary section-presentation-courses-title">{% trans from "homepage" %}courses.paragraph_2{% endtrans %}</p>
-            <img src="{{ asset('build/images/base/balise-right.svg') }}" alt="{% trans from "alt" %}balise-right{% endtrans %}" class="section-presentation-courses-media">
-        </div>
-        <div class="section-presentation-courses-content">
-            <img src="{{ asset('build/images/logo/symfony-logo.png') }}" alt="{% trans from "alt" %}symfony-logo{% endtrans %}" class="section-presentation-courses-content-element">
-            <img src="{{ asset('build/images/logo/css3-html5-logo.png') }}" alt="{% trans from "alt" %}css3-html5-logo{% endtrans %}" class="section-presentation-courses-content-element">
-        </div>
+    <section class="section-container section-container-90 section-container-secondary" id="courses">
+        {% set cie_age = 'now'|date("Y") - 2008 %}
+        {% include 'widgets/_section_presentation.html.twig' with {
+            'title': 'courses.title'|trans,
+            'subtitle': 'courses.subtitle'|trans,
+            'paragraphs': [
+                'courses.paragraph_1'|trans({'%cie_age%': cie_age}),
+            ],
+            'media': {
+                'src': asset('build/images/base/formation.svg'),
+                'alt': 'formation'|trans({}, 'alt')
+            },
+            'courses': true
+        } %}
     </section>
-</section>
 
-<div class="transparent-box top-secondary"></div>
+    <div class="transparent-box top-secondary"></div>
 
-<section class="section-container section-container-90 section-container-primary" id="web-development">
-    <section class="section-presentation">
-        <h2 class="section-presentation-title idci-title-primary">{% trans from "homepage" %}web_development.title{% endtrans %}</h2>
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}web_development.subtitle{% endtrans %}</h3>
-        <img src="{{ asset('build/images/base/code-writing.gif') }}" class="section-presentation-media">
-        <p class="section-presentation-description">
-            {% trans from "homepage" %}web_development.paragraph_1{% endtrans %}
-            <br><br>
-            {% trans from "homepage" %}web_development.paragraph_2{% endtrans %}
-            <br><br>
-            {% trans from "homepage" %}web_development.paragraph_3{% endtrans %}
-        </p>
+    <section class="section-container section-container-90 section-container-primary" id="web-development">
+        {% include 'widgets/_section_presentation.html.twig' with {
+            'title': 'web_development.title'|trans,
+            'subtitle': 'web_development.subtitle'|trans,
+            'paragraphs': [
+                'web_development.paragraph_1'|trans,
+                'web_development.paragraph_2'|trans,
+                'web_development.paragraph_3'|trans
+            ],
+            'media': {
+            'src': asset('build/images/base/code-writing.gif'),
+            'alt': 'developpement-web'|trans({}, 'alt')
+            }
+        } %}
     </section>
-</section>
 
-<div class="transparent-box even bottom-secondary"></div>
+    <div class="transparent-box even bottom-secondary"></div>
 
-<section class="section-container section-container-90 section-container-secondary" id="open-source">
-    <section class="section-presentation">
-        <h2 class="section-presentation-title idci-title-secondary">{% trans from "homepage" %}open_source.title{% endtrans %}</h2>
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}open_source.subtitle{% endtrans %}</h3>
-        <img src="{{ asset('build/images/base/opensource.svg') }}" alt="{% trans from "alt" %}opensource{% endtrans %}" class="section-presentation-media">
-        <p class="section-presentation-description">
-            {% trans from "homepage" %}open_source.paragraph_1{% endtrans %}
-            <br><br>
-            {% trans from "homepage" %}open_source.paragraph_2{% endtrans %}
-            <br><br>
-            {% trans from "homepage" %}open_source.paragraph_3{% endtrans %}
-        </p>
+    <section class="section-container section-container-90 section-container-secondary" id="open-source">
+        {% include 'widgets/_section_presentation.html.twig' with {
+            'title': 'open_source.title'|trans,
+            'subtitle': 'open_source.subtitle'|trans,
+            'paragraphs': [
+                'open_source.paragraph_1'|trans,
+                'open_source.paragraph_2'|trans,
+                'open_source.paragraph_3'|trans
+            ],
+            'media': {
+            'src': asset('build/images/base/opensource.svg'),
+            'alt': 'opensource'|trans({}, 'alt')
+            }
+        } %}
     </section>
-</section>
 
-<div class="transparent-box top-secondary"></div>
+    <div class="transparent-box top-secondary"></div>
 
-<section class="section-container section-container-90 section-container-primary" id="methodology">
-    <section class="section-presentation">
-        <h3 class="section-presentation-subtitle section-presentation-subtitle-alone idci-subtitle-primary">{% trans from "homepage" %}methodology.subtitle{% endtrans %}</h3>
-        <img src="{{ asset('build/images/base/agile.svg') }}" alt="{% trans from "alt" %}agile{% endtrans %}" class="section-presentation-media">
-        <p class="section-presentation-description">
-            {% trans from "homepage" %}methodology.paragraph_1{% endtrans %}
-            <br><br>
-            {% trans from "homepage" %}methodology.paragraph_2{% endtrans %}
-            <br><br>
-            {% trans from "homepage" %}methodology.paragraph_3{% endtrans %}
-        </p>
+    <section class="section-container section-container-90 section-container-primary" id="methodology">
+        {% include 'widgets/_section_presentation.html.twig' with {
+            'subtitle': 'methodology.subtitle'|trans,
+            'paragraphs': [
+                'methodology.paragraph_1'|trans,
+                'methodology.paragraph_2'|trans,
+                'methodology.paragraph_3'|trans
+            ],
+            'media': {
+            'src': asset('build/images/base/agile.svg'),
+            'alt': 'agile'|trans({}, 'alt')
+            }
+        } %}
     </section>
-</section>
 
-<div class="transparent-box even bottom-secondary"></div>
+    <div class="transparent-box even bottom-secondary"></div>
 
-<section class="section-container section-container-90 section-container-secondary" id="tools">
-    <section class="section-presentation">
-        <h3 class="section-presentation-subtitle idci-subtitle-primary">{% trans from "homepage" %}tools.subtitle{% endtrans %}</h3>
-        <img src="{{ asset('build/images/base/icon-outils.svg') }}" alt="{% trans from "alt" %}icon-outils{% endtrans %}" class="section-presentation-icon">
-        <div class="columns section-presentation-columns">
-            <div class="column section-presentation-column">
-                <p class="section-presentation-column-title idci-title-primary">Backend</p>
-                <ul class="section-presentation-column-list">
-                    <li><a href="https://www.php.net/" target="_blank"><img src="{{ asset('build/images/logo/php-logo.png') }}" alt="{% trans from "alt" %}php-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://symfony.com/" target="_blank"><img src="{{ asset('build/images/logo/symfony-logo.png') }}" alt="{% trans from "alt" %}symfony-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://nodejs.org/en/" target="_blank"><img src="{{ asset('build/images/logo/nodejs-logo.png') }}" alt="{% trans from "alt" %}nodejs-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                </ul>
+    <section class="section-container section-container-90 section-container-secondary" id="tools">
+        <section class="section-presentation">
+            <h3 class="section-presentation-subtitle idci-subtitle-primary">{{ 'tools.subtitle'|trans }}</h3>
+            <img src="{{ asset('build/images/base/icon-outils.svg') }}" alt="{{ 'icon-outils'|trans({}, 'alt') }}" class="section-presentation-icon">
+            <div class="columns section-presentation-columns">
+                <div class="column section-presentation-column">
+                    <p class="section-presentation-column-title idci-title-primary">Backend</p>
+                    <ul class="section-presentation-column-list">
+                        <li><a href="https://www.php.net/" target="_blank"><img src="{{ asset('build/images/logo/php-logo.png') }}" alt="{% trans from "alt" %}php-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://symfony.com/" target="_blank"><img src="{{ asset('build/images/logo/symfony-logo.png') }}" alt="{% trans from "alt" %}symfony-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://nodejs.org/en/" target="_blank"><img src="{{ asset('build/images/logo/nodejs-logo.png') }}" alt="{% trans from "alt" %}nodejs-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                    </ul>
+                </div>
+                <div class="column section-presentation-column">
+                    <p class="section-presentation-column-title idci-title-primary">{% trans from "homepage" %}tools.column_1{% endtrans %}</p>
+                    <ul class="section-presentation-column-list">
+                        <li><a href="https://www.elastic.co/fr/elasticsearch" target="_blank"><img src="{{ asset('build/images/logo/elasticsearch-logo.png') }}" alt="{% trans from "alt" %}elasticsearch-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.mysql.com/fr/" target="_blank"><img src="{{ asset('build/images/logo/mysql-logo.png') }}" alt="{% trans from "alt" %}mysql-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.mariadb.org" target="_blank"><img src="{{ asset('build/images/logo/mariadb-logo.png') }}" alt="{% trans from "alt" %}mariadb-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://min.io" target="_blank"><img src="{{ asset('build/images/logo/minio-logo.png') }}" alt="{% trans from "alt" %}minio-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.mongodb.com/fr-fr" target="_blank"><img src="{{ asset('build/images/logo/mongodb-logo.png') }}" alt="{% trans from "alt" %}mongodb-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.postgresql.org/" target="_blank"><img src="{{ asset('build/images/logo/postgresql-logo.png') }}" alt="{% trans from "alt" %}postgresql-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://redis.io/" target="_blank"><img src="{{ asset('build/images/logo/redis-logo.png') }}" alt="{% trans from "alt" %}redis-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                    </ul>
+                </div>
+                <div class="column section-presentation-column">
+                    <p class="section-presentation-column-title idci-title-primary">Infrastructure</p>
+                    <ul class="section-presentation-column-list">
+                        <li><a href="https://varnish-cache.org/" target="_blank"><img src="{{ asset('build/images/logo/varnish-logo.png') }}" alt="{% trans from "alt" %}varnish-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank"><img src="{{ asset('build/images/logo/ansible-logo.png') }}" alt="{% trans from "alt" %}ansible-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.elastic.co/fr/kibana/" target="_blank"><img src="{{ asset('build/images/logo/kibana-logo.png') }}" alt="{% trans from "alt" %}kibana-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.docker.com/" target="_blank"><img src="{{ asset('build/images/logo/docker-logo.png') }}" alt="{% trans from "alt" %}docker-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://docs.docker.com/engine/swarm/" target="_blank"><img src="{{ asset('build/images/logo/dockerswarm-logo.png') }}" alt="{% trans from "alt" %}dockerswarm-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.rabbitmq.com/" target="_blank"><img src="{{ asset('build/images/logo/rabbitmq-logo.png') }}" alt="{% trans from "alt" %}rabbitmq-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                    </ul>
+                </div>
+                <div class="column section-presentation-column">
+                    <p class="section-presentation-column-title idci-title-primary">Frontend</p>
+                    <ul class="section-presentation-column-list">
+                        <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank"><img src="{{ asset('build/images/logo/css3-html5-logo.png') }}" alt="{% trans from "alt" %}css3-html5-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://getbootstrap.com/" target="_blank"><img src="{{ asset('build/images/logo/bootstrap-logo.png') }}" alt="{% trans from "alt" %}bootstrap-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://get.foundation/" target="_blank"><img src="{{ asset('build/images/logo/foundation-logo.png') }}" alt="{% trans from "alt" %}foundation-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://angularjs.org/" target="_blank"><img src="{{ asset('build/images/logo/angularjs-logo.png') }}" alt="{% trans from "alt" %}angularjs-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://fr.legacy.reactjs.org/" target="_blank"><img src="{{ asset('build/images/logo/react-logo.png') }}" alt="{% trans from "alt" %}react-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://sass-lang.com/" target="_blank"><img src="{{ asset('build/images/logo/sass-logo.png') }}" alt="{% trans from "alt" %}sass-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://jquery.com/" target="_blank"><img src="{{ asset('build/images/logo/jquery-logo.png') }}" alt="{% trans from "alt" %}jquery-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://vuejs.org/" target="_blank"><img src="{{ asset('build/images/logo/vuejs-logo.png') }}" alt="{% trans from "alt" %}vuejs-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                    </ul>
+                </div>
+                <div class="column section-presentation-column">
+                    <p class="section-presentation-column-title idci-title-primary">{% trans from "homepage" %}tools.column_2{% endtrans %}</p>
+                    <ul class="section-presentation-column-list">
+                        <li><a href="https://phpunit.de/" target="_blank"><img src="{{ asset('build/images/logo/phpunit-logo.png') }}" alt="{% trans from "alt" %}phpunit-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://about.gitlab.com/" target="_blank"><img src="{{ asset('build/images/logo/gitlab-logo.png') }}" alt="{% trans from "alt" %}gitlab-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://docs.behat.org/en/latest/" target="_blank"><img src="{{ asset('build/images/logo/behat-logo.png') }}" alt="{% trans from "alt" %}behat-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.jenkins.io/" target="_blank"><img src="{{ asset('build/images/logo/jenkins-logo.png') }}" alt="{% trans from "alt" %}jenkins-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                        <li><a href="https://www.redmine.org/projects/redmine/wiki" target="_blank"><img src="{{ asset('build/images/logo/redmine-logo.png') }}" alt="{% trans from "alt" %}redmine-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="column section-presentation-column">
-                <p class="section-presentation-column-title idci-title-primary">{% trans from "homepage" %}tools.column_1{% endtrans %}</p>
-                <ul class="section-presentation-column-list">
-                    <li><a href="https://www.elastic.co/fr/elasticsearch" target="_blank"><img src="{{ asset('build/images/logo/elasticsearch-logo.png') }}" alt="{% trans from "alt" %}elasticsearch-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.mysql.com/fr/" target="_blank"><img src="{{ asset('build/images/logo/mysql-logo.png') }}" alt="{% trans from "alt" %}mysql-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.mariadb.org" target="_blank"><img src="{{ asset('build/images/logo/mariadb-logo.png') }}" alt="{% trans from "alt" %}mariadb-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://min.io" target="_blank"><img src="{{ asset('build/images/logo/minio-logo.png') }}" alt="{% trans from "alt" %}minio-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.mongodb.com/fr-fr" target="_blank"><img src="{{ asset('build/images/logo/mongodb-logo.png') }}" alt="{% trans from "alt" %}mongodb-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.postgresql.org/" target="_blank"><img src="{{ asset('build/images/logo/postgresql-logo.png') }}" alt="{% trans from "alt" %}postgresql-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://redis.io/" target="_blank"><img src="{{ asset('build/images/logo/redis-logo.png') }}" alt="{% trans from "alt" %}redis-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                </ul>
-            </div>
-            <div class="column section-presentation-column">
-                <p class="section-presentation-column-title idci-title-primary">Infrastructure</p>
-                <ul class="section-presentation-column-list">
-                    <li><a href="https://varnish-cache.org/" target="_blank"><img src="{{ asset('build/images/logo/varnish-logo.png') }}" alt="{% trans from "alt" %}varnish-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank"><img src="{{ asset('build/images/logo/ansible-logo.png') }}" alt="{% trans from "alt" %}ansible-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.elastic.co/fr/kibana/" target="_blank"><img src="{{ asset('build/images/logo/kibana-logo.png') }}" alt="{% trans from "alt" %}kibana-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.docker.com/" target="_blank"><img src="{{ asset('build/images/logo/docker-logo.png') }}" alt="{% trans from "alt" %}docker-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://docs.docker.com/engine/swarm/" target="_blank"><img src="{{ asset('build/images/logo/dockerswarm-logo.png') }}" alt="{% trans from "alt" %}dockerswarm-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.rabbitmq.com/" target="_blank"><img src="{{ asset('build/images/logo/rabbitmq-logo.png') }}" alt="{% trans from "alt" %}rabbitmq-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                </ul>
-            </div>
-            <div class="column section-presentation-column">
-                <p class="section-presentation-column-title idci-title-primary">Frontend</p>
-                <ul class="section-presentation-column-list">
-                    <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank"><img src="{{ asset('build/images/logo/css3-html5-logo.png') }}" alt="{% trans from "alt" %}css3-html5-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://getbootstrap.com/" target="_blank"><img src="{{ asset('build/images/logo/bootstrap-logo.png') }}" alt="{% trans from "alt" %}bootstrap-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://get.foundation/" target="_blank"><img src="{{ asset('build/images/logo/foundation-logo.png') }}" alt="{% trans from "alt" %}foundation-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://angularjs.org/" target="_blank"><img src="{{ asset('build/images/logo/angularjs-logo.png') }}" alt="{% trans from "alt" %}angularjs-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://fr.legacy.reactjs.org/" target="_blank"><img src="{{ asset('build/images/logo/react-logo.png') }}" alt="{% trans from "alt" %}react-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://sass-lang.com/" target="_blank"><img src="{{ asset('build/images/logo/sass-logo.png') }}" alt="{% trans from "alt" %}sass-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://jquery.com/" target="_blank"><img src="{{ asset('build/images/logo/jquery-logo.png') }}" alt="{% trans from "alt" %}jquery-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://vuejs.org/" target="_blank"><img src="{{ asset('build/images/logo/vuejs-logo.png') }}" alt="{% trans from "alt" %}vuejs-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                </ul>
-            </div>
-            <div class="column section-presentation-column">
-                <p class="section-presentation-column-title idci-title-primary">{% trans from "homepage" %}tools.column_2{% endtrans %}</p>
-                <ul class="section-presentation-column-list">
-                    <li><a href="https://phpunit.de/" target="_blank"><img src="{{ asset('build/images/logo/phpunit-logo.png') }}" alt="{% trans from "alt" %}phpunit-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://about.gitlab.com/" target="_blank"><img src="{{ asset('build/images/logo/gitlab-logo.png') }}" alt="{% trans from "alt" %}gitlab-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://docs.behat.org/en/latest/" target="_blank"><img src="{{ asset('build/images/logo/behat-logo.png') }}" alt="{% trans from "alt" %}behat-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.jenkins.io/" target="_blank"><img src="{{ asset('build/images/logo/jenkins-logo.png') }}" alt="{% trans from "alt" %}jenkins-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                    <li><a href="https://www.redmine.org/projects/redmine/wiki" target="_blank"><img src="{{ asset('build/images/logo/redmine-logo.png') }}" alt="{% trans from "alt" %}redmine-logo{% endtrans %}" class="section-presentation-column-media"></a></li>
-                </ul>
-            </div>
-        </div>
+        </section>
     </section>
-</section>
 {% endblock %}
 
 {% block javascripts_bottom %}
-{{ parent() }}
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let navboxLinks = document.getElementById('navbox').querySelectorAll('ul li');
-        let sections = document.getElementsByClassName('section-container');
-        let sectionsStarts = [];
-        let currentLink;
+    {{ parent() }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let navboxLinks = document.getElementById('navbox').querySelectorAll('ul li');
+            let sections = document.getElementsByClassName('section-container');
+            let sectionsStarts = [];
+            let currentLink;
 
-        Array.from(sections).forEach((element, index) => {
-            sectionsStarts[index] = element.getBoundingClientRect()['y'] - document.body.getBoundingClientRect()['y'];
-        });
+            Array.from(sections).forEach((element, index) => {
+                sectionsStarts[index] = element.getBoundingClientRect()['y'] - document.body.getBoundingClientRect()['y'];
+            });
 
-        window.addEventListener('scroll', function scroll() {
-            for (const key in sectionsStarts) {
-                navboxLinks[key].classList.remove('active');
-                if (this.scrollY >= sectionsStarts[key]) {
-                    currentLink = key;
+            window.addEventListener('scroll', function scroll() {
+                for (const key in sectionsStarts) {
+                    navboxLinks[key].classList.remove('active');
+                    if (this.scrollY >= sectionsStarts[key]) {
+                        currentLink = key;
+                    }
                 }
-            }
-            
-            navboxLinks[currentLink].classList.add('active');
+
+                navboxLinks[currentLink].classList.add('active');
+            });
         });
-    });
-</script>
+    </script>
 {% endblock %}

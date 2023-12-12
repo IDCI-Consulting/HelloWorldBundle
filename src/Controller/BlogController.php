@@ -36,7 +36,8 @@ class BlogController extends AbstractController
 
         return $this->render('blog/list.html.twig', [
             'posts_by_years' => $postsByYears,
-            'posts_by_categories' => $postsByCategories
+            'posts_by_categories' => $postsByCategories,
+            'posts' => $posts
         ]);
     }
 

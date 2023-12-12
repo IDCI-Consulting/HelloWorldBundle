@@ -1,6 +1,9 @@
 cv:
   title: Curriculum Vitae
   about_me: About me
+  age: Age
+  email: Email
+  phone: Phone
   professional_experiences: Professional experiences
   courses: Courses
   skills: Skills

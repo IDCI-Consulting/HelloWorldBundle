@@ -16,8 +16,10 @@
                     cursor: pointer;
                 }
 
-                &.label-second {
-                    margin-left: 2rem;
+                @for $i from 1 through 12 {
+                    &[data-position="#{$i}"] {
+                        left: calc(#{$i}rem * 6);
+                    }
                 }
             }
 
@@ -50,10 +52,17 @@
                         }
 
                         .section-posts-list-item-link {
+                            color: $idci-color-green;
+                            font-weight: bold;
                             width: 100%;
+
+                            &:hover {
+                                text-decoration: 1px solid underline;
+                            }
                         }
 
                         .section-posts-list-item-infos {
+                            align-items: center;
                             display: flex;
                             justify-content: space-between;
                             width: 100%;
