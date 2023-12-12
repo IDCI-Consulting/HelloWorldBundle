@@ -31,7 +31,7 @@ start-preprod:
     - docker stack deploy -c ${CI_PROJECT_DIR}/.docker/docker-compose-preprod.yml ${STACK_NAME}_preprod
   environment:
     name: pre-production
-    url: https://pre-prod.idci-consulting.fr
+    url: https://preprod.idci-consulting.fr
   when: manual
   only:
     - tags
@@ -46,7 +46,7 @@ deploy-to-preprod:
     - docker service update --with-registry-auth ${STACK_NAME}_preprod_php --update-monitor 10ms --image ${FPM_RELEASE_IMAGE}:${CI_COMMIT_TAG}
   environment:
     name: pre-production
-    url: https://pre-prod.idci-consulting.fr
+    url: https://preprod.idci-consulting.fr
   when: manual
   only:
     - tags
