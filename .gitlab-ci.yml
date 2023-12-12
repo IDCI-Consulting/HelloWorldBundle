@@ -9,7 +9,7 @@ stages:
 
 variables:
   STACK_NAME: idci_website
-  FPM_RELEASE_IMAGE: ${CI_REGISTRY_IMAGE}/php
+  FPM_RELEASE_IMAGE: ${CI_REGISTRY_IMAGE}/php-fpm
 
 build-docker-image:
   stage: build
