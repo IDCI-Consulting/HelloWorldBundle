@@ -15,11 +15,12 @@ build-docker-image:
   stage: build
   script:
     - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
-    - docker build --cache-from ${FPM_RELEASE_IMAGE}:latest -t ${FPM_RELEASE_IMAGE}:${CI_COMMIT_TAG} -t ${FPM_RELEASE_IMAGE}:latest ${CI_PROJECT_DIR} -f .docker/Dockerfile
+    - docker build --cache-from ${FPM_RELEASE_IMAGE}:latest -t ${FPM_RELEASE_IMAGE}:latest -t ${FPM_RELEASE_IMAGE}:${CI_COMMIT_TAG} ${CI_PROJECT_DIR} -f .docker/Dockerfile
     - docker push ${FPM_RELEASE_IMAGE}:${CI_COMMIT_TAG}
     - docker push ${FPM_RELEASE_IMAGE}:latest
-  only:
-    - tags
+  when: manual
+#  only:
+#    - tags
 
 start-preprod:
   stage: start
@@ -33,8 +34,8 @@ start-preprod:
     name: pre-production
     url: https://pre-prod.idci-consulting.fr
   when: manual
-  only:
-    - tags
+#  only:
+#    - tags
 
 deploy-to-preprod:
   stage: deploy
@@ -48,8 +49,8 @@ deploy-to-preprod:
     name: pre-production
     url: https://pre-prod.idci-consulting.fr
   when: manual
-  only:
-    - tags
+#  only:
+#    - tags
 
 start-prod:
   stage: start
