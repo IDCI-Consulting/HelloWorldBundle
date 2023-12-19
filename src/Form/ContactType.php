@@ -21,6 +21,7 @@ class ContactType extends AbstractType
             ->add('company', TextType::class, [
                 'attr' => [
                     'autocomplete' => 'off',
+                    'placeholder' => '',
                 ],
                 'label' => 'contact.company',
                 'label_attr' => [
@@ -32,6 +33,7 @@ class ContactType extends AbstractType
             ->add('website', TextType::class, [
                 'attr' => [
                     'autocomplete' => 'off',
+                    'placeholder' => '',
                 ],
                 'label' => 'contact.website',
                 'label_attr' => [
@@ -43,6 +45,7 @@ class ContactType extends AbstractType
             ->add('fullName', TextType::class, [
                 'attr' => [
                     'autocomplete' => 'off',
+                    'placeholder' => '',
                 ],
                 'label' => 'contact.full_name',
                 'label_attr' => [
@@ -54,6 +57,7 @@ class ContactType extends AbstractType
             ->add('email', EmailType::class, [
                 'attr' => [
                     'autocomplete' => 'off',
+                    'placeholder' => '',
                 ],
                 'label' => 'contact.email',
                 'label_attr' => [
@@ -76,6 +80,9 @@ class ContactType extends AbstractType
                 'placeholder' => 'contact.placeholder.label'
             ])
             ->add('content', TextAreaType::class, [
+                'attr' => [
+                    'placeholder' => '',
+                ],
                 'label' => 'contact.content',
                 'label_attr' => [
                     'class' => 'text-label',
@@ -86,7 +93,10 @@ class ContactType extends AbstractType
                 ],
             ])
             ->add('captcha', CaptchaType::class, [
-                'invalid_message' => 'La saisie n\'est pas correcte'
+                'invalid_message' => 'La saisie n\'est pas correcte',
+                'attr' => [
+                    'placeholder' => '',
+                ],
             ])
         ;
 
