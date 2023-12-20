@@ -2,7 +2,6 @@ footer {
     background-color: $idci-color-light-black;
     background-size: cover;
     height: 25rem;
-    margin-top: 2rem;
     position: relative;
 
     @include until($tablet) {
