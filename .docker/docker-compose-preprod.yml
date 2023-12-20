@@ -5,11 +5,18 @@ services:
 
   php:
     image: gitlab-registry.idci-consulting.fr/idci-consulting/website/php-fpm:latest
+    environment:
+      - APP_ENV=prod
+      - APP_SECRET=xohch2uineibethaleibuusheeR6tiNg
+      - ALLOW_ROBOTS=false
+      - MAILER_DSN=smtp://no-reply@idci-consulting.fr:f90ec1876c13de06cd5a4e378a62d932@mail.idci-consulting.fr:465
+      - MAILER_SENDER_ADDRESS=no-reply@idci-consulting.fr
+      - MAILER_RECIPIENT_ADDRESSES=["contact@idci-consulting.fr"]
+      - WKHTMLTOPDF_LOGIN=wkuser
+      - WKHTMLTOPDF_PASSWORD=Aej8biem4joh
     configs:
       - source: php_conf
         target: /usr/local/etc/php/php.ini
-      - source: app_env
-        target: .env.local
     volumes:
       - assets_data:/var/www/app/public/build
     networks:
@@ -71,8 +78,6 @@ configs:
     file: ./conf/nginx/site.conf
   php_conf:
     file: ./conf/php/php.ini
-  app_env:
-    file: ./conf/app/.env.prod-preprod
 
 volumes:
   assets_data:

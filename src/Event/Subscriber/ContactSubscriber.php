@@ -5,8 +5,8 @@ namespace App\Event\Subscriber;
 use App\Event\ContactEvent;
 use App\Event\ContactEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Mime\Email;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Twig\Environment;
 
 class ContactSubscriber implements EventSubscriberInterface
@@ -34,7 +34,6 @@ class ContactSubscriber implements EventSubscriberInterface
 
     public function notifyIdciByEmail(ContactEvent $event)
     {
-        dd($this->contactRecipientsAddresses);
         $email = (new Email())
             ->to(...$this->contactRecipientsAddresses)
             ->subject('IDCI Contact')
