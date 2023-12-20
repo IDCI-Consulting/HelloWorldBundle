@@ -1,5 +1,5 @@
 # Stage 0:
-FROM php:8.2-fpm AS base
+FROM php:8.2.10-fpm AS base
 
 ## Install dependencies
 RUN apt update \
