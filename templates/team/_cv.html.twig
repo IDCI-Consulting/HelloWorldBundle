@@ -26,9 +26,9 @@
             {% for professionalExperience in data.professionalExperiences %}
                 <p class="section-cv-banner-subtitle">
                     {% if "" == professionalExperience.endDate %}
-                        {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }}
+                        {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
                     {% else %}
-                        {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }}
+                        {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
                     {% endif %}
                 </p>
                 <p>{{ professionalExperience.role[app.request.locale] }}</p>
@@ -77,9 +77,9 @@
             {% for personalExperience in data.personalExperiences %}
                 <p class="section-cv-banner-subtitle">
                 {% if "" == personalExperience.endDate %}
-                    {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }}
+                    {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
                 {% else %}
-                    {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale='app.request.locale') }}
+                    {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
                 {% endif %}
                 </p>
                 <p>{{ personalExperience.role[app.request.locale] }} | {{ personalExperience.organization[app.request.locale] }}</p>
