@@ -78,7 +78,7 @@
                         top: 6.2rem;
                     }
 
-                    &:focus {
+                    &:focus, &:not(:placeholder-shown) {
                         + label {
                             top: 5.1rem;
                         }
@@ -86,7 +86,7 @@
                 }
 
                 input, textarea {
-                    &:focus {
+                    &:focus, &:not(:placeholder-shown) {
                         + label {
                             background-color: $idci-color-blue;
                             color: $idci-color-white;
