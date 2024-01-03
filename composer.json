@@ -10,21 +10,21 @@
         "gregwar/captcha-bundle": "^2.2",
         "league/commonmark": "^2.3",
         "sensio/framework-extra-bundle": "^6.2",
-        "symfony/console": "6.3.*",
-        "symfony/dotenv": "6.3.*",
-        "symfony/event-dispatcher": "6.3.*",
-        "symfony/finder": "6.3.*",
+        "symfony/console": "6.4.*",
+        "symfony/dotenv": "6.4.*",
+        "symfony/event-dispatcher": "6.4.*",
+        "symfony/finder": "6.4.*",
         "symfony/flex": "^2",
-        "symfony/form": "6.3.*",
-        "symfony/framework-bundle": "6.3.*",
-        "symfony/http-client": "6.3.*",
-        "symfony/mailer": "6.3.*",
-        "symfony/runtime": "6.3.*",
-        "symfony/translation": "6.3.*",
-        "symfony/twig-bundle": "6.3.*",
-        "symfony/validator": "6.3.*",
+        "symfony/form": "6.4.*",
+        "symfony/framework-bundle": "6.4.*",
+        "symfony/http-client": "6.4.*",
+        "symfony/mailer": "6.4.*",
+        "symfony/runtime": "6.4.*",
+        "symfony/translation": "6.4.*",
+        "symfony/twig-bundle": "6.4.*",
+        "symfony/validator": "6.4.*",
         "symfony/webpack-encore-bundle": "^1.14",
-        "symfony/yaml": "6.3.*",
+        "symfony/yaml": "6.4.*",
         "twig/cssinliner-extra": "^3.3",
         "twig/extra-bundle": "^3.3",
         "twig/intl-extra": "^3.7",
@@ -80,11 +80,11 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "6.3.*"
+            "require": "6.4.*"
         }
     },
     "require-dev": {
-        "symfony/stopwatch": "6.3.*",
-        "symfony/web-profiler-bundle": "6.3.*"
+        "symfony/stopwatch": "6.4.*",
+        "symfony/web-profiler-bundle": "6.4.*"
     }
 }
