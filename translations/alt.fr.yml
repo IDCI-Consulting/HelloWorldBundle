@@ -1,5 +1,6 @@
 conseil: Icône conseil
 formation: Icône formation
+developpement-web: Icône développement web
 opensource: Icône opensource
 agile: Icône méthodologie
 icon-outils: Icône outils
@@ -36,7 +37,7 @@ php-logo: Logo PHP
 phpunit-logo: Logo PHPUnit
 postgresql-logo: Logo PostgreSQL
 rabbitmq-logo: Logo RabbitMQ
-react: Logo React
+react-logo: Logo React
 redis-logo: Logo Redis
 redmine-logo: Logo Redmine
 sass-logo: Logo Sass
