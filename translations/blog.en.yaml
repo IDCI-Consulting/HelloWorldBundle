@@ -39,3 +39,38 @@ idci_10_years:
       paragraphs:
         - Recovered of our emotions, a cocktail dinner will take place from <strong>19:45 to midnight</strong>.
         - Don't hesitate to <a href="url('app_contact_index')">contact us</a> for further informations.
+
+new_year_2017:
+  title: Our wishes for 2017
+  section_1:
+    paragraphs:
+      - <strong>IDCI's team wishes you a really good year.</strong>
+      - We wish you to keep exploring your ideas and your creativity. To test new experiences and to be curious about all that is around you. To take care of you and to share with who you love. To encourage your entourage to surpass itself with you. To have new projects and to achived them. To take up new challenges and to start again to go ahead potential difficulties. To be surprised and continue your progress.
+      - We would like to share with you some high points of IDCI in 2016.
+  section_2:
+    title: A team evolution
+    paragraphs:
+      - During this year, we saw our team change.
+      - Baptiste Bouchereau became co-manager this year. In this way, he has join Gabriel and Frederic BONDAZ. Baptiste add teaching to his professional skills, he hosted several lessons at Lyon 1 University and professionnal courses.
+      - Brahim Boukoufallah durably join the team signing a permanent contract after an internship and an apprenticeship at IDCI. He also became an instructor at INSEEC and at 3WAcademy.
+      - Eddie Barraco work-study at IDCI-Consulting since this year to train to developer profession.
+  section_3:
+    title: Pedagocial partners
+    paragraphs:
+      - This years, we got the opportunity to make some beautiful encounters which result in new partnership in pedagogical domain, like with <a href="https://3wa.fr/">3W Academy</a> and <a href="https://www.inseec-digital.com/">INSEEC</a> group. We have participated in courses with the goal to teach the web developer profession but especially the desire to share our passion. We really are glad and we hope we generated vocations ;)
+      - We want to thank all of our partners for the trust they grant us and wish them a good year 2017.
+  section_4:
+    title: New premises
+    paragraphs:
+      - We have changed our premises and achived our establishment in our new workspace, which better fit our philosophy and team needs. We are sitting at 109 road Francis de Pressensé, building 9G, 69100 Villeurbanne.
+  section_5:
+    title: The stop of hosting
+    paragraphs:
+      - As we provided hosting offers of website, we chose to stop this service to focus on our main activities, namely consulting, web development and teaching. The last customer's websites were migrated this year 2016.
+  section_6:
+    title: The turnover
+    paragraphs:
+      - In 2016, we saw our turnover grow about 154%.
+      - 2017 seems to be a year full of twists, evolution, and certainly expansion of our team. We will have new things to show you.
+      - Thank for spending this year alongside with us.
+      - <strong>IDCI's team</strong>
