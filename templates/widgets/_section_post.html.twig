@@ -1,0 +1,43 @@
+<div class="section-container section-container-60">
+    <section class="section-post">
+        {% if page_title is defined and page_title is not null and page_title is not empty %}
+            <h1>{{ page_title }}</h1>
+        {% endif %}
+        {% for paragraph in introduction %}
+            <p>{{ paragraph }}</p>
+        {% endfor %}
+        {% for part in parts %}
+            <h2>{{ part.title }}</h2>
+            {% for paragraph in part.paragraphs_before %}
+                <p>{{ paragraph|raw }}</p>
+            {% endfor %}
+            {% if part.sections is defined and part.sections is not null and part.sections is not empty %}
+                {% for section in part.sections %}
+                    {% if section.title is defined and section.title is not null and section.title is not empty %}
+                        <h3>{{ section.title }}</h3>
+                    {% endif %}
+                    <div class="section-post-speaker">
+                        {% if section.img is defined and section.img is not empty and section.img is not null %}
+                            <div class="section-post-speaker-media">
+                                <p><img src={{ section.img.src }} alt={{ section.img.alt }}></p>
+                            </div>
+                        {% endif %}
+                        <div class="section-post-speaker-description">
+                            {% for paragraph in section.paragraphs %}
+                                <p>{{ paragraph|raw }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% if part.media is defined and part.media is not null and part.media is not empty %}
+                <iframe src={{ part.media }} allowfullscreen></iframe>
+            {% endif %}
+            {% if part.paragraphs_after is defined and part.paragraphs_after is not null and part.paragraphs_after is not empty %}
+                {% for paragraph in part.paragraphs_after %}
+                    <p>{{ paragraph|raw }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </section>
+</div>

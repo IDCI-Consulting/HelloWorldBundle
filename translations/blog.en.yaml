@@ -6,3 +6,36 @@ blog:
   uploaded_the: Uploaded the
   by: by
   read_post: Read the post
+
+idci_10_years:
+  title: IDCI Consulting is 10 years old !
+  section_1:
+    paragraphs:
+      - To celebrate this symbolic birthday, we receive our customers and partners to our event which will keep on wednesday 8th june 2018.
+      - Frederic and Gabriel Bondaz founded IDCI-Consuting on december 2007. Since then, the team has developed and welcomed new IT keen collaborators every years. This little company, human scaled, has focused on knowledge sharing and skill development of the people who compose it.
+      - After been through intership, apprenticeship and hiring, Baptiste Bouchereau and Brahim Boukoufallah has joined the journey as associates.
+      - It is a decade that IDCI-Consulting's team commits to work with its partners in conformance with values which it try to carry daily. Share and opening, conveyed by open source, are anchored in the company's origins and are destined to remain in the next years.
+  section_2:
+    title: Workshop / Debate
+    part_1:
+      paragraphs:
+        - To mark these 10 years spend alongside our customers and partners, we are organising an event which will begin with two meetings follow-up by free debates.
+        - These meetings will take place from <strong>16:30 to 18:00</strong> before the great leap begin.
+    part_2:
+      paragraphs:
+        - Technical director of iCap (Innovation, Conception and Pedagogical Support) at Lyon 1 and Claroline consortium president, Christophe Batier will raise <strong>digital conversion and its issues</strong>. Through examples like data, information amount or processing speed growth, he will ask himself with us on this strong change's impact and futur.
+    part_3:
+      paragraphs:
+        - Alain Mille, artificial intelligence researcher at CNRS and contributor to LIRIS CNRS 5205 laboratory's development, will lead his speaking to ethical oriented design and conception. Alongside with us, he will reflect upon <strong>ethical application in digital era</strong>. How, finally, generate conditions for a shared ethic and bring the question of responsability, for scientists, designers or users.
+  section_3:
+    title: The big leap
+    part_1:
+      paragraphs:
+        - For the <em>big leap</em>, here is a little video of the concept <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> to give you a foretaste of what is waiting us.
+        - Yes, you really can fly ! <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> make your dream to fly come true. Prepare yourself to stay suspended in an air column reproducing fully the tailspin feeling. Safety, entertainement and sensations are guaranted !
+  section_4:
+    title: The cocktail
+    part_1:
+      paragraphs:
+        - Recovered of our emotions, a cocktail dinner will take place from <strong>19:45 to midnight</strong>.
+        - Don't hesitate to <a href="url('app_contact_index')">contact us</a> for further informations.
