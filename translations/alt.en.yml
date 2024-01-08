@@ -1,5 +1,6 @@
 conseil: Consulting icon
 formation: Course icon
+developpement-web: web development icon
 opensource: Opensource icon
 agile: Methodology icon
 icon-outils: Tools icon
@@ -21,7 +22,7 @@ bootstrap-logo: Bootstrap logo
 css3-html5-logo: CSS3 & HTML5 logo
 docker-logo: Docker logo
 dockerswarm-logo: Docker Swarm logo
-elasticsearch: Elasticsearch logo
+elasticsearch-logo: Elasticsearch logo
 foundation-logo: Foundation logo
 gitlab-logo: Gitlab logo
 jenkins-logo: Jenkins logo
