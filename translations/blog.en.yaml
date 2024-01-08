@@ -17,34 +17,27 @@ idci_10_years:
       - It is a decade that IDCI-Consulting's team commits to work with its partners in conformance with values which it try to carry daily. Share and opening, conveyed by open source, are anchored in the company's origins and are destined to remain in the next years.
   section_2:
     title: Workshop / Debate
-    part_1:
-      paragraphs:
-        - To mark these 10 years spend alongside our customers and partners, we are organising an event which will begin with two meetings follow-up by free debates.
-        - These meetings will take place from <strong>16:30 to 18:00</strong> before the great leap begin.
-    part_2:
-      paragraphs:
-        - Technical director of iCap (Innovation, Conception and Pedagogical Support) at Lyon 1 and Claroline consortium president, Christophe Batier will raise <strong>digital conversion and its issues</strong>. Through examples like data, information amount or processing speed growth, he will ask himself with us on this strong change's impact and futur.
-    part_3:
-      paragraphs:
-        - Alain Mille, artificial intelligence researcher at CNRS and contributor to LIRIS CNRS 5205 laboratory's development, will lead his speaking to ethical oriented design and conception. Alongside with us, he will reflect upon <strong>ethical application in digital era</strong>. How, finally, generate conditions for a shared ethic and bring the question of responsability, for scientists, designers or users.
+    paragraphs:
+      - To mark these 10 years spend alongside our customers and partners, we are organising an event which will begin with two meetings follow-up by free debates.
+      - Technical director of iCap (Innovation, Conception and Pedagogical Support) at Lyon 1 and Claroline consortium president, Christophe Batier will raise __digital conversion and its issues__. Through examples like data, information amount or processing speed growth, he will ask himself with us on this strong change's impact and futur.
+      - Alain Mille, artificial intelligence researcher at CNRS and contributor to LIRIS CNRS 5205 laboratory's development, will lead his speaking to ethical oriented design and conception. Alongside with us, he will reflect upon __ethical application in digital era__. How, finally, generate conditions for a shared ethic and bring the question of responsability, for scientists, designers or users.
+      - These meetings will take place from __16:30 to 18:00__ before the great leap begin.
   section_3:
     title: The big leap
-    part_1:
-      paragraphs:
-        - For the <em>big leap</em>, here is a little video of the concept <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> to give you a foretaste of what is waiting us.
-        - Yes, you really can fly ! <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> make your dream to fly come true. Prepare yourself to stay suspended in an air column reproducing fully the tailspin feeling. Safety, entertainement and sensations are guaranted !
+    paragraphs:
+      - For the <em>big leap</em>, here is a little video of the concept <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> to give you a foretaste of what is waiting us.
+      - Yes, you really can fly ! <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> make your dream to fly come true. Prepare yourself to stay suspended in an air column reproducing fully the tailspin feeling. Safety, entertainement and sensations are guaranted !
   section_4:
     title: The cocktail
-    part_1:
-      paragraphs:
-        - Recovered of our emotions, a cocktail dinner will take place from <strong>19:45 to midnight</strong>.
-        - Don't hesitate to <a href="url('app_contact_index')">contact us</a> for further informations.
+    paragraphs:
+      - Recovered of our emotions, a cocktail dinner will take place from __19:45 to midnight__.
+      - Don't hesitate to [contact us](path('app_contact_index')) for further informations.
 
 new_year_2017:
   title: Our wishes for 2017
   section_1:
     paragraphs:
-      - <strong>IDCI's team wishes you a really good year.</strong>
+      - __IDCI's team wishes you a really good year.__
       - We wish you to keep exploring your ideas and your creativity. To test new experiences and to be curious about all that is around you. To take care of you and to share with who you love. To encourage your entourage to surpass itself with you. To have new projects and to achived them. To take up new challenges and to start again to go ahead potential difficulties. To be surprised and continue your progress.
       - We would like to share with you some high points of IDCI in 2016.
   section_2:
@@ -73,4 +66,95 @@ new_year_2017:
       - In 2016, we saw our turnover grow about 154%.
       - 2017 seems to be a year full of twists, evolution, and certainly expansion of our team. We will have new things to show you.
       - Thank for spending this year alongside with us.
-      - <strong>IDCI's team</strong>
+      - __IDCI's team__
+
+step_bundle_introduction:
+  title: Introduction to IDCIStepBundle
+  section_1:
+    paragraphs:
+      - Result of a customer's need, we wonder how to solve the problem of the __creation of an interactive workflow__. We had to easily do __navigable routes__ for an internaut and easily trigger different processes (mail sending, datebase saving, web service calling) depending on users action (moving from step to an other). The upgradeability of the routes' complexity being a big point, the whole workflow had to be __configurable__ (and non hardcoded).
+      - We have tested existing bundles, which seemed to answer our problem, but they wasn't suitable. At the end of this page, we added a quick [compararison](#comparison) of these different bundles.
+      - In this way, we choose to develop our own Bundle, we made it generic and reusable.
+      - __This article helps to introduce IDCIStepBundle__. In upcomming articles, we will deepen details and talk about specificities through concrete examples.
+      - __IDCIStepBundle__ simplify the __creation of an interactive workflow__ for an internaut. Its configuration is defined by a system of __Map__, __Step__ and __Path__. We used the navigation metaphor throughout our development.
+      - In the first instance, we need to defined a map, and imagine each screen (web page) as a step, then link them to each others using paths which will add navigation buttons.
+      - This Bundle is compatible with Symfony 2.8 version. The 3.0 version will be available soon.
+  section_2:
+    title: What is a map ?
+    paragraphs:
+      - A `map` defined the navigation workflow, it is composed of steps and paths.
+  section_3:
+    title: What is a step ?
+    paragraphs:
+      - A step materialize as a web page, and defined a potential crossing point. It can be of different types. By default, our bundle provides two types of `step`.
+      - Display of HTML content
+      - Display of a form
+  section_4:
+    title: What is a path ?
+    paragraphs:
+      - A path is an itinerary which have a step as an origin and none or several steps as destination. It can be of different types. By default, our bundle provides three types de `path`.
+      - only one destination.
+      - several destinations according conditional rules.
+      - the path which determine a end of navigation.
+  section_5:
+    title: Key
+    paragraphs:
+      - We will use a diagram which will be a key.
+      - Squares represent steps.
+      - Arrows represent paths.
+  section_6:
+    title: Why use IDCIStepBundle ?
+    paragraphs:
+      - IDCIStepBundle allows simple routes (one step, one path) as much as complex routes (several steps and paths). You can easily begin from a configuration, which represent the map, using the `yml` or `json` language. You also can represent a map by directly using object oriented programmation, but this can be more complicated for outsiders of code and object oriented programmation.
+      - Here is an incomplete list of StepBundle use case.
+      - A contact form,
+      - A sign in process,
+      - A questionnaire,
+      - A survey,
+      - Without delay, let's meet this Bundle.
+      - Let's begin with creating a Symfony project in 2.8 version, we will call this project `demo_step`.
+  section_7:
+    paragraphs:
+      - Let's add the dependency with our bundle, by modifying the `composer.json` file
+      - Or by executing the following composer command
+      - Then, let's intall this new dependency by using composer
+      - Let's declare the bundle in our `AppKernel.php` file.
+      - Finally, let's add the configuration specificities of this Bundle in our app. For this, let's edit the `app/config/config.yml` file
+      - Our Bundle is installed and ready to use.
+      - In our next article, we will test a concret case of using IDCIStepBundle
+      - the creation or a contact form.
+  section_8:
+    title: Comparison
+    paragraphs:
+      - Here is a comparison table (strengths / weaknesses) of Bundles allowing the creation of interactive workflows.
+      - Other bundles were quickly analysed but not tested
+      - This bundle offers only a beta version.
+      - This Bundle show "Read only" on Github.
+      - If you need help or an expertise about IDCIStepBundle you can
+      - contact us
+    table:
+      heads:
+        - Strengths
+        - Weaknesses
+      row_1:
+        strength:
+          - Compatible with symfony2 and 3.
+          - Step backwards allowed on several levels with conservation of data inputed at each steps.
+          - Two possible strategy (a "FormType" for all the flow, or a "FormType" by step)
+        weakness:
+          - Creation of multiple files is necessary to make complex routes because 1 file = 1 step.
+          - No record of all navigation datas (when update)
+          - We cannot defined steps in the configuration.
+          - No concept of paths, the steps follow themself chronologically.
+      row_2:
+        strength:
+          - Usage of paths linking steps, which allow a non chronological navigation between each steps.
+          - Routes entierely configurable (json/yaml), also possibility of hardcoding them.
+          - Save all datas inputed or recovered during the navigation.
+          - Possible step barkwards on multiple levels with storage of inputed datas at each steps.
+          - Native usage of "fusion fields" allowing easy recover of inputed datas or others.
+          - Integrated debugger including the history and navigation datas.
+          - Possibility to connect "EventActions" on "paths" or "steps".
+        weakness:
+          - Only compatible with Symfony2 for the time being.
+          - The configuration quickly become very heavy.

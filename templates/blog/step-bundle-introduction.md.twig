@@ -1,0 +1,219 @@
+{% trans_default_domain 'blog' %}
+<section class="section-container section-container-60">
+
+<section class="section-post">
+
+# {{ 'step_bundle_introduction.title'|trans }}
+
+## Introduction
+
+{{ 'step_bundle_introduction.section_1.paragraphs.0'|trans }}
+
+{{ 'step_bundle_introduction.section_1.paragraphs.1'|trans }}
+
+{{ 'step_bundle_introduction.section_1.paragraphs.2'|trans }}
+
+{{ 'step_bundle_introduction.section_1.paragraphs.3'|trans }}
+
+{{ 'step_bundle_introduction.section_1.paragraphs.4'|trans }}
+
+{{ 'step_bundle_introduction.section_1.paragraphs.5'|trans }}
+
+<p class="section-post-notice info">
+{{ 'step_bundle_introduction.section_1.paragraphs.6'|trans }}
+</p>
+
+
+### {{ 'step_bundle_introduction.section_2.title'|trans }}
+
+{{ 'step_bundle_introduction.section_2.paragraphs.0'|trans }}
+
+### {{ 'step_bundle_introduction.section_3.title'|trans }}
+
+{{ 'step_bundle_introduction.section_3.paragraphs.0'|trans }}
+
+<div class="section-post-list">
+
+ - **html** : {{ 'step_bundle_introduction.section_3.paragraphs.1'|trans }}
+ - **form** : {{ 'step_bundle_introduction.section_3.paragraphs.2'|trans }} (FormType Symfony)
+
+</div>
+
+### {{ 'step_bundle_introduction.section_4.title'|trans }}
+
+{{ 'step_bundle_introduction.section_4.paragraphs.0'|trans }}
+
+<div class="section-post-list">
+
+ - **single** : {{ 'step_bundle_introduction.section_4.paragraphs.1'|trans }}
+ - **conditional** : {{ 'step_bundle_introduction.section_4.paragraphs.2'|trans }}
+ - **end** : {{ 'step_bundle_introduction.section_4.paragraphs.3'|trans }}
+
+</div>
+
+
+## {{ 'step_bundle_introduction.section_5.title'|trans }}
+
+{{ 'step_bundle_introduction.section_5.paragraphs.0'|trans }}
+
+<div class="section-post-list">
+
+ - {{ 'step_bundle_introduction.section_5.paragraphs.1'|trans }}
+ - {{ 'step_bundle_introduction.section_5.paragraphs.2'|trans }}
+
+</div>
+
+![Legende IDCIStepBundle](/build/images/blog/stepBundle_legend.png "Légende IDCIStepBundle")
+
+
+## {{ 'step_bundle_introduction.section_6.title'|trans }}
+
+{{ 'step_bundle_introduction.section_6.paragraphs.0'|trans }}
+
+{{ 'step_bundle_introduction.section_6.paragraphs.1'|trans }}
+
+<div class="section-post-list">
+
+ - {{ 'step_bundle_introduction.section_6.paragraphs.2'|trans }}
+ - {{ 'step_bundle_introduction.section_6.paragraphs.3'|trans }}
+ - {{ 'step_bundle_introduction.section_6.paragraphs.4'|trans }}
+ - {{ 'step_bundle_introduction.section_6.paragraphs.5'|trans }}
+ - Etc.
+
+</div>
+
+{{ 'step_bundle_introduction.section_6.paragraphs.6'|trans }}
+
+{{ 'step_bundle_introduction.section_6.paragraphs.7'|trans }}
+
+```sh
+$ composer create-project symfony/framework-standard-edition demo_step "2.8.*"
+```
+
+
+## Installation
+
+{{ 'step_bundle_introduction.section_7.paragraphs.0'|trans }} :
+
+```json
+"require": {
+    ...
+    "idci/step-bundle": "~1.5"
+},
+```
+
+{{ 'step_bundle_introduction.section_7.paragraphs.1'|trans }} :
+
+```sh
+$ composer require idci/step-bundle:~1.5
+```
+
+{{ 'step_bundle_introduction.section_7.paragraphs.2'|trans }} :
+
+```sh
+$ composer update
+```
+
+{{ 'step_bundle_introduction.section_7.paragraphs.3'|trans }} :
+
+```php
+<?php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        ...
+        new JMS\SerializerBundle\JMSSerializerBundle(),
+        new IDCI\Bundle\StepBundle\IDCIStepBundle(),
+    );
+}
+```
+
+{{ 'step_bundle_introduction.section_7.paragraphs.4'|trans }} :
+
+```yaml
+imports:
+    ...
+    - { resource: @IDCIStepBundle/Resources/config/config.yml }
+```
+
+{{ 'step_bundle_introduction.section_7.paragraphs.5'|trans }}
+
+{{ 'step_bundle_introduction.section_7.paragraphs.6'|trans }} : {{ 'step_bundle_introduction.section_7.paragraphs.7'|trans }}
+
+<h2 id="comparison">{{ 'step_bundle_introduction.section_8.title'|trans }}</h2>
+
+{{ 'step_bundle_introduction.section_8.paragraphs.0'|trans }}
+
+<div class="section-post-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Bundle</th>
+                <th>{{ 'step_bundle_introduction.section_8.table.heads.0'|trans }}</th>
+                <th>{{ 'step_bundle_introduction.section_8.table.heads.1'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    <a href="https://github.com/craue/CraueFormFlowBundle" target="_blank">CraueFormFlowBundle</a>
+                </th>
+                <td>
+                    <ul class="section-post-list">
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_1.strength.0'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_1.strength.1'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_1.strength.2'|trans }}</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="section-post-list">
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_1.weakness.0'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_1.weakness.1'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_1.weakness.2'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_1.weakness.3'|trans }}</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <a href="https://github.com/IDCI-Consulting/StepBundle" target="_blank">IDCIStepBundle</a>
+                </th>
+                <td>
+                    <ul class="section-post-list">
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.strength.0'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.strength.1'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.strength.2'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.strength.3'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.strength.4'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.strength.5'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.strength.6'|trans }}</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="section-post-list">
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.weakness.0'|trans }}</li>
+                        <li>{{ 'step_bundle_introduction.section_8.table.row_2.weakness.1'|trans }}</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{{ 'step_bundle_introduction.section_8.paragraphs.1'|trans }} :
+
+<div class="section-post-list">
+
+ - [KitpagesWorkflowBundle](https://github.com/kitpages/KitpagesWorkflowBundle) : {{ 'step_bundle_introduction.section_8.paragraphs.2'|trans }}
+ - [SyliusFlowBundle](https://github.com/Sylius/SyliusFlowBundle) : {{ 'step_bundle_introduction.section_8.paragraphs.3'|trans }}
+
+</div>
+
+{{ 'step_bundle_introduction.section_8.paragraphs.4'|trans }}
+[{{ 'step_bundle_introduction.section_8.paragraphs.5'|trans }}]({{ path('app_contact_index') }}).
+
+</section>
+
+</section>

@@ -44,9 +44,9 @@ class BlogController extends AbstractController
     /**
      * @Route("/post/{slug}", methods={"GET"}, name="post")
      */
-    public function post(Request $request, String $slug, string $_locale): Response
+    public function post(Request $request, String $slug): Response
     {
-        $post = $this->renderView(sprintf('blog/%s/%s.md.twig', $_locale, $slug));
+        $post = $this->renderView(sprintf('blog/%s.md.twig', $slug));
 
         return $this->render('blog/show.html.twig', [
             'slug' => $slug,

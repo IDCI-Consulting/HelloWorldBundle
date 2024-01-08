@@ -17,34 +17,27 @@ idci_10_years:
       - Cela fait une décennie que l’équipe d’IDCI-Consulting s’engage à travailler avec des partenaires en accord avec les valeurs qu’elle tente de porter au quotidien. Le partage et l’ouverture véhiculés par l’open source sont ancrés dans les origines de l’entreprise et sont voués à le rester dans les années à venir.
   section_2:
     title: Ateliers / Débats
-    part_1:
-      paragraphs:
-        - Pour marquer ces 10 années passées aux côtés de nos clients et partenaires, nous organisons un événement qui débutera par deux conférences suivies de débats libres.
-        - Ces conférences auront lieu de <strong>16h30 à 18h</strong> avant que le grand saut ne commence.
-    part_2:
-      paragraphs:
-        - Directeur technique à l’iCap (Innovation, Conception et Accompagnement pour la Pédagogie) à Lyon 1 et président du consortium Claroline, Christophe Batier évoquera <strong>la transition numérique et ses enjeux</strong>. Au travers d’exemples tels que la hausse des données, des volumes d’information ou des vitesses de traitement, il se questionnera avec nous sur l’impact et le futur de cette puissante mutation.
-    part_3:
-      paragraphs:
-        - Alain Mille, chercheur en intelligence artificielle au CNRS et contributeur au développement du laboratoire LIRIS CNRS 5205, dirigera sa prise de parole vers le sujet du design et la conception « orientée » éthique. À nos côtés, il s’interrogera sur <strong>l’adaptation du concept d’éthique à l’ère du numérique</strong>. Comment, finalement, créer les conditions d’une éthique partagée tout en amenant la question de la responsabilité, que ce soit celle des scientifiques, des designers ou des usagers.
+    paragraphs:
+      - Pour marquer ces 10 années passées aux côtés de nos clients et partenaires, nous organisons un événement qui débutera par deux conférences suivies de débats libres.
+      - Directeur technique à l’iCap (Innovation, Conception et Accompagnement pour la Pédagogie) à Lyon 1 et président du consortium Claroline, Christophe Batier évoquera __la transition numérique et ses enjeux__. Au travers d’exemples tels que la hausse des données, des volumes d’information ou des vitesses de traitement, il se questionnera avec nous sur l’impact et le futur de cette puissante mutation.
+      - Alain Mille, chercheur en intelligence artificielle au CNRS et contributeur au développement du laboratoire LIRIS CNRS 5205, dirigera sa prise de parole vers le sujet du design et la conception « orientée » éthique. À nos côtés, il s’interrogera sur __l’adaptation du concept d’éthique à l’ère du numérique__. Comment, finalement, créer les conditions d’une éthique partagée tout en amenant la question de la responsabilité, que ce soit celle des scientifiques, des designers ou des usagers.
+      - Ces conférences auront lieu de __16h30 à 18h__ avant que le grand saut ne commence.
   section_3:
     title: Le grand saut
-    part_1:
-      paragraphs:
-        - Pour ce qui est du <em>grand saut</em>, voici une petite vidéo du concept <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> pour vous donner un avant-goût de ce qui nous attend.
-        - Oui, vous pouvez réellement voler ! <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> transforme votre rêve de voler en une réalité. Préparez-vous à rester suspendus dans une colonne d’air reproduisant totalement la sensation de la chute libre. Sécurité, amusement et sensations garanties !
+    paragraphs:
+      - Pour ce qui est du <em>grand saut</em>, voici une petite vidéo du concept <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> pour vous donner un avant-goût de ce qui nous attend.
+      - Oui, vous pouvez réellement voler ! <a href="https://goo.gl/maps/GkQbcLA9J7D2" target="_blank">iFLY</a> transforme votre rêve de voler en une réalité. Préparez-vous à rester suspendus dans une colonne d’air reproduisant totalement la sensation de la chute libre. Sécurité, amusement et sensations garanties !
   section_4:
     title: Le cocktail
-    part_1:
-      paragraphs:
-        - Remis de nos émotions, un cocktail dînatoire se tiendra de <strong>19h45 à minuit</strong>.
-        - N'hésitez pas à <a href="url('app_contact_index')">nous contacter</a> pour plus d'informations.
+    paragraphs:
+      - Remis de nos émotions, un cocktail dînatoire se tiendra de __19h45 à minuit__.
+      - N'hésitez pas à [nous contacter](path('app_contact_index')) pour plus d'informations.
 
 new_year_2017:
   title: Nos voeux pour 2017
   section_1:
     paragraphs:
-      - <strong>L'équipe d'IDCI vous souhaite une très bonne année.</strong>
+      - __L'équipe d'IDCI vous souhaite une très bonne année.__
       - Nous vous souhaitons de continuer à explorer vos idées et votre créativité. Tester de nouvelles choses et être curieux sur ce qui vous entoure. Prendre soin de vous et partager avec ceux que vous aimez. Encourager votre entourage à se surpasser avec vous. Avoir de nouveaux projets et les réaliser. Relever des nouveaux défis et recommencer encore pour passer au-dessus d'éventuelles difficultés. Être surpris et poursuivre votre évolution.
       - Nous aimerions partager avec vous quelques moments forts d'IDCI en 2016.
   section_2:
@@ -73,4 +66,95 @@ new_year_2017:
       - En 2016, nous avons vu notre chiffre d'affaire augmenter de 154%.
       - 2017 s'annonce donc pour nous comme une année pleine de rebondissements, d'évolution, et très certainement d'expansion de notre équipe. Nous aurons encore de nouvelles choses à vous montrer.
       - Merci d'avoir passé cette année à nos cotés.
-      - <strong>L'équipe d'IDCI</strong>
+      - __L'équipe d'IDCI__
+
+step_bundle_introduction:
+  title: Introduction à IDCIStepBundle
+  section_1:
+    paragraphs:
+      - Suite au besoin d'un client, nous nous sommes demandé comment répondre à la problématique d'une __création de workflow interactif__. Il fallait pouvoir réaliser facilement des __parcours navigables__ par un internaute et déclencher facilement différents traitements (envoi de mail, sauvegarde en base de données, appel d'un web service) en fonction des actions utilisateurs (passage d'une étape à une autre). L'évolutivité de la complexité des parcours étant un point important, l'ensemble du workflow se devait d'être __configurable__ (et non hardcodé).
+      - Nous avons testé des bundles existants, qui semblaient répondre à notre problématique, mais ceux-ci n'étaient pas satisfaisant. En bas de page, nous avons ajouté un rapide [comparatif](#comparison) de ces différents bundles.
+      - Ainsi, nous avons choisi de développer notre propre Bundle, nous l'avons pensé générique et réutilisable.
+      - __Cet article a pour vocation d'introduire IDCIStepBundle__. Dans de prochains articles, nous rentrerons plus dans les détails et vous parlerons de ses spécifités au travers d'exemples concrets.
+      - __IDCIStepBundle__ permet de simplifier la __création d'un parcours interactif__ à destination d'un internaute. Sa configuration se définie par un système de __Map__ (carte), de __Step__ (étape) et de __Path__ (chemin). Nous avons utilisé la métaphore de la navigation tout au long de notre développement.
+      - Dans un premier temps, nous devons définir une map, et imaginer chaque écran (page web) comme une step, puis les lier entre elles en utilisant les paths qui ajouteront des boutons de navigation.
+      - Ce Bundle est compatible avec la version 2.8 de Symfony. La version 3.0 sera disponible prochainement.
+  section_2:
+    title: Qu'est-ce qu'une map ?
+    paragraphs:
+      - Une `map` définit le workflow de navigation, elle se compose de steps et de paths.
+  section_3:
+    title: Qu'est-ce qu'une step ?
+    paragraphs:
+      - Une step se matérialise par une page web, et définit un potentiel point de passage. Elle peut être de différents types. Par défaut, notre bundle fournit deux types de `step`.
+      - affichage d'un contenu HTML
+      - affichage d'un formulaire
+  section_4:
+    title: Qu'est-ce qu'un path ?
+    paragraphs:
+      - Un path est un itinéraire qui a pour origine une step et pour destination zéro ou plusieurs steps. Il peut être de différents types. Par défaut, notre bundle fournit trois types de `path`.
+      - une seule destination.
+      - plusieurs destinations en fonction de règles conditionnelles.
+      - le path qui détermine une fin de navigation.
+  section_5:
+    title: Légende
+    paragraphs:
+      - Nous allons utiliser un diagramme qui fera office de légende.
+      - Les carrés représentent les steps.
+      - Les flèches représentent les paths.
+  section_6:
+    title: Pourquoi utiliser IDCIStepBundle ?
+    paragraphs:
+      - IDCIStepBundle permet de mettre en place aussi bien un parcours simple (une step, un path) qu'un parcours plus complexes (plusieurs steps et paths). Vous pouvez commencer facilement à partir d'une configuration, qui représente la map, en utilisant le langage `yml` ou `json`. Vous pouvez aussi représenter une map en utilisant directement la programmation objet, mais cela est peut-être plus compliqué pour des non initiés au code et à la programmation objet.
+      - Voici une liste non exhaustive des cas d'utilisation de StepBundle.
+      - Un formulaire de contact,
+      - Un processus d'inscription,
+      - Un questionnaire,
+      - Une enquête,
+      - Sans plus attendre, partons à la rencontre de ce Bundle.
+      - Commençons par créer un projet Symfony en version 2.8, nous appellerons ce projet `demo_step`.
+  section_7:
+    paragraphs:
+      - Ajoutons la dépendance avec notre bundle, en modifiant le fichier `composer.json`
+      - Ou en éxécutant la commande composer suivante
+      - Puis, installons cette nouvelle dépendance en utilisant composer
+      - Déclarons le bundle dans notre fichier `AppKernel.php`
+      - Enfin, ajoutons les spécificités de configuration de ce Bundle à notre application. Pour cela, éditons le fichier `app/config/config.yml`
+      - Notre Bundle est installé et prêt à l'emploi.
+      - Dans notre prochain article, nous testerons un cas concret d'utilisation de IDCIStepBundle
+      - la création d'un formulaire de contact.
+  section_8:
+    title: Comparatif
+    paragraphs:
+      - Voici un tableau comparatif (points forts / points faibles) des Bundles permettant de réaliser des workflows intéractifs.
+      - D'autres bundles ont été rapidement analysé mais pas testé
+      - Ce bundle propose seulement une version beta.
+      - Ce Bundle affiche "Read only" sur Github.
+      - Si vous avez besoin d'une aide ou d'une expertise concernant IDCIStepBundle vous pouvez
+      - nous contacter
+    table:
+      heads:
+        - Forces
+        - Faiblesses
+      row_1:
+        strength:
+          - Compatible avec symfony2 et 3.
+          - Retour en arrière possible sur plusieurs niveau avec conservation des données saisies à chaque étape.
+          - Deux approches possible (un "FormType" pour tout le flow, ou un "FormType" par step)
+        weakness:
+          - Création de nombreux fichiers necessaires pour réaliser des parcours complexe car 1 fichier = 1 step.
+          - Pas d'enregistrement de l'ensemble des données de navigation (quand réactualisation)
+          - On ne peux pas définir les étapes via de la configuration.
+          - Pas de notion de chemins, les étapes se suivent chronologiquement.
+      row_2:
+        strength:
+          - Utilisation de chemins "path" reliant les étapes "step", ce qui permet une navigation par forcément chronologique entre chaque étapes.
+          - Parcours entiérement configurable (json/yaml), possibilité également de les "hardcoder".
+          - Sauvegarde de l'ensemble des données saisies ou récupérées durant la navigation.
+          - Retour en arrière possible sur plusieurs niveau avec conservation des données saisies à chaque étape.
+          - Usage natif de "champs de fusion" permettant de récupérer facilement les données saisies ou autres.
+          - Debugger intégré contenant l'historique et le donnée de navigation.
+          - Possibilité de brancher des "EventActions" sur les "paths" ou les "steps".
+        weakness:
+          - Seulement compatible avec Symfony2 pour le moment.
+          - La configuration devient rapidement très dense.
