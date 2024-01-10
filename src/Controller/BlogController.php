@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,10 +14,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends AbstractController
 {
     private string $blogPostsFilePath;
+    private string $postDirectoryPath;
 
-    public function __construct(string $blogPostsFilePath)
+    public function __construct(string $blogPostsFilePath, string $postDirectoryPath)
     {
         $this->blogPostsFilePath = $blogPostsFilePath;
+        $this->postDirectoryPath = $postDirectoryPath;
     }
 
     /**
@@ -46,6 +49,13 @@ class BlogController extends AbstractController
      */
     public function post(Request $request, String $slug, string $_locale): Response
     {
+        $filesystem = new Filesystem();
+        $postFilePath = sprintf('%s%s/%s.md.twig', $this->postDirectoryPath, $_locale, $slug);
+
+        if (!$filesystem->exists($postFilePath)) {
+            $_locale = 'fr';
+        }
+
         $post = $this->renderView(sprintf('blog/%s/%s.md.twig', $_locale, $slug));
 
         return $this->render('blog/show.html.twig', [
