@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,12 +13,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends AbstractController
 {
     private string $blogPostsFilePath;
-    private string $postDirectoryPath;
 
-    public function __construct(string $blogPostsFilePath, string $postDirectoryPath)
+    public function __construct(string $blogPostsFilePath)
     {
         $this->blogPostsFilePath = $blogPostsFilePath;
-        $this->postDirectoryPath = $postDirectoryPath;
     }
 
     /**
@@ -49,11 +46,12 @@ class BlogController extends AbstractController
      */
     public function post(Request $request, String $slug, string $_locale): Response
     {
-        $filesystem = new Filesystem();
-        $postFilePath = sprintf('%s%s/%s.md.twig', $this->postDirectoryPath, $_locale, $slug);
+        $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
 
-        if (!$filesystem->exists($postFilePath)) {
-            $_locale = 'fr';
+        foreach ($posts as $post) {
+            if ($post['id'] === $slug && !in_array($_locale, $post['available_languages'], $strict = true)) {
+                $_locale = $post['available_languages'][0];
+            }
         }
 
         $post = $this->renderView(sprintf('blog/%s/%s.md.twig', $_locale, $slug));
