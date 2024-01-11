@@ -85,7 +85,7 @@ RUN pecl install xdebug-beta && docker-php-ext-enable xdebug
 # installing project
 ENV APP_ENV=dev
 ENV APP_ENV ${APP_ENV}
-ENV ALLOW_OPCACHE=off
+ENV OPCACHE_ENABLE=off
 
 RUN composer install --no-interaction --optimize-autoloader
 # RUN . $NVM_DIR/nvm.sh \
@@ -102,7 +102,7 @@ FROM base as prod
 ## Copy built vendors
 ARG APP_ENV=prod
 ENV APP_ENV ${APP_ENV}
-ENV ALLOW_OPCACHE=on
+ENV OPCACHE_ENABLE=on
 COPY --from=build /var/www/app/vendor /var/www/app/vendor
 
 ## Copy built assets and bundles in order to use and share them (entrypoint)
