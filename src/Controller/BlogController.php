@@ -49,7 +49,7 @@ class BlogController extends AbstractController
         $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
 
         foreach ($posts as $post) {
-            if ($post['id'] === $slug && !in_array($_locale, $post['available_languages'], $strict = true)) {
+            if ($post['id'] == $slug && !in_array($_locale, $post['available_languages'])) {
                 $_locale = $post['available_languages'][0];
             }
         }
