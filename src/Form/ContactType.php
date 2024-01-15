@@ -15,7 +15,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class ContactType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('company', TextType::class, [
