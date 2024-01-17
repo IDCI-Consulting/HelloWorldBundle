@@ -1,0 +1,36 @@
+.section-word-cloud {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+
+    .word-cloud {
+        align-items: center;
+        column-gap: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 0.5rem;
+        width: 50%;
+
+        .word {
+            font-size: $idci-font-1-5x;
+
+            &.word-big {
+                font-size: $idci-font-2x;
+            }
+
+            &.word-small {
+                font-size: $idci-font-large;
+            }
+
+            &.word-blue {
+                color: $idci-color-blue;
+            }
+
+            &.word-green {
+                color: $idci-color-green
+            }
+        }
+    }
+}

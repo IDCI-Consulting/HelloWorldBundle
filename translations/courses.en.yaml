@@ -7,9 +7,11 @@ courses:
     title: Our courses
     part_1:
       title: Your problematic
-      paragraph_1: You are a <span class="colored">company</span> (SME/Group) and you want to train your collaborators.
-      paragraph_2: You are an <span class="colored">SN</span> and you want to subcontract a training service with your customers.
-      paragraph_3: You are a <span class="colored">training organization</span> and you want to acquire the consulting / high-qualified trainer to lead a session.
+      paragraph_1: You are a <span class="colored">training organization</span> and you want to acquire the skills of a high-qualified consultant to lead a session or design a formation.
+      paragraph_2: You are a <span class="colored">company</span> (SME/Group) and you want to train your collaborators.
+      paragraph_3: You are an <span class="colored">SN</span> and you want to subcontract a training service with your customers.
     part_2:
       title: Our solution
-      paragraph_1: Our team bases its added value on the perpetual quest of <span class="colored">new knowledges</span>. So, share it when we mastered them is a real pleasure and it allow our consultants to vary their missions and to add a <span class="colored">pedagogic</span> branch to their background. We offer 'standards' trainings plans but we can also answer to <span class="colored">your more specifics needs</span> upon request.
+      paragraph_1: Our team bases its added value on the perpetual quest of <span class="colored">new knowledges</span>. So, share it is a real pleasure which allow our consultants to vary their missions and to acquire <span class="colored">pedagogic</span> skills.
+      paragraph_2: Entrust us to <span class="colored">lead a session or to design courses</span>. PHP, Symfony, Docker and Git aren't keeping much secrets to us.
+      paragraph_3: <i>We are not a training organization.</i>

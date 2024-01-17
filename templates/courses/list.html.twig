@@ -1,6 +1,6 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}Présentation de nos formations{% endblock %}
+{% block title %}Solutions de formation{% endblock %}
 
 {% block main %}
     {% trans_default_domain 'courses' %}
@@ -23,7 +23,9 @@
             {
                 'title': ('courses.introduction.part_2.title')|trans,
                 'paragraphs': [
-                    ('courses.introduction.part_2.paragraph_1')|trans
+                    ('courses.introduction.part_2.paragraph_1')|trans,
+                    ('courses.introduction.part_2.paragraph_2')|trans,
+                    ('courses.introduction.part_2.paragraph_3')|trans
                 ],
                 'color': 'secondary'
             },
@@ -31,64 +33,31 @@
         'contact_button': true
     } %}
 
-    <div class="transparent-box even bottom-secondary"></div>
+    <div class="transparent-box even"></div>
 
-    <section class="section-container section-container-secondary">
-        {% include 'widgets/_section_presentation.html.twig' with {
-            'title': ('courses.title')|trans,
-            'subtitle': ('courses.subtitle')|trans,
-            'cards': [
-                {
-                    'href': '#oop-uml-scm',
-                    'media': {
-                        'src': asset('build/images/base/oop-uml-scm.svg'),
-                        'alt': ('oop-ulm-scm')|trans({}, 'alt')
-                    },
-                    'description': 'OOP - UML - SCM'
-                },
-                {
-                    'href': '#html5-css3',
-                    'media': {
-                        'src': asset('build/images/base/html5-css3.svg'),
-                        'alt': ('html5-css3')|trans({}, 'alt')
-                    },
-                    'description': 'HTML5 - CSS3'
-                },
-                {
-                    'href': '#symfony2',
-                    'media': {
-                        'src': asset('build/images/base/symfony2.svg'),
-                        'alt': ('symfony2')|trans({}, 'alt')
-                    },
-                    'description': 'Symfony'
-                }
-            ]
-        } %}
+    <section class="section-container section-container-90 section-container-primary">
+        <section class="section-presentation section-word-cloud">
+            <h2 class="section-presentation-title idci-title-primary">Quelques notions que nous maîtrisons :</h2>
+            <div class="word-cloud">
+                <div class="word word-big word-green">Symfony</div>
+                <div class="word word-big">PHP</div>
+                <div class="word word-big">HTML</div>
+                <div class="word word-big">CSS</div>
+                <div class="word word-blue">Docker</div>
+                <div class="word word-small">Gestion de projet</div>
+                <div class="word word-big">Git</div>
+                <div class="word word-big">Programmation Orientée Objet</div>
+                <div class="word word-big">Applications Web</div>
+                <div class="word word-big">SASS</div>
+                <div class="word word-big">SQL</div>
+                <div class="word word-blue">GitLab</div>
+                <div class="word word-big">Versioning</div>
+                <div class="word word-small">Architecture MVC</div>
+                <div class="word word-big">Front-End</div>
+                <div class="word word-big">Back-End</div>
+                <div class="word word-big">Fullstack</div>
+                <div class="word word-big">Développement Web</div>
+            </div>
+        </section>
     </section>
-
-    <div class="transparent-box top-secondary"></div>
-
-    {% for course in courses %}
-        {% include 'widgets/_section_display.html.twig' with {
-            'title': course.name,
-            'id': course.id,
-            'media': {
-                'src': course.media,
-                'alt': (course.id)|trans({}, 'alt')
-            },
-            'buttons': [
-                {
-                    'label': ('button.pdf_download')|trans({}, 'messages'),
-                    'href': url('app_courses_show', {'slug' : course.id})
-                },
-                {
-                    'label': ('button.contact_us')|trans({}, 'messages'),
-                    'href': url('app_contact_index')
-                }
-            ],
-            'tabs': course.days,
-            'duration': ('courses.duration')|trans,
-            'hour': ('courses.hour')|trans,
-        } %}
-    {% endfor %}
 {% endblock %}

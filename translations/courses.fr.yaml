@@ -7,9 +7,11 @@ courses:
     title: Nos formations
     part_1:
       title: Votre <span class="colored">problématique</span>
-      paragraph_1: Vous êtes une <span class="colored">entreprise</span> (PME/Groupe) et vous souhaitez former vos collaborateurs.
-      paragraph_2: Vous êtes une <span class="colored">SN</span> et souhaitez sous-traiter une prestation de formation auprès de vos clients ?
-      paragraph_3: Vous êtes un <span class="colored">organisme de formation</span> et vous souhaitez vous adjoindre les compétences d’un consultant / formateur hautement qualifié pour animer une session.
+      paragraph_1: Vous êtes un <span class="colored">organisme de formation</span> et vous souhaitez vous adjoindre les compétences d’un consultant hautement qualifié pour animer une session ou concevoir un programme.
+      paragraph_2: Vous êtes une <span class="colored">entreprise</span> (PME/Groupe) et vous souhaitez former vos collaborateurs.
+      paragraph_3: Vous êtes une <span class="colored">SN</span> et souhaitez sous-traiter une prestation de formation auprès de vos clients ?
     part_2:
       title: Notre <span class="colored">solution</span>
-      paragraph_1: Notre équipe fonde sa valeur ajoutée sur la quête perpétuelle de <span class="colored">nouvelles connaissances</span>. Ainsi, les partager une fois maitrisées est un véritable plaisir qui permet de surcroît à nos consultants de varier le contenu de leurs missions et d’ajouter une branche <span class="colored">pédagogique</span> à leur background. Nous proposons des plans de formation 'standards' mais pouvons également répondre à des <span class="colored">besoins plus spécifiques</span> sur simple demande.
+      paragraph_1: Notre équipe fonde sa valeur ajoutée sur la quête perpétuelle de <span class="colored">nouvelles connaissances</span>. Ainsi, les partager est un véritable plaisir qui permet, de surcroît, à nos consultants de varier leurs missions et d'acquérir des compétences <span class="colored">pédagogiques</span>.
+      paragraph_2: Confiez-nous <span class="colored">l'animation d'une session ou la conception d'une formation</span>. PHP, Symfony, Docker et Git n'ont plus beaucoup de secrets pour nous.
+      paragraph_3: <i>Nous ne sommes pas un organisme de formation.</i>
