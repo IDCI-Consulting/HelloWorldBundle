@@ -35,4 +35,12 @@ class PageController extends AbstractController
     {
         return $this->render('page/offers.html.twig');
     }
+
+    /**
+     * @Route("/courses", methods={"GET"}, name="courses")
+     */
+    public function courses(Request $request): Response
+    {
+        return $this->render('page/courses.html.twig');
+    }
 }

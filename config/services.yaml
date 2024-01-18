@@ -30,10 +30,6 @@ services:
     App\Controller\BlogController:
         arguments:
             $blogPostsFilePath: '%kernel.project_dir%/src/Resources/blog/posts.json'
-    
-    App\Controller\CoursesController:
-        arguments:
-            $coursesDirectoryPath: '%kernel.project_dir%/src/Resources/courses/'
 
     App\Controller\TeamController:
         arguments:
