@@ -1,10 +1,10 @@
 <section class="section-container section-container-90 section-container-primary">
     <section class="section-presentation section-word-cloud">
         <h2 class="section-presentation-title idci-title-primary">{{ title }} :</h2>
-        <div class="word-cloud">
+        <ul class="section-word-cloud-list">
             {% for element in elements %}
-                <div class="word{% if loop.index is divisible by(3.5) %} word-blue{% endif %}{% if loop.index is divisible by(5.5) %} word-green{% endif %}{% if loop.index is divisible by(5) %} word-big{% endif %}{% if loop.index is divisible by(7) %} word-small{% endif %}">{{ element }}</div>
+                <li class="section-word-cloud-list-item{% if loop.index is divisible by(3.5) %} section-word-cloud-list-item-blue{% endif %}{% if loop.index is divisible by(5.5) %} section-word-cloud-list-item-green{% endif %}{% if loop.index is divisible by(5) %} section-word-cloud-list-item-big{% endif %}{% if loop.index is divisible by(7) %} section-word-cloud-list-item-small{% endif %}">{{ element }}</li>
             {% endfor %}
-        </div>
+        </ul>
     </section>
 </section>
