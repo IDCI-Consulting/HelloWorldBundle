@@ -1,6 +1,7 @@
 [
     {
         "id": "idci-10-years",
+        "available_languages": ["fr"],
         "name": {
             "fr": "10 ans d'IDCI",
             "en": "IDCI 10 years"
@@ -16,6 +17,7 @@
     },
     {
         "id": "step-bundle-introduction",
+        "available_languages": ["fr", "en"],
         "name": {
             "fr": "Introduction à IDCIStepBundle",
             "en": "Introduction to IDCIStepBundle"
@@ -31,6 +33,7 @@
     },
     {
         "id": "new-year-2017",
+        "available_languages": ["fr"],
         "name": {
             "fr": "Nos voeux 2017",
             "en": "Our wishes 2017"

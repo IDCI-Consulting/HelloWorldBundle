@@ -29,6 +29,10 @@
 }
 
 .carousel-post {
+  @include until($tablet) {
+    width: 100%;
+  }
+
   .carousel-post-header {
     display: flex;
 
@@ -75,6 +79,7 @@
 
     @include until($tablet) {
       font-size: $idci-font-small;
+      height: auto;
     }
   }
 }
