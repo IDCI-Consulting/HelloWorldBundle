@@ -1,6 +1,5 @@
 offers:
   section_1:
-    title: Our service offers
     box_1:
       title: 'You are <br/><span class="colored">a company</span> (SME/Group)<br/> and you want to :'
       description:    <li>Be advised on <span class="colored">technological choices</span> and on <span class="colored">your future web application conception</span></li>
@@ -33,16 +32,16 @@ offers:
       description: Assure yourself a collaboration and a support until you totally master your project
 
   section_4:
-    title: 'This organization is the promise of a real partnership offering benefits to both sides :'
+    title: 'Our offers of services'
     box_1:
-      title: <span class="colored">For you</span>
-      description:  '<li>Commission an IDCI Consulting consultant and <span class="colored">benefit from a multi-skills network</span></li>
-                    <li><span class="colored">Benefit from technical ways and extra material</span> (servers, sites, communication.)</li>
-                    <li><span class="colored">Insure yourself a backup</span> in emergency cases</li>
-                    <li><span class="colored">Optimize moving costs</span> by realizing all, or just a part, of the commission in our sites, on permanent communication with the client</li>
-                    <li>Get a second interlocutor in charge of the relation and the <span class="colored">satisfaction of the client</span></li>'
+      title: <span class="colored">Trust IDCI</span>
+      description:  <li>Our consultants aren't working alone. Well surrounded, they provide <span class="colored">faithful to customer's expectations</span> and to web development standards results.</li>
+                    <li>Our organisation assure you a <span class="colored">continuous follow-up</span> of your projects, even in the absence of your regular consultant.</li>
+                    <li>We own our own premises, equiped with a network, computers, a server. So, we are <span class="colored">self-sufficient</span>.</li>
+                    <li>In case of need, you can benefit of a <span class="colored">secondary interlocutor</span>.</li>
     box_2:
-      title: <span class="colored">For us</span>
-      description:  <li><span class="colored">Mutualize</span> the skills</li>
-                    <li><span class="colored">Maintain and evolve knowledges</span> of each members</li>
-                    <li><span class="colored">Work following standards</span> established by the community and our team</li>
+      title: <span class="colored">Multiply your added value</span>
+      description:  <li>When you collaborate with one of our consultants, he brings you the <span class="colored">tecnic support</span> of all our team to supplement his delivery to you.</li>
+                    <li>Our teamwork offers you a mutualisation of <span class="colored">skills</span> and <span class="colored">flexibility</span>.</li>
+                    <li>Our staff can <span class="colored">remotly work</span> instead of going to your facility.</li>
+                    <li>The customer satisfaction and the <span class="colored">quality</span> control are assured by another of our experts.</li>

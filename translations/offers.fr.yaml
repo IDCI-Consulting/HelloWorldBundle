@@ -8,7 +8,7 @@ offers:
                       <li>Former vos <span class="colored">collaborateurs</span></li>
                       <li><span class="colored">Confier votre projet</span> de mise en œuvre et rester concentré sur votre cœur de métier</li>
     box_2:
-      title: 'Vous êtes <br/><span class="colored">une SSI</span><br/> et vous souhaitez :'
+      title: 'Vous êtes <br/><span class="colored">une SN</span><br/> et vous souhaitez :'
       description:    <li><span class="colored">Renforcer vos ressources</span> dans le cadre d’un projet</li>
                       <li><span class="colored">Déléguer ponctuellement un expert</span> pour aider votre client à résoudre une problématique technique</li>
                       <li><span class="colored">Sous-traiter tout ou partie d’un contrat de services</span> chez un de vos clients</li>
@@ -34,16 +34,16 @@ offers:
       description: Vous assurer une collaboration et un support jusqu’à la totale maîtrise de votre projet
 
   section_4:
-    title: 'Cette organisation est la promesse d’un véritable partenariat offrant des avantages pour chaque partie :'
+    title: 'Nos offres de services'
     box_1:
-      title: <span class="colored">Pour vous</span>
-      description:  '<li>Mandater 1 consultant IDCI consulting et <span class="colored">bénéficier d’un réseau multi-compétence</span></li>
-                    <li><span class="colored">Bénéficier de moyens techniques et matériels supplémentaires</span> (serveurs, locaux, communication.)</li>
-                    <li><span class="colored">S’assurer d’un backup</span> en cas d’urgence</li>
-                    <li><span class="colored">D’optimiser les coûts de déplacement</span> en faisant réaliser tout ou partie du mandat dans nos locaux en relation permanente avec le client</li>
-                    <li>Avoir un 2e interlocuteur en charge de la relation et de la <span class="colored">satisfaction client</span></li>'
+      title: <span class="colored">Faîtes confiance à IDCI</span>
+      description:  <li>Nos consultants ne travaillent pas seuls. Bien entourés, ils fournissent des résultats <span class="colored">conformes aux attentes client</span> et aux normes du développement web.</li>
+                    <li>Notre organisation vous assure un <span class="colored">suivi continu</span> de vos projets, même en l'absence de votre consultant attitré.</li>
+                    <li>Nous possédons nos propres locaux, équipés d'un réseau, d'ordinateurs, d'un serveur. Nous sommes donc <span class="colored">autonomes</span>.</li>
+                    <li>En cas de besoin, vous pouvez bénéficier d'<span class="colored">un second interlocuteur</span>.</li>
     box_2:
-      title: <span class="colored">Pour nous</span>
-      description:  <li><span class="colored">Mutualiser</span> les compétences</li>
-                    <li><span class="colored">Maintenir et faire évoluer les connaissances</span> de chacun</li>
-                    <li><span class="colored">Travailler en suivant des standards</span> suivis par la communauté et par notre équipe</li>
+      title: <span class="colored">Multipliez votre valeur ajoutée</span>
+      description:  <li>Lorsque vous collaborez avec l'un de nos consultants, il vous apporte le <span class="colored">soutien technique</span> de toute notre équipe afin d'enrichir sa prestation auprès de vous.</li>
+                    <li>Notre travail d'équipe vous offre une mutualisation de <span class="colored">compétences</span> et une <span class="colored">flexibilité</span>.</li>
+                    <li>Nos collaborateurs peuvent <span class="colored">travailler à distance</span> plutôt que dans votre structure.</li>
+                    <li>La satisfaction client et le contrôle <span class="colored">qualité</span> sont assurés par un autre de nos experts.</li>
