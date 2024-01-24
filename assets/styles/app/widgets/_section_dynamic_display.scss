@@ -1,4 +1,8 @@
 .section-dynamic-display {
+    @include until ($tablet){
+        width: 100%;
+    }
+
     .section-dynamic-display-title {
         color: $idci-color-dark-grey;
         font-size: $idci-font-2-5x;

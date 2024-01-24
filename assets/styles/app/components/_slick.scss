@@ -4,5 +4,22 @@
 .carousel-single-item {
     .columns {
         display: flex !important;
+
+        @include until($tablet) {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .columns.is-mobile > .column.is-3 {
+        @include until($tablet) {
+            width: 6rem;
+        }
+    }
+
+    .columns.is-mobile > .column.is-6 {
+        @include until($tablet) {
+            width: 100%;
+        }
     }
 }

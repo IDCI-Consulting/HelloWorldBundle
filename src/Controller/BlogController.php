@@ -46,6 +46,14 @@ class BlogController extends AbstractController
      */
     public function post(Request $request, String $slug, string $_locale): Response
     {
+        $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
+
+        foreach ($posts as $post) {
+            if ($post['id'] == $slug && !in_array($_locale, $post['available_languages'])) {
+                $_locale = $post['available_languages'][0];
+            }
+        }
+
         $post = $this->renderView(sprintf('blog/%s/%s.md.twig', $_locale, $slug));
 
         return $this->render('blog/show.html.twig', [
