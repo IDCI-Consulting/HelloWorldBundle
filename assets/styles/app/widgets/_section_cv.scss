@@ -39,7 +39,7 @@
     }
 
     .section-cv-banner {
-        border: 2px solid $idci-color-light-grey;
+        border: 2px solid $idci-color-whitesmoke;
         padding: 1rem;
 
         &.section-cv-banner-primary {
@@ -56,9 +56,12 @@
         }
 
         .section-cv-banner-subtitle {
-            color: $idci-color-green;
-            font-style: italic;
+            color: $idci-color-blue;
             margin-top: 2rem;
+        }
+
+        .section-cv-banner-date {
+            font-size: $idci-font-large;
         }
 
         .section-cv-banner-table {
@@ -109,6 +112,44 @@
             margin-left: 2rem;
             font-size: $idci-font-medium;
             font-weight: bold;
+        }
+    }
+
+    .section-cv-double {
+        display: flex;
+
+        .section-cv-double-main {
+            width: 100%;
+        }
+
+        .section-cv-double-aside {
+            width: 50%;
+
+            table {
+                margin-top: 2rem;
+                width: 100%;
+
+                thead {
+                    text-align: center;
+
+                    tr {
+                        th {
+                            color: $idci-color-blue;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        font-size: $idci-font-large;
+
+                        th, td {
+                            padding: 0.2rem;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
         }
     }
 }

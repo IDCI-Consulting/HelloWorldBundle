@@ -114,7 +114,7 @@
             "startDate": "2020-02-01T00:00:00Z",
             "endDate": "",
             "description": {
-                "fr": "Développement d'un site de vente en ligne de livre, écrivain, éditeur",
+                "fr": "Développement d'un site de vente en ligne de livres, écrivain, éditeur",
                 "en": "Development of a website for book selling, writer, editor"
             }
         }
@@ -135,7 +135,7 @@
                 "fr": "Tourisme",
                 "en": "Tourism"
             },
-            "certificate": "BTS Tourime",
+            "certificate": "BTS Tourisme",
             "location": "Nîmes",
             "startDate": "2017-09-21T00:00:00Z",
             "endDate": "2019-06-30T00:00:00Z"
@@ -157,6 +157,7 @@
                     "keywords": [
                         "HTML5",
                         "CSS3",
+                        "Javascript",
                         "PHP",
                         "Bash",
                         "SQL"
@@ -237,8 +238,8 @@
         },
         {
             "name": {
-                "fr": "langues",
-                "en": "languages"
+                "fr": "Langues",
+                "en": "Languages"
             },
             "skills": [
                 {
