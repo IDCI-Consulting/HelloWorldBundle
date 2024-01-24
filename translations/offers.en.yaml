@@ -1,5 +1,5 @@
 offers:
-  section_1:
+  call_to_action:
     box_1:
       title: 'You are <br/><span class="colored">a company</span> (SME/Group)<br/> and you want to :'
       description:    <li>Be advised on <span class="colored">technological choices</span> and on <span class="colored">your future web application conception</span></li>
@@ -14,14 +14,14 @@ offers:
                       <li><span class="colored">Subcontract an entire services contract</span> from your client, or just a part of it.</li>
                       <li><span class="colored">Train your collaborators, or your client\s ones</span>, on the new technologies.</li>
 
-  section_2:
+  company_concept:
     title: An innovantive answer
     description:  'IDCI consulting (LLC), created in 2007, is a group of experts on the web technologies
                   that permanantly works on differnt missions while keeping the possibility to communicate with each other and share their knowledges. 
                   Individually or as a team, we are able to bring a certain value for your project at every step of its life cycle, 
                   without commitment from your side and on a minimal duration of collaboration. We exclusively intervene with IT management contracts.'
 
-  section_3:
+  option_list:
     title: Depending of the task and expertise of your teams
     subtitle: you can choose to...
     box_1: 
@@ -31,7 +31,7 @@ offers:
     box_3:
       description: Assure yourself a collaboration and a support until you totally master your project
 
-  section_4:
+  company_assets:
     title: 'Our offers of services'
     box_1:
       title: <span class="colored">Trust IDCI</span>
