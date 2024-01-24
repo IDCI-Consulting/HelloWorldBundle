@@ -7,9 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/{_locale}/blog", requirements={"_locale": "fr|en"}, name="blog_")
- */
+#[Route('/{_locale}/blog', requirements: ['_locale' => 'fr|en'], name: 'blog_')]
 class BlogController extends AbstractController
 {
     private string $blogPostsFilePath;
@@ -19,9 +17,7 @@ class BlogController extends AbstractController
         $this->blogPostsFilePath = $blogPostsFilePath;
     }
 
-    /**
-     * @Route("/", methods={"GET"}, name="list")
-     */
+    #[Route('/', methods: ['GET'], name: 'list')]
     public function list(Request $request): Response
     {
         $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
@@ -41,9 +37,7 @@ class BlogController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/post/{slug}", methods={"GET"}, name="post")
-     */
+    #[Route('/post/{slug}', methods: ['GET'], name:'post')]
     public function post(Request $request, String $slug, string $_locale): Response
     {
         $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);

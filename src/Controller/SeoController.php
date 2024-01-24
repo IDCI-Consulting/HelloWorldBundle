@@ -8,9 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/", name="seo_")
- */
+#[Route('/', name:'seo_')]
 class SeoController extends AbstractController
 {
     private string $blogPostsFilePath;
@@ -24,9 +22,7 @@ class SeoController extends AbstractController
         $this->cvDirectoryPath = $cvDirectoryPath;
     }
 
-    /**
-     * @Route("/sitemap.xml", methods={"GET"}, name="sitemap")
-     */
+    #[Route('/sitemap.xml', methods: ['GET'], name: 'sitemap')]
     public function sitemap(Request $request): Response
     {
         $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
@@ -61,9 +57,7 @@ class SeoController extends AbstractController
         return $response;
     }
 
-    /**
-     * @Route("/robots.txt", methods={"GET"}, name="robots")
-     */
+    #[Route('/robots.txt', methods: ['GET'], name:'robots')]
     public function robots(Request $request): Response
     {
         $response = $this->render('seo/robots.txt.twig');

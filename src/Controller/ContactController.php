@@ -11,9 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/{_locale}/contact", requirements={"_locale": "fr|en"}, name="contact_")
- */
+#[Route('/{_locale}/contact', name:'contact_')]
 class ContactController extends AbstractController
 {
     private EventDispatcherInterface $dispatcher;
@@ -23,9 +21,7 @@ class ContactController extends AbstractController
         $this->dispatcher = $dispatcher;
     }
 
-    /**
-     * @Route("/", methods={"GET", "POST"}, name="index")
-     */
+    #[Route('/', methods: ['GET', 'POST'], name:'index')]
     public function index(Request $request): Response
     {
         $form = $this->createForm(ContactType::class);

@@ -110,7 +110,7 @@ class ContactType extends AbstractType
         ;
     }
 
-    public function setDefaultOptions(OptionsResolver $resolver)
+    public function setDefaultOptions(OptionsResolver $resolver): void
     {    
         $resolver->setDefaults([
             'translation_domain' => 'contact'
