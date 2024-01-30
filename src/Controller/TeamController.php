@@ -58,11 +58,18 @@ class TeamController extends AbstractController
             ]);
         }
 
-        $response = $this->httpClient->request('POST', '/', [
+        if ((bool)$request->query->get('debug', false)) {
+            return $this->render('team/pdf.html.twig', [
+                'data' => $cv,
+            ]);
+        }
+        
+        $response = $this->httpClient->request('POST', '/1/pdf', [
             'body' => json_encode([
-                'contents' => base64_encode($this->renderView('team/pdf.html.twig', [
+                'html' => $this->renderView('team/pdf.html.twig', [
                     'data' => $cv,
-                ])),
+                ]),
+                'export' => ['format' => 'A4'],
             ]),
         ]);
 

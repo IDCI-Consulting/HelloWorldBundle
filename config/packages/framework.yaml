@@ -23,8 +23,8 @@ framework:
         scoped_clients:
             pdf_generator.client:
                 http_version: '1.0'
-                base_uri: 'http://wkhtmltopdf:5555'
-                auth_basic: '%env(string:WKHTMLTOPDF_LOGIN)%:%env(string:WKHTMLTOPDF_PASSWORD)%'
+                base_uri: 'http://pdf-generator:2305'
+                # auth_basic: '%env(string:WKHTMLTOPDF_LOGIN)%:%env(string:WKHTMLTOPDF_PASSWORD)%'
                 headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', 'User-Agent': 'Symfony idci-website HttpClient/Curl' }
 
 when@test:
