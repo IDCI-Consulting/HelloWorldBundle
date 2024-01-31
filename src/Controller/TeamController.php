@@ -69,7 +69,15 @@ class TeamController extends AbstractController
                 'html' => $this->renderView('team/pdf.html.twig', [
                     'data' => $cv,
                 ]),
-                'export' => ['format' => 'A4'],
+                'export' => [
+                    'format' => 'A4',
+                    'margin' => [
+                        'bottom' => '20px',
+                        'left' => '20px',
+                        'right' => '20px',
+                        'top' => '20px'
+                    ]
+                ],
             ]),
         ]);
 

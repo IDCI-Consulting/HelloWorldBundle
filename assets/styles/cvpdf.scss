@@ -1,0 +1,209 @@
+$idci-color-black: #000000;
+$idci-color-light-black: #212121;
+$idci-color-grey: #BBB;
+$idci-color-light-grey: #EEE;
+$idci-color-blue: #008CBA;
+$idci-color-light-blue: #dff0fd;
+$idci-color-green: #1E9847;
+$idci-color-whitesmoke: #F7F7F7;
+
+$idci-primary-font: sans-serif;
+
+$idci-font-small: 0.6rem;
+$idci-font-medium: 0.8rem;
+$idci-font-large: 1rem;
+$idci-font-larger: 1.2rem;
+$idci-font-2x: 2rem;
+
+html {
+    body {
+        background-color: $idci-color-whitesmoke;
+        color: $idci-color-black;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+* {
+    font-family: $idci-primary-font;
+    list-style-type: none;
+
+    &.idci-title-primary {
+        color: $idci-color-blue;
+        text-align: center;
+        font-size: $idci-font-larger;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-title-secondary {
+        color: $idci-color-green;
+        text-align: center;
+        font-size: $idci-font-larger;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-subtitle-primary {
+        color: $idci-color-light-black;
+        text-align: center;
+        font-size: $idci-font-larger;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-subtitle-secondary {
+        color: $idci-color-green;
+        text-align: center;
+        font-size: $idci-font-larger;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+}
+
+.section-cv {
+    margin: auto;
+
+    .section-cv-header {
+        margin: 0;
+    }
+
+    .section-cv-title {
+        font-weight: bold;
+        letter-spacing: initial;
+    }
+
+    .section-cv-label {
+        font-weight: bold;
+    }
+
+    .section-cv-links {
+        display: none;
+    }
+
+    .section-cv-button {
+        margin-top: 2rem;
+        width: fit-content;
+    }
+
+    .section-cv-banner {
+        border: 2px solid $idci-color-whitesmoke;
+        padding: 0 1rem 1rem 1rem;
+
+        &.section-cv-banner-primary {
+            background-color: $idci-color-light-grey;
+        }
+
+        &.section-cv-banner-secondary {
+            background-color: $idci-color-whitesmoke;
+        }
+        
+        .section-cv-banner-title {
+            letter-spacing: initial;
+            text-decoration: underline;
+        }
+
+        .section-cv-banner-subtitle {
+            color: $idci-color-blue;
+            margin-top: 2rem;
+        }
+
+        .section-cv-banner-date {
+            font-size: $idci-font-large;
+        }
+
+        .section-cv-banner-table {
+            margin-top: 2rem;
+
+            tbody {
+                tr {
+                    td {
+                        color: $idci-color-blue;
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+
+        .section-cv-banner-education-date {
+            color: $idci-color-green;
+            font-style: italic;
+            margin-right: 1rem;
+        }
+
+        .section-cv-banner-skills-title {
+            color: $idci-color-grey;
+            font-size: $idci-font-larger;
+            font-style: normal;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .section-cv-banner-skills {
+            li {
+                display: flex;
+                margin-top: 0.5rem;
+                width: 100%;
+
+                .section-cv-banner-skill-title {
+                    font-weight: bold;
+                    width: 50%;
+                }
+
+                .section-cv-banner-skill-details {
+                    width: 50%;
+                }
+            }
+        }
+
+        .section-cv-banner-highlights {
+            margin-left: 2rem;
+            font-size: $idci-font-medium;
+            font-weight: bold;
+        }
+    }
+
+    .section-cv-double {
+        display: flex;
+
+        .section-cv-double-main {
+            width: 100%;
+        }
+
+        .section-cv-double-aside {
+            width: 50%;
+
+            table {
+                margin-top: 2rem;
+                width: 100%;
+
+                thead {
+                    text-align: center;
+
+                    tr {
+                        th {
+                            color: $idci-color-blue;
+                        }
+                    }
+                }
+
+                tbody {
+                    vertical-align: top;
+
+                    tr {
+                        font-size: $idci-font-medium;
+
+                        th, td {
+                            padding: 0.2rem;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+
+            .section-cv-banner-subtitle {
+                margin-top: 0;
+            }
+        }
+    }
+}

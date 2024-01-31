@@ -768,18 +768,5 @@
             ]
         }
     ],
-    "hobbies": {
-        "fr": [
-            {
-                "name": "",
-                "description": ""
-            }
-        ],
-        "en": [
-            {
-                "name": "",
-                "description": ""
-            }
-        ]
-    }
+    "hobbies": {}
 }
