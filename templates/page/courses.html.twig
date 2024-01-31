@@ -35,12 +35,6 @@
 
     <div class="transparent-box even"></div>
 
-    {% set tags = [
-        'SASS', 'PHP', 'HTML', 'CSS', 'Docker', 'courses.key_words.project_management'|trans, 'Git', 'courses.key_words.oop'|trans,
-        'courses.key_words.web_app'|trans, 'Symfony', 'SQL', 'GitLab', 'Versionning', 'courses.key_words.mvc'|trans, 'Fullstack', 'Back-End', 'Front-End',
-        'courses.key_words.web_dev'|trans, 'Responsive Design', 'CI/CD', 'Microservices'
-    ] %}
-
     {% include 'widgets/_section_tagcloud.html.twig' with {
         'title': 'courses.key_words.title'|trans,
         'tags': tags
