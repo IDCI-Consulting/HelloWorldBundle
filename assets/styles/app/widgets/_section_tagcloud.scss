@@ -1,10 +1,10 @@
-.section-word-cloud {
+.section-tagcloud {
     align-items: center;
     display: flex;
     flex-direction: column;
     row-gap: 4rem;
 
-    .section-word-cloud-list {
+    .section-tagcloud-list {
         align-items: center;
         column-gap: 1rem;
         display: flex;
@@ -17,7 +17,7 @@
             width: 85%;
         }
 
-        .section-word-cloud-list-item {
+        .section-tagcloud-list-item {
             font-size: $idci-font-1-5x;
             font-weight: bold;
 
@@ -25,7 +25,7 @@
                 font-size: $idci-font-large;
             }
 
-            &.section-word-cloud-list-item-big {
+            &.section-tagcloud-list-item-big {
                 font-size: $idci-font-2x;
 
                 @include until($tablet) {
@@ -33,7 +33,7 @@
                 }
             }
 
-            &.section-word-cloud-list-item-small {
+            &.section-tagcloud-list-item-small {
                 font-size: $idci-font-large;
 
                 @include until($tablet) {
@@ -41,11 +41,11 @@
                 }
             }
 
-            &.section-word-cloud-list-item-blue {
+            &.section-tagcloud-list-item-blue {
                 color: $idci-color-blue;
             }
 
-            &.section-word-cloud-list-item-green {
+            &.section-tagcloud-list-item-green {
                 color: $idci-color-green
             }
         }

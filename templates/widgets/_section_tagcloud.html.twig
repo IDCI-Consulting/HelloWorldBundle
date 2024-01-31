@@ -1,0 +1,10 @@
+<section class="section-container section-container-90 section-container-primary">
+    <section class="section-presentation section-tagcloud">
+        <h2 class="section-presentation-title idci-title-primary">{{ title }} :</h2>
+        <ul class="section-tagcloud-list">
+            {% for tag in tags %}
+                <li class="section-tagcloud-list-item{% if loop.index is divisible by(3.5) %} section-tagcloud-list-item-blue{% endif %}{% if loop.index is divisible by(5.5) %} section-tagcloud-list-item-green{% endif %}{% if loop.index is divisible by(5) %} section-tagcloud-list-item-big{% endif %}{% if loop.index is divisible by(7) %} section-tagcloud-list-item-small{% endif %}">{{ tag }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+</section>

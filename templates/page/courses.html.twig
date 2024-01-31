@@ -13,19 +13,19 @@
         'page_title': ('courses.introduction.title')|trans,
         'boxes': [
             {
-                'title': ('courses.introduction.part_1.title')|trans,
+                'title': ('courses.introduction.problematics.title')|trans,
                 'paragraphs': [
-                    ('courses.introduction.part_1.paragraph_1')|trans,
-                    ('courses.introduction.part_1.paragraph_2')|trans,
-                    ('courses.introduction.part_1.paragraph_3')|trans
+                    ('courses.introduction.problematics.paragraph_1')|trans,
+                    ('courses.introduction.problematics.paragraph_2')|trans,
+                    ('courses.introduction.problematics.paragraph_3')|trans
                 ]
             },
             {
-                'title': ('courses.introduction.part_2.title')|trans,
+                'title': ('courses.introduction.solutions.title')|trans,
                 'paragraphs': [
-                    ('courses.introduction.part_2.paragraph_1')|trans,
-                    ('courses.introduction.part_2.paragraph_2')|trans,
-                    ('courses.introduction.part_2.paragraph_3')|trans
+                    ('courses.introduction.solutions.paragraph_1')|trans,
+                    ('courses.introduction.solutions.paragraph_2')|trans,
+                    ('courses.introduction.solutions.paragraph_3')|trans
                 ],
                 'color': 'secondary'
             },
@@ -35,14 +35,14 @@
 
     <div class="transparent-box even"></div>
 
-    {% set key_words = [
+    {% set tags = [
         'SASS', 'PHP', 'HTML', 'CSS', 'Docker', 'courses.key_words.project_management'|trans, 'Git', 'courses.key_words.oop'|trans,
         'courses.key_words.web_app'|trans, 'Symfony', 'SQL', 'GitLab', 'Versionning', 'courses.key_words.mvc'|trans, 'Fullstack', 'Back-End', 'Front-End',
         'courses.key_words.web_dev'|trans, 'Responsive Design', 'CI/CD', 'Microservices'
     ] %}
 
-    {% include 'widgets/_section_word_cloud.html.twig' with {
+    {% include 'widgets/_section_tagcloud.html.twig' with {
         'title': 'courses.key_words.title'|trans,
-        'elements': key_words
+        'tags': tags
     } %}
 {% endblock %}
