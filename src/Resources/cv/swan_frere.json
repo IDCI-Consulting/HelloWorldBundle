@@ -134,9 +134,13 @@
             "website": "",
             "startDate": "2017-09-01T00:00:00Z",
             "endDate": "2020-06-31T00:00:00Z",
-            "description": {
-                "fr": "Arbitre bénévole pour les matchs du club de handball de Boug-en-Bresse",
-                "en": "Volunteer referee for the matches of the Boug-en-Bresse handball club"
+            "tasks": {
+                "fr": [
+                    "Arbitre bénévole pour les matchs du club de handball de Boug-en-Bresse"
+                ],
+                "en": [
+                    "Volunteer referee for the matches of the Boug-en-Bresse handball club"
+                ]
             }
         },
         {
@@ -151,9 +155,13 @@
             "website": "",
             "startDate": "2020-09-01T00:00:00Z",
             "endDate": "2021-06-31T00:00:00Z",
-            "description": {
-                "fr": "Cours particuliers d'allemand à des élèves de lycée",
-                "en": "Private German lessons for high school students"
+            "tasks": {
+                "fr": [
+                    "Cours particuliers d'allemand à des élèves de lycée"
+                ],
+                "en": [
+                    "Private German lessons for high school students"
+                ]
             }
         }
     ],

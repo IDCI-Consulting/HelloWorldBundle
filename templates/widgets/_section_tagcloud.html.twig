@@ -1,0 +1,10 @@
+<section class="section-container section-container-90 section-container-primary">
+    <section class="section-presentation section-tagcloud">
+        <h2 class="section-presentation-title idci-title-primary">{{ title }} :</h2>
+        <ul class="section-tagcloud-list">
+            {% for tag in tags %}
+                <li class="section-tagcloud-list-item section-tagcloud-list-item-{{ tag.color }} section-tagcloud-list-item-{{ tag.size }}">{{ tag.name }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+</section>

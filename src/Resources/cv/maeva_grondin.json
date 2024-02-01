@@ -22,6 +22,10 @@
             {
                 "name": "linkedin",
                 "url": "https://fr.linkedin.com/in/ma%C3%ABva-grondin-532260191"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/ScytheOwens?tab=repositories"
             }
         ]
     },
@@ -109,9 +113,17 @@
             "website": "",
             "startDate": "2020-02-01T00:00:00Z",
             "endDate": "",
-            "description": {
-                "fr": "Développement d'un site de vente en ligne de livre, écrivain, éditeur",
-                "en": "Development of a website for book selling, writer, editor"
+            "tasks": {
+                "fr": [
+                    "Développement d'un site de vente en ligne de livres",
+                    "Ecriture de roman",
+                    "Travail d'édition (recherche d'imprimeur, d'illustrateur, correction, communication)"
+                ],
+                "en": [
+                    "Development of a website for book selling",
+                    "Book writing",
+                    "Editor work (printer and illustrator search, correction, communication)"
+                ]
             }
         }
     ],
@@ -131,7 +143,7 @@
                 "fr": "Tourisme",
                 "en": "Tourism"
             },
-            "certificate": "BTS Tourime",
+            "certificate": "BTS Tourisme",
             "location": "Nîmes",
             "startDate": "2017-09-21T00:00:00Z",
             "endDate": "2019-06-30T00:00:00Z"
@@ -153,6 +165,7 @@
                     "keywords": [
                         "HTML5",
                         "CSS3",
+                        "Javascript",
                         "PHP",
                         "Bash",
                         "SQL"
@@ -233,8 +246,8 @@
         },
         {
             "name": {
-                "fr": "langues",
-                "en": "languages"
+                "fr": "Langues",
+                "en": "Languages"
             },
             "skills": [
                 {

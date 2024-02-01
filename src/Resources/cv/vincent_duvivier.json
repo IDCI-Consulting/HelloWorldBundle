@@ -105,9 +105,13 @@
             "website": "",
             "startDate": "2020-09-07T00:00:00Z",
             "endDate": "2021-05-07T00:00:00Z",
-            "description": {
-                "fr": "Aide aux devoirs pour enfant élèves en ZEP",
-                "en": "Homework help for children in ZEP"
+            "tasks": {
+                "fr": [
+                    "Aide aux devoirs pour enfant élèves en ZEP"
+                ],
+                "en": [
+                    "Homework help for children in ZEP"
+                ]
             }
         }
         

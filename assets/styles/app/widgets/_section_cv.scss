@@ -1,4 +1,16 @@
 .section-cv {
+    font-size: $idci-font-larger;
+
+    @include until($tablet) {
+        width: 100%;
+    }
+
+    .section-cv-header {
+        column-gap: 3rem;
+        justify-content: space-between;
+        margin: 0;
+    }
+
     .section-cv-title {
         font-weight: bold;
         letter-spacing: initial;
@@ -7,10 +19,14 @@
 
     .section-cv-label {
         font-weight: bold;
+        padding: 0.75rem 0;
+        width: auto;
     }
 
     .section-cv-links {
+        padding: 0.75rem 0;
         text-align: right;
+        width: auto;
 
         i{
             color: $idci-color-black;
@@ -23,7 +39,7 @@
     }
 
     .section-cv-banner {
-        border: 2px solid $idci-color-light-grey;
+        border: 2px solid $idci-color-whitesmoke;
         padding: 1rem;
 
         &.section-cv-banner-primary {
@@ -40,20 +56,24 @@
         }
 
         .section-cv-banner-subtitle {
-            color: $idci-color-green;
-            font-style: italic;
+            color: $idci-color-blue;
             margin-top: 2rem;
         }
 
-        .section-cv-banner-list-item {
-            display: flex;
-            position: relative;
+        .section-cv-banner-date {
+            font-size: $idci-font-large;
+        }
 
-            p {
-                color: $idci-color-blue;
-                left: 25%;
-                position: absolute;
-                width: 50%;
+        .section-cv-banner-table {
+            margin-top: 2rem;
+
+            tbody {
+                tr {
+                    td {
+                        color: $idci-color-blue;
+                        padding-left: 2rem;
+                    }
+                }
             }
         }
 
@@ -91,6 +111,45 @@
         .section-cv-banner-highlights {
             margin-left: 2rem;
             font-size: $idci-font-medium;
+            font-weight: bold;
+        }
+    }
+
+    .section-cv-double {
+        display: flex;
+
+        .section-cv-double-main {
+            width: 100%;
+        }
+
+        .section-cv-double-aside {
+            width: 50%;
+
+            table {
+                margin-top: 2rem;
+                width: 100%;
+
+                thead {
+                    text-align: center;
+
+                    tr {
+                        th {
+                            color: $idci-color-blue;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        font-size: $idci-font-large;
+
+                        th, td {
+                            padding: 0.2rem;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
