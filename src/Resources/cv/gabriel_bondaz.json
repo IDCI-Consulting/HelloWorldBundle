@@ -424,9 +424,13 @@
             "website": "http://www.solidarite-sida.org/",
             "startDate": "2004-07",
             "endDate": "2005-07",
-            "description": {
-                "fr": "Bénévole pour l'association Solidarité Sida et sur le festival Solidays à Paris",
-                "en": "Volonteer for the association during Solidays' festival in Paris"
+            "tasks": {
+                "fr": [
+                    "Bénévole pour l'association Solidarité Sida et sur le festival Solidays à Paris"
+                ],
+                "en": [
+                    "Volonteer for the association during Solidays' festival in Paris"
+                ]
             }
         },
         {
@@ -441,9 +445,9 @@
             "website": "https://etu.univ-lyon1.fr/activites/associations-etudiantes/student-club-association-des-bde-de-l-iut-lyon-1-740690.kjsp",
             "startDate": "2004-09",
             "endDate": "2005-07",
-            "description": {
-                "fr": "",
-                "en": ""
+            "tasks": {
+                "fr": [],
+                "en": []
             }
         },
         {
@@ -458,9 +462,13 @@
             "website": "",
             "startDate": "2003-01",
             "endDate": "",
-            "description": {
-                "fr": "Brevet de Secouriste (AFPS)",
-                "en": "Rescue Certificate"
+            "tasks": {
+                "fr": [
+                    "Brevet de Secouriste (AFPS)"
+                ],
+                "en": [
+                    "Rescue Certificate"
+                ]
             }
         }
     ],

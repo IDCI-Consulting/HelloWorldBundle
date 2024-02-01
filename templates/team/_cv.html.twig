@@ -100,7 +100,13 @@
                                 {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
                             {% endif %}
                         </p>
-                        <p class="section-cv-banner-highlights">{{ personalExperience.description[app.request.locale] }}</p>
+                        {% if personalExperience.tasks[app.request.locale] is defined and personalExperience.tasks[app.request.locale] is not null and personalExperience.tasks[app.request.locale] is not empty %}
+                            <ul class="section-cv-banner-highlights">
+                                {% for task in personalExperience.tasks[app.request.locale] %}
+                                    <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     {% endfor %}
                 </section>
 
