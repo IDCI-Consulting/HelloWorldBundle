@@ -10,31 +10,60 @@
     </video>
 
     {% include 'widgets/_section_choices.html.twig' with {
-        'page_title': ('offers.section_1.title')|trans,
+        'page_title': ('offers.company_assets.title')|trans,
         'boxes': [
             {
-                'title': ('offers.section_1.box_1.title')|trans,
+                'title': ('offers.company_assets.box_1.title')|trans,
                 'paragraphs': [
-                    ('offers.section_1.box_1.description')|trans
+                    ('offers.company_assets.box_1.description')|trans
                 ]
             },
             {
-                'title': ('offers.section_1.box_2.title')|trans,
+                'title': ('offers.company_assets.box_2.title')|trans,
                 'paragraphs': [
-                    ('offers.section_1.box_2.description')|trans
+                    ('offers.company_assets.box_2.description')|trans
                 ],
                 'color': 'secondary'
+            }
+        ]
+    } %}
+
+    <div class="transparent-box even"></div>
+
+    {% include 'widgets/_section_choices.html.twig' with {
+        'title': ('offers.options_list.title')|trans,
+        'subtitle': ('offers.options_list.subtitle')|trans,
+        'boxes': [
+            {
+                'title': '<span class="colored">01</span>',
+                'paragraphs': [
+                    ('offers.options_list.box_1.description')|trans
+                ],
+                'secondary': true
             },
-        ],
-        'contact_button': true
+            {
+                'title': '<span class="colored">02</span>',
+                'paragraphs': [
+                    ('offers.options_list.box_2.description')|trans
+                ],
+                'secondary': true
+            },
+            {
+                'title': '<span class="colored">03</span>',
+                'paragraphs': [
+                    ('offers.options_list.box_3.description')|trans
+                ],
+                'secondary': true
+            }
+        ]
     } %}
 
     <div class="transparent-box"></div>
 
     {% include 'widgets/_section_display_stack.html.twig' with {
-        'title': 'offers.section_2.title'|trans,
+        'title': 'offers.company_concept.title'|trans,
         'paragraphs': [
-            'offers.section_2.description'|trans
+            'offers.company_concept.description'|trans
         ],
         'media': {
             'src': asset('build/images/base/working-on-computer.jpg'),
@@ -45,50 +74,21 @@
     <div class="transparent-box even"></div>
 
     {% include 'widgets/_section_choices.html.twig' with {
-        'title': ('offers.section_3.title')|trans,
-        'subtitle': ('offers.section_3.subtitle')|trans,
         'boxes': [
             {
-                'title': '<span class="colored">01</span>',
+                'title': ('offers.call_to_action.box_1.title')|trans,
                 'paragraphs': [
-                    ('offers.section_3.box_1.description')|trans
-                ],
-                'secondary': true
-            },
-            {
-                'title': '<span class="colored">02</span>',
-                'paragraphs': [
-                    ('offers.section_3.box_2.description')|trans
-                ],
-                'secondary': true
-            },
-            {
-                'title': '<span class="colored">03</span>',
-                'paragraphs': [
-                    ('offers.section_3.box_3.description')|trans
-                ],
-                'secondary': true
-            }
-        ]
-    } %}
-
-    <div class="transparent-box"></div>
-
-    {% include 'widgets/_section_choices.html.twig' with {
-        'title': ('offers.section_4.title')|trans,
-        'boxes': [
-            {
-                'title': 'offers.section_4.box_1.title'|trans,
-                'paragraphs': [
-                    ('offers.section_4.box_1.description')|trans
+                    ('offers.call_to_action.box_1.description')|trans
                 ]
             },
             {
-                'title': 'offers.section_4.box_2.title'|trans,
+                'title': ('offers.call_to_action.box_2.title')|trans,
                 'paragraphs': [
-                    ('offers.section_4.box_2.description')|trans
-                ]
-            }
-        ]
+                    ('offers.call_to_action.box_2.description')|trans
+                ],
+                'color': 'secondary'
+            },
+        ],
+        'contact_button': true
     } %}
 {% endblock %}
