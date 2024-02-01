@@ -21,6 +21,16 @@ html {
         color: $idci-color-black;
         margin: 0;
         padding: 0;
+
+        p {
+            font-size: $idci-font-medium;
+        }
+
+        tbody {
+            th {
+                text-align: right;
+            }
+        }
     }
 }
 
@@ -30,34 +40,34 @@ html {
 
     &.idci-title-primary {
         color: $idci-color-blue;
-        text-align: center;
         font-size: $idci-font-larger;
-        text-transform: uppercase;
         letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
     }
 
     &.idci-title-secondary {
         color: $idci-color-green;
-        text-align: center;
         font-size: $idci-font-larger;
-        text-transform: uppercase;
         letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
     }
 
     &.idci-subtitle-primary {
         color: $idci-color-light-black;
-        text-align: center;
         font-size: $idci-font-larger;
-        text-transform: uppercase;
         letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
     }
 
     &.idci-subtitle-secondary {
         color: $idci-color-green;
-        text-align: center;
         font-size: $idci-font-larger;
-        text-transform: uppercase;
         letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
     }
 }
 
@@ -75,6 +85,7 @@ html {
 
     .section-cv-label {
         font-weight: bold;
+        padding-left: 1rem;
     }
 
     .section-cv-links {
@@ -105,11 +116,14 @@ html {
 
         .section-cv-banner-subtitle {
             color: $idci-color-blue;
-            margin-top: 2rem;
+            font-size: $idci-font-large;
+            margin: 2rem 0 0 0;
         }
 
         .section-cv-banner-date {
-            font-size: $idci-font-large;
+            font-size: $idci-font-medium;
+            margin-top: 0;
+            padding-left: 1rem;
         }
 
         .section-cv-banner-table {
@@ -127,6 +141,7 @@ html {
 
         .section-cv-banner-education-date {
             color: $idci-color-green;
+            font-size: $idci-font-large;
             font-style: italic;
             margin-right: 1rem;
         }
@@ -157,7 +172,6 @@ html {
         }
 
         .section-cv-banner-highlights {
-            margin-left: 2rem;
             font-size: $idci-font-medium;
             font-weight: bold;
         }
