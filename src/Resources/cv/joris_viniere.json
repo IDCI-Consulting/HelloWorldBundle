@@ -159,9 +159,13 @@
             "website": "",
             "startDate": "2017-09-01T00:00:00Z",
             "endDate": "2020-06-31T00:00:00Z",
-            "description": {
-                "fr": "Arbitre bénévole pour les matchs du club de Basket de Feillens",
-                "en": "Volunteer referee for the matches of the Feillens basketball club"
+            "tasks": {
+                "fr": [
+                    "Arbitre bénévole pour les matchs du club de Basket de Feillens"
+                ],
+                "en": [
+                    "Volunteer referee for the matches of the Feillens basketball club"
+                ]
             }
         }
     ],

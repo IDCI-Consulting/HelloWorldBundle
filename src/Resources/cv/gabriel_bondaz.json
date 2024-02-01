@@ -43,13 +43,13 @@
             "tasks": {
                 "fr": [
                     "Création de l'entreprise",
-                    "Conception et maintenance de sites web pour des clients",
+                    "Conception et maintenance de sites web (éditeur, bijouterie-joaillerie, centrale d'achat, hôtel)",
                     "Gestion d'équipe",
                     "Formateur"
                 ],
                 "en": [
                     "Company creation",
-                    "Website conception and maintainance for customers",
+                    "Website conception and maintainance (publisher, jewellery, purchasing organisation, hotel)",
                     "Team management",
                     "Course instructor"
                 ]
@@ -401,11 +401,11 @@
             "tools": [],
             "tasks": {
                 "fr": [
-                    "Refonte du site Internet ([www.lagep.cpe.fr] (http://www.lagep.cpe.fr))",
+                    "Refonte du site Internet (<a href=https://lagepp.univ-lyon1.fr/ target=blank>Laboratoire Lagep</a>)",
                     "Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour"
                 ],
                 "en": [
-                    "Website redesign ([www.lagep.cpe.fr] (http://www.lagep.cpe.fr))",
+                    "Website redesign (<a href=https://lagepp.univ-lyon1.fr/ target=blank>Lagep laboratory</a>)",
                     "Implementing web server under Linux Debian, and creation of update tools"
                 ]
             }
@@ -424,9 +424,13 @@
             "website": "http://www.solidarite-sida.org/",
             "startDate": "2004-07",
             "endDate": "2005-07",
-            "description": {
-                "fr": "Bénévole pour l'association Solidarité Sida et sur le festival Solidays à Paris",
-                "en": "Volonteer for the association during Solidays' festival in Paris"
+            "tasks": {
+                "fr": [
+                    "Bénévole pour l'association Solidarité Sida et sur le festival Solidays à Paris"
+                ],
+                "en": [
+                    "Volonteer for the association during Solidays' festival in Paris"
+                ]
             }
         },
         {
@@ -441,9 +445,9 @@
             "website": "https://etu.univ-lyon1.fr/activites/associations-etudiantes/student-club-association-des-bde-de-l-iut-lyon-1-740690.kjsp",
             "startDate": "2004-09",
             "endDate": "2005-07",
-            "description": {
-                "fr": "",
-                "en": ""
+            "tasks": {
+                "fr": [],
+                "en": []
             }
         },
         {
@@ -458,9 +462,13 @@
             "website": "",
             "startDate": "2003-01",
             "endDate": "",
-            "description": {
-                "fr": "Brevet de Secouriste (AFPS)",
-                "en": "Rescue Certificate"
+            "tasks": {
+                "fr": [
+                    "Brevet de Secouriste (AFPS)"
+                ],
+                "en": [
+                    "Rescue Certificate"
+                ]
             }
         }
     ],
@@ -768,18 +776,5 @@
             ]
         }
     ],
-    "hobbies": {
-        "fr": [
-            {
-                "name": "",
-                "description": ""
-            }
-        ],
-        "en": [
-            {
-                "name": "",
-                "description": ""
-            }
-        ]
-    }
+    "hobbies": {}
 }

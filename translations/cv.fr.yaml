@@ -1,7 +1,8 @@
 cv:
   title: Curriculum Vitae
-  about_me: A propos de moi
+  about_me: À propos de moi
   age: Âge
+  years_old: ans
   email: Email
   phone: Téléphone
   professional_experiences: Expériences professionnelles
@@ -12,3 +13,4 @@ cv:
   since: Depuis
   from: De
   to: à
+  at: à
