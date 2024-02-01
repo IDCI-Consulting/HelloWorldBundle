@@ -23,7 +23,6 @@
         background-color: $idci-color-white;
         font-size: $idci-font-larger;
         margin-top: 2rem;
-        min-height: calc(100% - 5rem);
         padding: 1.5rem;
 
         @include until($desktop) {

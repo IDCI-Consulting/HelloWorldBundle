@@ -15,7 +15,7 @@ services:
       - app
       - redis
       - mailhog
-      - wkhtmltopdf
+      - pdf
 
   nginx:
     image: nginx
@@ -87,27 +87,10 @@ services:
       - traefik_reverse_proxy
       - mailhog
 
-  wkhtmltopdf:
-    image: traumfewo/docker-wkhtmltopdf-aas:latest
-    deploy:
-      labels:
-        - "traefik.enable=true"
-        - "traefik.docker.network=traefik_reverse_proxy"
-        - "traefik.docker.lbswarm=true"
-        - "traefik.http.services.idci-website-wkhtmltopdf.loadbalancer.server.port=5555"
-        - "traefik.http.routers.idci-website-wkhtmltopdf-commander.entryPoints=web"
-        - "traefik.http.routers.idci-website-wkhtmltopdf.rule=Host(`wkhtmltopdf.idci-consulting.docker`)"
-        - "traefik.http.routers.idci-website-wkhtmltopdf-https.entryPoints=websecure"
-        - "traefik.http.routers.idci-website-wkhtmltopdf-https.rule=Host(`wkhtmltopdf.idci-consulting.docker`)"
-        - "traefik.http.routers.idci-website-wkhtmltopdf-https.tls=true"
-        - "traefik.http.routers.idci-website-wkhtmltopdf-https.tls.certresolver=letsencrypt"
-    environment:
-      - USER=idci
-      - PASS=idci#2022
-      - PAYLOAD_LIMIT=1mb
+  pdf-generator:
+    image: bedrockio/export-html:latest
     networks:
-      wkhtmltopdf: ~
-      traefik_reverse_proxy: ~
+      - pdf
 
 configs:
   nginx_conf:
@@ -123,6 +106,6 @@ networks:
   app:
   redis:
   mailhog:
-  wkhtmltopdf:
+  pdf:
   traefik_reverse_proxy:
     external: true

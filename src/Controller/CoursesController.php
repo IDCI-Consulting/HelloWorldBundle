@@ -11,13 +11,6 @@ use App\Utils\TagsAttributesGenerator;
 #[Route('/{_locale}/courses', requirements: ['_locale' => 'fr|en'], name: 'courses_')]
 class CoursesController extends AbstractController
 {
-    private string $coursesTagsFilePath;
-    
-    public function __construct(string $coursesTagsFilePath)
-    {
-        $this->coursesTagsFilePath = $coursesTagsFilePath;
-    }
-
     #[Route('/', methods: ['GET'], name: 'index')]
     public function index(Request $request): Response
     {
