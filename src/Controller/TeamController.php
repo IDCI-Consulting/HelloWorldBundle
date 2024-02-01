@@ -11,9 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-/**
- * @Route("/{_locale}/team", requirements={"_locale": "fr|en"}, name="team_")
- */
+#[Route('/{_locale}/team', name: 'team_')]
 class TeamController extends AbstractController
 {
     private string $cvDirectoryPath;
@@ -25,17 +23,13 @@ class TeamController extends AbstractController
         $this->httpClient = $pdfGeneratorClient;
     }
 
-    /**
-     * @Route("/", methods={"GET"}, name="list"),
-     */
+    #[Route('/', methods: ['GET'], name: 'list')]
     public function list(Request $request): Response
     {
         return $this->render('team/list.html.twig');
     }
 
-    /**
-     * @Route("/{slug}.{_format}", methods={"GET"}, name="member", requirements={"_format"="json|html|pdf"}, defaults={"_format": "html"})
-     */
+    #[Route('/{slug}.{_format}', methods: ['GET'], name:'member', requirements: ['_format' => 'json|html|pdf'], defaults: ['_format' => 'html'])]
     public function member(Request $request, string $slug, string $_format): Response
     {
         $filesystem = new Filesystem();

@@ -22,7 +22,7 @@ class ContactSubscriber implements EventSubscriberInterface
         $this->contactRecipientsAddresses = $contactRecipientsAddresses;
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
             ContactEvents::CONTACT_FORM_SUBMITTED => [
