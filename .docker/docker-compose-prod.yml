@@ -12,8 +12,6 @@ services:
       - MAILER_DSN=smtp://no-reply@idci-consulting.fr:f90ec1876c13de06cd5a4e378a62d932@mail.idci-consulting.fr:465
       - MAILER_SENDER_ADDRESS=no-reply@idci-consulting.fr
       - MAILER_RECIPIENT_ADDRESSES=["contact@idci-consulting.fr"]
-      - WKHTMLTOPDF_LOGIN=wkuser
-      - WKHTMLTOPDF_PASSWORD=ethi4ZooVee2
     configs:
       - source: php_conf
         target: /usr/local/etc/php/php.ini
@@ -22,7 +20,7 @@ services:
     networks:
       - app
       - redis
-      - wkhtmltopdf
+      - pdf
 
   nginx:
     image: nginx
@@ -64,14 +62,10 @@ services:
     networks:
       - redis
 
-  wkhtmltopdf:
-    image: traumfewo/docker-wkhtmltopdf-aas:latest
-    environment:
-      - USER=wkuser
-      - PASS=ethi4ZooVee2
-      - PAYLOAD_LIMIT=1mb
+  pdf-generator:
+    image: bedrockio/export-html:latest
     networks:
-      wkhtmltopdf: ~
+      - pdf
 
 configs:
   nginx_conf:
@@ -86,6 +80,6 @@ volumes:
 networks:
   app:
   redis:
-  wkhtmltopdf:
+  pdf:
   traefik:
     external: true
