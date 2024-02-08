@@ -25,10 +25,13 @@ offers:
     title: Depending of the task and expertise of your teams
     subtitle: you can choose to...
     box_1: 
+      title: A total devolvement
       description: Delegate every technical aspects to IDCI and let your teams keep 100% of their focus on your core business functionnal components implementation.
     box_2:
+      title: A partial devolvement
       description: Resort to a partial delegation of technical tasks to IDCI in order to fill your punctual needs of resources and expertise.
     box_3:
+      title: A consulting
       description: Assure yourself a collaboration and a support until you totally master your project
 
   company_assets:
@@ -37,11 +40,11 @@ offers:
       title: <span class="colored">Trust IDCI</span>
       description:  <li>Our consultants aren't working alone. Well surrounded, they provide <span class="colored">faithful to customer's expectations</span> and to web development standards results.</li>
                     <li>Our organisation assure you a <span class="colored">continuous follow-up</span> of your projects, even in the absence of your regular consultant.</li>
-                    <li>We own our own premises, equiped with a network, computers, a server. So, we are <span class="colored">self-sufficient</span>.</li>
+                    <li>We own our own premises fully equiped for remote work. So, we are <span class="colored">self-sufficient</span>.</li>
                     <li>In case of need, you can benefit of a <span class="colored">secondary interlocutor</span>.</li>
     box_2:
       title: <span class="colored">Multiply your added value</span>
       description:  <li>When you collaborate with one of our consultants, he brings you the <span class="colored">tecnic support</span> of all our team to supplement his delivery to you.</li>
                     <li>Our teamwork offers you a mutualisation of <span class="colored">skills</span> and <span class="colored">flexibility</span>.</li>
-                    <li>Our staff can <span class="colored">remotly work</span> instead of going to your facility.</li>
-                    <li>The customer satisfaction and the <span class="colored">quality</span> control are assured by another of our experts.</li>
+                    <li>Our staff can <span class="colored">remotly work</span> instead of going to your facility, which allow you to avoid the fees and reduce the global cost of the delivery.</li>
+                    <li>Our consultants are <span class="colored">backuped</span>, which secure your project. Also, le code producted is checked by another developer to respect our commitments in termes of <span class="colored">quality check</span>.</li>
