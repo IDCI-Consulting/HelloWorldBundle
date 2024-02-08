@@ -1,9 +1,9 @@
 .section-form {
     width: 35%;
 
-    @include until($tablet
-    ) {
-        width: 80%;
+    @include until($tablet) {
+        max-width: 16rem;
+        width: 100%;
     }
 
     .section-form-title {
