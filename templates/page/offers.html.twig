@@ -11,6 +11,7 @@
 
     {% include 'widgets/_section_choices.html.twig' with {
         'page_title': ('offers.company_assets.title')|trans,
+        'background_color': 'tertiary',
         'boxes': [
             {
                 'title': ('offers.company_assets.box_1.title')|trans,
@@ -27,8 +28,6 @@
             }
         ]
     } %}
-
-    <div class="transparent-box even"></div>
 
     {% include 'widgets/_section_choices.html.twig' with {
         'title': ('offers.options_list.title')|trans,
