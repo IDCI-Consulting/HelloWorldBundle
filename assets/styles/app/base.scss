@@ -29,6 +29,12 @@ html {
 .map {
     display: flex;
     justify-content: center;
+    margin: auto 0;
+    width: 40%;
+
+    @include until($widescreen) {
+        width: 80%;
+    }
 
     iframe {
         &.streetmap {

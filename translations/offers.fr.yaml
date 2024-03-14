@@ -25,11 +25,14 @@ offers:
   options_list:
     title: En fonction de la charge et de l'expertise vos équipes
     subtitle: vous pouvez choisir...
-    box_1: 
+    box_1:
+      title: <span class="colored">Une délégation totale</span>
       description: Déléguer tous les aspects techniques à IDCI et laisser vos équipes 100% concentrées sur l’implémentation des briques fonctionnelles liées à votre métier.
     box_2:
-      description: Avoir recours à une délégation partielle des tâches techniques à IDCI afin de combler vos besoins ponctuels en ressources et en expertise.
+      title: <span class="colored">Une délégation partielle</span>
+      description: Déléger certaines tâches techniques à IDCI afin de combler vos besoins ponctuels en ressources et en expertise.
     box_3:
+      title: <span class="colored">Un consulting</span>
       description: Vous assurer une collaboration et un support jusqu’à la totale maîtrise de votre projet
 
   company_assets:
@@ -38,11 +41,11 @@ offers:
       title: <span class="colored">Faîtes confiance à IDCI</span>
       description:  <li>Nos consultants ne travaillent pas seuls. Bien entourés, ils fournissent des résultats <span class="colored">conformes aux attentes client</span> et aux normes du développement web.</li>
                     <li>Notre organisation vous assure un <span class="colored">suivi continu</span> de vos projets, même en l'absence de votre consultant attitré.</li>
-                    <li>Nous possédons nos propres locaux, équipés d'un réseau, d'ordinateurs, d'un serveur. Nous sommes donc <span class="colored">autonomes</span>.</li>
+                    <li>Nous possédons nos propres locaux pleinement équipés pour le travail à distance. Nous sommes donc <span class="colored">autonomes</span>.</li>
                     <li>En cas de besoin, vous pouvez bénéficier d'<span class="colored">un second interlocuteur</span>.</li>
     box_2:
       title: <span class="colored">Multipliez votre valeur ajoutée</span>
       description:  <li>Lorsque vous collaborez avec l'un de nos consultants, il vous apporte le <span class="colored">soutien technique</span> de toute notre équipe afin d'enrichir sa prestation auprès de vous.</li>
                     <li>Notre travail d'équipe vous offre une mutualisation de <span class="colored">compétences</span> et une <span class="colored">flexibilité</span>.</li>
-                    <li>Nos collaborateurs peuvent <span class="colored">travailler à distance</span> plutôt que dans votre structure.</li>
-                    <li>La satisfaction client et le contrôle <span class="colored">qualité</span> sont assurés par un autre de nos experts.</li>
+                    <li>Nos collaborateurs peuvent <span class="colored">travailler à distance</span> plutôt que dans votre structure, ce qui a pour avantage d'éviter les frais et de diminuer le coût global de la prestation.</li>
+                    <li>Nos consultants sont <span class="colored">backupés</span>, ce qui sécurise votre projet. Le code produit est également revu par un autre développeur afin de respecter nos engagements en terme de <span class="colored">contrôle qualité</span>.</li>
