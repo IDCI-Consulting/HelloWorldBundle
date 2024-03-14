@@ -1,4 +1,4 @@
-<div class="section-container section-container-90 section-container-primary">
+<div class="section-container section-container-90 section-container-{{ background_color|default('primary') }}">
     <section class="section-presentation section-choices">
         {% if page_title is defined and page_title is not null and page_title is not empty %}
             <h1 class="section-choices-title idci-title-primary">{{ page_title }}</h1>
