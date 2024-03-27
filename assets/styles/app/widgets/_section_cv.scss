@@ -2,6 +2,7 @@
     font-size: $idci-font-larger;
 
     @include until($tablet) {
+        font-size: $idci-font-large;
         width: 100%;
     }
 
@@ -21,12 +22,20 @@
         font-weight: bold;
         padding: 0.75rem 0;
         width: auto;
+
+        @include until($tablet) {
+            padding-left: 1rem;
+        }
     }
 
     .section-cv-links {
         padding: 0.75rem 0;
         text-align: right;
         width: auto;
+
+        @include until ($tablet) {
+            text-align: center;
+        }
 
         i{
             color: $idci-color-black;
@@ -118,12 +127,20 @@
     .section-cv-double {
         display: flex;
 
+        @include until ($tablet) {
+            flex-direction: column;
+        }
+
         .section-cv-double-main {
             width: 100%;
         }
 
         .section-cv-double-aside {
             width: 50%;
+
+            @include until ($tablet) {
+                width: 100%;
+            }
 
             table {
                 margin-top: 2rem;
@@ -140,12 +157,27 @@
                 }
 
                 tbody {
+                    @include until ($tablet) {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 1rem;
+                    }
+
                     tr {
                         font-size: $idci-font-large;
+
+                        @include until ($tablet) {
+                            display: flex;
+                            flex-direction: column;
+                        }
 
                         th, td {
                             padding: 0.2rem;
                             width: 50%;
+
+                            @include until($tablet) {
+                                width: 100%;
+                            }
                         }
                     }
                 }
