@@ -32,11 +32,11 @@ footer {
                     width: fit-content;
 
                     .footer-contact-list-item {
-                        margin-top: 1rem;
+                        align-items: center;
                         display: flex;
                         flex-direction: row;
-                        align-items: center;
                         gap: 1rem;
+                        margin-top: 1rem;
 
                         .footer-contact-list-item-icon {
                             color: $idci-color-dark-grey;
@@ -108,9 +108,9 @@ footer {
                 }
 
                 .footer-address-text {
-                    text-align: left;
                     margin: auto;
                     margin-top: 4rem;
+                    text-align: left;
                     width: fit-content;
     
                     .footer-title {
