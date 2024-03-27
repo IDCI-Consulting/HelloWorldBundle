@@ -29,8 +29,8 @@
         {
             "company": "IDCI-Consulting",
             "role": {
-                "fr": "Alternant Développeur Web FullStack",
-                "en": "Trainee FullStack Web Developer"
+                "fr": "Ingénieur Logiciel en Apprentissage",
+                "en": "Software Engineer in Apprenticeship"
             },
             "startDate": "2021-09-03T00:00:00Z",
             "endDate": "2024-06-31T00:00:00Z",
@@ -38,16 +38,18 @@
             "tools": [],
             "tasks": {
                 "fr": [
-                    "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
-                    "Création d'un site web pour un client",
-                    "Maintenir et améliorer un site sur demande du client",
-                    "Développer des relations avec les clients"
+                    "Conception et développement d'interfaces web, front et back.",
+                    "Création d'applications web avec le framework PHP Symfony.",
+                    "Mise en place d'achitecture conteneurisée avec Docker.",
+                    "Développement de CI.",
+                    "Analyse des besoins clients."
                 ],
                 "en": [
-                    "Deepening knowledge of the technologies used by the company",
-                    "Creation of a website for a client",
-                    "Maintain and improve a site at the client's request",
-                    "Developing relationships with customers"
+                    "Design and development of web interfaces, front and back.",
+                    "Creating web applications with the Symfony PHP framework.",
+                    "Setting up container architecture with Docker.",
+                    "CI development.",
+                    "Analysis of customer needs."
                 ]
             }
         },
@@ -63,14 +65,14 @@
             "tools": [],
             "tasks": {
                 "fr": [
-                    "Apprentissage des technologies utilisées par l'entreprise",
-                    "Création d'un site web pour un client",
-                    "Apprentissage de la méthode agile"
+                    "Apprentissage du cycle de vie d'une application web (de la conception à la maintenance).",
+                    "Introduction à Docker.",
+                    "Création d'une application web avec Symfony."
                 ],
                 "en": [
-                    "Learning about the technologies used by the company",
-                    "Creation of a website for a client",
-                    "Learning the agile methodology"
+                    "Learning the life cycle of a web application (from design to maintenance).",
+                    "Introduction to Docker.",
+                    "Creating a web application with Symfony."
                 ]
             }
         },
@@ -178,10 +180,10 @@
         },
         {
             "domain": {
-                "fr": "Informatique",
-                "en": "IT"
+                "fr": "Ingénierie Logiciel",
+                "en": "Software Engineering"
             },
-            "certificate": "Diplôme d'Ingénieur Informatique par Apprentissage",
+            "certificate": "Diplôme d'Ingénieur Logiciel par Apprentissage",
             "location": "Telecom Nancy - Villers-lès-Nancy",
             "startDate": "2021-09-21T00:00:00Z",
             "endDate": "2024-06-31T00:00:00Z"
@@ -232,8 +234,10 @@
                     "level": "",
                     "keywords": [
                         "Symfony",
-                        "Bootstrap",
-                        "Django"
+                        "React",
+                        "Node.js",
+                        "Flask",
+                        "Tailwind"
                     ]
                 },
                 {
@@ -243,7 +247,8 @@
                     },
                     "level": "",
                     "keywords": [
-                        "Twig"
+                        "Twig",
+                        "Jinja"
                     ]
                 },
                 {
@@ -265,6 +270,7 @@
                     "keywords": [
                         "MySQL",
                         "PostgreSQL",
+                        "Firebase",
                         "MongoDB",
                         "Neo4j"
                     ]
@@ -323,8 +329,8 @@
                         "en": "English"
                     },
                     "level": {
-                        "fr": "B2",
-                        "en": "B2"
+                        "fr": "C1 - 950 TOEIC",
+                        "en": "950 TOEIC"
                     }
                 },
                 {
@@ -333,8 +339,8 @@
                         "en": "German"
                     },
                     "level": {
-                        "fr": "B1",
-                        "en": "B1"
+                        "fr": "B2",
+                        "en": "B2"
                     }
                 }
             ]
