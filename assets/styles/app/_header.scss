@@ -36,16 +36,16 @@ header {
 
         .mobile-menu {
             background-color: $idci-color-light-black;
-            opacity: 0;
             border-bottom: 3px solid $idci-color-grey;
             border-top: 3px solid $idci-color-white;
             display: block;
+            opacity: 0;
             position: absolute;
+            transform: translateX(-100%);
+            transition: all .3s ease-in-out;
             top: calc(5rem - 3px);
             width: 100%;
             z-index: 200;
-            transform: translateX(-100%);
-            transition: all .3s ease-in-out;
 
             .mobile-menu-list {
                 text-align: center;
