@@ -16,7 +16,7 @@
 
 
         @include until($tablet) {
-            font-size: $idci-font-1-5x;
+            font-size: $idci-font-large;
         }
 
         &.section-presentation-subtitle-alone {
@@ -146,7 +146,7 @@
 
                 @include until($tablet) {
                     margin-top: 2rem;
-                    font-size: $idci-font-1-5x;
+                    font-size: $idci-font-large;
                 }
             }
 
@@ -171,7 +171,7 @@
                     }
 
                     @include until($tablet) {
-                        width: 30%;
+                        width: 100%;
                     }
                 }
             }
