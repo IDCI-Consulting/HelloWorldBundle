@@ -32,6 +32,10 @@ footer {
                     width: fit-content;
 
                     .footer-contact-list-item {
+                        align-items: center;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1rem;
                         margin-top: 1rem;
 
                         .footer-contact-list-item-icon {
@@ -59,6 +63,12 @@ footer {
                             color: $idci-color-white;
                             margin-top: 1rem;
                             padding: 0.5rem 1rem;
+                            transition: all 0.2s ease-in-out;
+
+                            &:hover {
+                                background-color: $idci-color-white;
+                                color: $idci-color-black;
+                            }
                         }
                     }
                 }
@@ -80,9 +90,14 @@ footer {
                         min-width: none;
                         width: 50%;
                     }
-    
-                    i {
-                        color: $idci-color-white
+
+                    a {
+                        color: $idci-color-dark-grey;
+                        transition: all 0.2s ease-in-out;
+
+                        &:hover {
+                            color: $idci-color-white;
+                        }
                     }
                 }
             }
@@ -93,9 +108,9 @@ footer {
                 }
 
                 .footer-address-text {
-                    text-align: left;
                     margin: auto;
                     margin-top: 4rem;
+                    text-align: left;
                     width: fit-content;
     
                     .footer-title {

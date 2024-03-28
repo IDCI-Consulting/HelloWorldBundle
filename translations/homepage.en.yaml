@@ -8,27 +8,25 @@ consulting:
   subtitle: Consulting
   paragraph_1: Thanks to a constant technological watch, <span class="blue-colored-description-text">IDCI-Consulting renews and develop its knowlegdes</span>.
   paragraph_2: We train ourselves everyday looking for excellence.
-  paragraph_3: "We take action on the different steps of your informatic projects :</br><span class=\"blue-colored-description-text\">define your goals, technical solutions, website structures, deployement and optimization...</span>"
+  paragraph_3: "We take action on the different steps of your informatic projects :</br><span class=\"blue-colored-description-text\">define your goals, technical solutions, web app structures, deployement and optimization...</span>"
 
 courses:
   title: We are doing
   subtitle: Courses
-  paragraph_1: <span class="blue-colored-description-text">Strong of our %cie_age% experience years,</span> we offer <span class="blue-colored-description-text">multiple courses</span> ranging from HTML5/CSS3 to complex PHP applications development with the Symfony framework.
-  paragraph_2: The different courses
+  paragraph_1: <span class="blue-colored-description-text">Strong of our %cie_age% experience years</span>, wa can intervene or host courses around the development of <span class="blue-colored-description-text">web application with high traffic</span> and <span class="blue-colored-description-text">good practices</span> using a complex DevOps stack (containerisation (docker) + CI/CD (GitLab, Jenkins) + version manager (Git) + tests (PHP Unit, Behat)).
 
 web_development:
   title: We are doing
   subtitle: Web development
-  paragraph_1: IDCI is a web development expert company, specialized on <span class="blue-colored-description-text">PHP frameworks (Symfony from 1 to 6, Behat...).</span>
+  paragraph_1: IDCI is a web development expert company, specialized on <span class="blue-colored-description-text">PHP framework Symfony</span> (from the first to the lastest versions).
   paragraph_2: Moreover, we also develop our skills on the <span class="blue-colored-description-text">NodeJS framework</span>, and we are always enthusiastic at the idea to discover some <span class="blue-colored-description-text">new upcoming technologies</span>.
-  paragraph_3: Of course, we do not forget frontend technologies, and we quickly adopt the new <span class="blue-colored-description-text">Javascript frameworks like Angular, Vuejs...</span>
 
 open_source:
   title: Our philosophy
   subtitle: Open source
   paragraph_1: <span class="green-colored-description-text">Sharing and openness</span> to others are anchored in the philosophy of our company.
   paragraph_2: For each of our projects, we contribute as soon as possible to <span class="green-colored-description-text">the development of open-source tools </span> that we use everyday, so everyone can keep growing and prospering, whether it be our clients or open-source community members.
-  paragraph_3: We publish and maintain available source code on <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">our Github platform.</a>
+  paragraph_3: We publish and maintain available source code on <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">our Github repository.</a>
 
 methodology:
   subtitle: Our methodology

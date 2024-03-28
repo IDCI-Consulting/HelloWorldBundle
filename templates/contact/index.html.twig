@@ -4,15 +4,14 @@
 
 {% block main %}
 
-<section class="section-container">
+<section class="section-container section-container-contact">
     <section class="section-form">
         <h2 class="section-form-title">{{ 'contact.title'|trans({}, 'contact') }}</h2>
         {{ form(form) }}
     </section>
+    <div class="map">
+        <iframe class="streetmap" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/idci-consulting_976837?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
+    </div>
 </section>
-
-<div class="map">
-    <iframe class="streetmap" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/idci-consulting_976837?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
-</div>
 
 {% endblock %}

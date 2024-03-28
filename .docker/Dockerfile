@@ -48,7 +48,7 @@ RUN mkdir -p /var/www/.composer/cache && chown -R www-data /var/www/.composer
 ARG APP_ENV=prod
 ENV APP_ENV ${APP_ENV}
 RUN set -eux; \
-    composer install --no-dev --no-scripts --no-suggest --no-interaction --prefer-dist --optimize-autoloader; \
+    COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --no-scripts --no-suggest --no-interaction --prefer-dist --optimize-autoloader; \
     composer dump-autoload --no-dev --optimize --classmap-authoritative;
 
 ## Install app assets
@@ -87,7 +87,7 @@ ENV APP_ENV=dev
 ENV APP_ENV ${APP_ENV}
 ENV OPCACHE_ENABLE=off
 
-RUN composer install --no-interaction --optimize-autoloader
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --optimize-autoloader
 # RUN . $NVM_DIR/nvm.sh \
 # 	&& yarn --version \
 # 	&& yarn install \

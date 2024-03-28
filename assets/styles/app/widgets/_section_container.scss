@@ -54,6 +54,13 @@
         background-image: url(../../../images/base/background_presentation.jpg);
     }
 
+    &.section-container-contact {
+        @include until($widescreen) {
+            flex-direction: column;
+            row-gap: 4rem;
+        }
+    }
+
     &.section-error-page-background {
         background-image: url(../../../images/base/labyrinth.gif);
         background-size: cover;
