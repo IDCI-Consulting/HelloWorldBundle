@@ -2,6 +2,7 @@ stack_name = idci_website
 source_tag = dev
 php_container_id = $(shell docker ps --filter name="$(stack_name)_php" -q)
 user = www-data
+node_version = 20
 
 default: console
 
@@ -38,15 +39,15 @@ composer-install:
 # NODE
 .PHONY: yarn
 yarn:
-	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:14 yarn $(cmd)
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:$(node_version) yarn $(cmd)
 
 .PHONY: encore
 encore:
-	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:14 yarn encore dev $(options)
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:$(node_version) yarn encore dev $(options)
 
 .PHONY: encore-production
 encore-production:
-	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:14 yarn encore production $(options)
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:$(node_version) yarn encore production $(options)
 
 # IMAGES
 .PHONY: build-image
