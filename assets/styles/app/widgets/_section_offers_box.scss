@@ -12,6 +12,10 @@
         text-transform: uppercase;
         width: 100%;
 
+        &.section-offers-box-title-light {
+            color: $idci-color-light-grey;
+        }
+
         &.section-offers-box-title-secondary {
             font-size: $idci-font-2-5x;
             font-weight: 900;
