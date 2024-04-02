@@ -22,12 +22,6 @@
         background-color: $idci-color-whitesmoke;
     }
 
-    &.section-container-tertiary {
-        background-blend-mode: multiply;
-        background-color: #f5f5f5;
-        background-image: radial-gradient(circle at center center, #eeeeee, #f5f5f5), repeating-radial-gradient(circle at center center, #eeeeee, #eeeeee, 37px, transparent 74px, transparent 37px);
-    }
-
     &.section-container-60 {
         > * {
             width: 60%;
@@ -52,6 +46,17 @@
 
     &.section-container-media-primary {
         background-image: url(../../../images/base/background_presentation.jpg);
+        background-size: contain;
+    }
+
+    &.section-container-media-offers {
+        background-image: url(../../../images/base/office.jpg);
+        background-size: contain;
+    }
+
+    &.section-container-media-courses {
+        background-image: url(../../../images/base/learning.jpg);
+        background-size: cover;
     }
 
     &.section-container-contact {

@@ -10,6 +10,8 @@
     </video>
 
     {% include 'widgets/_section_choices.html.twig' with {
+        'background_color': 'media-courses',
+        'title_light': true,
         'page_title': ('courses.introduction.title')|trans,
         'boxes': [
             {
@@ -32,8 +34,6 @@
         ],
         'contact_button': true
     } %}
-
-    <div class="transparent-box even"></div>
 
     {% include 'widgets/_section_tagcloud.html.twig' with {
         'title': 'courses.key_words.title'|trans,
