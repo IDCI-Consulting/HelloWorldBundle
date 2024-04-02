@@ -1,10 +1,11 @@
-@import '~bulma/sass/base/all';
-@import '~bulma/sass/components/all';
-@import '~bulma/sass/elements/all';
-@import '~bulma/sass/form/all';
-@import '~bulma/sass/grid/all';
-@import '~bulma/sass/helpers/all';
-@import '~bulma/sass/utilities/all';
+@import '~bulma/sass/base/_index';
+@import '~bulma/sass/components/_index';
+@import '~bulma/sass/elements/_index';
+@import '~bulma/sass/form/_index';
+@import '~bulma/sass/grid/_index';
+@import '~bulma/sass/helpers/_index';
+@import '~bulma/sass/utilities/_index';
+@import '~bulma/sass/utilities/mixins';
 
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
