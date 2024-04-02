@@ -56,7 +56,7 @@ RUN php bin/console assets:install
 
 ## Install node and npm using nvm
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 14
+ENV NODE_VERSION 20
 
 ## Build assets
 RUN curl --silent -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash -
