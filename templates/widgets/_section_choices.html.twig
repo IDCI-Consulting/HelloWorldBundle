@@ -1,5 +1,5 @@
-<div class="section-container section-container-90 section-container-{{ background_color|default('primary') }}">
-    <section class="section-presentation section-choices">
+<section class="section-choices">
+    <div class="content-container">
         {% if page_title is defined and page_title is not null and page_title is not empty %}
             <h1 class="section-choices-title idci-title-primary">{{ page_title }}</h1>
         {% endif %}
@@ -28,5 +28,5 @@
                 {% trans %}button.contact_us{% endtrans %} <i class="fa-solid fa-arrow-right"></i>
             </a>
         {% endif %}
-    </section>
-</div>
+    </div>
+</section>

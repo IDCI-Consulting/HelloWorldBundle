@@ -46,6 +46,12 @@
 
         li {
             margin-top: 1rem;
+
+            a {
+                &:hover {
+                    filter: brightness(1.5);
+                }
+            }
         }
     }
 
