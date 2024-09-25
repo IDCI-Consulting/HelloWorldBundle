@@ -38,3 +38,17 @@ tools:
   subtitle: Our tools
   column_1: Storage
   column_2: Quality
+
+call_to_action:
+  box_1:
+    title: 'You are <br/><span class="colored">a company</span> (SME/Group)<br/> and you want to :'
+    paragraph_1:  <a href="offers#">Be advised on <span class="colored">technological choices</span> and on <span class="colored">your future web application conception</span></a>
+    paragraph_2:  <a href="offers#">Offer temporary reinforcements to <span class="colored">your development team</span></a>
+    paragraph_3:  <a href="offers#">Train your <span class="colored">collaborators</span></a>
+    paragraph_4:  <a href="offers#"><span class="colored">Leave us your project execution</span> and stay focus on your core business</a>
+  box_2:
+    title: 'You are <br/><span class="colored">a Software firm</span><br/> and you want :'
+    paragraph_1:  <a href="offers#"><span class="colored">Reinforce your resources</span> in the context of a project</a>
+    paragraph_2:  <a href="offers#"><span class="colored">Delegate punctually to an expert</span> to help your client in order to solve his technical issue</a>
+    paragraph_3:  <a href="offers#"><span class="colored">Subcontract an entire services contract</span> from your client, or just a part of it.</a>
+    paragraph_4:  <a href="offers#"><span class="colored">Train your collaborators, or your client\s ones</span>, on the new technologies.</a>

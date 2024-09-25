@@ -38,3 +38,17 @@ tools:
   subtitle: Nos outils
   column_1: Stockage
   column_2: Qualité
+
+call_to_action:
+    box_1:
+      title: 'Vous êtes <span class="colored">une entreprise</span> (PME/Groupe)<br/> et vous souhaitez :'
+      paragraph_1:  <a href="offers#">Être conseillé sur les <span class="colored">choix technologiques</span> et dans la <span class="colored">conception de votre futur applicatif web</span></a>
+      paragraph_2:  <a href="offers#">Renforcer temporairement votre <span class="colored">équipe de développement</span></a>
+      paragraph_3:  <a href="offers#">Former vos <span class="colored">collaborateurs</span></a>
+      paragraph_4:  <a href="offers#"><span class="colored">Confier votre projet</span> de mise en œuvre et rester concentré sur votre cœur de métier</a>
+    box_2:
+      title: 'Vous êtes <span class="colored">une ESN</span><br/> et vous souhaitez :'
+      paragraph_1:  <a href="offers#"><span class="colored">Renforcer vos ressources</span> dans le cadre d’un projet</a>
+      paragraph_2:  <a href="offers#"><span class="colored">Déléguer ponctuellement un expert</span> pour aider votre client à résoudre une problématique technique</a>
+      paragraph_3:  <a href="offers#"><span class="colored">Sous-traiter tout ou partie d’un contrat de services</span> chez un de vos clients</a>
+      paragraph_4:  <a href="offers#"><span class="colored">Former vos collaborateurs ou ceux de vos clients</span> sur les dernières technologies</a>
