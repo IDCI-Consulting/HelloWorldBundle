@@ -1,19 +1,15 @@
 members:
   title: The team
   check_cv: See the CV
-  introduction: Human is the IDCI consulting ADN. Frederic and Gabriel Bondaz founded the company in 2007, based on the synergy and specialties of everyone. Our team first work in a continuous improvment perspective of quality and methodologies. <br/><br/> More than a simple technical intervenant that will realise your project, we are involved from its conception to its maintenance through its infrastructure and by guiding you on the long term to make it evolve and always reach better performances. <br/><br/> Our consultants daily tax depends on their skills and their experiences. The ADR is decreased by 20% when the consultant work in our site.
+  introduction: Human is the IDCI consulting ADN. Based on the synergy and specialties of everyone, our team first work in a continuous improvment perspective of quality and methodologies. <br/><br/> More than a simple technical intervenant that will realise your project, we are involved from its conception to its maintenance through its infrastructure and by guiding you on the long term to make it evolve and always reach better performances. <br/><br/> Our consultants daily tax depends on their skills and their experiences. It include the advise you might get from all our team. It's indicated on each CV. The ADR is decreased by 20% when the consultant work in our site.
 
 gabriel:
-  subtitle: Manager
+  subtitle: Manager - Expert
   description: Attracted by new technologies since very young, I passionate about IT and more specifically Internet and Web thereafter. I made this passion my profession when entering the active life. My curiosity and taste of challenges I have to create the IDCI-Consulting company in end of 2007. The philosophy of "Open Source" make me a satisfied libriste. RFC 2616 has become my "holy book" and the number 42 is often a choice of response to the problems I get asked.
 
 benjamin:
   subtitle: Expert
   description: Enthusiastic about computers and new technologies, I'm curious and passionate about web culture and the freedom it represents. As a web developer, I'm passionate about this constantly evolving world. My expertise translates into the creation of innovative and functional solutions. My professional approach is based on a constant quest for improvement and learning, which enables me to take on exciting technical challenges. Both rigorous and versatile, I thrive on my work, helping to shape the user experience and enrich the digital ecosystem.
-
-swan:
-  subtitle: Developer
-  description: Passionate about computer development since my teenage years, it is the web and its infinite possibilities that have won me over today. As an avid enthusiast of creative coding, I am very interested in frontend technologies that can take web applications to a whole other dimension. Now a software engineer, I have been thriving for 3 years at IDCI-Consulting, undertaking missions as diverse as they are varied. <br /> <i>This presentation was not written by an AI, certified by GPT itself.</i>
 
 vincent:
   subtitle: Developer
