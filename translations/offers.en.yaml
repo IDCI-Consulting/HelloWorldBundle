@@ -34,6 +34,27 @@ offers:
       title: A consulting
       description: Assure yourself a collaboration and a support until you totally master your project
 
+  consulting:
+    title: We are doing
+    subtitle: Consulting and Expertise
+    paragraph_1: Our team works above all as a skills centre. Our experts like to share their knowledge and their experience. We can intervene on demand, to support your developers when they are facing a technical challenge.
+    paragraph_2: Thanks to a constant technological watch, <span class="blue-colored-description-text">IDCI-Consulting renews and develop its knowlegdes</span>.
+    paragraph_3: We train ourselves everyday looking for excellence.
+    paragraph_4: "We take action on the different steps of your informatic projects :</br><span class=\"blue-colored-description-text\">define your goals, technical solutions, web app structures, deployement and optimization...</span>"
+
+  courses:
+    title: We are doing
+    subtitle: Courses
+    paragraph_1: Our team base its added value on the perpetual quest of new knowledges. Thus, share it is a true pleasure which allow, in addition, to our consultants to vary their tasks and acquire pedagogical skills
+    paragraph_2: <span class="blue-colored-description-text">Strong of our %cie_age% experience years</span>, wa can intervene or host courses around the development of <span class="blue-colored-description-text">web application with high traffic</span> and <span class="blue-colored-description-text">good practices</span> using a complex DevOps stack (containerisation (docker) + CI/CD (GitLab, Jenkins) + version manager (Git) + tests (PHP Unit, Behat)).
+    paragraph_3: <i>We are not a training organisation.</i>
+  
+  web_development:
+    title: We are doing
+    subtitle: Web development
+    paragraph_1: IDCI have an expertise in web development, specialized on <span class="blue-colored-description-text">Symfony PHP framework</span> (since the first version until more recent ones).
+    paragraph_2: Moreover, we also are working with the <span class="blue-colored-description-text">NodeJS framework</span>, and always are enthusiasts to discover promising <span class="blue-colored-description-text">new technologies</span>.
+
   company_assets:
     title: 'Our offers of services'
     box_1:

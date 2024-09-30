@@ -32,8 +32,29 @@ offers:
       title: <span class="colored">Une délégation partielle</span>
       description: Déléger certaines tâches techniques à IDCI afin de combler vos besoins ponctuels en ressources et en expertise.
     box_3:
-      title: <span class="colored">Un consulting</span>
+      title: <span class="colored">Du consulting</span>
       description: Vous assurer une collaboration et un support jusqu’à la totale maîtrise de votre projet
+  
+  consulting:
+    title: Nous faisons du
+    subtitle: Conseil et Expertise
+    paragraph_1: Notre équipe fonctionne avant tout comme un centre de compétences. Nos experts aiment partager leur savoir et leur expérience. Nous savons intervenir à la demande, pour venir en support de vos développeurs lorsqu'ils se trouvent face à un défi technique.
+    paragraph_2: Grâce à une veille technologique régulière, <span class="blue-colored-description-text">IDCI-Consulting renouvelle et enrichit ses connaissances techniques</span>.
+    paragraph_3: Nous nous formons tous les jours à la recherche de l'excellence.
+    paragraph_4: "Nous intervenons sur les différentes étapes de vos projets informatiques :</br><span class=\"blue-colored-description-text\">définition de vos objectifs, solutions techniques, architectures d'application web, déploiement et optimisation...</span>"
+
+  courses:
+    title: Nous faisons de la
+    subtitle: Formation
+    paragraph_1: Notre équipe fonde sa valeur ajoutée sur la quête perpétuelle de nouvelles connaissances. Ainsi, les partager est un véritable plaisir qui permet, de surcroît, à nos consultants de varier leurs missions et d'acquérir des compétences pédagogiques.
+    paragraph_2: <span class="blue-colored-description-text">Forts de nos %cie_age% ans d'expériences</span>, nous pouvons intervenir ou animer des formations autour du développement <span class="blue-colored-description-text">d'application web à fort trafic</span> et des <span class="blue-colored-description-text">bonnes pratiques</span> par l'utilisation d'une stack DevOps complexe (conteneurisation (docker) + CI/CD (GitLab, Jenkins) + gestionnaire de version (Git) + tests (PHP Unit, Behat))
+    paragraph_3: <i>Nous ne sommes pas un organisme de formation</i>.
+
+  web_development:
+    title: Nous faisons du
+    subtitle: Développement web
+    paragraph_1: IDCI dispose d'une expertise dans le développement web, spécialisée sur <span class="blue-colored-description-text">le framework PHP Symfony</span> (depuis la première version jusqu'aux plus récentes).
+    paragraph_2: Plus encore, nous travaillons également avec le <span class="blue-colored-description-text">framework NodeJS</span>, et sommes toujours enthousiastes à l'idée de découvrir de <span class="blue-colored-description-text">nouvelles technologies</span> prometteuses.
 
   company_assets:
     title: 'Nos offres de services'
