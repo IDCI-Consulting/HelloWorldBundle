@@ -58,17 +58,4 @@
             }
         ]
     } %}
-
-    <div class="transparent-box top-secondary"></div>
-
-    {% include 'widgets/_section_display_stack.html.twig' with {
-        'title': 'offers.company_concept.title'|trans,
-        'paragraphs': [
-            'offers.company_concept.description'|trans
-        ],
-        'media': {
-            'src': asset('build/images/base/working-on-computer.jpg'),
-            'alt': 'working-on-computer'|trans({}, 'alt')
-        }
-    } %}
 {% endblock %}

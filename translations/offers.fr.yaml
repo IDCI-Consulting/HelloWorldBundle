@@ -1,13 +1,4 @@
 offers:
-  company_concept:
-    title: Une réponse innovante
-    description:  IDCI consulting (SARL) créée en 2007 est un <span class="colored">groupement d’experts sur les technologies web</span>
-                  qui travaillent en permanence sur différentes missions tout en conservant la possibilité de
-                  communiquer entre eux et ainsi partager leurs connaissances. <span class="colored">Individuellement ou en équipe,</span>
-                  nous sommes capables d’apporter une valeur certaine pour votre projet à n’importe quelle
-                  étape de son cycle de vie, sans engagement de votre part et sur une durée minimale de
-                  collaboration. Nous intervenons exclusivement en régie.
-
   options_list:
     title: En fonction de la charge et de l'expertise vos équipes
     subtitle: vous pouvez choisir...

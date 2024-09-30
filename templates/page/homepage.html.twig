@@ -8,10 +8,7 @@
     <div class="navbox" id="navbox">
         <ul>
             <li class="active"><a href="#specialization"> {{ 'specialization.subtitle'|trans }} </a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#consulting">{{ 'consulting.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#courses">{{ 'courses.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#web-development">{{ 'web_development.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#open-source">{{ 'open_source.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li><a href="#innovation"> {{ 'company_concept.title'|trans }} </a><i class="fa-solid fa-circle fa-xs"></i></li>
             <li><a href="#methodology">{{ 'methodology.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
             <li><a href="#tools">{{ 'tools.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
         </ul>
@@ -22,6 +19,7 @@
     </video>
 
     {% embed 'widgets/_section_presentation.html.twig' with {
+        'nav_element': true,
         'background_media': true,
         'id': 'specialization',
         'title': 'specialization.title'|trans,
@@ -66,76 +64,23 @@
 
     <div class="transparent-box"></div>
 
-    {% include 'widgets/_section_presentation.html.twig' with {
-        'background_secondary': true,
-        'id': 'consulting',
-        'title': 'consulting.title'|trans,
-        'subtitle': 'consulting.subtitle'|trans,
+    {% include 'widgets/_section_display_stack.html.twig' with {
+        'nav_element': true,
+        'id': 'innovation',
+        'title': 'company_concept.title'|trans,
         'paragraphs': [
-            'consulting.paragraph_1'|trans,
-            'consulting.paragraph_2'|trans,
-            'consulting.paragraph_3'|trans
+            'company_concept.description'|trans
         ],
         'media': {
-            'src': asset('build/images/base/conseil.svg'),
-            'alt': 'conseil'|trans({}, 'alt')
+            'src': asset('build/images/base/working-on-computer.jpg'),
+            'alt': 'working-on-computer'|trans({}, 'alt')
         }
     } %}
 
-    <div class="transparent-box even bottom-secondary"></div>
-
-    {% set cie_age = 'now'|date("Y") - 2008 %}
-    {% include 'widgets/_section_presentation.html.twig' with {
-        'id': 'courses',
-        'title': 'courses.title'|trans,
-        'subtitle': 'courses.subtitle'|trans,
-        'paragraphs': [
-            'courses.paragraph_1'|trans({'%cie_age%': cie_age}),
-        ],
-        'media': {
-            'src': asset('build/images/base/formation.svg'),
-            'alt': 'formation'|trans({}, 'alt')
-        },
-        'courses': true
-    } %}
-
-    <div class="transparent-box top-secondary"></div>
+    <div class="transparent-box"></div>
 
     {% include 'widgets/_section_presentation.html.twig' with {
-        'background_secondary': true,
-        'id': 'web-development',
-        'title': 'web_development.title'|trans,
-        'subtitle': 'web_development.subtitle'|trans,
-        'paragraphs': [
-            'web_development.paragraph_1'|trans,
-            'web_development.paragraph_2'|trans
-        ],
-        'media': {
-        'src': asset('build/images/base/code-writing.gif'),
-        'alt': 'developpement-web'|trans({}, 'alt')
-        }
-    } %}
-
-    <div class="transparent-box even bottom-secondary"></div>
-
-    {% include 'widgets/_section_presentation.html.twig' with {
-        'id': 'open-source',
-        'title': 'open_source.title'|trans,
-        'subtitle': 'open_source.subtitle'|trans,
-        'paragraphs': [
-            'open_source.paragraph_1'|trans,
-            'open_source.paragraph_2'|trans,
-            'open_source.paragraph_3'|trans
-        ],
-        'media': {
-        'src': asset('build/images/base/opensource.svg'),
-        'alt': 'opensource'|trans({}, 'alt')
-        }
-    } %}
-
-    <div class="transparent-box top-secondary"></div>
-
-    {% include 'widgets/_section_presentation.html.twig' with {
+        'nav_element': true,
         'id': 'methodology',
         'background_secondary': true,
         'subtitle': 'methodology.subtitle'|trans,
@@ -152,7 +97,7 @@
 
     <div class="transparent-box even bottom-secondary"></div>
 
-    <section class="section-presentation" id="tools">
+    <section class="section-presentation section-navigation" id="tools">
         <div class="content-container">
             <h3 class="section-presentation-subtitle idci-subtitle-primary">{{ 'tools.subtitle'|trans }}</h3>
             <img src="{{ asset('build/images/base/icon-outils.svg') }}" alt="{{ 'icon-outils'|trans({}, 'alt') }}" class="section-presentation-icon">
@@ -222,7 +167,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let navboxLinks = document.getElementById('navbox').querySelectorAll('ul li');
-            let sections = document.getElementsByClassName('section-presentation');
+            let sections = document.getElementsByClassName('section-navigation');
             let sectionsStarts = [];
             let currentLink;
 

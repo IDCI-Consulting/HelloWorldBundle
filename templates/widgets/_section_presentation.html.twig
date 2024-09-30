@@ -1,4 +1,4 @@
-<section class="section-presentation{% if background_media is defined and background_media is same as (true) %} section-presentation-media{% endif %}{% if background_secondary is defined and background_secondary is same as (true) %} section-presentation-background-secondary{% endif %}"{% if id is defined and id is not null and id is not empty %} id="{{ id }}"{% endif %}>
+<section class="section-presentation{% if background_media is defined and background_media is same as (true) %} section-presentation-media{% endif %}{% if nav_element is defined and nav_element is same as (true) %} section-navigation{% endif %}{% if background_secondary is defined and background_secondary is same as (true) %} section-presentation-background-secondary{% endif %}"{% if id is defined and id is not null and id is not empty %} id="{{ id }}"{% endif %}>
     <div class="content-container">
         {% if title is defined and title is not null and title is not empty %}
             <h2 class="section-presentation-title idci-title-primary">{{ title }}</h2>

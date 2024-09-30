@@ -3,30 +3,12 @@ specialization:
   subtitle: Web architecture, PHP & Symfony
   paragraph_1: '&lt;Engineering&gt; &lt;Development&gt; &lt;Consulting&gt; &lt;Integration&gt;'
 
-consulting:
-  title: We are doing
-  subtitle: Consulting
-  paragraph_1: Thanks to a constant technological watch, <span class="blue-colored-description-text">IDCI-Consulting renews and develop its knowlegdes</span>.
-  paragraph_2: We train ourselves everyday looking for excellence.
-  paragraph_3: "We take action on the different steps of your informatic projects :</br><span class=\"blue-colored-description-text\">define your goals, technical solutions, web app structures, deployement and optimization...</span>"
-
-courses:
-  title: We are doing
-  subtitle: Courses
-  paragraph_1: <span class="blue-colored-description-text">Strong of our %cie_age% experience years</span>, wa can intervene or host courses around the development of <span class="blue-colored-description-text">web application with high traffic</span> and <span class="blue-colored-description-text">good practices</span> using a complex DevOps stack (containerisation (docker) + CI/CD (GitLab, Jenkins) + version manager (Git) + tests (PHP Unit, Behat)).
-
-web_development:
-  title: We are doing
-  subtitle: Web development
-  paragraph_1: IDCI is a web development expert company, specialized on <span class="blue-colored-description-text">PHP framework Symfony</span> (from the first to the lastest versions).
-  paragraph_2: Moreover, we also develop our skills on the <span class="blue-colored-description-text">NodeJS framework</span>, and we are always enthusiastic at the idea to discover some <span class="blue-colored-description-text">new upcoming technologies</span>.
-
-open_source:
-  title: Our philosophy
-  subtitle: Open source
-  paragraph_1: <span class="green-colored-description-text">Sharing and openness</span> to others are anchored in the philosophy of our company.
-  paragraph_2: For each of our projects, we contribute as soon as possible to <span class="green-colored-description-text">the development of open-source tools </span> that we use everyday, so everyone can keep growing and prospering, whether it be our clients or open-source community members.
-  paragraph_3: We publish and maintain available source code on <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">our Github repository.</a>
+company_concept:
+  title: An innovantive answer
+  description:  'IDCI consulting (LLC), created in 2007, is a <span class="colored">centre of skills on the web technologies</span>
+                that permanantly works on different missions while keeping the possibility to communicate with each other and share their knowledges. 
+                <span class="colored">Individually or as a team</span>, we are able to bring a certain value for your project at every step of its life cycle, 
+                without commitment from your side and on a minimal duration of collaboration. We exclusively intervene with IT management contracts.'
 
 methodology:
   subtitle: Our methodology
