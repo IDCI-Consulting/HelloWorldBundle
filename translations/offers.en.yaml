@@ -38,13 +38,12 @@ offers:
     title: 'Our offers of services'
     box_1:
       title: <span class="colored">Trust IDCI</span>
-      description:  <li>Our consultants aren't working alone. Well surrounded, they provide <span class="colored">faithful to customer's expectations</span> and to web development standards results.</li>
-                    <li>Our organisation assure you a <span class="colored">continuous follow-up</span> of your projects, even in the absence of your regular consultant.</li>
-                    <li>We own our own premises fully equiped for remote work. So, we are <span class="colored">self-sufficient</span>.</li>
-                    <li>In case of need, you can benefit of a <span class="colored">secondary interlocutor</span>.</li>
+      paragraph_1:  Our consultants aren't working alone. Well surrounded, they provide <span class="colored">faithful to customer's expectations</span> and to web development standards results.
+      paragraph_2:  Our organisation assure you a <span class="colored">continuous follow-up</span> of your projects, even in the absence of your regular consultant.
+      paragraph_3:  We own our own premises fully equiped for remote work. So, we are <span class="colored">self-sufficient</span>.
+      paragraph_4:  In case of need, you can benefit of a <span class="colored">secondary interlocutor</span>.
     box_2:
-      title: <span class="colored">Multiply your added value</span>
-      description:  <li>When you collaborate with one of our consultants, he brings you the <span class="colored">tecnic support</span> of all our team to supplement his delivery to you.</li>
-                    <li>Our teamwork offers you a mutualisation of <span class="colored">skills</span> and <span class="colored">flexibility</span>.</li>
-                    <li>Our staff can <span class="colored">remotly work</span> instead of going to your facility, which allow you to avoid the fees and reduce the global cost of the delivery.</li>
-                    <li>Our consultants are <span class="colored">backuped</span>, which secure your project. Also, le code producted is checked by another developer to respect our commitments in termes of <span class="colored">quality check</span>.</li>
+      title: <span class="colored">Choosing IDCI Consulting, it's enhancing the added value of your partner :</span>
+      paragraph_1:  In terms of skills -<br>You mandate a consultant and you earn the <span class="colored">technical support of our whole team</span> !
+      paragraph_2:  In terms of costs -<br>We own <span class="colored">our propers premises fully equiped for remote work</span>, which is an advantage to avoid travel fees, to improve the carbon balance and optimise your costs !
+      paragraph_3:  In terms of guarantee -<br>Our consultants are backuped, which securise your project. The product code also is read by another developer to respect our <span class="colored">quality bond on deliverables</span>.

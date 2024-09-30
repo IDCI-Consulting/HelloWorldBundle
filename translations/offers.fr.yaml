@@ -39,13 +39,12 @@ offers:
     title: 'Nos offres de services'
     box_1:
       title: <span class="colored">Faîtes confiance à IDCI</span>
-      description:  <li>Nos consultants ne travaillent pas seuls. Bien entourés, ils fournissent des résultats <span class="colored">conformes aux attentes client</span> et aux normes du développement web.</li>
-                    <li>Notre organisation vous assure un <span class="colored">suivi continu</span> de vos projets, même en l'absence de votre consultant attitré.</li>
-                    <li>Nous possédons nos propres locaux pleinement équipés pour le travail à distance. Nous sommes donc <span class="colored">autonomes</span>.</li>
-                    <li>En cas de besoin, vous pouvez bénéficier d'<span class="colored">un second interlocuteur</span>.</li>
+      paragraph_1:  Nos consultants ne travaillent pas seuls. Bien entourés, ils fournissent des résultats <span class="colored">conformes aux attentes client</span> et aux normes du développement web.
+      paragraph_2:  Notre organisation vous assure un <span class="colored">suivi continu</span> de vos projets, même en l'absence de votre consultant attitré.
+      paragraph_3:  Nous possédons nos propres locaux pleinement équipés pour le travail à distance. Nous sommes donc <span class="colored">autonomes</span>.
+      paragraph_4:  En cas de besoin, vous pouvez bénéficier d'<span class="colored">un second interlocuteur</span>.
     box_2:
-      title: <span class="colored">Multipliez votre valeur ajoutée</span>
-      description:  <li>Lorsque vous collaborez avec l'un de nos consultants, il vous apporte le <span class="colored">soutien technique</span> de toute notre équipe afin d'enrichir sa prestation auprès de vous.</li>
-                    <li>Notre travail d'équipe vous offre une mutualisation de <span class="colored">compétences</span> et une <span class="colored">flexibilité</span>.</li>
-                    <li>Nos collaborateurs peuvent <span class="colored">travailler à distance</span> plutôt que dans votre structure, ce qui a pour avantage d'éviter les frais et de diminuer le coût global de la prestation.</li>
-                    <li>Nos consultants sont <span class="colored">backupés</span>, ce qui sécurise votre projet. Le code produit est également revu par un autre développeur afin de respecter nos engagements en terme de <span class="colored">contrôle qualité</span>.</li>
+      title: <span class="colored">Choisir IDCI Consulting, c’est optimiser la valeur ajoutée de votre partenaire :</span>
+      paragraph_1:  En termes de compétences -<br>Vous mandatez un consultant et vous récoltez le <span class="colored">soutien technique de toute notre équipe</span> !
+      paragraph_2:  En termes de coûts -<br>Nous possédons <span class="colored">nos propres locaux pleinement équipés pour le travail à distance</span>, ce qui a pour avantage d'éviter les frais de déplacement, d'améliorer le bilan carbone et d'optimiser vos coûts !
+      paragraph_3:  En termes de sécurité -<br>Nos consultants sont backupés, ce qui sécurise votre projet. Le code produit est également revu par un autre développeur afin de respecter notre <span class="colored">engagement sur la qualité des livrables</span>.
