@@ -42,7 +42,7 @@ tools:
 call_to_action:
   box_1:
     title: 'You are <br/><span class="colored">a company</span> (SME/Group)<br/> and you want to :'
-    paragraph_1:  <a href="offers#">Be advised on <span class="colored">technological choices</span> and on <span class="colored">your future web application conception</span></a>
+    paragraph_1:  <a href="offers#">Be advised on <span class="colored">technological choices</span> and/or be assisted on <span class="colored">your future web application conception</span></a>
     paragraph_2:  <a href="offers#">Offer temporary reinforcements to <span class="colored">your development team</span></a>
     paragraph_3:  <a href="offers#">Train your <span class="colored">collaborators</span></a>
     paragraph_4:  <a href="offers#"><span class="colored">Leave us your project execution</span> and stay focus on your core business</a>
