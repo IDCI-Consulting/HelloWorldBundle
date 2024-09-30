@@ -1,28 +1,27 @@
-<section class="section-container">
-    <section class="section-dynamic-display">
+<section class="section-dynamic-display">
+    <div class="content-container">
         <h1 class="section-dynamic-display-title idci-title-primary">{{ page_title }}</h1>
         <h2 class="section-dynamic-display-subtitle idci-subtitle-primary">{{ section_title }}</h2>
-
         <div class="columns is-mobile">
             <div class="pic-ctn keyframes">
-            {% set slide_count = 0 %}
-            {% for slide in slides %}
-                {% if slide_count < max_slide %}
-                    <div class="columns is-mobile pic">
-                        <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3 carousel-post-media">
-                        <div class="column is-6 carousel-post">
-                            <div class="carousel-post-header">
-                                <p>{{ slide.publicationDate }}</p>
+                {% set slide_count = 0 %}
+                {% for slide in slides %}
+                    {% if slide_count < max_slide %}
+                        <div class="columns is-mobile pic">
+                            <img src="{{ asset('build/images/base/symfony2.svg') }}" class="column is-3 carousel-post-media">
+                            <div class="column is-6 carousel-post">
+                                <div class="carousel-post-header">
+                                    <p>{{ slide.publicationDate }}</p>
+                                </div>
+                                <h3 class="carousel-post-title">{{ slide.name[app.request.locale] }}</h3>
+                                <p class="carousel-post-description">{{ slide.description[app.request.locale] }}</p>
+                                <a href="{{ url(href, {'slug': slide.id}) }}" class="button carousel-post-button">{{ 'blog.read_post'|trans({}, 'blog') }}</a>
                             </div>
-                            <h3 class="carousel-post-title">{{ slide.name[app.request.locale] }}</h3>
-                            <p class="carousel-post-description">{{ slide.description[app.request.locale] }}</p>
-                            <a href="{{ url(href, {'slug': slide.id}) }}" class="button carousel-post-button">{{ 'blog.read_post'|trans({}, 'blog') }}</a>
                         </div>
-                    </div>
-                    {% set slide_count = slide_count + 1 %}
-                {% endif %}
-            {% endfor %}
+                        {% set slide_count = slide_count + 1 %}
+                    {% endif %}
+                {% endfor %}
             </div>
-        </div>
-    </section>
+        <div>
+    </div>
 </section>
