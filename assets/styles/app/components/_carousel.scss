@@ -1,8 +1,8 @@
 .carousel-post {
   padding: 2rem;
 
-  @include until($tablet) {
-    width: 100%;
+  @include until($desktop) {
+    padding: 1rem;
   }
 
   .carousel-post-media {
@@ -10,12 +10,22 @@
     height: 16rem;
     max-width: 250px;
     object-fit: contain;
+
+    @include until ($desktop) {
+      float: none;
+      height: 3rem;
+      margin: 0 auto;
+    }
   }
 
   .carousel-post-content {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+
+    @include until ($desktop) {
+      padding: 1rem;
+    }
 
     .carousel-post-content-header {
       display: flex;
