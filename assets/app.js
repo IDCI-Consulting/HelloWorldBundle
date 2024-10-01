@@ -14,3 +14,4 @@ window.$ = global.$ = global.jQuery = $;
 require('slick-carousel');
 
 require('./slick');
+require('./tab');

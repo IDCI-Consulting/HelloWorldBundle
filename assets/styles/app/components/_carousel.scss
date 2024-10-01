@@ -1,85 +1,70 @@
-.pic-ctn {
-  height: 200px;
-  margin-top: 5rem;
-  width: 100vw;
-
-  .pic {
-    width: 100%;
-  }
-
-  &.keyframes {
-    position: relative;
-    height: 300px;
-  
-    > div {
-      left: 15%;
-      opacity: 0;
-      position: absolute;
-      top: 0;
-
-      @include until($tablet) {
-        left: 0;
-      }
-    }
-  }
-}
-
-.carousel-post-media {
-  max-width: 250px;
-}
-
 .carousel-post {
+  padding: 2rem;
+
   @include until($tablet) {
     width: 100%;
   }
 
-  .carousel-post-header {
+  .carousel-post-media {
+    float: left;
+    height: 16rem;
+    max-width: 250px;
+    object-fit: contain;
+  }
+
+  .carousel-post-content {
     display: flex;
+    flex-direction: column;
+    padding: 2rem;
 
-    p {
-      color: $idci-color-blue;
-      margin-left: 2rem;
+    .carousel-post-content-header {
+      display: flex;
+
+      p {
+        color: $idci-color-blue;
+        margin-left: 2rem;
+      }
+
+      @include until($tablet) {
+        font-size: $idci-font-medium;
+      }
     }
 
-    @include until($tablet) {
-      font-size: $idci-font-medium;
+    .carousel-post-content-title {
+      color: $idci-color-dark-grey;
+      font-size: $idci-font-1-5x;
+      font-weight: bold;
+      margin-top: 1rem;
+      text-transform: uppercase;
+
+      @include until($tablet) {
+        font-size: $idci-font-medium;
+      }
     }
-  }
 
-  .carousel-post-title {
-    color: $idci-color-dark-grey;
-    font-size: $idci-font-1-5x;
-    font-weight: bold;
-    margin-top: 1rem;
-    text-transform: uppercase;
+    .carousel-post-content-description {
+      margin: 1rem 0;
 
-    @include until($tablet) {
-      font-size: $idci-font-medium;
+      @include until($tablet) {
+        font-size: $idci-font-medium;
+      }
     }
-  }
 
-  .carousel-post-description {
-    margin: 1rem 0;
+    .carousel-post-content-button {
+      align-self: flex-end;
+      background-color: $idci-color-blue;
+      color: $idci-color-white;
+      display: block;
+      font-weight: bold;
+      margin: 2rem 0 0 0;
+      padding: .5rem 1rem;
+      text-transform: uppercase;
+      width: fit-content;
 
-    @include until($tablet) {
-      font-size: $idci-font-medium;
-    }
-  }
-
-  .carousel-post-button {
-    background-color: $idci-color-blue;
-    color: $idci-color-white;
-    display: block;
-    font-weight: bold;
-    margin: auto;
-    margin-top: 2rem;
-    padding: .5rem 1rem;
-    text-transform: uppercase;
-    width: fit-content;
-
-    @include until($tablet) {
-      font-size: $idci-font-small;
-      height: auto;
+      @include until($tablet) {
+        font-size: $idci-font-small;
+        height: auto;
+      }
     }
   }
 }

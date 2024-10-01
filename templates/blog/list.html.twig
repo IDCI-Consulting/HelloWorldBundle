@@ -5,9 +5,16 @@
 
     {% include 'widgets/_section_dynamic_display.html.twig' with {
         'page_title': 'Blog',
-        'section_title': 'blog.carousel_title'|trans,
-        'max_slide': 3,
-        'slides': posts,
+        'sliders': [
+            {
+                'title': 'blog.carousel_title_1'|trans,
+                'slides': posts
+            },
+            {
+                'title': 'blog.carousel_title_2'|trans,
+                'slides': testimonies
+            }
+        ],
         'href': 'app_blog_post'
     } %}
 
