@@ -23,17 +23,36 @@ class BlogController extends AbstractController
         $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
         $postsByYears = [];
         $postsByCategories = [];
+        $testimonies = [];
+        $articles = [];
+
+        usort($posts, function ($a, $b) {
+            $dateA = \DateTime::createFromFormat("d/m/Y", $a['publicationDate'])->format('Y-m-d');
+            $dateB = \DateTime::createFromFormat("d/m/Y", $b['publicationDate'])->format('Y-m-d');
+
+            return strtotime($dateA) - strtotime($dateB);
+        });
 
         foreach ($posts as $post) {
             $postYear = \DateTime::createFromFormat('d/m/Y', $post['publicationDate'])->format('Y');
             $postsByYears[$postYear][] = $post;
             $postsByCategories[$post['category']][] = $post;
+
+            if ('Témoignage' === $post['category']) {
+                $testimonies[] = $post;
+            } else {
+                $articles[] = $post;
+            }
         }
+
+        $lastTestimonies = array_slice($testimonies, -3);
+        $lastArticles = array_slice($articles, -3);
 
         return $this->render('blog/list.html.twig', [
             'posts_by_years' => $postsByYears,
             'posts_by_categories' => $postsByCategories,
-            'posts' => $posts
+            'last_articles' => $lastArticles,
+            'last_testimonies' => $lastTestimonies,
         ]);
     }
 

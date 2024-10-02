@@ -1,19 +1,15 @@
 members:
   title: L'equipe
   check_cv: Voir le CV
-  introduction: L’humain est l’ADN d’IDCI consulting. Frédéric et Gabriel Bondaz cofondent la société en 2007, s’appuyant sur la synergie et les spécialités de chacun. Notre équipe travaille avant tout dans une optique d’amélioration continue de la qualité et des méthodologies. <br/><br/> Plus qu’un simple prestataire technique qui va réaliser votre projet, nous sommes impliqués de sa conception à sa maintenance en passant par son infrastructure et vous accompagnons sur le long terme pour le faire évoluer et atteindre toujours de meilleures performances. <br/><br/> Le taux journalier de nos consultants varie en fonction de leur niveau de compétences et de leur expérience. Le TJM est diminué de 20% lorsque le consultant travaille dans nos locaux.
+  introduction: L’humain est l’ADN d’IDCI consulting. S’appuyant sur la synergie et les spécialités de chacun, notre équipe travaille avant tout dans une optique d’amélioration continue de la qualité et des méthodologies. <br/><br/> Plus qu’un simple prestataire technique qui va réaliser votre projet, nous sommes impliqués de sa conception à sa maintenance en passant par son infrastructure et vous accompagnons sur le long terme pour le faire évoluer et atteindre toujours de meilleures performances. <br/><br/> Le taux journalier de nos consultants varie en fonction de leur niveau de compétences et de leur expérience. Il inclut le conseil pouvant être fourni par l’ensemble de l’équipe. Ils sont indiqués sur chaque CV. Le TJM est diminué de 20% lorsque le consultant travaille dans nos locaux.
 
 gabriel:
-  subtitle: Gérant
+  subtitle: Gérant - Expert
   description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
 
 benjamin:
   subtitle: Expert
   description: Enthousiaste de l'informatique et des nouvelles technologies, je suis dans l'âme un bidouilleur curieux, passionné par la culture du web et la liberté qu'elle représente. En tant que développeur web, j'évolue avec passion dans cet univers en constante évolution. Mon expertise se traduit par la création de solutions innovantes et fonctionnelles. Ma démarche professionnelle repose sur une recherche constante d'amélioration et d'apprentissage, ce qui me permet de relever des défis techniques passionnants. A la fois rigoureux et polyvalent, je m'épanouis pleinement dans mon travail, contribuant ainsi à façonner l'expérience utilisateur et à enrichir l'écosystème numérique.
-
-swan:
-  subtitle: Développeur
-  description: Passionné par le développement informatique depuis mon adolescence, c'est le web et ses possibilités infinies qui m'ont conquis aujourd'hui. Fervent enthousiaste du creative coding, je m'intéresse beaucoup aux technologies frontend pouvant amener les applications web dans une toute autre dimension. Aujourd'hui ingénieur logiciel, je m'épanouis depuis 3 ans chez IDCI-Consulting, en réalisant des missions aussi diverses que variées.<br /> <i>Cette présentation n'a pas été écrite par une IA, certifié par GPT lui-même.</i>
 
 vincent:
   subtitle: Développeur

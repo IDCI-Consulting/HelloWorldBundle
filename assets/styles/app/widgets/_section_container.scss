@@ -54,11 +54,6 @@
         background-size: contain;
     }
 
-    &.section-container-media-courses {
-        background-image: url(../../../images/base/learning.jpg);
-        background-size: cover;
-    }
-
     &.section-container-contact {
         @include until($widescreen) {
             flex-direction: column;

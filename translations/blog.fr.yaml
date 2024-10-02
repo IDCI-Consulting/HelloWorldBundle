@@ -1,5 +1,6 @@
 blog:
-  carousel_title: Derniers articles
+  carousel_title_1: Derniers articles
+  carousel_title_2: Derniers témoignages
   all_posts_title: Tous les articles
   by_years: Par dates
   by_categories: Par catégories
