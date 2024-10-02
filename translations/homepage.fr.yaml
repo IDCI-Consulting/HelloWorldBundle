@@ -31,7 +31,7 @@ call_to_action:
       paragraph_4:  <span class="colored">Confier votre projet</span> de mise en œuvre et rester concentré sur votre cœur de métier
     box_2:
       title: 'Vous êtes <span class="colored">une ESN</span><br/> et vous souhaitez :'
-      paragraph_1:  <a href="offers#"><span class="colored">Renforcer vos ressources</span> dans le cadre d’un projet</a>
-      paragraph_2:  <a href="offers#"><span class="colored">Déléguer ponctuellement un expert</span> pour aider votre client à résoudre une problématique technique</a>
-      paragraph_3:  <a href="offers#"><span class="colored">Sous-traiter tout ou partie d’un contrat de services</span> chez un de vos clients</a>
-      paragraph_4:  <a href="offers#"><span class="colored">Former vos collaborateurs ou ceux de vos clients</span> sur les dernières technologies</a>
+      paragraph_1:  <a href="offers#web-development"><span class="colored">Renforcer vos ressources</span> dans le cadre d’un projet</a>
+      paragraph_2:  <a href="offers#consulting"><span class="colored">Déléguer ponctuellement un expert</span> pour aider votre client à résoudre une problématique technique</a>
+      paragraph_3:  <span class="colored">Sous-traiter tout ou partie d’un contrat de services</span> chez un de vos clients
+      paragraph_4:  <a href="offers#courses"><span class="colored">Former vos collaborateurs ou ceux de vos clients</span> sur les dernières technologies</a>
