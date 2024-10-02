@@ -1,6 +1,5 @@
 .section-display-stack {
-    position: absolute;
-    height: 10%;
+    background-color: $idci-color-light-grey;
 
     @include until($widescreen) {
         display: flex;
@@ -8,75 +7,73 @@
         position: inherit;
     }
 
-    .section-display-stack-media {
-        display: block;
-        margin: auto;
-        margin-right: 0;
-        max-height: 500px;
-        object-fit: cover;
+    .content-container {
         position: relative;
-        right: 6rem;
-        top: -60rem;
-        width: 80%;
-        z-index: 0;
 
-        @include until($widescreen) {
-            top: 4rem;
-            right: 0;
-            width: 100%;
-        }
-    }
-
-    .section-display-stack-colored-box {
-        background-color: $idci-color-blue;
-        height: 400px;
-        position: relative;
-        width: 45%;
-        z-index: 50;
-
-        @include until($widescreen) {
-            display: none;
-        }
-    }
-
-    .section-display-stack-description {
-        background-color: $idci-color-white;
-        height: 390px;
-        left: 5rem;
-        padding: 1.5rem;
-        padding-top: 1rem;
-        position: relative;
-        top: -30rem;
-        width: 45%;
-        z-index: 100;
-
-        @include until($widescreen) {
-            left: 0;
-            margin: auto;
-            top: -15rem;
+        .section-display-stack-media {
+            display: block;
+            margin: 7rem 0 7rem auto;
+            max-height: 500px;
+            object-fit: cover;
             width: 80%;
+    
+            @include until($widescreen) {
+                width: 100%;
+            }
         }
-
-        @include until($tablet) {
-            height: auto;
-            top: 6rem;
-            width: 100%;
+    
+        .section-display-stack-colored-box {
+            background-color: $idci-color-blue;
+            height: 400px;
+            position: absolute;
+            top: 20rem;
+            width: 45%;
+            z-index: 50;
+    
+            @include until($widescreen) {
+                display: none;
+            }
         }
-
-        .section-display-stack-description-title {
-            border-bottom: 2px solid $idci-color-blue;
-            font-size: $idci-font-1-5x;
-            padding: 1rem;
-            text-transform: uppercase;
+    
+        .section-display-stack-description {
+            background-color: $idci-color-white;
+            height: 390px;
+            left: 11rem;
+            padding: 1.5rem;
+            padding-top: 1rem;
+            position: absolute;
+            top: 15rem;
+            width: 45%;
+            z-index: 100;
+    
+            @include until($widescreen) {
+                left: 0;
+                margin: auto;
+                top: -15rem;
+                width: 80%;
+            }
+    
+            @include until($tablet) {
+                height: auto;
+                top: 6rem;
+                width: 100%;
+            }
+    
+            .section-display-stack-description-title {
+                border-bottom: 2px solid $idci-color-blue;
+                font-size: $idci-font-1-5x;
+                padding: 1rem;
+                text-transform: uppercase;
+            }
+    
+            .section-display-stack-description-content {
+                font-size: $idci-font-larger;
+                margin-top: 2rem;
+            }
         }
-
-        .section-display-stack-description-content {
-            font-size: $idci-font-larger;
-            margin-top: 2rem;
+    
+        .colored {
+            color: $idci-color-blue;
         }
-    }
-
-    .colored {
-        color: $idci-color-blue;
     }
 }

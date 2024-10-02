@@ -29,6 +29,8 @@
         ]
     } %}
 
+    <div class="transparent-box top-secondary bottom-secondary"></div>
+
     {% include 'widgets/_section_choices.html.twig' with {
         'title': ('offers.options_list.title')|trans,
         'subtitle': ('offers.options_list.subtitle')|trans,
@@ -55,39 +57,5 @@
                 'secondary': true
             }
         ]
-    } %}
-
-    <div class="transparent-box"></div>
-
-    {% include 'widgets/_section_display_stack.html.twig' with {
-        'title': 'offers.company_concept.title'|trans,
-        'paragraphs': [
-            'offers.company_concept.description'|trans
-        ],
-        'media': {
-            'src': asset('build/images/base/working-on-computer.jpg'),
-            'alt': 'working-on-computer'|trans({}, 'alt')
-        }
-    } %}
-
-    <div class="transparent-box even"></div>
-
-    {% include 'widgets/_section_choices.html.twig' with {
-        'boxes': [
-            {
-                'title': ('offers.call_to_action.box_1.title')|trans,
-                'paragraphs': [
-                    ('offers.call_to_action.box_1.description')|trans
-                ]
-            },
-            {
-                'title': ('offers.call_to_action.box_2.title')|trans,
-                'paragraphs': [
-                    ('offers.call_to_action.box_2.description')|trans
-                ],
-                'color': 'secondary'
-            },
-        ],
-        'contact_button': true
     } %}
 {% endblock %}

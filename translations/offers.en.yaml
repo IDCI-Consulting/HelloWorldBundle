@@ -1,26 +1,4 @@
 offers:
-  call_to_action:
-    box_1:
-      title: 'You are <br/><span class="colored">a company</span> (SME/Group)<br/> and you want to :'
-      description:    <li>Be advised on <span class="colored">technological choices</span> and on <span class="colored">your future web application conception</span></li>
-                      <li>Offer temporary reinforcements to <span class="colored">your development team</span></li>
-                      <li>Train your <span class="colored">collaborators</span></li>
-                      <li><span class="colored">Leave us your project execution</span> and stay focus on your core business</li>
-    
-    box_2:
-      title: 'You are <br/><span class="colored">a Software firm</span><br/> and you want :'
-      description:    <li><span class="colored">Reinforce your resources</span> in the context of a project</li>
-                      <li><span class="colored">Delegate punctually to an expert</span> to help your client in order to solve his technical issue</li>
-                      <li><span class="colored">Subcontract an entire services contract</span> from your client, or just a part of it.</li>
-                      <li><span class="colored">Train your collaborators, or your client\s ones</span>, on the new technologies.</li>
-
-  company_concept:
-    title: An innovantive answer
-    description:  'IDCI consulting (LLC), created in 2007, is a group of experts on the web technologies
-                  that permanantly works on differnt missions while keeping the possibility to communicate with each other and share their knowledges. 
-                  Individually or as a team, we are able to bring a certain value for your project at every step of its life cycle, 
-                  without commitment from your side and on a minimal duration of collaboration. We exclusively intervene with IT management contracts.'
-
   options_list:
     title: Depending of the task and expertise of your teams
     subtitle: you can choose to...

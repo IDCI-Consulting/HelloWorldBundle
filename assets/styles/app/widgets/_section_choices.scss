@@ -1,40 +1,40 @@
 .section-choices {
-    .section-choices-title {
-        color: $idci-color-dark-grey;
-        font-weight: bold;
+    background-color: $idci-color-whitesmoke;
 
-        @include until($desktop) {
+    .content-container {
+        .section-choices-title {
+            color: $idci-color-dark-grey;
+            font-weight: bold;
+    
+            @include until($desktop) {
+                margin-top: 4rem;
+            }
+    
+            &.section-choices-title-secondary {
+                font-size: $idci-font-1-5x;
+                letter-spacing: inherit;
+                text-transform: none;
+            }
+        }
+    
+        .section-choices-subtitle {
+            &.section-choices-subtitle-secondary {
+                color: $idci-color-blue;
+                font-size: $idci-font-1-5x;
+                letter-spacing: inherit;
+                text-transform: none;
+            }
+        }
+    
+        .section-choices-items {
+            column-gap: 2rem;
+            display: flex;
+            justify-content: center;
             margin-top: 4rem;
+    
+            @include until($desktop) {
+                flex-direction: column;
+            }
         }
-
-        &.section-choices-title-secondary {
-            font-size: $idci-font-1-5x;
-            letter-spacing: inherit;
-            text-transform: none;
-        }
-    }
-
-    .section-choices-subtitle {
-        &.section-choices-subtitle-secondary {
-            color: $idci-color-blue;
-            font-size: $idci-font-1-5x;
-            letter-spacing: inherit;
-            text-transform: none;
-        }
-    }
-
-    .section-choices-items {
-        column-gap: 2rem;
-        display: flex;
-        justify-content: center;
-        margin-top: 4rem;
-
-        @include until($desktop) {
-            flex-direction: column;
-        }
-    }
-
-    .colored {
-        color: $idci-color-blue;
     }
 }

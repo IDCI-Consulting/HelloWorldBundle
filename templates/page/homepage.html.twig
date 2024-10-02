@@ -8,10 +8,7 @@
     <div class="navbox" id="navbox">
         <ul>
             <li class="active"><a href="#specialization"> {{ 'specialization.subtitle'|trans }} </a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#consulting">{{ 'consulting.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#courses">{{ 'courses.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#web-development">{{ 'web_development.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#open-source">{{ 'open_source.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li><a href="#innovation"> {{ 'company_concept.title'|trans }} </a><i class="fa-solid fa-circle fa-xs"></i></li>
             <li><a href="#methodology">{{ 'methodology.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
             <li><a href="#tools">{{ 'tools.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
         </ul>
@@ -21,112 +18,87 @@
         <source src="{{ asset('build/images/base/typing.mp4') }}" type="video/mp4">
     </video>
 
-    <section class="section-container section-container-90 section-container-secondary section-container-media-primary" id="specialization">
-        {% include 'widgets/_section_presentation.html.twig' with {
-            'title': 'specialization.title'|trans,
-            'subtitle': 'specialization.subtitle'|trans,
-            'paragraphs': [
-                'specialization.paragraph_1'|trans
-            ],
-            'button': {
-                'href': '#consulting'
-            },
-            'tags': true
-        } %}
-    </section>
+    {% embed 'widgets/_section_presentation.html.twig' with {
+        'nav_element': true,
+        'background_media': true,
+        'id': 'specialization',
+        'title': 'specialization.title'|trans,
+        'subtitle': 'specialization.subtitle'|trans,
+        'paragraphs': [
+            'specialization.paragraph_1'|trans
+        ],
+        'button': {
+            'href': '#consulting'
+        },
+        'tags': true,
+    } %}
+        {% block widget %}
+            {% trans_default_domain 'homepage' %}
+            {% include 'widgets/_section_choices.html.twig' with {
+                'title': '',
+                'subtitle': '',
+                'boxes': [
+                    {
+                        'title': ('call_to_action.box_1.title')|trans,
+                        'paragraphs': [
+                            ('call_to_action.box_1.paragraph_1')|trans,
+                            ('call_to_action.box_1.paragraph_2')|trans,
+                            ('call_to_action.box_1.paragraph_3')|trans,
+                            ('call_to_action.box_1.paragraph_4')|trans
+                        ]
+                    },
+                    {
+                        'title': ('call_to_action.box_2.title')|trans,
+                        'paragraphs': [
+                            ('call_to_action.box_2.paragraph_1')|trans,
+                            ('call_to_action.box_2.paragraph_2')|trans,
+                            ('call_to_action.box_2.paragraph_3')|trans,
+                            ('call_to_action.box_2.paragraph_4')|trans,
+                        ],
+                        'color': 'secondary'
+                    },
+                ]
+            } %}
+        {% endblock %}
+    {% endembed %}
 
     <div class="transparent-box"></div>
 
-    <section class="section-container section-container-90 section-container-primary" id="consulting">
-        {% include 'widgets/_section_presentation.html.twig' with {
-            'title': 'consulting.title'|trans,
-            'subtitle': 'consulting.subtitle'|trans,
-            'paragraphs': [
-                'consulting.paragraph_1'|trans,
-                'consulting.paragraph_2'|trans,
-                'consulting.paragraph_3'|trans
-            ],
-            'media': {
-                'src': asset('build/images/base/conseil.svg'),
-                'alt': 'conseil'|trans({}, 'alt')
-            }
-        } %}
-    </section>
+    {% include 'widgets/_section_display_stack.html.twig' with {
+        'nav_element': true,
+        'id': 'innovation',
+        'title': 'company_concept.title'|trans,
+        'paragraphs': [
+            'company_concept.description'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/working-on-computer.jpg'),
+            'alt': 'working-on-computer'|trans({}, 'alt')
+        }
+    } %}
+
+    <div class="transparent-box"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'nav_element': true,
+        'id': 'methodology',
+        'background_secondary': true,
+        'subtitle': 'methodology.subtitle'|trans,
+        'paragraphs': [
+            'methodology.paragraph_1'|trans,
+            'methodology.paragraph_2'|trans,
+            'methodology.paragraph_3'|trans
+        ],
+        'media': {
+        'src': asset('build/images/base/agile.svg'),
+        'alt': 'agile'|trans({}, 'alt')
+        }
+    } %}
 
     <div class="transparent-box even bottom-secondary"></div>
 
-    <section class="section-container section-container-90 section-container-secondary" id="courses">
-        {% set cie_age = 'now'|date("Y") - 2008 %}
-        {% include 'widgets/_section_presentation.html.twig' with {
-            'title': 'courses.title'|trans,
-            'subtitle': 'courses.subtitle'|trans,
-            'paragraphs': [
-                'courses.paragraph_1'|trans({'%cie_age%': cie_age}),
-            ],
-            'media': {
-                'src': asset('build/images/base/formation.svg'),
-                'alt': 'formation'|trans({}, 'alt')
-            },
-            'courses': true
-        } %}
-    </section>
-
-    <div class="transparent-box top-secondary"></div>
-
-    <section class="section-container section-container-90 section-container-primary" id="web-development">
-        {% include 'widgets/_section_presentation.html.twig' with {
-            'title': 'web_development.title'|trans,
-            'subtitle': 'web_development.subtitle'|trans,
-            'paragraphs': [
-                'web_development.paragraph_1'|trans,
-                'web_development.paragraph_2'|trans
-            ],
-            'media': {
-            'src': asset('build/images/base/code-writing.gif'),
-            'alt': 'developpement-web'|trans({}, 'alt')
-            }
-        } %}
-    </section>
-
-    <div class="transparent-box even bottom-secondary"></div>
-
-    <section class="section-container section-container-90 section-container-secondary" id="open-source">
-        {% include 'widgets/_section_presentation.html.twig' with {
-            'title': 'open_source.title'|trans,
-            'subtitle': 'open_source.subtitle'|trans,
-            'paragraphs': [
-                'open_source.paragraph_1'|trans,
-                'open_source.paragraph_2'|trans,
-                'open_source.paragraph_3'|trans
-            ],
-            'media': {
-            'src': asset('build/images/base/opensource.svg'),
-            'alt': 'opensource'|trans({}, 'alt')
-            }
-        } %}
-    </section>
-
-    <div class="transparent-box top-secondary"></div>
-
-    <section class="section-container section-container-90 section-container-primary" id="methodology">
-        {% include 'widgets/_section_presentation.html.twig' with {
-            'subtitle': 'methodology.subtitle'|trans,
-            'paragraphs': [
-                'methodology.paragraph_1'|trans,
-                'methodology.paragraph_2'|trans,
-                'methodology.paragraph_3'|trans
-            ],
-            'media': {
-            'src': asset('build/images/base/agile.svg'),
-            'alt': 'agile'|trans({}, 'alt')
-            }
-        } %}
-    </section>
-
-    <div class="transparent-box even bottom-secondary"></div>
-
-    <section class="section-container section-container-90 section-container-secondary" id="tools">
-        <section class="section-presentation">
+    <section class="section-presentation section-navigation" id="tools">
+        <div class="content-container">
             <h3 class="section-presentation-subtitle idci-subtitle-primary">{{ 'tools.subtitle'|trans }}</h3>
             <img src="{{ asset('build/images/base/icon-outils.svg') }}" alt="{{ 'icon-outils'|trans({}, 'alt') }}" class="section-presentation-icon">
             <div class="columns section-presentation-columns">
@@ -186,7 +158,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 {% endblock %}
 
@@ -195,7 +167,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let navboxLinks = document.getElementById('navbox').querySelectorAll('ul li');
-            let sections = document.getElementsByClassName('section-container');
+            let sections = document.getElementsByClassName('section-navigation');
             let sectionsStarts = [];
             let currentLink;
 
