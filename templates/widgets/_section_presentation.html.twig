@@ -31,5 +31,9 @@
 
         {% block widget %}
         {% endblock %}
+
+        {% if link is defined and link is not null and link is not empty %}
+            <a href="{{ link.href }}" class="button section-presentation-button">{{ link.label }}</a>
+        {% endif %}
     </div>
 </section>
