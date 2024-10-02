@@ -12,17 +12,44 @@ offers:
       title: A consulting
       description: Assure yourself a collaboration and a support until you totally master your project
 
+  consulting:
+    title: We are doing
+    subtitle: Consulting and Expertise
+    paragraph_1: Our team works above all as a skills centre. Our experts like to share their knowledge and their experience. We can intervene on demand, to support your developers when they are facing a technical challenge.
+    paragraph_2: Thanks to a constant technological watch, <span class="blue-colored-description-text">IDCI-Consulting renews and develop its knowlegdes</span>.
+    paragraph_3: We train ourselves everyday looking for excellence.
+    paragraph_4: "We take action on the different steps of your informatic projects :</br><span class=\"blue-colored-description-text\">define your goals, technical solutions, web app structures, deployement and optimization...</span>"
+
+  courses:
+    title: We are doing
+    subtitle: Courses
+    paragraph_1: Our team base its added value on the perpetual quest of new knowledges. Thus, share it is a true pleasure which allow, in addition, to our consultants to vary their tasks and acquire pedagogical skills
+    paragraph_2: <span class="blue-colored-description-text">Strong of our %cie_age% experience years</span>, wa can intervene or host courses around the development of <span class="blue-colored-description-text">web application with high traffic</span> and <span class="blue-colored-description-text">good practices</span> using a complex DevOps stack (containerisation (docker) + CI/CD (GitLab, Jenkins) + version manager (Git) + tests (PHP Unit, Behat)).
+    paragraph_3: <i>We are not a training organisation.</i>
+  
+  web_development:
+    title: We are doing
+    subtitle: Web development
+    paragraph_1: IDCI have an expertise in web development, specialized on <span class="blue-colored-description-text">Symfony PHP framework</span> (since the first version until more recent ones).
+    paragraph_2: Moreover, we also are working with the <span class="blue-colored-description-text">NodeJS framework</span>, and always are enthusiasts to discover promising <span class="blue-colored-description-text">new technologies</span>.
+
+  open_source:
+    title: Our philosophy
+    subtitle: Open source
+    paragraph_1: <span class="green-colored-description-text">Sharing and openness</span> to others are anchored in the philosophy of our company.
+    paragraph_2: For each of our projects, we contribute as soon as possible to <span class="green-colored-description-text">the development of open-source tools </span> that we use everyday, so everyone can keep growing and prospering, whether it be our clients or open-source community members.
+    paragraph_3: We publish and maintain available source code on <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">our Github repository.</a>
+
   company_assets:
     title: 'Our offers of services'
     box_1:
       title: <span class="colored">Trust IDCI</span>
-      description:  <li>Our consultants aren't working alone. Well surrounded, they provide <span class="colored">faithful to customer's expectations</span> and to web development standards results.</li>
-                    <li>Our organisation assure you a <span class="colored">continuous follow-up</span> of your projects, even in the absence of your regular consultant.</li>
-                    <li>We own our own premises fully equiped for remote work. So, we are <span class="colored">self-sufficient</span>.</li>
-                    <li>In case of need, you can benefit of a <span class="colored">secondary interlocutor</span>.</li>
+      paragraph_1:  Our consultants aren't working alone. Well surrounded, they provide <span class="colored">faithful to customer's expectations</span> and to web development standards results.
+      paragraph_2:  Our organisation assure you a <span class="colored">continuous follow-up</span> of your projects, even in the absence of your regular consultant.
+      paragraph_3:  We own our own premises fully equiped for remote work. So, we are <span class="colored">self-sufficient</span>.
+      paragraph_4:  In case of need, you can benefit of a <span class="colored">secondary interlocutor</span>.
     box_2:
-      title: <span class="colored">Multiply your added value</span>
-      description:  <li>When you collaborate with one of our consultants, he brings you the <span class="colored">tecnic support</span> of all our team to supplement his delivery to you.</li>
-                    <li>Our teamwork offers you a mutualisation of <span class="colored">skills</span> and <span class="colored">flexibility</span>.</li>
-                    <li>Our staff can <span class="colored">remotly work</span> instead of going to your facility, which allow you to avoid the fees and reduce the global cost of the delivery.</li>
-                    <li>Our consultants are <span class="colored">backuped</span>, which secure your project. Also, le code producted is checked by another developer to respect our commitments in termes of <span class="colored">quality check</span>.</li>
+      title: <span class="colored">Choosing IDCI Consulting, it's enhancing the added value of your partner :</span>
+      paragraph_1:  In terms of skills -<br>You mandate a consultant and you earn the <span class="colored">technical support of our whole team</span> !
+      paragraph_2:  In terms of costs -<br>We own <span class="colored">our propers premises fully equiped for remote work</span>, which is an advantage to avoid travel fees, to improve the carbon balance and optimise your costs !
+      paragraph_3:  In terms of guarantee -<br>Our consultants are backuped, which securise your project. The product code also is read by another developer to respect our <span class="colored">quality bond on deliverables</span>.

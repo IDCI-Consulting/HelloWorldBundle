@@ -16,17 +16,23 @@
             {
                 'title': ('offers.company_assets.box_1.title')|trans,
                 'paragraphs': [
-                    ('offers.company_assets.box_1.description')|trans
+                    ('offers.company_assets.box_1.paragraph_1')|trans,
+                    ('offers.company_assets.box_1.paragraph_2')|trans,
+                    ('offers.company_assets.box_1.paragraph_3')|trans,
+                    ('offers.company_assets.box_1.paragraph_4')|trans
                 ]
             },
             {
                 'title': ('offers.company_assets.box_2.title')|trans,
                 'paragraphs': [
-                    ('offers.company_assets.box_2.description')|trans
+                    ('offers.company_assets.box_2.paragraph_1')|trans,
+                    ('offers.company_assets.box_2.paragraph_2')|trans,
+                    ('offers.company_assets.box_2.paragraph_3')|trans,
                 ],
                 'color': 'secondary'
             }
-        ]
+        ],
+        'big': true
     } %}
 
     <div class="transparent-box top-secondary bottom-secondary"></div>
@@ -57,5 +63,86 @@
                 'secondary': true
             }
         ]
+    } %}
+
+    <div class="transparent-box top-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'background_secondary': true,
+        'id': 'consulting',
+        'title': 'offers.consulting.title'|trans,
+        'subtitle': 'offers.consulting.subtitle'|trans,
+        'paragraphs': [
+            'offers.consulting.paragraph_1'|trans,
+            'offers.consulting.paragraph_2'|trans,
+            'offers.consulting.paragraph_3'|trans,
+            'offers.consulting.paragraph_4'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/conseil.svg'),
+            'alt': 'conseil'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
+    <div class="transparent-box even bottom-secondary"></div>
+
+    {% set cie_age = 'now'|date("Y") - 2008 %}
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'id': 'courses',
+        'title': 'offers.courses.title'|trans,
+        'subtitle': 'offers.courses.subtitle'|trans,
+        'paragraphs': [
+            'offers.courses.paragraph_1'|trans,
+            'offers.courses.paragraph_2'|trans({'%cie_age%': cie_age}),
+            'offers.courses.paragraph_3'|trans,
+        ],
+        'media': {
+            'src': asset('build/images/base/formation.svg'),
+            'alt': 'formation'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
+    <div class="transparent-box top-secondary bottom-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'id': 'web-development',
+        'title': 'offers.web_development.title'|trans,
+        'subtitle': 'offers.web_development.subtitle'|trans,
+        'paragraphs': [
+            'offers.web_development.paragraph_1'|trans,
+            'offers.web_development.paragraph_2'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/code-writing.gif'),
+            'alt': 'developpement-web'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
+    <div class="transparent-box even top-secondary bottom-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'title': 'offers.open_source.title'|trans,
+        'subtitle': 'offers.open_source.subtitle'|trans,
+        'paragraphs': [
+            'offers.open_source.paragraph_1'|trans,
+            'offers.open_source.paragraph_2'|trans,
+            'offers.open_source.paragraph_3'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/opensource.svg'),
+            'alt': 'opensource'|trans({}, 'alt')
+        }
     } %}
 {% endblock %}

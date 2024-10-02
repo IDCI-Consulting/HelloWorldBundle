@@ -4,6 +4,6 @@
     padding: 4rem;
 
     @include until($desktop) {
-        padding: 2rem;
+        padding: 1rem;
     }
 }

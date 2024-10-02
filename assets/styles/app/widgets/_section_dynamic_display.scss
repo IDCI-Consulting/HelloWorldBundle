@@ -9,12 +9,24 @@
     }
 
     .section-dynamic-display-navigation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: $idci-font-2x;
         text-align: center;
 
         .section-dynamic-display-navigation-label {
             color: $idci-color-dark-grey;
             font-size: $idci-font-2x;
+            justify-self: end;
             margin-top: 5rem;
+            padding: 0 2rem;
+            text-align: right;
+
+            @include until ($tablet){
+                font-size: $idci-font-medium;
+                letter-spacing: normal;
+                padding: 0 1rem;
+            }
 
             &.selected {
                 text-decoration: underline;
@@ -23,6 +35,12 @@
             &:hover {
                 cursor: pointer;
                 text-decoration: underline;
+            }
+
+            &:not(:first-child) {
+                border-left: 1px solid $idci-color-dark-grey;
+                justify-self: start;
+                text-align: left;
             }
         }
 
