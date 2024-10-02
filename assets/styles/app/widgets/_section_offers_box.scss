@@ -27,6 +27,7 @@
         background-color: $idci-color-white;
         box-shadow: 0 0 10px $idci-color-dark-grey;
         font-size: $idci-font-larger;
+        min-height: 24rem;
         margin-top: 2rem;
         padding: 1.5rem;
 
@@ -36,7 +37,7 @@
         }
 
         &.section-offers-box-description-bigger {
-            min-height: 500px;
+            min-height: 30rem;
             text-align: center;
 
             @include until($desktop) {

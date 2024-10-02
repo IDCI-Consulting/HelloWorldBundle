@@ -13,7 +13,7 @@
             {% for box in boxes %}
                 <section class="section-offers-box section-offers-box-{{ box.color|default('primary') }}">
                     <h2 class="section-offers-box-title{% if title_light is defined and title_light is same as (true) %} section-offers-box-title-light{% endif %}">{{ box.title|raw }}</h2>
-                    <ul class="section-offers-box-description{% if box.secondary is defined and box.secondary is same as true %}-secondary{% endif %}">
+                    <ul class="section-offers-box-description{% if box.secondary is defined and box.secondary is same as true %}-secondary{% endif %}{% if big is defined and big is same as (true) %} section-offers-box-description-bigger{% endif %}">
                         {% for paragraph in box.paragraphs %}
                             <li>
                                 {{ paragraph|raw }}
