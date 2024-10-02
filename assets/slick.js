@@ -1,18 +1,13 @@
-$(document).ready(function() {
-    var elements = document.getElementsByClassName("pic-ctn");
-    Array.from(elements).forEach((element) => {
-        element.classList.remove("keyframes");
-        element.classList.add("carousel-single-item");
-    });
-
-    $('.pic-ctn').slick({
+$(document).ready(function(){
+    $('.section-dynamic-display-content').slick({
         dots: false,
         arrows: true,
-        prevArrow: '<button class="slide-arrow prev"><img src="/build/images/base/balise-left.svg" alt="previous arrow" class="slide-arrow-media"></button>',
-        nextArrow: '<button class="slide-arrow next"><img src="/build/images/base/balise-right.svg" alt="next arrow" class="slide-arrow-media"></button>',
+        prevArrow: '<button class="button slide-arrow prev"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button class="button slide-arrow next"><i class="fas fa-chevron-right"></i></button>',
+        autoplay: true,
+        infinite: true,
+        speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3500,
     });
 });

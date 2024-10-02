@@ -1,0 +1,9 @@
+.content-container {
+    margin: 0 auto;
+    max-width: 150rem;
+    padding: 4rem;
+
+    @include until($desktop) {
+        padding: 2rem;
+    }
+}

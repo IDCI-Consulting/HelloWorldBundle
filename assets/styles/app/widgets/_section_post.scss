@@ -38,6 +38,33 @@
         margin: auto;
         margin-top: 1rem;
         margin-bottom: 1rem;
+
+        a {
+            color: $idci-color-blue;
+
+            &:hover {
+                filter: brightness(1.5);
+            }
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    blockquote {
+        font-style: italic;
+        padding: 0 3rem;
+
+        &::after {
+            content: '»';
+        }
+
+        &::before {
+            content: '«';
+        }
+
     }
 
     iframe {
