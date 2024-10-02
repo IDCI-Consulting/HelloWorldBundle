@@ -23,3 +23,12 @@
         }
     }
 }
+
+.slick-slider {
+    align-items: center;
+    display: flex;
+
+    .slick-arrow {
+        height: fit-content;
+    }
+}

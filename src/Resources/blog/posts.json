@@ -46,5 +46,53 @@
             "fr": "L'équipe d'IDCI vous souhaite une très bonne année. Nous vous souhaitons de continuer à explorer vos idées et votre créativité. Tester de nouvelles choses et ...",
             "en": "The IDCI team wishes you a very happy new year. We wish you to keep explorating your ideas and your creativity. Try new things and ..."
         }
+    },
+    {
+        "id": "horlogerie-maier",
+        "available_languages": ["fr", "en"],
+        "name": {
+            "fr": "Horlogerie Maier, client depuis 2018",
+            "en": "Maier watchmaking, customer since 2018"
+        },
+        "media": "blog/maier-logo.jpg",
+        "publicationDate": "30/09/2024",
+        "author": "Frédéric Bondaz",
+        "category": "Témoignage",
+        "description": {
+            "fr": "Découvrez l'expérience de l'horlogerie Maier chez IDCI-consulting",
+            "en": "Discover the experience of Maier watchmaking at IDCI-consulting"
+        }
+    },
+    {
+        "id": "tessi-marketing",
+        "available_languages": ["fr", "en"],
+        "name": {
+            "fr": "Tessi marketing, client de 2014 à 2019",
+            "en": "Tessi marketing, customer from 2014 until 2019"
+        },
+        "media": "blog/tessi-logo.jpg",
+        "publicationDate": "30/09/2024",
+        "author": "Frédéric Bondaz",
+        "category": "Témoignage",
+        "description": {
+            "fr": "Découvrez l'expérience de Tessi marketing chez IDCI-consulting",
+            "en": "Discover the experience of Tessi marketing at IDCI-consulting"
+        }
+    },
+    {
+        "id": "sejer",
+        "available_languages": ["fr", "en"],
+        "name": {
+            "fr": "SEJER, client depuis 2016",
+            "en": "SEJER, customer since 2016"
+        },
+        "media": "blog/sejer-logo.png",
+        "publicationDate": "30/09/2024",
+        "author": "Frédéric Bondaz",
+        "category": "Témoignage",
+        "description": {
+            "fr": "Découvrez l'expérience de SEJER chez IDCI-consulting",
+            "en": "Discover the experience of SEJER at IDCI-consulting"
+        }
     }
 ]
