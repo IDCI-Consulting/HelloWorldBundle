@@ -80,6 +80,10 @@
         'media': {
             'src': asset('build/images/base/conseil.svg'),
             'alt': 'conseil'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
         }
     } %}
 
@@ -99,7 +103,10 @@
             'src': asset('build/images/base/formation.svg'),
             'alt': 'formation'|trans({}, 'alt')
         },
-        'courses': true
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
     } %}
 
     <div class="transparent-box top-secondary bottom-secondary"></div>
@@ -113,8 +120,12 @@
             'offers.web_development.paragraph_2'|trans
         ],
         'media': {
-        'src': asset('build/images/base/code-writing.gif'),
-        'alt': 'developpement-web'|trans({}, 'alt')
+            'src': asset('build/images/base/code-writing.gif'),
+            'alt': 'developpement-web'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
         }
     } %}
 
@@ -129,8 +140,8 @@
             'offers.open_source.paragraph_3'|trans
         ],
         'media': {
-        'src': asset('build/images/base/opensource.svg'),
-        'alt': 'opensource'|trans({}, 'alt')
+            'src': asset('build/images/base/opensource.svg'),
+            'alt': 'opensource'|trans({}, 'alt')
         }
     } %}
 {% endblock %}
