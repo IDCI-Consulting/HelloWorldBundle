@@ -3,9 +3,6 @@
         <h1 class="section-dynamic-display-title idci-title-primary">{{ page_title }}</h1>
         <div class="section-dynamic-display-navigation">
             {% for slider in sliders %}
-                {% if 1 < loop.index %}
-                    <span>|</span>
-                {% endif %}
                 <label class="section-dynamic-display-navigation-label tab-label idci-subtitle-primary{% if 1 == loop.index %} selected{% endif %}" for="carousel-{{ loop.index }}">{{ slider.title }}</label>
             {% endfor %}
         </div>
