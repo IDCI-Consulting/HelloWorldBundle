@@ -64,7 +64,7 @@
         ]
     } %}
 
-    <div class="transparent-box"></div>
+    <div class="transparent-box top-secondary"></div>
 
     {% include 'widgets/_section_presentation.html.twig' with {
         'background_secondary': true,
@@ -102,7 +102,7 @@
         'courses': true
     } %}
 
-    <div class="transparent-box top-secondary"></div>
+    <div class="transparent-box top-secondary bottom-secondary"></div>
 
     {% include 'widgets/_section_presentation.html.twig' with {
         'id': 'web-development',
@@ -118,7 +118,7 @@
         }
     } %}
 
-    <div class="transparent-box even bottom-secondary"></div>
+    <div class="transparent-box even top-secondary bottom-secondary"></div>
 
     {% include 'widgets/_section_presentation.html.twig' with {
         'title': 'offers.open_source.title'|trans,
@@ -131,19 +131,6 @@
         'media': {
         'src': asset('build/images/base/opensource.svg'),
         'alt': 'opensource'|trans({}, 'alt')
-        }
-    } %}
-
-    <div class="transparent-box top-secondary"></div>
-
-    {% include 'widgets/_section_display_stack.html.twig' with {
-        'title': 'offers.company_concept.title'|trans,
-        'paragraphs': [
-            'offers.company_concept.description'|trans
-        ],
-        'media': {
-            'src': asset('build/images/base/working-on-computer.jpg'),
-            'alt': 'working-on-computer'|trans({}, 'alt')
         }
     } %}
 {% endblock %}

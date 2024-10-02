@@ -33,6 +33,13 @@ offers:
     paragraph_1: IDCI dispose d'une expertise dans le développement web, spécialisée sur <span class="blue-colored-description-text">le framework PHP Symfony</span> (depuis la première version jusqu'aux plus récentes).
     paragraph_2: Plus encore, nous travaillons également avec le <span class="blue-colored-description-text">framework NodeJS</span>, et sommes toujours enthousiastes à l'idée de découvrir de <span class="blue-colored-description-text">nouvelles technologies</span> prometteuses.
 
+  open_source:
+    title: Notre philosophie
+    subtitle: Open source
+    paragraph_1: <span class="green-colored-description-text">Le partage et l'ouverture</span> aux autres sont ancrés dans la philosophie de l'entreprise.
+    paragraph_2: Pour chacun de nos projets, nous contribuons dès que possible au <span class="green-colored-description-text">développement des outils open-source</span> que nous utilisons tous les jours, pour que chacun puisse s'épanouir et prospérer, que ce soit nos clients ou les membres de la communauté open-source.
+    paragraph_3: Nous publions et maintenons du code source accessible sur <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">notre repository Github.</a>
+
   company_assets:
     title: 'Nos offres de services'
     box_1:
