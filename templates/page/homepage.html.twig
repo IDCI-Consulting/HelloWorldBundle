@@ -166,10 +166,17 @@
     {{ parent() }}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const HEADER_HEIGHT = document.querySelector('header').offsetHeight;
             let navboxLinks = document.getElementById('navbox').querySelectorAll('ul li');
             let sections = document.getElementsByClassName('section-navigation');
             let sectionsStarts = [];
             let currentLink;
+
+            if (window.location.hash) {
+                currentLink = Object.values(navboxLinks).filter((navboxLink) => navboxLink.firstChild.href.includes(window.location.hash));
+                navboxLinks[0].classList.remove('active');
+                currentLink[0].classList.add('active');
+            }
 
             Array.from(sections).forEach((element, index) => {
                 sectionsStarts[index] = element.getBoundingClientRect()['y'] - document.body.getBoundingClientRect()['y'];
@@ -178,7 +185,7 @@
             window.addEventListener('scroll', function scroll() {
                 for (const key in sectionsStarts) {
                     navboxLinks[key].classList.remove('active');
-                    if (this.scrollY >= sectionsStarts[key]) {
+                    if (this.scrollY + HEADER_HEIGHT >= sectionsStarts[key]) {
                         currentLink = key;
                     }
                 }
