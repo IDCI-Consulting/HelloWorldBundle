@@ -130,6 +130,27 @@
         }
     } %}
 
+    <div class="transparent-box top-secondary bottom-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'id': 'delegate',
+        'title': 'offers.delegate.title'|trans,
+        'subtitle': 'offers.delegate.subtitle'|trans,
+        'paragraphs': [
+            'offers.delegate.paragraph_1'|trans,
+            'offers.delegate.paragraph_2'|trans,
+            'offers.delegate.paragraph_3'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/delegate.png'),
+            'alt': 'developpement-web'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
     <div class="transparent-box even top-secondary bottom-secondary"></div>
 
     {% include 'widgets/_section_presentation.html.twig' with {
