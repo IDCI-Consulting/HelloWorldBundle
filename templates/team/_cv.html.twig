@@ -1,7 +1,7 @@
 {% trans_default_domain 'cv' %}
 
-<section class="section-container section-container-full">
     <section class="section-cv">
+        <div class="content-container">
         <section class="columns is-multiline is-centered section-cv-header">
             <h1 class="column is-12 section-cv-title idci-title-secondary">{{ 'cv.title'|trans }}</h1>
             <p class="column is-6 section-cv-label">{{ data.identity.firstName }} {{ data.identity.lastName }} | {{ data.identity.job[app.request.locale] }}</p>
@@ -51,13 +51,34 @@
                             {{ 'cv.at'|trans }} {{ professionalExperience.company }}
                         {% endif %}
                     </p>
-                    {% if professionalExperience.tasks[app.request.locale]|length > 0 %}
-                        <ul class="section-cv-banner-highlights">
-                            {% for task in professionalExperience.tasks[app.request.locale] %}
-                                <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
+                    {% for experience in professionalExperience.xpByCustomer %}
+                        <section class="section-cv-banner-highlights">
+                            <h4 class="section-cv-banner-highlights-title">
+                                <a href="{{ experience.website }}" target="_blank">{{ experience.customer }}</a>
+                                <span>({{ experience.startDate|format_datetime(pattern='MMMM Y') }} - {{ experience.endDate|format_datetime(pattern='MMMM Y') }})</span> 
+                            </h4>
+                            {# {% if experience.websites is defined and experience.websites is not null and experience.websites is not empty %}
+                                <ul class="section-cv-banner-highlights-links">
+                                    {% for website in experience.websites %}
+                                        <li class="section-cv-banner-highlights-links-element">
+                                            <a href="{{ website }}" target="_blank">{{ website }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %} #}
+                            <ul class="section-cv-banner-highlights-tags">
+                                {% for tool in experience.tools %}
+                                    <li class="section-cv-banner-highlights-tags-tag">{{ tool }}
+                                {% endfor %}
+                            </ul>
+
+                            <ul class="section-cv-banner-highlights-details">
+                                {% for task in experience.tasks[app.request.locale] %}
+                                    <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
+                                {% endfor %}
+                            </ul>
+                        </section>
+                    {% endfor %}
                 {% endfor %}
             </section>
 
@@ -130,5 +151,5 @@
                 {% endfor %}
             </section>
         {% endif %}
+        </div>
     </section>
-</section>
