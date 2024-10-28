@@ -41,7 +41,7 @@ class BlogController extends AbstractController
             $postsByCategories[$post['category']][] = $post;
         }
 
-        $lastArticles = array_slice($articles, -3);
+        $lastArticles = array_slice($posts, -3);
 
         return $this->render('blog/list.html.twig', [
             'posts_by_years' => $postsByYears,
@@ -61,9 +61,13 @@ class BlogController extends AbstractController
             }
         }
 
-        $post = $this->renderView(sprintf('blog/%s/%s.md.twig', $_locale, $slug));
+        try {
+            $post = $this->renderView(sprintf('blog/%s/%s.md.twig', $_locale, $slug));
+        } catch (\Exception $e) {
+            throw $this->createNotFoundException(sprintf('The page \'%s\' is not a blog post', $slug));
+        }
 
-        return $this->render('customer/show.html.twig', [
+        return $this->render('blog/show.html.twig', [
             'slug' => $slug,
             'post' => $post
         ]);

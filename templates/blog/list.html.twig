@@ -9,10 +9,6 @@
             {
                 'title': 'blog.carousel_title_1'|trans,
                 'slides': last_articles
-            },
-            {
-                'title': 'blog.carousel_title_2'|trans,
-                'slides': last_testimonies
             }
         ],
         'href': 'app_blog_post'
@@ -20,6 +16,7 @@
 
     {% include 'widgets/_section_posts.html.twig' with {
         'title': 'blog.all_posts_title'|trans,
+        'posts_url': 'app_blog_post',
         'tabs': [
             {
                 'label': 'blog.by_years'|trans,

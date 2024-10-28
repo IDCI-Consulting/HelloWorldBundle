@@ -58,12 +58,12 @@ class CustomerController extends AbstractController
         ]);
     }
 
-    #[Route('/clients/{slug}', methods: ['GET'], name:'show')]
+    #[Route('/{slug}', methods: ['GET'], name:'show')]
     public function show(Request $request, String $slug, string $_locale): Response
     {
         $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
 
-        $testimonies[] = array_filter($posts, function($post) {
+        $testimonies = array_filter($posts, function($post) {
             return 'Témoignage' === $post['category'];
         });
 
@@ -73,7 +73,11 @@ class CustomerController extends AbstractController
             }
         }
 
-        $testimony = $this->renderView(sprintf('clients/%s/%s.md.twig', $_locale, $slug));
+        try {
+            $testimony = $this->renderView(sprintf('customer/%s/%s.md.twig', $_locale, $slug));
+        } catch (\Exception $e) {
+            throw $this->createNotFoundException(sprintf('The page \'%s\' is not a customer testimony', $slug));
+        }
 
         return $this->render('customer/show.html.twig', [
             'slug' => $slug,
