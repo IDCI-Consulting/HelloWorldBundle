@@ -29,67 +29,81 @@
         {
             "company": "IDCI-Consulting",
             "role": {
-                "fr": "Alternant Développeur Web FullStack",
-                "en": "Apprentice FullStack Web Developer"
-            },
-            "startDate": "2022-02-07T00:00:00Z",
-            "endDate": "2025-08-30T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Montée en compétences au sein de l'entreprise",
-                    "Maintenance et réalisation de sites web répondant aux demandes clients"
-                ],
-                "en": [
-                    "Increase in skills within the company",
-                    "Maintenance and realization of web sites answering the customers requests"
-                ]
-            }
-        },
-        {
-            "company": "IDCI-Consulting",
-            "role": {
-                "fr": "Stagiaire Développeur Web FullStack",
-                "en": "FullStack Web Developer Intern"
+                "fr": "Développeur Web FullStack",
+                "en": "FullStack Web Developer"
             },
             "startDate": "2021-08-08T00:00:00Z",
-            "endDate": "2022-01-28T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Découverte des technologies utilisées par IDCI-Consulting",
-                    "Réalisation de sites web répondant aux demandes clients"
-                ],
-                "en": [
-                    "Discovery of the technologies used by IDCI-Consulting",
-                    "Realization of web sites answering the customers requests"
-                ]
-            }
-        },
-        {
-            "company": "Intermarché",
-            "role": {
-                "fr": "Employé polyvalent",
-                "en": "Supermaket worker"
-            },
-            "startDate": "2021-06-20T00:00:00Z",
-            "endDate": "2021-07-29T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Préparation de pains",
-                    "Mise en rayon de produits",
-                    "Réponses aux demandes client"
-                ],
-                "en": [
-                    "Preparation of breads",
-                    "Shelving of products",
-                    "Responses to customer requests"
-                ]
-            }
+            "endDate": "2025-08-30T00:00:00Z",
+            "xpByCustomer": [
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://www.editions-eyrolles.com",
+                    "startDate": "2023-10-05T00:00:00Z",
+                    "endDate": "2024-05-08T00:00:00Z",
+                    "tools": ["PHP 8", "Symfony 6", "EasyAdmin 4", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Développement d'un BackOffice sous forme de Bundle Symfony pour la gestion du contenu statique"
+                        ],
+                        "en": [
+                            "Development of a BackOffice as a Symfony Bundle for the management of static content"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Maier",
+                    "website": "https://www.maier.fr/",
+                    "startDate": "2022-01-02T00:00:00Z",
+                    "endDate": "2024-10-30T00:00:00Z",
+                    "tools": ["PHP 7/8", "Symfony 5/6", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de maquettes suite à une refonte graphique",
+                            "Maintenance applicative sur sujets divers en PHP/Symfony.",
+                            "Migration de la stack de Symfony 5 à Symfony 6"
+                        ],
+                        "en": [
+                            "Integration of mock-up for a graphic update",
+                            "Maintenance in PHP/Symfony",
+                            "Migration of the stack from Symfony 5 to Symfony 6"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Editis",
+                    "website": "https://imanuel.nathan.fr/",
+                    "startDate": "2024-02-02T00:00:00Z",
+                    "endDate": "2024-03-30T00:00:00Z",
+                    "tools": ["PHP 7", "Symfony 4/5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de maquettes suite à une refonte graphique",
+                            "Maintenance applicative sur sujets divers en PHP/Symfony.",
+                            "Migration de la stack de Symfony 4 à Symfony 5"
+                        ],
+                        "en": [
+                            "Migration of the stack from Symfony 4 to Symfony 5"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tiara Milo",
+                    "website": "https://www.tiaramilo.com",
+                    "startDate": "2021-08-08T00:00:00Z",
+                    "endDate": "2022-01-08T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de maquettes",
+                            "Mise en place des appels API entre front et back"
+                        ],
+                        "en": [
+                            "Integration of mock-up",
+                            "Setting of API calls between frontend and backend"
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "personalExperiences": [

@@ -108,41 +108,6 @@
             </section>
         </div>
 
-        <div class="section-cv-double">
-            {% if data.personalExperiences is defined and data.personalExperiences is not null and data.personalExperiences is not empty %}
-                <section class="section-cv-double-main section-cv-banner section-cv-banner-secondary">
-                    <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.personal_experiences'|trans }}</h2>
-                    {% for personalExperience in data.personalExperiences %}
-                        <h3 class="section-cv-banner-subtitle">{{ personalExperience.role[app.request.locale] }} | {{ personalExperience.organization[app.request.locale] }}</h3>
-                        <p class="section-cv-banner-date">
-                            {% if "" == personalExperience.endDate %}
-                                {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
-                            {% else %}
-                                {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
-                            {% endif %}
-                        </p>
-                        {% if personalExperience.tasks[app.request.locale] is defined and personalExperience.tasks[app.request.locale] is not null and personalExperience.tasks[app.request.locale] is not empty %}
-                            <ul class="section-cv-banner-highlights">
-                                {% for task in personalExperience.tasks[app.request.locale] %}
-                                    <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    {% endfor %}
-                </section>
-
-                {% if data.hobbies is defined and data.hobbies is not null and data.hobbies is not empty %}
-                    <section class="section-cv-double-aside section-cv-banner section-cv-banner-primary">
-                        <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.hobbies'|trans }}</h2>
-                        {% for hobby in data.hobbies[app.request.locale] %}
-                            <p class="section-cv-banner-subtitle">{{ hobby.name }}</p>
-                            <p>{{ hobby.description }}</p>
-                        {% endfor %}
-                    </section>
-                {% endif %}
-            {% endif %}
-        </div>
-
         {% if data.education is defined and data.education is not null and data.education is not empty %}
             <section class="section-cv-banner section-cv-banner-primary">
                 <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.courses'|trans }}</h2>

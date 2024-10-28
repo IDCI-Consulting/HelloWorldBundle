@@ -68,11 +68,13 @@
                         "fr": [
                             "Intégration de contenu web",
                             "Ajout de fonctionnalités dans le back-office",
+                            "Utilisation de formulaires Symfony",
                             "Création d'un client d'API sous forme de bundle Symfony"
                         ],
                         "en": [
                             "Integration of web contents",
                             "Adding features to back-office",
+                            "Use of Symfony forms",
                             "Creation of a API client as a Symfony Bundle"
                         ]
                     }
@@ -82,7 +84,7 @@
                     "website": "https://www.tiaramilo.com",
                     "startDate": "2023-11-29T00:00:00Z",
                     "endDate": "2024-02-02T00:00:00Z",
-                    "tools": ["PHP8", "Symfony 6", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tools": ["PHP8", "Symfony 5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
                     "tasks": {
                         "fr": [
                             "Réorganisation du DOM en composants réutilisables",
