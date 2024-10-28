@@ -8,11 +8,30 @@
         font-size: $idci-font-2-5x;
     }
 
+    .section-dynamic-display-banner {
+        background-color: $idci-color-light-grey;
+        margin-top: 1rem;
+        text-align: center;
+
+        .section-dynamic-display-banner-media {
+            height: 3rem;
+
+            @include until ($tablet) {
+                height: 2rem;
+            }
+        }
+    }
+
     .section-dynamic-display-navigation {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         font-size: $idci-font-2x;
         text-align: center;
+
+        &:has(.section-dynamic-display-navigation-label:only-child) {
+            display: block;
+            margin-top: 2rem;
+        }
 
         .section-dynamic-display-navigation-label {
             color: $idci-color-dark-grey;
@@ -62,7 +81,13 @@
 
     .section-dynamic-display-content {
         height: 0;
+        margin: 0 auto;
         visibility: hidden;
+        width: 85%;
+
+        @include until ($tablet) {
+            width: 100%;
+        }
     }
 
     .columns {

@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    {% trans_default_domain 'customers' %}
+
+    {% include 'widgets/_section_dynamic_display.html.twig' with {
+        'page_title': 'customers.page_title'|trans,
+        'banner': testimonies,
+        'sliders': [
+            {
+                'title': 'customers.carousel_title'|trans,
+                'slides': last_testimonies
+            }
+        ],
+        'href': 'app_customers_show'
+    } %}
+
+    {% include 'widgets/_section_posts.html.twig' with {
+        'title': 'customers.all_testimonies_title'|trans,
+        'tabs': [
+            {
+                'label': 'customers.by_year'|trans,
+                'id': 'customers_by_year',
+                'items': customers_by_year
+            }
+        ]
+    } %}
+{% endblock %}
