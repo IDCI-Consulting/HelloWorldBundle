@@ -24,10 +24,6 @@ class BlogController extends AbstractController
         $postsByYears = [];
         $postsByCategories = [];
 
-        $posts = array_filter($posts, function($post) {
-            return 'Témoignage' != $post['category'];
-        });
-
         usort($posts, function ($a, $b) {
             $dateA = \DateTime::createFromFormat("d/m/Y", $a['publicationDate'])->format('Y-m-d');
             $dateB = \DateTime::createFromFormat("d/m/Y", $b['publicationDate'])->format('Y-m-d');

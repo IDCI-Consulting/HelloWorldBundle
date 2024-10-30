@@ -10,23 +10,18 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/{_locale}/clients', requirements: ['_locale' => 'fr|en'], name: 'customers_')]
 class CustomerController extends AbstractController
 {
-    private string $blogPostsFilePath;
+    private string $customerTestimoniesFilePath;
 
-    public function __construct(string $blogPostsFilePath)
+    public function __construct(string $customerTestimoniesFilePath)
     {
-        $this->blogPostsFilePath = $blogPostsFilePath;
+        $this->customerTestimoniesFilePath = $customerTestimoniesFilePath;
     }
 
     #[Route('/', methods: ['GET'], name: 'list')]
     public function list(Request $request): Response
     {
-        $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
-        $testimonies = [];
+        $testimonies = json_decode(file_get_contents($this->customerTestimoniesFilePath), true);
         $customersByYear = [];
-
-        $testimonies = array_filter($posts, function($post) {
-            return 'Témoignage' === $post['category'];
-        });
 
         usort($testimonies, function ($a, $b) {
             $dateA = \DateTime::createFromFormat("d/m/Y", $a['publicationDate'])->format('Y-m-d');
@@ -61,11 +56,7 @@ class CustomerController extends AbstractController
     #[Route('/{slug}', methods: ['GET'], name:'show')]
     public function show(Request $request, String $slug, string $_locale): Response
     {
-        $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
-
-        $testimonies = array_filter($posts, function($post) {
-            return 'Témoignage' === $post['category'];
-        });
+        $testimonies = json_decode(file_get_contents($this->customerTestimoniesFilePath), true);
 
         foreach ($testimonies as $testimony) {
             if ($testimony['id'] == $slug && !in_array($_locale, $testimony['available_languages'])) {
