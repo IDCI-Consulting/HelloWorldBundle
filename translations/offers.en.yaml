@@ -33,6 +33,13 @@ offers:
     paragraph_1: IDCI have an expertise in web development, specialized on <span class="blue-colored-description-text">Symfony PHP framework</span> (since the first version until more recent ones).
     paragraph_2: Moreover, we also are working with the <span class="blue-colored-description-text">NodeJS framework</span>, and always are enthusiasts to discover promising <span class="blue-colored-description-text">new technologies</span>.
 
+  delegate:
+    title: We are doing
+    subtitle: Projects of digitalization from A to Z
+    paragraph_1: '<span class="blue-colored-description-text">We cover every step of your project of digitalization</span> : In depth analysis of your needs and objectives, selection of technologies and appropriate digital plateforms, development and optimal integration with the existings systems.'
+    paragraph_2: We make sure that every stage is realised <span class="blue-colored-description-text">on time</span> and according to the <span class="blue-colored-description-text">established quality standards</span>.
+    paragraph_3: Finally, <span class="blue-colored-description-text">the maintenance, the continous evolution and the adaptation to technological evolutions</span> allow the garantee that your project of digitalization is not only achieve with success, but too durable et adaptable to the futur challenges of your company.
+
   open_source:
     title: Our philosophy
     subtitle: Open source
