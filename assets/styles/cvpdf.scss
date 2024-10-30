@@ -174,6 +174,42 @@ html {
         .section-cv-banner-highlights {
             font-size: $idci-font-medium;
             font-weight: bold;
+
+            .section-cv-banner-highlights-title {
+                font-size: $idci-font-larger;
+                font-weight: bold;
+
+                >a {
+                    color: $idci-color-green;
+                }
+
+
+                >span {
+                    color: $idci-color-black;
+                    font-size: $idci-font-medium;
+                    font-style: italic;
+                }
+            }
+
+            .section-cv-banner-highlights-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+
+                .section-cv-banner-highlights-tags-tag {
+                    &:not(:first-child) {
+                        margin-left: 0.5rem;
+                    }
+
+                    border: 1px solid $idci-color-green;
+                    border-bottom: 3px solid $idci-color-green;
+                    border-left: 3px solid $idci-color-green;
+                    border-radius: 1rem;
+                    color: $idci-color-green;
+                    font-weight: bold;
+                    padding-inline: 0.5rem;
+                }
+            }
         }
     }
 

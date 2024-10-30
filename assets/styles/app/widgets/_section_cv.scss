@@ -120,6 +120,10 @@
         .section-cv-banner-highlights {
             margin: 0.5rem 0 0 2rem;
             font-size: $idci-font-medium;
+
+            @include until ($desktop) {
+                margin: 2rem 0 0 0;
+            }
             
             .section-cv-banner-highlights-title {
                 color: $idci-color-green;
@@ -141,6 +145,8 @@
 
             .section-cv-banner-highlights-tags {
                 display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
 
                 .section-cv-banner-highlights-tags-tag {
                     &:not(:first-child) {
