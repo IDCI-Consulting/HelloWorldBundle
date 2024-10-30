@@ -7,7 +7,7 @@
             "fr": "Horlogerie Maier, client depuis 2018",
             "en": "Maier watchmaking, customer since 2018"
         },
-        "media": "blog/maier-logo.jpg",
+        "media": "customer/maier-logo.jpg",
         "publicationDate": "30/09/2024",
         "beginYear": "2018",
         "endYear": "",
@@ -25,7 +25,7 @@
             "fr": "Tessi marketing, client de 2014 à 2019",
             "en": "Tessi marketing, customer from 2014 until 2019"
         },
-        "media": "blog/tessi-logo.jpg",
+        "media": "customer/tessi-logo.jpg",
         "publicationDate": "30/09/2024",
         "beginYear": "2014",
         "endYear": "2019",
@@ -42,7 +42,7 @@
             "fr": "SEJER, client depuis 2016",
             "en": "SEJER, customer since 2016"
         },
-        "media": "blog/sejer-logo.png",
+        "media": "customer/sejer-logo.png",
         "publicationDate": "30/09/2024",
         "beginYear": "2016",
         "endYear": "",

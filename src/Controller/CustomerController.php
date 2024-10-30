@@ -34,7 +34,7 @@ class CustomerController extends AbstractController
 
         foreach ($testimonies as $testimony) {
             if ("" === $testimony['endYear']) {
-                $testimony['endYear'] = \DateTime::createFromFormat('', '')->format('Y');
+                $testimony['endYear'] = (new \DateTime('now'))->format('Y');
             }
 
             while ($testimony['beginYear'] <= $testimony['endYear']) {
