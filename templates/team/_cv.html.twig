@@ -1,7 +1,7 @@
 {% trans_default_domain 'cv' %}
 
-<section class="section-container section-container-full">
     <section class="section-cv">
+        <div class="content-container">
         <section class="columns is-multiline is-centered section-cv-header">
             <h1 class="column is-12 section-cv-title idci-title-secondary">{{ 'cv.title'|trans }}</h1>
             <p class="column is-6 section-cv-label">{{ data.identity.firstName }} {{ data.identity.lastName }} | {{ data.identity.job[app.request.locale] }}</p>
@@ -51,12 +51,33 @@
                             {{ 'cv.at'|trans }} {{ professionalExperience.company }}
                         {% endif %}
                     </p>
-                    {% if professionalExperience.tasks[app.request.locale]|length > 0 %}
+                    {% if professionalExperience.tasks[app.request.locale] is defined and professionalExperience.tasks[app.request.locale] is not null and professionalExperience.tasks[app.request.locale] is not empty %}
                         <ul class="section-cv-banner-highlights">
                             {% for task in professionalExperience.tasks[app.request.locale] %}
                                 <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
                             {% endfor %}
                         </ul>
+                    {% endif %}
+                    {% if professionalExperience.xpByCustomer is defined and professionalExperience.xpByCustomer is not null and professionalExperience is not empty %}
+                        {% for experience in professionalExperience.xpByCustomer %}
+                            <section class="section-cv-banner-highlights">
+                                <h4 class="section-cv-banner-highlights-title">
+                                    <a href="{{ experience.website }}" target="_blank">{{ experience.customer }}</a>
+                                    <span>({{ experience.startDate|format_datetime(pattern='MMMM Y') }} - {{ experience.endDate|format_datetime(pattern='MMMM Y') }})</span> 
+                                </h4>
+                                <ul class="section-cv-banner-highlights-tags">
+                                    {% for tool in experience.tools %}
+                                        <li class="section-cv-banner-highlights-tags-tag">{{ tool }}
+                                    {% endfor %}
+                                </ul>
+
+                                <ul class="section-cv-banner-highlights-details">
+                                    {% for task in experience.tasks[app.request.locale] %}
+                                        <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </section>
+                        {% endfor %}
                     {% endif %}
                 {% endfor %}
             </section>
@@ -87,41 +108,6 @@
             </section>
         </div>
 
-        <div class="section-cv-double">
-            {% if data.personalExperiences is defined and data.personalExperiences is not null and data.personalExperiences is not empty %}
-                <section class="section-cv-double-main section-cv-banner section-cv-banner-secondary">
-                    <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.personal_experiences'|trans }}</h2>
-                    {% for personalExperience in data.personalExperiences %}
-                        <h3 class="section-cv-banner-subtitle">{{ personalExperience.role[app.request.locale] }} | {{ personalExperience.organization[app.request.locale] }}</h3>
-                        <p class="section-cv-banner-date">
-                            {% if "" == personalExperience.endDate %}
-                                {{ 'cv.since'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
-                            {% else %}
-                                {{ 'cv.from'|trans }} {{ personalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }} {{ 'cv.to'|trans }} {{ personalExperience.endDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
-                            {% endif %}
-                        </p>
-                        {% if personalExperience.tasks[app.request.locale] is defined and personalExperience.tasks[app.request.locale] is not null and personalExperience.tasks[app.request.locale] is not empty %}
-                            <ul class="section-cv-banner-highlights">
-                                {% for task in personalExperience.tasks[app.request.locale] %}
-                                    <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    {% endfor %}
-                </section>
-
-                {% if data.hobbies is defined and data.hobbies is not null and data.hobbies is not empty %}
-                    <section class="section-cv-double-aside section-cv-banner section-cv-banner-primary">
-                        <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.hobbies'|trans }}</h2>
-                        {% for hobby in data.hobbies[app.request.locale] %}
-                            <p class="section-cv-banner-subtitle">{{ hobby.name }}</p>
-                            <p>{{ hobby.description }}</p>
-                        {% endfor %}
-                    </section>
-                {% endif %}
-            {% endif %}
-        </div>
-
         {% if data.education is defined and data.education is not null and data.education is not empty %}
             <section class="section-cv-banner section-cv-banner-primary">
                 <h2 class="section-cv-banner-title idci-title-secondary">{{ 'cv.courses'|trans }}</h2>
@@ -130,5 +116,5 @@
                 {% endfor %}
             </section>
         {% endif %}
+        </div>
     </section>
-</section>

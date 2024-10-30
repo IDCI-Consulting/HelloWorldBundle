@@ -33,6 +33,13 @@ offers:
     paragraph_1: IDCI dispose d'une expertise dans le développement web, spécialisée sur <span class="blue-colored-description-text">le framework PHP Symfony</span> (depuis la première version jusqu'aux plus récentes).
     paragraph_2: Plus encore, nous travaillons également avec le <span class="blue-colored-description-text">framework NodeJS</span>, et sommes toujours enthousiastes à l'idée de découvrir de <span class="blue-colored-description-text">nouvelles technologies</span> prometteuses.
 
+  delegate:
+    title: Nous faisons des
+    subtitle: Projets de digitalisation de A à Z
+    paragraph_1: '<span class="blue-colored-description-text">Nous prenons en charge chaque étape de votre projet de digitalisation</span> : Analyse approfondie des besoins et des objectifs, Sélection des technologies et plateformes numériques adaptées, Développement et Intégration optimale avec les systèmes existants.'
+    paragraph_2: Nous nous assurons que chaque phase est réalisée dans les <span class="blue-colored-description-text">délais impartis</span> et selon les <span class="blue-colored-description-text">normes de qualité établies</span>.
+    paragraph_3: Enfin, <span class="blue-colored-description-text">la maintenance, l'évolution continue et l'adaptation aux évolutions technologiques</span> permettent de garantir que votre projet de digitalisation est non seulement achevé avec succès, mais aussi durable et adaptable aux futurs défis de l'entreprise.
+
   open_source:
     title: Notre philosophie
     subtitle: Open source
@@ -42,14 +49,13 @@ offers:
 
   company_assets:
     title: 'Nos offres de services'
+    subtitle: 'Choisir IDCI Consulting, c’est optimiser la valeur ajoutée de votre partenaire :'
     box_1:
-      title: <span class="colored">Faîtes confiance à IDCI</span>
-      paragraph_1:  Nos consultants ne travaillent pas seuls. Bien entourés, ils fournissent des résultats <span class="colored">conformes aux attentes client</span> et aux normes du développement web.
-      paragraph_2:  Notre organisation vous assure un <span class="colored">suivi continu</span> de vos projets, même en l'absence de votre consultant attitré.
-      paragraph_3:  Nous possédons nos propres locaux pleinement équipés pour le travail à distance. Nous sommes donc <span class="colored">autonomes</span>.
-      paragraph_4:  En cas de besoin, vous pouvez bénéficier d'<span class="colored">un second interlocuteur</span>.
+      title: En termes de <span class="colored">compétences</span>
+      description: Vous mandatez un consultant et vous récoltez le <span class="colored">soutien technique de toute notre équipe</span> !
     box_2:
-      title: <span class="colored">Choisir IDCI Consulting, c’est optimiser la valeur ajoutée de votre partenaire :</span>
-      paragraph_1:  En termes de compétences -<br>Vous mandatez un consultant et vous récoltez le <span class="colored">soutien technique de toute notre équipe</span> !
-      paragraph_2:  En termes de coûts -<br>Nous possédons <span class="colored">nos propres locaux pleinement équipés pour le travail à distance</span>, ce qui a pour avantage d'éviter les frais de déplacement, d'améliorer le bilan carbone et d'optimiser vos coûts !
-      paragraph_3:  En termes de sécurité -<br>Nos consultants sont backupés, ce qui sécurise votre projet. Le code produit est également revu par un autre développeur afin de respecter notre <span class="colored">engagement sur la qualité des livrables</span>.
+      title: En termes de <span class="colored">coûts</span>
+      description: Nous possédons <span class="colored">nos propres locaux pleinement équipés pour le travail à distance</span>, ce qui a pour avantage d'éviter les frais de déplacement, d'améliorer le bilan carbone et d'optimiser vos coûts !
+    box_3:
+      title: En termes de <span class="colored">sécurité</span>
+      description: Nos consultants sont backupés, ce qui sécurise votre projet. Le code produit est également revu par un autre développeur afin de respecter notre <span class="colored">engagement sur la qualité des livrables</span>.

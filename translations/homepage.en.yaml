@@ -27,10 +27,9 @@ call_to_action:
     paragraph_1:  <a href="offers#consulting">Be advised on <span class="colored">technological choices</span> and/or be assisted on <span class="colored">your future web application conception</span></a>
     paragraph_2:  <a href="offers#web-development">Offer temporary reinforcements to <span class="colored">your development team</span></a>
     paragraph_3:  <a href="offers#courses">Train your <span class="colored">collaborators</span></a>
-    paragraph_4:  <span class="colored">Leave us your project execution</span> and stay focus on your core business
+    paragraph_4:  <a href="offers#delegate"><span class="colored">Leave us your project execution</span> and stay focus on your core business</a>
   box_2:
     title: 'You are <br/><span class="colored">a Software firm</span><br/> and you want :'
     paragraph_1:  <a href="offers#web-development"><span class="colored">Reinforce your resources</span> in the context of a project</a>
     paragraph_2:  <a href="offers#consulting"><span class="colored">Delegate punctually to an expert</span> to help your client in order to solve his technical issue</a>
-    paragraph_3:  <span class="colored">Subcontract an entire services contract</span> from your client, or just a part of it.
-    paragraph_4:  <a href="offers#courses"><span class="colored">Train your collaborators, or your client\s ones</span>, on the new technologies.</a>
+    paragraph_3:  <a href="offers#courses"><span class="colored">Train your collaborators, or your client\s ones</span>, on the new technologies.</a>

@@ -19,11 +19,17 @@
                 color: $idci-color-dark-grey;
                 text-decoration: none;
                 text-transform: uppercase;
-            }
 
-            i {
-                align-self: center;
-                color: $idci-color-dark-grey;
+                span {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition:visibility 0.3s linear,opacity 0.3s linear;
+                }
+
+                i {
+                    color: $idci-color-dark-grey;
+                    margin-left: 1rem;
+                }
             }
 
             &.active {
@@ -34,6 +40,17 @@
                 i::before {
                     color: $idci-color-blue;
                     content: '\f192'
+                }
+            }
+        }
+
+        &:hover {
+            li {
+                a {
+                    span {
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 }
             }
         }

@@ -7,10 +7,10 @@
 
     <div class="navbox" id="navbox">
         <ul>
-            <li class="active"><a href="#specialization"> {{ 'specialization.subtitle'|trans }} </a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#innovation"> {{ 'company_concept.title'|trans }} </a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#methodology">{{ 'methodology.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
-            <li><a href="#tools">{{ 'tools.subtitle'|trans }}</a><i class="fa-solid fa-circle fa-xs"></i></li>
+            <li class="active"><a href="#specialization"><span>{{ 'specialization.subtitle'|trans }}</span><i class="fa-solid fa-circle fa-xs"></i></a></li>
+            <li><a href="#innovation"><span>{{ 'company_concept.title'|trans }}</span><i class="fa-solid fa-circle fa-xs"></i></a></li>
+            <li><a href="#methodology"><span>{{ 'methodology.subtitle'|trans }}</span><i class="fa-solid fa-circle fa-xs"></i></a></li>
+            <li><a href="#tools"><span>{{ 'tools.subtitle'|trans }}</span><i class="fa-solid fa-circle fa-xs"></i></a></li>
         </ul>
     </div>
 
@@ -53,7 +53,6 @@
                             ('call_to_action.box_2.paragraph_1')|trans,
                             ('call_to_action.box_2.paragraph_2')|trans,
                             ('call_to_action.box_2.paragraph_3')|trans,
-                            ('call_to_action.box_2.paragraph_4')|trans,
                         ],
                         'color': 'secondary'
                     },
@@ -61,8 +60,6 @@
             } %}
         {% endblock %}
     {% endembed %}
-
-    <div class="transparent-box"></div>
 
     {% include 'widgets/_section_display_stack.html.twig' with {
         'nav_element': true,
@@ -94,8 +91,6 @@
         'alt': 'agile'|trans({}, 'alt')
         }
     } %}
-
-    <div class="transparent-box even bottom-secondary"></div>
 
     <section class="section-presentation section-navigation" id="tools">
         <div class="content-container">
@@ -166,10 +161,17 @@
     {{ parent() }}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const HEADER_HEIGHT = document.querySelector('header').offsetHeight;
             let navboxLinks = document.getElementById('navbox').querySelectorAll('ul li');
             let sections = document.getElementsByClassName('section-navigation');
             let sectionsStarts = [];
             let currentLink;
+
+            if (window.location.hash) {
+                currentLink = Object.values(navboxLinks).filter((navboxLink) => navboxLink.firstChild.href.includes(window.location.hash));
+                navboxLinks[0].classList.remove('active');
+                currentLink[0].classList.add('active');
+            }
 
             Array.from(sections).forEach((element, index) => {
                 sectionsStarts[index] = element.getBoundingClientRect()['y'] - document.body.getBoundingClientRect()['y'];
@@ -178,7 +180,7 @@
             window.addEventListener('scroll', function scroll() {
                 for (const key in sectionsStarts) {
                     navboxLinks[key].classList.remove('active');
-                    if (this.scrollY >= sectionsStarts[key]) {
+                    if (this.scrollY + HEADER_HEIGHT >= sectionsStarts[key]) {
                         currentLink = key;
                     }
                 }

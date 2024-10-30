@@ -10,29 +10,31 @@
     </video>
 
     {% include 'widgets/_section_choices.html.twig' with {
-        'page_title': ('offers.company_assets.title')|trans,
-        'background_color': 'media-offers',
+        'title': ('offers.company_assets.title')|trans,
+        'subtitle': ('offers.company_assets.subtitle')|trans,
         'boxes': [
             {
                 'title': ('offers.company_assets.box_1.title')|trans,
                 'paragraphs': [
-                    ('offers.company_assets.box_1.paragraph_1')|trans,
-                    ('offers.company_assets.box_1.paragraph_2')|trans,
-                    ('offers.company_assets.box_1.paragraph_3')|trans,
-                    ('offers.company_assets.box_1.paragraph_4')|trans
-                ]
+                    ('offers.company_assets.box_1.description')|trans
+                ],
+                'secondary': true
             },
             {
                 'title': ('offers.company_assets.box_2.title')|trans,
                 'paragraphs': [
-                    ('offers.company_assets.box_2.paragraph_1')|trans,
-                    ('offers.company_assets.box_2.paragraph_2')|trans,
-                    ('offers.company_assets.box_2.paragraph_3')|trans,
+                    ('offers.company_assets.box_2.description')|trans
                 ],
-                'color': 'secondary'
+                'secondary': true
+            },
+            {
+                'title': ('offers.company_assets.box_3.title')|trans,
+                'paragraphs': [
+                    ('offers.company_assets.box_3.description')|trans
+                ],
+                'secondary': true
             }
-        ],
-        'big': true
+        ]
     } %}
 
     <div class="transparent-box top-secondary bottom-secondary"></div>
@@ -122,6 +124,27 @@
         ],
         'media': {
             'src': asset('build/images/base/code-writing.gif'),
+            'alt': 'developpement-web'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
+    <div class="transparent-box top-secondary bottom-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'id': 'delegate',
+        'title': 'offers.delegate.title'|trans,
+        'subtitle': 'offers.delegate.subtitle'|trans,
+        'paragraphs': [
+            'offers.delegate.paragraph_1'|trans,
+            'offers.delegate.paragraph_2'|trans,
+            'offers.delegate.paragraph_3'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/delegate.png'),
             'alt': 'developpement-web'|trans({}, 'alt')
         },
         'link': {

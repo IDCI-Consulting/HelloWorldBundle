@@ -10,7 +10,7 @@
         "media": "",
         "email": "maeva.grondin@idci-consulting.fr",
         "phone": "",
-        "website": "",
+        "website": "https://scytheowens.github.io/Portfolio/",
         "location": {
             "address": "",
             "postalCode": "69100",
@@ -33,71 +33,110 @@
         {
             "company": "IDCI-Consulting",
             "role": {
-                "fr": "Alternante Développeuse Web FullStack",
-                "en": "Apprentice FullStack Web Developer"
+                "fr": "Développeuse Web FullStack",
+                "en": "FullStack Web Developer"
             },
             "startDate": "2023-10-09T00:00:00Z",
-            "endDate": "2024-10-08T00:00:00Z",
-            "website": "",
-            "tools": ["Symfony","Docker","Git","Gitlab"],
-            "tasks": {
-                "fr": [
-                    "Découverte des technologies utilisées par l'entreprise",
-                    "Maintenance et amélioration d'un site sur demande du client"
-                ],
-                "en": [
-                    "Learn technologies used by the company",
-                    "Maintain and improve a site as requested by the client"
-                ]
-            }
-        },
-        {
-            "company": "Cargo Ground Freight",
-            "role": {
-                "fr": "Assistante administrative dans le fret aérien",
-                "en": "Administrative assistant for airfreight"
-            },
-            "startDate": "2021-05-21T00:00:00Z",
-            "endDate": "2023-10-06T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Gestion de la relation client",
-                    "Accueil physique et téléphonique",
-                    "Démarches auprès des douanes",
-                    "Manutention et conduite de chariot élévateur"
-                ],
-                "en": [
-                    "Manage customer relationship",
-                    "Physical and phone reception",
-                    "Customs procedures",
-                    "Handling and forklift driving"
-                ]
-            }
-        },
-        {
-            "company": "B&B Hotel",
-            "role": {
-                "fr": "Réceptionniste",
-                "en": "Receptionist"
-            },
-            "startDate": "2019-10-24T00:00:00Z",
-            "endDate": "2021-05-20T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Accueil physique et téléphonique",
-                    "Service du petit déjeuner",
-                    "Nettoyage des parties communes et des chambres"
-                ],
-                "en": [
-                    "Physical and phone reception",
-                    "Breakfast service",
-                    "Cleaning of common rooms and rooms"
-                ]
-            }
+            "endDate": "2025-04-08T00:00:00Z",
+            "xpByCustomer": [
+                {
+                    "customer": "Eyrolles",
+                    "website": "https://www.eyrolles.com",
+                    "startDate": "2024-02-05T00:00:00Z",
+                    "endDate": "2024-10-08T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 6", "Docker", "RabbitMQ", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Analyse et découpage de maquette en composants réutilisables",
+                            "Rédaction et design de composants avec Twig",
+                            "Intégration de contenu web"
+                        ],
+                        "en": [
+                            "Analysis and division of mock-up in reusable components",
+                            "Writing and designing of components with Twig",
+                            "Integration of web contents"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://www.editions-eyrolles.com",
+                    "startDate": "2024-02-05T00:00:00Z",
+                    "endDate": "2024-10-08T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 6", "EasyAdmin 4", "Docker", "RabbitMQ", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de contenu web",
+                            "Ajout de fonctionnalités dans le back-office",
+                            "Utilisation de formulaires Symfony",
+                            "Création d'un client d'API sous forme de bundle Symfony"
+                        ],
+                        "en": [
+                            "Integration of web contents",
+                            "Adding features to back-office",
+                            "Use of Symfony forms",
+                            "Creation of a API client as a Symfony Bundle"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tiara Milo",
+                    "website": "https://www.tiaramilo.com",
+                    "startDate": "2023-11-29T00:00:00Z",
+                    "endDate": "2024-02-02T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Réorganisation du DOM en composants réutilisables",
+                            "Intégration de contenus web",
+                            "Ajout de fonctionnalités à la demande du client"
+                        ],
+                        "en": [
+                            "Reorganisation of DOM in reusable components",
+                            "Integration of web contents",
+                            "Adding of features on customer demand"
+                        ]
+                    }
+                },
+                {
+                    "customer": "IDCI-consulting",
+                    "website": "https://www.idci-consulting.fr",
+                    "startDate": "2023-10-16T00:00:00Z",
+                    "endDate": "2023-11-24T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 6", "Docker", "Nginx", "Twig", "Sass", "CSS", "Javascript"],
+                    "tasks": {
+                        "fr": [
+                            "Réorganisation du DOM en composants réutilisables",
+                            "Intégration de contenus web",
+                            "Ajout de fonctionnalités à la demande du client",
+                            "Réalisation d'un thème Keycloak personnalisé"
+                        ],
+                        "en": [
+                            "Reorganisation of DOM in reusable components",
+                            "Integration of web contents",
+                            "Adding of features on customer demand",
+                            "Customisation of a Keycloak theme"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Karma Hôtel",
+                    "website": "https://www.karma-hotel.fr",
+                    "startDate": "2023-10-09T00:00:00Z",
+                    "endDate": "2023-10-13T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 6", "Docker", "Nginx", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de contenu web",
+                            "Design d'éléments selon la maquette du client"
+                        ],
+                        "en": [
+                            "Integration of web contents",
+                            "Designing of elements on customer's mockup"
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "personalExperiences": [
@@ -189,7 +228,9 @@
                     },
                     "level": "",
                     "keywords": [
-                        "Symfony"
+                        "Symfony",
+                        "ReactJS",
+                        "Express/NodeJS"
                     ]
                 },
                 {
@@ -209,7 +250,9 @@
                     },
                     "level": "",
                     "keywords": [
-                        "Gitlab"
+                        "Gitlab",
+                        "GitHub",
+                        "Git"
                     ]
                 },
                 {
@@ -219,7 +262,9 @@
                     },
                     "level": "",
                     "keywords": [
-                        "MySQL"
+                        "MySQL",
+                        "PostgreSQL",
+                        "MongoDB"
                     ]
                 },
                 {
@@ -239,7 +284,8 @@
                     },
                     "level": "",
                     "keywords": [
-                        "Redmine"
+                        "Redmine",
+                        "Notion"
                     ]
                 }
             ]
