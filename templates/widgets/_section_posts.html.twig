@@ -15,7 +15,7 @@
                                         <li class="section-posts-list-item">
                                             <img src="{{ asset('build/images/' ~ post.media ~ '') }}" class="section-posts-list-item-media">
                                             <div class="section-posts-list-item-infos">
-                                                <a href="{{ url('app_blog_post', {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[app.request.locale] }}</a>
+                                                <a href="{{ url(posts_url, {'slug': post.id}) }}" class="section-posts-list-item-link">{{ post.name[app.request.locale] }}</a>
                                                 <span>{{ 'blog.uploaded_the'|trans({}, 'blog') }} {{ post.publicationDate }}</span>
                                             </div>
                                         </li>

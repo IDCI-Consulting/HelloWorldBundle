@@ -23,8 +23,6 @@ class BlogController extends AbstractController
         $posts = json_decode(file_get_contents($this->blogPostsFilePath), true);
         $postsByYears = [];
         $postsByCategories = [];
-        $testimonies = [];
-        $articles = [];
 
         usort($posts, function ($a, $b) {
             $dateA = \DateTime::createFromFormat("d/m/Y", $a['publicationDate'])->format('Y-m-d');
@@ -37,22 +35,14 @@ class BlogController extends AbstractController
             $postYear = \DateTime::createFromFormat('d/m/Y', $post['publicationDate'])->format('Y');
             $postsByYears[$postYear][] = $post;
             $postsByCategories[$post['category']][] = $post;
-
-            if ('Témoignage' === $post['category']) {
-                $testimonies[] = $post;
-            } else {
-                $articles[] = $post;
-            }
         }
 
-        $lastTestimonies = array_slice($testimonies, -3);
-        $lastArticles = array_slice($articles, -3);
+        $lastArticles = array_slice($posts, -3);
 
         return $this->render('blog/list.html.twig', [
             'posts_by_years' => $postsByYears,
             'posts_by_categories' => $postsByCategories,
             'last_articles' => $lastArticles,
-            'last_testimonies' => $lastTestimonies,
         ]);
     }
 
@@ -67,7 +57,11 @@ class BlogController extends AbstractController
             }
         }
 
-        $post = $this->renderView(sprintf('blog/%s/%s.md.twig', $_locale, $slug));
+        try {
+            $post = $this->renderView(sprintf('blog/%s/%s.md.twig', $_locale, $slug));
+        } catch (\Exception $e) {
+            throw $this->createNotFoundException(sprintf('The page \'%s\' is not a blog post', $slug));
+        }
 
         return $this->render('blog/show.html.twig', [
             'slug' => $slug,

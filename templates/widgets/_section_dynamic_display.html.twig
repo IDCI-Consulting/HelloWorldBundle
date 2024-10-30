@@ -1,6 +1,13 @@
 <section class="section-dynamic-display">
     <div class="content-container">
         <h1 class="section-dynamic-display-title idci-title-primary">{{ page_title }}</h1>
+        {% if banner is defined and banner is not null and banner is not empty %}
+            <div class="section-dynamic-display-banner">
+                {% for item in banner %}
+                    <img class="section-dynamic-display-banner-media" src="{{ asset('build/images/' ~ item.media) }}" alt={{ item.name[app.request.locale] }}/>
+                {% endfor %}
+            </div>
+        {% endif %}
         <div class="section-dynamic-display-navigation">
             {% for slider in sliders %}
                 <label class="section-dynamic-display-navigation-label tab-label idci-subtitle-primary{% if 1 == loop.index %} selected{% endif %}" for="carousel-{{ loop.index }}">{{ slider.title }}</label>
