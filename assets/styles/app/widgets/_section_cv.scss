@@ -118,9 +118,55 @@
         }
 
         .section-cv-banner-highlights {
-            margin-left: 2rem;
+            margin: 0.5rem 0 0 2rem;
             font-size: $idci-font-medium;
-            font-weight: bold;
+
+            @include until ($desktop) {
+                margin: 2rem 0 0 0;
+            }
+            
+            .section-cv-banner-highlights-title {
+                color: $idci-color-green;
+                font-size: $idci-font-larger;
+                font-weight: bold;
+
+                >a {
+                    &:hover {
+                        text-shadow: 0 0 0.5rem $idci-color-green;
+                    }
+                }
+
+                >span {
+                    color: $idci-color-black;
+                    font-size: $idci-font-medium;
+                    font-style: italic;
+                }
+            }
+
+            .section-cv-banner-highlights-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+
+                .section-cv-banner-highlights-tags-tag {
+                    &:not(:first-child) {
+                        margin-left: 0.5rem;
+                    }
+
+                    border: 1px solid $idci-color-green;
+                    border-bottom: 3px solid $idci-color-green;
+                    border-left: 3px solid $idci-color-green;
+                    border-radius: 1rem;
+                    color: $idci-color-green;
+                    font-weight: bold;
+                    padding-inline: 0.5rem;
+                }
+            }
+
+            .section-cv-banner-highlights-details {
+                margin: 0.5rem 0 0 1.5rem;
+                font-weight: bold;
+            }
         }
     }
 
