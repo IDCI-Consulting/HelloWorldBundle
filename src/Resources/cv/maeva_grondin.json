@@ -139,6 +139,33 @@
             ]
         }
     ],
+    "personalExperiences": [
+        {
+            "organization": {
+                "fr": "Les Editions Lunaires",
+                "en": "Les Editions Lunaires"
+            },
+            "role": {
+                "fr": "Auto-entrepeneuse",
+                "en": "Entrepreneur"
+            },
+            "website": "",
+            "startDate": "2020-02-01T00:00:00Z",
+            "endDate": "",
+            "tasks": {
+                "fr": [
+                    "Développement d'un site de vente en ligne de livres",
+                    "Ecriture de roman",
+                    "Travail d'édition (recherche d'imprimeur, d'illustrateur, correction, communication)"
+                ],
+                "en": [
+                    "Development of a website for book selling",
+                    "Book writing",
+                    "Editor work (printer and illustrator search, correction, communication)"
+                ]
+            }
+        }
+    ],
     "education": [
         {
             "domain": {
@@ -291,5 +318,35 @@
                 }
             ]
         }
-    ]
+    ],
+    "hobbies": {
+        "fr": [
+            {
+                "name": "Ecriture",
+                "description": "J'écris des romans de science-fiction et fantastique."
+            },
+            {
+                "name": "Violon",
+                "description": "Je débute."
+            },
+            {
+                "name": "Plongée sous-marine",
+                "description": "J'ai le niveau 1."
+            }
+        ],
+        "en": [
+            {
+                "name": "Writing",
+                "description": "I write sy-fy and fantastic books."
+            },
+            {
+                "name": "Violin",
+                "description": "I'm a beginner."
+            },
+            {
+                "name": "Scuba diving",
+                "description": "I currently have got the first level."
+            }
+        ]
+    }
 }

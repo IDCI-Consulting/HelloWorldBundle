@@ -128,7 +128,7 @@
 
                 >a {
                     &:hover {
-                        filter: brightness(1);
+                        text-shadow: 0 0 0.5rem $idci-color-green;
                     }
                 }
 

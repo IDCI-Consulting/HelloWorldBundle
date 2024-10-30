@@ -51,34 +51,34 @@
                             {{ 'cv.at'|trans }} {{ professionalExperience.company }}
                         {% endif %}
                     </p>
-                    {% for experience in professionalExperience.xpByCustomer %}
-                        <section class="section-cv-banner-highlights">
-                            <h4 class="section-cv-banner-highlights-title">
-                                <a href="{{ experience.website }}" target="_blank">{{ experience.customer }}</a>
-                                <span>({{ experience.startDate|format_datetime(pattern='MMMM Y') }} - {{ experience.endDate|format_datetime(pattern='MMMM Y') }})</span> 
-                            </h4>
-                            {# {% if experience.websites is defined and experience.websites is not null and experience.websites is not empty %}
-                                <ul class="section-cv-banner-highlights-links">
-                                    {% for website in experience.websites %}
-                                        <li class="section-cv-banner-highlights-links-element">
-                                            <a href="{{ website }}" target="_blank">{{ website }}</a>
-                                        </li>
+                    {% if professionalExperience.tasks[app.request.locale] is defined and professionalExperience.tasks[app.request.locale] is not null and professionalExperience.tasks[app.request.locale] is not empty %}
+                        <ul class="section-cv-banner-highlights">
+                            {% for task in professionalExperience.tasks[app.request.locale] %}
+                                <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% if professionalExperience.xpByCustomer is defined and professionalExperience.xpByCustomer is not null and professionalExperience is not empty %}
+                        {% for experience in professionalExperience.xpByCustomer %}
+                            <section class="section-cv-banner-highlights">
+                                <h4 class="section-cv-banner-highlights-title">
+                                    <a href="{{ experience.website }}" target="_blank">{{ experience.customer }}</a>
+                                    <span>({{ experience.startDate|format_datetime(pattern='MMMM Y') }} - {{ experience.endDate|format_datetime(pattern='MMMM Y') }})</span> 
+                                </h4>
+                                <ul class="section-cv-banner-highlights-tags">
+                                    {% for tool in experience.tools %}
+                                        <li class="section-cv-banner-highlights-tags-tag">{{ tool }}
                                     {% endfor %}
                                 </ul>
-                            {% endif %} #}
-                            <ul class="section-cv-banner-highlights-tags">
-                                {% for tool in experience.tools %}
-                                    <li class="section-cv-banner-highlights-tags-tag">{{ tool }}
-                                {% endfor %}
-                            </ul>
 
-                            <ul class="section-cv-banner-highlights-details">
-                                {% for task in experience.tasks[app.request.locale] %}
-                                    <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
-                                {% endfor %}
-                            </ul>
-                        </section>
-                    {% endfor %}
+                                <ul class="section-cv-banner-highlights-details">
+                                    {% for task in experience.tasks[app.request.locale] %}
+                                        <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </section>
+                        {% endfor %}
+                    {% endif %}
                 {% endfor %}
             </section>
 
