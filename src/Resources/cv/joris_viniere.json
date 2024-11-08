@@ -29,121 +29,102 @@
         {
             "company": "IDCI-Consulting",
             "role": {
-                "fr": "Alternant Développeur Web FullStack",
-                "en": "Apprentice FullStack Web Developer"
-            },
-            "startDate": "2021-09-15T00:00:00Z",
-            "endDate": "2022-09-13T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Approfondissement des connaissances sur les technologies utilisées par l'entreprise",
-                    "Creation d'un site web pour un client",
-                    "Maintenir et améliorer un site sur demande du client",
-                    "Développer des relations avec les clients"
-                ],
-                "en": [
-                    "Deepening of knowledge on the technologies used by the company",
-                    "Website creation for a customer",
-                    "Maintain and improve a site as requested by the client",
-                    "Develop relationships with customers"
-                ]
-            }
-        },
-        {
-            "company": "IDCI-Consulting",
-            "role": {
-                "fr": "Stagiaire Développeur Web FullStack",
-                "en": "Intern FullStack Web Developer"
+                "fr": "Développeur Web FullStack",
+                "en": "FullStack Web Developer"
             },
             "startDate": "2021-04-15T00:00:00Z",
-            "endDate": "2021-06-31T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Apprentissage des technologies utilisées par l'entreprise",
-                    "Création d'un site web pour un client",
-                    "Apprentissage de la méthode agile"
-                ],
-                "en": [
-                    "Learning the technologies used by the company",
-                    "Creation of a website for a client",
-                    "Learning the agile method"
-                ]
-            }
-        },
-        {
-            "company": "Vétisol",
-            "role": {
-                "fr": "Opérateur de production",
-                "en": "Production operator"
-            },
-            "startDate": "2020-07-01T00:00:00Z",
-            "endDate": "2020-08-07T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Aide à la préparation et au suivi des machines",
-                    "Assistance à la gestion de l'approvisionnement",
-                    "Prise de décision sur la technique",
-                    "Soutien lors du contrôle qualité des produits"
-                ],
-                "en": [
-                    "Assistance in the preparation and monitoring of machines",
-                    "Supply management support",
-                    "Technical decision making",
-                    "Support during product quality control"
-                ]
-            }
-        },
-        {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "role": {
-                "fr": "Commis de salle",
-                "en": "Room clerk"
-            },
-            "startDate": "2019-07-01T00:00:00Z",
-            "endDate": "2019-08-10T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Service des plats en salle",
-                    "Développer des relations avec les clients",
-                    "Maintient d'hygiène de l'établissement"
-                ],
-                "en": [
-                    "Serve dishes in room",
-                    "Develop relationships with customers",
-                    "Maintaining the hygiene of the establishment"
-                ]
-            }
-        },
-        {
-            "company": "Le Saint Laurent, Georges Blanc",
-            "role": {
-                "fr": "Commis de salle",
-                "en": "Room clerk"
-            },
-            "startDate": "2018-07-01T00:00:00Z",
-            "endDate": "2018-08-10T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Service des plats en salle",
-                    "Développer des relations avec les clients",
-                    "Maintient d'hygiène de l'établissement"
-                ],
-                "en": [
-                    "Serve dishes in room",
-                    "Develop relationships with customers",
-                    "Maintaining the hygiene of the establishment"
-                ]
-            }
+            "endDate": "",
+            "xpByCustomer": [
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://www.editions-eyrolles.com",
+                    "startDate": "2023-02-05T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["PHP8", "Symfony 6", "EasyAdmin 4", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Construction et mise en place du design pattern MVC",
+                            "Intégration de maquettes en HTML/CSS",
+                            "Développements sur les back-offices"
+                        ],
+                        "en": [
+                            "Building and setting MVC design pattern",
+                            "Integration of mock-ups in HTML/CSS",
+                            "Developments on back-offices"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Maier",
+                    "website": "https://www.maier.fr/",
+                    "startDate": "2022-07-16T00:00:00Z",
+                    "endDate": "2023-02-03T00:00:00Z",
+                    "tools": ["PHP 7", "Symfony 5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de maquettes en HTML/CSS suite à une refonte graphique"
+                        ],
+                        "en": [
+                            "Integration of mock-ups for a graphic redesign"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Editis",
+                    "website": "https://editions.nathan.fr/",
+                    "startDate": "2022-03-03T00:00:00Z",
+                    "endDate": "2022-07-15T00:00:00Z",
+                    "tools": ["PHP 7", "Symfony 4", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Ajout d'une page démo avec gestion de la sécurité et des rôles sur le projet corps-humain",
+                            "Ajout d'une plateforme Campus-famille avec gestion du SSO et CAS"
+                        ],
+                        "en": [
+                            "Add a demo page with security and roles management on corps-humain project",
+                            "Add a plateform Campus-famille with SSO and CAS"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tiara Milo",
+                    "website": "https://www.tiaramilo.com",
+                    "startDate": "2021-07-01T00:00:00Z",
+                    "endDate": "2022-02-28T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de maquettes en HTML/CSS",
+                            "Développement sur le back-office",
+                            "Mise en place de l'environnement de déploiement"
+                        ],
+                        "en": [
+                            "Integration of mock-ups in HTML/CSS",
+                            "Development on back-office",
+                            "Setting of the deployement environment"
+                        ]
+                    }
+                },
+                {
+                    "customer": "AEEFT",
+                    "website": "",
+                    "startDate": "2021-04-15T00:00:00Z",
+                    "endDate": "2021-07-01T00:00:00Z",
+                    "tools": ["Grafana", "PostgreSQL", "Symfony 5", "PHP 8", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration des maquettes en HTML/SASS",
+                            "Gestion des formulaires et du parcours utilisateur",
+                            "Envoi de mail avec travail des données de résultat"
+                        ],
+                        "en": [
+                            "Integration of mock-ups in HTML/SASS",
+                            "Form management and user workflow",
+                            "Mail sending with results data"
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "personalExperiences": [
