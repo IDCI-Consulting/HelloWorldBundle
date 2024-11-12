@@ -10,6 +10,15 @@ IDCI consulting est un acteur majeur dans l’évolution de cette plateforme. En
 
 ![Logo SEJER](/build/images/customer/sejer-logo.png "Logo SEJER")
 
+## Les technologies
+<section class="section-presentation section-tagcloud">
+    <ul class="section-tagcloud-list">
+        {% for tag in tags %}
+            <li class="section-tagcloud-list-item section-tagcloud-list-item-{{ tag.color }} section-tagcloud-list-item-{{ tag.size }}">{{ tag.name }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
 {# ## Le témoignage
 
 > Sur la base de spécifications détaillées que nous leur adressons (Cahier des charges, maquettes, documentation des APIs…), IDCI Consulting produit des livrables dans un délai record et avec une qualité irréprochable

@@ -37,7 +37,6 @@
     p {
         margin: auto;
         margin-top: 1rem;
-        margin-bottom: 1rem;
 
         a {
             color: $idci-color-blue;
@@ -50,6 +49,8 @@
         img {
             display: block;
             margin: 0 auto;
+            padding-top: 2rem;
+            width: 16rem;
         }
     }
 
