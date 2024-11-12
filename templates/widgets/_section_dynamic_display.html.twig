@@ -4,7 +4,7 @@
         {% if banner is defined and banner is not null and banner is not empty %}
             <div class="section-dynamic-display-banner">
                 {% for item in banner %}
-                    {% if item.id is defined and item.id is not null and item.id is not empty %}
+                    {% if item.publicationDate is defined and item.publicationDate is not null and item.publicationDate is not empty %}
                         <a href="{{ url(href, {'slug': item.id}) }}" class="section-dynamic-display-banner-card">
                     {% else %}
                         <div class="section-dynamic-display-banner-card">
@@ -18,7 +18,7 @@
                             {% endfor %}
                         </ul>
                     </section>
-                    {% if item.id is defined and item.id is not null and item.id is not empty %}
+                    {% if item.publicationDate is defined and item.publicationDate is not null and item.publicationDate is not empty %}
                         </a>
                     {% else %}
                         </div>

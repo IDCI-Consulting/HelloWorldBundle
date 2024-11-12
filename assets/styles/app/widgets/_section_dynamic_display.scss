@@ -29,7 +29,7 @@
 
             .section-dynamic-display-banner-card-cover {
                 backface-visibility: hidden;
-                height: 14rem;
+                height: 10rem;
                 margin: 0 auto;
                 object-fit: contain;
             }
@@ -41,6 +41,7 @@
                 position: absolute;
                 top: 0.5rem;
                 transform: rotateY(-180deg);
+                width: 100%;
 
                 .section-dynamic-display-banner-card-content-title {
                     display: -webkit-box;
@@ -52,7 +53,7 @@
 
                 .tags {
                     margin-top: 1rem;
-                    max-height: 11.5rem;
+                    max-height: 7.5rem;
                     overflow: hidden;
                 }
             }

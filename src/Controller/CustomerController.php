@@ -10,18 +10,23 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/{_locale}/clients', requirements: ['_locale' => 'fr|en'], name: 'customers_')]
 class CustomerController extends AbstractController
 {
-    private string $customerTestimoniesFilePath;
+    private string $customersFilePath;
 
-    public function __construct(string $customerTestimoniesFilePath)
+    public function __construct(string $customersFilePath)
     {
-        $this->customerTestimoniesFilePath = $customerTestimoniesFilePath;
+        $this->customersFilePath = $customersFilePath;
     }
 
     #[Route('/', methods: ['GET'], name: 'list')]
     public function list(Request $request): Response
     {
-        $testimonies = json_decode(file_get_contents($this->customerTestimoniesFilePath), true);
-        $customersByYear = [];
+        $customers = json_decode(file_get_contents($this->customersFilePath), true);
+        // $testimonies = json_decode(file_get_contents($this->customersFilePath), true);
+        $testimonies = array_filter($customers, function($customer) {
+            if ("" !== $customer['publicationDate']) {
+                return $customer;
+            }
+        });
 
         usort($testimonies, function ($a, $b) {
             $dateA = \DateTime::createFromFormat("d/m/Y", $a['publicationDate'])->format('Y-m-d');
@@ -32,31 +37,17 @@ class CustomerController extends AbstractController
 
         $lastTestimonies = array_slice($testimonies, -3);
 
-        foreach ($testimonies as $testimony) {
-            if ("" === $testimony['endYear']) {
-                $testimony['endYear'] = (new \DateTime('now'))->format('Y');
-            }
-
-            while ($testimony['beginYear'] <= $testimony['endYear']) {
-                $customersByYear[$testimony['beginYear']][] = $testimony;
-
-                $testimony['beginYear']++;
-            }
-        }
-
-        krsort($customersByYear);
-
         return $this->render('customer/list.html.twig', [
             'testimonies' => $testimonies,
             'last_testimonies' => $lastTestimonies,
-            'customers_by_year' => $customersByYear
+            'customers' => $customers,
         ]);
     }
 
     #[Route('/{slug}', methods: ['GET'], name:'show')]
     public function show(Request $request, String $slug, string $_locale): Response
     {
-        $testimonies = json_decode(file_get_contents($this->customerTestimoniesFilePath), true);
+        $testimonies = json_decode(file_get_contents($this->customersFilePath), true);
 
         foreach ($testimonies as $testimony) {
             if ($testimony['id'] == $slug && !in_array($_locale, $testimony['available_languages'])) {
