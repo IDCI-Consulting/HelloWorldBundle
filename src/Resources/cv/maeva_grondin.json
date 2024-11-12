@@ -43,7 +43,7 @@
                     "customer": "Eyrolles",
                     "website": "https://www.eyrolles.com",
                     "startDate": "2024-02-05T00:00:00Z",
-                    "endDate": "2024-10-08T00:00:00Z",
+                    "endDate": "",
                     "tools": ["PHP8", "Symfony 6", "Docker", "RabbitMQ", "Nginx", "PostgreSQL", "Twig", "Sass"],
                     "tasks": {
                         "fr": [
@@ -62,7 +62,7 @@
                     "customer": "Editions Eyrolles",
                     "website": "https://www.editions-eyrolles.com",
                     "startDate": "2024-02-05T00:00:00Z",
-                    "endDate": "2024-10-08T00:00:00Z",
+                    "endDate": "",
                     "tools": ["PHP8", "Symfony 6", "EasyAdmin 4", "Docker", "RabbitMQ", "Nginx", "PostgreSQL", "Twig", "Sass"],
                     "tasks": {
                         "fr": [

@@ -32,45 +32,106 @@
                 "fr": "Développeur Web FullStack",
                 "en": "FullStack Web Developer"
             },
-            "startDate": "2018-09-17T00:00:00Z",
-            "endDate": null,
+            "startDate": "2018-07-04T00:00:00Z",
+            "endDate": "",
             "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Création d'une plateforme e-commerce pour le groupe MAIER sous la forme de microservices avec le framework Symfony 4",
-                    "Conseils & accompagnement des clients dans la mise en oeuvre des besoins exprimés grâce à l'utilisation d'outil de ticketing",
-                    "Accompagnement des équipes en tant que chef de projet (maître de stage et maître d'apprentissage)"
-                ],
-                "en": [
-                    "Creation of an e-commerce platform for the MAIER group in the form of microservices with the Symfony 4 framework",
-                    "Advice and support for customers in the implementation of their needs through the use of ticketing tools",
-                    "Accompanying teams as a project leader (internship and apprenticeship supervisor)"
-                ]
-            }
-        },
-        {
-            "company": "IDCI-Consulting",
-            "role": {
-                "fr": "Stagiaire Développeur Web FullStack",
-                "en": "Intern FullStack Web Developer"
-            },
-            "startDate": "2018-04-01T00:00:00Z",
-            "endDate": "2018-07-04T00:00:00Z",
-            "website": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Mise en place d'une stack technique pour le développement sous Symfony avec docker",
-                    "Dockerisation d'une application sous Prestashop 1.5",
-                    "Mise en place d'un bundle Symfony 3 pour faciliter la gestion et réservation de logement"
-                ],
-                "en": [
-                    "Implementation of a technical stack for development under Symfony with docker",
-                    "Dockerization of an application under Prestashop 1.5",
-                    "Implementation of a Symfony 3 bundle to facilitate the management and reservation of accommodation"
-                ]
-            }
+            "xpByCustomer": [
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://editions-eyrolles.com/",
+                    "startDate": "2023-09-02T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["PHP 8", "Symfony 6", "Elasticsearch", "PostgreSQL"],
+                    "tasks": {
+                        "fr": [
+                            "Soutien technique auprès de l'équipe de développement"
+                        ],
+                        "en": [
+                            "Technical support to the development team"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tiara Milo",
+                    "website": "https://www.tiaramilo.com",
+                    "startDate": "2021-03-10T00:00:00Z",
+                    "endDate": "2021-09-07T00:00:00Z",
+                    "tools": ["PHP 8", "Symfony 5", "PostgreSQL", "Docker", "Minio", "GraphQL", "Nginx"],
+                    "tasks": {
+                        "fr": [
+                            "Mise en place de l'architecture sous Symfony 5 en microservices s'interfaçant via des API GraphQL",
+                            "Gestion du projet et formation des équipes dans le but de leur permettre à gérer le projet en autonomie"
+                        ],
+                        "en": [
+                            "Setting of the architecture under Symfony 5 in microservices interfacing with GraphQL APIs",
+                            "Project management and training of teams to let them manage the project in autonomy"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Maier",
+                    "website": "https://www.maier.fr/",
+                    "startDate": "2019-01-10T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["PHP 7", "Symfony 4", "GitLab", "Docker", "Nginx", "GraphQL", "PostgreSQL", "Minio", "Redmine"],
+                    "tasks": {
+                        "fr": [
+                            "Refonte complète du système d'information Prestashop pré-existant au profit d'une solution sur-mesure à l'aide de Symfony 4 sur un fonctionnement type micro-services s'interfaçant à l'aide d'API GraphQL",
+                            "Dockerisation complète du projet et mise en place d'une CI permettant d'effectuer des déploiements sur différents environnement",
+                            "Création d'un outil de gestion de catalogue produit (API + CRUD) et interfaçage avec des systèmes internes & externes (ex: Salesforce, Avis vérifiés, etc)",
+                            "Création d'un outil de gestion de client (API + CRUD) et interfaçage avec des systèmes internes & externes (ex: Salesforce, Facebook, etc)",
+                            "Mise en place et refonte des 2 sites vitrines (<a href=\"https://maier.fr\">www.maier.fr</a> & <a href=\"https://rolex.maier.fr\">www.rolex.maier.fr</a>)",
+                            "Maintenance et mise à jour des différentes briques applicatives tout au long du cycle de vie du système d'information",
+                            "Gestion du projet et formation du client sur un outil de ticketing afin de fluidifier la communication des besoins"
+                        ],
+                        "en": [
+                            "Complete redesign of the Prestashop information system for a tailor-made solution with Symfony 4 on a operation of type microservices interfacing with GraphQL APIs",
+                            "Complete Dockerization of the project and setting of a CI allowing deployement on multiple environment",
+                            "Creation of a product manager (API + CRUD) and interface with internal and external systems (ex: Salesforce, Avis vérifiés, etc)",
+                            "Creation of a customer manager (API + CRUD) and interface with internal and external systems (ex: Salesforce, Facebook, etc)",
+                            "Setting and redesign of both showcase websites (<a href=\"https://maier.fr\">www.maier.fr</a> & <a href=\"https://rolex.maier.fr\">www.rolex.maier.fr</a>)",
+                            "Maintenance and updating of the different microservices all along the information system lifecycle",
+                            "Project management and training of the customer on a ticketing tool to fluidize the communication of the needs"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Inflexyon",
+                    "website": "https://www.inflexyon.fr/",
+                    "startDate": "2018-11-21T00:00:00Z",
+                    "endDate": "2018-12-28T00:00:00Z",
+                    "tools": ["PHP 7", "Symfony 3"],
+                    "tasks": {
+                        "fr": [
+                            "Mise à jour du système d'admnistration (CRUD) basé sur Symfony 3",
+                            "Mise en place d'un bundle Symfony 3 permettant de gérer les locations de chambres",
+                            "Maintenance et débogage avant mise en production"
+                        ],
+                        "en": [
+                            "Update of the admin system (CRUD) based on Symfony 3",
+                            "Setting of a Symfony 3 bundle allowing room rental management",
+                            "Maintenance and debugging before releasing"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Hiriar",
+                    "website": "",
+                    "startDate": "2018-04-01T00:00:00Z",
+                    "endDate": "2018-04-07T00:00:00Z",
+                    "tools": ["Prestashop 1.6", "Docker"],
+                    "tasks": {
+                        "fr": [
+                            "Dockerisation du projet sous Prestashop 1.6",
+                            "Mise à jour concernant la partie front du site"
+                        ],
+                        "en": [
+                            "Dockerization of the project under Prestashop 1.6",
+                            "Update of the front end of the website"
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "personalExperiences": [],
