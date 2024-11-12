@@ -1,6 +1,11 @@
 .section-choices {
     background-color: $idci-color-whitesmoke;
 
+    &.section-choices-media {
+        background-image: url(../../../images/base/background_presentation.jpg);
+        background-size: cover;
+    }
+
     .content-container {
         .section-choices-title {
             color: $idci-color-dark-grey;
