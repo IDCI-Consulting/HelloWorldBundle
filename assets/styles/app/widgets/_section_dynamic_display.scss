@@ -15,9 +15,16 @@
         margin-top: 1rem;
         text-align: center;
 
+        @include until ($desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include until ($tablet) {
+            grid-template-columns: 1fr;
+        }
+
         .section-dynamic-display-banner-card {
             background-color: $idci-color-light-grey;
-            box-shadow: 1px -50px 36px -28px inset #00000059;
             padding: 0.5rem;
             position: relative;
             transform-style: preserve-3d;
@@ -52,6 +59,7 @@
                 }
 
                 .tags {
+                    font-size: $idci-font-medium;
                     margin-top: 1rem;
                     max-height: 7.5rem;
                     overflow: hidden;
