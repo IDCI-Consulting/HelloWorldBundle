@@ -69,7 +69,6 @@ class CustomerController extends AbstractController
                 $tools = $testimony['tools'];
             }
         }
-        // dd($tools);
 
         try {
             $testimony = $this->renderView(sprintf('customer/%s/%s.md.twig', $_locale, $slug), [
