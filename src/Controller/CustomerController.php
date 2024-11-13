@@ -21,7 +21,6 @@ class CustomerController extends AbstractController
     public function list(Request $request): Response
     {
         $customers = json_decode(file_get_contents($this->customersFilePath), true);
-        // $testimonies = json_decode(file_get_contents($this->customersFilePath), true);
         $testimonies = array_filter($customers, function($customer) {
             if ("" !== $customer['publicationDate']) {
                 return $customer;
@@ -47,7 +46,12 @@ class CustomerController extends AbstractController
     #[Route('/{slug}', methods: ['GET'], name:'show')]
     public function show(Request $request, String $slug, string $_locale): Response
     {
-        $testimonies = json_decode(file_get_contents($this->customersFilePath), true);
+        $customers = json_decode(file_get_contents($this->customersFilePath), true);
+        $testimonies = array_filter($customers, function($customer) {
+            if ("" !== $customer['publicationDate']) {
+                return $customer;
+            }
+        });
 
         foreach ($testimonies as $testimony) {
             if ($testimony['id'] == $slug && !in_array($_locale, $testimony['available_languages'])) {
