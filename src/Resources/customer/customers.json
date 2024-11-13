@@ -1,33 +1,48 @@
 [
     {
+        "id": "allopneus",
+        "available_languages": [],
+        "customer": "Allopneus",
+        "name": {
+            "fr": "Allopneus, client en 2011",
+            "en": "Allopneus, customer in 2011"
+        },
+        "media": "customer/allopneus-logo.png",
+        "publicationDate": "",
+        "beginYear": "2011",
+        "endYear": "2012",
+        "description": {},
+        "tools": ["PHP 5", "Symfony 2"]
+    },
+    {
         "id": "l-appart-fitness",
         "available_languages": [],
         "customer": "L'Appart Fitness",
         "name": {
-            "fr": "L'Appart Fitness",
-            "en": "L'Appart Fitness"
+            "fr": "L'Appart Fitness, client de 2012 à 2016",
+            "en": "L'Appart Fitness, customer from 2012 to 2016"
         },
         "media": "customer/appart-fitness-logo.png",
         "publicationDate": "",
-        "beginYear": "",
-        "endYear": "",
+        "beginYear": "2012",
+        "endYear": "2016",
         "description": {},
-        "tools": []
+        "tools": ["PHP 5", "Symfony 2/3", "WordPress", "API REST", "Proxmox"]
     },
     {
         "id": "carglass",
         "available_languages": [],
         "customer": "Carglass",
         "name": {
-            "fr": "Carglass",
-            "en": "Carglass"
+            "fr": "Carglass, client en 2016",
+            "en": "Carglass, customer in 2016"
         },
         "media": "customer/carglass-logo.png",
         "publicationDate": "",
-        "beginYear": "",
-        "endYear": "",
+        "beginYear": "2016",
+        "endYear": "2016",
         "description": {},
-        "tools": []
+        "tools": ["PHP 5", "Symfony 2", "Oracle", "Ansible", "Doctrine"]
     },
     {
         "id": "eyrolles",
@@ -39,10 +54,10 @@
         },
         "media": "customer/eyrolles-logo.png",
         "publicationDate": "",
-        "beginYear": "2023",
+        "beginYear": "2022",
         "endYear": "",
         "description": {},
-        "tools": ["Symfony 6", "PHP 8", "Twig", "SASS", "Docker", "Nginx", "Redis", "PostgreSQL", "Minio", "GraphQL", "RabbitMQ", "ElasticSearch", "EasyAdmin 4"]
+        "tools": ["PHP 8", "Symfony 6", "Twig", "SASS", "Docker", "Nginx", "Redis", "PostgreSQL", "Minio", "GraphQL", "RabbitMQ", "ElasticSearch", "EasyAdmin 4"]
     },
     {
         "id": "horlogerie-maier",
@@ -61,22 +76,37 @@
             "fr": "Découvrez l'expérience de l'horlogerie Maier chez IDCI-consulting",
             "en": "Discover the experience of Maier watchmaking at IDCI-consulting"
         },
-        "tools": ["SASS", "PHP 8", "Symfony 4/5/6", "Minio", "Docker", "Nginx", "GraphQL", "PostgreSQL", "Twig", "Redis", "ElasticSearch", "RabbitMQ"]
+        "tools": ["PHP 8", "Symfony 4/5/6", "SASS", "Minio", "Docker", "Nginx", "GraphQL", "PostgreSQL", "Twig", "Redis", "ElasticSearch", "RabbitMQ"]
     },
     {
         "id": "inta",
         "available_languages": [],
         "customer": "INTA",
         "name": {
-            "fr": "INTA",
-            "en": "INTA"
+            "fr": "INTA, client de 2010 à 2013",
+            "en": "INTA, customer from 2010 to 2013"
         },
         "media": "customer/inta-logo.png",
         "publicationDate": "",
-        "beginYear": "",
-        "endYear": "",
+        "beginYear": "2010",
+        "endYear": "2013",
         "description": {},
-        "tools": []
+        "tools": ["PHP 5", "Symfony 2/3", "Ansible", "Symposium"]
+    },
+    {
+        "id": "le-moniteur",
+        "available_languages": [],
+        "customer": "Le Moniteur",
+        "name": {
+            "fr": "Le Moniteur, client en 2011",
+            "en": "Le Moniteur, customer in 2011"
+        },
+        "media": "customer/moniteur-logo.png",
+        "publicationDate": "",
+        "beginYear": "2011",
+        "endYear": "2011",
+        "description": {},
+        "tools": ["PHP 5", "Symfony 2"]
     },
     {
         "id": "sejer",
@@ -94,7 +124,7 @@
             "fr": "Découvrez l'expérience de SEJER chez IDCI-consulting",
             "en": "Discover the experience of SEJER at IDCI-consulting"
         },
-        "tools": ["Symfony 4/5", "PHP 7", "Twig", "SASS", "Docker", "Nginx", "Redis", "MySQL"]
+        "tools": ["PHP 7", "Symfony 4/5", "Twig", "SASS", "Docker", "Nginx", "Redis", "MySQL"]
     },
     {
         "id": "tessi-marketing",
@@ -112,21 +142,21 @@
             "fr": "Découvrez l'expérience de Tessi marketing chez IDCI-consulting",
             "en": "Discover the experience of Tessi marketing at IDCI-consulting"
         },
-        "tools": ["Docker", "Nginx", "Symfony 2", "PHP 5", "MongoDB", "MariaDB", "Varnish", "RabbitMQ", "MySQL", "ElasticSearch"]
+        "tools": ["PHP 5/7", "Symfony 3/4", "Docker", "Nginx", "MongoDB", "MariaDB", "Varnish", "RabbitMQ", "ElasticSearch", "Ansible", "API REST", "Digifid"]
     },
     {
         "id": "ucbl",
         "available_languages": [],
         "customer": "Université Claude Bernard Lyon",
         "name": {
-            "fr": "Université Claude Bernard Lyon",
-            "en": "Claude Bernard university Lyon"
+            "fr": "Université Claude Bernard Lyon, client de 2008 à 2016",
+            "en": "Claude Bernard university Lyon, customer from 2008 to 2016"
         },
         "media": "customer/ucbl-logo.png",
         "publicationDate": "",
-        "beginYear": "",
-        "endYear": "",
+        "beginYear": "2008",
+        "endYear": "2016",
         "description": {},
-        "tools": []
+        "tools": ["PHP 5", "Symfony 2/3", "Ansible"]
     }
 ]
