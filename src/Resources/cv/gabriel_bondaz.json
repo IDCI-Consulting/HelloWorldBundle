@@ -2,7 +2,7 @@
     "identity": {
         "firstName": "Gabriel",
         "lastName": "Bondaz",
-        "birthDate": "1984-01",
+        "birthDate": "1984-12-07",
         "job": {
             "fr": "Co-gérant & Ingénieur Recherche et Développement",
             "en": "Managing director & Research and Development Engineer"
@@ -37,21 +37,209 @@
                 "en": "Co-manager & Research and Development Engineer"
             },
             "website": "https://www.idci-consulting.fr/fr/",
-            "startDate": "2008-09",
+            "startDate": "2007-12",
             "endDate": "",
             "tools": [],
             "tasks": {
                 "fr": [
-                    "Création de l'entreprise",
-                    "Conception et maintenance de sites web (éditeur, bijouterie-joaillerie, centrale d'achat, hôtel)",
-                    "Gestion d'équipe",
+                    "Création de l'entreprise IDCI-Consulting",
+                    "Conception et maintenance d'applications et d'infrastructure web",
+                    "Manager d'équipe",
                     "Formateur"
                 ],
                 "en": [
-                    "Company creation",
-                    "Website conception and maintainance (publisher, jewellery, purchasing organisation, hotel)",
-                    "Team management",
+                    "IDCI-Consulting creator",
+                    "Web applications and infrastructure conception and maintainance",
+                    "Team manager",
                     "Course instructor"
+                ]
+            }
+        },
+        {
+            "company": "Groupe Eyrolles",
+            "role": {
+                "fr": "Consultant Informatique",
+                "en": "IT Consultant"
+            },
+            "website": "https://www.eyrolles.com/",
+            "startDate": "2022-02",
+            "endDate": "",
+            "tools": ["Docker", "Gitlab", "Gitlab-CI", "SSO", "Keycloak", "OAuth2.0", "PHP 8", "Symfony 6", "API GraphQL", "RabbitMQ", "Redis"],
+            "tasks": {
+                "fr": [
+                    "Mise en place d'une stack DevOps (Docker / GitLab / GitLab-CI)",
+                    "Migration des applications web sous docker",
+                    "Mise en place d'un SSO avec Keycloak",
+                    "Maintenance et évolutions des applications Web (Php/Symfony)",
+                    "Accompagnement et formation de l'équipe IT interne"
+                ],
+                "en": [
+                    "Setting up a DevOps stack (Docker / GitLab / GitLab-CI)",
+                    "Migrating web applications to Docker",
+                    "Setting up SSO with Keycloak",
+                    "Maintenance and developments of Web applications (Php/Symfony)",
+                    "Support and training of the internal IT team"
+                ]
+            }
+        },
+        {
+            "company": "Quipment SAS",
+            "role": {
+                "fr": "Consultant Informatique",
+                "en": "IT Consultant"
+            },
+            "website": "https://www.quipment.fr/",
+            "startDate": "2021-09",
+            "endDate": "2022-01",
+            "tools": ["Docker", "PHP 7", "PHP 8", "Symfony 4", "Symfony 5", "Symfony 6", "API SOAP", "Redis", "Behat"],
+            "tasks": {
+                "fr": "Refonte compléte du backoffice client 'Quipsite' (quipsite.quipment.fr) basé sur des appels Webservice SOAP",
+                "en": "Rebuild the customer backoffice 'Quipsite' (quipsite.quipment.fr) based on SOAP Webservice calls"
+            }
+        },
+        {
+            "company": "Mon Petit Placement",
+            "role": {
+                "fr": "Développeur principal senior",
+                "en": "Senior Lead Developer"
+            },
+            "website": "https://www.monpetitplacement.fr/",
+            "startDate": "2020-07",
+            "endDate": "2021-07",
+            "tools": ["Docker", "Gitlab", "Gitlab-CI", "SSO", "Keycloak", "OAuth2.0", "PHP 7", "Symfony 4", "API Plateform", "RabbitMQ", "Behat"],
+            "tasks": {
+                "fr": [
+                    "Refonte de l'application en Micro Service (Front Angular / Back Symfony4.4)",
+                    "Mise en place de la CI (gitlab-ci) et de l’environnement serveur (Docker Swarm)",
+                    "Mise en place des tests fonctionnels (Behat)",
+                    "Mise en place des traitements asynchrone (RabbitMQ)",
+                    "Mise en place de la sécurité via Oauth2.0 (Keycloak)"
+                ],
+                "en": [
+                    "Redesign of the application in Micro Service (Front Angular / Back Symfony4.4)",
+                    "Setting up the CI (gitlab-ci) and the server environment (Docker Swarm)",
+                    "Implementation of functional tests (Behat)",
+                    "Implementation of asynchronous processing (RabbitMQ)",
+                    "Setting up security via Oauth2.0 (Keycloak)"
+                ]
+            }
+        },
+        {
+            "company": "Upply",
+            "role": {
+                "fr": "Développeur principal",
+                "en": "Lead Developer"
+            },
+            "website": "https://www.upply.com/",
+            "startDate": "2019-07",
+            "endDate": "2020-04",
+            "tools": ["Docker", "PHP 7", "Symfony 4", "MongoDB", "API REST", "RabbitMQ", "Behat"],
+            "tasks": {
+                "fr": [
+                    "Lead développeur 'Back' sur la marketplace upply.com",
+                    "Développements Web php (Symfony 4.3/4.4) / Api REST / Traitement asynchrone (RabbitMQ)",
+                    "Optimisation base de donnée MongoDB",
+                    "Gestion de livrables, mise en préprod, optimisation des images docker, supervision Applicative"
+                ],
+                "en": [
+                    "Lead developer 'Back' on the upply.com marketplace",
+                    "PHP web development (Symfony 4.3/4.4) / REST API / Asynchronous processing (RabbitMQ)",
+                    "MongoDB database optimization",
+                    "Management of deliverables, pre-production, optimization of Docker images, Application supervision"
+                ]
+            }
+        },
+        {
+            "company": "Editis",
+            "role": {
+                "fr": "Consultant Web Sénior",
+                "en": "Senior Web Consultant"
+            },
+            "website": "https://www.editis.com/",
+            "startDate": "2016-04",
+            "endDate": "",
+            "tools": ["PHP 7", "Symfony 4", "MySQL", "API REST", "API SOAP"],
+            "tasks": {
+                "fr": [
+                    "Développements du portail de connexion enseignants/étudiants pour différents projets (imanuel.nathan.fr, inscription-brne.eduplateforme.com, classes.eduplateforme.com, ...)",
+                    "Développements Web php (Symfony 4.4) / Api client REST & SOAP / Formulaires d'inscriptions / Stockage SQL (MySQL)"
+                ],
+                "en": [
+                    "Developments of the teacher/student connection portal for different projects (imanuel.nathan.fr, inscription-brne.eduplateforme.com, classes.eduplateforme.com, etc.)",
+                    "PHP web development (Symfony 4.4) / REST & SOAP client API / Registration forms / SQL storage (MySQL)"
+                ]
+            }
+        },
+        {
+            "company": "Tessi customer marketing",
+            "role": {
+                "fr": "Consultant Web Sénior",
+                "en": "Senior Web Consultant"
+            },
+            "website": "https://www.editis.com/",
+            "startDate": "2013-06",
+            "endDate": "2019-02",
+            "tools": ["Docker", "Github", "Keycloak", "PHP 5", "Symfony 2", "MySQL", "MongoDB", "API REST", "RabbitMQ", "ElasticSearch"],
+            "tasks": {
+                "fr": [
+                    "Consultant - Architecte - Lead Développeur",
+                    "Analyse et refonte du nouveau S.I (Projet DIGIFID v2)",
+                    "Accompagnement des équipes techniques (8 développeurs)",
+                    "Mise en place de la stack DévOps",
+                    "Développements Web php (Symfony 2.4/2.8) / Api REST / Authentification OAuth2 (Keycloak) / Traitement asynchrone (RabbitMQ) / Stockage des données issues des parcours clients multi canaux (MongoDB / ElastciSearch) / Supervision Applicative"
+                ],
+                "en": [
+                    "Consultant - Architect - Lead Developer",
+                    "Analysis and redesign of the new IS (DIGIFID v2 Project)",
+                    "Support for technical teams (8 developers)",
+                    "Setting up the DevOps stack",
+                    "PHP Web development (Symfony 2.4/2.8) / REST API / OAuth2 authentication (Keycloak) / Asynchronous processing (RabbitMQ) / Storage of data from multi-channel customer journeys (MongoDB / ElastciSearch) / Application Supervision"
+                ]
+            }
+        },
+        {
+            "company": "Allopneus",
+            "role": {
+                "fr": "Consultant en développement Web",
+                "en": "Web development consultant"
+            },
+            "website": "https://www.allopneus.com/",
+            "startDate": "2011-05",
+            "endDate": "2011-08",
+            "tools": ["Symfony 2"],
+            "tasks": {
+                "fr": [
+                    "Conseil et formation des équipes dans le cadre du changement de version du site web pour allopneus.com",
+                    "Accompagnement des équipes techniques (6 développeurs)",
+                    "Développements Web php (Symfony 2.0/2.1)"
+                ],
+                "en": [
+                    "Advice and training of teams as part of the change of version of the website for allopneus.com",
+                    "Support for technical teams (6 developers)",
+                    "PHP Web Developments (Symfony 2.0/2.1)"
+                ]
+            }
+        },
+        {
+            "company": "Groupe Moniteur",
+            "role": {
+                "fr": "Consultant en développement Web",
+                "en": "Web development consultant"
+            },
+            "website": "https://www.lemoniteur.fr/",
+            "startDate": "2010-10",
+            "endDate": "2011-07",
+            "tools": ["PHP", "Symfony 1"],
+            "tasks": {
+                "fr": [
+                    "Pilotage du projet de refonte du site web",
+                    "Accompagnement des équipes techniques (3 développeurs)",
+                    "Développements web php"
+                ],
+                "en": [
+                    "Website redesign project leading",
+                    "Technic team support (3 developers)",
+                    "Web development in PHP"
                 ]
             }
         },
@@ -71,133 +259,6 @@
             }
         },
         {
-            "company": "",
-            "role": {
-                "fr": "Formateur WEB",
-                "en": "Web instructor"
-            },
-            "website": "",
-            "startDate": "2008-09",
-            "endDate": "",
-            "tools": ["HTML", "Css", "Js", "PHP", "Magento", "Wordpress", "Prestashop"],
-            "tasks": {
-                "fr": "",
-                "en": ""
-            }
-        },
-        {
-            "company": "APTA - Clermont Ferrand, ASP, Proximit, iCap, EITE, OPCADIA, etc",
-            "role": {
-                "fr": "Formateur",
-                "en": "Instructor"
-            },
-            "website": "",
-            "startDate": "2008-09",
-            "endDate": "",
-            "tools": [],
-            "tasks": {
-                "fr": "",
-                "en": ""
-            }
-        },
-        {
-            "company": "",
-            "role": {
-                "fr": "Formateur",
-                "en": "Instructor"
-            },
-            "website": "",
-            "startDate": "2008-09",
-            "endDate": "",
-            "tools": ["PHP", "Symfony", "Programmation Orientée Objet", "UML"],
-            "tasks": {
-                "fr": "",
-                "en": ""
-            }
-        },
-        {
-            "company": "",
-            "role": {
-                "fr": "",
-                "en": ""
-            },
-            "website": "",
-            "startDate": "2008-09",
-            "endDate": "",
-            "tools": ["Symfony (1/2/3)"],
-            "tasks": {
-                "fr": [
-                    "Conception de sites web"
-                ],
-                "en": [
-                    "Website conception"
-                ]
-            }
-        },
-        {
-            "company": "",
-            "role": {
-                "fr": "",
-                "en": ""
-            },
-            "website": "",
-            "startDate": "2008-09",
-            "endDate": "",
-            "tools": ["Firewall, Reverse Proxy, Load Balancer, Cache, DNS, DHCP, Serveur Web, Serveur FTP, Base de données, Virtualisation, Dockerisation"],
-            "tasks": {
-                "fr": [
-                    "Mise en place d'infrastructure serveur"
-                ],
-                "en": [
-                    "Server infrastructure implementation"
-                ]
-            }
-        },
-        {
-            "company": "",
-            "role": {
-                "fr": "",
-                "en": ""
-            },
-            "website": "",
-            "startDate": "2008-09",
-            "endDate": "",
-            "tools": ["symfony 1/2", "Wordpress", "Magento"],
-            "tasks": {
-                "fr": [
-                    "Gestion d'équipe et de projet de développement Web"
-                ],
-                "en": [
-                    "Team and web development project management"
-                ]
-            }
-        },
-        {
-            "company": "Tessi Marketing",
-            "role": {
-                "fr": "Consultant Web",
-                "en": "Web consultant"
-            },
-            "website": "https://www.tessicustomermarketing.fr/",
-            "startDate": "2013-06",
-            "endDate": "",
-            "tools": ["Symphony 2.4/2.8"],
-            "tasks": {
-                "fr": [
-                    "Analyse et refonte du nouveau S.I (Projet DIGIFID v2)",
-                    "Accompagnement des équipes techniques (8 développeurs)",
-                    "Mise en place de la stack DévOps",
-                    "Développements WEB PHP"
-                ],
-                "en": [
-                    "Analyse and redesign of new informatique system (Project DIGIFID v2)",
-                    "Technic team support (8 developpers)",
-                    "Stack DevOps implementation",
-                    "Web development in PHP"
-                ]
-            }
-        },
-        {
             "company": "Inseec Digital Institute",
             "role": {
                 "fr": "Intervenant",
@@ -205,64 +266,11 @@
             },
             "website": "https://www.inseec-digital.com/",
             "startDate": "2016-09",
-            "endDate": "",
+            "endDate": "2016-12",
             "tools": ["PHP", "MySQL"],
             "tasks": {
-                "fr": "",
-                "en": ""
-            }
-        },
-        {
-            "company": "Interforum",
-            "role": {
-                "fr": "Consultant Web",
-                "en": "Web consultant"
-            },
-            "website": "https://www.interforum.fr/login_init.do",
-            "startDate": "2016-09",
-            "endDate": "",
-            "tools": [],
-            "tasks": {
-                "fr": "",
-                "en": ""
-            }
-        },
-        {
-            "company": "ENS",
-            "role": {
-                "fr": "",
-                "en": ""
-            },
-            "website": "http://archinfo.universite-lyon.fr/",
-            "startDate": "2014-09",
-            "endDate": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Développement d'une plateforme de gestion des pads"
-                ],
-                "en": [
-                    "Conception of a pads management plateform"
-                ]
-            }
-        },
-        {
-            "company": "MB Création",
-            "role": {
-                "fr": "",
-                "en": ""
-            },
-            "website": "https://www.mbcreation.net/",
-            "startDate": "2012-09",
-            "endDate": "",
-            "tools": ["Symfony 2"],
-            "tasks": {
-                "fr": [
-                    "Conseil, développement et formations des équipes"
-                ],
-                "en": [
-                    "Support, development and training of teams"
-                ]
+                "fr": "Formateur",
+                "en": "Trainer"
             }
         },
         {
@@ -273,76 +281,11 @@
             },
             "website": "http://archinfo.universite-lyon.fr/",
             "startDate": "2012-09",
-            "endDate": "",
+            "endDate": "2013-06",
             "tools": [],
             "tasks": {
-                "fr": "",
-                "en": ""
-            }
-        },
-        {
-            "company": "Allopneus",
-            "role": {
-                "fr": "",
-                "en": ""
-            },
-            "website": "https://www.allopneus.com/",
-            "startDate": "2011-03",
-            "endDate": "",
-            "tools": ["Symfony 2.0/2.1"],
-            "tasks": {
-                "fr": [
-                    "Accompagnement des équipes techniques pour une évolution du site web (6 développeurs)",
-                    "Développements web php"
-                ],
-                "en": [
-                    "Support technic teams for a website upgdrade (6 developers)",
-                    "Web developments with php"
-                ]
-            }
-        },
-        {
-            "company": "Groupe Moniteur",
-            "role": {
-                "fr": "",
-                "en": ""
-            },
-            "website": "https://www.lemoniteur.fr/",
-            "startDate": "2010-05",
-            "endDate": "",
-            "tools": ["Symfony 1.4"],
-            "tasks": {
-                "fr": [
-                    "Pilotage du projet de refonte du site web",
-                    "Accompagnement des équipes techniques (3 développeurs)",
-                    "Développements web php"
-                ],
-                "en": [
-                    "Website redesign project leading",
-                    "Technic team support (3 developers)",
-                    "Web development in PHP"
-                ]
-            }
-        },
-        {
-            "company": "Ajilon",
-            "role": {
-                "fr": "",
-                "en": ""
-            },
-            "website": "https://fidroit.fr/professionnels/",
-            "startDate": "2009-02",
-            "endDate": "",
-            "tools": ["Symphony 1.4"],
-            "tasks": {
-                "fr": [
-                    "Accompagnement des équipes techniques (4 développeurs)",
-                    "Développements web php"
-                ],
-                "en": [
-                    "Technic team support (4 developers)",
-                    "Web developments in PHP"
-                ]
+                "fr": "Formateur",
+                "en": "Trainer"
             }
         },
         {
@@ -354,7 +297,7 @@
             "website": "https://icap.univ-lyon1.fr/",
             "startDate": "2005-09",
             "endDate": "2007-07",
-            "tools": ["Windows/Linux"],
+            "tools": ["PHP", "Linux"],
             "tasks": {
                 "fr": [
                     "Installation et configuration de salles informatiques multi-systèmes d'exploitations",
@@ -377,7 +320,7 @@
             "website": "https://cc.in2p3.fr/",
             "startDate": "2005-11",
             "endDate": "",
-            "tools": [],
+            "tools": ["Python"],
             "tasks": {
                 "fr": [
                     "Mise en place d'un protocole informatique pour le transfert d'images médicales au format DICOM depuis un IRM, à destination d'une base SRB",
@@ -398,7 +341,7 @@
             "website": "https://lagepp.univ-lyon1.fr/",
             "startDate": "2005-06",
             "endDate": "",
-            "tools": [],
+            "tools": ["PHP"],
             "tasks": {
                 "fr": [
                     "Refonte du site Internet (<a href=https://lagepp.univ-lyon1.fr/ target=blank>Laboratoire Lagep</a>)",
@@ -419,11 +362,11 @@
             },
             "role": {
                 "fr": "Bénévole",
-                "en": "Managing director & Research and Development Engineer"
+                "en": "Volunteer"
             },
             "website": "http://www.solidarite-sida.org/",
             "startDate": "2004-07",
-            "endDate": "2005-07",
+            "endDate": "2017-07",
             "tasks": {
                 "fr": [
                     "Bénévole pour l'association Solidarité Sida et sur le festival Solidays à Paris"
@@ -483,7 +426,7 @@
             "startDate": "",
             "endDate": "2008-07"
         },
-        {   
+        {
             "domain": {
                 "fr": "Informatique",
                 "en": "IT"
@@ -520,7 +463,8 @@
                     "keywords": [
                         "Apache",
                         "Nginx",
-                        "lighttpd"
+                        "lighttpd",
+                        "Caddy"
                     ]
                 },
                 {
@@ -560,7 +504,7 @@
                 },
                 {
                     "name": {
-                        "fr": "Langages informatiques",
+                        "fr": "Languages informatiques",
                         "en": "Development Languages"
                     },
                     "level": "",
@@ -573,11 +517,15 @@
                         "HTML",
                         "xHTML",
                         "HTML5",
+                        "XML",
                         "JavaScript",
                         "SQL",
                         "Pl/Sql",
                         "Prolog",
-                        "Shell Script"
+                        "Shell Script",
+                        "JSON",
+                        "YAML",
+                        "Markdown"
                     ]
                 },
                 {
@@ -676,7 +624,8 @@
                         "PostgreSQL",
                         "MongoDB",
                         "CouchDB",
-                        "ElasticSearch"
+                        "ElasticSearch",
+                        "Redis"
                     ]
                 },
                 {
@@ -688,7 +637,7 @@
                     "keywords": [
                         "Xen",
                         "OpenVZ",
-                        "KMV",
+                        "KVM",
                         "Docker"
                     ]
                 },
@@ -701,7 +650,8 @@
                     "keywords": [
                         "Trac",
                         "Redmine",
-                        "Mantis"
+                        "Mantis",
+                        "Jira"
                     ]
                 },
                 {
@@ -711,7 +661,9 @@
                     },
                     "level": "",
                     "keywords": [
-                        "Gulp"
+                        "Gulp",
+                        "Grunt",
+                        "Ansible"
                     ]
                 },
                 {
@@ -742,7 +694,8 @@
                     "level": "",
                     "keywords": [
                         "Ajax",
-                        "Jquery"
+                        "Jquery",
+                        "Websocket"
                     ]
                 }
             ]
@@ -771,6 +724,16 @@
                     "level": {
                         "fr": "Maîtrisé",
                         "en": "Fluent"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Portugais",
+                        "en": "Portuguese"
+                    },
+                    "level": {
+                        "fr": "Indépendant",
+                        "en": "Independent"
                     }
                 }
             ]
