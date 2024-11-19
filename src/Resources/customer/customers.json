@@ -10,7 +10,7 @@
         "media": "customer/allopneus-logo.png",
         "publicationDate": "",
         "beginYear": "2011",
-        "endYear": "2012",
+        "endYear": "2011",
         "description": {},
         "tools": ["PHP 5", "Symfony 2"]
     },
@@ -98,12 +98,12 @@
         "available_languages": [],
         "customer": "Le Moniteur",
         "name": {
-            "fr": "Le Moniteur, client en 2011",
-            "en": "Le Moniteur, customer in 2011"
+            "fr": "Le Moniteur, client de 2010 à 2011",
+            "en": "Le Moniteur, customer from 2010 to 2011"
         },
         "media": "customer/moniteur-logo.png",
         "publicationDate": "",
-        "beginYear": "2011",
+        "beginYear": "2010",
         "endYear": "2011",
         "description": {},
         "tools": ["PHP 5", "Symfony 2"]
@@ -131,12 +131,12 @@
         "available_languages": ["fr", "en"],
         "customer": "Tessi marketing",
         "name": {
-            "fr": "Tessi marketing, client de 2014 à 2019",
-            "en": "Tessi marketing, customer from 2014 until 2019"
+            "fr": "Tessi marketing, client de 2013 à 2019",
+            "en": "Tessi marketing, customer from 2013 until 2019"
         },
         "media": "customer/tessi-logo.jpg",
         "publicationDate": "30/09/2024",
-        "beginYear": "2014",
+        "beginYear": "2013",
         "endYear": "2019",
         "description": {
             "fr": "Découvrez l'expérience de Tessi marketing chez IDCI-consulting",
