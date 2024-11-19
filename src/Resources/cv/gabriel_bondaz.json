@@ -36,322 +36,215 @@
                 "fr": "Co-gérant & Ingénieur Recherche et Développement",
                 "en": "Co-manager & Research and Development Engineer"
             },
-            "website": "https://www.idci-consulting.fr/fr/",
             "startDate": "2007-12",
             "endDate": "",
-            "tools": [],
-            "tasks": {
-                "fr": [
-                    "Création de l'entreprise IDCI-Consulting",
-                    "Conception et maintenance d'applications et d'infrastructure web",
-                    "Manager d'équipe",
-                    "Formateur"
-                ],
-                "en": [
-                    "IDCI-Consulting creator",
-                    "Web applications and infrastructure conception and maintainance",
-                    "Team manager",
-                    "Course instructor"
-                ]
-            }
-        },
-        {
-            "company": "Groupe Eyrolles",
-            "role": {
-                "fr": "Consultant Informatique",
-                "en": "IT Consultant"
-            },
-            "website": "https://www.eyrolles.com/",
-            "startDate": "2022-02",
-            "endDate": "",
-            "tools": ["Docker", "Gitlab", "Gitlab-CI", "SSO", "Keycloak", "OAuth2.0", "PHP 8", "Symfony 6", "API GraphQL", "RabbitMQ", "Redis"],
-            "tasks": {
-                "fr": [
-                    "Mise en place d'une stack DevOps (Docker / GitLab / GitLab-CI)",
-                    "Migration des applications web sous docker",
-                    "Mise en place d'un SSO avec Keycloak",
-                    "Maintenance et évolutions des applications Web (Php/Symfony)",
-                    "Accompagnement et formation de l'équipe IT interne"
-                ],
-                "en": [
-                    "Setting up a DevOps stack (Docker / GitLab / GitLab-CI)",
-                    "Migrating web applications to Docker",
-                    "Setting up SSO with Keycloak",
-                    "Maintenance and developments of Web applications (Php/Symfony)",
-                    "Support and training of the internal IT team"
-                ]
-            }
-        },
-        {
-            "company": "Quipment SAS",
-            "role": {
-                "fr": "Consultant Informatique",
-                "en": "IT Consultant"
-            },
-            "website": "https://www.quipment.fr/",
-            "startDate": "2021-09",
-            "endDate": "2022-01",
-            "tools": ["Docker", "PHP 7", "PHP 8", "Symfony 4", "Symfony 5", "Symfony 6", "API SOAP", "Redis", "Behat"],
-            "tasks": {
-                "fr": "Refonte compléte du backoffice client 'Quipsite' (quipsite.quipment.fr) basé sur des appels Webservice SOAP",
-                "en": "Rebuild the customer backoffice 'Quipsite' (quipsite.quipment.fr) based on SOAP Webservice calls"
-            }
-        },
-        {
-            "company": "Mon Petit Placement",
-            "role": {
-                "fr": "Développeur principal senior",
-                "en": "Senior Lead Developer"
-            },
-            "website": "https://www.monpetitplacement.fr/",
-            "startDate": "2020-07",
-            "endDate": "2021-07",
-            "tools": ["Docker", "Gitlab", "Gitlab-CI", "SSO", "Keycloak", "OAuth2.0", "PHP 7", "Symfony 4", "API Plateform", "RabbitMQ", "Behat"],
-            "tasks": {
-                "fr": [
-                    "Refonte de l'application en Micro Service (Front Angular / Back Symfony4.4)",
-                    "Mise en place de la CI (gitlab-ci) et de l’environnement serveur (Docker Swarm)",
-                    "Mise en place des tests fonctionnels (Behat)",
-                    "Mise en place des traitements asynchrone (RabbitMQ)",
-                    "Mise en place de la sécurité via Oauth2.0 (Keycloak)"
-                ],
-                "en": [
-                    "Redesign of the application in Micro Service (Front Angular / Back Symfony4.4)",
-                    "Setting up the CI (gitlab-ci) and the server environment (Docker Swarm)",
-                    "Implementation of functional tests (Behat)",
-                    "Implementation of asynchronous processing (RabbitMQ)",
-                    "Setting up security via Oauth2.0 (Keycloak)"
-                ]
-            }
-        },
-        {
-            "company": "Upply",
-            "role": {
-                "fr": "Développeur principal",
-                "en": "Lead Developer"
-            },
-            "website": "https://www.upply.com/",
-            "startDate": "2019-07",
-            "endDate": "2020-04",
-            "tools": ["Docker", "PHP 7", "Symfony 4", "MongoDB", "API REST", "RabbitMQ", "Behat"],
-            "tasks": {
-                "fr": [
-                    "Lead développeur 'Back' sur la marketplace upply.com",
-                    "Développements Web php (Symfony 4.3/4.4) / Api REST / Traitement asynchrone (RabbitMQ)",
-                    "Optimisation base de donnée MongoDB",
-                    "Gestion de livrables, mise en préprod, optimisation des images docker, supervision Applicative"
-                ],
-                "en": [
-                    "Lead developer 'Back' on the upply.com marketplace",
-                    "PHP web development (Symfony 4.3/4.4) / REST API / Asynchronous processing (RabbitMQ)",
-                    "MongoDB database optimization",
-                    "Management of deliverables, pre-production, optimization of Docker images, Application supervision"
-                ]
-            }
-        },
-        {
-            "company": "Editis",
-            "role": {
-                "fr": "Consultant Web Sénior",
-                "en": "Senior Web Consultant"
-            },
-            "website": "https://www.editis.com/",
-            "startDate": "2016-04",
-            "endDate": "",
-            "tools": ["PHP 7", "Symfony 4", "MySQL", "API REST", "API SOAP"],
-            "tasks": {
-                "fr": [
-                    "Développements du portail de connexion enseignants/étudiants pour différents projets (imanuel.nathan.fr, inscription-brne.eduplateforme.com, classes.eduplateforme.com, ...)",
-                    "Développements Web php (Symfony 4.4) / Api client REST & SOAP / Formulaires d'inscriptions / Stockage SQL (MySQL)"
-                ],
-                "en": [
-                    "Developments of the teacher/student connection portal for different projects (imanuel.nathan.fr, inscription-brne.eduplateforme.com, classes.eduplateforme.com, etc.)",
-                    "PHP web development (Symfony 4.4) / REST & SOAP client API / Registration forms / SQL storage (MySQL)"
-                ]
-            }
-        },
-        {
-            "company": "Tessi customer marketing",
-            "role": {
-                "fr": "Consultant Web Sénior",
-                "en": "Senior Web Consultant"
-            },
-            "website": "https://www.editis.com/",
-            "startDate": "2013-06",
-            "endDate": "2019-02",
-            "tools": ["Docker", "Github", "Keycloak", "PHP 5", "Symfony 2", "MySQL", "MongoDB", "API REST", "RabbitMQ", "ElasticSearch"],
-            "tasks": {
-                "fr": [
-                    "Consultant - Architecte - Lead Développeur",
-                    "Analyse et refonte du nouveau S.I (Projet DIGIFID v2)",
-                    "Accompagnement des équipes techniques (8 développeurs)",
-                    "Mise en place de la stack DévOps",
-                    "Développements Web php (Symfony 2.4/2.8) / Api REST / Authentification OAuth2 (Keycloak) / Traitement asynchrone (RabbitMQ) / Stockage des données issues des parcours clients multi canaux (MongoDB / ElastciSearch) / Supervision Applicative"
-                ],
-                "en": [
-                    "Consultant - Architect - Lead Developer",
-                    "Analysis and redesign of the new IS (DIGIFID v2 Project)",
-                    "Support for technical teams (8 developers)",
-                    "Setting up the DevOps stack",
-                    "PHP Web development (Symfony 2.4/2.8) / REST API / OAuth2 authentication (Keycloak) / Asynchronous processing (RabbitMQ) / Storage of data from multi-channel customer journeys (MongoDB / ElastciSearch) / Application Supervision"
-                ]
-            }
-        },
-        {
-            "company": "Allopneus",
-            "role": {
-                "fr": "Consultant en développement Web",
-                "en": "Web development consultant"
-            },
-            "website": "https://www.allopneus.com/",
-            "startDate": "2011-05",
-            "endDate": "2011-08",
-            "tools": ["Symfony 2"],
-            "tasks": {
-                "fr": [
-                    "Conseil et formation des équipes dans le cadre du changement de version du site web pour allopneus.com",
-                    "Accompagnement des équipes techniques (6 développeurs)",
-                    "Développements Web php (Symfony 2.0/2.1)"
-                ],
-                "en": [
-                    "Advice and training of teams as part of the change of version of the website for allopneus.com",
-                    "Support for technical teams (6 developers)",
-                    "PHP Web Developments (Symfony 2.0/2.1)"
-                ]
-            }
-        },
-        {
-            "company": "Groupe Moniteur",
-            "role": {
-                "fr": "Consultant en développement Web",
-                "en": "Web development consultant"
-            },
-            "website": "https://www.lemoniteur.fr/",
-            "startDate": "2010-10",
-            "endDate": "2011-07",
-            "tools": ["PHP", "Symfony 1"],
-            "tasks": {
-                "fr": [
-                    "Pilotage du projet de refonte du site web",
-                    "Accompagnement des équipes techniques (3 développeurs)",
-                    "Développements web php"
-                ],
-                "en": [
-                    "Website redesign project leading",
-                    "Technic team support (3 developers)",
-                    "Web development in PHP"
-                ]
-            }
-        },
-        {
-            "company": "Université Lyon 1",
-            "role": {
-                "fr": "Intervenant",
-                "en": "Speaker"
-            },
-            "website": "https://www.univ-lyon1.fr/",
-            "startDate": "2008-09",
-            "endDate": "",
-            "tools": [],
-            "tasks": {
-                "fr": "",
-                "en": ""
-            }
-        },
-        {
-            "company": "Inseec Digital Institute",
-            "role": {
-                "fr": "Intervenant",
-                "en": "Speaker"
-            },
-            "website": "https://www.inseec-digital.com/",
-            "startDate": "2016-09",
-            "endDate": "2016-12",
-            "tools": ["PHP", "MySQL"],
-            "tasks": {
-                "fr": "Formateur",
-                "en": "Trainer"
-            }
-        },
-        {
-            "company": "ENS",
-            "role": {
-                "fr": "Intervenant",
-                "en": "Speaker"
-            },
-            "website": "http://archinfo.universite-lyon.fr/",
-            "startDate": "2012-09",
-            "endDate": "2013-06",
-            "tools": [],
-            "tasks": {
-                "fr": "Formateur",
-                "en": "Trainer"
-            }
-        },
-        {
-            "company": "Université Lyon 1 service iCap",
-            "role": {
-                "fr": "Technicien de Recherche et de Formation",
-                "en": "Research and Training engineer"
-            },
-            "website": "https://icap.univ-lyon1.fr/",
-            "startDate": "2005-09",
-            "endDate": "2007-07",
-            "tools": ["PHP", "Linux"],
-            "tasks": {
-                "fr": [
-                    "Installation et configuration de salles informatiques multi-systèmes d'exploitations",
-                    "Mise en place d'un outil de gestion du parc informatique : GLPI (Gestionnaire Libre de Parc Informatique)",
-                    "Développement de plugins pour la plate-forme SPIRAL (Serveur Pédagogique Interactif de Ressources d'Apprentissage de Lyon 1)"
-                ],
-                "en": [
-                    "Installation and configuration of multi operating system IT rooms",
-                    "Implementation of a computer park management software",
-                    "Plugins development for SPIRAL plateform"
-                ]
-            }
-        },
-        {
-            "company": "IN2P3",
-            "role": {
-                "fr": "Stagiaire",
-                "en": "Trainee"
-            },
-            "website": "https://cc.in2p3.fr/",
-            "startDate": "2005-11",
-            "endDate": "",
-            "tools": ["Python"],
-            "tasks": {
-                "fr": [
-                    "Mise en place d'un protocole informatique pour le transfert d'images médicales au format DICOM depuis un IRM, à destination d'une base SRB",
-                    "Projet BIRNy rebaptisé LyNDA (Lyon Neuroimaging Database & Applications)"
-                ],
-                "en": [
-                    "Implementation of a transfer protocol for medical images in format DICOM from a MRI scan, to a SRB base",
-                    "Project BIRNy rename LyNDA (Lyon Neuroimaging Database & Applications"
-                ]
-            }
-        },
-        {
-            "company": "Laboratoire Lagep",
-            "role": {
-                "fr": "Stagiaire",
-                "en": "Trainee"
-            },
-            "website": "https://lagepp.univ-lyon1.fr/",
-            "startDate": "2005-06",
-            "endDate": "",
-            "tools": ["PHP"],
-            "tasks": {
-                "fr": [
-                    "Refonte du site Internet (<a href=https://lagepp.univ-lyon1.fr/ target=blank>Laboratoire Lagep</a>)",
-                    "Mise en place du serveur WEB sous Linux Debian, et création de nombreux outils de mise à jour"
-                ],
-                "en": [
-                    "Website redesign (<a href=https://lagepp.univ-lyon1.fr/ target=blank>Lagep laboratory</a>)",
-                    "Implementing web server under Linux Debian, and creation of update tools"
-                ]
-            }
+            "xpByCustomer": [
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://www.editions-eyrolles.com",
+                    "startDate": "2022-02-05T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["Docker", "Gitlab", "Gitlab-CI", "SSO", "Keycloak", "OAuth2.0", "PHP 8", "Symfony 6", "API GraphQL", "RabbitMQ", "Redis"],
+                    "tasks": {
+                        "fr": [
+                            "Mise en place d'une stack DevOps (Docker / GitLab / GitLab-CI)",
+                            "Migration des applications web sous docker",
+                            "Mise en place d'un SSO avec Keycloak",
+                            "Maintenance et évolutions des applications Web (Php/Symfony)",
+                            "Accompagnement et formation de l'équipe IT interne"
+                        ],
+                        "en": [
+                            "Setting up a DevOps stack (Docker / GitLab / GitLab-CI)",
+                            "Migrating web applications to Docker",
+                            "Setting up SSO with Keycloak",
+                            "Maintenance and developments of Web applications (Php/Symfony)",
+                            "Support and training of the internal IT team"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Quipment SAS",
+                    "website": "https://www.quipment.fr/",
+                    "startDate": "2021-09",
+                    "endDate": "2022-01",
+                    "tools": ["Docker", "PHP 7/8", "Symfony 4/5/6", "API SOAP", "Redis", "Behat"],
+                    "tasks": {
+                        "fr": [
+                            "Refonte compléte du backoffice client '<a href=\"quipsite.quipment.fr\">Quipsite</a>' basé sur des appels Webservice SOAP"
+                        ],
+                        "en": [
+                            "Rebuild the customer backoffice '<a href=\"quipsite.quipment.fr\">Quipsite</a>' based on SOAP Webservice calls"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Mon Petit Placement",
+                    "website": "https://www.monpetitplacement.fr/",
+                    "startDate": "2020-07",
+                    "endDate": "2021-07",
+                    "tools": ["Docker", "Gitlab", "Gitlab-CI", "SSO", "Keycloak", "OAuth2.0", "PHP 7", "Symfony 4", "API Plateform", "RabbitMQ", "Behat"],
+                    "tasks": {
+                        "fr": [
+                            "Refonte de l'application en Micro Service (Front Angular / Back Symfony4.4)",
+                            "Mise en place de la CI (gitlab-ci) et de l’environnement serveur (Docker Swarm)",
+                            "Mise en place des tests fonctionnels (Behat)",
+                            "Mise en place des traitements asynchrone (RabbitMQ)",
+                            "Mise en place de la sécurité via Oauth2.0 (Keycloak)"
+                        ],
+                        "en": [
+                            "Redesign of the application in Micro Service (Front Angular / Back Symfony4.4)",
+                            "Setting up the CI (gitlab-ci) and the server environment (Docker Swarm)",
+                            "Implementation of functional tests (Behat)",
+                            "Implementation of asynchronous processing (RabbitMQ)",
+                            "Setting up security via Oauth2.0 (Keycloak)"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Upply",
+                    "website": "https://www.upply.com/",
+                    "startDate": "2019-07",
+                    "endDate": "2020-04",
+                    "tools": ["Docker", "PHP 7", "Symfony 4", "MongoDB", "API REST", "RabbitMQ", "Behat"],
+                    "tasks": {
+                        "fr": [
+                            "Lead développeur 'Back' sur la marketplace upply.com",
+                            "Développements Web php (Symfony 4.3/4.4) / Api REST / Traitement asynchrone (RabbitMQ)",
+                            "Optimisation base de donnée MongoDB",
+                            "Gestion de livrables, mise en préprod, optimisation des images docker, supervision Applicative"
+                        ],
+                        "en": [
+                            "Lead developer 'Back' on the upply.com marketplace",
+                            "PHP web development (Symfony 4.3/4.4) / REST API / Asynchronous processing (RabbitMQ)",
+                            "MongoDB database optimization",
+                            "Management of deliverables, pre-production, optimization of Docker images, Application supervision"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Editis",
+                    "website": "https://www.editis.com/",
+                    "startDate": "2016-04",
+                    "endDate": "",
+                    "tools": ["PHP 7", "Symfony 4", "MySQL", "API REST", "API SOAP"],
+                    "tasks": {
+                        "fr": [
+                            "Développements du portail de connexion enseignants/étudiants pour différents projets (imanuel.nathan.fr, inscription-brne.eduplateforme.com, classes.eduplateforme.com, ...)",
+                            "Développements Web php (Symfony 4.4) / Api client REST & SOAP / Formulaires d'inscriptions / Stockage SQL (MySQL)"
+                        ],
+                        "en": [
+                            "Developments of the teacher/student connection portal for different projects (imanuel.nathan.fr, inscription-brne.eduplateforme.com, classes.eduplateforme.com, etc.)",
+                            "PHP web development (Symfony 4.4) / REST & SOAP client API / Registration forms / SQL storage (MySQL)"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tessi customer marketing",
+                    "website": "https://www.tessi.eu/fr/",
+                    "startDate": "2013-06",
+                    "endDate": "2019-02",
+                    "tools": ["Docker", "Github", "Keycloak", "PHP 5", "Symfony 2", "MySQL", "MongoDB", "API REST", "RabbitMQ", "ElasticSearch"],
+                    "tasks": {
+                        "fr": [
+                            "Consultant - Architecte - Lead Développeur",
+                            "Analyse et refonte du nouveau S.I (Projet DIGIFID v2)",
+                            "Accompagnement des équipes techniques (8 développeurs)",
+                            "Mise en place de la stack DévOps",
+                            "Développements Web php (Symfony 2.4/2.8) / Api REST / Authentification OAuth2 (Keycloak) / Traitement asynchrone (RabbitMQ) / Stockage des données issues des parcours clients multi canaux (MongoDB / ElastciSearch) / Supervision Applicative"
+                        ],
+                        "en": [
+                            "Consultant - Architect - Lead Developer",
+                            "Analysis and redesign of the new IS (DIGIFID v2 Project)",
+                            "Support for technical teams (8 developers)",
+                            "Setting up the DevOps stack",
+                            "PHP Web development (Symfony 2.4/2.8) / REST API / OAuth2 authentication (Keycloak) / Asynchronous processing (RabbitMQ) / Storage of data from multi-channel customer journeys (MongoDB / ElastciSearch) / Application Supervision"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Allopneus",
+                    "website": "https://www.allopneus.com/",
+                    "startDate": "2011-05",
+                    "endDate": "2011-08",
+                    "tools": ["Symfony 2"],
+                    "tasks": {
+                        "fr": [
+                            "Conseil et formation des équipes dans le cadre du changement de version du site web pour allopneus.com",
+                            "Accompagnement des équipes techniques (6 développeurs)",
+                            "Développements Web php (Symfony 2.0/2.1)"
+                        ],
+                        "en": [
+                            "Advice and training of teams as part of the change of version of the website for allopneus.com",
+                            "Support for technical teams (6 developers)",
+                            "PHP Web Developments (Symfony 2.0/2.1)"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Groupe Moniteur",
+                    "website": "https://www.lemoniteur.fr/",
+                    "startDate": "2010-10",
+                    "endDate": "2011-07",
+                    "tools": ["PHP", "Symfony 1"],
+                    "tasks": {
+                        "fr": [
+                            "Pilotage du projet de refonte du site web",
+                            "Accompagnement des équipes techniques (3 développeurs)",
+                            "Développements web php"
+                        ],
+                        "en": [
+                            "Website redesign project leading",
+                            "Technic team support (3 developers)",
+                            "Web development in PHP"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Université Claude Bernard Lyon 1",
+                    "website": "https://www.univ-lyon1.fr/",
+                    "startDate": "2008-09",
+                    "endDate": "",
+                    "tools": [],
+                    "tasks": {
+                        "fr": [
+                            "Invervenant"
+                        ],
+                        "en": [
+                            "Speaker"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Inseec Digital Institute",
+                    "website": "https://www.inseec-digital.com/",
+                    "startDate": "2016-09",
+                    "endDate": "2016-12",
+                    "tools": ["PHP", "MySQL"],
+                    "tasks": {
+                        "fr": [
+                            "Formateur"
+                        ],
+                        "en": [
+                            "Trainer"
+                        ]
+                    }
+                },
+                {
+                    "customer": "ENS",
+                    "website": "http://archinfo.universite-lyon.fr/",
+                    "startDate": "2012-09",
+                    "endDate": "2013-06",
+                    "tools": [],
+                    "tasks": {
+                        "fr": [
+                            "Formateur"
+                        ],
+                        "en": [
+                            "Trainer"
+                        ]
+                    }
+                }
+            ]
         }
     ],
     "personalExperiences": [
