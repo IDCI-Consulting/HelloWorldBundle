@@ -23,7 +23,7 @@ class CustomerController extends AbstractController
     {
         $customers = json_decode(file_get_contents($this->customersFilePath), true);
         $testimonies = array_filter($customers, function($customer) {
-            if ("" !== $customer['publicationDate']) {
+            if (!empty($customer['publicationDate'])) {
                 return $customer;
             }
         });
