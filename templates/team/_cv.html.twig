@@ -63,14 +63,13 @@
                             <section class="section-cv-banner-highlights">
                                 <h4 class="section-cv-banner-highlights-title">
                                     <a href="{{ experience.website }}" target="_blank">{{ experience.customer }}</a>
-                                    <span>({{ experience.startDate|format_datetime(pattern='MMMM Y') }} - {{ experience.endDate|format_datetime(pattern='MMMM Y') }})</span> 
+                                    <span>({{ experience.startDate|format_datetime(pattern='MMMM Y') }} - {{ experience.endDate|format_datetime(pattern='MMMM Y') }})</span>
                                 </h4>
-                                <ul class="section-cv-banner-highlights-tags">
+                                <ul class="tags section-cv-banner-highlights-tags">
                                     {% for tool in experience.tools %}
-                                        <li class="section-cv-banner-highlights-tags-tag">{{ tool }}
+                                        <li class="tags-tag section-cv-banner-highlights-tags-tag">{{ tool }}</li>
                                     {% endfor %}
                                 </ul>
-
                                 <ul class="section-cv-banner-highlights-details">
                                     {% for task in experience.tasks[app.request.locale] %}
                                         <li class="section-cv-banner-highlights-element">{{ task|raw }}</li>

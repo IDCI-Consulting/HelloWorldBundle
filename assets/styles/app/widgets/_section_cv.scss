@@ -58,7 +58,7 @@
         &.section-cv-banner-secondary {
             background-color: $idci-color-whitesmoke;
         }
-        
+
         .section-cv-banner-title {
             letter-spacing: initial;
             text-decoration: underline;
@@ -124,7 +124,7 @@
             @include until ($desktop) {
                 margin: 2rem 0 0 0;
             }
-            
+
             .section-cv-banner-highlights-title {
                 color: $idci-color-green;
                 font-size: $idci-font-larger;
@@ -140,26 +140,6 @@
                     color: $idci-color-black;
                     font-size: $idci-font-medium;
                     font-style: italic;
-                }
-            }
-
-            .section-cv-banner-highlights-tags {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-
-                .section-cv-banner-highlights-tags-tag {
-                    &:not(:first-child) {
-                        margin-left: 0.5rem;
-                    }
-
-                    border: 1px solid $idci-color-green;
-                    border-bottom: 3px solid $idci-color-green;
-                    border-left: 3px solid $idci-color-green;
-                    border-radius: 1rem;
-                    color: $idci-color-green;
-                    font-weight: bold;
-                    padding-inline: 0.5rem;
                 }
             }
 

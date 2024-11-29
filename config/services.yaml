@@ -33,7 +33,7 @@ services:
     
     App\Controller\CustomerController:
         arguments:
-            $customerTestimoniesFilePath: '%kernel.project_dir%/src/Resources/customer/testimonies.json'
+            $customersFilePath: '%kernel.project_dir%/src/Resources/customer/customers.json'
 
     App\Controller\TeamController:
         arguments:

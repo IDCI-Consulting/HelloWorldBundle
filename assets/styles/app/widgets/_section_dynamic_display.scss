@@ -9,15 +9,61 @@
     }
 
     .section-dynamic-display-banner {
-        background-color: $idci-color-light-grey;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(5, 1fr);
         margin-top: 1rem;
         text-align: center;
 
-        .section-dynamic-display-banner-media {
-            height: 3rem;
+        @include until ($desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
-            @include until ($tablet) {
-                height: 2rem;
+        @include until ($tablet) {
+            grid-template-columns: 1fr;
+        }
+
+        .section-dynamic-display-banner-card {
+            background-color: $idci-color-light-grey;
+            padding: 0.5rem;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: rotateY(180deg);
+            }
+
+            .section-dynamic-display-banner-card-cover {
+                backface-visibility: hidden;
+                height: 10rem;
+                margin: 0 auto;
+                object-fit: contain;
+            }
+
+            .section-dynamic-display-banner-card-content {
+                backface-visibility: hidden;
+                left: 0;
+                padding: 0.5rem;
+                position: absolute;
+                top: 0.5rem;
+                transform: rotateY(-180deg);
+                width: 100%;
+
+                .section-dynamic-display-banner-card-content-title {
+                    display: -webkit-box;
+                    font-weight: 600;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                }
+
+                .tags {
+                    font-size: $idci-font-medium;
+                    margin-top: 1rem;
+                    max-height: 7.5rem;
+                    overflow: hidden;
+                }
             }
         }
     }

@@ -21,7 +21,7 @@
   .carousel-post-content {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 5rem;
 
     @include until ($desktop) {
       padding: 1rem;
