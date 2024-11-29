@@ -10,7 +10,16 @@ Initialement mandatée pour renforcer les effectifs du client, notre équipe a c
 
 Nous avons pleinement joué notre rôle de conseil en suggérant une refonte innovante permettant de générer des mini-sites dédiés aux campagnes de jeux concours, tout en assurant le suivi des processus légaux.
 
-![Logo Tessi](/build/images/customer/tessi-logo.jpg "Logo Tessi")
+![Logo Tessi](/build/images/customer/tessi-logo.png "Logo Tessi")
+
+## Les technologies
+<section class="section-presentation section-tagcloud">
+    <ul class="section-tagcloud-list">
+        {% for tag in tags %}
+            <li class="section-tagcloud-list-item section-tagcloud-list-item-{{ tag.color }} section-tagcloud-list-item-{{ tag.size }}">{{ tag.name }}</li>
+        {% endfor %}
+    </ul>
+</section>
 
 {# ## Le témoignage
 

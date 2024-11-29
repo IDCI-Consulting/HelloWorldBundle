@@ -10,6 +10,15 @@ IDCI consulting is a major actor in the evolution of this plateform. Indeed, the
 
 ![Logo SEJER](/build/images/customer/sejer-logo.png "Logo SEJER")
 
+## Les technologies
+<section class="section-presentation section-tagcloud">
+    <ul class="section-tagcloud-list">
+        {% for tag in tags %}
+            <li class="section-tagcloud-list-item section-tagcloud-list-item-{{ tag.color }} section-tagcloud-list-item-{{ tag.size }}">{{ tag.name }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
 {# ## The testimony
 
 > Based on detailed specifications that we submit (design brief, mock-up, APIs documentation…), IDCI Consulting makes deliverables in a record time and with a irreprochable quality

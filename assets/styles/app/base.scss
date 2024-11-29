@@ -69,6 +69,10 @@ html {
     &.bottom-secondary {
         border-bottom: 80px solid $idci-color-whitesmoke;
     }
+
+    &.no-top {
+        border-top: none;
+    }
 }
 
 * {

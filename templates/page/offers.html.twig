@@ -11,7 +11,7 @@
 
     {% include 'widgets/_section_choices.html.twig' with {
         'title': ('offers.company_assets.title')|trans,
-        'subtitle': ('offers.company_assets.subtitle')|trans,
+        'background_media': true,
         'boxes': [
             {
                 'title': ('offers.company_assets.box_1.title')|trans,
@@ -37,7 +37,7 @@
         ]
     } %}
 
-    <div class="transparent-box top-secondary bottom-secondary"></div>
+    <div class="transparent-box no-top bottom-secondary"></div>
 
     {% include 'widgets/_section_choices.html.twig' with {
         'title': ('offers.options_list.title')|trans,

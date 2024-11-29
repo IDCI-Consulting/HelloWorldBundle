@@ -18,7 +18,7 @@
         .section-display-stack-media {
             display: block;
             margin: 7rem 0 7rem auto;
-            max-height: 500px;
+            max-height: 30rem;
             object-fit: cover;
             width: 80%;
     
@@ -29,27 +29,15 @@
             }
         }
     
-        .section-display-stack-colored-box {
-            background-color: $idci-color-blue;
-            height: 400px;
-            position: absolute;
-            top: 20rem;
-            width: 45%;
-            z-index: 50;
-    
-            @include until($widescreen) {
-                display: none;
-            }
-        }
-    
         .section-display-stack-description {
             background-color: $idci-color-white;
-            height: 390px;
+            bottom: 5rem;
+            box-shadow: 0 0 1rem $idci-color-black;
+            height: 24rem;
             left: 11rem;
             padding: 1.5rem;
             padding-top: 1rem;
             position: absolute;
-            top: 15rem;
             width: 45%;
             z-index: 100;
     
@@ -69,6 +57,7 @@
     
             .section-display-stack-description-content {
                 font-size: $idci-font-larger;
+                line-height: 2.5rem;
                 margin-top: 2rem;
             }
         }
