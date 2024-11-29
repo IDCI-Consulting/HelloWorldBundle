@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Utils\TagsAttributesGenerator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -57,15 +58,22 @@ class CustomerController extends AbstractController
     public function show(Request $request, String $slug, string $_locale): Response
     {
         $testimonies = json_decode(file_get_contents($this->customerTestimoniesFilePath), true);
+        $tools = [];
 
         foreach ($testimonies as $testimony) {
-            if ($testimony['id'] == $slug && !in_array($_locale, $testimony['available_languages'])) {
-                $_locale = $testimony['available_languages'][0];
+            if ($testimony['id'] == $slug) {
+                if (!in_array($_locale, $testimony['available_languages'])) {
+                    $_locale = $testimony['available_languages'][0];
+                }
+
+                $tools = $testimony['tools'];
             }
         }
 
         try {
-            $testimony = $this->renderView(sprintf('customer/%s/%s.md.twig', $_locale, $slug));
+            $testimony = $this->renderView(sprintf('customer/%s/%s.md.twig', $_locale, $slug), [
+                'tags' => TagsAttributesGenerator::generate($tools)
+            ]);
         } catch (\Exception $e) {
             throw $this->createNotFoundException(sprintf('The page \'%s\' is not a customer testimony', $slug));
         }
