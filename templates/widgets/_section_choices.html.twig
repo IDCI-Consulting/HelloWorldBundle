@@ -1,4 +1,4 @@
-<section class="section-choices">
+<section class="section-choices{% if background_media is defined and background_media is same as (true) %} section-choices-media{% endif %}">
     <div class="content-container">
         {% if page_title is defined and page_title is not null and page_title is not empty %}
             <h1 class="section-choices-title idci-title-primary">{{ page_title }}</h1>

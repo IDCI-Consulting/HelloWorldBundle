@@ -48,8 +48,7 @@ offers:
     paragraph_3: Nous publions et maintenons du code source accessible sur <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">notre repository Github.</a>
 
   company_assets:
-    title: 'Nos offres de services'
-    subtitle: 'Choisir IDCI Consulting, c’est optimiser la valeur ajoutée de votre partenaire :'
+    title: 'Choisir IDCI Consulting, c’est optimiser la valeur ajoutée de votre partenaire :'
     box_1:
       title: En termes de <span class="colored">compétences</span>
       description: Vous mandatez un consultant et vous récoltez le <span class="colored">soutien technique de toute notre équipe</span> !
