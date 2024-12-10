@@ -10,14 +10,13 @@
                         <div class="section-dynamic-display-banner-card">
                     {% endif %}
                     <img class="section-dynamic-display-banner-card-cover" src="{{ asset('build/images/' ~ item.media) }}" alt={{ item.name[app.request.locale] }}/>
-                    <section class="section-dynamic-display-banner-card-content">
-                        <h2 class="section-dynamic-display-banner-card-content-title">{{ item.name[app.request.locale] }}</h2>
+                    <div class="section-dynamic-display-banner-card-content">
                         <ul class="tags">
                             {% for tool in item.tools %}
                                 <li class="tags-tag">{{ tool }}</li>
                             {% endfor %}
                         </ul>
-                    </section>
+                    </div>
                     {% if item.publicationDate is defined and item.publicationDate is not null and item.publicationDate is not empty %}
                         </a>
                     {% else %}
@@ -41,7 +40,7 @@
                             <div class="carousel-post-content-header">
                                 <p>{{ slide.publicationDate }}</p>
                             </div>
-                            <h3 class="carousel-post-content-title">{{ slide.name[app.request.locale] }}</h3>
+                            <h3 class="carousel-post-content-title">{{ slide.customer }}</h3>
                             <p class="carousel-post-content-description">{{ slide.description[app.request.locale] }}</p>
                             <a href="{{ url(href, {'slug': slide.id}) }}" class="button carousel-post-content-button">{{ 'blog.read_post'|trans({}, 'blog') }}</a>
                         </div>
