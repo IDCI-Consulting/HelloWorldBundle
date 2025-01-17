@@ -3,16 +3,23 @@
 {% block main %}
     {% trans_default_domain 'blog' %}
 
-    {% include 'widgets/_section_dynamic_display.html.twig' with {
+    {% embed 'widgets/_section_dynamic_display.html.twig' with {
         'page_title': 'Blog',
-        'sliders': [
-            {
-                'title': 'blog.carousel_title_1'|trans,
-                'slides': last_articles
-            }
-        ],
+        'slider_title': 'blog.carousel_title_1'|trans,
         'href': 'app_blog_post'
     } %}
+        {% block slideshow %}
+            {% for article in last_articles %}
+                {% include 'components/_carousel_post.html.twig' with {
+                    'post_media': article.media,
+                    'post_publication_date': article.publicationDate,
+                    'post_title': article.name[app.request.locale],
+                    'post_description': article.description[app.request.locale],
+                    'post_href': url('app_blog_post', {'slug': article.id})
+                } %}
+            {% endfor %}
+        {% endblock %}
+    {% endembed %}
 
     {% include 'widgets/_section_posts.html.twig' with {
         'title': 'blog.all_posts_title'|trans,
