@@ -25,28 +25,10 @@
                 {% endfor %}
             </div>
         {% endif %}
-        <div class="section-dynamic-display-navigation">
-            {% for slider in sliders %}
-                <label class="section-dynamic-display-navigation-label tab-label idci-subtitle-primary{% if 1 == loop.index %} selected{% endif %}" for="carousel-{{ loop.index }}">{{ slider.title }}</label>
-            {% endfor %}
-        </div>
-        {% for slider in sliders %}
-            <input class="section-dynamic-display-input" id="carousel-{{ loop.index }}" type="radio" name="carousel" {% if 1 == loop.index %} checked{% endif %}>
-            <section class="section-dynamic-display-content">
-                {% for slide in slider.slides %}
-                    <div class="carousel-post">
-                        <img src="{{ asset('build/images/' ~ slide.media) }}" class="carousel-post-media">
-                        <div class="carousel-post-content">
-                            <div class="carousel-post-content-header">
-                                <p>{{ slide.publicationDate }}</p>
-                            </div>
-                            <h3 class="carousel-post-content-title">{{ slide.customer }}</h3>
-                            <p class="carousel-post-content-description">{{ slide.description[app.request.locale] }}</p>
-                            <a href="{{ url(href, {'slug': slide.id}) }}" class="button carousel-post-content-button">{{ 'blog.read_post'|trans({}, 'blog') }}</a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </section>
-        {% endfor %}
+        <h2 class="section-dynamic-display-subtitle idci-subtitle-primary">{{ slider_title }}</h2>
+        <section class="section-dynamic-display-content">
+            {% block slideshow %}
+            {% endblock %}
+        </section>
     </div>
 </section>

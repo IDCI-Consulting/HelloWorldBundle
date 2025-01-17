@@ -111,9 +111,10 @@
         }
     } %}
 
-    <div class="transparent-box top-secondary bottom-secondary"></div>
+    <div class="transparent-box top-secondary"></div>
 
     {% include 'widgets/_section_presentation.html.twig' with {
+        'background_secondary': true,
         'id': 'web-development',
         'title': 'offers.web_development.title'|trans,
         'subtitle': 'offers.web_development.subtitle'|trans,
@@ -131,7 +132,7 @@
         }
     } %}
 
-    <div class="transparent-box top-secondary bottom-secondary"></div>
+    <div class="transparent-box bottom-secondary"></div>
 
     {% include 'widgets/_section_presentation.html.twig' with {
         'id': 'delegate',
@@ -152,9 +153,10 @@
         }
     } %}
 
-    <div class="transparent-box even top-secondary bottom-secondary"></div>
+    <div class="transparent-box even top-secondary"></div>
 
     {% include 'widgets/_section_presentation.html.twig' with {
+        'background_secondary': true,
         'title': 'offers.open_source.title'|trans,
         'subtitle': 'offers.open_source.subtitle'|trans,
         'paragraphs': [
