@@ -37,6 +37,7 @@
     p {
         margin: auto;
         margin-top: 1rem;
+        text-align: justify;
 
         a {
             color: $idci-color-blue;
@@ -141,7 +142,7 @@
             text-indent: -9999px;
             top: -25px;
             width: 40px;
-        }      
+        }
 
         &.info {
             &::before {
@@ -156,7 +157,7 @@
             &::before {
               background: url(../../../images/blog/question-icon.svg) no-repeat;
               background-size: 35px;
-            }      
+            }
         }
 
         &.warning {
@@ -174,7 +175,7 @@
             display: flex;
             //flex-wrap: wrap;
             margin-left: 1rem;
-    
+
             &::before {
                 content: "○";
                 display : block;
@@ -202,24 +203,24 @@
             @include until($tablet) {
                 min-width: 50rem;
             }
-    
+
             thead {
                 background-color: $idci-color-light-grey;
-                
+
                 tr {
                     th {
                         padding: .5rem 1rem;
                     }
                 }
             }
-    
+
             tbody {
                 tr {
                     th {
                         padding: .5rem 1rem;
                         vertical-align: middle;
                     }
-    
+
                     td {
                         padding: .5rem 1rem;
                         vertical-align: middle;

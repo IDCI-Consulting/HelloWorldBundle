@@ -1,4 +1,5 @@
 .section-form {
+    margin: 0;
     width: 35%;
 
     @include until($desktop) {

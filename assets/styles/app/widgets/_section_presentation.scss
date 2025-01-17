@@ -169,7 +169,7 @@
                     width: 70%;
 
                     @include until($desktop) {
-                        width: 60%;
+                        width: 100%;
                     }
 
                     .section-presentation-column-media {
@@ -183,7 +183,7 @@
                             filter: grayscale(0);
                         }
 
-                        @include until($tablet) {
+                        @include until($desktop) {
                             width: 100%;
                         }
                     }
