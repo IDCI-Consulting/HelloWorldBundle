@@ -27,42 +27,39 @@
             background-color: $idci-color-light-grey;
             padding: 0.5rem;
             position: relative;
-            transform-style: preserve-3d;
-            transition: all 0.3s ease;
 
             &:hover {
-                transform: rotateY(180deg);
+                .section-dynamic-display-banner-card-container {
+                    transform: rotateY(180deg);
+                }
             }
 
-            .section-dynamic-display-banner-card-cover {
-                backface-visibility: hidden;
-                height: 10rem;
-                margin: 0 auto;
-                object-fit: contain;
-            }
+            .section-dynamic-display-banner-card-container {
+                transform-style: preserve-3d;
+                transition: all 0.3s ease;
 
-            .section-dynamic-display-banner-card-content {
-                backface-visibility: hidden;
-                left: 0;
-                padding: 0.5rem;
-                position: absolute;
-                top: 0.5rem;
-                transform: rotateY(-180deg);
-                width: 100%;
-
-                .section-dynamic-display-banner-card-content-title {
-                    display: -webkit-box;
-                    font-weight: 600;
-                    overflow: hidden;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 1;
+                .section-dynamic-display-banner-card-container-cover {
+                    backface-visibility: hidden;
+                    height: 10rem;
+                    margin: 0 auto;
+                    object-fit: contain;
                 }
 
-                .tags {
-                    font-size: $idci-font-medium;
-                    margin-top: 1rem;
-                    max-height: 7.5rem;
-                    overflow: hidden;
+                .section-dynamic-display-banner-card-container-content {
+                    backface-visibility: hidden;
+                    left: 0;
+                    padding: 0.5rem;
+                    position: absolute;
+                    top: 0.5rem;
+                    transform: rotateY(-180deg);
+                    width: 100%;
+
+                    .tags {
+                        font-size: $idci-font-medium;
+                        margin-top: 1rem;
+                        max-height: 7.5rem;
+                        overflow: hidden;
+                    }
                 }
             }
         }
