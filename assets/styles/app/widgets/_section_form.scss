@@ -1,8 +1,7 @@
 .section-form {
     width: 35%;
 
-    @include until($tablet) {
-        max-width: 16rem;
+    @include until($desktop) {
         width: 100%;
     }
 
@@ -11,6 +10,10 @@
         font-size: $idci-font-2x;
         margin-top: 4rem;
         text-align: center;
+
+        @include until($desktop) {
+            margin-top: 0;
+        }
     }
 
     form {
@@ -42,7 +45,7 @@
                     border-right: 0;
                     display: block;
                     min-height: 4rem;
-                    padding: 2rem 1rem 1rem 1rem;
+                    padding: 1.5rem 1rem 0.5rem 1rem;
                     width: 100%;
                 }
 
@@ -67,7 +70,7 @@
 
                 img {
                     display: block;
-                    margin-bottom: 1rem;
+                    margin: 0 auto 1rem auto;
                     min-height: 4rem;
                 }
 
