@@ -76,7 +76,7 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 
 # Stage 2:
-FROM build as dev
+FROM build AS dev
 
 RUN apt update --allow-releaseinfo-change
 RUN apt install -y --no-install-recommends gcc libc6-dev
@@ -97,7 +97,7 @@ CMD ["php-fpm", "-F"]
 
 
 # Stage 3:
-FROM base as prod
+FROM base AS prod
 
 ## Copy built vendors
 ARG APP_ENV=prod
