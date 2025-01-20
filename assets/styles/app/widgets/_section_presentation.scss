@@ -1,7 +1,7 @@
 .section-presentation {
     background-color: $idci-color-whitesmoke;
     padding: 2rem 0;
-    
+
     &.section-presentation-media {
         background-image: url(../../../images/base/background_presentation.jpg);
         background-size: cover;
@@ -14,26 +14,26 @@
     .content-container {
         .section-presentation-title {
             font-weight: bold;
-    
+
             @include until($tablet) {
                 font-size: $idci-font-larger;
             }
         }
-    
+
         .section-presentation-subtitle {
             font-weight: bold;
             margin-top: 2rem;
-    
-    
+
+
             @include until($tablet) {
                 font-size: $idci-font-large;
             }
-    
+
             &.section-presentation-subtitle-alone {
                 margin-top: 0;
             }
         }
-    
+
         .section-presentation-media {
             display: block;
             margin: auto;
@@ -42,7 +42,7 @@
             object-fit: contain;
             width: 400px;
         }
-    
+
         .section-presentation-icon {
             display: block;
             margin: auto;
@@ -50,34 +50,35 @@
             max-height: 64px;
             width: 64px;
         }
-    
+
         .section-presentation-description {
             font-size: $idci-font-larger;
             margin: auto;
             margin-top: 2rem;
-            text-align: center;
+            text-align: justify;
             width: 50%;
-    
+
             @include until($tablet) {
                 width: 100%;
             }
-    
+
             &.section-presentation-tags {
                 color: $idci-color-green;
                 font-size: $idci-font-1-5x;
+                text-align: center;
                 text-transform: uppercase;
                 letter-spacing: .2rem;
             }
-    
+
             .blue-colored-description-text {
                 color: $idci-color-blue;
             }
-    
+
             .green-colored-description-text {
                 color: $idci-color-green;
             }
         }
-    
+
         .section-presentation-scroll {
             border: 2px solid $idci-color-blue;
             border-radius: 100%;
@@ -88,39 +89,39 @@
             position: relative;
             text-align: center;
             width: 6rem;
-    
+
             img {
                 position: relative;
                 top: 40%;
             }
-    
+
             &:hover {
                 border-color: $idci-color-dark-grey;
-    
+
                 img {
                     filter: grayscale(100%);
                 }
             }
         }
-    
+
         .section-presentation-courses {
             display: flex;
             justify-content: center;
             margin-top: 2rem;
             text-align: center;
-    
+
             .section-presentation-courses-title {
                 font-size: $idci-font-2x;
                 letter-spacing: normal;
             }
-    
+
             .section-presentation-courses-media {
                 margin-left: 1rem;
                 margin-right: 1rem;
                 width: 2rem;
             }
         }
-    
+
         .section-presentation-courses-content {
             align-items: center;
             display: flex;
@@ -128,61 +129,61 @@
             margin: auto;
             margin-top: 2rem;
             width: 50%;
-    
+
             @include until($tablet) {
                 width: 100%;
             }
-    
+
             .section-presentation-courses-content-element {
                 margin-left: 1rem;
                 margin-right: 1rem;
                 width: 20%;
                 height: 100%;
-    
+
                 @include until($tablet) {
                     width: 40%;
                 }
             }
         }
-    
+
         .section-presentation-columns {
             margin-top: 2rem;
-    
+
             .section-presentation-column {
                 .section-presentation-column-title {
                     font-size: $idci-font-1-5x;
-    
+
                     @include until($desktop) {
                         font-size: $idci-font-medium;
                     }
-    
+
                     @include until($tablet) {
                         margin-top: 2rem;
-                        font-size: $idci-font-large;
+                        font-size: $idci-font-1-5x;
                     }
                 }
-    
+
                 .section-presentation-column-list {
                     margin: auto;
                     margin-top: 2rem;
                     width: 70%;
-    
+
                     @include until($desktop) {
-                        width: 60%;
+                        width: 100%;
                     }
-    
+
                     .section-presentation-column-media {
                         display: block;
                         filter: grayscale(1);
                         margin: auto;
                         margin-top: 1rem;
                         max-width: 80%;
-    
+
                         &:hover {
                             filter: grayscale(0);
                         }
-    
-                        @include until($tablet) {
+
+                        @include until($desktop) {
                             width: 100%;
                         }
                     }
@@ -196,6 +197,12 @@
 
         .section-choices {
             background-color: transparent;
+
+            .content-container {
+                @include until($desktop) {
+                    padding-inline: 0;
+                }
+            }
         }
     }
 }

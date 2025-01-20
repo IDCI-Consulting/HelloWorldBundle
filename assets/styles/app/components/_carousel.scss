@@ -2,7 +2,7 @@
   padding: 2rem;
 
   @include until($desktop) {
-    padding: 1rem;
+    padding: 0;
   }
 
   .carousel-post-media {
@@ -24,7 +24,7 @@
     padding: 2rem 2rem 2rem 5rem;
 
     @include until ($desktop) {
-      padding: 1rem;
+      padding: 1rem 0;
     }
 
     .carousel-post-content-header {
@@ -54,6 +54,7 @@
 
     .carousel-post-content-description {
       margin: 1rem 0;
+      text-align: justify;
 
       @include until($tablet) {
         font-size: $idci-font-medium;
