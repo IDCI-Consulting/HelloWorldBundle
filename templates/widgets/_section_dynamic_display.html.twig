@@ -9,13 +9,15 @@
                     {% else %}
                         <div class="section-dynamic-display-banner-card">
                     {% endif %}
-                    <img class="section-dynamic-display-banner-card-cover" src="{{ asset('build/images/' ~ item.media) }}" alt={{ item.name[app.request.locale] }}/>
-                    <div class="section-dynamic-display-banner-card-content">
-                        <ul class="tags">
-                            {% for tool in item.tools %}
-                                <li class="tags-tag">{{ tool }}</li>
-                            {% endfor %}
-                        </ul>
+                    <div class="section-dynamic-display-banner-card-container">
+                        <img class="section-dynamic-display-banner-card-container-cover" src="{{ asset('build/images/' ~ item.media) }}" alt={{ item.name[app.request.locale] }}/>
+                        <div class="section-dynamic-display-banner-card-container-content">
+                            <ul class="tags">
+                                {% for tool in item.tools %}
+                                    <li class="tags-tag">{{ tool }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                     {% if item.publicationDate is defined and item.publicationDate is not null and item.publicationDate is not empty %}
                         </a>
