@@ -57,7 +57,7 @@ class TeamController extends AbstractController
                 'data' => $cv,
             ]);
         }
-        
+
         $response = $this->httpClient->request('POST', '/1/pdf', [
             'body' => json_encode([
                 'html' => $this->renderView('team/pdf.html.twig', [
