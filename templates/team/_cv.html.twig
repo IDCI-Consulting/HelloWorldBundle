@@ -43,9 +43,9 @@
                     <h3 class="section-cv-banner-subtitle">{{ professionalExperience.role[app.request.locale] }}</h3>
                     <p class="section-cv-banner-date">
                         {% if "" == professionalExperience.endDate %}
-                            {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
+                            {{ 'cv.since'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM yyyy', locale=app.request.locale) }}
                         {% else %}
-                            {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM Y', locale=app.request.locale) }}
+                            {{ 'cv.from'|trans }} {{ professionalExperience.startDate|format_datetime(pattern='MMMM yyyy', locale=app.request.locale) }} {{ 'cv.to'|trans }} {{ professionalExperience.endDate|format_datetime(pattern='MMMM yyyy', locale=app.request.locale) }}
                         {% endif %}
                         {% if professionalExperience.company is defined and professionalExperience.company is not empty and professionalExperience.company is not null %}
                             {{ 'cv.at'|trans }} {{ professionalExperience.company }}
@@ -63,7 +63,7 @@
                             <section class="section-cv-banner-highlights">
                                 <h4 class="section-cv-banner-highlights-title">
                                     <a href="{{ experience.website }}" target="_blank">{{ experience.customer }}</a>
-                                    <span>({{ experience.startDate|format_datetime(pattern='MMMM Y') }} - {{ experience.endDate|format_datetime(pattern='MMMM Y') }})</span>
+                                    <span>({{ experience.startDate|format_datetime(pattern='MMMM yyyy') }} - {{ experience.endDate|format_datetime(pattern='MMMM yyyy') }})</span>
                                 </h4>
                                 <ul class="tags section-cv-banner-highlights-tags">
                                     {% for tool in experience.tools %}
