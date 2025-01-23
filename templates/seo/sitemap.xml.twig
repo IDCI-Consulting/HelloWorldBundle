@@ -2,66 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://www.idci-consulting.fr/fr/</loc>
-        <lastmod>08/09/2022</lastmod>
+        <lastmod>23/01/2025</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://www.idci-consulting.fr/fr/legal-mentions</loc>
-        <lastmod>08/09/2022</lastmod>
+        <loc>https://www.idci-consulting.fr/fr/mentions-legales</loc>
+        <lastmod>23/01/2025</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://www.idci-consulting.fr/fr/offers</loc>
-        <lastmod>08/09/2022</lastmod>
+        <loc>https://www.idci-consulting.fr/fr/offres</loc>
+        <lastmod>23/01/2025</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://www.idci-consulting.fr/fr/contact</loc>
-        <lastmod>08/09/2022</lastmod>
+        <lastmod>23/01/2025</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://www.idci-consulting.fr/fr/blog</loc>
-        <lastmod>08/09/2022</lastmod>
+        <lastmod>23/01/2025</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     {% for key, post in posts %}
     <url>
         <loc>https://www.idci-consulting.fr/fr/blog/post/{{ key }}</loc>
-        <lastmod>08/09/2022</lastmod>
+        <lastmod>{{ post.publicationDate }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     {% endfor %}
     <url>
-        <loc>https://www.idci-consulting.fr/fr/courses</loc>
-        <lastmod>08/09/2022</lastmod>
-        <changefreq>monthly</changefreq>
+        <loc>https://www.idci-consulting.fr/fr/clients</loc>
+        <lastmod>23/01/2025</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>1</priority>
     </url>
-    {% for key, course in courses %}
-    <url>
-        <loc>https://www.idci-consulting.fr/fr/courses/{{ key }}</loc>
-        <lastmod>08/09/2022</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1</priority>
-    </url>
+    {% for key, customer in customers %}
+        {% if customer.publicationDate is defined and customer.publicationDate is not null and customer.publicationDate is not empty %}
+        <url>
+            <loc>https://www.idci-consulting.fr/fr/clients/{{ key }}</loc>
+            <lastmod>{{ customer.publicationDate }}</lastmod>
+            <changefreq>yearly</changefreq>
+            <priority>1</priority>
+        </url>
+        {% endif %}
     {% endfor %}
     <url>
         <loc>https://www.idci-consulting.fr/fr/team</loc>
-        <lastmod>08/09/2022</lastmod>
+        <lastmod>23/01/2025</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     {% for key, cv in cvs %}
     <url>
         <loc>https://www.idci-consulting.fr/fr/team/{{ key }}</loc>
-        <lastmod>08/09/2022</lastmod>
+        <lastmod>23/01/2025</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>

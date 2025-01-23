@@ -26,11 +26,11 @@ services:
     App\Event\Subscriber\ContactSubscriber:
         arguments:
             $contactRecipientsAddresses: '%env(json:MAILER_RECIPIENT_ADDRESSES)%'
-    
+
     App\Controller\BlogController:
         arguments:
             $blogPostsFilePath: '%kernel.project_dir%/src/Resources/blog/posts.json'
-    
+
     App\Controller\CustomerController:
         arguments:
             $customersFilePath: '%kernel.project_dir%/src/Resources/customer/customers.json'
@@ -38,11 +38,11 @@ services:
     App\Controller\TeamController:
         arguments:
             $cvDirectoryPath: '%kernel.project_dir%/src/Resources/cv/'
-    
+
     App\Controller\SeoController:
         arguments:
             $blogPostsFilePath: '%kernel.project_dir%/src/Resources/blog/posts.json'
-            $coursesDirectoryPath: '%kernel.project_dir%/src/Resources/courses/'
+            $customersFilePath: '%kernel.project_dir%/src/Resources/customer/customers.json'
             $cvDirectoryPath: '%kernel.project_dir%/src/Resources/cv/'
 
     # twig

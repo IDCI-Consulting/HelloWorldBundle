@@ -3,9 +3,9 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
 
 #[Route('/{_locale}', requirements: ['_locale' => 'fr|en'])]
 class PageController extends AbstractController
@@ -16,7 +16,7 @@ class PageController extends AbstractController
         return $this->render('page/homepage.html.twig');
     }
 
-    #[Route('/legal-mentions', methods: ['GET'], name: 'legal_mentions')]
+    #[Route('/mentions-legales', methods: ['GET'], name: 'legal_mentions')]
     public function legalMentions(Request $request): Response
     {
         return $this->render('page/legal_mentions.html.twig');
