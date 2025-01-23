@@ -1,0 +1,213 @@
+.section-cv {
+    font-size: $idci-font-larger;
+
+    @include until($tablet) {
+        font-size: $idci-font-large;
+        width: 100%;
+    }
+
+    .section-cv-header {
+        column-gap: 3rem;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .section-cv-title {
+        font-weight: bold;
+        letter-spacing: initial;
+        margin-top: 4rem;
+    }
+
+    .section-cv-label {
+        font-weight: bold;
+        padding: 0.75rem 0;
+        width: auto;
+
+        @include until($tablet) {
+            padding-left: 1rem;
+        }
+    }
+
+    .section-cv-links {
+        padding: 0.75rem 0;
+        text-align: right;
+        width: auto;
+
+        @include until ($tablet) {
+            text-align: center;
+        }
+
+        i{
+            color: $idci-color-black;
+        }
+    }
+
+    .section-cv-button {
+        margin-top: 2rem;
+        width: fit-content;
+    }
+
+    .section-cv-banner {
+        border: 2px solid $idci-color-whitesmoke;
+        padding: 1rem;
+
+        &.section-cv-banner-primary {
+            background-color: $idci-color-light-grey;
+        }
+
+        &.section-cv-banner-secondary {
+            background-color: $idci-color-whitesmoke;
+        }
+
+        .section-cv-banner-title {
+            letter-spacing: initial;
+            text-decoration: underline;
+        }
+
+        .section-cv-banner-subtitle {
+            color: $idci-color-blue;
+            margin-top: 2rem;
+        }
+
+        .section-cv-banner-date {
+            font-size: $idci-font-large;
+        }
+
+        .section-cv-banner-table {
+            margin-top: 2rem;
+
+            tbody {
+                tr {
+                    td {
+                        color: $idci-color-blue;
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+
+        .section-cv-banner-education-date {
+            color: $idci-color-green;
+            font-style: italic;
+            margin-right: 1rem;
+        }
+
+        .section-cv-banner-skills-title {
+            color: $idci-color-grey;
+            font-size: $idci-font-larger;
+            font-style: normal;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .section-cv-banner-skills {
+            li {
+                display: flex;
+                margin-top: 0.5rem;
+                width: 100%;
+
+                .section-cv-banner-skill-title {
+                    font-weight: bold;
+                    width: 50%;
+                }
+
+                .section-cv-banner-skill-details {
+                    width: 50%;
+                }
+            }
+        }
+
+        .section-cv-banner-highlights {
+            margin: 0.5rem 0 0 2rem;
+            font-size: $idci-font-medium;
+
+            @include until ($desktop) {
+                margin: 2rem 0 0 0;
+            }
+
+            .section-cv-banner-highlights-title {
+                color: $idci-color-green;
+                font-size: $idci-font-larger;
+                font-weight: bold;
+
+                >a {
+                    &:hover {
+                        text-shadow: 0 0 0.5rem $idci-color-green;
+                    }
+                }
+
+                >span {
+                    color: $idci-color-black;
+                    font-size: $idci-font-medium;
+                    font-style: italic;
+                }
+            }
+
+            .section-cv-banner-highlights-details {
+                margin: 0.5rem 0 0 1.5rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .section-cv-double {
+        display: flex;
+
+        @include until ($tablet) {
+            flex-direction: column;
+        }
+
+        .section-cv-double-main {
+            width: 100%;
+        }
+
+        .section-cv-double-aside {
+            width: 50%;
+
+            @include until ($tablet) {
+                width: 100%;
+            }
+
+            table {
+                margin-top: 2rem;
+                width: 100%;
+
+                thead {
+                    text-align: center;
+
+                    tr {
+                        th {
+                            color: $idci-color-blue;
+                        }
+                    }
+                }
+
+                tbody {
+                    @include until ($tablet) {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 1rem;
+                    }
+
+                    tr {
+                        font-size: $idci-font-large;
+
+                        @include until ($tablet) {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        th, td {
+                            padding: 0.2rem;
+                            width: 50%;
+
+                            @include until($tablet) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

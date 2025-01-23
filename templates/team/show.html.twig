@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Détails d'un membre de l'équipe{% endblock %}
+
+{% block main %}
+    {{ include('team/_cv.html.twig') }}
+    <div class="info-box">
+        <a href="{{ url('app_team_member', {'slug' : slug, '_format': 'pdf'}) }}" class="button">{{ 'button.pdf_download'|trans }}</a>
+    </div>
+{% endblock %}

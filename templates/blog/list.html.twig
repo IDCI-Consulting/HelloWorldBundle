@@ -1,0 +1,40 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    {% trans_default_domain 'blog' %}
+
+    {% embed 'widgets/_section_dynamic_display.html.twig' with {
+        'page_title': 'Blog',
+        'slider_title': 'blog.carousel_title_1'|trans,
+        'href': 'app_blog_post'
+    } %}
+        {% block slideshow %}
+            {% for article in last_articles %}
+                {% include 'components/_carousel_post.html.twig' with {
+                    'post_media': article.media,
+                    'post_publication_date': article.publicationDate,
+                    'post_title': article.name[app.request.locale],
+                    'post_description': article.description[app.request.locale],
+                    'post_href': url('app_blog_post', {'slug': article.id})
+                } %}
+            {% endfor %}
+        {% endblock %}
+    {% endembed %}
+
+    {% include 'widgets/_section_posts.html.twig' with {
+        'title': 'blog.all_posts_title'|trans,
+        'posts_url': 'app_blog_post',
+        'tabs': [
+            {
+                'label': 'blog.by_years'|trans,
+                'id': 'posts_by_years',
+                'items': posts_by_years
+            },
+            {
+                'label': 'blog.by_categories'|trans,
+                'id': 'posts_by_categories',
+                'items': posts_by_categories
+            }
+        ]
+    } %}
+{% endblock %}

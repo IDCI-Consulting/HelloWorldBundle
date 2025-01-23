@@ -1,0 +1,16 @@
+error:
+  label: Error
+  homepage: Back to homepage
+  contact_us: Contact us
+  contact_us_course: The RFC 2616 was not enough for you ? <a href="{{ path('app_contact_index') }}">Contact us</a>
+  contact_us_course_2: for a course !
+
+  404:
+    not_found_page: Page not found
+    description: Seems like there is an error with the resource you are trying to access
+    want_to_know_more: 'Si vous voulez en savoir plus : <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc2616#section-10.4">RFC 2616</a>'
+
+  500:
+    server_error: Server error
+    description: The server failed at performing the request
+    want_to_know_more: 'Si vous voulez en savoir plus : <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc2616#section-10.5">RFC 2616</a>'

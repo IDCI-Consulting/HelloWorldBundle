@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ app.request.locale }}">
     <head>
-        <title>{% block title%}IDCI-WIP{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-        {% block metaTags %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="{{ asset('build/images/base/favicon.png') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
+        {% block javascripts_top %}{% endblock %}
     </head>
-
     <body>
-        {% block flashMessages %}{% endblock %}
-        {% block header %}{% endblock %}
-        {% block content %}{% endblock %}
-        {% block footer %}{% endblock %}
-        {% block javascripts %}
+        {% block body %}{% endblock %}
+        {% block javascripts_bottom %}
             {{ encore_entry_script_tags('app') }}
-            <script>
-                setUpWow();
-            </script>
         {% endblock %}
     </body>
 </html>

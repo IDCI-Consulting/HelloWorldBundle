@@ -1,21 +1,35 @@
+# see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
     secret: '%env(APP_SECRET)%'
-    #default_locale: en
     #csrf_protection: true
-    #http_method_override: true
+    http_method_override: false
+    handle_all_throwables: true
 
     # Enables session support. Note that the session will ONLY be started if you read or write from it.
     # Remove or comment this section to explicitly disable session support.
     session:
-        handler_id: ~
+        handler_id: null
         cookie_secure: auto
         cookie_samesite: lax
+        storage_factory_id: session.storage.factory.native
 
     #esi: true
     #fragments: true
     php_errors:
         log: true
+    
+    http_client:
+        default_options:
+            max_redirects: 0
+        scoped_clients:
+            pdf_generator.client:
+                http_version: '1.0'
+                base_uri: 'http://pdf-generator:2305'
+                # auth_basic: '%env(string:WKHTMLTOPDF_LOGIN)%:%env(string:WKHTMLTOPDF_PASSWORD)%'
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', 'User-Agent': 'Symfony idci-website HttpClient/Curl' }
 
-    templating:
-        engines:
-            twig
+when@test:
+    framework:
+        test: true
+        session:
+            storage_factory_id: session.storage.factory.mock_file

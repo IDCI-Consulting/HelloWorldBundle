@@ -1,0 +1,76 @@
+.section-container {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    padding: 4rem;
+    position: relative;
+
+    @include until($desktop) {
+        padding: 2rem;
+    }
+
+    > * {
+        margin: auto;
+        width: 80%;
+    }
+
+    &.section-container-primary {
+        background-color: $idci-color-light-grey;
+    }
+
+    &.section-container-secondary {
+        background-color: $idci-color-whitesmoke;
+    }
+
+    &.section-container-60 {
+        > * {
+            width: 60%;
+        }
+    }
+
+    &.section-container-90 {
+        > * {
+            width: 90%;
+        }
+    }
+
+    &.section-container-full {
+        > * {
+            width: 100%;
+        }
+
+        @include until($desktop) {
+            padding: 0 !important;
+        }
+    }
+
+    &.section-container-media-primary {
+        background-image: url(../../../images/base/background_presentation.jpg);
+        background-size: contain;
+    }
+
+    &.section-container-media-offers {
+        background-image: url(../../../images/base/office.jpg);
+        background-size: contain;
+    }
+
+    &.section-container-contact {
+        column-gap: 2rem;
+        justify-content: center;
+
+        @include until($widescreen) {
+            flex-direction: column;
+            row-gap: 4rem;
+        }
+    }
+
+    &.section-error-page-background {
+        background-image: url(../../../images/base/labyrinth.gif);
+        background-size: cover;
+    }
+}
+
+.info-box {
+    margin: auto;
+    width: 75%;
+}

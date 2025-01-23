@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Mentions légales du site IDCI{% endblock %}
+
+{% block main %}
+    {% trans_default_domain 'legal_mentions' %}
+
+    {% include 'widgets/_section_legal_mentions.html.twig' with {
+        'title': 'title'|trans,
+        'sections': [
+            {
+                'title': 'section_1.title'|trans,
+                'paragraphs': 'section_1.paragraph'|trans
+            },
+            {
+                'title': 'section_2.title'|trans,
+                'paragraphs': 'section_2.paragraph'|trans
+            },
+            {
+                'title': 'section_3.title'|trans,
+                'paragraphs': 'section_3.paragraph'|trans
+            }
+        ]
+    } %}
+{% endblock %}

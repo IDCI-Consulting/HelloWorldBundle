@@ -1,34 +1,81 @@
 image: docker:git
+services:
+  - docker:dind
+
+stages:
+  - build
+  - start
+  - deploy
 
 variables:
-  CONTAINER_RELEASE_IMAGE: $CI_REGISTRY/idci/website/php-fpm
-  DOCKER_HOST: $DOCKER_PROD_HOST
-  DOCKR_DRIVER: overlay2
+  STACK_NAME: idci_website
+  FPM_RELEASE_IMAGE: ${CI_REGISTRY_IMAGE}/php-fpm
 
 build-docker-image:
   stage: build
-  variables:
-      APP_VERSION: $CI_COMMIT_TAG
   script:
-    - docker login -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build --cache-from $CONTAINER_RELEASE_IMAGE:latest -t $CONTAINER_RELEASE_IMAGE:latest -t $CONTAINER_RELEASE_IMAGE:$CI_COMMIT_TAG $CI_PROJECT_DIR -f .docker/php/Dockerfile
-    - docker push $CONTAINER_RELEASE_IMAGE:$CI_COMMIT_TAG
+    - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - docker build --cache-from ${FPM_RELEASE_IMAGE}:latest -t ${FPM_RELEASE_IMAGE}:latest -t ${FPM_RELEASE_IMAGE}:${CI_COMMIT_TAG} ${CI_PROJECT_DIR} -f .docker/Dockerfile
+    - docker push ${FPM_RELEASE_IMAGE}:${CI_COMMIT_TAG}
+    - docker push ${FPM_RELEASE_IMAGE}:latest
   only:
     - tags
 
-deploy-to-pre-production:
-  stage: deploy
+start-preprod:
+  stage: start
   variables:
-    APP_HOST: pre-prod.idci-consulting.fr
-    APP_VERSION: $CI_COMMIT_TAG
-    SERVICE_NAME: idci_website_pp
-    TRAEFIK_NGINX_FRONTEND_RULE: Host:$APP_HOST
+    DOCKER_HOST: ${DOCKER_PROD_HOST}
+  image: docker:latest
   script:
-    - docker login -u $DOCKER_REGISTRY_LOGIN -p $DOCKER_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker stack deploy -c $CI_PROJECT_DIR/.docker/docker-compose-prod.yml --with-registry-auth ${SERVICE_NAME}
+    - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - docker stack deploy -c ${CI_PROJECT_DIR}/.docker/docker-compose-preprod.yml ${STACK_NAME}_preprod
   environment:
     name: pre-production
-    url: https://pre-prod.idci-consulting.fr/
+    url: https://preprod.idci-consulting.fr
+  when: manual
+  only:
+    - tags
+
+deploy-to-preprod:
+  stage: deploy
+  variables:
+    DOCKER_HOST: ${DOCKER_PROD_HOST}
+  image: docker:latest
+  script:
+    - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - docker service update --with-registry-auth ${STACK_NAME}_preprod_php --update-monitor 10ms --image ${FPM_RELEASE_IMAGE}:${CI_COMMIT_TAG}
+  environment:
+    name: pre-production
+    url: https://preprod.idci-consulting.fr
+  only:
+    - tags
+
+start-prod:
+  stage: start
+  variables:
+    DOCKER_HOST: ${DOCKER_PROD_HOST}
+  image: docker:latest
+  script:
+    - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - docker stack deploy -c ${CI_PROJECT_DIR}/.docker/docker-compose-prod.yml ${STACK_NAME}_prod
+  environment:
+    name: production
+    url: https://www.idci-consulting.fr
+  when: manual
+  only:
+    - tags
+
+deploy-to-prod:
+  stage: deploy
+  variables:
+    DOCKER_HOST: ${DOCKER_PROD_HOST}
+  image: docker:latest
+  script:
+    - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+    - docker service update --with-registry-auth ${STACK_NAME}_prod_php --update-monitor 10ms --image ${FPM_RELEASE_IMAGE}:${CI_COMMIT_TAG}
+  environment:
+    name: production
+    url: https://www.idci-consulting.fr/
   when: manual
   only:
     - tags

@@ -1,0 +1,36 @@
+specialization:
+  title: Nous sommes spécialisés dans
+  subtitle: L'architecture web, PHP & Symfony
+  paragraph_1: '&lt;Ingénierie &gt; &lt;Développement&gt; &lt;Conseil&gt; &lt;Intégration&gt;'
+
+company_concept:
+  title: Une réponse innovante
+  description:  IDCI consulting (SARL) créée en 2007 est un <span class="colored">centre de compétences sur les technologies web</span>
+                qui travaille en permanence sur différentes missions tout en conservant la possibilité de
+                communiquer entre eux et ainsi partager leurs connaissances. <span class="colored">Individuellement ou en équipe</span>,
+                nous sommes capables d’apporter une valeur ajoutée pour votre projet quelle que soit
+                étape de son cycle de vie. Nous intervenons exclusivement en régie.
+
+methodology:
+  subtitle: Notre méthodologie
+  paragraph_1: Nous sommes <span class="blue-colored-description-text">flexibles</span>.</br>Les projets informatiques sont sujets à des changements très fréquents.
+  paragraph_2: Notre experience nous a prouvé que les méthodes agiles sont sources de belles réussites, et nous nous efforçons de les appliquer dans les projets qui nous sont confiés.
+  paragraph_3: Néanmoins, nous avons à cœur de nous intégrer au mieux à vos processus afin de garantir la synergie entre notre équipe, et la vôtre.
+
+tools:
+  subtitle: Nos outils
+  column_1: Stockage
+  column_2: Qualité
+
+call_to_action:
+    box_1:
+      title: 'Vous êtes <span class="colored">une entreprise</span> (PME/Groupe)<br/> et vous souhaitez :'
+      paragraph_1:  <a href="offers#consulting">Être conseillé sur les <span class="colored">choix technologiques</span> et/ou assistés dans la <span class="colored">conception de votre futur applicatif web</span></a>
+      paragraph_2:  <a href="offers#web-development">Renforcer temporairement votre <span class="colored">équipe de développement</span></a>
+      paragraph_3:  <a href="offers#courses">Former vos <span class="colored">collaborateurs</span></a>
+      paragraph_4:  <a href="offers#delegate"><span class="colored">Confier votre projet</span> de mise en œuvre et rester concentré sur votre cœur de métier</a>
+    box_2:
+      title: 'Vous êtes <span class="colored">une ESN</span><br/> et vous souhaitez :'
+      paragraph_1:  <a href="offers#web-development"><span class="colored">Renforcer vos ressources</span> dans le cadre d’un projet</a>
+      paragraph_2:  <a href="offers#consulting"><span class="colored">Déléguer ponctuellement un expert</span> pour aider votre client à résoudre une problématique technique</a>
+      paragraph_3:  <a href="offers#courses"><span class="colored">Former vos collaborateurs ou ceux de vos clients</span> sur les dernières technologies</a>

@@ -1,0 +1,70 @@
+.section-display-stack {
+    background-color: $idci-color-light-grey;
+
+    @include until($widescreen) {
+        display: flex;
+        flex-direction: column-reverse;
+        position: inherit;
+    }
+
+    .content-container {
+        position: relative;
+
+        @include until($widescreen) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .section-display-stack-media {
+            display: block;
+            margin: 7rem 0 7rem auto;
+            max-height: 30rem;
+            object-fit: cover;
+            width: 80%;
+
+            @include until($widescreen) {
+                margin: 0;
+                position: static;
+                width: 100%;
+            }
+        }
+
+        .section-display-stack-description {
+            background-color: $idci-color-white;
+            bottom: 5rem;
+            box-shadow: 0 0 1rem $idci-color-black;
+            height: 24rem;
+            left: 11rem;
+            padding: 1.5rem;
+            padding-top: 1rem;
+            position: absolute;
+            width: 45%;
+            z-index: 100;
+
+            @include until($widescreen) {
+                height: auto;
+                margin: auto;
+                position: static;
+                width: 100%;
+            }
+
+            .section-display-stack-description-title {
+                border-bottom: 2px solid $idci-color-blue;
+                font-size: $idci-font-1-5x;
+                padding: 1rem;
+                text-transform: uppercase;
+            }
+
+            .section-display-stack-description-content {
+                font-size: $idci-font-larger;
+                line-height: 2.5rem;
+                margin-top: 2rem;
+                text-align: justify;
+            }
+        }
+
+        .colored {
+            color: $idci-color-blue;
+        }
+    }
+}

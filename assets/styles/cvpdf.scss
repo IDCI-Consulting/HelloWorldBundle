@@ -1,0 +1,259 @@
+$idci-color-black: #000000;
+$idci-color-light-black: #212121;
+$idci-color-grey: #BBB;
+$idci-color-light-grey: #EEE;
+$idci-color-blue: #008CBA;
+$idci-color-light-blue: #dff0fd;
+$idci-color-green: #1E9847;
+$idci-color-whitesmoke: #F7F7F7;
+
+$idci-primary-font: sans-serif;
+
+$idci-font-small: 0.6rem;
+$idci-font-medium: 0.8rem;
+$idci-font-large: 1rem;
+$idci-font-larger: 1.2rem;
+$idci-font-2x: 2rem;
+
+html {
+    body {
+        background-color: $idci-color-whitesmoke;
+        color: $idci-color-black;
+        margin: 0;
+        padding: 0;
+
+        p {
+            font-size: $idci-font-medium;
+        }
+
+        tbody {
+            th {
+                text-align: right;
+            }
+        }
+    }
+}
+
+* {
+    font-family: $idci-primary-font;
+    list-style-type: none;
+
+    &.idci-title-primary {
+        color: $idci-color-blue;
+        font-size: $idci-font-larger;
+        letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &.idci-title-secondary {
+        color: $idci-color-green;
+        font-size: $idci-font-larger;
+        letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &.idci-subtitle-primary {
+        color: $idci-color-light-black;
+        font-size: $idci-font-larger;
+        letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &.idci-subtitle-secondary {
+        color: $idci-color-green;
+        font-size: $idci-font-larger;
+        letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.section-cv {
+    margin: auto;
+
+    .section-cv-header {
+        margin: 0;
+    }
+
+    .section-cv-title {
+        font-weight: bold;
+        letter-spacing: initial;
+    }
+
+    .section-cv-label {
+        font-weight: bold;
+        padding-left: 1rem;
+    }
+
+    .section-cv-links {
+        display: none;
+    }
+
+    .section-cv-button {
+        margin-top: 2rem;
+        width: fit-content;
+    }
+
+    .section-cv-banner {
+        border: 2px solid $idci-color-whitesmoke;
+        padding: 0 1rem 1rem 1rem;
+
+        &.section-cv-banner-primary {
+            background-color: $idci-color-light-grey;
+        }
+
+        &.section-cv-banner-secondary {
+            background-color: $idci-color-whitesmoke;
+        }
+        
+        .section-cv-banner-title {
+            letter-spacing: initial;
+            text-decoration: underline;
+        }
+
+        .section-cv-banner-subtitle {
+            color: $idci-color-blue;
+            font-size: $idci-font-large;
+            margin: 2rem 0 0 0;
+        }
+
+        .section-cv-banner-date {
+            font-size: $idci-font-medium;
+            margin-top: 0;
+            padding-left: 1rem;
+        }
+
+        .section-cv-banner-table {
+            margin-top: 2rem;
+
+            tbody {
+                tr {
+                    td {
+                        color: $idci-color-blue;
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+
+        .section-cv-banner-education-date {
+            color: $idci-color-green;
+            font-size: $idci-font-large;
+            font-style: italic;
+            margin-right: 1rem;
+        }
+
+        .section-cv-banner-skills-title {
+            color: $idci-color-grey;
+            font-size: $idci-font-larger;
+            font-style: normal;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .section-cv-banner-skills {
+            li {
+                display: flex;
+                margin-top: 0.5rem;
+                width: 100%;
+
+                .section-cv-banner-skill-title {
+                    font-weight: bold;
+                    width: 50%;
+                }
+
+                .section-cv-banner-skill-details {
+                    width: 50%;
+                }
+            }
+        }
+
+        .section-cv-banner-highlights {
+            font-size: $idci-font-medium;
+            font-weight: bold;
+
+            .section-cv-banner-highlights-title {
+                font-size: $idci-font-larger;
+                font-weight: bold;
+
+                >a {
+                    color: $idci-color-green;
+                }
+
+
+                >span {
+                    color: $idci-color-black;
+                    font-size: $idci-font-medium;
+                    font-style: italic;
+                }
+            }
+
+            .section-cv-banner-highlights-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+
+                .section-cv-banner-highlights-tags-tag {
+                    &:not(:first-child) {
+                        margin-left: 0.5rem;
+                    }
+
+                    border: 1px solid $idci-color-green;
+                    border-bottom: 3px solid $idci-color-green;
+                    border-left: 3px solid $idci-color-green;
+                    border-radius: 1rem;
+                    color: $idci-color-green;
+                    font-weight: bold;
+                    padding-inline: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .section-cv-double {
+        display: flex;
+
+        .section-cv-double-main {
+            width: 100%;
+        }
+
+        .section-cv-double-aside {
+            width: 50%;
+
+            table {
+                margin-top: 2rem;
+                width: 100%;
+
+                thead {
+                    text-align: center;
+
+                    tr {
+                        th {
+                            color: $idci-color-blue;
+                        }
+                    }
+                }
+
+                tbody {
+                    vertical-align: top;
+
+                    tr {
+                        font-size: $idci-font-medium;
+
+                        th, td {
+                            padding: 0.2rem;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+
+            .section-cv-banner-subtitle {
+                margin-top: 0;
+            }
+        }
+    }
+}

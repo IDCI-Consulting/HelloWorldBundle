@@ -1,103 +1,68 @@
-# Variables
-
 stack_name = idci_website
-
-php_sources         ?= .
-phpcs_ignored_files ?= vendor/*,var/cache/*
-
-source_tag = master
-
+source_tag = dev
 php_container_id = $(shell docker ps --filter name="$(stack_name)_php" -q)
-user = $(shell id -u)
+user = www-data
+node_version = 20
 
 default: console
 
-# Bash Commands
+# SHELL
+.PHONY: shell
+shell:
+	docker exec -it $(php_container_id) /bin/sh
 
 .PHONY: bash
 bash:
-	docker exec -it $(php_container_id) bash
+	docker exec -it $(php_container_id) /bin/bash
 
 .PHONY: command
 command:
 	docker exec -it $(php_container_id) $(cmd)
 
-# UTILS
+# SYMFONY
+.PHONY: console
+console:
+	docker exec -u $(user) -it "$(php_container_id)" php bin/console $(cmd)
+
+.PHONY: phpcs-fix
+cs-fix:
+	docker run -u $(user) --rm -i -v `pwd`:`pwd` -w `pwd` cytopia/php-cs-fixer --rules=@Symfony --verbose fix $(php_sources) $(cmd)
 
 .PHONY: composer-update
 composer-update:
-	docker exec -t "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer update
+	docker exec -u $(user) -it "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer update
 
 .PHONY: composer-install
 composer-install:
-	docker exec -t "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer install --no-interaction
-
-.PHONY: install
-install: composer-install yarn encore
-	docker exec "$(php_container_id)" php bin/console assets:install
-
-.PHONY: phploc
-phploc:
-	docker run --rm -i -v `pwd`:/project jolicode/phaudit bash -c 'phploc $(php_sources); exit $$?'
-
-.PHONY: phpcs
-phpcs:
-	docker run --rm -i -v `pwd`:/project jolicode/phaudit bash -c 'phpcs $(php_sources) --extensions=php --ignore=$(phpcs_ignored_files) --standard=PSR2; exit $$?'
-
-.PHONY: phpcpd
-phpcpd:
-	docker run --rm -i -v `pwd`:/project jolicode/phaudit bash -c 'phpcpd $(php_sources); exit $$?'
-
-.PHONY: phpdcd
-phpdcd:
-	docker run --rm -i -v `pwd`:/project jolicode/phaudit bash -c 'phpdcd $(php_sources); exit $$?'
-
-.PHONY: phpcs-fix
-phpcs-fix:
-	docker run --rm -i -v `pwd`:`pwd` -w `pwd` grachev/php-cs-fixer --rules=@Symfony --verbose fix $(php_sources)
-
-
-# SYMFONY
-
-.PHONY: phpunit
-phpunit: ./vendor/bin/phpunit
-	docker exec -it "$(php_container_id)" bash -c "./vendor/bin/phpunit $(options)"
-
-.PHONY: phpunit-text
-phpunit-text: ./vendor/bin/phpunit
-	docker exec -it "$(php_container_id)" bash -c "./vendor/bin/phpunit --coverage-text"
-
-.PHONY: phpunit-html
-phpunit-html: ./vendor/bin/phpunit
-	docker exec -it "$(php_container_id)" bash -c "./vendor/bin/phpunit --coverage-html var/phpunit-html"
-
-.PHONY: console
-console:
-	docker exec -it "$(php_container_id)" bash -c "php bin/console $(cmd)"
-
+	docker exec -u $(user) -it "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer install
 
 # NODE
-
-.PHONY: npm
-npm:
-	docker run --rm -i -v `pwd`:/usr/src/app -w /usr/src/app node:9.5.0 npm $(cmd)
-
 .PHONY: yarn
 yarn:
-	docker run --rm -i -v `pwd`:/usr/src/app -w /usr/src/app node:9.5.0 yarn $(cmd)
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:$(node_version) yarn $(cmd)
 
+.PHONY: encore
 encore:
-	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:9.5.0 yarn encore dev $(options)
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:$(node_version) yarn encore dev $(options)
 
+.PHONY: encore-production
 encore-production:
-	docker run --rm -i -v `pwd`:/usr/src/app -w /usr/src/app node:9.5.0 yarn encore production $(options)
+	docker run --rm -it -v `pwd`:/usr/src/app -w /usr/src/app node:$(node_version) yarn encore production $(options)
 
 # IMAGES
+.PHONY: build-image
+build-image:
+	docker build --target=$(source_tag) --build-arg source_tag=$(source_tag) --no-cache --network=host -t docker-registry.idci-consulting.fr/idci-consulting/website/php-fpm:$(source_tag) -f .docker/Dockerfile .
 
-.PHONY: build-images
-build-images:
-	docker build -t docker-registry.idci-consulting.fr/idci/website/php-fpm:$(source_tag) -f .docker/php/Dockerfile .
+.PHONY: push-image
+push-image:
+	docker push docker-registry.idci-consulting.fr/idci-website/php-fpm:$(source_tag)
 
-.PHONY: push-images
-push-images:
-	docker push docker-registry.idci-consulting.fr/idci/website/php-fpm:$(source_tag)
+# STACKS
+.PHONY: stack-deploy
+stack-deploy:
+	docker stack deploy -c .docker/docker-compose.yml ${stack_name}
+
+.PHONY: stack-undeploy
+stack-undeploy:
+	docker stack rm ${stack_name}

@@ -1,0 +1,81 @@
+.carousel-post {
+  padding: 2rem;
+
+  @include until($desktop) {
+    padding: 0;
+  }
+
+  .carousel-post-media {
+    float: left;
+    height: 16rem;
+    max-width: 250px;
+    object-fit: contain;
+
+    @include until ($desktop) {
+      float: none;
+      height: 3rem;
+      margin: 0 auto;
+    }
+  }
+
+  .carousel-post-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 5rem;
+
+    @include until ($desktop) {
+      padding: 1rem 0;
+    }
+
+    .carousel-post-content-header {
+      display: flex;
+
+      p {
+        color: $idci-color-blue;
+        margin-left: 2rem;
+      }
+
+      @include until($tablet) {
+        font-size: $idci-font-medium;
+      }
+    }
+
+    .carousel-post-content-title {
+      color: $idci-color-dark-grey;
+      font-size: $idci-font-1-5x;
+      font-weight: bold;
+      margin-top: 1rem;
+      text-transform: uppercase;
+
+      @include until($tablet) {
+        font-size: $idci-font-medium;
+      }
+    }
+
+    .carousel-post-content-description {
+      margin: 1rem 0;
+      text-align: justify;
+
+      @include until($tablet) {
+        font-size: $idci-font-medium;
+      }
+    }
+
+    .carousel-post-content-button {
+      align-self: flex-end;
+      background-color: $idci-color-blue;
+      color: $idci-color-white;
+      display: block;
+      font-weight: bold;
+      margin: 2rem 0 0 0;
+      padding: .5rem 1rem;
+      text-transform: uppercase;
+      width: fit-content;
+
+      @include until($tablet) {
+        font-size: $idci-font-small;
+        height: auto;
+      }
+    }
+  }
+}

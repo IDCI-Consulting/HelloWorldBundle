@@ -2,51 +2,40 @@
 
 namespace App\Twig;
 
+use Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface;
 use Twig\Extension\AbstractExtension;
-use Twig\TwigFilter;
-use Twig\Environment;
+use Twig\TwigFunction;
 
 class AppExtension extends AbstractExtension
 {
+    private $publicDir;
+    private $entrypointLookup;
 
-    private $twig;
-
-    public function __construct(Environment $twig)
+    public function __construct(EntrypointLookupInterface $entrypointLookup, string $publicDir)
     {
-        $this->twig = $twig;
+        $this->publicDir = $publicDir;
+        $this->entrypointLookup = $entrypointLookup;
     }
 
-    public function getFilters()
+    public function getFunctions(): array
     {
         return [
-            new \Twig\TwigFilter('shuffle', [$this, 'shuffleArray']),
+            new TwigFunction('encore_entry_css_source', [$this, 'getEncoreEntryCssSource']),
+            new TwigFunction('get_age', [$this, 'getAge']),
         ];
     }
 
-    public function getFunctions()
+    public function getEncoreEntryCssSource(string $entryName): string
     {
-        return [
-            new \Twig\TwigFunction('file_get_public_contents', [$this, 'getPublicFileContents']),
-            new \Twig\TwigFunction('file_exists', [$this, 'isFileExists']),
-            new \Twig\TwigFunction('get_age', [$this, 'getAge']),
-            new \Twig\TwigFunction('build_aside_menu', [$this, 'buildAsideMenu']),
-        ];
-    }
+        $this->entrypointLookup->reset();
+        $files = $this->entrypointLookup->getCssFiles($entryName);
 
-    public function shuffleArray(array $array)
-    {
-        shuffle($array);
-        return $array;
-    }
+        $source = '';
+        foreach ($files as $file) {
+            $source .= file_get_contents($this->publicDir.'/'.$file);
+        }
 
-    public function getPublicFileContents($filePath)
-    {
-        return file_get_contents(sprintf('%s/../../public/%s', __DIR__, $filePath));
-    }
-
-    public function isFileExists($filePath)
-    {
-        return file_exists(sprintf('%s/../../%s', __DIR__, $filePath));
+        return $source;
     }
 
     public function getAge($birthday, $format = 'Y-m-d')

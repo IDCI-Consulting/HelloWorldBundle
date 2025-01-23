@@ -1,0 +1,24 @@
+members:
+  title: L'equipe
+  check_cv: Voir le CV
+  introduction: L’humain est l’ADN d’IDCI consulting. S’appuyant sur la synergie et les spécialités de chacun, notre équipe travaille avant tout dans une optique d’amélioration continue de la qualité et des méthodologies. <br/><br/> Plus qu’un simple prestataire technique qui va réaliser votre projet, nous sommes impliqués de sa conception à sa maintenance en passant par son infrastructure et vous accompagnons sur le long terme pour le faire évoluer et atteindre toujours de meilleures performances. <br/><br/> Le taux journalier de nos consultants varie en fonction de leur niveau de compétences et de leur expérience. Il inclut le conseil pouvant être fourni par l’ensemble de l’équipe. Le TJM est diminué de 20% lorsque le consultant travaille dans nos locaux.
+
+gabriel:
+  subtitle: Gérant - Expert
+  description: Attiré par les nouvelles technologies depuis tout jeune, je me suis passionné pour l'informatique et plus précisément Internet et le Web par la suite. J'ai fait de cette passion mon métier en entrant dans la vie active. Ma curiosité et le goût des défis m'ont amené à créer la société IDCI Consulting fin 2007. La philosophie "Open Source" à fait de moi un libriste convaincu. La RFC 2616 est devenu mon "livre sacré" et le nombre 42 est souvent une réponse de choix aux problèmes qu'on me pose.
+
+benjamin:
+  subtitle: Expert
+  description: Enthousiaste de l'informatique et des nouvelles technologies, je suis dans l'âme un bidouilleur curieux, passionné par la culture du web et la liberté qu'elle représente. En tant que développeur web, j'évolue avec passion dans cet univers en constante évolution. Mon expertise se traduit par la création de solutions innovantes et fonctionnelles. Ma démarche professionnelle repose sur une recherche constante d'amélioration et d'apprentissage, ce qui me permet de relever des défis techniques passionnants. A la fois rigoureux et polyvalent, je m'épanouis pleinement dans mon travail, contribuant ainsi à façonner l'expérience utilisateur et à enrichir l'écosystème numérique.
+
+vincent:
+  subtitle: Développeur
+  description: Fasciné par le monde des ordinateurs, je me suis vite intéressé au Web sur mon temps libre et c’était donc tout naturel d’en faire mon choix après le bac. Après un DUT Informatique, j’ai décidé de continuer mes études auprès de Poytech Lyon en alternance chez IDCI-Consulting, où j’acquiers de jour en jour de l’expérience et où j’approfondis mes compétences et ma compréhension des enjeux informatiques en entreprise.
+
+joris:
+  subtitle: Développeur
+  description: Ayant passé une grande partie de ma jeunesse sur mon ordinateur, je me suis tourné naturellement vers l’informatique. Au départ, je ne me sentais pas vraiment à ma place, mais l’expérience que j’ai acquise lors de mon stage et mon alternance chez IDCI m’ont permis de me rendre compte des possibilités de ce domaine et m’ont donné envie d’approfondir mes connaissances. La liberté de création et la diversité des projets que l’on peut réaliser est l’une des facettes qui me plaît le plus dans le développement.
+
+maeva:
+  subtitle: Développeuse
+  description: Formée en autodidacte, et attirée par la programmation depuis le lycée, je me professionnalise aujourd'hui. J'ai choisi de m'orienter vers le développement web pour sa diversité d'aspects et de technologies qui apporte chaque jour son lot de découvertes et de progrès. Les problématiques d'ergonomie, d'accessibilité et de maintenabilité m'encouragent à toujours m'améliorer et mieux penser mon code.

@@ -1,0 +1,113 @@
+.section-form {
+    margin: 0;
+    width: 35%;
+
+    @include until($desktop) {
+        width: 100%;
+    }
+
+    .section-form-title {
+        color: $idci-color-grey;
+        font-size: $idci-font-2x;
+        margin-top: 4rem;
+        text-align: center;
+
+        @include until($desktop) {
+            margin-top: 0;
+        }
+    }
+
+    form {
+        div {
+            div {
+                display: block;
+                margin: 1rem auto;
+                position: relative;
+
+                .text-label {
+                    padding: 0.2rem 0.2rem 0.2rem 0.7rem;
+                    position: absolute;
+                    top: 1.2rem;
+                }
+
+                label {
+                    color: $idci-color-grey;
+                    display: block;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    transition: 0.5s all;
+                    width: 100%;
+                }
+
+                input {
+                    background-color: $idci-color-white;
+                    border: 4px solid $idci-color-whitesmoke;
+                    border-left: 0;
+                    border-right: 0;
+                    display: block;
+                    min-height: 4rem;
+                    padding: 1.5rem 1rem 0.5rem 1rem;
+                    width: 100%;
+                }
+
+                textarea {
+                    background-color: $idci-color-white;
+                    border: 4px solid $idci-color-whitesmoke;
+                    min-height: 4rem;
+                    padding: 2rem 1rem 1rem 1rem;
+                    width: 100%;
+                }
+
+                select {
+                    background-color: $idci-color-white;
+                    border: 4px solid $idci-color-whitesmoke;
+                    padding: 0.5rem;
+                    width: 100%;
+
+                    +label {
+                        display: none;
+                    }
+                }
+
+                img {
+                    display: block;
+                    margin: 0 auto 1rem auto;
+                    min-height: 4rem;
+                }
+
+                #contact_captcha {
+                    + label {
+                        padding: 0.2rem 0.2rem 0.2rem 0.7rem;
+                        position: absolute;
+                        top: 6.2rem;
+                    }
+
+                    &:focus, &:not(:placeholder-shown) {
+                        + label {
+                            top: 5.1rem;
+                        }
+                    }
+                }
+
+                input, textarea {
+                    &:focus, &:not(:placeholder-shown) {
+                        + label {
+                            background-color: $idci-color-blue;
+                            color: $idci-color-white;
+                            font-size: $idci-font-small;
+                            top: 0;
+                        }
+                    }
+                }
+
+                input, textarea, select {
+                    &:focus {
+                        border: 4px solid $idci-color-blue;
+                        outline: 0;
+                        transition: border 0.2s ease-out;
+                    }
+                }
+            }
+        }
+    }
+}

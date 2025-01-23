@@ -1,0 +1,142 @@
+.section-dynamic-display {
+    @include until ($tablet){
+        width: 100%;
+    }
+
+    .section-dynamic-display-title {
+        color: $idci-color-dark-grey;
+        font-size: $idci-font-2x;
+    }
+
+    .section-dynamic-display-banner {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(5, 1fr);
+        margin-top: 1rem;
+        text-align: center;
+
+        @include until ($desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include until ($tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .section-dynamic-display-banner-card {
+            background-color: $idci-color-light-grey;
+            padding: 0.5rem;
+            position: relative;
+
+            &:hover {
+                .section-dynamic-display-banner-card-container {
+                    transform: rotateY(180deg);
+                }
+            }
+
+            .section-dynamic-display-banner-card-container {
+                transform-style: preserve-3d;
+                transition: all 0.3s ease;
+
+                .section-dynamic-display-banner-card-container-cover {
+                    backface-visibility: hidden;
+                    height: 10rem;
+                    margin: 0 auto;
+                    object-fit: contain;
+
+                    @include until ($tablet) {
+                        height: 4rem;
+                    }
+                }
+
+                .section-dynamic-display-banner-card-container-content {
+                    backface-visibility: hidden;
+                    left: 0;
+                    padding: 0.5rem;
+                    position: absolute;
+                    top: 0.5rem;
+                    transform: rotateY(-180deg);
+                    width: 100%;
+
+                    .tags {
+                        font-size: $idci-font-medium;
+                        margin-top: 1rem;
+                        max-height: 7.5rem;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-dynamic-display-subtitle {
+        color: $idci-color-dark-grey;
+        font-size: $idci-font-2x;
+        margin-top: 2rem;
+        text-align: center;
+
+    }
+
+    .section-dynamic-display-content {
+        margin: 0 auto;
+        width: 85%;
+
+        @include until ($desktop) {
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            width: 100%;
+
+            .slick-arrow {
+                order: 1;
+            }
+        }
+    }
+
+    .columns {
+        margin: -0.75rem 0 0 0;
+
+        .pic-ctn {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            width: 100%;
+
+            .slide-arrow {
+                background-color: transparent;
+                border: none;
+                height: 2rem;
+                transition-duration: 0.8s;
+                width: 12rem;
+
+                &:hover {
+                    background-color: $idci-color-white;
+                    border-radius: 15%;
+                    box-shadow: 1px 1px 2px $idci-color-dark-grey;
+                    cursor: pointer;
+
+                    .slide-arrow-media {
+                        width: 2rem;
+                    }
+                }
+
+                .slide-arrow-media {
+                    width: 1rem;
+                }
+            }
+
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        >div {
+                            .columns {
+                                .carousel-post-media {
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

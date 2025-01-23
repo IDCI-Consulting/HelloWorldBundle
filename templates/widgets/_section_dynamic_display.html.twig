@@ -1,0 +1,36 @@
+<section class="section-dynamic-display">
+    <div class="content-container">
+        <h1 class="section-dynamic-display-title idci-title-primary">{{ page_title }}</h1>
+        {% if banner is defined and banner is not null and banner is not empty %}
+            <div class="section-dynamic-display-banner">
+                {% for item in banner %}
+                    {% if item.publicationDate is defined and item.publicationDate is not null and item.publicationDate is not empty %}
+                        <a href="{{ url(href, {'slug': item.id}) }}" class="section-dynamic-display-banner-card">
+                    {% else %}
+                        <div class="section-dynamic-display-banner-card">
+                    {% endif %}
+                    <div class="section-dynamic-display-banner-card-container">
+                        <img class="section-dynamic-display-banner-card-container-cover" src="{{ asset('build/images/' ~ item.media) }}" alt={{ item.name[app.request.locale] }}/>
+                        <div class="section-dynamic-display-banner-card-container-content">
+                            <ul class="tags">
+                                {% for tool in item.tools %}
+                                    <li class="tags-tag">{{ tool }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% if item.publicationDate is defined and item.publicationDate is not null and item.publicationDate is not empty %}
+                        </a>
+                    {% else %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        <h2 class="section-dynamic-display-subtitle idci-subtitle-primary">{{ slider_title }}</h2>
+        <section class="section-dynamic-display-content">
+            {% block slideshow %}
+            {% endblock %}
+        </section>
+    </div>
+</section>

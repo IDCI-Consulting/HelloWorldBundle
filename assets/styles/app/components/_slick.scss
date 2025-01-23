@@ -1,0 +1,34 @@
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+
+.carousel-single-item {
+    .columns {
+        display: flex !important;
+
+        @include until($tablet) {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .columns.is-mobile > .column.is-3 {
+        @include until($tablet) {
+            width: 6rem;
+        }
+    }
+
+    .columns.is-mobile > .column.is-6 {
+        @include until($tablet) {
+            width: 100%;
+        }
+    }
+}
+
+.slick-slider {
+    align-items: center;
+    display: flex;
+
+    .slick-arrow {
+        height: fit-content;
+    }
+}

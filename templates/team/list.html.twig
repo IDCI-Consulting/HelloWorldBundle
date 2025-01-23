@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Notre équipe{% endblock %}
+
+{% block main %}
+    {% trans_default_domain 'members' %}
+
+    {% include 'widgets/_section_members.html.twig' with {
+        'title': 'members.title'|trans,
+        'description': 'members.introduction'|trans,
+        'members': ['Gabriel Bondaz', 'Benjamin Boudier', 'Vincent Duvivier', 'Joris Viniere', 'Maeva Grondin']
+    } %}
+{% endblock %}

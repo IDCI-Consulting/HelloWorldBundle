@@ -1,47 +1,68 @@
-IDCI - Website
-==============
+# IDCI Website
 
-## Installation
+## Services
 
-### Requirements
+IDCI-Website project based on Symfony6.
+
+## Requirements
+
+- Docker
+
+### Web reverse proxy
 
 If you don't already have a docker web reverse proxy service (ex: traefik), you must start it
 ```sh
-$ docker stack deploy -c .docker/docker-compose-reverse-proxy.yml traefik
+$ docker network create --scope swarm --driver overlay traefik_reverse_proxy
+$ docker stack deploy -c .docker/traefik/docker-compose.yml traefik
 ```
 
-#### Local DNS Entries
-
-Add the following DNS entries in your host file:
-```
-# IDCI-Consulting - Website
-127.0.0.1    idci.docker
-```
-
-#### Build images
-
-If you need to rebuild docker app images, run the following command :
+To remove the traefik stack:
 ```sh
-$ make build-images
+$ docker stack rm traefik
+```
+
+Once traefik run, you can check your browser at 127.0.0.1:8080
+
+## Installation
+
+### First steps
+
+1. Add the following DNS entries in your host file:
+```
+# IDCI-Website
+127.0.0.1       idci-consulting.docker
+127.0.0.1       redis-commander.idci-consulting.docker
+127.0.0.1       mailhog.idci-consulting.docker
+127.0.0.1       wkhtmltopdf.idci-consulting.docker
+```
+
+2. Git clone this repository
+```sh
+$ git clone git@gitlab.idci-consulting.fr:idci-consulting/website.git
+```
+
+3. Go to the projet directory
+```sh
+$ cd website
+```
+
+4. If you need to rebuild docker app images, run the following command :
+```sh
+$ make build-image
 ```
 
 ### Start
 
-Load environment vars:
-```sh
-$ source .env.sh
-```
-
 To run the project docker stack :
 ```sh
-$ docker stack deploy -c .docker/docker-compose.yml idci_website
+$ make stack-deploy
 ```
 
 ### Stop
 
 To stop the project docker stack :
 ```sh
-$ docker stack rm idci_website
+$ make stack-undeploy
 ```
 
 ### Build assets
@@ -52,16 +73,19 @@ $ make yarn
 $ make encore
 ```
 
-### Installing the app
+## For the developers
 
-Create the database using the following commannd :
+You'll need to change permissions to modify files :
 ```sh
-$ make console cmd="d:s:u --dump-sql --force"
+sudo chown -R $USER:www-data . && chmod 775 -R . && find ./ -type f -exec chmod 664 {} \;
 ```
 
-To install the app, run the following command :
+If you use a volume in your docker-compose, you need to update composer after the build-image :
 ```sh
 $ make composer-install
->>>>>>> feat/Frontend
 ```
-//TODO: Move the following documentation in a dedicated parts
+
+If you want the assets to be built everytime you save a .scss or .js file, you can use :
+```sh
+$ make encore options="--watch"
+```

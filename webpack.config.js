@@ -1,4 +1,10 @@
-var Encore = require('@symfony/webpack-encore');
+const Encore = require('@symfony/webpack-encore');
+
+// Manually configure the runtime environment if not already configured yet by the "encore" command.
+// It's useful when you use tools that rely on webpack.config.js file.
+if (!Encore.isRuntimeEnvironmentConfigured()) {
+    Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
+}
 
 Encore
     // directory where compiled assets will be stored
@@ -8,26 +14,17 @@ Encore
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
-    /**
+    /*
      * ENTRY CONFIG
      *
-     * Add 1 entry for each "page" of your app
-     * (including one that's included on every page - e.g. "app")
-     *
      * Each entry will result in one JavaScript file (e.g. app.js)
-     * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
+     * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('app', './assets/js/app.js')
-    .addStyleEntry('cv_theme_idci', './assets/scss/cv_theme/idci.scss')
-    .addStyleEntry('course_theme_idci', './assets/scss/course_theme/idci.scss')
-    //.addEntry('page1', './assets/js/page1.js')
-    //.addEntry('page2', './assets/js/page2.js')
+    .addEntry('app', './assets/app.js')
+    .addEntry('cvpdf', './assets/cvpdf.js')
 
-    .copyFiles({
-            from: './assets/images',
-            to: 'images/[name].[ext]',
-            pattern: /\.(png|jpg|jpeg|gif|ico|svg|webp|mp4)$/
-    })
+    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
+    //.enableStimulusBridge('./assets/controllers.json')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -36,7 +33,7 @@ Encore
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
 
-    /**
+    /*
      * FEATURE CONFIG
      *
      * Enable & configure other features below. For a full
@@ -49,22 +46,39 @@ Encore
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
+    .configureBabel((config) => {
+        config.plugins.push('@babel/plugin-proposal-class-properties');
+    })
+
+    // enables @babel/preset-env polyfills
+    .configureBabelPresetEnv((config) => {
+        config.useBuiltIns = 'usage';
+        config.corejs = 3;
+    })
+
     // enables Sass/SCSS support
     .enableSassLoader()
 
-    // enables Postcss support
     .enablePostCssLoader()
+
+    // uncomment if you use TypeScript
+    //.enableTypeScriptLoader()
+
+    // uncomment if you use React
+    //.enableReactPreset()
 
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
-    //.enableIntegrityHashes()
+    //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    .autoProvidejQuery()
-
-    // uncomment if you use API Platform Admin (composer req api-admin)
-    //.enableReactPreset()
-    //.addEntry('admin', './assets/js/admin.js')
+    // .autoProvidejQuery()
+    .copyFiles({
+        from: './assets/images',
+        pattern: /\.(png|jpg|jpeg|ico|svg|mp4|gif)$/,
+        // to path is relative to the build directory
+        to: 'images/[path][name].[ext]'
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();

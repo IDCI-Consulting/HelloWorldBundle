@@ -2,9 +2,8 @@
 # Files in the packages/ subdirectory configure your dependencies.
 
 # Put parameters here that don't need to change on each machine where the app is deployed
-# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
-    locale: 'en'
 
 services:
     # default configuration for services in *this* file
@@ -15,14 +14,45 @@ services:
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     App\:
-        resource: '../src/*'
-        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
-
-    # controllers are imported separately to make sure services can be injected
-    # as action arguments even if you don't extend any base controller class
-    App\Controller\:
-        resource: '../src/Controller'
-        tags: ['controller.service_arguments']
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Event\Subscriber\ContactSubscriber:
+        arguments:
+            $contactRecipientsAddresses: '%env(json:MAILER_RECIPIENT_ADDRESSES)%'
+
+    App\Controller\BlogController:
+        arguments:
+            $blogPostsFilePath: '%kernel.project_dir%/src/Resources/blog/posts.json'
+
+    App\Controller\CustomerController:
+        arguments:
+            $customersFilePath: '%kernel.project_dir%/src/Resources/customer/customers.json'
+
+    App\Controller\TeamController:
+        arguments:
+            $cvDirectoryPath: '%kernel.project_dir%/src/Resources/cv/'
+
+    App\Controller\SeoController:
+        arguments:
+            $blogPostsFilePath: '%kernel.project_dir%/src/Resources/blog/posts.json'
+            $customersFilePath: '%kernel.project_dir%/src/Resources/customer/customers.json'
+            $cvDirectoryPath: '%kernel.project_dir%/src/Resources/cv/'
+
+    # twig
+    App\Twig\AppExtension:
+        arguments:
+            $publicDir: '%kernel.project_dir%/public'
+
+    # event listener
+    App\EventListener\HeaderVersionListener:
+        arguments:
+            $appVersion: '%env(APP_VERSION)%'
+        tags:
+            - { name: kernel.event_listener, event: kernel.response }

@@ -1,0 +1,7 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    {% apply markdown_to_html %}
+        {{ post|raw }}
+    {% endapply %}
+{% endblock %}

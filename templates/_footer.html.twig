@@ -1,0 +1,43 @@
+<footer>
+    <div class="columns is-multiline is-centered">
+        <div class="column is-3 footer-first-row footer-contact">
+            <ul class="footer-contact-list">
+                <li class="footer-contact-list-item">
+                    <span class="fas fa-mobile-phone fa-2x footer-contact-list-item-icon"></span>
+                    <a href="tel:0663231207" class="footer-contact-list-item-text">06 63 23 12 07</a>
+                </li>
+                <li class="footer-contact-list-item">
+                    <span class="fas fa-envelope fa-2x footer-contact-list-item-icon"></span>
+                    <a href="mailto:contact@idci-consulting.fr" class="footer-contact-list-item-text">contact@idci-consulting.fr</a>
+                </li>
+                <li class="footer-contact-list-item-button">
+                    <a href="{{ url('app_contact_index') }}">{% trans %}button.contact_us{% endtrans %}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="column is-3 footer-first-row footer-social">
+            <img src="{{ asset('build/images/logo/idci-logo-balise-grayscale.png') }}" alt="{% trans from "alt" %}idci-logo-balise-grayscale{% endtrans %}" class="footer-social-logo">
+            <div class="footer-social-media">
+                <a href="https://fr.linkedin.com/company/idci-consulting" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                <a href="https://github.com/IDCI-Consulting" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+            </div>
+        </div>
+        <div class="column is-3 footer-first-row footer-address">
+            <div class="footer-address-text">
+                <p class="footer-title">IDCI-Consulting</p>
+                <p>109 rue Francis de Pressensé</p>
+                <p>69100 Villeurbanne - FRANCE</p>
+                <p class="footer-title">{% trans from "layout" %}footer.head_office{% endtrans %}</p>
+                <p>82 ruelle du Brief</p>
+                <p>01170 Gex - FRANCE</p>
+            </div>
+        </div>
+        <div class="column is-9 footer-second-row footer-cgu">
+            <div class="footer-cgu-links">
+                <a href="{{ url('app_legal_mentions') }}" class="footer-cgu-link-item">{% trans from "layout" %}footer.legal_mentions{% endtrans %}</a>
+                <a href="{{ url('app_seo_sitemap') }}" class="footer-cgu-link-item">Sitemap</a>
+            </div>
+            <p class="footer-cgu-website-version">{{ app_version }}</p>
+        </div>
+    </div>
+</footer>

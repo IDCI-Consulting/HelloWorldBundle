@@ -1,0 +1,13 @@
+.button, a.button {
+    background-color: $idci-color-blue;
+    border: 0;
+    color: $idci-color-whitesmoke;
+    display: block;
+    margin: 1rem auto;
+    text-transform: uppercase;
+
+    &:hover {
+        box-shadow: 0 0 6px $idci-color-light-black;
+        color: $idci-color-white;
+    }
+}

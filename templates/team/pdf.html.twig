@@ -1,0 +1,11 @@
+{% apply inline_css(encore_entry_css_source("cvpdf")) %} 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        {{ include('team/_cv.html.twig') }}
+    </body>
+</html>
+{% endapply %}

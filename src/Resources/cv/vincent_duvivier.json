@@ -1,0 +1,316 @@
+{
+    "identity": {
+        "firstName": "Vincent",
+        "lastName": "Duvivier",
+        "birthDate": "2001-01-11T00:00:00Z",
+        "job": {
+            "fr": "Développeur Web FullStack",
+            "en": "FullStack Web Developer"
+        },
+        "media": "",
+        "email": "vincent.duvivier@idci-consulting.fr",
+        "phone": "",
+        "website": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://fr.linkedin.com/in/vincent-duvivier-5b16321a5"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Développeur Web FullStack",
+                "en": "FullStack Web Developer"
+            },
+            "startDate": "2021-08-08T00:00:00Z",
+            "endDate": "2025-08-30T00:00:00Z",
+            "xpByCustomer": [
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://www.editions-eyrolles.com",
+                    "startDate": "2023-10-05T00:00:00Z",
+                    "endDate": "2024-05-08T00:00:00Z",
+                    "tools": ["PHP 8", "Symfony 6", "EasyAdmin 4", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Développement d'un BackOffice sous forme de Bundle Symfony pour la gestion du contenu statique"
+                        ],
+                        "en": [
+                            "Development of a BackOffice as a Symfony Bundle for the management of static content"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Maier",
+                    "website": "https://www.maier.fr/",
+                    "startDate": "2022-01-02T00:00:00Z",
+                    "endDate": "2024-10-30T00:00:00Z",
+                    "tools": ["PHP 7/8", "Symfony 5/6", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de maquettes suite à une refonte graphique",
+                            "Maintenance applicative sur sujets divers en PHP/Symfony.",
+                            "Migration de la stack de Symfony 5 à Symfony 6"
+                        ],
+                        "en": [
+                            "Integration of mock-up for a graphic update",
+                            "Maintenance in PHP/Symfony",
+                            "Migration of the stack from Symfony 5 to Symfony 6"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Editis",
+                    "website": "https://imanuel.nathan.fr/",
+                    "startDate": "2024-02-02T00:00:00Z",
+                    "endDate": "2024-03-30T00:00:00Z",
+                    "tools": ["PHP 7", "Symfony 4/5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de maquettes suite à une refonte graphique",
+                            "Maintenance applicative sur sujets divers en PHP/Symfony.",
+                            "Migration de la stack de Symfony 4 à Symfony 5"
+                        ],
+                        "en": [
+                            "Migration of the stack from Symfony 4 to Symfony 5"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tiara Milo",
+                    "website": "https://www.tiaramilo.com",
+                    "startDate": "2021-08-08T00:00:00Z",
+                    "endDate": "2022-01-08T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de maquettes",
+                            "Mise en place des appels API entre front et back"
+                        ],
+                        "en": [
+                            "Integration of mock-up",
+                            "Setting of API calls between frontend and backend"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "personalExperiences": [
+        {
+            "organization": {
+                "fr": "ZUPdeCo",
+                "en": "ZUPdeCo"
+            },
+            "role": {
+                "fr": "Bénévole",
+                "en": "Volunteer"
+            },
+            "website": "",
+            "startDate": "2020-09-07T00:00:00Z",
+            "endDate": "2021-05-07T00:00:00Z",
+            "tasks": {
+                "fr": [
+                    "Aide aux devoirs pour enfant élèves en ZEP"
+                ],
+                "en": [
+                    "Homework help for children in ZEP"
+                ]
+            }
+        }
+        
+    ],
+    "education": [
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "DUT Informatique",
+            "location": "Lyon",
+            "startDate": "2020-02-01T00:00:00Z",
+            "endDate": "2022-01-28T00:00:00Z"
+        },
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Ingénieur Polytech",
+            "location": "Lyon",
+            "startDate": "2022-09-04T00:00:00Z",
+            "endDate": "2025-09-01T00:00:00Z"
+        }
+    ],
+    "expertises": [
+        {
+            "name": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Langages informatique",
+                        "en": "Computer languages"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "HTML5",
+                        "CSS3",
+                        "PHP",
+                        "Javascript",
+                        "Ruby",
+                        "C",
+                        "C++",
+                        "Java",
+                        "Python",
+                        "Bash",
+                        "ZSH",
+                        "SQL"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "OS",
+                        "en": "OS"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Windows",
+                        "Linux (Debian, Arch, Fedora)"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks",
+                        "en": "Frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Symfony",
+                        "Bootstrap",
+                        "Rails"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Versioning",
+                        "en": "Versioning"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Git",
+                        "Gitlab",
+                        "GitHub"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Base de Données",
+                        "en": "Databases"
+                    },
+                    "level": "",
+                    "keywords": [
+                    	"ORACLE",
+                        "MySQL",
+                        "PostgreSQL"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Conteneurisation",
+                        "en": "Containerization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Gestion de projet",
+                        "en": "Project management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Redmine",
+                        "Kanboard"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Modélisation",
+                        "en": "Schematization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "fr": "Langues",
+                "en": "Languages"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Français",
+                        "en": "French"
+                    },
+                    "level": {
+                        "fr": "Natif",
+                        "en": "Native"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Anglais",
+                        "en": "English"
+                    },
+                    "level": {
+                        "fr": "C1",
+                        "en": "C1"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Allemand",
+                        "en": "German"
+                    },
+                    "level": {
+                        "fr": "B1",
+                        "en": "B1"
+                    }
+                }
+            ]
+        }
+    ],
+    "hobbies": {
+        "fr": [
+            {
+                "name": "Cinéma",
+                "description": ""
+            }
+        ],
+        "en": [
+            {
+                "name": "Cinema",
+                "description": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+offers:
+  options_list:
+    title: Depending of the task and expertise of your teams
+    subtitle: you can choose to...
+    box_1: 
+      title: A total devolvement
+      description: Delegate every technical aspects to IDCI and let your teams keep 100% of their focus on your core business functionnal components implementation.
+    box_2:
+      title: A partial devolvement
+      description: Resort to a partial delegation of technical tasks to IDCI in order to fill your punctual needs of resources and expertise.
+    box_3:
+      title: A consulting
+      description: Assure yourself a collaboration and a support until you totally master your project
+
+  consulting:
+    title: We are doing
+    subtitle: Consulting and Expertise
+    paragraph_1: Our team works above all as a skills centre. Our experts like to share their knowledge and their experience. We can intervene on demand, to support your developers when they are facing a technical challenge.
+    paragraph_2: Thanks to a constant technological watch, <span class="blue-colored-description-text">IDCI-Consulting renews and develop its knowlegdes</span>.
+    paragraph_3: We train ourselves everyday looking for excellence.
+    paragraph_4: "We take action on the different steps of your informatic projects :</br><span class=\"blue-colored-description-text\">define your goals, technical solutions, web app structures, deployement and optimization...</span>"
+
+  courses:
+    title: We are doing
+    subtitle: Courses
+    paragraph_1: Our team base its added value on the perpetual quest of new knowledges. Thus, share it is a true pleasure which allow, in addition, to our consultants to vary their tasks and acquire pedagogical skills
+    paragraph_2: <span class="blue-colored-description-text">Strong of our %cie_age% experience years</span>, wa can intervene or host courses around the development of <span class="blue-colored-description-text">web application with high traffic</span> and <span class="blue-colored-description-text">good practices</span> using a complex DevOps stack (containerisation (docker) + CI/CD (GitLab, Jenkins) + version manager (Git) + tests (PHP Unit, Behat)).
+    paragraph_3: <i>We are not a training organisation.</i>
+  
+  web_development:
+    title: We are doing
+    subtitle: Web development
+    paragraph_1: IDCI have an expertise in web development, specialized on <span class="blue-colored-description-text">Symfony PHP framework</span> (since the first version until more recent ones).
+    paragraph_2: Moreover, we also are working with the <span class="blue-colored-description-text">NodeJS framework</span>, and always are enthusiasts to discover promising <span class="blue-colored-description-text">new technologies</span>.
+
+  delegate:
+    title: We are doing
+    subtitle: Projects of digitalization from A to Z
+    paragraph_1: '<span class="blue-colored-description-text">We cover every step of your project of digitalization</span> : In depth analysis of your needs and objectives, selection of technologies and appropriate digital plateforms, development and optimal integration with the existings systems.'
+    paragraph_2: We make sure that every stage is realised <span class="blue-colored-description-text">on time</span> and according to the <span class="blue-colored-description-text">established quality standards</span>.
+    paragraph_3: Finally, <span class="blue-colored-description-text">the maintenance, the continous evolution and the adaptation to technological evolutions</span> allow the garantee that your project of digitalization is not only achieve with success, but too durable et adaptable to the futur challenges of your company.
+
+  open_source:
+    title: Our philosophy
+    subtitle: Open source
+    paragraph_1: <span class="green-colored-description-text">Sharing and openness</span> to others are anchored in the philosophy of our company.
+    paragraph_2: For each of our projects, we contribute as soon as possible to <span class="green-colored-description-text">the development of open-source tools </span> that we use everyday, so everyone can keep growing and prospering, whether it be our clients or open-source community members.
+    paragraph_3: We publish and maintain available source code on <a href="https://github.com/IDCI-Consulting" class="blue-colored-description-text" target="_blank">our Github repository.</a>
+
+  company_assets:
+    title: "Choosing IDCI Consulting, it's enhancing the added value of your partner :"
+    box_1:
+      title: In terms of skills
+      description: You mandate a consultant and you earn the <span class="colored">technical support of our whole team</span> !
+    box_2:
+      title: In terms of costs
+      description: We own <span class="colored">our propers premises fully equiped for remote work</span>, which is an advantage to avoid travel fees, to improve the carbon balance and optimise your costs !
+    box_3:
+      title: In terms of guarantee
+      description: Our consultants are backuped, which securise your project. The product code also is read by another developer to respect our <span class="colored">quality bond on deliverables</span>.

@@ -1,0 +1,30 @@
+.section-card {
+    background-color: $idci-color-white;
+
+    .section-card-link {
+        color: $idci-color-blue;
+        font-size: $idci-font-larger;
+    }
+
+    .section-card-media {
+        border: 3px solid $idci-color-light-grey;
+        display: block;
+        height: 250px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .section-card-description {
+        border: 3px solid $idci-color-light-grey;
+        border-top: none;
+        margin: auto;
+        padding: 1rem 0rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    &:hover {
+        box-shadow: 0.5rem 0.5rem 0.5rem $idci-color-dark-grey;
+    }
+
+}

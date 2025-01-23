@@ -1,0 +1,352 @@
+{
+    "identity": {
+        "firstName": "Maëva",
+        "lastName": "Grondin",
+        "birthDate": "1998-05-18T00:00:00Z",
+        "job": {
+            "fr": "Développeuse Web FullStack",
+            "en": "FullStack Web Developer"
+        },
+        "media": "",
+        "email": "maeva.grondin@idci-consulting.fr",
+        "phone": "",
+        "website": "https://scytheowens.github.io/Portfolio/",
+        "location": {
+            "address": "",
+            "postalCode": "69100",
+            "city": "Villeurbanne",
+            "countryCode": "France",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://fr.linkedin.com/in/ma%C3%ABva-grondin-532260191"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/ScytheOwens?tab=repositories"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Développeuse Web FullStack",
+                "en": "FullStack Web Developer"
+            },
+            "startDate": "2023-10-09T00:00:00Z",
+            "endDate": "2025-04-08T00:00:00Z",
+            "xpByCustomer": [
+                {
+                    "customer": "Eyrolles",
+                    "website": "https://www.eyrolles.com",
+                    "startDate": "2024-02-05T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["PHP8", "Symfony 6", "Docker", "RabbitMQ", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Analyse et découpage de maquette en composants réutilisables",
+                            "Rédaction et design de composants avec Twig",
+                            "Intégration de contenu web"
+                        ],
+                        "en": [
+                            "Analysis and division of mock-up in reusable components",
+                            "Writing and designing of components with Twig",
+                            "Integration of web contents"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://www.editions-eyrolles.com",
+                    "startDate": "2024-02-05T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["PHP8", "Symfony 6", "EasyAdmin 4", "Docker", "RabbitMQ", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de contenu web",
+                            "Ajout de fonctionnalités dans le back-office",
+                            "Utilisation de formulaires Symfony",
+                            "Création d'un client d'API sous forme de bundle Symfony"
+                        ],
+                        "en": [
+                            "Integration of web contents",
+                            "Adding features to back-office",
+                            "Use of Symfony forms",
+                            "Creation of a API client as a Symfony Bundle"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tiara Milo",
+                    "website": "https://www.tiaramilo.com",
+                    "startDate": "2023-11-29T00:00:00Z",
+                    "endDate": "2024-02-02T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 5", "Docker", "Nginx", "PostgreSQL", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Réorganisation du DOM en composants réutilisables",
+                            "Intégration de contenus web",
+                            "Ajout de fonctionnalités à la demande du client"
+                        ],
+                        "en": [
+                            "Reorganisation of DOM in reusable components",
+                            "Integration of web contents",
+                            "Adding of features on customer demand"
+                        ]
+                    }
+                },
+                {
+                    "customer": "IDCI-consulting",
+                    "website": "https://www.idci-consulting.fr",
+                    "startDate": "2023-10-16T00:00:00Z",
+                    "endDate": "2023-11-24T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 6", "Docker", "Nginx", "Twig", "Sass", "CSS", "Javascript"],
+                    "tasks": {
+                        "fr": [
+                            "Réorganisation du DOM en composants réutilisables",
+                            "Intégration de contenus web",
+                            "Ajout de fonctionnalités à la demande du client",
+                            "Réalisation d'un thème Keycloak personnalisé"
+                        ],
+                        "en": [
+                            "Reorganisation of DOM in reusable components",
+                            "Integration of web contents",
+                            "Adding of features on customer demand",
+                            "Customisation of a Keycloak theme"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Karma Hôtel",
+                    "website": "https://www.karma-hotel.fr",
+                    "startDate": "2023-10-09T00:00:00Z",
+                    "endDate": "2023-10-13T00:00:00Z",
+                    "tools": ["PHP8", "Symfony 6", "Docker", "Nginx", "Twig", "Sass"],
+                    "tasks": {
+                        "fr": [
+                            "Intégration de contenu web",
+                            "Design d'éléments selon la maquette du client"
+                        ],
+                        "en": [
+                            "Integration of web contents",
+                            "Designing of elements on customer's mockup"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "personalExperiences": [
+        {
+            "organization": {
+                "fr": "Les Editions Lunaires",
+                "en": "Les Editions Lunaires"
+            },
+            "role": {
+                "fr": "Auto-entrepeneuse",
+                "en": "Entrepreneur"
+            },
+            "website": "",
+            "startDate": "2020-02-01T00:00:00Z",
+            "endDate": "",
+            "tasks": {
+                "fr": [
+                    "Développement d'un site de vente en ligne de livres",
+                    "Ecriture de roman",
+                    "Travail d'édition (recherche d'imprimeur, d'illustrateur, correction, communication)"
+                ],
+                "en": [
+                    "Development of a website for book selling",
+                    "Book writing",
+                    "Editor work (printer and illustrator search, correction, communication)"
+                ]
+            }
+        }
+    ],
+    "education": [
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Certificat de développeur web",
+            "location": "Villeurbanne",
+            "startDate": "2023-10-09T00:00:00Z",
+            "endDate": "2024-10-08T00:00:00Z"
+        },
+        {
+            "domain": {
+                "fr": "Tourisme",
+                "en": "Tourism"
+            },
+            "certificate": "BTS Tourisme",
+            "location": "Nîmes",
+            "startDate": "2017-09-21T00:00:00Z",
+            "endDate": "2019-06-30T00:00:00Z"
+        }
+    ],
+    "expertises": [
+        {
+            "name": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Langages informatique",
+                        "en": "Computer languages"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "HTML5",
+                        "CSS3",
+                        "Javascript",
+                        "PHP",
+                        "Bash",
+                        "SQL"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "OS",
+                        "en": "OS"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Windows",
+                        "Linux (Ubuntu)"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks",
+                        "en": "Frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Symfony",
+                        "ReactJS",
+                        "Express/NodeJS"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Moteur de template",
+                        "en": "Templates engine"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Twig"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Versioning",
+                        "en": "Versioning"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Gitlab",
+                        "GitHub",
+                        "Git"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Base de Données",
+                        "en": "Databases"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "MySQL",
+                        "PostgreSQL",
+                        "MongoDB"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Conteneurisation",
+                        "en": "Containerization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Gestion de projet",
+                        "en": "Project management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Redmine",
+                        "Notion"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "fr": "Langues",
+                "en": "Languages"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Français",
+                        "en": "French"
+                    },
+                    "level": {
+                        "fr": "Langue maternelle",
+                        "en": "Mothertong"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Anglais",
+                        "en": "English"
+                    },
+                    "level": {
+                        "fr": "B2",
+                        "en": "B2"
+                    }
+                }
+            ]
+        }
+    ],
+    "hobbies": {
+        "fr": [
+            {
+                "name": "Ecriture",
+                "description": "J'écris des romans de science-fiction et fantastique."
+            },
+            {
+                "name": "Violon",
+                "description": "Je débute."
+            },
+            {
+                "name": "Plongée sous-marine",
+                "description": "J'ai le niveau 1."
+            }
+        ],
+        "en": [
+            {
+                "name": "Writing",
+                "description": "I write sy-fy and fantastic books."
+            },
+            {
+                "name": "Violin",
+                "description": "I'm a beginner."
+            },
+            {
+                "name": "Scuba diving",
+                "description": "I currently have got the first level."
+            }
+        ]
+    }
+}

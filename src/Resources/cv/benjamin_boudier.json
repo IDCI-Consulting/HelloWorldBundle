@@ -1,0 +1,344 @@
+{
+    "identity": {
+        "firstName": "Benjamin",
+        "lastName": "BOUDIER",
+        "birthDate": "1998-09-11T00:00:00Z",
+        "job": {
+            "fr": "Développeur Web FullStack",
+            "en": "FullStack Web Developer"
+        },
+        "media": "",
+        "email": "benjamin.boudier@idci-consulting.fr",
+        "phone": "07 52 67 33 35",
+        "website": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://fr.linkedin.com/in/benjamin-boudier-61a901142"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Développeur Web FullStack",
+                "en": "FullStack Web Developer"
+            },
+            "startDate": "2018-07-04T00:00:00Z",
+            "endDate": "",
+            "website": "",
+            "xpByCustomer": [
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://editions-eyrolles.com/",
+                    "startDate": "2023-09-02T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["PHP 8", "Symfony 6", "Elasticsearch", "PostgreSQL"],
+                    "tasks": {
+                        "fr": [
+                            "Soutien technique auprès de l'équipe de développement"
+                        ],
+                        "en": [
+                            "Technical support to the development team"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tiara Milo",
+                    "website": "https://www.tiaramilo.com",
+                    "startDate": "2021-03-10T00:00:00Z",
+                    "endDate": "2021-09-07T00:00:00Z",
+                    "tools": ["PHP 8", "Symfony 5", "PostgreSQL", "Docker", "Minio", "GraphQL", "Nginx"],
+                    "tasks": {
+                        "fr": [
+                            "Mise en place de l'architecture sous Symfony 5 en microservices s'interfaçant via des API GraphQL",
+                            "Gestion du projet et formation des équipes dans le but de leur permettre à gérer le projet en autonomie"
+                        ],
+                        "en": [
+                            "Setting of the architecture under Symfony 5 in microservices interfacing with GraphQL APIs",
+                            "Project management and training of teams to let them manage the project in autonomy"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Maier",
+                    "website": "https://www.maier.fr/",
+                    "startDate": "2019-01-10T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["PHP 7", "Symfony 4", "GitLab", "Docker", "Nginx", "GraphQL", "PostgreSQL", "Minio", "Redmine"],
+                    "tasks": {
+                        "fr": [
+                            "Refonte complète du système d'information Prestashop pré-existant au profit d'une solution sur-mesure à l'aide de Symfony 4 sur un fonctionnement type micro-services s'interfaçant à l'aide d'API GraphQL",
+                            "Dockerisation complète du projet et mise en place d'une CI permettant d'effectuer des déploiements sur différents environnement",
+                            "Création d'un outil de gestion de catalogue produit (API + CRUD) et interfaçage avec des systèmes internes & externes (ex: Salesforce, Avis vérifiés, etc)",
+                            "Création d'un outil de gestion de client (API + CRUD) et interfaçage avec des systèmes internes & externes (ex: Salesforce, Facebook, etc)",
+                            "Mise en place et refonte des 2 sites vitrines (<a href=\"https://maier.fr\">www.maier.fr</a> & <a href=\"https://rolex.maier.fr\">www.rolex.maier.fr</a>)",
+                            "Maintenance et mise à jour des différentes briques applicatives tout au long du cycle de vie du système d'information",
+                            "Gestion du projet et formation du client sur un outil de ticketing afin de fluidifier la communication des besoins"
+                        ],
+                        "en": [
+                            "Complete redesign of the Prestashop information system for a tailor-made solution with Symfony 4 on a operation of type microservices interfacing with GraphQL APIs",
+                            "Complete Dockerization of the project and setting of a CI allowing deployement on multiple environment",
+                            "Creation of a product manager (API + CRUD) and interface with internal and external systems (ex: Salesforce, Avis vérifiés, etc)",
+                            "Creation of a customer manager (API + CRUD) and interface with internal and external systems (ex: Salesforce, Facebook, etc)",
+                            "Setting and redesign of both showcase websites (<a href=\"https://maier.fr\">www.maier.fr</a> & <a href=\"https://rolex.maier.fr\">www.rolex.maier.fr</a>)",
+                            "Maintenance and updating of the different microservices all along the information system lifecycle",
+                            "Project management and training of the customer on a ticketing tool to fluidize the communication of the needs"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Inflexyon",
+                    "website": "https://www.inflexyon.fr/",
+                    "startDate": "2018-11-21T00:00:00Z",
+                    "endDate": "2018-12-28T00:00:00Z",
+                    "tools": ["PHP 7", "Symfony 3"],
+                    "tasks": {
+                        "fr": [
+                            "Mise à jour du système d'admnistration (CRUD) basé sur Symfony 3",
+                            "Mise en place d'un bundle Symfony 3 permettant de gérer les locations de chambres",
+                            "Maintenance et débogage avant mise en production"
+                        ],
+                        "en": [
+                            "Update of the admin system (CRUD) based on Symfony 3",
+                            "Setting of a Symfony 3 bundle allowing room rental management",
+                            "Maintenance and debugging before releasing"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Hiriar",
+                    "website": "",
+                    "startDate": "2018-04-01T00:00:00Z",
+                    "endDate": "2018-04-07T00:00:00Z",
+                    "tools": ["Prestashop 1.6", "Docker"],
+                    "tasks": {
+                        "fr": [
+                            "Dockerisation du projet sous Prestashop 1.6",
+                            "Mise à jour concernant la partie front du site"
+                        ],
+                        "en": [
+                            "Dockerization of the project under Prestashop 1.6",
+                            "Update of the front end of the website"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "personalExperiences": [],
+    "education": [
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "DUT Informatique",
+            "location": "Lyon 1",
+            "startDate": "2016-09-02T00:00:00Z",
+            "endDate": "2018-07-04T00:00:00Z"
+        },
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Licence Professionnelle Informatique - METINET",
+            "location": "Bourg-en-Bresse",
+            "startDate": "2018-08-28T00:00:00Z",
+            "endDate": "2019-09-16T00:00:00Z"
+        }
+    ],
+    "expertises": [
+        {
+            "name": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Langages informatique",
+                        "en": "Computer languages"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "HTML5",
+                        "CSS3",
+                        "PHP 5/7/8",
+                        "Javascript/ECMAScript",
+                        "Bash / Shell",
+                        "SQL",
+                        "C / C++",
+                        "Python",
+                        "Java / Kotlin",
+                        "Delphi Pascal"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "OS",
+                        "en": "OS"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Linux (Debian, Ubuntu)",
+                        "Windows"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks",
+                        "en": "Frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Symfony 3/4/5",
+                        "ExpressJS",
+                        "VueJS / Angular 1.6",
+                        "Bootstrap / Bulma / Foundation / Semantic UI / Knacss"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Moteur de template",
+                        "en": "Templates engine"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Twig",
+                        "Blade",
+                        "Smarty",
+                        "Mustache"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Versioning",
+                        "en": "Versioning"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "GitLab",
+                        "GitHub",
+                        "Git"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Base de Données",
+                        "en": "Databases"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "MySQL",
+                        "MariaDB",
+                        "MongoDB",
+                        "PostgreSQL",
+                        "Oracle Database",
+                        "SQLite",
+                        "Elasticsearch",
+                        "Redis"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Conteneurisation",
+                        "en": "Containerization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Gestion de projet",
+                        "en": "Project management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Redmine",
+                        "Jira"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Modélisation",
+                        "en": "Schematization"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "fr": "Langues",
+                "en": "Languages"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Français",
+                        "en": "French"
+                    },
+                    "level": {
+                        "fr": "Natif",
+                        "en": "Native"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Anglais",
+                        "en": "English"
+                    },
+                    "level": {
+                        "fr": "B2",
+                        "en": "B2"
+                    }
+                }
+            ]
+        }
+    ],
+    "hobbies": {
+        "fr": [
+            {
+                "name": "Internet",
+                "description": "Discuter/jouer entre amis ou me reposer devant une série, un anime ou encore un stream"
+            },
+            {
+                "name": "Sport",
+                "description": "Musculation + running/velo afin d'entretenir ma santé (6j/7)"
+            },
+            {
+                "name": "Randonnée",
+                "description": "Promenade matinale hebdomadaire avec mon chien"
+            }
+        ],
+        "en": [
+            {
+                "name": "Internet",
+                "description": "Chatting/playing with friends or relaxing in front of a series, anime or stream"
+            },
+            {
+                "name": "Sport",
+                "description": "Weightlifting + running/biking to maintain my health (6 days a week)"
+            },
+            {
+                "name": "Walking",
+                "description": "Weekly morning walk with my dog"
+            }
+        ]
+    }
+}

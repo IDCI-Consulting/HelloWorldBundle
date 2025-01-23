@@ -1,0 +1,33 @@
+.section-members {
+    .content-container {
+        max-width: 75rem;
+
+        @include until($desktop) {
+            padding: 0;
+        }
+
+        .section-members-title {
+            color: $idci-color-blue;
+    
+            @include until($desktop) {
+                margin-top: 2rem;
+            }
+        }
+    
+        .section-members-introduction {
+            margin: 2rem auto;
+            text-align: justify;
+            width: 90%;
+        }
+    
+        .section-members-list {
+            column-gap: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: auto;
+            max-width: 1200px;
+            width: 90%;
+        }
+    }
+}

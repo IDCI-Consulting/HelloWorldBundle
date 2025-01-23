@@ -1,0 +1,35 @@
+specialization:
+  title: We are specialize in
+  subtitle: Web architecture, PHP & Symfony
+  paragraph_1: '&lt;Engineering&gt; &lt;Development&gt; &lt;Consulting&gt; &lt;Integration&gt;'
+
+company_concept:
+  title: An innovantive answer
+  description:  'IDCI consulting (LLC), created in 2007, is a <span class="colored">centre of skills on the web technologies</span>
+                that permanantly works on different missions while keeping the possibility to communicate with each other and share their knowledges. 
+                <span class="colored">Individually or as a team</span>, we are able to bring a certain value for your project at every step of its life cycle, 
+                without commitment from your side and on a minimal duration of collaboration. We exclusively intervene with IT management contracts.'
+
+methodology:
+  subtitle: Our methodology
+  paragraph_1: We are <span class="blue-colored-description-text">flexibles</span>. Informatic projects are subject to very frequent changes.
+  paragraph_2: Our experience showed us that Agile methods are source of great success, and we put effort appling it toward all the projects given to us.
+  paragraph_3: For all that, we care integrating your process to ensure the synergy between our team, and yours.
+
+tools:
+  subtitle: Our tools
+  column_1: Storage
+  column_2: Quality
+
+call_to_action:
+  box_1:
+    title: 'You are <br/><span class="colored">a company</span> (SME/Group)<br/> and you want to :'
+    paragraph_1:  <a href="offers#consulting">Be advised on <span class="colored">technological choices</span> and/or be assisted on <span class="colored">your future web application conception</span></a>
+    paragraph_2:  <a href="offers#web-development">Offer temporary reinforcements to <span class="colored">your development team</span></a>
+    paragraph_3:  <a href="offers#courses">Train your <span class="colored">collaborators</span></a>
+    paragraph_4:  <a href="offers#delegate"><span class="colored">Leave us your project execution</span> and stay focus on your core business</a>
+  box_2:
+    title: 'You are <br/><span class="colored">a Software firm</span><br/> and you want :'
+    paragraph_1:  <a href="offers#web-development"><span class="colored">Reinforce your resources</span> in the context of a project</a>
+    paragraph_2:  <a href="offers#consulting"><span class="colored">Delegate punctually to an expert</span> to help your client in order to solve his technical issue</a>
+    paragraph_3:  <a href="offers#courses"><span class="colored">Train your collaborators, or your client\s ones</span>, on the new technologies.</a>

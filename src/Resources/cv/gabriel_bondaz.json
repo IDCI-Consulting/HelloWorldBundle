@@ -1,0 +1,636 @@
+{
+    "identity": {
+        "firstName": "Gabriel",
+        "lastName": "Bondaz",
+        "birthDate": "1984-12-07",
+        "job": {
+            "fr": "Co-gérant & Ingénieur Recherche et Développement",
+            "en": "Managing director & Research and Development Engineer"
+        },
+        "media": "",
+        "email": "gabriel.bondaz@idci-consulting.fr",
+        "phone": "06 63 23 12 07",
+        "website": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "socialNetworks": [
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/gabriel-bondaz"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/konandrum"
+            }
+        ]
+    },
+    "professionalExperiences": [
+        {
+            "company": "IDCI-Consulting",
+            "role": {
+                "fr": "Co-gérant & Ingénieur Recherche et Développement",
+                "en": "Co-manager & Research and Development Engineer"
+            },
+            "startDate": "2007-12",
+            "endDate": "",
+            "xpByCustomer": [
+                {
+                    "customer": "Editions Eyrolles",
+                    "website": "https://www.editions-eyrolles.com",
+                    "startDate": "2022-02-05T00:00:00Z",
+                    "endDate": "",
+                    "tools": ["Docker", "Gitlab", "Gitlab-CI", "SSO", "Keycloak", "OAuth2.0", "PHP 8", "Symfony 6", "API GraphQL", "RabbitMQ", "Redis"],
+                    "tasks": {
+                        "fr": [
+                            "Mise en place d'une stack DevOps (Docker / GitLab / GitLab-CI)",
+                            "Migration des applications web sous docker",
+                            "Mise en place d'un SSO avec Keycloak",
+                            "Maintenance et évolutions des applications Web (Php/Symfony)",
+                            "Accompagnement et formation de l'équipe IT interne"
+                        ],
+                        "en": [
+                            "Setting up a DevOps stack (Docker / GitLab / GitLab-CI)",
+                            "Migrating web applications to Docker",
+                            "Setting up SSO with Keycloak",
+                            "Maintenance and developments of Web applications (Php/Symfony)",
+                            "Support and training of the internal IT team"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Quipment SAS",
+                    "website": "https://www.quipment.fr/",
+                    "startDate": "2021-09",
+                    "endDate": "2022-01",
+                    "tools": ["Docker", "PHP 7/8", "Symfony 4/5/6", "API SOAP", "Redis", "Behat"],
+                    "tasks": {
+                        "fr": [
+                            "Refonte compléte du backoffice client '<a href=\"quipsite.quipment.fr\">Quipsite</a>' basé sur des appels Webservice SOAP"
+                        ],
+                        "en": [
+                            "Rebuild the customer backoffice '<a href=\"quipsite.quipment.fr\">Quipsite</a>' based on SOAP Webservice calls"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Mon Petit Placement",
+                    "website": "https://www.monpetitplacement.fr/",
+                    "startDate": "2020-07",
+                    "endDate": "2021-07",
+                    "tools": ["Docker", "Gitlab", "Gitlab-CI", "SSO", "Keycloak", "OAuth2.0", "PHP 7", "Symfony 4", "API Plateform", "RabbitMQ", "Behat"],
+                    "tasks": {
+                        "fr": [
+                            "Refonte de l'application en Micro Service (Front Angular / Back Symfony4.4)",
+                            "Mise en place de la CI (gitlab-ci) et de l’environnement serveur (Docker Swarm)",
+                            "Mise en place des tests fonctionnels (Behat)",
+                            "Mise en place des traitements asynchrone (RabbitMQ)",
+                            "Mise en place de la sécurité via Oauth2.0 (Keycloak)"
+                        ],
+                        "en": [
+                            "Redesign of the application in Micro Service (Front Angular / Back Symfony4.4)",
+                            "Setting up the CI (gitlab-ci) and the server environment (Docker Swarm)",
+                            "Implementation of functional tests (Behat)",
+                            "Implementation of asynchronous processing (RabbitMQ)",
+                            "Setting up security via Oauth2.0 (Keycloak)"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Upply",
+                    "website": "https://www.upply.com/",
+                    "startDate": "2019-07",
+                    "endDate": "2020-04",
+                    "tools": ["Docker", "PHP 7", "Symfony 4", "MongoDB", "API REST", "RabbitMQ", "Behat"],
+                    "tasks": {
+                        "fr": [
+                            "Lead développeur 'Back' sur la marketplace upply.com",
+                            "Développements Web php (Symfony 4.3/4.4) / Api REST / Traitement asynchrone (RabbitMQ)",
+                            "Optimisation base de donnée MongoDB",
+                            "Gestion de livrables, mise en préprod, optimisation des images docker, supervision Applicative"
+                        ],
+                        "en": [
+                            "Lead developer 'Back' on the upply.com marketplace",
+                            "PHP web development (Symfony 4.3/4.4) / REST API / Asynchronous processing (RabbitMQ)",
+                            "MongoDB database optimization",
+                            "Management of deliverables, pre-production, optimization of Docker images, Application supervision"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Editis",
+                    "website": "https://www.editis.com/",
+                    "startDate": "2016-04",
+                    "endDate": "",
+                    "tools": ["PHP 7", "Symfony 4", "MySQL", "API REST", "API SOAP"],
+                    "tasks": {
+                        "fr": [
+                            "Développements du portail de connexion enseignants/étudiants pour différents projets (imanuel.nathan.fr, inscription-brne.eduplateforme.com, classes.eduplateforme.com, ...)",
+                            "Développements Web php (Symfony 4.4) / Api client REST & SOAP / Formulaires d'inscriptions / Stockage SQL (MySQL)"
+                        ],
+                        "en": [
+                            "Developments of the teacher/student connection portal for different projects (imanuel.nathan.fr, inscription-brne.eduplateforme.com, classes.eduplateforme.com, etc.)",
+                            "PHP web development (Symfony 4.4) / REST & SOAP client API / Registration forms / SQL storage (MySQL)"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Tessi customer marketing",
+                    "website": "https://www.tessi.eu/fr/",
+                    "startDate": "2013-06",
+                    "endDate": "2019-02",
+                    "tools": ["Docker", "Github", "Keycloak", "PHP 5", "Symfony 2", "MySQL", "MongoDB", "API REST", "RabbitMQ", "ElasticSearch"],
+                    "tasks": {
+                        "fr": [
+                            "Consultant - Architecte - Lead Développeur",
+                            "Analyse et refonte du nouveau S.I (Projet DIGIFID v2)",
+                            "Accompagnement des équipes techniques (8 développeurs)",
+                            "Mise en place de la stack DévOps",
+                            "Développements Web php (Symfony 2.4/2.8) / Api REST / Authentification OAuth2 (Keycloak) / Traitement asynchrone (RabbitMQ) / Stockage des données issues des parcours clients multi canaux (MongoDB / ElastciSearch) / Supervision Applicative"
+                        ],
+                        "en": [
+                            "Consultant - Architect - Lead Developer",
+                            "Analysis and redesign of the new IS (DIGIFID v2 Project)",
+                            "Support for technical teams (8 developers)",
+                            "Setting up the DevOps stack",
+                            "PHP Web development (Symfony 2.4/2.8) / REST API / OAuth2 authentication (Keycloak) / Asynchronous processing (RabbitMQ) / Storage of data from multi-channel customer journeys (MongoDB / ElastciSearch) / Application Supervision"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Allopneus",
+                    "website": "https://www.allopneus.com/",
+                    "startDate": "2011-05",
+                    "endDate": "2011-08",
+                    "tools": ["Symfony 2"],
+                    "tasks": {
+                        "fr": [
+                            "Conseil et formation des équipes dans le cadre du changement de version du site web pour allopneus.com",
+                            "Accompagnement des équipes techniques (6 développeurs)",
+                            "Développements Web php (Symfony 2.0/2.1)"
+                        ],
+                        "en": [
+                            "Advice and training of teams as part of the change of version of the website for allopneus.com",
+                            "Support for technical teams (6 developers)",
+                            "PHP Web Developments (Symfony 2.0/2.1)"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Groupe Moniteur",
+                    "website": "https://www.lemoniteur.fr/",
+                    "startDate": "2010-10",
+                    "endDate": "2011-07",
+                    "tools": ["PHP", "Symfony 1"],
+                    "tasks": {
+                        "fr": [
+                            "Pilotage du projet de refonte du site web",
+                            "Accompagnement des équipes techniques (3 développeurs)",
+                            "Développements web php"
+                        ],
+                        "en": [
+                            "Website redesign project leading",
+                            "Technic team support (3 developers)",
+                            "Web development in PHP"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Université Claude Bernard Lyon 1",
+                    "website": "https://www.univ-lyon1.fr/",
+                    "startDate": "2008-09",
+                    "endDate": "2020-06",
+                    "tools": [],
+                    "tasks": {
+                        "fr": [
+                            "Formateur dans le cadre de la Licence professionnelle E-business"
+                        ],
+                        "en": [
+                            "Trainer in the E-business professional license"
+                        ]
+                    }
+                },
+                {
+                    "customer": "Inseec Digital Institute",
+                    "website": "https://www.inseec-digital.com/",
+                    "startDate": "2016-09",
+                    "endDate": "2016-12",
+                    "tools": ["PHP", "MySQL"],
+                    "tasks": {
+                        "fr": [
+                            "Formateur"
+                        ],
+                        "en": [
+                            "Trainer"
+                        ]
+                    }
+                },
+                {
+                    "customer": "ENS",
+                    "website": "http://archinfo.universite-lyon.fr/",
+                    "startDate": "2012-09",
+                    "endDate": "2013-06",
+                    "tools": [],
+                    "tasks": {
+                        "fr": [
+                            "Formateur"
+                        ],
+                        "en": [
+                            "Trainer"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "personalExperiences": [
+        {
+            "organization": {
+                "fr": "Solidarité Sida",
+                "en": "AIDS Solidarity"
+            },
+            "role": {
+                "fr": "Bénévole",
+                "en": "Volunteer"
+            },
+            "website": "http://www.solidarite-sida.org/",
+            "startDate": "2004-07",
+            "endDate": "2017-07",
+            "tasks": {
+                "fr": [
+                    "Bénévole pour l'association Solidarité Sida et sur le festival Solidays à Paris"
+                ],
+                "en": [
+                    "Volonteer for the association during Solidays' festival in Paris"
+                ]
+            }
+        },
+        {
+            "organization": {
+                "fr": "Université Claude Bernard Lyon 1",
+                "en": "Lyon 1 Claude Bernard Faculty"
+            },
+            "role": {
+                "fr": "Etudiant élu au conseil d'administration et président de l'association Student Club",
+                "en": "Administration counselor and president of Student club association"
+            },
+            "website": "https://etu.univ-lyon1.fr/activites/associations-etudiantes/student-club-association-des-bde-de-l-iut-lyon-1-740690.kjsp",
+            "startDate": "2004-09",
+            "endDate": "2005-07",
+            "tasks": {
+                "fr": [],
+                "en": []
+            }
+        },
+        {
+            "organization": {
+                "fr": "",
+                "en": ""
+            },
+            "role": {
+                "fr": "",
+                "en": ""
+            },
+            "website": "",
+            "startDate": "2003-01",
+            "endDate": "",
+            "tasks": {
+                "fr": [
+                    "Brevet de Secouriste (AFPS)"
+                ],
+                "en": [
+                    "Rescue Certificate"
+                ]
+            }
+        }
+    ],
+    "education": [
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Master Miage",
+            "location": "",
+            "startDate": "",
+            "endDate": "2008-07"
+        },
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "Licence professionelle Informatique (Nouvelles Architectures Applicatives)",
+            "location": "",
+            "startDate": "",
+            "endDate": "2005-07"
+        },
+        {
+            "domain": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "certificate": "DUT Informatique",
+            "location": "",
+            "startDate": "",
+            "endDate": "2004-07"
+        }
+    ],
+    "expertises": [
+        {
+            "name": {
+                "fr": "Informatique",
+                "en": "IT"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Serveur HTTP",
+                        "en": "HTTP server"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Apache",
+                        "Nginx",
+                        "lighttpd",
+                        "Caddy"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Réseaux",
+                        "en": "Network"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "DNS (bind)",
+                        "DHCP",
+                        "Reverse proxy et load balancing (pound)",
+                        "Firewall (iptables)",
+                        "Serveur FTP (vsFTP)"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Cache et reverse proxy",
+                        "en": "Cache et reverse proxy"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Varnish"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Configuration Management",
+                        "en": "Configuration Management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Ansible",
+                        "SaltStack"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Languages informatiques",
+                        "en": "Development Languages"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "C",
+                        "C++",
+                        "Java",
+                        "Python",
+                        "PHP",
+                        "HTML",
+                        "xHTML",
+                        "HTML5",
+                        "XML",
+                        "JavaScript",
+                        "SQL",
+                        "Pl/Sql",
+                        "Prolog",
+                        "Shell Script",
+                        "JSON",
+                        "YAML",
+                        "Markdown"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Système d'exploitation",
+                        "en": "Operating system"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Ms Dos",
+                        "Windows",
+                        "MacOS",
+                        "Linux",
+                        "Unix"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks PHP",
+                        "en": "PHP frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Symfony",
+                        "Silex",
+                        "Laravel",
+                        "Zend framework"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks Python",
+                        "en": "Python frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Django",
+                        "Pylons project"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Frameworks CSS",
+                        "en": "CSS frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Bootstrap",
+                        "Foundation"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Moteur de template",
+                        "en": "Templates engine"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Twig",
+                        "Handlebars"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "CMS",
+                        "en": "CSS frameworks"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Drupal",
+                        "WordPress",
+                        "Prestashop",
+                        "Magento",
+                        "DokuWiki"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Versioning",
+                        "en": "Versioning"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Git",
+                        "Svn"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Base de Données",
+                        "en": "Database"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "MySQL",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "CouchDB",
+                        "ElasticSearch",
+                        "Redis"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Virtualisation / Conteneurisation",
+                        "en": "Virtualization / Containerisation"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Xen",
+                        "OpenVZ",
+                        "KVM",
+                        "Docker"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Gestion de projet",
+                        "en": "Project management"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Trac",
+                        "Redmine",
+                        "Mantis",
+                        "Jira"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Task Runner",
+                        "en": "Task Runner"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Gulp",
+                        "Grunt",
+                        "Ansible"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Outils AMQP",
+                        "en": "AMQP tools"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "RabbitMQ"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Modélisation",
+                        "en": "Modelling"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "UML"
+                    ]
+                },
+                {
+                    "name": {
+                        "fr": "Autres",
+                        "en": "Others"
+                    },
+                    "level": "",
+                    "keywords": [
+                        "Ajax",
+                        "Jquery",
+                        "Websocket"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "fr": "Langues",
+                "en": "Languages"
+            },
+            "skills": [
+                {
+                    "name": {
+                        "fr": "Français",
+                        "en": "French"
+                    },
+                    "level": {
+                        "fr": "Langue maternelle",
+                        "en": "Mothertong"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Anglais",
+                        "en": "English"
+                    },
+                    "level": {
+                        "fr": "Maîtrisé",
+                        "en": "Fluent"
+                    }
+                },
+                {
+                    "name": {
+                        "fr": "Portugais",
+                        "en": "Portuguese"
+                    },
+                    "level": {
+                        "fr": "Indépendant",
+                        "en": "Independent"
+                    }
+                }
+            ]
+        }
+    ],
+    "hobbies": {}
+}

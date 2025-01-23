@@ -1,3 +1,14 @@
-# default:
-#     path: /
-#     controller: App\Controller\DefaultController::index
+# controllers:
+#     resource: ../src/Controller/
+#     type: annotation
+
+app_route_redirection:
+    path: /
+    methods: ['GET']
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: app_homepage
+        # make a permanent redirection...
+        permanent: true
+        # ...and keep the original query string parameters
+        keepQueryParams: true

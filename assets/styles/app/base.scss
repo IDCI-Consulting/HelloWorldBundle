@@ -1,0 +1,114 @@
+@import '~bulma/sass/base/_index';
+@import '~bulma/sass/components/_index';
+@import '~bulma/sass/elements/_index';
+@import '~bulma/sass/form/_index';
+@import '~bulma/sass/grid/_index';
+@import '~bulma/sass/helpers/_index';
+@import '~bulma/sass/utilities/_index';
+@import '~bulma/sass/utilities/mixins';
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+@import 'settings';
+@import 'header';
+@import 'footer';
+
+@import 'components/all';
+@import 'widgets/all';
+
+html {
+    body {
+        color: $idci-color-black;
+        background-color: $idci-color-whitesmoke;
+    }
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+    width: 40%;
+
+    @include until($widescreen) {
+        width: 80%;
+    }
+
+    iframe {
+        &.streetmap {
+            height: 30rem;
+            width: 90rem;
+        }
+    }
+}
+
+.transparent-box {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 80px solid $idci-color-light-grey;
+    border-left: 100vw solid transparent;
+    border-top: 80px solid $idci-color-light-grey;
+    height: 30rem;
+    position: relative;
+
+    @include until($tablet) {
+        display: none;
+    }
+
+    &.even {
+        border-left: none;
+        border-right: 100vw solid transparent;
+    }
+
+    &.top-secondary {
+        border-top: 80px solid $idci-color-whitesmoke;
+    }
+
+    &.bottom-secondary {
+        border-bottom: 80px solid $idci-color-whitesmoke;
+    }
+
+    &.no-top {
+        border-top: none;
+    }
+}
+
+* {
+    scroll-behavior: smooth !important;
+
+    font-family: $idci-primary-font;
+
+    &.idci-title-primary {
+        color: $idci-color-blue;
+        text-align: center;
+        font-size: $idci-font-2x;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-title-secondary {
+        color: $idci-color-green;
+        text-align: center;
+        font-size: $idci-font-2x;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-subtitle-primary {
+        color: $idci-color-light-black;
+        text-align: center;
+        font-size: $idci-font-2-5x;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+
+    &.idci-subtitle-secondary {
+        color: $idci-color-green;
+        text-align: center;
+        font-size: $idci-font-2-5x;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+    }
+}

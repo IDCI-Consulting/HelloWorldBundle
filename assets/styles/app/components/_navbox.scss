@@ -1,0 +1,58 @@
+.navbox {
+    position: fixed;
+    right: 2rem;
+    top: 5rem;
+    z-index: 10;
+
+    @include until($desktop) {
+        display: none;
+    }
+
+    ul {
+        li {
+            column-gap: 1rem;
+            display: flex;
+            margin: auto;
+            justify-content: right;
+            
+            a {
+                color: $idci-color-dark-grey;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                span {
+                    visibility: hidden;
+                    opacity: 0;
+                    transition:visibility 0.3s linear,opacity 0.3s linear;
+                }
+
+                i {
+                    color: $idci-color-dark-grey;
+                    margin-left: 1rem;
+                }
+            }
+
+            &.active {
+                a {
+                    color: $idci-color-blue;
+                }
+
+                i::before {
+                    color: $idci-color-blue;
+                    content: '\f192'
+                }
+            }
+        }
+
+        &:hover {
+            li {
+                a {
+                    span {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

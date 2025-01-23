@@ -1,94 +1,111 @@
-version: '3.3'
+---
+version: '3.9'
 
 services:
 
   php:
-    image: ${CONTAINER_RELEASE_IMAGE}
-    environment:
-      - APP_HOST
-      - APP_ENV
-      - APP_DEBUG
-      - APP_VERSION
-      - DEV_USER_ID
-      - DEV_GROUP_ID
-    volumes:
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-      - composer:/var/www/.composer
-      - var:/var/www/idci_website/var
-      - bundles:/var/www/idci_website/public/bundles
-      - ../:/var/www/idci_website
-      - ../public/build:/var/www/idci_website/public/build
+    image: docker-registry.idci-consulting.fr/idci-consulting/website/php-fpm:dev
     configs:
-      - source: php_config
+      - source: php_conf
         target: /usr/local/etc/php/php.ini
+    volumes:
+      - ../:/var/www/app
+      - composer_data:/var/www/.composer
     networks:
-      app: ~
-      redis: ~
+      - app
+      - redis
+      - mailhog
+      - pdf
 
   nginx:
     image: nginx
-    volumes:
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-      - ../:/var/www/idci_website
     deploy:
       labels:
-        traefik.frontend.rule: ${TRAEFIK_NGINX_FRONTEND_RULE}
-        traefik.docker.network: "traefik_reverse_proxy"
-        traefik.port: "80"
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik_reverse_proxy"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.services.idci-website-nginx.loadbalancer.server.port=80"
+        - "traefik.http.routers.idci-website-nginx.entryPoints=web"
+        - "traefik.http.routers.idci-website-nginx.rule=Host(`idci-consulting.docker`) || Host(`www.idci-consulting.docker`)"
+        - "traefik.http.routers.idci-website-nginx-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-website-nginx-https.rule=Host(`idci-consulting.docker`) || Host(`www.idci-consulting.docker`)"
+        - "traefik.http.routers.idci-website-nginx-https.tls=true"
+        - "traefik.http.routers.idci-website-nginx-https.tls.certresolver=letsencrypt"
     configs:
-      - source: nginx_config
+      - source: nginx_conf
         target: /etc/nginx/conf.d/default.conf
-    networks:
-      app: ~
-      traefik_reverse_proxy: ~
-
-  static:
-    image: nginx
     volumes:
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-      - ../:/var/www/idci_website
-    deploy:
-      labels:
-        traefik.frontend.rule: "${TRAEFIK_NGINX_FRONTEND_RULE};PathPrefix:/build/,/bundles/,/favicon.ico;Method:GET"
-        traefik.docker.network: "traefik_reverse_proxy"
-        traefik.port: "80"
-    configs:
-      - source: static_config
-        target: /etc/nginx/conf.d/default.conf
+      - ../:/var/www/app
+    environment:
+      - NGINX_HOST=idci-consulting.docker
     networks:
-      traefik_reverse_proxy: ~
+      - traefik_reverse_proxy
+      - app
 
   redis:
-    image: redis:4
+    image: redis:7
     volumes:
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-      - data:/data
+      - redis_data:/data
     networks:
-      redis:
-        aliases:
-          - redis_session
-      traefik_reverse_proxy: ~
+      - redis
 
-volumes:
-  composer: ~
-  data: ~
-  var: ~
-  bundles: ~
+  redis-commander:
+    image: rediscommander/redis-commander
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik_reverse_proxy"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.services.idci-website-redis-commander.loadbalancer.server.port=8081"
+        - "traefik.http.routers.idci-website-redis-commander.entryPoints=web"
+        - "traefik.http.routers.idci-website-redis-commander.rule=Host(`redis-commander.idci-consulting.docker`)"
+        - "traefik.http.routers.idci-website-redis-commander-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-website-redis-commander-https.rule=Host(`redis-commander.idci-consulting.docker`)"
+        - "traefik.http.routers.idci-website-redis-commander-https.tls=true"
+        - "traefik.http.routers.idci-website-redis-commander-https.tls.certresolver=letsencrypt"
+    environment:
+      - REDIS_HOSTS=session:redis
+    networks:
+      - traefik_reverse_proxy
+      - redis
+
+  mailhog:
+    image: mailhog/mailhog
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik_reverse_proxy"
+        - "traefik.docker.lbswarm=true"
+        - "traefik.http.services.idci-website-mailhog.loadbalancer.server.port=8025"
+        - "traefik.http.routers.idci-website-mailhog.entryPoints=web"
+        - "traefik.http.routers.idci-website-mailhog.rule=Host(`mailhog.idci-consulting.docker`)"
+        - "traefik.http.routers.idci-website-mailhog-https.entryPoints=websecure"
+        - "traefik.http.routers.idci-website-mailhog-https.rule=Host(`mailhog.idci-consulting.docker`)"
+        - "traefik.http.routers.idci-website-mailhog-https.tls=true"
+        - "traefik.http.routers.idci-website-mailhog-https.tls.certresolver=letsencrypt"
+    networks:
+      - traefik_reverse_proxy
+      - mailhog
+
+  pdf-generator:
+    image: bedrockio/export-html:latest
+    networks:
+      - pdf
 
 configs:
-  php_config:
-    file: ./config/php.ini
-  nginx_config:
-    file: ./config/nginx.conf
-  static_config:
-    file: ./config/static.conf
+  nginx_conf:
+    file: ./conf/nginx/site.conf
+  php_conf:
+    file: ./conf/php/php.ini
+
+volumes:
+  composer_data:
+  redis_data:
 
 networks:
-  app: ~
-  redis: ~
+  app:
+  redis:
+  mailhog:
+  pdf:
   traefik_reverse_proxy:
     external: true

@@ -1,0 +1,172 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Présentation de nos offres{% endblock %}
+
+{% block main %}
+    {% trans_default_domain 'offers' %}
+
+    <video class="background-video" autoplay loop muted>
+        <source src="{{ asset('build/images/base/network.mp4') }}" type="video/mp4">
+    </video>
+
+    {% include 'widgets/_section_choices.html.twig' with {
+        'title': ('offers.company_assets.title')|trans,
+        'boxes': [
+            {
+                'title': ('offers.company_assets.box_1.title')|trans,
+                'paragraphs': [
+                    ('offers.company_assets.box_1.description')|trans
+                ],
+                'secondary': true
+            },
+            {
+                'title': ('offers.company_assets.box_2.title')|trans,
+                'paragraphs': [
+                    ('offers.company_assets.box_2.description')|trans
+                ],
+                'secondary': true
+            },
+            {
+                'title': ('offers.company_assets.box_3.title')|trans,
+                'paragraphs': [
+                    ('offers.company_assets.box_3.description')|trans
+                ],
+                'secondary': true
+            }
+        ]
+    } %}
+
+    <div class="transparent-box no-top bottom-secondary"></div>
+
+    {% include 'widgets/_section_choices.html.twig' with {
+        'title': ('offers.options_list.title')|trans,
+        'subtitle': ('offers.options_list.subtitle')|trans,
+        'boxes': [
+            {
+                'title': ('offers.options_list.box_1.title')|trans,
+                'paragraphs': [
+                    ('offers.options_list.box_1.description')|trans
+                ],
+                'secondary': true
+            },
+            {
+                'title': ('offers.options_list.box_2.title')|trans,
+                'paragraphs': [
+                    ('offers.options_list.box_2.description')|trans
+                ],
+                'secondary': true
+            },
+            {
+                'title': ('offers.options_list.box_3.title')|trans,
+                'paragraphs': [
+                    ('offers.options_list.box_3.description')|trans
+                ],
+                'secondary': true
+            }
+        ]
+    } %}
+
+    <div class="transparent-box top-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'background_secondary': true,
+        'id': 'consulting',
+        'title': 'offers.consulting.title'|trans,
+        'subtitle': 'offers.consulting.subtitle'|trans,
+        'paragraphs': [
+            'offers.consulting.paragraph_1'|trans,
+            'offers.consulting.paragraph_2'|trans,
+            'offers.consulting.paragraph_3'|trans,
+            'offers.consulting.paragraph_4'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/conseil.svg'),
+            'alt': 'conseil'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
+    <div class="transparent-box even bottom-secondary"></div>
+
+    {% set cie_age = 'now'|date("Y") - 2008 %}
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'id': 'courses',
+        'title': 'offers.courses.title'|trans,
+        'subtitle': 'offers.courses.subtitle'|trans,
+        'paragraphs': [
+            'offers.courses.paragraph_1'|trans,
+            'offers.courses.paragraph_2'|trans({'%cie_age%': cie_age}),
+            'offers.courses.paragraph_3'|trans,
+        ],
+        'media': {
+            'src': asset('build/images/base/formation.svg'),
+            'alt': 'formation'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
+    <div class="transparent-box top-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'background_secondary': true,
+        'id': 'web-development',
+        'title': 'offers.web_development.title'|trans,
+        'subtitle': 'offers.web_development.subtitle'|trans,
+        'paragraphs': [
+            'offers.web_development.paragraph_1'|trans,
+            'offers.web_development.paragraph_2'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/code-writing.gif'),
+            'alt': 'developpement-web'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
+    <div class="transparent-box bottom-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'id': 'delegate',
+        'title': 'offers.delegate.title'|trans,
+        'subtitle': 'offers.delegate.subtitle'|trans,
+        'paragraphs': [
+            'offers.delegate.paragraph_1'|trans,
+            'offers.delegate.paragraph_2'|trans,
+            'offers.delegate.paragraph_3'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/delegate.png'),
+            'alt': 'developpement-web'|trans({}, 'alt')
+        },
+        'link': {
+            'href': url('app_contact_index'),
+            'label': 'Nous contacter'
+        }
+    } %}
+
+    <div class="transparent-box even top-secondary"></div>
+
+    {% include 'widgets/_section_presentation.html.twig' with {
+        'background_secondary': true,
+        'title': 'offers.open_source.title'|trans,
+        'subtitle': 'offers.open_source.subtitle'|trans,
+        'paragraphs': [
+            'offers.open_source.paragraph_1'|trans,
+            'offers.open_source.paragraph_2'|trans,
+            'offers.open_source.paragraph_3'|trans
+        ],
+        'media': {
+            'src': asset('build/images/base/opensource.svg'),
+            'alt': 'opensource'|trans({}, 'alt')
+        }
+    } %}
+{% endblock %}

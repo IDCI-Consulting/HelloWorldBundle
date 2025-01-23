@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    {% trans_default_domain 'customers' %}
+
+    {% embed 'widgets/_section_dynamic_display.html.twig' with {
+        'page_title': 'customers.page_title'|trans,
+        'banner': customers,
+        'slider_title': 'customers.carousel_title'|trans,
+        'href': 'app_customers_show'
+    } %}
+        {% block slideshow %}
+            {% for testimony in last_testimonies %}
+                {% include 'components/_carousel_post.html.twig' with {
+                    'post_media': testimony.media,
+                    'post_publication_date': testimony.publicationDate,
+                    'post_title': testimony.customer,
+                    'post_description': testimony.description[app.request.locale],
+                    'post_href': url('app_customers_show', {'slug': testimony.id})
+                } %}
+            {% endfor %}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
