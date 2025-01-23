@@ -20,7 +20,7 @@
         }
 
         @include until ($tablet) {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .section-dynamic-display-banner-card {
@@ -43,6 +43,10 @@
                     height: 10rem;
                     margin: 0 auto;
                     object-fit: contain;
+
+                    @include until ($tablet) {
+                        height: 4rem;
+                    }
                 }
 
                 .section-dynamic-display-banner-card-container-content {
