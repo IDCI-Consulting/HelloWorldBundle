@@ -22,7 +22,7 @@ class PageController extends AbstractController
         return $this->render('page/legal_mentions.html.twig');
     }
 
-    #[Route('/offers', methods: ['GET'], name: 'offers')]
+    #[Route('/offres', methods: ['GET'], name: 'offers')]
     public function offers(Request $request): Response
     {
         return $this->render('page/offers.html.twig');

@@ -21,6 +21,7 @@ class AppExtension extends AbstractExtension
     {
         return [
             new TwigFunction('encore_entry_css_source', [$this, 'getEncoreEntryCssSource']),
+            new TwigFunction('get_age', [$this, 'getAge']),
         ];
     }
 
@@ -36,4 +37,20 @@ class AppExtension extends AbstractExtension
 
         return $source;
     }
-} 
+
+    public function getAge($birthday, $format = 'Y-m-d')
+    {
+        if (is_string($birthday)) {
+            $birthday = \DateTime::createFromFormat($format, $birthday);
+        }
+
+        if (!($birthday instanceof \DateTime)) {
+            throw new \RuntimeException('The birthday is not a valid DateTime');
+        }
+
+        return $birthday
+            ->diff(new \DateTime('now'))
+            ->y
+        ;
+    }
+}

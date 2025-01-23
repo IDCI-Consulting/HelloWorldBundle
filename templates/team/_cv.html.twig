@@ -20,7 +20,7 @@
                 <tbody>
                     <tr>
                         <th scope="row">{{ 'cv.age'|trans }}</td>
-                        <td>{{ 'now'|date("Y") - data.identity.birthDate|date("Y") }} {{ 'cv.years_old'|trans }}</td>
+                        <td>{{ get_age(data.identity.birthDate) }} {{ 'cv.years_old'|trans }}</td>
                     </tr>
                     <tr>
                         <th scope="row">{{ 'cv.email'|trans }}</th>
