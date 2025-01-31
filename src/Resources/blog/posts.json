@@ -1,5 +1,21 @@
 [
     {
+        "id": "new-year-2025",
+        "available_languages": ["fr"],
+        "name": {
+            "fr": "Nos voeux 2025",
+            "en": "Our wishes 2025"
+        },
+        "media": "logo/idci-logo.svg",
+        "publicationDate": "05/01/2025",
+        "author": "Frédéric Bondaz",
+        "category": "IDCI",
+        "description": {
+            "fr": "L'équipe IDCI a vu une année riche en évolution, aussi bien de son équipe que de son infrastructure. Cela a accompagné la mise en ligne de deux nouveaux sites ainsi que la mise à jour de notre propre site web.",
+            "en": "The IDCI lived a rich year with evolutions of its team and its infrastructure. It has accompany the release of two brand new sites as well as the update of our website."
+        }
+    },
+    {
         "id": "idci-10-years",
         "available_languages": ["fr"],
         "name": {
