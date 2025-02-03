@@ -1,5 +1,21 @@
 [
     {
+        "id": "new-strategy",
+        "available_languages": ["fr"],
+        "name": {
+            "fr": "Nouvelle année, nouvelles résolutions, nouvelle statégie",
+            "en": "New year, new resolutions, new strategy"
+        },
+        "media": "logo/idci-logo.svg",
+        "publicationDate": "03/02/2025",
+        "author": "Frédéric Bondaz",
+        "category": "IDCI",
+        "description": {
+            "fr": "La nouvelle année est l'occasion de prendre de nouvelles résolutions. IDCI-consulting fait évoluer son modèle dans le soucis de toujours plus de qualité de nos services.",
+            "en": "The new year is the opportunity to define new resolutions. IDCI-consulting's model is evolving in a matter of more quality of our services."
+        }
+    },
+    {
         "id": "new-year-2025",
         "available_languages": ["fr"],
         "name": {
