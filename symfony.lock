@@ -14,6 +14,9 @@
     "doctrine/lexer": {
         "version": "1.2.2"
     },
+    "e-corp/seo-content-generator-bundle": {
+        "version": "v6.0.0"
+    },
     "egulias/email-validator": {
         "version": "3.1.2"
     },

@@ -1,0 +1,15 @@
+ecorp_seo_content_generator:
+    sitemap:
+        pages:
+          options:
+                route_names:
+                    - app_homepage
+                    - app_legal_mentions
+                    - app_offers
+                    - app_contact_index
+                    - app_blog_list
+                    - app_blog_post
+                    - app_customers_list
+                    - app_customers_show
+                    - app_team_list
+                    - app_team_member

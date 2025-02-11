@@ -35,7 +35,7 @@
         <div class="column is-9 footer-second-row footer-cgu">
             <div class="footer-cgu-links">
                 <a href="{{ url('app_legal_mentions') }}" class="footer-cgu-link-item">{% trans from "layout" %}footer.legal_mentions{% endtrans %}</a>
-                <a href="{{ url('app_seo_sitemap') }}" class="footer-cgu-link-item">Sitemap</a>
+                <a href="{{ url('ecorp_seo_content_generator_sitemap_index', {'_format': 'xml'}) }}" class="footer-cgu-link-item">Sitemap</a>
             </div>
             <p class="footer-cgu-website-version">{{ app_version }}</p>
         </div>

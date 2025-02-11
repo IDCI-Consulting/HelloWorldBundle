@@ -3,10 +3,17 @@
     "license": "proprietary",
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://composer:UiYHVqkh4WMxAhjJ5-g9@gitlab.idci-consulting.fr/e-corp/ECorpSEOContentGeneratorBundle"
+        }
+    ],
     "require": {
         "php": ">=8.0.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "e-corp/seo-content-generator-bundle": "^6.0",
         "gregwar/captcha-bundle": "^2.2",
         "league/commonmark": "^2.3",
         "sensio/framework-extra-bundle": "^6.2",
