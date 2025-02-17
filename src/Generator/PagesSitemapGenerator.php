@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 class PagesSitemapGenerator extends AbstractSitemapGenerator
 {
     const GENERATOR_ALIAS = 'pages';
+    const SITEMAP_UPDATED_AT = '2025-02-17';
 
     private string $blogPostsFilePath;
     private string $customersFilePath;
@@ -65,7 +66,7 @@ class PagesSitemapGenerator extends AbstractSitemapGenerator
                     ->setLocation(
                         $this->router->generate($element, [], UrlGeneratorInterface::ABSOLUTE_URL)
                     )
-                    ->setLastModification(new \DateTime('2024-02-11'))
+                    ->setLastModification(new \DateTime(self::SITEMAP_UPDATED_AT))
                     ->setChangeFrequency(SitemapUrlItem::CHANGE_FREQUENCY_YEARLY)
                     ->setPriority(1)
                 ;
@@ -78,7 +79,7 @@ class PagesSitemapGenerator extends AbstractSitemapGenerator
                     ->setLocation(
                         $this->router->generate($element, ['slug' => $slug], UrlGeneratorInterface::ABSOLUTE_URL)
                     )
-                    ->setLastModification(new \DateTime('2024-02-11'))
+                    ->setLastModification(new \DateTime(self::SITEMAP_UPDATED_AT))
                     ->setChangeFrequency(SitemapUrlItem::CHANGE_FREQUENCY_YEARLY)
                     ->setPriority(1)
                 ;
