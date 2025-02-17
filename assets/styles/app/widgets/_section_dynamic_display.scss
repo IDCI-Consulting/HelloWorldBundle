@@ -69,6 +69,7 @@
                         max-height: 7.5rem;
 
                         @include until ($tablet) {
+                            font-size: $idci-font-smaller;
                             max-height: 4.5rem;
                         }
                     }
