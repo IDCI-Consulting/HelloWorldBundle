@@ -52,17 +52,26 @@
                 .section-dynamic-display-banner-card-container-content {
                     backface-visibility: hidden;
                     left: 0;
+                    overflow: hidden;
                     padding: 0.5rem;
                     position: absolute;
                     top: 0.5rem;
                     transform: rotateY(-180deg);
                     width: 100%;
 
+                    @include until ($tablet) {
+                        padding: 0;
+                        top: 0;
+                    }
+
                     .tags {
                         font-size: $idci-font-medium;
-                        margin-top: 1rem;
                         max-height: 7.5rem;
-                        overflow: hidden;
+
+                        @include until ($tablet) {
+                            font-size: $idci-font-smaller;
+                            max-height: 4.5rem;
+                        }
                     }
                 }
             }
