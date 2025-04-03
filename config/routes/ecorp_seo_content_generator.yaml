@@ -1,0 +1,2 @@
+ecorp_seo_content_generator:
+    resource: "@ECorpSEOContentGeneratorBundle/Resources/config/routing.yaml"

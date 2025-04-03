@@ -39,7 +39,7 @@ services:
         arguments:
             $cvDirectoryPath: '%kernel.project_dir%/src/Resources/cv/'
 
-    App\Controller\SeoController:
+    App\Generator\PagesSitemapGenerator:
         arguments:
             $blogPostsFilePath: '%kernel.project_dir%/src/Resources/blog/posts.json'
             $customersFilePath: '%kernel.project_dir%/src/Resources/customer/customers.json'

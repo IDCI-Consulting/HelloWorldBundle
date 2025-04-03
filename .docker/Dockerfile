@@ -99,10 +99,14 @@ CMD ["php-fpm", "-F"]
 # Stage 3:
 FROM base AS prod
 
-## Copy built vendors
+## Define environment vars
+ARG APP_VERSION
+ENV APP_VERSION=${APP_VERSION}
 ARG APP_ENV=prod
 ENV APP_ENV ${APP_ENV}
 ENV OPCACHE_ENABLE=on
+
+## Copy built vendors
 COPY --from=build /var/www/app/vendor /var/www/app/vendor
 
 ## Copy built assets and bundles in order to use and share them (entrypoint)

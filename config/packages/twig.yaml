@@ -3,6 +3,7 @@ twig:
     form_themes: ['form_div_layout.html.twig', 'form/layout.html.twig']
     globals:
         app_version: '%env(APP_VERSION)%'
+        app_env: '%env(APP_ENV)%'
         allow_robots: '%env(bool:ALLOW_ROBOTS)%'
 
 when@test:
