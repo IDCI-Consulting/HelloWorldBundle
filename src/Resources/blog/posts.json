@@ -1,5 +1,19 @@
 [
     {
+        "id": "set-up-a-symfony-bundle",
+        "available_languages": ["fr"],
+        "name": {
+            "fr": "Créer un bundle Symfony"
+        },
+        "media": "base/symfony2.svg",
+        "publicationDate": "02/04/2025",
+        "author": "Joris Vinière",
+        "category": "Symfony",
+        "description": {
+            "fr": "Suite à une demande client, nous devions ajouter un système d'avis clients, nous avons donc fait le choix d'en faire un bundle. Durant le développement de ce bundle, nous avons pris des notes afin de rédiger cet article dans lequel nous allons détailler les étapes clés à suivre pour la création d'un bundle."
+        }
+    },
+    {
         "id": "idci-10-years",
         "available_languages": ["fr"],
         "name": {
