@@ -1,0 +1,25 @@
+{
+    "name": "idci/hello-world-bundle",
+    "type": "symfony-bundle",
+    "description": "IDCI Bundle that show how to create a Symfony Bundle",
+    "license": "CECILL-C",
+    "keywords": ["tutorial", "Symfony", "Bundle", "composer", "packagist"],
+    "authors": [
+        {
+            "name": "Joris VINIERE",
+            "email": "joris.viniere@idci-consulting.fr"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "symfony/framework-bundle": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IDCI\\Bundle\\HelloWorldBundle\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}
