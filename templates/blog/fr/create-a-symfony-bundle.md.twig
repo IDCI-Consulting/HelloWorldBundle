@@ -50,7 +50,7 @@ IDCI/
 ### composer.json
 
 <br>
-Le premier fichier à ajouter dans votre dossier de bundle est <span class="inline-code">composer.json</span>, en prenant soin d'ajouter, enlever ou remplacer les informations propre à votre bundle.
+Le premier fichier à ajouter dans votre dossier de bundle est <span class="inline-code">composer.json</span>, en prenant soin d'ajouter, enlever ou remplacer les informations propre à votre besoin.
 
 <pre>
 <code class="language-json">
@@ -93,11 +93,11 @@ Quelques informations sur les clés du fichier composer.json :
 
 &ensp;&ensp;&ensp;<span class="inline-code">authors</span> : Liste des auteurs du bundle.
 
-&ensp;&ensp;&ensp;<span class="inline-code">require</span> : Liste des dépendences du bundle. Ici vous pouvez associer un nom de paquet à une version afin de l'installer dans votre bundle.
+&ensp;&ensp;&ensp;<span class="inline-code">require</span> : Liste des dépendances du bundle. Ici vous pouvez associer un nom de paquet à une version pour mentionner la dépendance.
 
 &ensp;&ensp;&ensp;<span class="inline-code">autoload</span> : Mapping du chargement automatique des classes. Ici nous utilisons 2 clés :
 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="inline-code">psr-4</span> : <a href="https://www.php-fig.org/psr/psr-4/" target="_blank">PSR-4</a> est une norme de chargement automatique qui permet de renseigner la structure des fichiers, la façon d'écrire les namespaces. Dans notre exemple le dossier *src/* sera associé au namespace *IDCI/Bundle/HelloWorldBundle/*
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="inline-code">psr-4</span> : <a href="https://www.php-fig.org/psr/psr-4/" target="_blank">PSR-4</a> est une norme de chargement automatique qui permet de renseigner la structure des fichiers, la façon d'écrire les namespaces. Dans notre exemple le dossier *src/* sera associé au namespace *IDCI\Bundle\HelloWorldBundle\*
 
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="inline-code">exclude-from-classmap</span> : Permet d'exclure des fichiers ou dossiers du chargement automatique. Dans notre cas, l'ensemble des fichiers contenus dans le dossier *Tests/* seront exclus du chargement automatique.
 
@@ -131,7 +131,8 @@ Maintenant que nous avons terminé la création des fichiers de base du bundle, 
 
 ### Bundle privé
 
-Si le bundle n'est pas disponible sur Packagist, il faut ajouter l'URL du repository du bundle dans le fichier composer.json de votre application et l'inclure dans la clé <span class="inline-code">require</span> en utilisant le Version Control System (VCS).
+Si le bundle n'est pas disponible sur Packagist, il faut préciser la source du repository en ajoutant une entrée dans la clé <span class="inline-code">repositories</span> du fichier composer.json de votre application.
+
 <pre>
 <code class="language-json">
 {
@@ -142,7 +143,6 @@ Si le bundle n'est pas disponible sur Packagist, il faut ajouter l'URL du reposi
   "require": {
     "php": ">=8.1",
     "symfony/framework-bundle": "6.4.*",
-    "idci/hello-world-bundle": "*",
   },
   "repositories": [
     {
@@ -159,34 +159,73 @@ Si le bundle n'est pas disponible sur Packagist, il faut ajouter l'URL du reposi
 </code>
 </pre>
 
-Vous devrez enfin lancer la commande <span class="inline-code">composer install</span> qui viendra télécharger et installer les librairies avec la version spécifiée dans le fichier composer.json.
+<br><br>
+Ensuite il faut également ajouter une entrée dans la clé <span class="inline-code">require</span> en utilisant le Version Control System (VCS).
+
+<pre>
+<code class="language-json">
+{
+  "type": "project",
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.1",
+    "symfony/framework-bundle": "6.4.*",
+    "idci/hello-world-bundle": "*"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/IDCI-Consulting/HelloWorldBundle"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
+</code>
+</pre>
+
+<br><br>
+Il est également possible de remplace l'entrée dans <span class="inline-code">require</span> par la commande suivante :
+
+```bash
+composer require idci/hello-world-bundle
+```
+
+Enfin, lancez la commande <span class="inline-code">composer install</span> pour télécharger et installer les dépendances avec la version spécifiée dans le fichier composer.json.
 
 Si vous souhaitez vous assurer que le bundle a bien été installé, vous pouvez aller vérifier sa présence dans le dossier *vendor/* de votre application.
 
 ### Bundle public
 
 #### Enregistrer un bundle sur Packagist
-
-Si vous voulez enregistrer un bundle sur packagist, afin qu'il soit disponible publiquement, vous devez vous rendre sur le site <a href="https://packagist.org/" target="_blank">Packagist</a> et y être connecté. Il faut ensuite se rendre dans l'onglet "Submit" et renseigner le lien de votre repository.
+Pour déclarer publiquement un bundle, il faut disposer d'un compte sur la plateforme <a href="https://packagist.org/" target="_blank">Packagist</a> (Dépot de paquets PHP). Une fois connecté, il faut se rendre dans l'onglet "Submit" et renseigner le lien de votre repository.
 
 <div class="full-width-media">
 
 ![Ajouter un bundle sur packagist](/build/images/blog/packagist_submit.png "Ajouter un bundle sur packagist")
 
 <br><br>
-Vous devriez finalement voir cette page (avec votre bundle)
+Une fois votre bundle soumis et validé par Packagist, une page dédiée sera disponible.
 
 ![Notre bundle sur packagist](/build/images/blog/packagist_bundle.png "Notre bundle sur packagist")
 
 </div>
 
-#### Installer un bundle depuis Packagist
+#### Installer un bundle via Packagist
 
-Maintenant que le bundle est diponible publiquement sur Packagist, vous pouvez l'installer grâce à la commande composer require comme ci dessous :
+Maintenant que le bundle est référencé sur Packagist, vous pouvez l'installer grâce à la commande composer require comme ci dessous :
 
 ```bash
 composer require idci/hello-world-bundle
 ```
+
+<br><br>
+Terminé ! Nous avons pu voir à travers cet articles les différentes étapes de création d'un Bundle Symfony, ainsi que son accessibilité en utilisant Composer et Packagist. Dans un prochain article nous détaillerons certains aspects du développement d'un bundle (mise en place des paramètres, CompilerPass...)
 </section>
 
 </section>
