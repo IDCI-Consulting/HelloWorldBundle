@@ -1,0 +1,192 @@
+<section class="section-container section-container-60">
+
+<section class="section-post">
+
+# Création d'un bundle Symfony
+
+## Introduction
+
+<a href="https://symfony.com/" target="_blank">Symfony</a> est un framework basé sur le langage PHP, si vous utilisez ce framework, vous avez pu entrevoir la notion de <a href="https://symfony.com/doc/current/bundles.html" target="_blank">bundles</a> qui est à la base du fonctionnement de Symfony. Un bundle est l'équivalent d'un plugin et pourrait être vu comme un "bloc" de code qui répond à un périmètre fonctionnel défini.
+
+Dans cet article, nous allons détailler les étapes afin que vous puissiez créer un bundle et l'installer via <a href="https://getcomposer.org/doc/04-schema.md#json-schema" target="_blank">composer</a>.
+Afin d'illustrer nos explications, nous avons réalisés un bundle "<a href="https://github.com/IDCI-Consulting/HelloWorldBundle" target="_blank">Hello world</a>" disponible sur notre Github.
+
+## Arborescence
+
+Voici la liste des dossiers qui peuvent composer un bundle Symfony :
+
+&ensp;&ensp;&ensp;*assets/* : Contient les fichiers sources JavaScript, TypeScript, CSS et aussi les images ou autres fichiers qui ne sont pas liés au dossier public.
+
+&ensp;&ensp;&ensp;*config/* : Contient la configuration du bundle (routing, définition de services...).
+
+&ensp;&ensp;&ensp;*public/* : Contient les fichiers compilés (CSS, JavaScript) et les images copiés dans ce dossier.
+
+&ensp;&ensp;&ensp;*src/* : Contient les classes utiles pour la logique du bundle.
+
+&ensp;&ensp;&ensp;*templates/* : Contient les templates.
+
+&ensp;&ensp;&ensp;*tests/* : Contient les tests (unitaires, fonctionnels).
+
+&ensp;&ensp;&ensp;*translations/* : Contient les fichiers de traductions.
+
+<br><br>
+Tous ces dossiers ne sont pas indispensables, dans notre cas nous utiliserons seulement le dossier src/, voici à quoi va ressembler notre bundle :
+<br><br>
+
+<p class="section-post-structure">
+IDCI/
+<br>
+├─ HelloWorldBundle/
+<br>
+│  ├─ src/
+<br>
+│  │  ├─ HelloWorldBundle.php
+<br>
+│  ├─ composer.json
+</p>
+
+## Fichiers de base
+
+### composer.json
+
+<br>
+Le premier fichier à ajouter dans votre dossier de bundle est <span class="inline-code">composer.json</span>, en prenant soin d'ajouter, enlever ou remplacer les informations propre à votre bundle.
+
+<pre>
+<code class="language-json">
+{
+  "name": "idci/hello-world-bundle",
+  "description": "Your bundle's description",
+  "type": "symfony-bundle",
+  "license": "CECILL-C",
+  "keywords": ["tutorial", "Symfony", "Bundle", "composer", "packagist"],
+  "authors": [
+    {
+      "name": "Joris VINIERE",
+      "email": "joris.viniere@idci-consulting.fr"
+    }
+  ],
+  "require": {
+      "php": "^7.1 || ^8.0",
+      "symfony/framework-bundle": "^4.0 || ^5.0 || ^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "IDCI\\Bundle\\HelloWorldBundle\\": "src/"
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  }
+}
+</code>
+</pre>
+
+<br>
+Quelques informations sur les clés du fichier composer.json :
+
+&ensp;&ensp;&ensp;<span class="inline-code">name</span> : Le nom du bundle.
+
+&ensp;&ensp;&ensp;<span class="inline-code">description</span> : La description du bundle.
+
+&ensp;&ensp;&ensp;<span class="inline-code">type</span> : Type du bundle qui peut différer selon la logique d'installation voulue.
+
+&ensp;&ensp;&ensp;<span class="inline-code">authors</span> : Liste des auteurs du bundle.
+
+&ensp;&ensp;&ensp;<span class="inline-code">require</span> : Liste des dépendences du bundle. Ici vous pouvez associer un nom de paquet à une version afin de l'installer dans votre bundle.
+
+&ensp;&ensp;&ensp;<span class="inline-code">autoload</span> : Mapping du chargement automatique des classes. Ici nous utilisons 2 clés :
+
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="inline-code">psr-4</span> : <a href="https://www.php-fig.org/psr/psr-4/" target="_blank">PSR-4</a> est une norme de chargement automatique qui permet de renseigner la structure des fichiers, la façon d'écrire les namespaces. Dans notre exemple le dossier *src/* sera associé au namespace *IDCI/Bundle/HelloWorldBundle/*
+
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="inline-code">exclude-from-classmap</span> : Permet d'exclure des fichiers ou dossiers du chargement automatique. Dans notre cas, l'ensemble des fichiers contenus dans le dossier *Tests/* seront exclus du chargement automatique.
+
+<br><br>
+### HelloWorldBundle
+
+<br><br>
+L'étape suivante est de créer la classe de votre bundle, il est important de noter que le nom de votre classe doit se terminer par "Bundle" comme visible dans notre exemple :
+
+```php
+// src/HelloWorldBundle.php
+<?php
+
+namespace IDCI\Bundle\HelloWorldBundle;
+
+use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
+
+class HelloWorldBundle extends AbstractBundle
+{
+}
+```
+
+Notre classe hérite de la classe abstraite *AbstractBundle*. Pour rappel, une classe abstraite a pour caractéristique première qu'on ne peut pas l'instancier. Le fait d'hériter de la classe *AbstractBundle* permet de bénéficier des fonctionnalités de base fournies par cette classe.
+
+<br><br>
+Voilà ! Avec ceci, vous avez la base fonctionnelle d'un bundle Symfony.
+
+## Installation du bundle
+
+Maintenant que nous avons terminé la création des fichiers de base du bundle, nous allons pouvoir l'installer dans nos applications. Il existe 2 méthodes pour inclure un bundle symfony.
+
+### Bundle privé
+
+Si le bundle n'est pas disponible sur Packagist, il faut ajouter l'URL du repository du bundle dans le fichier composer.json de votre application et l'inclure dans la clé <span class="inline-code">require</span> en utilisant le Version Control System (VCS).
+<pre>
+<code class="language-json">
+{
+  "type": "project",
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.1",
+    "symfony/framework-bundle": "6.4.*",
+    "idci/hello-world-bundle": "*",
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/IDCI-Consulting/HelloWorldBundle"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
+</code>
+</pre>
+
+Vous devrez enfin lancer la commande <span class="inline-code">composer install</span> qui viendra télécharger et installer les librairies avec la version spécifiée dans le fichier composer.json.
+
+Si vous souhaitez vous assurer que le bundle a bien été installé, vous pouvez aller vérifier sa présence dans le dossier *vendor/* de votre application.
+
+### Bundle public
+
+#### Enregistrer un bundle sur Packagist
+
+Si vous voulez enregistrer un bundle sur packagist, afin qu'il soit disponible publiquement, vous devez vous rendre sur le site <a href="https://packagist.org/" target="_blank">Packagist</a> et y être connecté. Il faut ensuite se rendre dans l'onglet "Submit" et renseigner le lien de votre repository.
+
+<div class="full-width-media">
+
+![Ajouter un bundle sur packagist](/build/images/blog/packagist_submit.png "Ajouter un bundle sur packagist")
+
+<br><br>
+Vous devriez finalement voir cette page (avec votre bundle)
+
+![Notre bundle sur packagist](/build/images/blog/packagist_bundle.png "Notre bundle sur packagist")
+
+</div>
+
+#### Installer un bundle depuis Packagist
+
+Maintenant que le bundle est diponible publiquement sur Packagist, vous pouvez l'installer grâce à la commande composer require comme ci dessous :
+
+```bash
+composer require idci/hello-world-bundle
+```
+</section>
+
+</section>

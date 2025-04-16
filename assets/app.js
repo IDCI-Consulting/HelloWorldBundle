@@ -11,7 +11,10 @@ import './styles/app.scss';
 const $ = require('jquery');
 window.$ = global.$ = global.jQuery = $;
 
+
+
 require('slick-carousel');
 
+require('./highlight');
 require('./slick');
 require('./tab');

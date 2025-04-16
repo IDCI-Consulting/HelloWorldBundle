@@ -28,6 +28,10 @@ console:
 cs-fix:
 	docker run -u $(user) --rm -i -v `pwd`:`pwd` -w `pwd` cytopia/php-cs-fixer --rules=@Symfony --verbose fix $(php_sources) $(cmd)
 
+.PHONY: composer
+composer:
+	docker exec -u www-data -it "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer $(cmd)
+
 .PHONY: composer-update
 composer-update:
 	docker exec -u $(user) -it "$(php_container_id)" php -d memory_limit=-1 /usr/local/bin/composer update

@@ -1,0 +1,18 @@
+pre {
+    &.relative {
+        position: relative;
+    //     display: flex;
+    //     flex-direction: column;
+
+    //     code {
+    //         order: 2;
+    //     }
+
+        button {
+            color: $idci-color-white;
+            position: absolute;
+            right: 1.5rem;
+            top: 1.3rem;
+        }
+    }
+}

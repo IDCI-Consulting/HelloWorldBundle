@@ -1,6 +1,6 @@
 [
     {
-        "id": "set-up-a-symfony-bundle",
+        "id": "create-a-symfony-bundle",
         "available_languages": ["fr"],
         "name": {
             "fr": "Créer un bundle Symfony"
