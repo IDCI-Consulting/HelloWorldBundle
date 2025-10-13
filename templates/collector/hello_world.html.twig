@@ -1,0 +1,18 @@
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
+
+{% block toolbar %}
+    {% set icon %}
+        <img src="data:image/png;base64,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">
+    {% endset %}
+
+    {% set text %}
+        <div class="sf-toolbar-info-group">
+            <div class="sf-toolbar-info-piece">
+                <p>Nom : {{ collector.appName }}</p>
+                <p>Version : {{ collector.appVersion }}</p>
+            </div>
+        </div>
+    {% endset %}
+
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: true, name: 'hello_world.data_collector', additional_classes: 'sf-toolbar-block-right' }) }}
+{% endblock %}
