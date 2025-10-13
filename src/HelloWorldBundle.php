@@ -23,4 +23,10 @@ class HelloWorldBundle extends AbstractBundle
             ->end()
         ;
     }
+
+    public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
+    {
+        $builder->setParameter('hello_world_bundle.app_name', $config['app']['name']);
+        $builder->setParameter('hello_world_bundle.app_version', $config['app']['version']);
+    }
 }
