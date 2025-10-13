@@ -28,5 +28,7 @@ class HelloWorldBundle extends AbstractBundle
     {
         $builder->setParameter('hello_world_bundle.app_name', $config['app']['name']);
         $builder->setParameter('hello_world_bundle.app_version', $config['app']['version']);
+
+        $container->import('../config/services.yaml');
     }
 }

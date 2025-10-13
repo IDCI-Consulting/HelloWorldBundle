@@ -1,0 +1,14 @@
+services:
+    # _defaults:
+    #     autowire: true
+    #     autoconfigure: true
+
+    IDCI\Bundle\HelloWorldBundle\DataCollector\HelloWorldDataCollector:
+        tags:
+          -
+            name: 'data_collector'
+            template: '@HelloWorld/collector/hello_world.html.twig'
+            id: 'hello_world.data_collector'
+        arguments:
+            $appName: '%hello_world_bundle.app_name%'
+            $appVersion: '%hello_world_bundle.app_version%'
