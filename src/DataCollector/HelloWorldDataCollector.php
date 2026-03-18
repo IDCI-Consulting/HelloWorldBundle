@@ -8,6 +8,8 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
 class HelloWorldDataCollector extends DataCollector
 {
+    private array $additionalDatas = [];
+
     public function __construct(
         private string $appName,
         private string $appVersion,
@@ -18,6 +20,7 @@ class HelloWorldDataCollector extends DataCollector
     {
         $this->data['hello_world.app_name'] = $this->appName;
         $this->data['hello_world.app_version'] = $this->appVersion;
+        $this->data['additionalDatas'] = $this->additionalDatas;
     }
 
     public function reset(): void
@@ -35,8 +38,17 @@ class HelloWorldDataCollector extends DataCollector
         return $this->data['hello_world.app_name'];
     }
 
+    public function getAdditionalDatas(): array
+    {
+        return $this->data['additionalDatas'];
+    }
+
     public function getAppVersion(): string
     {
         return $this->data['hello_world.app_version'];
+    }
+
+    public function addData(array $data): void {
+        $this->additionalDatas[$data['label']] = $data['value'];
     }
 }

@@ -10,6 +10,9 @@
             <div class="sf-toolbar-info-piece">
                 <p>Nom : {{ collector.appName }}</p>
                 <p>Version : {{ collector.appVersion }}</p>
+                {% for label, data in collector.additionalDatas %}
+                    <p>{{ label }} : {{ data }}</p>
+                {% endfor %}
             </div>
         </div>
     {% endset %}
