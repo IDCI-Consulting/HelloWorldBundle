@@ -12,3 +12,4 @@ services:
         arguments:
             $appName: '%hello_world_bundle.app_name%'
             $appVersion: '%hello_world_bundle.app_version%'
+            $extraData: '%hello_world_bundle.extra_data%'
