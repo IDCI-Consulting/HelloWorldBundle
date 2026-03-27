@@ -9,6 +9,11 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 class HelloWorldBundle extends AbstractBundle
 {
+    public function build(ContainerBuilder $container): void
+    {
+        parent::build($container);
+    }
+
     public function configure(DefinitionConfigurator $definition): void
     {
         $definition->rootNode()
@@ -20,6 +25,15 @@ class HelloWorldBundle extends AbstractBundle
                         ->scalarNode('version')->isRequired()->end()
                     ->end()
                 ->end()
+                ->arrayNode('extra_data')
+                    ->arrayPrototype()
+                        ->children()
+                            ->scalarNode('label')->isRequired()->end()
+                            ->scalarNode('value')->isRequired()->end()
+                        ->end()
+                    ->end()
+                    ->defaultValue([])
+                ->end()
             ->end()
         ;
     }
@@ -28,6 +42,7 @@ class HelloWorldBundle extends AbstractBundle
     {
         $builder->setParameter('hello_world_bundle.app_name', $config['app']['name']);
         $builder->setParameter('hello_world_bundle.app_version', $config['app']['version']);
+        $builder->setParameter('hello_world_bundle.extra_data', $config['extra_data']);
 
         $container->import('../config/services.yaml');
     }

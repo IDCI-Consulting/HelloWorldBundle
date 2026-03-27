@@ -11,6 +11,7 @@ class HelloWorldDataCollector extends DataCollector
     public function __construct(
         private string $appName,
         private string $appVersion,
+        private array $extraData,
     ) {
     }
 
@@ -18,6 +19,7 @@ class HelloWorldDataCollector extends DataCollector
     {
         $this->data['hello_world.app_name'] = $this->appName;
         $this->data['hello_world.app_version'] = $this->appVersion;
+        $this->data['hello_world.extra_data'] = $this->extraData;
     }
 
     public function reset(): void
@@ -38,5 +40,22 @@ class HelloWorldDataCollector extends DataCollector
     public function getAppVersion(): string
     {
         return $this->data['hello_world.app_version'];
+    }
+
+    public function getExtraData(): array
+    {
+        return $this->data['hello_world.extra_data'];
+    }
+
+    public function addExtraData(array $data): void {
+        $key = array_search($data['label'], array_column($this->extraData, 'label'));
+
+        if (false !== $key) {
+            $this->extraData[$key] = $data;
+
+            return;
+        }
+
+        $this->extraData[] = $data;
     }
 }
